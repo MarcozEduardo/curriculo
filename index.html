@@ -630,18 +630,23 @@
     to{ opacity:0; transform:translateY(-10px); }
   }
 
-  /* ================= CHAT MODAL ================= */
+/* ================= CHAT MODAL ================= */
 .chat-modal{
   display:none;
   position:fixed;
-  top:0; left:0; right:0; bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
   background:rgba(0,0,0,0.5);
   z-index:1001;
-  align-items:center;
+  align-items:stretch;
   justify-content:center;
   padding:0;
 }
-.chat-modal.open{ display:flex; }
+.chat-modal.open{
+  display:flex;
+}
 .chat-box{
   width:100%;
   max-width:400px;
@@ -651,17 +656,23 @@
   box-shadow:0 10px 30px rgba(0,0,0,0.25);
   display:flex;
   flex-direction:column;
-  height:70vh;
-  max-height:600px;
+  height:80vh;
+  max-height:80vh;
   margin:0;
+  align-self:center;
 }
 @media (max-width:700px){
+  .chat-modal{
+    align-items:stretch;
+    justify-content:flex-start;
+  }
   .chat-box{
     width:100%;
     max-width:100%;
     height:100vh;
     max-height:100vh;
     border-radius:0;
+    align-self:auto;
   }
 }
 @keyframes slideUp{
@@ -675,6 +686,7 @@
   display:flex;
   align-items:center;
   gap:12px;
+  flex-shrink:0;
 }
 .chat-avatar{
   width:42px; height:42px;
@@ -747,6 +759,7 @@
   padding:12px 16px;
   background:#fff;
   border-top:1px solid #eee;
+  flex-shrink:0;
 }
 .chat-input-area input{
   flex:1;
@@ -1365,7 +1378,7 @@
   chatBtn.addEventListener('click', () => {
     chatModal.classList.add('open');
     if(!chatInitialized) initChat();
-    chatInput.focus();
+    
   });
   chatClose.addEventListener('click', () => chatModal.classList.remove('open'));
   chatModal.addEventListener('click', (e) => {
