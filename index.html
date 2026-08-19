@@ -22,13 +22,6 @@
     --radius-md:18px;
     --radius-sm:10px;
   }
-  .photo-circle {
-  pointer-events: none;
-}
-  #photoImg {
-  transform: translate(calc(-50% + 0px), calc(-50% + 0px)) scale(1.5);
-  transform-origin: center center;
-}
   *{ box-sizing:border-box; }
   body{
     margin:0;
@@ -66,16 +59,8 @@
     border-radius:50%;
     filter:blur(2px);
   }
-  .blob1{
-    width:230px; height:230px;
-    background:rgba(255,255,255,0.10);
-    top:-90px; right:-60px;
-  }
-  .blob2{
-    width:160px; height:160px;
-    background:rgba(184,66,10,0.28);
-    bottom:-70px; left:38%;
-  }
+  .blob1{ width:230px; height:230px; background:rgba(255,255,255,0.10); top:-90px; right:-60px; }
+  .blob2{ width:160px; height:160px; background:rgba(184,66,10,0.28); bottom:-70px; left:38%; }
 
   .header-top-row{
     display:flex;
@@ -116,10 +101,7 @@
     gap:16px;
     margin-top:20px;
   }
-  .photo-circle-wrap{
-    position:relative;
-    flex-shrink:0;
-  }
+  .photo-circle-wrap{ position:relative; flex-shrink:0; }
   .photo-circle{
     width:104px; height:104px;
     border-radius:50%;
@@ -132,14 +114,12 @@
     align-items:center;
     justify-content:center;
     touch-action:none;
-    cursor:grab;
-    border-radius:50%;
+    cursor:default;
+    pointer-events:none; /* bloqueia qualquer interação */
   }
-  .photo-circle:active{ cursor:grabbing; }
   .photo-circle img{
     position:absolute;
     max-width:none;
-    display:none;
     user-select:none;
     -webkit-user-drag:none;
     pointer-events:none;
@@ -147,29 +127,25 @@
     border-radius:50%;
   }
   .photo-placeholder{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:3px;
-    color:#fff;
-    opacity:0.9;
-    font-size:11px;
+    display:none; /* esconde a figurinha de câmera */
   }
-  .photo-placeholder i{ font-size:20px; }
   .photo-add-btn{
-    position:absolute;
-    bottom:-2px; right:-2px;
-    width:30px; height:30px;
-    border-radius:50%;
-    background:var(--orange-deep);
-    border:2px solid #fff;
-    color:#fff;
-    font-size:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-  }
+  display:flex;
+  position:absolute;
+  bottom:-2px; right:-2px;
+  width:30px; height:30px;
+  border-radius:50%;
+  background:var(--orange-deep);
+  border:2px solid #fff;
+  color:#fff;
+  font-size:12px;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  pointer-events:none; /* desativa o clique */
+}
+
+ /* esconde botão de upload */
   .header-name-block h1{
     margin:0;
     color:#fff;
@@ -232,32 +208,7 @@
     .header-github{ top:64px; }
   }
 
-  .photo-controls{
-    display:none;
-    align-items:center;
-    gap:8px;
-    margin-top:14px;
-    position:relative;
-    z-index:2;
-    background:rgba(255,255,255,0.16);
-    padding:8px 12px;
-    border-radius:var(--radius-sm);
-    width:fit-content;
-  }
-  .photo-controls i{ color:#fff; font-size:12px; }
-  .photo-controls input[type=range]{ width:120px; accent-color:#fff; }
-  .confirm-btn{
-    width:26px; height:26px;
-    border-radius:50%;
-    border:none;
-    background:#fff;
-    color:var(--orange-dark);
-    font-size:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-  }
+  .photo-controls{ display:none; }
 
   /* ================= SHEET ================= */
   .sheet{
@@ -293,11 +244,7 @@
   }
   .badge-big{ width:36px; height:36px; font-size:15px; border-radius:11px; }
 
-  .sheet-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:16px;
-  }
+  .sheet-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
   .col-left{ display:flex; flex-direction:column; gap:16px; }
 
   .card{
@@ -414,13 +361,7 @@
     break-inside:avoid;
   }
   .exp-item:last-child{ padding-bottom:0; }
-  .exp-line{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    flex-shrink:0;
-    width:16px;
-  }
+  .exp-line{ display:flex; flex-direction:column; align-items:center; flex-shrink:0; width:16px; }
   .exp-dot{
     width:14px; height:14px;
     border-radius:50%;
@@ -429,12 +370,7 @@
     flex-shrink:0;
     margin-top:3px;
   }
-  .exp-track{
-    flex:1;
-    width:2px;
-    background:#F3D9BE;
-    margin-top:2px;
-  }
+  .exp-track{ flex:1; width:2px; background:#F3D9BE; margin-top:2px; }
   .exp-item:last-child .exp-track{ display:none; }
   .exp-body{ flex:1; }
   .exp-head{
@@ -481,7 +417,6 @@
     gap:9px;
     cursor:pointer;
     transition:transform 0.2s, background 0.2s;
-    border-radius:50px;
   }
   .floating-btn:hover{ transform:translateY(-2px); }
   .floating-download{
@@ -493,13 +428,6 @@
   }
   .floating-download:hover{ background:var(--orange-deep); }
   .floating-download i{ font-size:14px; }
-  .floating-toggle{
-    background:#fff;
-    color:var(--orange-deep);
-    border:1.5px solid #F3D9BE;
-    box-shadow:0 6px 16px rgba(0,0,0,0.12);
-  }
-  .floating-toggle:hover{ background:var(--cream); }
   .floating-chat{
     background:#fff;
     color:var(--orange-deep);
@@ -508,6 +436,8 @@
     padding:13px 16px;
   }
   .floating-chat:hover{ background:var(--cream); }
+  /* Botão PCD oculto */
+  .floating-toggle{ display:none; }
 
   @media (max-width:700px){
     .sheet-grid{ grid-template-columns:1fr; }
@@ -543,13 +473,8 @@
     text-decoration:none;
     white-space:nowrap;
   }
-  .tab-btn.active{
-    background:var(--orange);
-    color:#fff;
-  }
-  #sec-dados, #sec-formacao, #sec-habilidades, #sec-experiencia{
-    scroll-margin-top:64px;
-  }
+  .tab-btn.active{ background:var(--orange); color:#fff; }
+  #sec-dados, #sec-formacao, #sec-habilidades, #sec-experiencia{ scroll-margin-top:64px; }
 
   .back-top{
     display:none;
@@ -574,7 +499,7 @@
     .back-top{ display:flex; }
   }
 
-  /* ================= STICKY MINI HEADER (foto travada no mobile) ================= */
+  /* ================= STICKY MINI HEADER ================= */
   .sticky-mini-header{
     display:none;
     position:fixed;
@@ -607,27 +532,13 @@
   .sticky-mini-photo img{
     position:absolute;
     width:100%;
-    height:auto;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    display:none;
+    height:100%;
     object-fit:cover;
+    border-radius:50%;
+    display:block;
   }
-  .sticky-mini-photo .photo-placeholder{
-    font-size:16px;
-    color:#fff;
-  }
-  .sticky-mini-name{
-    color:#fff;
-    font-weight:600;
-    font-size:14px;
-    line-height:1.2;
-  }
-  .sticky-mini-role{
-    color:rgba(255,255,255,0.85);
-    font-size:10px;
-  }
+  .sticky-mini-name{ color:#fff; font-weight:600; font-size:14px; line-height:1.2; }
+  .sticky-mini-role{ color:rgba(255,255,255,0.85); font-size:10px; }
   .sticky-mini-topbtn{
     margin-left:auto;
     width:32px; height:32px;
@@ -682,10 +593,7 @@
     page-break-inside:avoid;
     break-inside:avoid;
   }
-  .footer i{
-    color:var(--orange-dark);
-    margin:0 4px;
-  }
+  .footer i{ color:var(--orange-dark); margin:0 4px; }
 
   /* ================= TOAST ================= */
   .toast-container{
@@ -770,16 +678,8 @@
     justify-content:center;
     font-size:20px;
   }
-  .chat-header-info h3{
-    margin:0;
-    font-size:16px;
-    font-weight:600;
-  }
-  .chat-header-info p{
-    margin:2px 0 0 0;
-    font-size:11px;
-    opacity:0.85;
-  }
+  .chat-header-info h3{ margin:0; font-size:16px; font-weight:600; }
+  .chat-header-info p{ margin:2px 0 0 0; font-size:11px; opacity:0.85; }
   .chat-close{
     margin-left:auto;
     background:none;
@@ -829,7 +729,7 @@
     color:var(--orange-deep);
     font-size:11px;
     padding:6px 12px;
-    border-radius:20px;
+    border-radius:50px; /* totalmente redondo */
     cursor:pointer;
     font-weight:600;
   }
@@ -886,28 +786,10 @@
     text-align:center;
     box-shadow:0 20px 40px rgba(0,0,0,0.25);
   }
-  .link-confirm-icon{
-    font-size:36px;
-    color:var(--orange-dark);
-    margin-bottom:12px;
-  }
-  .link-confirm-box h3{
-    margin:0 0 8px 0;
-    font-size:18px;
-    font-weight:600;
-    color:var(--ink);
-  }
-  .link-confirm-box p{
-    margin:0 0 20px 0;
-    font-size:13px;
-    color:var(--gray);
-    line-height:1.5;
-  }
-  .link-confirm-actions{
-    display:flex;
-    gap:10px;
-    justify-content:center;
-  }
+  .link-confirm-icon{ font-size:36px; color:var(--orange-dark); margin-bottom:12px; }
+  .link-confirm-box h3{ margin:0 0 8px 0; font-size:18px; font-weight:600; color:var(--ink); }
+  .link-confirm-box p{ margin:0 0 20px 0; font-size:13px; color:var(--gray); line-height:1.5; }
+  .link-confirm-actions{ display:flex; gap:10px; justify-content:center; }
   .link-confirm-btn{
     padding:10px 20px;
     border-radius:25px;
@@ -916,16 +798,9 @@
     cursor:pointer;
     border:none;
   }
-  .link-confirm-cancel{
-    background:#fff;
-    border:1.5px solid #F3D9BE;
-    color:var(--orange-deep);
-  }
+  .link-confirm-cancel{ background:#fff; border:1.5px solid #F3D9BE; color:var(--orange-deep); }
   .link-confirm-cancel:hover{ background:var(--cream); }
-  .link-confirm-open{
-    background:var(--orange-dark);
-    color:#fff;
-  }
+  .link-confirm-open{ background:var(--orange-dark); color:#fff; }
   .link-confirm-open:hover{ background:var(--orange-deep); }
 
   /* evitar corte no PDF */
@@ -933,14 +808,11 @@
     page-break-inside:avoid;
     break-inside:avoid;
   }
-  .sheet, .exp-section{
-    break-inside:auto;
-  }
+  .sheet, .exp-section{ break-inside:auto; }
 </style>
 </head>
 <body>
 
-<!-- Toast container -->
 <div class="toast-container" id="toastContainer"></div>
 
 <!-- Link confirm modal -->
@@ -959,8 +831,7 @@
 <!-- Sticky mini header (mobile) -->
 <div class="sticky-mini-header" id="stickyMiniHeader">
   <div class="sticky-mini-photo" id="stickyMiniPhoto">
-    
-    <i class="fa-solid fa-camera" id="stickyMiniPlaceholder" style="color:#fff; font-size:14px;"></i>
+    <img id="stickyMiniImg" src="https://github.com/MarcozEduardo/curriculo/blob/main/img/foto.png?raw=true" alt="Foto">
   </div>
   <div>
     <div class="sticky-mini-name">Marcos Eduardo</div>
@@ -984,11 +855,9 @@
     <div class="header-photo-row">
       <div class="photo-circle-wrap">
         <div class="photo-circle" id="photoCircle">
-          <img id="photoImg" src="https://github.com/MarcozEduardo/curriculo/blob/main/img/foto.png?raw=true" alt="Foto" style="display:block; width:100%; height:100%; object-fit:cover; pointer-events:none;">
-          <div class="photo-placeholder" id="photoPlaceholder">
+          <img id="photoImg" src="https://github.com/MarcozEduardo/curriculo/blob/main/img/foto.png?raw=true" alt="Foto" style="display:block; width:100%; height:100%; object-fit:cover; pointer-events:none; transform: scale(1.5);">
         </div>
-        <button class="photo-add-btn" id="uploadBtn" ><i class="fa-solid fa-image"></i></button>
-        <input type="file" id="photoInput" accept="image/*" hidden>
+<button class="photo-add-btn" id="uploadBtn" ><i class="fa-solid fa-image"></i></button>
       </div>
       <div class="header-name-block" id="headerName">
         <h1>Marcos Eduardo<br>da Silva dos Reis</h1>
@@ -999,13 +868,6 @@
     <div class="header-github" id="headerGithub">
       <div class="gh-line"><i class="fa-brands fa-github"></i>MarcozEduardo</div>
       <div class="gh-status"><i class="fa-solid fa-wrench"></i>Em obra</div>
-    </div>
-
-    <div class="photo-controls" id="photoControls">
-      <i class="fa-solid fa-magnifying-glass-minus"></i>
-      <input type="range" id="zoomRange" min="1" max="3" step="0.01" value="1">
-      <i class="fa-solid fa-magnifying-glass-plus"></i>
-      <button class="confirm-btn" id="confirmBtn"><i class="fa-solid fa-check"></i></button>
     </div>
   </div>
 
@@ -1036,7 +898,6 @@
             <div class="progress-item"><i class="fa-solid fa-globe"></i>Site: lelecriando.com</div>
             <div class="progress-item"><i class="fa-brands fa-youtube"></i>Canal Lelecriando</div>
           </div>
-
           <div class="pcd-tag is-hidden" id="pcdTag"><i class="fa-solid fa-circle-info"></i>Candidato à vaga PCD — Transtorno do Espectro Autista, Nível 1 (conforme laudo médico)</div>
         </div>
 
@@ -1206,7 +1067,6 @@
 
   </div>
 
-  <!-- Rodapé dentro da área de captura -->
   <div class="footer">
     Desenvolvimento <i class="fa-solid fa-code"></i> QA Engineer <i class="fa-solid fa-bug"></i> — Marcos Eduardo
   </div>
@@ -1217,7 +1077,6 @@
 
 <div class="floating-actions">
   <button class="floating-btn floating-chat" id="chatBtn"><i class="fa-solid fa-comment-dots"></i>Falar com Bobby</button>
-  <button class="floating-btn floating-toggle" id="togglePcdBtn"><i class="fa-solid fa-eye"></i>Mostrar PCD</button>
   <button class="floating-btn floating-download" id="downloadBtn"><i class="fa-solid fa-download"></i>Baixar PDF</button>
 </div>
 
@@ -1241,75 +1100,6 @@
 </div>
 
 <script>
-  // ============ FOTO (Zoom e Arrasto) ============
-  const photoCircle = document.getElementById('photoCircle');
-  const photoImg = document.getElementById('photoImg');
-  const photoPlaceholder = document.getElementById('photoPlaceholder');
-  const photoInput = document.getElementById('photoInput');
-  const uploadBtn = document.getElementById('uploadBtn');
-  const photoControls = document.getElementById('photoControls');
-  const zoomRange = document.getElementById('zoomRange');
-  const confirmBtn = document.getElementById('confirmBtn');
-  const stickyMiniImg = document.getElementById('stickyMiniImg');
-  const stickyMiniPlaceholder = document.getElementById('stickyMiniPlaceholder');
-
-  let scale = 1, posX = 0, posY = 0, dragging = false, startX = 0, startY = 0;
-
-  function updateTransform(){
-    photoImg.style.transform = `translate(calc(-50% + ${posX}px), calc(-50% + ${posY}px)) scale(${scale})`;
-  }
-
-  uploadBtn.addEventListener('click', () => photoInput.click());
-
-  photoInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if(!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      photoImg.src = ev.target.result;
-      photoImg.onload = () => {
-        photoImg.style.display = 'block';
-        photoImg.style.width = '100%';
-        photoImg.style.height = 'auto';
-        photoImg.style.left = '50%';
-        photoImg.style.top = '50%';
-        photoPlaceholder.style.display = 'none';
-        stickyMiniImg.src = ev.target.result;
-        stickyMiniImg.style.display = 'block';
-        stickyMiniPlaceholder.style.display = 'none';
-        scale = 1; posX = 0; posY = 0; zoomRange.value = 1;
-        updateTransform();
-        photoControls.style.display = 'flex';
-      };
-    };
-    reader.readAsDataURL(file);
-  });
-
-  zoomRange.addEventListener('input', () => {
-    scale = parseFloat(zoomRange.value);
-    updateTransform();
-  });
-
-  photoCircle.addEventListener('pointerdown', (e) => {
-    if(!photoImg.src) return;
-    dragging = true;
-    startX = e.clientX - posX;
-    startY = e.clientY - posY;
-    photoCircle.setPointerCapture(e.pointerId);
-  });
-  photoCircle.addEventListener('pointermove', (e) => {
-    if(!dragging) return;
-    posX = e.clientX - startX;
-    posY = e.clientY - startY;
-    updateTransform();
-  });
-  photoCircle.addEventListener('pointerup', () => dragging = false);
-  photoCircle.addEventListener('pointercancel', () => dragging = false);
-
-  confirmBtn.addEventListener('click', () => {
-    photoControls.style.display = 'none';
-  });
-
   // ============ TOAST ============
   function showToast(message, icon = 'fa-circle-check'){
     const container = document.getElementById('toastContainer');
@@ -1358,16 +1148,6 @@
   // Header nome copia
   document.getElementById('headerName').addEventListener('click', () => {
     navigator.clipboard.writeText('Marcos Eduardo da Silva dos Reis').then(() => showToast('Nome copiado!', 'fa-user'));
-  });
-
-  // ============ PCD TOGGLE ============
-  const pcdTag = document.getElementById('pcdTag');
-  const togglePcdBtn = document.getElementById('togglePcdBtn');
-  togglePcdBtn.addEventListener('click', () => {
-    const nowHidden = pcdTag.classList.toggle('is-hidden');
-    togglePcdBtn.innerHTML = nowHidden
-      ? '<i class="fa-solid fa-eye"></i>Mostrar PCD'
-      : '<i class="fa-solid fa-eye-slash"></i>Ocultar PCD';
   });
 
   // ============ BACK TO TOP ============
@@ -1465,6 +1245,13 @@
     ]
   };
 
+  const menuOptions = [
+    {label:"1. Sobre Marcos", action:"sobre"},
+    {label:"2. Experiência", action:"experiência"},
+    {label:"3. Habilidades", action:"habilidades"},
+    {label:"4. Contato", action:"contato"}
+  ];
+
   function addMessage(sender, text, options = []){
     const msgDiv = document.createElement('div');
     msgDiv.className = `msg ${sender}`;
@@ -1490,77 +1277,67 @@
 
   function botResponse(input){
     const text = input.toLowerCase();
+    let result = {};
     if(text.includes('opção') || text.includes('opcao') || text.includes('menu') || text.includes('olá') || text.includes('oi') || text.includes('ajuda')){
-      return {
-        text: "Olá! Eu sou o Bobby, assistente virtual do Marcos Eduardo. Posso falar sobre:\n\n1 - Sobre Marcos\n2 - Experiência Profissional\n3 - Habilidades\n4 - Contato\n\nDigite o número ou a palavra-chave.",
-        options: [
-          {label:"1. Sobre Marcos", action:"sobre"},
-          {label:"2. Experiência", action:"experiência"},
-          {label:"3. Habilidades", action:"habilidades"},
-          {label:"4. Contato", action:"contato"}
-        ]
+      result = {
+        text: "Olá! Eu sou o Bobby, assistente virtual do Marcos Eduardo. Posso falar sobre:\n\n1 - Sobre Marcos\n2 - Experiência Profissional\n3 - Habilidades\n4 - Contato\n\nEscolha uma opção:",
+        options: menuOptions
       };
     }
-    if(text.includes('sobre') || text.includes('1') || text.includes('marcos') || text.includes('quem')){
-      return {
-        text: `Sobre o Marcos:\n${curriculum.resumo}\n\nLocalização: ${curriculum.localizacao}\nCargo atual: ${curriculum.cargo}`,
-        options: [
-          {label:"Ver experiência", action:"experiência"},
-          {label:"Ver habilidades", action:"habilidades"}
-        ]
+    else if(text.includes('sobre') || text.includes('1') || text.includes('marcos') || text.includes('quem')){
+      result = {
+        text: `Sobre o Marcos:\n${curriculum.resumo}\n\nLocalização: ${curriculum.localizacao}\nCargo atual: ${curriculum.cargo}\n\nEscolha uma opção:`,
+        options: menuOptions
       };
     }
-    if(text.includes('experiência') || text.includes('experiencia') || text.includes('2') || text.includes('trabalho') || text.includes('carreira')){
+    else if(text.includes('experiência') || text.includes('experiencia') || text.includes('2') || text.includes('trabalho') || text.includes('carreira')){
       let expText = "Experiências de Marcos:\n\n";
       curriculum.experiencia.forEach(e => expText += `• ${e}\n`);
-      return {
-        text: expText,
-        options: [
-          {label:"Ver habilidades", action:"habilidades"},
-          {label:"Ver contato", action:"contato"}
-        ]
+      result = {
+        text: expText + "\nEscolha uma opção:",
+        options: menuOptions
       };
     }
-    if(text.includes('habilidade') || text.includes('skill') || text.includes('3') || text.includes('competência') || text.includes('competencia')){
+    else if(text.includes('habilidade') || text.includes('skill') || text.includes('3') || text.includes('competência') || text.includes('competencia')){
       let skillText = "Habilidades:\n\n";
       curriculum.habilidades.forEach(h => skillText += `• ${h}\n`);
-      return {
-        text: skillText,
-        options: [
-          {label:"Ver experiência", action:"experiência"},
-          {label:"Ver contato", action:"contato"}
-        ]
+      result = {
+        text: skillText + "\nEscolha uma opção:",
+        options: menuOptions
       };
     }
-    if(text.includes('contato') || text.includes('4') || text.includes('email') || text.includes('telefone') || text.includes('linkedin') || text.includes('github')){
-      return {
-        text: `Contato:\n\nTelefone: ${curriculum.telefone}\nEmail: ${curriculum.email}\nGitHub: ${curriculum.github}\nLinkedIn: ${curriculum.linkedin}\n\nClique nos itens da página para copiar ou acessar!`,
-        options: [
-          {label:"Voltar ao menu", action:"menu"}
-        ]
+    else if(text.includes('contato') || text.includes('4') || text.includes('email') || text.includes('telefone') || text.includes('linkedin') || text.includes('github')){
+      result = {
+        text: `Contato:\n\nTelefone: ${curriculum.telefone}\nEmail: ${curriculum.email}\nGitHub: ${curriculum.github}\nLinkedIn: ${curriculum.linkedin}\n\nEscolha uma opção:`,
+        options: menuOptions
       };
     }
-    // off-script
-    offScriptCount++;
-    let offMsg = '';
-    switch(offScriptCount){
-      case 1:
-        offMsg = "Querendo fugir do script né?\nO Marcos consegue integrar uma API aqui, mas não é o caso hoje.";
-        break;
-      case 2:
-        offMsg = "Infelizmente não posso fugir do meu script. rsrs";
-        break;
-      case 3:
-        offMsg = "Tá me testando né? kkk";
-        break;
-      case 4:
-        offMsg = "Que tal você tentar falar diretamente com ele? Olha aqui o WhatsApp, troca uma ideia aí!";
-        break;
-      default:
-        offMsg = "É, infelizmente minha memória é limitada aqui. Mas eu tentei. Fique à vontade aqui no currículo viu?";
-        if(offScriptCount > 5) offScriptCount = 5; // mantém a última
+    else {
+      offScriptCount++;
+      let offMsg = '';
+      switch(offScriptCount){
+        case 1:
+          offMsg = "Querendo fugir do script né?\nO Marcos consegue integrar uma API aqui, mas não é o caso hoje.";
+          break;
+        case 2:
+          offMsg = "Infelizmente não posso fugir do meu script. rsrs";
+          break;
+        case 3:
+          offMsg = "Tá me testando né? kkk";
+          break;
+        case 4:
+          offMsg = "Que tal você tentar falar diretamente com ele? Olha aqui o WhatsApp, troca uma ideia aí!";
+          break;
+        default:
+          offMsg = "É, infelizmente minha memória é limitada aqui. Mas eu tentei. Fique à vontade aqui no currículo viu?";
+          if(offScriptCount > 5) offScriptCount = 5;
+      }
+      result = {
+        text: offMsg + "\n\nEscolha uma opção:",
+        options: menuOptions
+      };
     }
-    return { text: offMsg, options: [] };
+    return result;
   }
 
   function handleUserMessage(input){
@@ -1571,13 +1348,8 @@
 
   function initChat(){
     chatMessages.innerHTML = '';
-    addMessage('bot', "Olá! Eu sou o Bobby, assistente virtual do currículo do Marcos Eduardo.\n\nPosso te ajudar com:\n\n1 - Sobre Marcos\n2 - Experiência Profissional\n3 - Habilidades\n4 - Contato\n\nDigite o número ou a palavra-chave!",
-      [
-        {label:"1. Sobre Marcos", action:"sobre"},
-        {label:"2. Experiência", action:"experiência"},
-        {label:"3. Habilidades", action:"habilidades"},
-        {label:"4. Contato", action:"contato"}
-      ]
+    addMessage('bot', "Olá! Eu sou o Bobby, assistente virtual do currículo do Marcos Eduardo.\n\nPosso te ajudar com:\n\n1 - Sobre Marcos\n2 - Experiência Profissional\n3 - Habilidades\n4 - Contato\n\nEscolha uma opção:",
+      menuOptions
     );
     chatInitialized = true;
     offScriptCount = 0;
