@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcos Eduardo — Currículo</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+  :root{
+    --orange:#FF7A2E;
+    --orange-dark:#D9540A;
+    --orange-deep:#B8420A;
+    --cream:#FFF3E6;
+    --ink:#26221E;
+    --gray:#6b6560;
+    --card-bg:#ffffff;
+    --radius-xl:40px;
+    --radius-lg:28px;
+    --radius-md:18px;
+    --radius-sm:10px;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:#EDEDED;
+    font-family:'Inter', Arial, sans-serif;
+    color:var(--ink);
+    display:flex;
+    justify-content:center;
+    padding:26px 10px 90px 10px;
+  }
+
+  .phone-frame{
+    width:794px;
+    max-width:100%;
+    background:var(--card-bg);
+    border-radius:var(--radius-xl);
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,0.22);
+    position:relative;
+    overflow:visible;
+  }
+
+  /* ================= HEADER ================= */
+  .app-header{
+    position:relative;
+    background:
+      repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 2px, transparent 2px, transparent 14px),
+      linear-gradient(160deg, #FF8C42 0%, #FF7A2E 45%, #F26418 100%);
+    padding:20px 26px 34px 26px;
+    overflow:hidden;
+    border-radius:var(--radius-xl) var(--radius-xl) 0 0;
+  }
+  .deco-blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(2px);
+  }
+  .blob1{
+    width:230px; height:230px;
+    background:rgba(255,255,255,0.10);
+    top:-90px; right:-60px;
+  }
+  .blob2{
+    width:160px; height:160px;
+    background:rgba(184,66,10,0.28);
+    bottom:-70px; left:38%;
+  }
+
+  .header-top-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    z-index:2;
+  }
+  .icon-btn{
+    width:34px; height:34px;
+    border-radius:var(--radius-sm);
+    border:none;
+    background:rgba(255,255,255,0.20);
+    color:#fff;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:default;
+  }
+  .phone-num-topright{
+    color:#fff;
+    font-size:12.5px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    opacity:0.95;
+    cursor:pointer;
+    transition:opacity 0.2s;
+  }
+  .phone-num-topright:hover{ opacity:0.8; }
+  .header-photo-row{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-top:20px;
+  }
+  .photo-circle-wrap{
+    position:relative;
+    flex-shrink:0;
+  }
+  .photo-circle{
+    width:104px; height:104px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.18);
+    border:3px solid var(--orange-deep);
+    box-shadow:0 0 0 4px rgba(255,255,255,0.55);
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    touch-action:none;
+    cursor:grab;
+    border-radius:50%;
+  }
+  .photo-circle:active{ cursor:grabbing; }
+  .photo-circle img{
+    position:absolute;
+    max-width:none;
+    display:none;
+    user-select:none;
+    -webkit-user-drag:none;
+    pointer-events:none;
+    transform-origin:center center;
+    border-radius:50%;
+  }
+  .photo-placeholder{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:3px;
+    color:#fff;
+    opacity:0.9;
+    font-size:11px;
+  }
+  .photo-placeholder i{ font-size:20px; }
+  .photo-add-btn{
+    position:absolute;
+    bottom:-2px; right:-2px;
+    width:30px; height:30px;
+    border-radius:50%;
+    background:var(--orange-deep);
+    border:2px solid #fff;
+    color:#fff;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+  .header-name-block h1{
+    margin:0;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    font-size:22px;
+    line-height:1.18;
+    cursor:pointer;
+    transition:opacity 0.2s;
+  }
+  .header-name-block h1:hover{ opacity:0.8; }
+  .header-role{
+    margin:5px 0 0 0;
+    color:rgba(255,255,255,0.92);
+    font-size:11.5px;
+    font-weight:500;
+  }
+
+  .header-github{
+    position:absolute;
+    top:58px;
+    right:26px;
+    z-index:2;
+    text-align:right;
+    cursor:pointer;
+    transition:opacity 0.2s;
+  }
+  .header-github:hover{ opacity:0.8; }
+  .gh-line{
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:7px;
+  }
+  .gh-line i{ font-size:15px; }
+  .gh-status{
+    margin-top:5px;
+    color:rgba(255,255,255,0.85);
+    font-size:10px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:6px;
+    background:rgba(0,0,0,0.14);
+    padding:3px 9px;
+    border-radius:20px;
+  }
+  .gh-status i{ font-size:10px; }
+
+  @media (min-width:701px){
+    .photo-circle{ width:132px; height:132px; }
+    .header-name-block h1{ font-size:29px; }
+    .header-role{ font-size:13px; }
+    .app-header{ padding-top:24px; padding-bottom:40px; }
+    .header-photo-row{ margin-top:26px; gap:22px; }
+    .header-github{ top:64px; }
+  }
+
+  .photo-controls{
+    display:none;
+    align-items:center;
+    gap:8px;
+    margin-top:14px;
+    position:relative;
+    z-index:2;
+    background:rgba(255,255,255,0.16);
+    padding:8px 12px;
+    border-radius:var(--radius-sm);
+    width:fit-content;
+  }
+  .photo-controls i{ color:#fff; font-size:12px; }
+  .photo-controls input[type=range]{ width:120px; accent-color:#fff; }
+  .confirm-btn{
+    width:26px; height:26px;
+    border-radius:50%;
+    border:none;
+    background:#fff;
+    color:var(--orange-dark);
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+
+  /* ================= SHEET ================= */
+  .sheet{
+    background:#fff;
+    border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+    margin-top:-26px;
+    position:relative;
+    z-index:3;
+    padding:28px 26px 34px 26px;
+    min-height:80vh;
+  }
+
+  .card-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    font-size:14.5px;
+    color:var(--ink);
+    margin-bottom:12px;
+  }
+  .badge{
+    width:30px; height:30px;
+    border-radius:var(--radius-sm);
+    background:var(--orange);
+    color:#FFF6ED;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    flex-shrink:0;
+  }
+  .badge-big{ width:36px; height:36px; font-size:15px; border-radius:11px; }
+
+  .sheet-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .col-left{ display:flex; flex-direction:column; gap:16px; }
+
+  .card{
+    background:var(--cream);
+    border-radius:var(--radius-md);
+    padding:16px 16px 18px 16px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .card-big{ height:100%; }
+
+  .contact-list{ list-style:none; padding:0; margin:0 0 12px 0; }
+  .contact-list li{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:10.6px;
+    color:var(--ink);
+    margin-bottom:7px;
+    cursor:pointer;
+    transition:color 0.2s;
+  }
+  .contact-list li:hover{ color:var(--orange-dark); }
+  .contact-list li i{ color:var(--orange-dark); width:14px; text-align:center; font-size:10.5px; }
+
+  .resumo-txt{
+    font-size:10.3px;
+    line-height:1.55;
+    color:#4a453f;
+    text-align:justify;
+    margin:0 0 12px 0;
+  }
+  .pcd-tag{
+    background:#fff;
+    border:1px solid #F0C7A6;
+    border-radius:var(--radius-sm);
+    padding:8px 10px;
+    font-size:9.6px;
+    color:var(--orange-deep);
+    display:flex;
+    gap:6px;
+    align-items:flex-start;
+    line-height:1.4;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .pcd-tag i{ margin-top:1px; }
+
+  .progress-tag{
+    background:#fff;
+    border:1px solid #F3D9BE;
+    border-radius:var(--radius-sm);
+    padding:10px 12px;
+    margin-bottom:10px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .progress-title{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:10px;
+    font-weight:700;
+    color:var(--orange-deep);
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+    margin-bottom:6px;
+  }
+  .progress-item{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:10px;
+    color:var(--ink);
+    margin-bottom:3px;
+  }
+  .progress-item:last-child{ margin-bottom:0; }
+  .progress-item i{ color:var(--orange-dark); width:12px; text-align:center; font-size:10px; }
+
+  .formacao-item{ margin-bottom:10px; page-break-inside:avoid; break-inside:avoid; }
+  .formacao-item:last-child{ margin-bottom:0; }
+  .formacao-title{ font-weight:600; font-size:11px; color:var(--ink); }
+  .formacao-sub{ font-size:9.8px; color:var(--orange-dark); font-style:italic; margin-top:2px; }
+
+  .skill-group{ margin-bottom:13px; }
+  .skill-group:last-child{ margin-bottom:0; }
+  .skill-group h4{
+    margin:0 0 7px 0;
+    font-size:10.3px;
+    font-weight:600;
+    color:var(--orange-deep);
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+  }
+  .pills{ display:flex; flex-wrap:wrap; gap:6px; }
+  .pill{
+    background:#fff;
+    border:1px solid #F3D9BE;
+    color:var(--ink);
+    font-size:9.6px;
+    padding:5px 10px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+
+  /* ================= EXPERIENCE ================= */
+  .exp-section{ margin-top:22px; }
+  .exp-item{
+    display:flex;
+    gap:14px;
+    position:relative;
+    padding-bottom:18px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .exp-item:last-child{ padding-bottom:0; }
+  .exp-line{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex-shrink:0;
+    width:16px;
+  }
+  .exp-dot{
+    width:14px; height:14px;
+    border-radius:50%;
+    background:var(--orange);
+    border:3px solid var(--cream);
+    flex-shrink:0;
+    margin-top:3px;
+  }
+  .exp-track{
+    flex:1;
+    width:2px;
+    background:#F3D9BE;
+    margin-top:2px;
+  }
+  .exp-item:last-child .exp-track{ display:none; }
+  .exp-body{ flex:1; }
+  .exp-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .exp-title{ font-weight:600; font-size:11.3px; color:var(--ink); }
+  .exp-date{
+    background:var(--cream);
+    color:var(--orange-deep);
+    font-size:9px;
+    font-weight:600;
+    padding:3px 9px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+  .exp-company{ font-size:9.8px; color:var(--orange-dark); font-style:italic; margin-top:2px; }
+  .exp-desc{ font-size:9.7px; color:#4a453f; margin:6px 0 0 0; padding-left:15px; text-align:justify; }
+  .exp-desc li{ margin-bottom:4px; }
+
+  /* ================= FLOATING BUTTONS ================= */
+  .floating-actions{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:10px;
+    z-index:999;
+  }
+  .floating-btn{
+    border:none;
+    padding:13px 20px;
+    border-radius:50px;
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    cursor:pointer;
+    transition:transform 0.2s, background 0.2s;
+    border-radius:50px;
+  }
+  .floating-btn:hover{ transform:translateY(-2px); }
+  .floating-download{
+    background:var(--orange-dark);
+    color:#fff;
+    padding:14px 22px;
+    font-size:13.5px;
+    box-shadow:0 10px 24px rgba(217,84,10,0.45);
+  }
+  .floating-download:hover{ background:var(--orange-deep); }
+  .floating-download i{ font-size:14px; }
+  .floating-toggle{
+    background:#fff;
+    color:var(--orange-deep);
+    border:1.5px solid #F3D9BE;
+    box-shadow:0 6px 16px rgba(0,0,0,0.12);
+  }
+  .floating-toggle:hover{ background:var(--cream); }
+  .floating-chat{
+    background:#fff;
+    color:var(--orange-deep);
+    border:1.5px solid #F3D9BE;
+    box-shadow:0 6px 16px rgba(0,0,0,0.12);
+    padding:13px 16px;
+  }
+  .floating-chat:hover{ background:var(--cream); }
+
+  @media (max-width:700px){
+    .sheet-grid{ grid-template-columns:1fr; }
+    body{ padding:0 0 90px 0; }
+    .phone-frame{ border-radius:0; }
+  }
+
+  /* ================= MOBILE TABS ================= */
+  .mobile-tabs{
+    display:none;
+    position:sticky;
+    top:0;
+    z-index:80;
+    background:#fff;
+    padding:10px 12px;
+    gap:8px;
+    overflow-x:auto;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    -webkit-overflow-scrolling:touch;
+  }
+  .tab-btn{
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:11.5px;
+    font-weight:600;
+    color:var(--orange-deep);
+    background:var(--cream);
+    border:1px solid transparent;
+    padding:8px 13px;
+    border-radius:20px;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .tab-btn.active{
+    background:var(--orange);
+    color:#fff;
+  }
+  #sec-dados, #sec-formacao, #sec-habilidades, #sec-experiencia{
+    scroll-margin-top:64px;
+  }
+
+  .back-top{
+    display:none;
+    position:fixed;
+    bottom:24px;
+    left:24px;
+    width:44px; height:44px;
+    border-radius:50%;
+    background:#fff;
+    border:1.5px solid #F3D9BE;
+    color:var(--orange-deep);
+    box-shadow:0 6px 16px rgba(0,0,0,0.14);
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+    cursor:pointer;
+    z-index:998;
+  }
+
+  @media (max-width:700px){
+    .mobile-tabs{ display:flex; }
+    .back-top{ display:flex; }
+  }
+
+  /* ================= STICKY MINI HEADER (foto travada no mobile) ================= */
+  .sticky-mini-header{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:90;
+    background:linear-gradient(160deg, #FF8C42 0%, #FF7A2E 45%, #F26418 100%);
+    padding:8px 16px;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.18);
+    transform:translateY(-100%);
+    transition:transform 0.3s ease;
+    border-radius:0 0 20px 20px;
+  }
+  .sticky-mini-header.show{ transform:translateY(0); }
+  .sticky-mini-photo{
+    width:40px; height:40px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.3);
+    border:2px solid var(--orange-deep);
+    overflow:hidden;
+    position:relative;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .sticky-mini-photo img{
+    position:absolute;
+    width:100%;
+    height:auto;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    display:none;
+    object-fit:cover;
+  }
+  .sticky-mini-photo .photo-placeholder{
+    font-size:16px;
+    color:#fff;
+  }
+  .sticky-mini-name{
+    color:#fff;
+    font-weight:600;
+    font-size:14px;
+    line-height:1.2;
+  }
+  .sticky-mini-role{
+    color:rgba(255,255,255,0.85);
+    font-size:10px;
+  }
+  .sticky-mini-topbtn{
+    margin-left:auto;
+    width:32px; height:32px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.2);
+    border:none;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+
+  @media (max-width:700px){
+    .sticky-mini-header{ display:flex; }
+  }
+
+  /* ================= DESKTOP WALLPAPER ================= */
+  @media (min-width:701px){
+    body{
+      background-color:#F2EEE7;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300' width='300' height='300'%3E%3Cg fill='none' stroke='%23DCC7A6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' opacity='0.6'%3E%3Cg transform='translate(18,20) rotate(-6)'%3E%3Crect x='0' y='0' width='46' height='30' rx='3'/%3E%3Cpath d='M-6 34 L52 34 L46 30 L0 30 Z'/%3E%3C/g%3E%3Cg transform='translate(205,30)'%3E%3Cpath d='M0 18 A22 22 0 0 1 40 18'/%3E%3Cpath d='M8 26 A12 12 0 0 1 32 26'/%3E%3Ccircle cx='20' cy='34' r='2.4' fill='%23DCC7A6'/%3E%3C/g%3E%3Cg transform='translate(35,150) rotate(4)'%3E%3Crect x='0' y='0' width='60' height='24' rx='4'/%3E%3Ccircle cx='10' cy='8' r='1.6'/%3E%3Ccircle cx='20' cy='8' r='1.6'/%3E%3Ccircle cx='30' cy='8' r='1.6'/%3E%3Ccircle cx='40' cy='8' r='1.6'/%3E%3Ccircle cx='50' cy='8' r='1.6'/%3E%3Ccircle cx='10' cy='16' r='1.6'/%3E%3Ccircle cx='20' cy='16' r='1.6'/%3E%3Ccircle cx='30' cy='16' r='1.6'/%3E%3Ccircle cx='40' cy='16' r='1.6'/%3E%3Ccircle cx='50' cy='16' r='1.6'/%3E%3C/g%3E%3Cg transform='translate(235,150) rotate(-8)'%3E%3Crect x='0' y='0' width='22' height='38' rx='5'/%3E%3Ccircle cx='11' cy='32' r='1.8'/%3E%3C/g%3E%3Cg transform='translate(130,75) rotate(12)'%3E%3Crect x='0' y='0' width='20' height='30' rx='10'/%3E%3Cline x1='10' y1='0' x2='10' y2='12'/%3E%3C/g%3E%3Cg transform='translate(240,235)'%3E%3Cline x1='0' y1='26' x2='0' y2='0'/%3E%3Ccircle cx='0' cy='-4' r='2.4' fill='%23DCC7A6'/%3E%3Cpath d='M-10 2 A14 14 0 0 1 10 2'/%3E%3C/g%3E%3Cg transform='translate(75,235) rotate(8) scale(0.8)'%3E%3Crect x='0' y='0' width='46' height='30' rx='3'/%3E%3Cpath d='M-6 34 L52 34 L46 30 L0 30 Z'/%3E%3C/g%3E%3Cg transform='translate(12,100) scale(0.65)'%3E%3Cpath d='M0 18 A22 22 0 0 1 40 18'/%3E%3Cpath d='M8 26 A12 12 0 0 1 32 26'/%3E%3Ccircle cx='20' cy='34' r='2.4' fill='%23DCC7A6'/%3E%3C/g%3E%3Cg transform='translate(160,200) rotate(-15)'%3E%3Crect x='0' y='0' width='10' height='20' rx='2'/%3E%3Cline x1='3' y1='20' x2='3' y2='28'/%3E%3Cline x1='7' y1='20' x2='7' y2='28'/%3E%3Crect x='-2' y='28' width='14' height='8' rx='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-repeat:repeat;
+      background-size:300px 300px;
+    }
+    .phone-frame{ margin:20px auto; }
+  }
+
+  /* hide chrome UI while generating PDF */
+  .capture-mode .photo-controls,
+  .capture-mode .icon-btn,
+  .capture-mode .mobile-tabs,
+  .capture-mode .back-top,
+  .capture-mode .sticky-mini-header,
+  .capture-mode .floating-actions,
+  .capture-mode .chat-modal,
+  .capture-mode .toast-container,
+  .capture-mode .link-confirm-modal{ visibility:hidden; }
+
+  .pcd-tag.is-hidden{ display:none; }
+
+  /* ================= FOOTER ================= */
+  .footer{
+    background:#fff;
+    text-align:center;
+    padding:16px 20px;
+    font-size:10.5px;
+    color:var(--orange-deep);
+    border-top:1px solid #F3D9BE;
+    font-weight:500;
+    letter-spacing:0.3px;
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .footer i{
+    color:var(--orange-dark);
+    margin:0 4px;
+  }
+
+  /* ================= TOAST ================= */
+  .toast-container{
+    position:fixed;
+    bottom:90px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:1000;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    pointer-events:none;
+  }
+  .toast{
+    background:var(--ink);
+    color:#fff;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    animation:toastIn 0.3s ease, toastOut 0.3s ease 2.2s forwards;
+  }
+  .toast i{ color:var(--orange); }
+  @keyframes toastIn{
+    from{ opacity:0; transform:translateY(10px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @keyframes toastOut{
+    from{ opacity:1; }
+    to{ opacity:0; transform:translateY(-10px); }
+  }
+
+  /* ================= CHAT MODAL ================= */
+  .chat-modal{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0; bottom:0;
+    background:rgba(0,0,0,0.5);
+    z-index:1001;
+    align-items:flex-end;
+    justify-content:flex-end;
+    padding:0 20px 100px 0;
+  }
+  .chat-modal.open{ display:flex; }
+  .chat-box{
+    width:100%;
+    max-width:400px;
+    background:#fff;
+    border-radius:30px 30px 10px 30px;
+    overflow:hidden;
+    box-shadow:0 -10px 30px rgba(0,0,0,0.25);
+    display:flex;
+    flex-direction:column;
+    height:70vh;
+    max-height:600px;
+    margin:0;
+    transform-origin:bottom right;
+    animation:slideUp 0.3s ease;
+  }
+  @keyframes slideUp{
+    from{ transform:translateY(20px) scale(0.95); opacity:0; }
+    to{ transform:translateY(0) scale(1); opacity:1; }
+  }
+  .chat-header{
+    background:linear-gradient(160deg, #FF8C42 0%, #FF7A2E 45%, #F26418 100%);
+    color:#fff;
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .chat-avatar{
+    width:42px; height:42px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+  }
+  .chat-header-info h3{
+    margin:0;
+    font-size:16px;
+    font-weight:600;
+  }
+  .chat-header-info p{
+    margin:2px 0 0 0;
+    font-size:11px;
+    opacity:0.85;
+  }
+  .chat-close{
+    margin-left:auto;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+  }
+  .chat-messages{
+    flex:1;
+    padding:18px;
+    overflow-y:auto;
+    background:#f9f4ef;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .msg{
+    max-width:80%;
+    padding:10px 14px;
+    border-radius:18px;
+    font-size:12.5px;
+    line-height:1.45;
+    white-space:pre-wrap;
+  }
+  .msg.bot{
+    background:#fff;
+    border:1px solid #F3D9BE;
+    align-self:flex-start;
+    border-bottom-left-radius:4px;
+  }
+  .msg.user{
+    background:var(--orange);
+    color:#fff;
+    align-self:flex-end;
+    border-bottom-right-radius:4px;
+  }
+  .msg-options{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:4px;
+  }
+  .msg-option-btn{
+    background:#fff;
+    border:1px solid #F3D9BE;
+    color:var(--orange-deep);
+    font-size:11px;
+    padding:6px 12px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  .msg-option-btn:hover{ background:var(--cream); }
+  .chat-input-area{
+    display:flex;
+    gap:8px;
+    padding:12px 16px;
+    background:#fff;
+    border-top:1px solid #eee;
+  }
+  .chat-input-area input{
+    flex:1;
+    border:1.5px solid #F3D9BE;
+    border-radius:25px;
+    padding:10px 16px;
+    font-size:13px;
+    outline:none;
+    font-family:'Inter',sans-serif;
+  }
+  .chat-input-area input:focus{ border-color:var(--orange); }
+  .chat-send-btn{
+    width:42px; height:42px;
+    border-radius:50%;
+    border:none;
+    background:var(--orange-dark);
+    color:#fff;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+  .chat-send-btn:hover{ background:var(--orange-deep); }
+
+  /* ================= LINK CONFIRM MODAL ================= */
+  .link-confirm-modal{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0; bottom:0;
+    background:rgba(0,0,0,0.5);
+    z-index:1002;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  }
+  .link-confirm-modal.open{ display:flex; }
+  .link-confirm-box{
+    background:#fff;
+    border-radius:30px;
+    padding:30px 24px;
+    max-width:380px;
+    width:100%;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  }
+  .link-confirm-icon{
+    font-size:36px;
+    color:var(--orange-dark);
+    margin-bottom:12px;
+  }
+  .link-confirm-box h3{
+    margin:0 0 8px 0;
+    font-size:18px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .link-confirm-box p{
+    margin:0 0 20px 0;
+    font-size:13px;
+    color:var(--gray);
+    line-height:1.5;
+  }
+  .link-confirm-actions{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+  }
+  .link-confirm-btn{
+    padding:10px 20px;
+    border-radius:25px;
+    font-weight:600;
+    font-size:13px;
+    cursor:pointer;
+    border:none;
+  }
+  .link-confirm-cancel{
+    background:#fff;
+    border:1.5px solid #F3D9BE;
+    color:var(--orange-deep);
+  }
+  .link-confirm-cancel:hover{ background:var(--cream); }
+  .link-confirm-open{
+    background:var(--orange-dark);
+    color:#fff;
+  }
+  .link-confirm-open:hover{ background:var(--orange-deep); }
+
+  /* evitar corte no PDF */
+  .card, .exp-item, .progress-tag, .pcd-tag, .card-title, .formacao-item, .footer{
+    page-break-inside:avoid;
+    break-inside:avoid;
+  }
+  .sheet, .exp-section{
+    break-inside:auto;
+  }
+</style>
+</head>
+<body>
+
+<!-- Toast container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Link confirm modal -->
+<div class="link-confirm-modal" id="linkConfirmModal">
+  <div class="link-confirm-box">
+    <div class="link-confirm-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+    <h3>Abrir LinkedIn?</h3>
+    <p>Você está saindo do currículo para o LinkedIn. Deseja continuar?</p>
+    <div class="link-confirm-actions">
+      <button class="link-confirm-btn link-confirm-cancel" id="linkCancelBtn">Cancelar</button>
+      <button class="link-confirm-btn link-confirm-open" id="linkOpenBtn">Abrir LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky mini header (mobile) -->
+<div class="sticky-mini-header" id="stickyMiniHeader">
+  <div class="sticky-mini-photo" id="stickyMiniPhoto">
+    <img id="stickyMiniImg" alt="Foto">
+    <i class="fa-solid fa-camera" id="stickyMiniPlaceholder" style="color:#fff; font-size:14px;"></i>
+  </div>
+  <div>
+    <div class="sticky-mini-name">Marcos Eduardo</div>
+    <div class="sticky-mini-role">Suporte Técnico & QA · AI Engineer</div>
+  </div>
+  <button class="sticky-mini-topbtn" id="stickyTopBtn" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+</div>
+
+<div class="phone-frame" id="captureArea">
+
+  <div class="app-header">
+    <div class="deco-blob blob1"></div>
+    <div class="deco-blob blob2"></div>
+
+    <div class="header-top-row">
+      <button class="icon-btn menu-btn"><i class="fa-solid fa-bars"></i></button>
+      <div class="phone-num-topright" id="headerPhone"><i class="fa-solid fa-phone"></i>(61) 98222-7804</div>
+      <button class="icon-btn close-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="header-photo-row">
+      <div class="photo-circle-wrap">
+        <div class="photo-circle" id="photoCircle">
+          <img id="photoImg" src="https://github.com/MarcozEduardo/curriculo/blob/main/img/foto.png?raw=true" alt="Foto" style="display:block; width:100%; height:100%; object-fit:cover; pointer-events:none;">
+          <div class="photo-placeholder" id="photoPlaceholder"><i class="fa-solid fa-camera"></i><span>foto</span></div>
+        </div>
+        <button class="photo-add-btn" id="uploadBtn" title="Escolher foto"><i class="fa-solid fa-image"></i></button>
+        <input type="file" id="photoInput" accept="image/*" hidden>
+      </div>
+      <div class="header-name-block" id="headerName">
+        <h1>Marcos Eduardo<br>da Silva dos Reis</h1>
+        <p class="header-role">Suporte Técnico &amp; QA · AI Engineer em formação</p>
+      </div>
+    </div>
+
+    <div class="header-github" id="headerGithub">
+      <div class="gh-line"><i class="fa-brands fa-github"></i>MarcozEduardo</div>
+      <div class="gh-status"><i class="fa-solid fa-wrench"></i>Em obra</div>
+    </div>
+
+    <div class="photo-controls" id="photoControls">
+      <i class="fa-solid fa-magnifying-glass-minus"></i>
+      <input type="range" id="zoomRange" min="1" max="3" step="0.01" value="1">
+      <i class="fa-solid fa-magnifying-glass-plus"></i>
+      <button class="confirm-btn" id="confirmBtn"><i class="fa-solid fa-check"></i></button>
+    </div>
+  </div>
+
+  <div class="mobile-tabs" id="mobileTabs">
+    <a href="#sec-dados" class="tab-btn active" data-target="sec-dados"><i class="fa-solid fa-user"></i>Dados</a>
+    <a href="#sec-formacao" class="tab-btn" data-target="sec-formacao"><i class="fa-solid fa-graduation-cap"></i>Formação</a>
+    <a href="#sec-habilidades" class="tab-btn" data-target="sec-habilidades"><i class="fa-solid fa-briefcase"></i>Skills</a>
+    <a href="#sec-experiencia" class="tab-btn" data-target="sec-experiencia"><i class="fa-solid fa-clock-rotate-left"></i>Experiência</a>
+  </div>
+
+  <div class="sheet">
+
+    <div class="sheet-grid">
+      <div class="col-left">
+
+        <div class="card" id="sec-dados">
+          <div class="card-title"><span class="badge"><i class="fa-solid fa-user"></i></span>Meus Dados</div>
+          <ul class="contact-list">
+            <li id="copyPhone"><i class="fa-solid fa-phone"></i>(61) 98222-7804</li>
+            <li id="copyEmail"><i class="fa-solid fa-envelope"></i>marcos.eduardo@myyahoo.com</li>
+            <li id="copyGithub"><i class="fa-brands fa-github"></i>github.com/MarcozEduardo</li>
+            <li id="openLinkedin"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/sir-marcos-eduardo</li>
+            <li><i class="fa-solid fa-location-dot"></i>Brasília, Distrito Federal</li>
+          </ul>
+          <p class="resumo-txt">Profissional em transição de carreira para TI, com mais de 10 anos de experiência prática em suporte técnico, manutenção de hardware/software e resolução de problemas complexos em ambiente industrial e administrativo. Nos últimos dois anos, dedicou-se de forma autodidata à Engenharia de IA: construiu um portfólio técnico próprio orquestrando ferramentas de IA e testou mais de 400 modelos de IA diferentes.</p>
+          <div class="progress-tag">
+            <div class="progress-title"><i class="fa-solid fa-rocket"></i>Projetos em Progresso</div>
+            <div class="progress-item"><i class="fa-solid fa-globe"></i>Site: lelecriando.com</div>
+            <div class="progress-item"><i class="fa-brands fa-youtube"></i>Canal Lelecriando</div>
+          </div>
+
+          <div class="pcd-tag is-hidden" id="pcdTag"><i class="fa-solid fa-circle-info"></i>Candidato à vaga PCD — Transtorno do Espectro Autista, Nível 1 (conforme laudo médico)</div>
+        </div>
+
+        <div class="card" id="sec-formacao">
+          <div class="card-title"><span class="badge"><i class="fa-solid fa-graduation-cap"></i></span>Formação</div>
+          <div class="formacao-item">
+            <div class="formacao-title">Graduação em Tecnologia da Informação (EAD)</div>
+            <div class="formacao-sub">Em andamento</div>
+          </div>
+          <div class="formacao-item">
+            <div class="formacao-title">CS50 – Introduction to Computer Science</div>
+            <div class="formacao-sub">Harvard University · Estudo independente</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-right">
+        <div class="card card-big" id="sec-habilidades">
+          <div class="card-title"><span class="badge badge-big"><i class="fa-solid fa-briefcase"></i></span>Habilidades</div>
+
+          <div class="skill-group">
+            <h4>Técnico / IA</h4>
+            <div class="pills">
+              <span class="pill">Prompt Engineering</span>
+              <span class="pill">Orquestração de Agentes</span>
+              <span class="pill">RAG</span>
+              <span class="pill">Benchmarking de Modelos</span>
+              <span class="pill">Debugging</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Suporte &amp; Hardware</h4>
+            <div class="pills">
+              <span class="pill">Suporte Técnico</span>
+              <span class="pill">Diagnóstico HW/SW</span>
+              <span class="pill">Manutenção de Rede</span>
+              <span class="pill">Sistemas Operacionais</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Design / CAD</h4>
+            <div class="pills">
+              <span class="pill">CorelDRAW</span>
+              <span class="pill">Modelagem Vetorial</span>
+              <span class="pill">Photoshop</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Programação</h4>
+            <div class="pills">
+              <span class="pill">Lógica de Programação</span>
+              <span class="pill">HTML</span>
+              <span class="pill">JavaScript (básico/funcional)</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Gestão</h4>
+            <div class="pills">
+              <span class="pill">Planejamento Estratégico</span>
+              <span class="pill">Gestão de Estoque</span>
+              <span class="pill">Mitigação de Riscos</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Pacote Office</h4>
+            <div class="pills">
+              <span class="pill">Excel</span>
+              <span class="pill">Word</span>
+              <span class="pill">PowerPoint</span>
+              <span class="pill">Instrutor de Informática</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-section" id="sec-experiencia">
+      <div class="card-title"><span class="badge"><i class="fa-solid fa-clock-rotate-left"></i></span>Experiência Profissional</div>
+
+      <div class="exp-item">
+        <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+        <div class="exp-body">
+          <div class="exp-head">
+            <span class="exp-title">Formação Autodidata em Engenharia de IA / Desenvolvimento de Portfólio</span>
+            <span class="exp-date">2024 – 2026</span>
+          </div>
+          <div class="exp-company">Estudo independente</div>
+          <ul class="exp-desc">
+            <li>Cursando graduação em TI (EAD) e estudando CS50 (Harvard) de forma independente.</li>
+            <li>Construiu portfólio técnico próprio via orquestração de ferramentas de IA: jogo retrô em HTML/JavaScript, RPG isométrico com sistema de colisão e mecânicas próprias, site pessoal com agentes conectados via API, e chatbot com RAG (cerca de 90% concluído).</li>
+            <li>Testou e comparou mais de 400 modelos de IA de diferentes provedores para entender capacidades e limitações práticas de cada ferramenta.</li>
+            <li>Produziu um canal de conteúdo infantil de ponta a ponta (roteiro, áudio, edição de vídeo), integrando dezenas de ferramentas de IA ao processo criativo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+        <div class="exp-body">
+          <div class="exp-head">
+            <span class="exp-title">Projetista Industrial / Operacional CNC</span>
+            <span class="exp-date">Nov 2018 – Fev 2024</span>
+          </div>
+          <div class="exp-company">Bella Arte Indústria · Vicente Pires, DF · 5 anos e 4 meses</div>
+          <ul class="exp-desc">
+            <li>Responsável por projetos técnicos de ponta a ponta: vetorização de imagens e modelagem de encaixes para corte a laser CNC (CO2).</li>
+            <li>Realizava diagnóstico e reparo de hardware e software das próprias máquinas CNC.</li>
+            <li>Atuou em planejamento logístico e financeiro do setor, unindo visão técnica e operacional.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+        <div class="exp-body">
+          <div class="exp-head">
+            <span class="exp-title">Assistente Administrativo e Logística</span>
+            <span class="exp-date">Abr 2016 – Nov 2018</span>
+          </div>
+          <div class="exp-company">Fabricart Indústria · Valparaíso de Goiás, GO · 2 anos e 8 meses</div>
+          <ul class="exp-desc">
+            <li>Atuou além do escopo formal do cargo: gestão administrativa completa (processos seletivos e desligamentos), controle de logística, orçamento e estoque.</li>
+            <li>Responsável pela produção técnica: modelagem vetorial em CorelDRAW para corte a laser CNC (CO2), do desenho à peça final.</li>
+            <li>Funcionava na prática como sócio operacional, antecipando problemas e resolvendo com autonomia.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+        <div class="exp-body">
+          <div class="exp-head">
+            <span class="exp-title">Assistente Administrativo / Instrutor Escolar</span>
+            <span class="exp-date">Ago 2014 – Mar 2016</span>
+          </div>
+          <div class="exp-company">Instituto Midori de Ensino Continuado · Taguatinga, DF · 1 ano e 8 meses</div>
+          <ul class="exp-desc">
+            <li>Instrutor de Informática na franquia Prepara Cursos: ensino de Photoshop, CorelDRAW, AutoCAD, pacote Office e manutenção de rede/hardware.</li>
+            <li>Assumiu de forma informal a gestão administrativa da unidade: controle de caixa, processos seletivos e suporte à tomada de decisão.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-line"><div class="exp-dot"></div><div class="exp-track"></div></div>
+        <div class="exp-body">
+          <div class="exp-head">
+            <span class="exp-title">Técnico de TI Autônomo</span>
+            <span class="exp-date">2011 – 2014</span>
+          </div>
+          <div class="exp-company">Trabalho Independente · Distrito Federal · 3 anos</div>
+          <ul class="exp-desc">
+            <li>Prestação de serviços de TI básica de forma autônoma: montagem, manutenção e configuração de computadores, venda de peças e suporte técnico para clientes diversos.</li>
+            <li>Incluiu período de parceria em banca de informática (2013–2014), com atendimento direto ao público.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Rodapé dentro da área de captura -->
+  <div class="footer">
+    Desenvolvimento <i class="fa-solid fa-code"></i> QA Engineer <i class="fa-solid fa-bug"></i> — Marcos Eduardo
+  </div>
+
+</div>
+
+<button class="back-top" id="backTopBtn" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="floating-actions">
+  <button class="floating-btn floating-chat" id="chatBtn"><i class="fa-solid fa-comment-dots"></i>Falar com Bobby</button>
+  <button class="floating-btn floating-toggle" id="togglePcdBtn"><i class="fa-solid fa-eye"></i>Mostrar PCD</button>
+  <button class="floating-btn floating-download" id="downloadBtn"><i class="fa-solid fa-download"></i>Baixar PDF</button>
+</div>
+
+<!-- Chat Modal -->
+<div class="chat-modal" id="chatModal">
+  <div class="chat-box">
+    <div class="chat-header">
+      <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+      <div class="chat-header-info">
+        <h3>Bobby</h3>
+        <p>Assistente virtual do currículo</p>
+      </div>
+      <button class="chat-close" id="chatClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Digite sua pergunta ou escolha uma opção...">
+      <button class="chat-send-btn" id="chatSend"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ============ FOTO (Zoom e Arrasto) ============
+  const photoCircle = document.getElementById('photoCircle');
+  const photoImg = document.getElementById('photoImg');
+  const photoPlaceholder = document.getElementById('photoPlaceholder');
+  const photoInput = document.getElementById('photoInput');
+  const uploadBtn = document.getElementById('uploadBtn');
+  const photoControls = document.getElementById('photoControls');
+  const zoomRange = document.getElementById('zoomRange');
+  const confirmBtn = document.getElementById('confirmBtn');
+  const stickyMiniImg = document.getElementById('stickyMiniImg');
+  const stickyMiniPlaceholder = document.getElementById('stickyMiniPlaceholder');
+
+  let scale = 1, posX = 0, posY = 0, dragging = false, startX = 0, startY = 0;
+
+  function updateTransform(){
+    photoImg.style.transform = `translate(calc(-50% + ${posX}px), calc(-50% + ${posY}px)) scale(${scale})`;
+  }
+
+  uploadBtn.addEventListener('click', () => photoInput.click());
+
+  photoInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      photoImg.src = ev.target.result;
+      photoImg.onload = () => {
+        photoImg.style.display = 'block';
+        photoImg.style.width = '100%';
+        photoImg.style.height = 'auto';
+        photoImg.style.left = '50%';
+        photoImg.style.top = '50%';
+        photoPlaceholder.style.display = 'none';
+        stickyMiniImg.src = ev.target.result;
+        stickyMiniImg.style.display = 'block';
+        stickyMiniPlaceholder.style.display = 'none';
+        scale = 1; posX = 0; posY = 0; zoomRange.value = 1;
+        updateTransform();
+        photoControls.style.display = 'flex';
+      };
+    };
+    reader.readAsDataURL(file);
+  });
+
+  zoomRange.addEventListener('input', () => {
+    scale = parseFloat(zoomRange.value);
+    updateTransform();
+  });
+
+  photoCircle.addEventListener('pointerdown', (e) => {
+    if(!photoImg.src) return;
+    dragging = true;
+    startX = e.clientX - posX;
+    startY = e.clientY - posY;
+    photoCircle.setPointerCapture(e.pointerId);
+  });
+  photoCircle.addEventListener('pointermove', (e) => {
+    if(!dragging) return;
+    posX = e.clientX - startX;
+    posY = e.clientY - startY;
+    updateTransform();
+  });
+  photoCircle.addEventListener('pointerup', () => dragging = false);
+  photoCircle.addEventListener('pointercancel', () => dragging = false);
+
+  confirmBtn.addEventListener('click', () => {
+    photoControls.style.display = 'none';
+  });
+
+  // ============ TOAST ============
+  function showToast(message, icon = 'fa-circle-check'){
+    const container = document.getElementById('toastContainer');
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `<i class="fa-solid ${icon}"></i> ${message}`;
+    container.appendChild(toast);
+    setTimeout(() => toast.remove(), 2500);
+  }
+
+  // ============ COPIAR / ABRIR CONTATOS ============
+  document.getElementById('copyPhone').addEventListener('click', () => {
+    navigator.clipboard.writeText('(61) 98222-7804').then(() => showToast('Telefone copiado!', 'fa-phone'));
+  });
+  document.getElementById('copyEmail').addEventListener('click', () => {
+    navigator.clipboard.writeText('marcos.eduardo@myyahoo.com').then(() => showToast('Email copiado!', 'fa-envelope'));
+  });
+  document.getElementById('copyGithub').addEventListener('click', () => {
+    navigator.clipboard.writeText('https://github.com/MarcozEduardo').then(() => showToast('GitHub copiado!', 'fa-github'));
+  });
+
+  // LinkedIn com confirmação
+  const linkConfirmModal = document.getElementById('linkConfirmModal');
+  const linkCancelBtn = document.getElementById('linkCancelBtn');
+  const linkOpenBtn = document.getElementById('linkOpenBtn');
+  document.getElementById('openLinkedin').addEventListener('click', () => {
+    linkConfirmModal.classList.add('open');
+  });
+  linkCancelBtn.addEventListener('click', () => linkConfirmModal.classList.remove('open'));
+  linkOpenBtn.addEventListener('click', () => {
+    linkConfirmModal.classList.remove('open');
+    window.open('https://www.linkedin.com/in/sir-marcos-eduardo', '_blank');
+  });
+  linkConfirmModal.addEventListener('click', (e) => {
+    if(e.target === linkConfirmModal) linkConfirmModal.classList.remove('open');
+  });
+
+  // Header GitHub copia
+  document.getElementById('headerGithub').addEventListener('click', () => {
+    navigator.clipboard.writeText('https://github.com/MarcozEduardo').then(() => showToast('GitHub copiado!', 'fa-github'));
+  });
+  // Header telefone copia
+  document.getElementById('headerPhone').addEventListener('click', () => {
+    navigator.clipboard.writeText('(61) 98222-7804').then(() => showToast('Telefone copiado!', 'fa-phone'));
+  });
+  // Header nome copia
+  document.getElementById('headerName').addEventListener('click', () => {
+    navigator.clipboard.writeText('Marcos Eduardo da Silva dos Reis').then(() => showToast('Nome copiado!', 'fa-user'));
+  });
+
+  // ============ PCD TOGGLE ============
+  const pcdTag = document.getElementById('pcdTag');
+  const togglePcdBtn = document.getElementById('togglePcdBtn');
+  togglePcdBtn.addEventListener('click', () => {
+    const nowHidden = pcdTag.classList.toggle('is-hidden');
+    togglePcdBtn.innerHTML = nowHidden
+      ? '<i class="fa-solid fa-eye"></i>Mostrar PCD'
+      : '<i class="fa-solid fa-eye-slash"></i>Ocultar PCD';
+  });
+
+  // ============ BACK TO TOP ============
+  document.getElementById('backTopBtn').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  document.getElementById('stickyTopBtn').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // ============ STICKY MINI HEADER ============
+  const stickyMiniHeader = document.getElementById('stickyMiniHeader');
+  let lastScrollY = 0;
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (scrollY > 200 && scrollY < lastScrollY) stickyMiniHeader.classList.add('show');
+    else stickyMiniHeader.classList.remove('show');
+    lastScrollY = scrollY;
+  });
+
+  // ============ MOBILE TABS ============
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById(btn.dataset.target);
+      if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  const sections = ['sec-dados','sec-formacao','sec-habilidades','sec-experiencia']
+    .map(id => document.getElementById(id)).filter(Boolean);
+  if('IntersectionObserver' in window){
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          tabBtns.forEach(b => b.classList.toggle('active', b.dataset.target === entry.target.id));
+        }
+      });
+    }, { rootMargin: '-70px 0px -65% 0px', threshold: 0 });
+    sections.forEach(s => spy.observe(s));
+  }
+
+  // ============ DOWNLOAD PDF ============
+  document.getElementById('downloadBtn').addEventListener('click', () => {
+    const btn = document.getElementById('downloadBtn');
+    const original = btn.innerHTML;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>Gerando...';
+    document.body.classList.add('capture-mode');
+    const el = document.getElementById('captureArea');
+    html2pdf().set({
+      margin: 0,
+      filename: 'curriculo_marcos_eduardo.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', windowHeight: el.scrollHeight },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['css', 'legacy'] }
+    }).from(el).save().then(() => {
+      document.body.classList.remove('capture-mode');
+      btn.innerHTML = original;
+    });
+  });
+
+  // ============ CHAT BOB ============
+  const chatModal = document.getElementById('chatModal');
+  const chatBtn = document.getElementById('chatBtn');
+  const chatClose = document.getElementById('chatClose');
+  const chatMessages = document.getElementById('chatMessages');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+  let chatInitialized = false;
+  let offScriptCount = 0;
+
+  const curriculum = {
+    nome: "Marcos Eduardo da Silva dos Reis",
+    cargo: "Suporte Técnico & QA · AI Engineer em formação",
+    email: "marcos.eduardo@myyahoo.com",
+    telefone: "(61) 98222-7804",
+    github: "https://github.com/MarcozEduardo",
+    linkedin: "https://www.linkedin.com/in/sir-marcos-eduardo",
+    localizacao: "Brasília, Distrito Federal",
+    resumo: "Profissional em transição de carreira para TI, com mais de 10 anos de experiência prática em suporte técnico, manutenção de hardware/software e resolução de problemas complexos. Nos últimos dois anos, dedicou-se de forma autodidata à Engenharia de IA, construiu portfólio técnico orquestrando ferramentas de IA e testou mais de 400 modelos de IA.",
+    experiencia: [
+      "Formação Autodidata em Engenharia de IA (2024 – 2026): portfólio com jogos, site com agentes e chatbot com RAG.",
+      "Projetista Industrial / Operacional CNC (2018 – 2024): projetos técnicos, reparo de máquinas CNC.",
+      "Assistente Administrativo e Logística (2016 – 2018): gestão completa, modelagem vetorial.",
+      "Assistente Administrativo / Instrutor Escolar (2014 – 2016): ensino de informática, gestão de unidade.",
+      "Técnico de TI Autônomo (2011 – 2014): manutenção, montagem e suporte."
+    ],
+    habilidades: [
+      "IA: Prompt Engineering, Orquestração de Agentes, RAG, Benchmarking de Modelos",
+      "Suporte: Diagnóstico HW/SW, Manutenção de Rede, Sistemas Operacionais",
+      "Design: CorelDRAW, Photoshop, Modelagem Vetorial",
+      "Programação: HTML, JavaScript básico, Lógica de Programação",
+      "Gestão: Planejamento Estratégico, Gestão de Estoque, Mitigação de Riscos",
+      "Pacote Office: Excel, Word, PowerPoint"
+    ]
+  };
+
+  function addMessage(sender, text, options = []){
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `msg ${sender}`;
+    msgDiv.textContent = text;
+    if(options.length){
+      const optDiv = document.createElement('div');
+      optDiv.className = 'msg-options';
+      options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'msg-option-btn';
+        btn.textContent = opt.label;
+        btn.addEventListener('click', () => {
+          chatInput.value = opt.action;
+          handleUserMessage(opt.action);
+        });
+        optDiv.appendChild(btn);
+      });
+      msgDiv.appendChild(optDiv);
+    }
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function botResponse(input){
+    const text = input.toLowerCase();
+    if(text.includes('opção') || text.includes('opcao') || text.includes('menu') || text.includes('olá') || text.includes('oi') || text.includes('ajuda')){
+      return {
+        text: "Olá! Eu sou o Bobby, assistente virtual do Marcos Eduardo. Posso falar sobre:\n\n1 - Sobre Marcos\n2 - Experiência Profissional\n3 - Habilidades\n4 - Contato\n\nDigite o número ou a palavra-chave.",
+        options: [
+          {label:"1. Sobre Marcos", action:"sobre"},
+          {label:"2. Experiência", action:"experiência"},
+          {label:"3. Habilidades", action:"habilidades"},
+          {label:"4. Contato", action:"contato"}
+        ]
+      };
+    }
+    if(text.includes('sobre') || text.includes('1') || text.includes('marcos') || text.includes('quem')){
+      return {
+        text: `Sobre o Marcos:\n${curriculum.resumo}\n\nLocalização: ${curriculum.localizacao}\nCargo atual: ${curriculum.cargo}`,
+        options: [
+          {label:"Ver experiência", action:"experiência"},
+          {label:"Ver habilidades", action:"habilidades"}
+        ]
+      };
+    }
+    if(text.includes('experiência') || text.includes('experiencia') || text.includes('2') || text.includes('trabalho') || text.includes('carreira')){
+      let expText = "Experiências de Marcos:\n\n";
+      curriculum.experiencia.forEach(e => expText += `• ${e}\n`);
+      return {
+        text: expText,
+        options: [
+          {label:"Ver habilidades", action:"habilidades"},
+          {label:"Ver contato", action:"contato"}
+        ]
+      };
+    }
+    if(text.includes('habilidade') || text.includes('skill') || text.includes('3') || text.includes('competência') || text.includes('competencia')){
+      let skillText = "Habilidades:\n\n";
+      curriculum.habilidades.forEach(h => skillText += `• ${h}\n`);
+      return {
+        text: skillText,
+        options: [
+          {label:"Ver experiência", action:"experiência"},
+          {label:"Ver contato", action:"contato"}
+        ]
+      };
+    }
+    if(text.includes('contato') || text.includes('4') || text.includes('email') || text.includes('telefone') || text.includes('linkedin') || text.includes('github')){
+      return {
+        text: `Contato:\n\nTelefone: ${curriculum.telefone}\nEmail: ${curriculum.email}\nGitHub: ${curriculum.github}\nLinkedIn: ${curriculum.linkedin}\n\nClique nos itens da página para copiar ou acessar!`,
+        options: [
+          {label:"Voltar ao menu", action:"menu"}
+        ]
+      };
+    }
+    // off-script
+    offScriptCount++;
+    let offMsg = '';
+    switch(offScriptCount){
+      case 1:
+        offMsg = "Querendo fugir do script né?\nO Marcos consegue integrar uma API aqui, mas não é o caso hoje.";
+        break;
+      case 2:
+        offMsg = "Infelizmente não posso fugir do meu script. rsrs";
+        break;
+      case 3:
+        offMsg = "Tá me testando né? kkk";
+        break;
+      case 4:
+        offMsg = "Que tal você tentar falar diretamente com ele? Olha aqui o WhatsApp, troca uma ideia aí!";
+        break;
+      default:
+        offMsg = "É, infelizmente minha memória é limitada aqui. Mas eu tentei. Fique à vontade aqui no currículo viu?";
+        if(offScriptCount > 5) offScriptCount = 5; // mantém a última
+    }
+    return { text: offMsg, options: [] };
+  }
+
+  function handleUserMessage(input){
+    addMessage('user', input);
+    const response = botResponse(input);
+    setTimeout(() => addMessage('bot', response.text, response.options), 400);
+  }
+
+  function initChat(){
+    chatMessages.innerHTML = '';
+    addMessage('bot', "Olá! Eu sou o Bobby, assistente virtual do currículo do Marcos Eduardo.\n\nPosso te ajudar com:\n\n1 - Sobre Marcos\n2 - Experiência Profissional\n3 - Habilidades\n4 - Contato\n\nDigite o número ou a palavra-chave!",
+      [
+        {label:"1. Sobre Marcos", action:"sobre"},
+        {label:"2. Experiência", action:"experiência"},
+        {label:"3. Habilidades", action:"habilidades"},
+        {label:"4. Contato", action:"contato"}
+      ]
+    );
+    chatInitialized = true;
+    offScriptCount = 0;
+  }
+
+  chatBtn.addEventListener('click', () => {
+    chatModal.classList.add('open');
+    if(!chatInitialized) initChat();
+    chatInput.focus();
+  });
+  chatClose.addEventListener('click', () => chatModal.classList.remove('open'));
+  chatModal.addEventListener('click', (e) => {
+    if(e.target === chatModal) chatModal.classList.remove('open');
+  });
+
+  chatSend.addEventListener('click', () => {
+    const value = chatInput.value.trim();
+    if(value){
+      handleUserMessage(value);
+      chatInput.value = '';
+    }
+  });
+  chatInput.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter') chatSend.click();
+  });
+</script>
+
+</body>
+</html>
