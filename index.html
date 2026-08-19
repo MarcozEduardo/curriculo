@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -31,6 +32,10 @@
     display:flex;
     justify-content:center;
     padding:26px 10px 90px 10px;
+  }
+
+  body.modal-open {
+    overflow: hidden;
   }
 
   .phone-frame{
@@ -115,37 +120,36 @@
     justify-content:center;
     touch-action:none;
     cursor:default;
-    pointer-events:none; /* bloqueia qualquer interação */
+    pointer-events:none;
   }
   .photo-circle img{
     position:absolute;
-    max-width:none;
+    width:100%;
+    height:100%;
+    object-fit:cover;
     user-select:none;
     -webkit-user-drag:none;
     pointer-events:none;
-    transform-origin:center center;
     border-radius:50%;
   }
-  .photo-placeholder{
-    display:none; /* esconde a figurinha de câmera */
-  }
+  .photo-placeholder{ display:none; }
   .photo-add-btn{
-  display:flex;
-  position:absolute;
-  bottom:-2px; right:-2px;
-  width:30px; height:30px;
-  border-radius:50%;
-  background:var(--orange-deep);
-  border:2px solid #fff;
-  color:#fff;
-  font-size:12px;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  pointer-events:none; /* desativa o clique */
-}
-
- /* esconde botão de upload */
+    display:flex;
+    position:absolute;
+    bottom:-2px;
+    right:-2px;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:var(--orange-deep);
+    border:2px solid #fff;
+    color:#fff;
+    font-size:12px;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    pointer-events:none;
+  }
   .header-name-block h1{
     margin:0;
     color:#fff;
@@ -436,7 +440,6 @@
     padding:13px 16px;
   }
   .floating-chat:hover{ background:var(--cream); }
-  /* Botão PCD oculto */
   .floating-toggle{ display:none; }
 
   @media (max-width:700px){
@@ -630,160 +633,166 @@
     to{ opacity:0; transform:translateY(-10px); }
   }
 
-/* ================= CHAT MODAL ================= */
-.chat-modal{
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgba(0,0,0,0.5);
-  z-index:1001;
-  align-items:stretch;
-  justify-content:center;
-  padding:0;
-}
-.chat-modal.open{
-  display:flex;
-}
-.chat-box{
-  width:100%;
-  max-width:400px;
-  background:#fff;
-  border-radius:30px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);
-  display:flex;
-  flex-direction:column;
-  height:80vh;
-  max-height:80vh;
-  margin:0;
-  align-self:center;
-}
-@media (max-width:700px){
+  /* ================= CHAT MODAL ================= */
   .chat-modal{
-    align-items:stretch;
-    justify-content:flex-start;
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0; bottom:0;
+    background:rgba(0,0,0,0.5);
+    z-index:1001;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    overscroll-behavior: contain;
   }
+  .chat-modal.open{ display:flex; }
   .chat-box{
+    position:relative;
     width:100%;
-    max-width:100%;
-    height:100vh;
-    max-height:100vh;
-    border-radius:0;
-    align-self:auto;
+    max-width:400px;
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    display:flex;
+    flex-direction:column;
+    height:80vh;
+    max-height:80vh;
+    margin:0;
+    align-self:center;
   }
-}
-@keyframes slideUp{
-  from{ transform:translateY(20px) scale(0.95); opacity:0; }
-  to{ transform:translateY(0) scale(1); opacity:1; }
-}
-.chat-header{
-  background:linear-gradient(160deg, #FF8C42 0%, #FF7A2E 45%, #F26418 100%);
-  color:#fff;
-  padding:18px 20px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  flex-shrink:0;
-}
-.chat-avatar{
-  width:42px; height:42px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.25);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:20px;
-}
-.chat-header-info h3{ margin:0; font-size:16px; font-weight:600; }
-.chat-header-info p{ margin:2px 0 0 0; font-size:11px; opacity:0.85; }
-.chat-close{
-  margin-left:auto;
-  background:none;
-  border:none;
-  color:#fff;
-  font-size:20px;
-  cursor:pointer;
-}
-.chat-messages{
-  flex:1;
-  padding:18px;
-  overflow-y:auto;
-  background:#f9f4ef;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-.msg{
-  max-width:80%;
-  padding:10px 14px;
-  border-radius:18px;
-  font-size:12.5px;
-  line-height:1.45;
-  white-space:pre-wrap;
-}
-.msg.bot{
-  background:#fff;
-  border:1px solid #F3D9BE;
-  align-self:flex-start;
-  border-bottom-left-radius:4px;
-}
-.msg.user{
-  background:var(--orange);
-  color:#fff;
-  align-self:flex-end;
-  border-bottom-right-radius:4px;
-}
-.msg-options{
-  display:flex;
-  flex-wrap:wrap;
-  gap:6px;
-  margin-top:4px;
-}
-.msg-option-btn{
-  background:#fff;
-  border:1px solid #F3D9BE;
-  color:var(--orange-deep);
-  font-size:11px;
-  padding:6px 12px;
-  border-radius:50px;
-  cursor:pointer;
-  font-weight:600;
-}
-.msg-option-btn:hover{ background:var(--cream); }
-.chat-input-area{
-  display:flex;
-  gap:8px;
-  padding:12px 16px;
-  background:#fff;
-  border-top:1px solid #eee;
-  flex-shrink:0;
-}
-.chat-input-area input{
-  flex:1;
-  border:1.5px solid #F3D9BE;
-  border-radius:25px;
-  padding:10px 16px;
-  font-size:13px;
-  outline:none;
-  font-family:'Inter',sans-serif;
-}
-.chat-input-area input:focus{ border-color:var(--orange); }
-.chat-send-btn{
-  width:42px; height:42px;
-  border-radius:50%;
-  border:none;
-  background:var(--orange-dark);
-  color:#fff;
-  font-size:15px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-}
-.chat-send-btn:hover{ background:var(--orange-deep); }
+  @media (max-width:700px){
+    .chat-modal{
+      align-items:stretch;
+      justify-content:flex-start;
+    }
+    .chat-box{
+      width:100%;
+      max-width:100%;
+      height:100%;
+      height:100dvh;
+      max-height:100dvh;
+      border-radius:0;
+      align-self:auto;
+    }
+  }
+  @keyframes slideUp{
+    from{ transform:translateY(20px) scale(0.95); opacity:0; }
+    to{ transform:translateY(0) scale(1); opacity:1; }
+  }
+  .chat-header{
+    background:linear-gradient(160deg, #FF8C42 0%, #FF7A2E 45%, #F26418 100%);
+    color:#fff;
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-shrink:0;
+    z-index:1;
+  }
+  .chat-avatar{
+    width:42px; height:42px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+  }
+  .chat-header-info h3{ margin:0; font-size:16px; font-weight:600; }
+  .chat-header-info p{ margin:2px 0 0 0; font-size:11px; opacity:0.85; }
+  .chat-close{
+    margin-left:auto;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+  }
+  .chat-messages{
+    flex:1;
+    min-height:0;
+    padding:18px;
+    padding-bottom:80px;
+    overflow-y:auto;
+    background:#f9f4ef;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .msg{
+    max-width:80%;
+    padding:10px 14px;
+    border-radius:18px;
+    font-size:12.5px;
+    line-height:1.45;
+    white-space:pre-wrap;
+  }
+  .msg.bot{
+    background:#fff;
+    border:1px solid #F3D9BE;
+    align-self:flex-start;
+    border-bottom-left-radius:4px;
+  }
+  .msg.user{
+    background:var(--orange);
+    color:#fff;
+    align-self:flex-end;
+    border-bottom-right-radius:4px;
+  }
+  .msg-options{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:4px;
+  }
+  .msg-option-btn{
+    background:#fff;
+    border:1px solid #F3D9BE;
+    color:var(--orange-deep);
+    font-size:11px;
+    padding:6px 12px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  .msg-option-btn:hover{ background:var(--cream); }
+  .chat-input-area{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    gap:8px;
+    padding:12px 16px;
+    background:#fff;
+    border-top:1px solid #eee;
+    z-index:2;
+  }
+  .chat-input-area input{
+    flex:1;
+    border:1.5px solid #F3D9BE;
+    border-radius:25px;
+    padding:10px 16px;
+    font-size:13px;
+    outline:none;
+    font-family:'Inter',sans-serif;
+  }
+  .chat-input-area input:focus{ border-color:var(--orange); }
+  .chat-send-btn{
+    width:42px; height:42px;
+    border-radius:50%;
+    border:none;
+    background:var(--orange-dark);
+    color:#fff;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+  .chat-send-btn:hover{ background:var(--orange-deep); }
 
   /* ================= LINK CONFIRM MODAL ================= */
   .link-confirm-modal{
@@ -875,9 +884,9 @@
     <div class="header-photo-row">
       <div class="photo-circle-wrap">
         <div class="photo-circle" id="photoCircle">
-          <img id="photoImg" src="https://github.com/MarcozEduardo/curriculo/blob/main/img/foto.png?raw=true" alt="Foto" style="display:block; width:100%; height:100%; object-fit:cover; pointer-events:none; transform: scale(1.5);">
+          <img id="photoImg" src="https://github.com/MarcozEduardo/curriculo/blob/main/img/foto.png?raw=true" alt="Foto">
         </div>
-<button class="photo-add-btn" id="uploadBtn" ><i class="fa-solid fa-image"></i></button>
+        <button class="photo-add-btn" id="uploadBtn" title="Foto"><i class="fa-solid fa-image"></i></button>
       </div>
       <div class="header-name-block" id="headerName">
         <h1>Marcos Eduardo<br>da Silva dos Reis</h1>
@@ -1377,12 +1386,18 @@
 
   chatBtn.addEventListener('click', () => {
     chatModal.classList.add('open');
+    document.body.classList.add('modal-open');
     if(!chatInitialized) initChat();
-    
   });
-  chatClose.addEventListener('click', () => chatModal.classList.remove('open'));
+  chatClose.addEventListener('click', () => {
+    chatModal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  });
   chatModal.addEventListener('click', (e) => {
-    if(e.target === chatModal) chatModal.classList.remove('open');
+    if(e.target === chatModal) {
+      chatModal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
   });
 
   chatSend.addEventListener('click', () => {
