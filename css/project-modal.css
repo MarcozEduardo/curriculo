@@ -263,29 +263,6 @@
   50% { transform: scale(1.15); opacity: 0.15; }
 }
 
-/* Máscaras sobre o iframe — esconde branding do YouTube.
-   São strips opacas nos cantos. O vídeo continua visível no centro.
-   Sem pointer-events pra não bloquear os controles do player. */
-.pm-yt-mask-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 52px;
-  background: linear-gradient(to bottom, #1a1613 0%, #1a1613 60%, transparent 100%);
-  pointer-events: none;
-  z-index: 10;
-}
-.pm-yt-mask-bottom {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 180px;
-  height: 44px;
-  background: linear-gradient(to top, #1a1613 0%, #1a1613 55%, transparent 100%);
-  pointer-events: none;
-  z-index: 10;
-}
 .pm-yt-facade {
   position: relative;
 }
