@@ -496,13 +496,13 @@ async function openProject(id) {
 
   // Coleta itens para a lightbox (todas as imagens dos thumbs)
   const printItems = [];
-  mediaArea.querySelectorAll('.pm-thumb').forEach(function (t) {
+  mediaArea.querySelectorAll('.pm-thumb').forEach(function (t, thumbIdx) {
     const img = t.querySelector('img');
     if (img && img.src) printItems.push({ src: img.src, alt: img.alt || 'Foto do projeto' });
   });
 
-      mediaArea.querySelectorAll('.pm-thumb').forEach(function (t) {
-        t.addEventListener('click', function () {
+      mediaArea.querySelectorAll('.pm-thumb').forEach(function (t, thumbIdx) {
+          t.addEventListener('click', function () {
           const media = t.querySelector('img, .pm-media-placeholder');
           if (!media) return;
 
@@ -521,7 +521,11 @@ async function openProject(id) {
           const imgClone = media.cloneNode(true);
           imgClone.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
           preview.appendChild(imgClone);
-          mainWrap.appendChild(preview);
+          preview.style.cursor = 'zoom-in';
+preview.addEventListener('click', function () {
+  openLightbox(printItems, thumbIdx);
+});
+mainWrap.appendChild(preview);
 
           // Botão voltar ao vídeo
           const backBtn = document.createElement('button');

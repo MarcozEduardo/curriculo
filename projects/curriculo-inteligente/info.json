@@ -1,0 +1,20 @@
+{
+  "nome": "Currículo Inteligente (Bônus)",
+  "subtitulo": "RAG semântico em construção — o motor atual é o vetorial básico",
+  "status_label": "Bônus",
+  "stack": ["JavaScript", "RAG", "Gramática PT-BR", "IA como copiloto"],
+  "descricao": "Este currículo tem o chat com busca vetorial ativa. O RAG semântico robusto, com análise sintática e regras gramaticais por intenção, está sendo finalizado. O vídeo mostra o motor novo em ação.",
+  "cta": {
+    "url": "https://curriculo-inteligente-marco-zeduardo.vercel.app",
+    "label": "Testar APP Currículo",
+    "icone": "fa-external-link-alt"
+  },
+  "media": {
+    "drive": "https://drive.google.com/file/d/1cfTyF8q-3IZgCN8mNkSzMobY951GsHfh/view?usp=sharing",
+    "prints": [
+      "screenshots/semantico1.png",
+      "screenshots/semantico2.png",
+      "screenshots/semantico3.png"
+    ]
+  }
+}

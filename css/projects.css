@@ -51,6 +51,11 @@
   border-left-color: var(--orange-dark);
 }
 
+.project-card.card-bonus:hover {
+  background: #b8420a !important;
+  box-shadow: 0 8px 22px rgba(184, 66, 10, 0.45);
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -161,4 +166,6 @@
   line-height: 1.45;
   margin: 0;
   text-align: justify;
+}
+
 }

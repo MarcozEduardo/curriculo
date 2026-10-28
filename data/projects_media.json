@@ -5,6 +5,7 @@
     "dama-orbital": "projects/dama-orbital/info.json",
     "quadra21": "projects/quadra21/info.json",
     "estagiario": "projects/estagiario/info.json",
-    "canal-ia": "projects/canal-ia/info.json"
+    "canal-ia": "projects/canal-ia/info.json",
+    "curriculo-inteligente": "projects/curriculo-inteligente/info.json"
   }
 }
