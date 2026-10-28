@@ -234,7 +234,11 @@
       if (e.target === m) closeModal();
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && m.classList.contains('open')) closeModal();
+      if (e.key === 'Escape' && m.classList.contains('open')) {
+      const lb = document.getElementById('pmLightbox');
+      if (lb && lb.classList.contains('open')) return;
+      closeModal();
+    }
     });
     return m;
   }
@@ -489,6 +493,13 @@ async function openProject(id) {
     const mainWrap = mediaArea.querySelector('.pm-main-media');
     if (mainWrap) {
       const originalChildren = Array.from(mainWrap.children);
+
+  // Coleta itens para a lightbox (todas as imagens dos thumbs)
+  const printItems = [];
+  mediaArea.querySelectorAll('.pm-thumb').forEach(function (t) {
+    const img = t.querySelector('img');
+    if (img && img.src) printItems.push({ src: img.src, alt: img.alt || 'Foto do projeto' });
+  });
 
       mediaArea.querySelectorAll('.pm-thumb').forEach(function (t) {
         t.addEventListener('click', function () {
