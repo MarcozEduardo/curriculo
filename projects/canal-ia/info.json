@@ -1,0 +1,19 @@
+{
+  "nome": "Canal feito com várias IAs",
+  "subtitulo": "Canal de Música Infantil · Lelecriando",
+  "status_label": "Publicado",
+  "stack": ["Claude", "GPT", "DeepSeek", "GLM", "Suno", "Mistral", "Pippit", "Mureka"],
+  "descricao": "**Canal de música infantil** no YouTube onde as letras foram criadas em outros idiomas, **linha por linha**, num grande desafio multilíngue. Tudo foi feito há **1 ano**, quando a IA ainda não sabia fazer vídeo direito com coerência, e cada vídeo foi montado **frame a frame**. Foram usadas múltiplas IAs em orquestração: **Claude, GPT, DeepSeek, GLM, Suno, Mistral, Pippit, Mureka** e outras ferramentas.",
+  "cta": {
+    "url": "https://www.youtube.com/@Lelecriando",
+    "label": "Ver canal no YouTube",
+    "icone": "fa-youtube"
+  },
+  "media": {
+    "youtube": "https://www.youtube.com/watch?v=TU2NCxKuDpM",
+    "youtube_extra": [
+      "https://www.youtube.com/watch?v=ADajU5pt0mQ",
+      "https://www.youtube.com/watch?v=0Z9YnkZtxG0"
+    ]
+  }
+}
