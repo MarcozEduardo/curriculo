@@ -1,0 +1,34 @@
+{
+  "category": "unknown_sacred",
+  "descricao": "A 'resposta sagrada': quando não há dado na base. Escalona conforme a insistência do usuário (nível 1 → 4).",
+  "niveis": {
+    "1": [
+      "Não tenho essa informação na minha base. Sou um **bot RAG de resposta automática** do currículo do Marcos, inteligente na busca, mas **sem IA generativa**, então não vou inventar uma resposta pra você. Posso falar de projetos, stack, experiência, formação, neurodivergência, contratação ou contato.",
+      "Sobre isso eu não sei. Minha base cobre a trajetória, os projetos e as condições profissionais do Marcão; fora disso eu prefiro ser honesto a chutar. Quer que eu te mostre o que eu tenho?",
+      "Essa eu não consigo responder: não está na base de conhecimento. Sou um RAG local, não um modelo generativo. Se for algo importante, o Marcão responde direto no WhatsApp **(61) 98222-7804**.",
+      "Não encontrei nada sobre isso nos meus dados. Posso te ajudar com projetos, habilidades, experiência, formação, neurodivergência, recrutamento ou contato."
+    ],
+    "2": [
+      "Como eu disse, esse assunto está fora da minha base, e continuar perguntando não vai mudar o dado que eu tenho 🙂 O ideal mesmo é falar com o Marcos: **(61) 98222-7804** ou **marcos.eduardo@myyahoo.com**.",
+      "Ainda não tenho isso. Repetindo com transparência: eu só respondo o que foi catalogado no currículo. Posso tentar por outro ângulo se você reformular com o nome do projeto ou do tema.",
+      "Mesma resposta de antes, infelizmente: não há dado sobre isso aqui. Quer que eu liste os temas que eu domino?"
+    ],
+    "3": [
+      "Você está insistindo, então vou ser bem direto: **essa informação não existe na minha base**. Não é bloqueio, é limitação de projeto, sou busca, não geração. Fale diretamente com o Marcão (**(61) 98222-7804**) que ele te responde pessoalmente.",
+      "Terceira vez no mesmo ponto 🙂 Eu realmente não tenho. O melhor caminho agora é o contato humano: **marcos.eduardo@myyahoo.com** ou WhatsApp **(61) 98222-7804**."
+    ],
+    "4": [
+      "Vamos combinar assim: esse tema eu não respondo porque não tenho dado, e eu não finjo que tenho. Se for relevante para uma vaga, registre a pergunta e o Marcão responde: **(61) 98222-7804**. Enquanto isso, posso te mostrar algo que eu domino, como os projetos ou o perfil neurodivergente com altas habilidades."
+    ]
+  },
+  "sugestoes": [
+    "Quer tentar: **\"quais tecnologias do Dama Orbital?\"**, **\"qual a pretensão salarial?\"** ou **\"qual o projeto mais recente?\"**",
+    "Temas que eu domino: projetos · habilidades · experiência · formação · neurodivergência · recrutamento · contato.",
+    "Se quiser, pergunte por um projeto pelo nome (A Fuga de Bobby, Dama Orbital, DirectSend, Marketbobby, DevOrador...)."
+  ],
+  "com_termo": [
+    "Sobre **{termo}** eu não tenho registro na base do Marcos, e prefiro não afirmar o que ele não contou. O que está confirmado em linguagens e ferramentas eu posso mostrar.",
+    "Não encontrei **{termo}** nos dados do Marcos. Em vez de chutar, posso mostrar o que está comprovado em tecnologias e ferramentas.",
+    "**{termo}** não aparece em nada do que o Marcos registrou. Prefiro dizer isso a inventar; posso mostrar onde ele de fato tem prática."
+  ]
+}

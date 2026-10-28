@@ -1,0 +1,198 @@
+{
+  "orbita": "contato",
+  "arquivo": "AnswerContact.json",
+  "versao": "1.0",
+  "descricao": "Respostas modulares de contato. Montadas por blocos: dados fixos + frases sorteadas + coringa opcional na primeira linha.",
+  "dados": {
+    "WHATSAPP": "**WhatsApp (61) 98222-7804**",
+    "EMAIL": "**marcos.eduardo@myyahoo.com**",
+    "LINKEDIN": "**linkedin.com/in/sir-marcos-eduardo**",
+    "GITHUB": "**github.com/MarcozEduardo**"
+  },
+  "frases": {
+    "SUJEITO": [
+      "do Marcão",
+      "do Marcos",
+      "do Marcos Eduardo",
+      "dele",
+      "do cara",
+      "do moço"
+    ],
+    "ESSES": [
+      "é esse aqui:",
+      "é esse:",
+      "é esse, ó:",
+      "tá aqui:",
+      "esse aqui ó:",
+      "aqui:",
+      "é o seguinte:"
+    ],
+    "INICIO": [
+      "Segue",
+      "Toma aí",
+      "Pega aí",
+      "Aqui vai",
+      "Ó só",
+      "Olha aí",
+      "Vai nesse:"
+    ],
+    "OFERTA_WPP": [
+      "Se for pra falar direto com ele, o caminho é o WhatsApp:",
+      "Agora, se quiser resposta rápida, manda no WhatsApp:",
+      "Pra falar com ele direto, o WhatsApp é mais rápido:",
+      "Se quiser falar com ele, é mais fácil pelo WhatsApp:",
+      "O caminho mais rápido pra falar com ele é o WhatsApp:",
+      "Se quiser contato direto, vai de WhatsApp:",
+      "Pra resposta rápida, o WhatsApp é o melhor caminho:",
+      "Chama ele no WhatsApp que responde mais rápido:",
+      "Falando direto com ele, o WhatsApp é o canal:",
+      "Se for pra falar com ele, o WhatsApp responde mais rápido:",
+      "Pra falar com ele na hora, vai de WhatsApp:",
+      "Se quiser falar com ele hoje, é no WhatsApp:"
+    ],
+    "BAGUNCA": [
+      "Não repara na bagunça, estamos em obra. kkk",
+      "Ainda tá em construção, tá? kkk",
+      "Tá tudo em obra por aqui, mas dá uma olhada. kkk",
+      "Não repara na organização, é obra viva. kkk",
+      "Tá em construção contínua, mas vale a espiada. kkk",
+      "Tem coisa nova chegando toda semana. kkk"
+    ],
+    "CURRICULO_MAIOR": [
+      "O currículo inteligente aqui tem mais coisa que lá.",
+      "Esse currículo aqui acaba sendo mais completo que o LinkedIn.",
+      "Aqui no currículo tem mais detalhe que no LinkedIn.",
+      "O LinkedIn é resumido; aqui tem o contexto inteiro.",
+      "O currículo interativo mostra mais que o LinkedIn."
+    ],
+    "PEDIDO_EMAIL": [
+      "Esse email é meio chato de abrir, mas funciona bem pra coisa formal.",
+      "Chato de acompanhar, mas é o canal certo pra proposta formal.",
+      "Não é o canal mais rápido, mas serve pra proposta e agendamento.",
+      "Funciona bem pra coisa formal ou agendamento.",
+      "Se for proposta formal, é por aqui.",
+      "Formalidade combina com esse canal."
+    ],
+    "PACOTE_INICIO": [
+      "Pega tudo aí:",
+      "Toma tudo:",
+      "Vou te enviar logo o pacote todo:",
+      "Aqui tá o cardápio, amigo:",
+      "Na hora, pega logo o pacote:",
+      "Vai o pacote completo aí:"
+    ],
+    "LEMBRETE_WPP": [
+      "Mas como te disse antes, se quiser falar rápido, o Zap continua sendo a melhor aposta.",
+      "E olha, como te falei, no Zap é certeza de resposta.",
+      "Lembrando: no Zap ele responde mais rápido.",
+      "Como já disse, o Zap é o caminho mais rápido pra falar com ele.",
+      "E não esquece: no Zap é certeza.",
+      "Sei que é chato lembrar, mas a dica continua: Zap é o melhor caminho."
+    ]
+  },
+  "coringas": {
+    "qual": [
+      "Bola lá então.",
+      "Claro que sim.",
+      "Beleza, então.",
+      "Tá na mão.",
+      "Fechado.",
+      "Tranquilo."
+    ],
+    "pedido": [
+      "Claro.",
+      "Toma:",
+      "Aqui vai:",
+      "Já vai.",
+      "Manda ver.",
+      "Direto ao ponto:"
+    ],
+    "urgente": [
+      "Direto:",
+      "Já vai:",
+      "Rápido:",
+      "Já:"
+    ],
+    "informal": [
+      "Saca só.",
+      "Vamo lá.",
+      "Bora.",
+      "Ei.",
+      "E aí."
+    ]
+  },
+  "receitas": {
+    "github": {
+      "descricao": "Pessoa pediu o GitHub. Entrega direto + oferece WhatsApp.",
+      "linhas": [
+        "O GitHub {SUJEITO} {ESSES}",
+        "👉 {GITHUB}",
+        "{BAGUNCA}",
+        "{OFERTA_WPP}",
+        "{WHATSAPP}"
+      ],
+      "linhas_rep": [
+        "O GitHub {SUJEITO} {ESSES}",
+        "👉 {GITHUB}",
+        "{BAGUNCA}",
+        "{LEMBRETE_WPP}"
+      ]
+    },
+    "linkedin": {
+      "descricao": "Pessoa pediu o LinkedIn. Entrega + compara com o currículo + oferece WhatsApp.",
+      "linhas": [
+        "O LinkedIn {SUJEITO} {ESSES}",
+        "👋 {LINKEDIN}",
+        "{CURRICULO_MAIOR}",
+        "{OFERTA_WPP}",
+        "{WHATSAPP}"
+      ],
+      "linhas_rep": [
+        "O LinkedIn {SUJEITO} {ESSES}",
+        "👋 {LINKEDIN}",
+        "{CURRICULO_MAIOR}",
+        "{LEMBRETE_WPP}"
+      ]
+    },
+    "email": {
+      "descricao": "Pessoa pediu o email. Entrega + nota sobre canal formal + oferece WhatsApp.",
+      "linhas": [
+        "{INICIO} o e-mail {SUJEITO} {ESSES}",
+        "✉️ {EMAIL}",
+        "{PEDIDO_EMAIL}",
+        "{OFERTA_WPP}",
+        "{WHATSAPP}"
+      ],
+      "linhas_rep": [
+        "{INICIO} o e-mail {SUJEITO} {ESSES}",
+        "✉️ {EMAIL}",
+        "{PEDIDO_EMAIL}",
+        "{LEMBRETE_WPP}"
+      ]
+    },
+    "whatsapp": {
+      "descricao": "Pessoa pediu o WhatsApp. Entrega direto sem oferecer de novo.",
+      "linhas": [
+        "{INICIO} o WhatsApp {SUJEITO} {ESSES}",
+        "📱 {WHATSAPP}",
+        "É o canal que ele responde mais rápido. Manda direto."
+      ],
+      "linhas_rep": [
+        "Tá aqui de novo, você pediu:",
+        "📱 {WHATSAPP}",
+        "Anota aí que da próxima vez você não precisa perguntar. kkk"
+      ]
+    },
+    "pacote": {
+      "descricao": "Pessoa pediu 2+ canais juntos. Entrega pacote completo.",
+      "linhas": [
+        "{PACOTE_INICIO}",
+        "📱 {WHATSAPP}",
+        "✉️ {EMAIL}",
+        "👔 {LINKEDIN}",
+        "💻 {GITHUB}",
+        "O WhatsApp é o que ele responde mais rápido."
+      ]
+    }
+  }
+}

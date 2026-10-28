@@ -1,0 +1,20 @@
+{
+  "id": "viagem-de-bobby",
+  "nome": "A Viagem de Bobby",
+  "subtitulo": "Shoot-em-up Espacial",
+  "stack": ["TypeScript", "Canvas 2D", "Vercel"],
+  "descricao": "**Continuação direta** de A Fuga de Bobby. Agora o herói pilota o **foguete** de volta à Terra: inimigos, **cometas que se dilaceram** em dejetos menores, aproximação do planeta em **sprites** e **cutscene final** mirando no **Brasil**. Mesma base técnica: **Canvas 2D** puro, sem engine, com física de projéteis e controles adaptados para **desktop e mobile**.",
+  "cta": {
+    "label": "Jogar Agora",
+    "url": "https://game-a-viagem-de-bobby.vercel.app",
+    "icone": "fa-play"
+  },
+  "media": {
+    "demo": false,
+    "drive": "https://drive.google.com/file/d/1BJwN6ByjLyCemh82xP2GKhQalnc6Xqvw/view?usp=sharing",
+    "youtube": null,
+    "video": null,
+    "capa": "chrome_A5NepkwnQw.png",
+    "prints": ["chrome_A5NepkwnQw.png", "chrome_bsx1gHmzQo.png", "chrome_zjjCumaqKZ.png"]
+  }
+}

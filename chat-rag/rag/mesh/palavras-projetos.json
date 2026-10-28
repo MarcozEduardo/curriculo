@@ -1,0 +1,294 @@
+{
+  "orbita": "projetos",
+  "ancoras": {
+    "projeto": [
+      "projetos"
+    ],
+    "jogo": [
+      "jogos",
+      "game",
+      "games"
+    ],
+    "bobby": [
+      "a fuga de bobby",
+      "a viagem de bobby",
+      "trilogia bobby"
+    ],
+    "dama": [
+      "dama orbital",
+      "orbital"
+    ],
+    "quadra": [
+      "quadra 21",
+      "barra pesada"
+    ],
+    "estagiario": [
+      "o estagiario"
+    ],
+    "lar": [
+      "local agent runtime"
+    ],
+    "nexus": [
+      "nucleo nexus"
+    ],
+    "franzinha": [
+      "app franzinha"
+    ],
+    "directsend": [],
+    "marketbobby": [],
+    "devorador": [],
+    "extensao": [
+      "extensao unyleya",
+      "gerador abnt",
+      "abnt"
+    ],
+    "canvas": [
+      "canvas 2d"
+    ],
+    "webrtc": [],
+    "firebase": [],
+    "portfolio": []
+  },
+  "especificadores": {
+    "tecnologias": [
+      "tech",
+      "stack",
+      "linguagem",
+      "linguagens",
+      "feito com",
+      "feito em",
+      "usou"
+    ],
+    "desafio": [
+      "dificuldade",
+      "problema",
+      "obstaculo",
+      "complexo",
+      "travou",
+      "bug"
+    ],
+    "status": [
+      "pronto",
+      "finalizado",
+      "andamento",
+      "inacabado",
+      "concluido",
+      "funcionando"
+    ],
+    "duracao": [
+      "tempo",
+      "demorou",
+      "quanto tempo",
+      "quanto levou",
+      "levou"
+    ],
+    "motivo": [
+      "por que",
+      "porque",
+      "motivacao",
+      "inspirou",
+      "ideia",
+      "objetivo"
+    ],
+    "link": [
+      "deploy",
+      "vercel",
+      "repositorio",
+      "github",
+      "demo",
+      "jogar"
+    ],
+    "numeros": [
+      "quantos",
+      "quantas",
+      "quantidade"
+    ],
+    "sistemas_grandes": [
+      "sistemas",
+      "maiores",
+      "ambicioso",
+      "reservado"
+    ],
+    "historia": [
+      "historia",
+      "bastidor",
+      "study case",
+      "por tras",
+      "como foi fazer"
+    ],
+    "aprendizado": [
+      "aprendeu",
+      "aprendizado",
+      "licao"
+    ],
+    "arquitetura": [
+      "estrutura",
+      "modular",
+      "camadas",
+      "padrao"
+    ],
+    "qa": [
+      "teste",
+      "testes",
+      "qualidade",
+      "cobertura"
+    ]
+  },
+  "pontes": {
+    "pedido": [
+      "fala",
+      "fale",
+      "conta",
+      "explica",
+      "mostra",
+      "detalha",
+      "me fala",
+      "me fale",
+      "me conta",
+      "me mostra",
+      "quero saber",
+      "quero ver",
+      "queria saber"
+    ],
+    "sobre": [
+      "sobre",
+      "acerca",
+      "a respeito"
+    ],
+    "intensificador": [
+      "mais",
+      "muito",
+      "bem",
+      "super"
+    ]
+  },
+  "conectores": {
+    "confirmacao": [
+      "esse",
+      "essa",
+      "isso",
+      "este",
+      "esta",
+      "isto",
+      "mesmo",
+      "nisso",
+      "disso"
+    ],
+    "afastamento": [
+      "aquele",
+      "aquela",
+      "aquilo",
+      "outro",
+      "outra"
+    ],
+    "adicao": [
+      "tambem"
+    ],
+    "contraste": [
+      "mas",
+      "porem",
+      "contudo",
+      "entretanto"
+    ],
+    "negacao": [
+      "nao",
+      "nunca",
+      "jamais"
+    ]
+  },
+  "furos": [
+    "outro caminho",
+    "outro assunto",
+    "me surpreende",
+    "me surpreenda",
+    "conta uma boa",
+    "manda uma boa",
+    "manda ver",
+    "novidade",
+    "tem novidade",
+    "e a novidade",
+    "quanto tempo",
+    "e o tempo"
+  ],
+  "ancoras_outras": [
+    "marcos",
+    "marcao",
+    "eduardo",
+    "bella",
+    "bella arte",
+    "fabricart",
+    "prepara",
+    "prepara cursos",
+    "midori",
+    "friends",
+    "friends informatica",
+    "cnc",
+    "laser",
+    "co2",
+    "rag",
+    "embedding",
+    "python",
+    "javascript",
+    "typescript",
+    "react",
+    "node",
+    "webrtc",
+    "firebase",
+    "supabase",
+    "vercel",
+    "netlify",
+    "canvas",
+    "lar",
+    "local agent runtime",
+    "nexus",
+    "nucleo nexus",
+    "franzinha",
+    "directsend",
+    "marketbobby",
+    "devorador",
+    "abnt",
+    "extensao unyleya",
+    "socram",
+    "unyleya",
+    "cs50",
+    "harvard",
+    "curriculo",
+    "pdf",
+    "qr code",
+    "pcd",
+    "tea",
+    "laudo",
+    "autista",
+    "autismo",
+    "clt",
+    "pj",
+    "remoto",
+    "presencial",
+    "email",
+    "whatsapp",
+    "linkedin",
+    "github",
+    "vaga",
+    "pretensao",
+    "salario",
+    "contato",
+    "skill",
+    "skills",
+    "stack",
+    "hiperfoco"
+  ],
+  "ponte_ancorada": [
+    "dele",
+    "dela",
+    "ele",
+    "ela",
+    "dele?",
+    "seu",
+    "sua",
+    "seus",
+    "suas",
+    "dele mesmo",
+    "sobre ele",
+    "sobre ela"
+  ]
+}

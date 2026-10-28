@@ -1,0 +1,398 @@
+{
+  "js": [
+    "javascript",
+    "java script",
+    "ecmascript",
+    "js"
+  ],
+  "ts": [
+    "typescript",
+    "type script",
+    "ts"
+  ],
+  "ia": [
+    "ai",
+    "inteligencia artificial",
+    "llm",
+    "agente",
+    "agentes",
+    "prompt",
+    "gpt",
+    "chatgpt",
+    "copilot",
+    "modelo",
+    "artificial",
+    "intelligence"
+  ],
+  "rag": [
+    "retrieval",
+    "busca semantica",
+    "vetorial",
+    "embedding",
+    "base de conhecimento"
+  ],
+  "qa": [
+    "teste",
+    "testes",
+    "qualidade",
+    "debugging",
+    "depuracao",
+    "bug",
+    "bugs",
+    "homologacao",
+    "tester"
+  ],
+  "suporte": [
+    "helpdesk",
+    "help desk",
+    "servicedesk",
+    "service desk",
+    "n1",
+    "n2",
+    "n3",
+    "manutencao",
+    "chamado",
+    "atendimento",
+    "tecnico"
+  ],
+  "jogos": [
+    "game",
+    "games",
+    "jogo",
+    "canvas",
+    "gameplay",
+    "sprite",
+    "sprites",
+    "fliperama"
+  ],
+  "contato": [
+    "email",
+    "e mail",
+    "telefone",
+    "whatsapp",
+    "zap",
+    "celular",
+    "linkedin",
+    "github",
+    "curriculo",
+    "cv",
+    "contact",
+    "reach",
+    "phone",
+    "mail"
+  ],
+  "pcd": [
+    "tea",
+    "autismo",
+    "autista",
+    "espectro",
+    "laudo",
+    "neurodivergente",
+    "neurodiverso",
+    "cota",
+    "afirmativa",
+    "deficiencia",
+    "cid"
+  ],
+  "faculdade": [
+    "graduacao",
+    "unyleya",
+    "cs50",
+    "harvard",
+    "formacao",
+    "estudo",
+    "estudos",
+    "curso",
+    "escolaridade",
+    "faculdade",
+    "education",
+    "degree",
+    "university",
+    "college",
+    "studies",
+    "school"
+  ],
+  "salario": [
+    "pretensao",
+    "remuneracao",
+    "ganho",
+    "ganhar",
+    "pagamento",
+    "faixa salarial",
+    "valor",
+    "cache",
+    "custo",
+    "honorario",
+    "quanto cobra",
+    "salary",
+    "pay",
+    "wage",
+    "compensation",
+    "earn",
+    "earns",
+    "rate"
+  ],
+  "remoto": [
+    "home office",
+    "homeoffice",
+    "teletrabalho",
+    "distancia",
+    "anywhere",
+    "remote",
+    "remotely"
+  ],
+  "programar": [
+    "codar",
+    "codificar",
+    "desenvolver",
+    "escrever codigo",
+    "dev",
+    "programacao",
+    "coding",
+    "code",
+    "program",
+    "programmer",
+    "developer",
+    "develop",
+    "developing"
+  ],
+  "marcos": [
+    "marcao",
+    "marcos eduardo",
+    "candidato",
+    "profissional",
+    "dev",
+    "ele"
+  ],
+  "bobby": [
+    "bot",
+    "assistente",
+    "robo",
+    "voce",
+    "chat",
+    "ia do curriculo"
+  ],
+  "projeto": [
+    "projetos",
+    "portfolio",
+    "trabalho",
+    "app",
+    "aplicativo",
+    "aplicacao",
+    "sistema",
+    "ferramenta",
+    "projects",
+    "project",
+    "games",
+    "apps"
+  ],
+  "experiencia": [
+    "carreira",
+    "emprego",
+    "trabalho",
+    "historico",
+    "cargo",
+    "funcao",
+    "vivencia",
+    "experience",
+    "career",
+    "history",
+    "background"
+  ],
+  "empresa": [
+    "companhia",
+    "firma",
+    "organizacao",
+    "empregador"
+  ],
+  "webrtc": [
+    "p2p",
+    "peer to peer",
+    "ponto a ponto",
+    "tempo real"
+  ],
+  "firebase": [
+    "auth",
+    "autenticacao",
+    "realtime",
+    "backend as a service"
+  ],
+  "industria": [
+    "fabrica",
+    "fabril",
+    "manufatura",
+    "producao",
+    "chao de fabrica",
+    "cnc",
+    "laser",
+    "maquinario",
+    "galpao"
+  ],
+  "cloud": [
+    "aws",
+    "azure",
+    "gcp",
+    "google cloud",
+    "nuvem",
+    "docker",
+    "kubernetes",
+    "devops"
+  ],
+  "automacao": [
+    "n8n",
+    "langchain",
+    "crewai",
+    "autogen",
+    "zapier",
+    "make",
+    "copilot",
+    "cursor",
+    "orquestracao",
+    "mcp",
+    "agente"
+  ],
+  "hiperfoco": [
+    "foco",
+    "concentracao",
+    "altas habilidades",
+    "imersao",
+    "profundidade"
+  ],
+  "limitacao": [
+    "lacuna",
+    "fraqueza",
+    "falta",
+    "deficiencia",
+    "ponto fraco",
+    "nao domina"
+  ],
+  "lar": [
+    "local agent runtime",
+    "runtime",
+    "ambiente de desenvolvimento",
+    "ferramenta interna"
+  ],
+  "nexus": [
+    "nucleo nexus",
+    "cerebro de bot",
+    "nucleo neural"
+  ],
+  "franzinha": [
+    "app franzinha",
+    "sistema de loja",
+    "pdv",
+    "sistema comercial"
+  ],
+  "brazlandia": [
+    "brasilia",
+    "distrito federal",
+    "df",
+    "taguatinga",
+    "vicente pires",
+    "ceilandia"
+  ],
+  "certificacao": [
+    "certificado",
+    "itil",
+    "cisco",
+    "microsoft",
+    "credencial",
+    "diploma"
+  ],
+  "supabase": [
+    "banco",
+    "backend",
+    "postgres"
+  ],
+  "netlify": [
+    "deploy",
+    "hospedagem",
+    "publicacao"
+  ],
+  "neurodivergencia": [
+    "neurodivergente",
+    "neurodiverso",
+    "altas habilidades",
+    "hiperfoco",
+    "perfil cognitivo",
+    "neuroatipico"
+  ],
+  "socram": [
+    "vilao",
+    "villain",
+    "boss",
+    "chefe final",
+    "inimigo"
+  ],
+  "metralhadora": [
+    "ataque de ansiedade",
+    "ia desesperada",
+    "ia enlouquecida",
+    "ia em surto",
+    "modo panico"
+  ],
+  "sapo": [
+    "esperar esfriar",
+    "dar um tempo",
+    "deixar a ia descansar"
+  ],
+  "worklogs": [
+    "historico de trabalho da ia",
+    "logs de alteracao",
+    "registro de alteracoes",
+    "rastreio de mudancas"
+  ],
+  "study_case": [
+    "historia do projeto",
+    "bastidores",
+    "como foi feito",
+    "o que aconteceu por tras"
+  ],
+  "processo": [
+    "metodologia",
+    "forma de desenvolver",
+    "jeito de trabalhar no projeto",
+    "ciclo de desenvolvimento"
+  ],
+  "engenharia_reversa": [
+    "reconstruir codigo",
+    "recuperar projeto",
+    "recuperar pelo historico"
+  ],
+  "habilidade": [
+    "skills",
+    "skill",
+    "strengths",
+    "abilities",
+    "stack",
+    "tools",
+    "technologies",
+    "tech"
+  ],
+  "contratar": [
+    "hire",
+    "hiring",
+    "recruit",
+    "candidate"
+  ],
+  "disponibilidade": [
+    "available",
+    "availability",
+    "start",
+    "notice"
+  ],
+  "mora": [
+    "live",
+    "lives",
+    "location",
+    "located",
+    "city",
+    "country"
+  ],
+  "ingles": [
+    "english",
+    "language",
+    "languages",
+    "fluent"
+  ]
+}

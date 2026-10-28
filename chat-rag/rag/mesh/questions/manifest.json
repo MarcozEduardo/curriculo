@@ -1,0 +1,102 @@
+{
+  "versao": "3.1.0",
+  "total": 5196,
+  "orbits": [
+    {
+      "orbit": "identidade_visitante",
+      "label": "Sobre você (visitante)",
+      "total": 396,
+      "file": "identidade_visitante.json"
+    },
+    {
+      "orbit": "sobre_marcos",
+      "label": "Sobre o Marcos",
+      "total": 374,
+      "file": "sobre_marcos.json"
+    },
+    {
+      "orbit": "historia_pessoal",
+      "label": "Trajetória e história",
+      "total": 330,
+      "file": "historia_pessoal.json"
+    },
+    {
+      "orbit": "projetos",
+      "label": "Projetos e Portfólio",
+      "total": 409,
+      "file": "projetos.json"
+    },
+    {
+      "orbit": "skills",
+      "label": "Habilidades e Stack",
+      "total": 410,
+      "file": "skills.json"
+    },
+    {
+      "orbit": "experiencia",
+      "label": "Experiência Profissional",
+      "total": 413,
+      "file": "experiencia.json"
+    },
+    {
+      "orbit": "formacao",
+      "label": "Formação e Estudos",
+      "total": 381,
+      "file": "formacao.json"
+    },
+    {
+      "orbit": "neurodivergencia",
+      "label": "Neurodivergência e altas habilidades",
+      "total": 395,
+      "file": "neurodivergencia.json"
+    },
+    {
+      "orbit": "contato",
+      "label": "Contato",
+      "total": 420,
+      "file": "contato.json"
+    },
+    {
+      "orbit": "recrutamento",
+      "label": "Recrutamento e Contratação",
+      "total": 418,
+      "file": "recrutamento.json"
+    },
+    {
+      "orbit": "transparencia",
+      "label": "Transparência técnica",
+      "total": 307,
+      "file": "transparencia.json"
+    },
+    {
+      "orbit": "meta_ia",
+      "label": "Sobre o assistente (Bobby)",
+      "total": 315,
+      "file": "meta_ia.json"
+    },
+    {
+      "orbit": "smalltalk",
+      "label": "Conversa",
+      "total": 255,
+      "file": "smalltalk.json"
+    },
+    {
+      "orbit": "curiosidades",
+      "label": "Bastidores e curiosidades",
+      "total": 309,
+      "file": "curiosidades.json"
+    },
+    {
+      "orbit": "glossario",
+      "label": "Glossário técnico",
+      "total": 16,
+      "file": "glossario.json"
+    },
+    {
+      "orbit": "sobre_curriculo",
+      "label": "Sobre este currículo",
+      "total": 48,
+      "file": "sobre_curriculo.json"
+    }
+  ]
+}

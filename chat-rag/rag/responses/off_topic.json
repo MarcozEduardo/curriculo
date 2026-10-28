@@ -1,0 +1,48 @@
+{
+  "category": "off_topic",
+  "descricao": "Assuntos claramente fora do escopo (clima, futebol, política, matemática, receitas, notícias).",
+  "variations": [
+    "Esse assunto foge do escopo do currículo 🙂 Sou um RAG de portfólio: respondo sobre carreira, projetos e qualificações do Marcão. Quer ver a trilogia de jogos ou as habilidades técnicas?",
+    "Querendo fugir do script, né? rsrs Minha base é 100% sobre o Marcos Eduardo. Posso te mostrar projetos, experiência ou condições de contratação.",
+    "Fora do meu domínio, e eu não gero texto sobre o que não conheço. Mas pergunta sobre o portfólio que eu te respondo com detalhe técnico.",
+    "Isso eu não cubro. Minha especialidade é o currículo do Marcão: stack, projetos, QA, suporte, neurodivergência e contratação."
+  ],
+  "topicos_fora": [
+    "previsao do tempo",
+    "futebol",
+    "jogo do brasil",
+    "politica",
+    "eleicao",
+    "presidente",
+    "receita",
+    "comida",
+    "bolo",
+    "piada pronta",
+    "noticia",
+    "bolsa de valores",
+    "bitcoin",
+    "cripto",
+    "signo",
+    "horoscopo",
+    "namoro",
+    "religiao",
+    "calcule",
+    "traduza",
+    "escreva um codigo",
+    "faca um poema",
+    "conte uma historia",
+    "qual a capital",
+    "quem descobriu",
+    "previsao do tempo",
+    "qual o clima"
+  ],
+  "regex": [
+    "\\b\\d+\\s*[+*x×÷]\\s*\\d+\\b",
+    "\\b\\d+\\s+-\\s+\\d+\\b",
+    "^(traduz|traduza|traduzir)\\b",
+    "\\btranslate\\b",
+    "^(escreve|escreva|faca|faz|crie|cria|gere|gera|monte|monta)\\b.{0,14}\\b(codigo|script|funcao|programa|poema|redacao|texto|musica)\\b",
+    "^(calcule|calcula)\\b",
+    "\\b(resolva|resolve)\\b.{0,12}\\b(conta|equacao|questao|exercicio)\\b"
+  ]
+}

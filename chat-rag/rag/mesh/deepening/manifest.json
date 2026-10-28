@@ -1,0 +1,20 @@
+{
+  "versao": "3.4.0",
+  "descricao": "Árvores de aprofundamento por órbita, camadas 15+10+10+10+5.",
+  "files": [
+    "contato.json",
+    "experiencia.json",
+    "formacao.json",
+    "historia_pessoal.json",
+    "meta_ia.json",
+    "neurodivergencia.json",
+    "projetos.json",
+    "recrutamento.json",
+    "skills.json",
+    "sobre_marcos.json",
+    "transparencia.json",
+    "curiosidades.json"
+  ],
+  "total": 550,
+  "faq_extra": "faq_extra.json"
+}

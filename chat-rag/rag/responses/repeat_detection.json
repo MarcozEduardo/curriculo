@@ -1,0 +1,21 @@
+{
+  "category": "repeat_detection",
+  "descricao": "Quando a mesma pergunta/intenção volta. {resumo} recebe a versão curta da resposta anterior.",
+  "variations": [
+    "Você já me perguntou isso há pouco, resumindo de novo: {resumo}",
+    "Minha memória de sessão pegou a repetição 🙂 Em versão curta: {resumo}",
+    "Tá me testando, né? kkk Já passamos por aqui: {resumo}",
+    "Essa voltou! Sem problema: {resumo}",
+    "Já falamos disso, mas posso dizer de outro jeito: {resumo}",
+    "Sim, lembro dessa pergunta. O essencial é: {resumo}",
+    "Pergunta repetida detectada. Mantendo a verdade e encurtando: {resumo}",
+    "De novo o mesmo ponto, e a resposta não muda: {resumo}",
+    "Minha memória curta continua ativa: {resumo}",
+    "Já respondi, mas não vou te deixar na mão: {resumo}"
+  ],
+  "sugestoes_de_desvio": [
+    "Quer mudar o ângulo? Posso falar de **desafios técnicos**, **status** ou **tecnologias**.",
+    "Se quiser, mudamos para projetos, experiência, formação ou contratação.",
+    "Posso aprofundar em outro item do portfólio, é só dizer o nome."
+  ]
+}

@@ -1,0 +1,616 @@
+{
+  "orbit": "historia_pessoal",
+  "label": "Trajetória e história",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós",
+  "nodes": [
+    {
+      "id": "hp01",
+      "layer": 1,
+      "parent": null,
+      "label": "a história resumida",
+      "question": "Qual é a história dele em resumo?",
+      "variants": [
+        "conta a história do marcos",
+        "trajetória de vida"
+      ],
+      "answer": "Dez anos orbitando TI por fora e mais dez resolvendo problema técnico em indústria e comércio. Começou em 2004 como estagiário numa loja de informática, virou instrutor, passou por balcão, escola, fábrica e CNC, e em 2024 fez a transição estruturada para TI com diagnóstico, método e portfólio público."
+    },
+    {
+      "id": "hp02",
+      "layer": 1,
+      "parent": null,
+      "label": "como começou com computadores",
+      "question": "Como ele começou com computadores?",
+      "variants": [
+        "início na informática",
+        "desde criança"
+      ],
+      "answer": "Desde moleque era quem resolvia o computador dos outros: fórum, comunidade de jogo, gambiarra para rodar jogo em máquina fraca, skin e pixel shader. Sempre foi prazer e vocação."
+    },
+    {
+      "id": "hp03",
+      "layer": 1,
+      "parent": null,
+      "label": "o primeiro PC",
+      "question": "Qual foi o primeiro computador dele?",
+      "variants": [
+        "primeira máquina própria",
+        "pc aos 15 anos"
+      ],
+      "answer": "Um Pentium Slot 1 de 333 MHz com overclock, 256 MB de RAM e HD de 40 GB, que sofria para rodar Windows XP. Chegou aos 15 anos; antes era PC da tia ou lan house."
+    },
+    {
+      "id": "hp04",
+      "layer": 1,
+      "parent": null,
+      "label": "o primeiro emprego",
+      "question": "Qual foi o primeiro emprego dele?",
+      "variants": [
+        "onde começou a trabalhar",
+        "primeiro trabalho formal"
+      ],
+      "answer": "Na Friends Informática, em Ceilândia, em 2004, como estagiário. Dali virou instrutor de informática e ficou até 2008."
+    },
+    {
+      "id": "hp05",
+      "layer": 1,
+      "parent": null,
+      "label": "os anos fora da área",
+      "question": "Por que ele passou anos fora da área?",
+      "variants": [
+        "trabalhos fora de ti",
+        "por que saiu da informática"
+      ],
+      "answer": "A vida não permitiu ficar direto em TI: falta de diploma, condição financeira difícil e portas que não abriam. Entre 2009 e 2013 passou por loja, guichê de telefonia, consórcio, aulas e uma sociedade em loja de informática, sempre perto de tecnologia."
+    },
+    {
+      "id": "hp06",
+      "layer": 1,
+      "parent": null,
+      "label": "a virada de 2024",
+      "question": "O que foi a virada de 2024?",
+      "variants": [
+        "por que 2024",
+        "como começou a transição"
+      ],
+      "answer": "Voltou a estudar com diagnóstico e método: graduação em TI em EAD e mergulho em IA, testando centenas de modelos. Foi a primeira vez que sentiu que o trilho existia.",
+      "facet": "virada"
+    },
+    {
+      "id": "hp07",
+      "layer": 1,
+      "parent": null,
+      "label": "as tentativas de formação",
+      "question": "Quantas vezes ele tentou se formar?",
+      "variants": [
+        "tentativas de faculdade",
+        "por que não se formou antes"
+      ],
+      "answer": "Seis tentativas que não avançaram antes do diagnóstico. O modelo linear e teórico o travava. Hoje a graduação em TI está em andamento, num formato que encaixa.",
+      "facet": "tentativas"
+    },
+    {
+      "id": "hp08",
+      "layer": 1,
+      "parent": null,
+      "label": "o jogo que ele procurou por anos",
+      "question": "Qual jogo ele procurou por anos?",
+      "variants": [
+        "história do age of mythology",
+        "jogo da infância"
+      ],
+      "answer": "Em 1998 viu um jogo em português com carroças e um deus montado no Egito e passou anos procurando sem saber o nome. No caminho descobriu Age of Empires II e Caesar III. O original era Age of Mythology."
+    },
+    {
+      "id": "hp09",
+      "layer": 1,
+      "parent": null,
+      "label": "as comunidades de tradução",
+      "question": "O que ele fazia em comunidades de tradução?",
+      "variants": [
+        "traduzia jogos",
+        "tradução colaborativa"
+      ],
+      "answer": "Traduzia jogos do espanhol e do inglês para português, tudo na mão. Aprendeu a editar arquivo de tradução, mexer na estrutura interna do jogo, instalar emulador e resolver conflito de ROM. Foi a primeira escola técnica dele."
+    },
+    {
+      "id": "hp10",
+      "layer": 1,
+      "parent": null,
+      "label": "scripts e gambiarras",
+      "question": "Que scripts ele fazia no começo?",
+      "variants": [
+        "automação caseira",
+        "scripts de windows"
+      ],
+      "answer": "Scripts para limpar partes inúteis do Windows, melhorar desempenho e rodar as coisas do jeito dele, feitos na mão e testados na raça. Era programação na prática, antes de saber o nome."
+    },
+    {
+      "id": "hp11",
+      "layer": 1,
+      "parent": null,
+      "label": "o caso do videocassete",
+      "question": "Qual é a história do videocassete?",
+      "variants": [
+        "gambiarra do controle",
+        "videocassete e tv"
+      ],
+      "answer": "O controle do videocassete funcionava e o da TV não. Em vez de aceitar, ele fez o videocassete transmitir o sinal para a TV e passou a trocar de canal por ele. O padrão: achar o caminho alternativo quando o óbvio não existe."
+    },
+    {
+      "id": "hp12",
+      "layer": 1,
+      "parent": null,
+      "label": "os sites de 2014",
+      "question": "Como foram os sites de 2014?",
+      "variants": [
+        "primeiros sites comerciais",
+        "trabalho de web em 2014"
+      ],
+      "answer": "Já na Prepara Cursos, fez o site da unidade de Taguatinga, o de uma empresa de cursos e RH e o de uma banda de igreja. Era era de plugin Flash e de testar em cada navegador, a origem do lado QA dele."
+    },
+    {
+      "id": "hp13",
+      "layer": 1,
+      "parent": null,
+      "label": "o episódio da Fabricart",
+      "question": "O que aconteceu na Fabricart?",
+      "variants": [
+        "banco de dados caído",
+        "momento marcante"
+      ],
+      "answer": "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça."
+    },
+    {
+      "id": "hp14",
+      "layer": 1,
+      "parent": null,
+      "label": "os anos de Bella Arte",
+      "question": "Como foram os anos na Bella Arte?",
+      "variants": [
+        "cinco anos de cnc",
+        "trabalho mais longo"
+      ],
+      "answer": "Cinco anos e quatro meses como projetista CNC e responsável técnico de operação, em Vicente Pires. Foi o trabalho mais longo e o que mais o formou tecnicamente, com liberdade para testar as próprias teorias."
+    },
+    {
+      "id": "hp15",
+      "layer": 1,
+      "parent": null,
+      "label": "o que ele quer agora",
+      "question": "O que ele quer agora?",
+      "variants": [
+        "próximo passo",
+        "objetivo atual"
+      ],
+      "answer": "Entrar numa equipe formal de TI: suporte, QA, análise ou desenvolvimento assistido por IA. Viver o ambiente para não arquivar o que sabe e continuar evoluindo com a prática diária."
+    },
+    {
+      "id": "hp16",
+      "layer": 2,
+      "parent": "hp01",
+      "label": "a linha do tempo",
+      "question": "Qual é a linha do tempo da carreira?",
+      "variants": [
+        "cronologia",
+        "ano a ano"
+      ],
+      "answer": "2004 a 2008 Friends Informática; 2009 Dokas 1.99; 2010 Oi Atende; 2011 Porto Seguro Consórcio e aulas em duas escolas; 2012 a 2013 sociedade em loja de informática; 2014 a 2016 Prepara Cursos; 2016 a 2018 Fabricart; 2018 a 2024 Bella Arte; 2024 em diante, TI e IA."
+    },
+    {
+      "id": "hp17",
+      "layer": 2,
+      "parent": "hp02",
+      "label": "o que fazia em fóruns",
+      "question": "O que ele fazia em fóruns?",
+      "variants": [
+        "fóruns de internet",
+        "comunidades online"
+      ],
+      "answer": "Pesquisava, testava e aprendia: encontrar jogos, resolver problema de PC, traduzir, descobrir como formato de arquivo funciona por dentro. Fórum, tentativa, erro e obsessão."
+    },
+    {
+      "id": "hp18",
+      "layer": 2,
+      "parent": "hp03",
+      "label": "a máquina em detalhe",
+      "question": "Que máquina era o primeiro PC?",
+      "variants": [
+        "configuração do primeiro pc",
+        "pentium slot 1"
+      ],
+      "answer": "Pentium Slot 1, 333 MHz com overclock, 256 MB de RAM e HD de 40 GB, rodando Windows XP com dificuldade. Uma máquina quase da idade dele na época."
+    },
+    {
+      "id": "hp19",
+      "layer": 2,
+      "parent": "hp04",
+      "label": "quem conseguiu o emprego",
+      "question": "Quem conseguiu o primeiro emprego para ele?",
+      "variants": [
+        "como entrou na friends",
+        "indicação do primeiro emprego"
+      ],
+      "answer": "A mãe dele. Ela o levou à Friends Informática e ele foi aceito como estagiário. Foi ali que começou a estudar informática de verdade."
+    },
+    {
+      "id": "hp20",
+      "layer": 2,
+      "parent": "hp05",
+      "label": "por que não ficou em TI",
+      "question": "Por que ele não ficou em TI naquela época?",
+      "variants": [
+        "o que impediu",
+        "barreiras de entrada"
+      ],
+      "answer": "Entrevistas ruins, exploração em curso técnico, patrão abusando de horário, condição financeira difícil e falta de indicação. Cada tentativa de entrar em TI batia em porta que não abria."
+    },
+    {
+      "id": "hp21",
+      "layer": 2,
+      "parent": "hp06",
+      "label": "o que estudou em 2024",
+      "question": "O que ele estudou em 2024?",
+      "variants": [
+        "estudos da virada",
+        "o que aprendeu em 2024"
+      ],
+      "answer": "Graduação em TI em EAD e Inteligência Artificial na prática: meses testando centenas de modelos em sessões longas para entender limites e comportamento real de cada um.",
+      "facet": "virada"
+    },
+    {
+      "id": "hp22",
+      "layer": 2,
+      "parent": "hp07",
+      "label": "o que travava",
+      "question": "O que travava nas tentativas de formação?",
+      "variants": [
+        "por que não funcionava",
+        "dificuldade de estudar"
+      ],
+      "answer": "O modelo neurotípico de aprendizado: linear, teórico e sem recompensa prática. Ele começava com força e a estrutura engessada o apagava. Só entendeu o motivo com o diagnóstico, já adulto.",
+      "facet": "tentativas"
+    },
+    {
+      "id": "hp23",
+      "layer": 2,
+      "parent": "hp08",
+      "label": "o jogo encontrado",
+      "question": "Ele encontrou o jogo?",
+      "variants": [
+        "qual era o jogo",
+        "achou o age of mythology"
+      ],
+      "answer": "Sim: era Age of Mythology. Anos procurando, e no fim estava ali o tempo todo. A caçada é que virou escola técnica."
+    },
+    {
+      "id": "hp24",
+      "layer": 2,
+      "parent": "hp09",
+      "label": "os idiomas da tradução",
+      "question": "Ele traduzia de que idiomas?",
+      "variants": [
+        "traduzia do inglês",
+        "espanhol para português"
+      ],
+      "answer": "Do espanhol para o português do Brasil e, em partes, do inglês. Tudo manual, sem ferramenta automática."
+    },
+    {
+      "id": "hp25",
+      "layer": 2,
+      "parent": "hp10",
+      "label": "o que os scripts faziam",
+      "question": "Para que serviam esses scripts?",
+      "variants": [
+        "função dos scripts",
+        "scripts bat"
+      ],
+      "answer": "Limpar o Windows, melhorar desempenho e automatizar instalação do jeito dele, em arquivos .bat feitos na mão. Ele também ajustava o sistema pelo Regedit e baixava arquivos em partes quando a conexão não aguentava."
+    },
+    {
+      "id": "hp26",
+      "layer": 3,
+      "parent": "hp16",
+      "label": "a entrada na Bella Arte",
+      "question": "Quando ele entrou na Bella Arte?",
+      "variants": [
+        "início na bella arte",
+        "data da bella arte"
+      ],
+      "answer": "Em novembro de 2018, em Vicente Pires/DF, onde ficou até fevereiro de 2024."
+    },
+    {
+      "id": "hp27",
+      "layer": 3,
+      "parent": "hp17",
+      "label": "skins e shaders",
+      "question": "Ele criava skins e shaders?",
+      "variants": [
+        "pixel shader",
+        "customização de jogos"
+      ],
+      "answer": "Sim. Criava skin e pixel shader para liberar jogo em máquina fraca, e mais tarde refez menu, personagens e skins do Counter-Strike 1.6."
+    },
+    {
+      "id": "hp28",
+      "layer": 3,
+      "parent": "hp18",
+      "label": "antes do primeiro PC",
+      "question": "Onde ele usava computador antes do primeiro PC?",
+      "variants": [
+        "pc da tia",
+        "lan house"
+      ],
+      "answer": "No PC da tia ou em lan house. O primeiro computador próprio só veio aos 15 anos."
+    },
+    {
+      "id": "hp29",
+      "layer": 3,
+      "parent": "hp19",
+      "label": "o tempo na Friends",
+      "question": "Quanto tempo ele ficou na Friends?",
+      "variants": [
+        "duração do primeiro emprego",
+        "friends 2004 2008"
+      ],
+      "answer": "De 2004 a 2008, começando como estagiário e virando instrutor de informática."
+    },
+    {
+      "id": "hp30",
+      "layer": 3,
+      "parent": "hp20",
+      "label": "os trabalhos desse período",
+      "question": "Quais foram esses trabalhos fora da área?",
+      "variants": [
+        "empregos de 2009 a 2013",
+        "onde trabalhou nesse tempo"
+      ],
+      "answer": "Estágio na Dokas 1.99 (loja de utilidades), guichê da Oi Atende, alguns meses na Porto Seguro Consórcio, aulas em duas escolas de informática e a sociedade na loja de informática."
+    },
+    {
+      "id": "hp31",
+      "layer": 3,
+      "parent": "hp21",
+      "label": "as sessões de teste de modelos",
+      "question": "Quantas horas ele passava testando modelos?",
+      "variants": [
+        "sessões de 20 horas",
+        "intensidade dos testes"
+      ],
+      "answer": "Sessões que varavam madrugada e se estendiam por semanas, às vezes mais de 20 horas contínuas. O objetivo não era relatório: era entender na prática o comportamento de cada modelo.",
+      "facet": "virada"
+    },
+    {
+      "id": "hp32",
+      "layer": 3,
+      "parent": "hp22",
+      "label": "o efeito do diagnóstico",
+      "question": "O que mudou com o diagnóstico?",
+      "variants": [
+        "depois do diagnóstico",
+        "diagnóstico e estudo"
+      ],
+      "answer": "Ele parou de se culpar e passou a estudar do jeito que funciona: ritmo próprio, aplicação prática e foco direcionado. Quando entendeu como a cabeça funciona, o trilho apareceu.",
+      "facet": "tentativas"
+    },
+    {
+      "id": "hp33",
+      "layer": 3,
+      "parent": "hp23",
+      "label": "os jogos descobertos no caminho",
+      "question": "Quais jogos ele descobriu no caminho?",
+      "variants": [
+        "age of empires ii",
+        "caesar iii"
+      ],
+      "answer": "Age of Empires II, que ele considera o melhor da saga, e Caesar III, caos controlado e um dos favoritos até hoje."
+    },
+    {
+      "id": "hp34",
+      "layer": 3,
+      "parent": "hp24",
+      "label": "o que aprendeu traduzindo",
+      "question": "O que ele aprendeu traduzindo jogos?",
+      "variants": [
+        "habilidades da tradução",
+        "aprendizado técnico da tradução"
+      ],
+      "answer": "A editar arquivo de tradução, mexer na estrutura interna do jogo, instalar emulador e resolver conflito de ROM. Engenharia reversa por curiosidade."
+    },
+    {
+      "id": "hp35",
+      "layer": 3,
+      "parent": "hp25",
+      "label": "isso era programação",
+      "question": "Isso já era programação?",
+      "variants": [
+        "scripts contam como código",
+        "programava sem saber"
+      ],
+      "answer": "Na prática, sim. Ele só entendeu depois que aquilo era, de fato, programar: lógica, automação e teste na raça."
+    },
+    {
+      "id": "hp36",
+      "layer": 4,
+      "parent": "hp26",
+      "label": "o que fazia na Bella Arte",
+      "question": "O que ele fazia na Bella Arte no dia a dia?",
+      "variants": [
+        "rotina na bella arte",
+        "função na indústria"
+      ],
+      "answer": "Vetorização, modelagem de encaixe e preparação de arquivo para corte a laser CNC, manutenção das máquinas e participação no planejamento logístico e financeiro do setor."
+    },
+    {
+      "id": "hp37",
+      "layer": 4,
+      "parent": "hp27",
+      "label": "os jogos modificados",
+      "question": "Quais jogos ele modificou?",
+      "variants": [
+        "mods que fez",
+        "age of empires e counter strike"
+      ],
+      "answer": "Age of Empires II, com uma civilização holandesa completa, e Counter-Strike 1.6, com menu refeito, personagens, skins e dois mapas construídos no Hammer."
+    },
+    {
+      "id": "hp38",
+      "layer": 4,
+      "parent": "hp28",
+      "label": "a origem simples",
+      "question": "Ele vem de família simples?",
+      "variants": [
+        "origem humilde",
+        "condição financeira na infância"
+      ],
+      "answer": "Sim. Ele diz que veio de família pobre e que isso nunca foi desculpa, foi só o cenário."
+    },
+    {
+      "id": "hp39",
+      "layer": 4,
+      "parent": "hp29",
+      "label": "o que aprendeu na Friends",
+      "question": "O que ele aprendeu na Friends?",
+      "variants": [
+        "aprendizado do primeiro emprego",
+        "valor da friends"
+      ],
+      "answer": "Informática de verdade e o valor do trabalho com tecnologia na prática. Fez lá os cursos de Lógica de Programação e de Montagem e Manutenção que o levaram a ser instrutor."
+    },
+    {
+      "id": "hp40",
+      "layer": 4,
+      "parent": "hp30",
+      "label": "a Dokas 1.99",
+      "question": "O que foi a Dokas 1.99?",
+      "variants": [
+        "estágio na dokas",
+        "loja de utilidades"
+      ],
+      "answer": "Uma loja de utilidades estilo loja chinesa, onde ele estagiou em 2009. Trabalho de loja, mas ele ficava de olho no sistema e ajudava em problema interno de máquina e software."
+    },
+    {
+      "id": "hp41",
+      "layer": 4,
+      "parent": "hp31",
+      "label": "o objetivo dos testes",
+      "question": "Qual era o objetivo desses testes de IA?",
+      "variants": [
+        "por que testar tantos modelos",
+        "finalidade dos testes"
+      ],
+      "answer": "Entender os limites, a profundidade e o comportamento real de cada modelo. Sem catálogo, mas com a intuição treinada de centenas de horas.",
+      "facet": "virada"
+    },
+    {
+      "id": "hp42",
+      "layer": 4,
+      "parent": "hp32",
+      "label": "a culpa antes do diagnóstico",
+      "question": "Ele se culpava antes do diagnóstico?",
+      "variants": [
+        "sentimento antes de entender",
+        "como ele se via"
+      ],
+      "answer": "Sim. Durante anos achou que o problema era ele. Depois do diagnóstico parou de se culpar e entendeu que era falta de encaixe, não de capacidade.",
+      "facet": "tentativas"
+    },
+    {
+      "id": "hp43",
+      "layer": 4,
+      "parent": "hp33",
+      "label": "o jogo favorito",
+      "question": "Qual é o jogo favorito dele?",
+      "variants": [
+        "jogo preferido",
+        "de que jogo ele gosta"
+      ],
+      "answer": "Age of Empires II é o que ele chama de melhor da saga; Caesar III é um dos favoritos até hoje."
+    },
+    {
+      "id": "hp44",
+      "layer": 4,
+      "parent": "hp34",
+      "label": "emuladores",
+      "question": "Ele mexia com emuladores?",
+      "variants": [
+        "emulação de jogos",
+        "rom e emulador"
+      ],
+      "answer": "Sim: instalava emulador, resolvia conflito de ROM e adaptava jogo antigo para rodar em sistema novo."
+    },
+    {
+      "id": "hp45",
+      "layer": 4,
+      "parent": "hp35",
+      "label": "ajustes no Windows",
+      "question": "Ele ajustava o Windows por dentro?",
+      "variants": [
+        "regedit",
+        "configuração avançada do windows"
+      ],
+      "answer": "Sim, pelo Regedit e por scripts .bat, muito antes dos instaladores modernos. Também montou planilhas inteligentes no Excel com fórmula condicional e macro."
+    },
+    {
+      "id": "hp46",
+      "layer": 5,
+      "parent": "hp37",
+      "label": "a civilização do Age of Empires",
+      "question": "O que tinha a civilização que ele criou?",
+      "variants": [
+        "civilização holandesa",
+        "detalhes do mod"
+      ],
+      "answer": "Uma civilização holandesa completa, com construções no estilo de casas baianas e unidades refeitas. Customização total, feita na mão."
+    },
+    {
+      "id": "hp47",
+      "layer": 5,
+      "parent": "hp38",
+      "label": "origem como desculpa",
+      "question": "A origem foi obstáculo ou desculpa?",
+      "variants": [
+        "ele usa a origem como justificativa",
+        "postura sobre a origem"
+      ],
+      "answer": "Nas palavras dele: nunca foi desculpa, foi só o cenário. Ele credita a persistência e o fórum, não a sorte."
+    },
+    {
+      "id": "hp48",
+      "layer": 5,
+      "parent": "hp40",
+      "label": "o que a Dokas vendia",
+      "question": "O que a Dokas vendia?",
+      "variants": [
+        "produtos da dokas",
+        "tipo de loja"
+      ],
+      "answer": "Doces, decoração de festa, ferramentas, vasilhas e material escolar. Era um estágio fora da área, mas ele seguiu de olho no sistema e nas máquinas."
+    },
+    {
+      "id": "hp49",
+      "layer": 5,
+      "parent": "hp41",
+      "label": "a base do trabalho atual",
+      "question": "Esses testes viraram base do que ele faz hoje?",
+      "variants": [
+        "efeito dos testes",
+        "o que ficou dos testes"
+      ],
+      "answer": "Sim: orquestração de agentes, arquitetura RAG e diagnóstico de comportamento de modelo, aplicados em portfólio próprio com deploy público. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "virada"
+    },
+    {
+      "id": "hp50",
+      "layer": 5,
+      "parent": "hp44",
+      "label": "conflito de ROM",
+      "question": "Ele resolvia conflito de ROM?",
+      "variants": [
+        "problemas de emulação",
+        "rom que não rodava"
+      ],
+      "answer": "Sim, era parte da engenharia reversa por curiosidade: descobrir como o formato funciona por dentro e fazer rodar."
+    }
+  ]
+}

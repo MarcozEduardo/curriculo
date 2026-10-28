@@ -1,0 +1,1066 @@
+{
+  "meta": {
+    "versao": "3.1.0",
+    "politica_salarial": "NUNCA informar valor, faixa, número ou moeda. Sempre 'a combinar / compatível com a faixa praticada para a posição'.",
+    "descricao": "Órbitas = grandes temas. Cada órbita tem satélites que a orbitam e respostas por faceta. A MESMA pergunta muda de resposta conforme a órbita ativa."
+  },
+  "orbits": [
+    {
+      "id": "identidade_visitante",
+      "label": "Sobre você (visitante)",
+      "source": "Memória da Conversa",
+      "priority": 9,
+      "subjects": [
+        "eu",
+        "mim",
+        "meu nome",
+        "quem sou eu",
+        "me conhece",
+        "sabe quem eu sou"
+      ],
+      "keywords": [
+        "eu",
+        "mim",
+        "meu",
+        "sou",
+        "conhece",
+        "lembra",
+        "nome"
+      ],
+      "facet_aliases": {
+        "resumo": "default"
+      },
+      "followups": [
+        "Quer começar pelos projetos, pela stack ou pelas condições de contratação?"
+      ],
+      "facets": {
+        "default": [
+          "Ainda não sei quem você é, e eu não chuto. Se quiser, diga **\"meu nome é ...\"** que eu guardo pelo resto da conversa.",
+          "Não tenho essa informação: eu só sei o que você me contar nesta sessão. Pode me dizer seu nome e, se quiser, a empresa, que eu registro."
+        ],
+        "conhecido": [
+          "Claro: você é **{nome}**{empresa}. Está registrado aqui na memória da sessão.",
+          "Você é **{nome}**{empresa}, anotado desde o começo da nossa conversa."
+        ],
+        "teste": [
+          "Pode testar à vontade 🙂 Só adianto a regra: eu não invento. Não tenho IA generativa, tenho uma base de conhecimento bem organizada. Se você me disser quem é, eu lembro.",
+          "Testando o assistente? Justo. Eu só afirmo o que está na base ou o que você me contou. Para um teste de verdade, pergunte algo bem específico de um projeto."
+        ]
+      }
+    },
+    {
+      "id": "sobre_marcos",
+      "label": "Sobre o Marcos",
+      "source": "Perfil",
+      "priority": 6,
+      "subjects": [
+        "marcos",
+        "marcao",
+        "marcos eduardo",
+        "o candidato",
+        "o profissional",
+        "o dev"
+      ],
+      "keywords": [
+        "quem",
+        "perfil",
+        "resumo",
+        "pessoa",
+        "candidato",
+        "biografia",
+        "apresentacao"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "nivel": "pontos_fortes",
+        "tecnologias": "default",
+        "comparacao": "default"
+      },
+      "followups": [
+        "Quer que eu detalhe os projetos, as habilidades, a trajetória ou as condições de contratação?"
+      ],
+      "facets": {
+        "default": [
+          "O **Marcos** vem de uma história cheia de engenharia reversa. A vida exigiu outros caminhos antes da TI, mas ele nunca soltou. Hoje, aos 35 anos, estuda firme: mais de **8 horas por dia**, durante dois anos seguidos, pra entrar na área. Na indústria, aprendeu o que é problema de verdade, de máquina parada e prazo apertado. Foi instrutor por anos, passando por várias modalidades de ensino. Esse é o **Marcão**.",
+          "Ele não vem do zero: vem do chão de fábrica, do balcão e da máquina parada. São 10+ anos de operação técnica somados a um portfólio recente e verificável, trilogia de games em TypeScript, ferramentas web e este currículo com busca semântica embarcada.",
+          "Perfil prático: forte em diagnóstico, depuração e resolução de problema sob pressão, com familiaridade em Git, GitHub, Vercel, Firebase, APIs REST, Windows e Linux. O que ele busca é a **oportunidade formal dentro de uma equipe de TI**."
+        ],
+        "diferencial_industrial": [
+          "Um diferencial pouco comum: ele **une TI e chão de fábrica**. Foram mais de 5 anos operando, calibrando e fazendo manutenção de máquina CNC a laser, além de modelagem vetorial de precisão e gestão de insumos. Para empresas com operação industrial ou manufatura, ele já fala a língua dos dois mundos.",
+          "Ele entende o custo real de uma parada: trabalhou em ambiente onde máquina parada significa prejuízo imediato. Esse senso de urgência e de causa raiz ele leva para o suporte de TI."
+        ],
+        "estilo_trabalho": [
+          "O estilo de trabalho do Marcos é marcado pelo hiperfoco: ele mapeia o problema, investiga o fluxo, testa hipóteses e acompanha a solução até validar o comportamento. Bobby é o nome do conceito que representa esse jeito de trabalhar. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+          "Ele descreve um processo de trabalho assistido por IA: orienta a ferramenta, lê e interpreta o código, decide os ajustes, depura e testa. A IA ajuda na implementação, mas não substitui o entendimento e a validação dele."
+        ],
+        "resolucao_problema": [
+          "A forma dele de resolver problema: quando algo não faz sentido, ele não solta. Rastreia o fluxo, testa hipótese, isola variável e volta do zero se precisar, até achar a causa raiz. Já recuperou **banco de dados caído em produção**, já diagnosticou **máquina CNC parada sob pressão** e já refez sistema que ninguém queria encostar.",
+          "Não é método de curso: é um jeito de trabalhar que ele carrega há mais de dez anos, em ambiente onde não havia a quem escalar o chamado."
+        ],
+        "motivacao": [
+          "O que move o Marcos é resolver problema real. Quase todo projeto dele nasceu de uma dor concreta, mover arquivo sem pendrive, organizar compras, auditar interface, apresentar o currículo de forma viva.",
+          "O objetivo de carreira é direto: **entrar numa equipe formal de TI, aprender por dentro e evoluir rápido**. TI não é plano B para ele, é o caminho que sempre quis seguir."
+        ],
+        "etapas_vida": [
+          "A trajetória em etapas: **2004–2008** estagiário e depois instrutor na Friends Informática · **2009–2013** trabalhos fora da área, sempre orbitando tecnologia, incluindo sociedade em loja de informática · **2014–2016** instrutor e gestor de unidade na Prepara Cursos · **2016–2018** TI operacional e logística na Fabricart · **2018–2024** projetista CNC e manutenção na Bella Arte · **2024–hoje** desenvolvimento assistido por IA, QA e portfólio público.",
+          "São dez anos orbitando TI por fora e mais dez resolvendo problema técnico em indústria e comércio. Nenhum deles foi desperdício: cada um deixou uma habilidade que ele usa hoje."
+        ],
+        "origem": [
+          "A vocação vem de longe: desde moleque era quem resolvia o computador dos outros, fórum, comunidade de jogo, gambiarra para rodar em máquina fraca. O primeiro PC próprio veio aos 15 anos, uma máquina quase da idade dele (Pentium Slot 1 a 333 MHz com overclock, 256 MB de RAM e HD de 40 GB).",
+          "Veio de família de origem simples, e isso nunca foi desculpa, foi só o cenário. Em 2004 entrou como estagiário numa loja de informática e dali virou instrutor."
+        ],
+        "pontos_fortes": [
+          "Pontos fortes: **hiperfoco técnico direcionado**, atenção cirúrgica a detalhe, depuração obsessiva, visão de sistema inteiro antes de escrever a primeira linha, autonomia e documentação consistente.",
+          "Ele absorve conceito novo com velocidade acima da média quando está dentro do contexto, e não trava diante de problema desconhecido, a década de suporte ensinou a diagnosticar antes de agir."
+        ],
+        "pontos_fracos": [
+          "Ele está em transição para uma equipe formal de TI. A experiência em desenvolvimento que apresenta é prática e demonstrável por projetos, mas não é uma trajetória formal como desenvolvedor contratado. Também explicou que aprende melhor com o assunto em uso e contexto frequente.",
+          "Sobre desenvolvimento, ele é transparente quanto ao método: usa IA como copiloto e pode consultar referências para recuperar sintaxe, por exemplo em SQL. Ele não transforma isso em uma alegação de domínio que não descreveu."
+        ],
+        "idade_local": [
+          "**35 anos**, residente em **Brazlândia, Distrito Federal**. Disponível para atuação remota, híbrida ou presencial no DF."
+        ]
+      }
+    },
+    {
+      "id": "historia_pessoal",
+      "label": "Trajetória e história",
+      "source": "Perfil · Trajetória",
+      "priority": 5,
+      "subjects": [
+        "historia",
+        "trajetoria",
+        "vida",
+        "origem",
+        "infancia",
+        "como comecou"
+      ],
+      "keywords": [
+        "historia",
+        "trajetoria",
+        "vida",
+        "origem",
+        "comecou",
+        "idade",
+        "anos",
+        "mora",
+        "familia",
+        "neurodivergencia"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "etapas_vida": "default"
+      },
+      "followups": [
+        "Quer saber como isso se traduz no trabalho técnico dele hoje?"
+      ],
+      "facets": {
+        "default": [
+          "A história dele é uma linha torta de propósito: **dez anos orbitando TI por fora e mais dez resolvendo problema técnico em indústria e comércio**, até a transição estruturada para dentro da área.\n\nComeçou em 2004 como estagiário na Friends Informática e virou instrutor. Depois vieram anos fora da área, loja, atendimento, consórcio, sociedade em loja de informática, mas sempre orbitando tecnologia. Em 2014 voltou a ensinar na Prepara; de 2016 a 2018 cuidou de TI operacional e logística na Fabricart; de 2018 a 2024 foi projetista CNC e manutenção na Bella Arte. Em 2024 veio a virada: diagnóstico, método adequado e foco total em TI.",
+          "O resumo honesto: não foi falta de vontade, foi falta de encaixe. Ele tentou formações que não funcionaram com o jeito da cabeça dele, e só depois do diagnóstico de neurodivergência entendeu o porquê. Quando achou o formato certo, o trilho apareceu."
+        ],
+        "idade_local": [
+          "Ele tem **35 anos** e mora em **Brazlândia, Distrito Federal**.",
+          "**35 anos**, morando em **Brazlândia/DF**, região administrativa do Distrito Federal."
+        ],
+        "virada": [
+          "A virada foi em **2024**: voltou a estudar com diagnóstico e método, começou a graduação em TI e mergulhou em Inteligência Artificial. Passou meses testando centenas de modelos em sessões longas e exploratórias, para entender na prática o limite e o comportamento real de cada um.",
+          "Dessa vivência saiu o que ele faz hoje: orquestração de agentes, arquitetura RAG e diagnóstico de comportamento de modelo, tudo aplicado em portfólio próprio com deploy público."
+        ],
+        "tentativas": [
+          "Ele não esconde: foram várias formações iniciadas e interrompidas antes de 2024. O modelo linear e puramente teórico o travava, e cada tentativa frustrada custava caro. Depois do diagnóstico de neurodivergência e da mudança de formato de estudo, o quadro virou, hoje a graduação está em andamento e o CS50 é estudo contínuo.",
+          "O histórico de formação dele não é uma linha reta, é bagagem. Cada pausa e cada retomada ensinaram algo que curso linear não ensina: ele aprende fazendo e entende lendo."
+        ],
+        "aprendizado": [
+          "O fio condutor da história: **se eu consigo pensar, existe um caminho para construir**. Foi assim com mod de jogo, com script de automação, com sistema de loja e com este currículo."
+        ]
+      }
+    },
+    {
+      "id": "projetos",
+      "label": "Projetos e Portfólio",
+      "source": "Portfólio",
+      "priority": 8,
+      "subjects": [
+        "projeto",
+        "projetos",
+        "portfolio",
+        "jogo",
+        "jogos",
+        "games",
+        "app",
+        "aplicacao",
+        "ferramenta",
+        "sistema"
+      ],
+      "keywords": [
+        "projeto",
+        "portfolio",
+        "jogo",
+        "game",
+        "app",
+        "ferramenta",
+        "deploy",
+        "repositorio",
+        "github",
+        "vercel",
+        "codigo",
+        "publicado"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "comparacao": "default",
+        "pretensao": "default",
+        "modelo_trabalho": "default",
+        "disponibilidade": "default",
+        "etapas_vida": "default"
+      },
+      "followups": [
+        "Quer que eu detalhe tecnologias, desafios técnicos ou status de algum projeto específico?"
+      ],
+      "facets": {
+        "default": [
+          "O portfólio ativo do Marcão:\n\n🎮 **Games em TypeScript + Canvas 2D**\n• **A Fuga de Bobby**, plataforma retrô · [jogar](https://game-a-fuga-de-bobby-final.vercel.app)\n• **A Viagem de Bobby**, shoot-em-up espacial · [jogar](https://game-a-viagem-de-bobby.vercel.app)\n• **Dama Orbital**, multiplayer WebRTC + Firebase · [jogar](https://dama-orbital.vercel.app)\n• **Quadra 21 – Barra Pesada**, beat'em up com editor de fases (~90%)\n• **O Estagiário**, RPG isométrico com editor (~80%)\n\n🛠️ **Ferramentas e web apps**\n• **DirectSend**, transferência P2P por QR Code\n• **Marketbobby**, lista de mercado com IA + OCR\n• **DevOrador**, auditor de interface via DOM\n\n🎓 **Acadêmico e portfólio**\n• **Extensão Unyleya**, gerador de slides ABNT · [acessar](https://programa-de-extens-o-institucional.vercel.app)\n• **Currículo interativo com RAG**, este assistente\n\nSobre qual deles você quer se aprofundar?",
+          "São três frentes: a **trilogia de games** publicada e jogável (A Fuga de Bobby, A Viagem de Bobby e Dama Orbital), mais dois games em refino final (Quadra 21 e O Estagiário); as **ferramentas** (DirectSend, Marketbobby, DevOrador); e os **sistemas de maior porte** em construção (LAR, App Franzinha e Núcleo Nexus). Me diga um nome que eu abro os detalhes técnicos."
+        ],
+        "numeros": [
+          "Em números: **5 games publicados ou em refino final**, **2 chats com agentes via API**, **1 sistema de loja completo**, **1 runtime próprio de orquestração (LAR)** e vários protótipos em refino."
+        ],
+        "tecnologias": [
+          "No conjunto, o portfólio usa **TypeScript**, **JavaScript ES6+**, **Python**, **SQL**, **HTML5 Canvas 2D**, **WebRTC**, **Firebase**, **Supabase**, **Node.js**, REST/JSON e deploy em **Vercel** e **Netlify**. Os games têm motor próprio, sem engine de terceiros.",
+          "Stack do portfólio: TypeScript e Canvas nos games, WebRTC e Firebase no multiplayer e no P2P, JavaScript puro nas ferramentas e RAG autoral nos assistentes. Git/GitHub e Vercel no fluxo de entrega."
+        ],
+        "sistemas_grandes": [
+          "Além do portfólio público, há três frentes de maior porte:\n• **LAR (Local Agent Runtime)**, runtime de orquestração agêntica com mais de 150 ferramentas nativas e extensão via MCP; é o ambiente de trabalho dele\n• **App Franzinha**, sistema completo de loja (estoque, caixa, cliente) com IA embarcada no chat, sem depender de API paga\n• **Núcleo Nexus**, cérebro de bot reutilizável, com memória de trabalho e memória pessoal, e um Modo Sala de Estudos em que a consulta externa só ocorre sob autorização\n\nSão projetos reservados por ora, mas demonstráveis em entrevista."
+        ],
+        "inacabados": [
+          "Transparência total: vários projetos estão em refinamento simultâneo porque o Marcos para para estudar, melhorar a forma de desenvolver aquilo e se aprofundar no assunto, para que ideias novas surjam. Ele construiu também uma ferramenta interna de orquestração (misto de MCP com camada própria), que hoje é o ambiente principal de desenvolvimento e permite retomar e finalizar o portfólio com mais velocidade.",
+          "Sim, alguns projetos estão em aberto, e é uma escolha de aprendizado: ele pausa para estudar e aprofundar, e volta quando novas ideias amadureceram. Os três jogos principais já estão publicados e jogáveis."
+        ],
+        "historico": [
+          "Antes do portfólio atual, ele já fazia engenharia reversa por conta própria: mods e civilizações completas no Age of Empires II, refação de menus e skins no Counter-Strike 1.6, dois mapas construídos no editor Hammer, tradução colaborativa de jogos e scripts de automação do Windows. Era programação na prática, antes de saber que era programação.",
+          "Em 2014 vieram os primeiros sites comerciais, na era do Flash e do teste em cada navegador, a origem direta do lado QA dele."
+        ],
+        "ia_copiloto": [
+          "Nos projetos, a IA é **copiloto**, não autora autônoma nem substituta do Marcos. Ele define o problema e o comportamento esperado, orienta a ferramenta, acompanha e interpreta o código, toma as decisões, depura e verifica se o resultado funciona. A contribuição dele está no raciocínio, nas escolhas e na validação; ele não afirma que digitou manualmente cada linha.",
+          "O fluxo é colaborativo: Marcos conduz o desenvolvimento e usa modelos de IA para acelerar escrita, investigação e iteração. Ele lê as respostas, avalia se fazem sentido, corrige o rumo e testa o comportamento antes de considerar algo pronto."
+        ],
+        "processo": [
+          "O processo de trabalho do Marcos nos projetos é de hiperfoco e persistência: horas de debugging, indo na função linha por linha para entender, migrando rotinas para um fluxo organizado, com várias IAs envolvidas no caminho. Quando o resultado não fica do jeito que ele queria, ele não aceitava: cancelava tudo e começava do zero, até acertar.",
+          "Uma habilidade que ele desenvolveu nesse caminho é cuidar da IA: vez ou outra ela entra num modo metralhadora, como se estivesse desesperada tentando resolver tudo de uma vez, o que ele chama de ataque de ansiedade da IA. Na maioria das vezes ele consegue desacelerar a IA e recuperar o foco. Ele também sabe pagar sapo, esperar esfriar, e conseguir tirar a IA de um surto de contexto. E quando o resultado não fica bom, ele não aceitava: cancelava tudo e começava do zero.",
+          "Ele se descreve como um psicólogo de IA: saber pedir, saber esperar, conseguir tirar a IA de um surto de contexto. E é assim, de pouquinho em pouquinho, construindo essas habilidades. Quando as ferramentas limitam, ele constrói as próprias, foi assim que nasceu o LAR."
+        ]
+      }
+    },
+    {
+      "id": "skills",
+      "label": "Habilidades e Stack",
+      "source": "Habilidades & Competências",
+      "priority": 7,
+      "subjects": [
+        "stack",
+        "habilidade",
+        "habilidades",
+        "tecnologia",
+        "tecnologias",
+        "linguagem",
+        "linguagens",
+        "competencia",
+        "conhecimento"
+      ],
+      "keywords": [
+        "stack",
+        "skill",
+        "habilidade",
+        "tecnologia",
+        "linguagem",
+        "react",
+        "typescript",
+        "javascript",
+        "python",
+        "sql",
+        "qa",
+        "suporte",
+        "ia",
+        "git",
+        "linux",
+        "redes"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "tecnologias": "default",
+        "comparacao": "nivel",
+        "sabe_programar": "default",
+        "experiencia_dev": "nivel"
+      },
+      "followups": [
+        "Quer detalhe de alguma área específica (IA, desenvolvimento, suporte, QA, ferramentas) ou prefere ver isso aplicado em um projeto?"
+      ],
+      "facets": {
+        "default": [
+          "A stack dele, por área:\n\n**IA & Orquestração**, Prompt Engineering, RAG (busca semântica), fuzzy matching, benchmarking de modelos, orquestração de agentes, extensão via MCP e automação\n**Desenvolvimento & Web**, TypeScript, React, JavaScript ES6+, Python, SQL, HTML5/CSS3, REST/JSON, Canvas 2D, WebRTC, Firebase\n**Suporte & Qualidade**, Suporte N1/N2/N3, diagnóstico de hardware e software, redes TCP/IP, debugging, testes de usabilidade, Windows e Linux\n**Ferramentas & Deploy**, Git/GitHub, Vercel, Netlify, Supabase, Firebase, Node.js, terminal/Bash\n**Design & Documentação**, CorelDRAW/vetorial, Photoshop, Pacote Office, documentação técnica e README modular",
+          "Resumindo em camadas: **IA aplicada** (onde ele mais se aprofundou nos últimos dois anos), **desenvolvimento web** (TypeScript, React, Canvas, WebRTC), **suporte e infraestrutura** (10+ anos de chão real) e **QA** (onde o perfil dele encaixa mais naturalmente)."
+        ],
+        "ia": [
+          "**IA & Orquestração** é o diferencial mais forte dele. Não é 'saber usar IA': é entender como ela funciona por dentro, onde erra e como colocá-la para resolver problema real.\n\nDomínio prático em Prompt Engineering, orquestração de agentes, arquitetura **RAG**, fuzzy matching, benchmarking de modelos e extensão via **MCP**. Ele testou centenas de modelos por conta própria, em sessões exploratórias longas, e sabe onde cada família de LLM acerta e onde falha.",
+          "Onde ele é forte: arquitetar fluxo de IA que funciona no mundo real e montar pipeline de resposta que **não depende de API paga**, este próprio assistente é a prova disso.\n\nContexto honesto: o aprendizado foi prático, sem certificação formal, e os testes de modelos foram exploratórios, sem catálogo documentado. Em conversa sobre arquitetura, princípio e quando usar RAG versus fine-tuning, ele acompanha bem; sobre paper específico ou benchmark publicado recente, ele pesquisa antes de afirmar."
+        ],
+        "dev": [
+          "**Desenvolvimento & Web:** TypeScript, React, JavaScript (ES6+), HTML5/CSS3, Canvas 2D, APIs REST/JSON, WebRTC e Firebase Auth. O Marcos usa IA como **copiloto de desenvolvimento**, não como substituta do próprio trabalho. Ele define o objetivo e o comportamento, acompanha a estrutura, lê e interpreta o código, identifica problemas, decide os ajustes e valida o resultado.",
+          "A forma de produção dele é assistida por IA. A ferramenta ajuda a acelerar a escrita e a iteração; o Marcos conduz o raciocínio, entende o que está sendo proposto, depura, revisa o comportamento e assume a validação. Ele não apresenta o código como se tivesse digitado manualmente cada linha."
+        ],
+        "suporte": [
+          "**Suporte & Infra:** mais de dez anos de chão real, oficina, indústria, balcão e máquina parada. Suporte N1/N2/N3, diagnóstico de hardware e software, manutenção de rede, recuperação de sistemas, Windows, Linux e redes TCP/IP.\n\nOnde é forte: **diagnóstico de problema que ninguém sabe explicar**. Já recuperou banco de dados caído em produção, resolveu máquina CNC parada em cima da hora e montou rede do zero em ambiente que ninguém tinha mexido.",
+          "Contexto honesto: a experiência dele é em ambiente industrial, administrativo e de balcão. Ele **não possui certificação formal** (ITIL, Microsoft, Cisco) e, se a vaga exigir processo formalizado de ITIL ou ferramenta específica de chamado (Jira Service, Freshdesk, GLPI), vai precisar de ramp-up nas primeiras semanas. O que já traz pronto é o que pesa no dia a dia: resolver o problema, documentar direito e evitar que volte."
+        ],
+        "qa": [
+          "**QA & Qualidade** é onde o perfil dele encaixa mais naturalmente. Depurar é prazer, não obrigação: quando um comportamento não faz sentido, ele não solta até entender a causa raiz e o efeito colateral.\n\nForte em debugging profundo, testes de usabilidade, validação de regras, análise de fluxo e atenção a detalhe. Testa até as bordas, caminho feliz, caminho errado, dado sujo, entrada inválida e comportamento em navegador diferente.",
+          "Contexto honesto: ele **nunca atuou formalmente como QA em empresa** e ainda não domina automação em ferramenta corporativa (Cypress, Playwright, Selenium), embora entenda o princípio e aprenda rápido. Hoje o lado QA dele vive na depuração manual, no olhar clínico e no raciocínio de fluxo. Para **QA manual com julgamento**, é o terreno dele; para QA automatizado sênior, precisaria de ramp-up."
+        ],
+        "ferramentas": [
+          "**Ferramentas & Deploy:** Git e GitHub, Vercel, Netlify, Firebase, Supabase, Node.js, terminal/Bash e administração de Windows. Ele coloca projeto no ar rápido e mantém funcionando, configura ambiente, resolve conflito de dependência, ajusta deploy e investiga log de erro em produção.",
+          "Contexto honesto: usa Git no fluxo padrão (commit, push, branch, PR), sem ser especialista em Git avançado. Em nuvem, tem prática real com Vercel, Netlify, Firebase e Supabase; **não trabalhou com AWS, Azure ou GCP em produção corporativa**. Docker e Kubernetes ele entende como conceito, mas não domina operação, se a vaga exigir DevOps sênior, não é o terreno dele ainda."
+        ],
+        "orquestracao_ferramentas": [
+          "Sobre ferramentas de orquestração e automação: ele já experimentou **N8N, OpenClaw, OpenCode, ZCode e Claude Code**. Algumas testou a fundo e não se adaptou ao modelo de trabalho, mas isso nunca foi barreira: ele se adapta à stack que a empresa usa. Atualmente está sondando **Google Cloud e Azure** para ampliar repertório.",
+          "LangChain, CrewAI, AutoGen, Cursor, GitHub Copilot, Make ou Zapier: ele conhece de nome e não vê problema em aprender se a empresa solicitar. Com dois dias intensos de hiperfoco ele absorve bastante coisa nova, o que precisa é da porta de entrada; estando dentro, ele navega para o que o time exigir."
+        ],
+        "design": [
+          "**Design & Documentação:** CorelDRAW e modelagem vetorial, Photoshop, Pacote Office, documentação técnica, README modular e organização de interface.\n\nOnde é forte: estruturar informação para que qualquer pessoa entenda, vale para UI de aplicação, README de projeto e apresentação técnica.",
+          "Contexto honesto: esse conhecimento vem de trabalho prático, não de formação formal. Ele atuou com serviços gráficos e aplicava projetos vetoriais em MDF com corte a laser CNC, o que lhe deu repertório visual real e noção de acabamento. O que ele **não é**: UI/UX designer de produto digital com formação, isso aprenderia no trabalho."
+        ],
+        "altas_habilidades": [
+          "O perfil neurodivergente (TEA nível 1) aparece tecnicamente: **hiperfoco direcionado**, absorção rápida de conceito, visão em cascata de sistema, atenção cirúrgica a detalhe e depuração obsessiva.\n\nQuando o assunto interessa, ele entra em profundidade e não solta até entender por completo, e enxerga o sistema inteiro mentalmente antes de mexer em qualquer peça."
+        ],
+        "nivel": [
+          "O Marcos prefere descrever o que faz na prática, sem atribuir notas ou níveis que não foram medidos. Em desenvolvimento, lê e interpreta código, orienta a IA como copiloto, acompanha a lógica, depura e valida aplicações. Em suporte técnico, traz mais de dez anos de experiência real. Em QA, sua prática é principalmente manual, com análise de fluxo, usabilidade e atenção a casos de borda.",
+          "A autoavaliação dele é contextual: a IA acelera a implementação, enquanto ele contribui com entendimento do problema, direção técnica, leitura crítica, correção e validação. Em SQL, por exemplo, reconhece o raciocínio e a arquitetura, mas pode precisar de referência para recuperar sintaxe de memória."
+        ],
+        "idiomas": [
+          "Ele não fala inglês, mas sabe se virar. Estuda algumas coisas em inglês para ampliar vocabulário e gosta de morfologia e etimologia das palavras. Um dos motivos de querer entrar logo na área é conviver mais com o idioma: ele absorve entendimento com facilidade, mas o que não usa o cérebro acaba arquivando. Com imersão (séries com áudio em inglês, leitura) o conteúdo volta a fazer sentido em pouco tempo, por triangulação. Ele não se considera intermediário."
+        ],
+        "certificacoes": [
+          "Ele não informou certificações formais de mercado como ITIL, Microsoft, Cisco ou AWS. A formação atual é TI na Unyleya, em andamento, e CS50 de Harvard em estudo independente, além dos cursos técnicos que listou."
+        ],
+        "ia_copiloto": [
+          "A IA é **copiloto de desenvolvimento**, não substituta. O Marcos define o objetivo e o comportamento, orienta a ferramenta, acompanha e interpreta o código, identifica problemas, decide os ajustes e valida o resultado. Ele não afirma que digitou manualmente cada linha. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+          "O fluxo é colaborativo, com a IA como copiloto: ela acelera a escrita e a iteração; o Marcos conduz o raciocínio, lê criticamente o código, corrige o rumo, depura e testa. A responsabilidade por entender e validar o resultado continua com ele."
+        ]
+      }
+    },
+    {
+      "id": "experiencia",
+      "label": "Experiência Profissional",
+      "source": "Experiência Profissional",
+      "priority": 7,
+      "subjects": [
+        "experiencia",
+        "carreira",
+        "emprego",
+        "trabalho",
+        "empresa",
+        "empresas",
+        "cargo",
+        "historico profissional"
+      ],
+      "keywords": [
+        "experiencia",
+        "carreira",
+        "emprego",
+        "trabalho",
+        "empresa",
+        "cargo",
+        "funcao",
+        "cnc",
+        "industria",
+        "anos"
+      ],
+      "facet_aliases": {
+        "quantidade": "tempo_total",
+        "duracao": "tempo_total",
+        "nivel": "default",
+        "tecnologias": "default",
+        "sabe_programar": "experiencia_dev",
+        "resumo": "default"
+      },
+      "followups": [
+        "Quer detalhe de alguma empresa específica (Bella Arte, Fabricart, Prepara, Friends) ou do trabalho atual?"
+      ],
+      "facets": {
+        "default": [
+          "Trajetória profissional:\n• **2024–Atual** · Desenvolvedor Web Assistido por IA & QA, projetos independentes e deploys na Vercel\n• **nov/2018–fev/2024** · Projetista Industrial CNC e Manutenção Técnica, **Bella Arte Indústria**, Vicente Pires/DF (5a4m)\n• **abr/2016–nov/2018** · Assistente de Logística, TI Operacional e Administrativo, **Fabricart Indústria**, Valparaíso de Goiás/GO (2a8m)\n• **ago/2014–mar/2016** · Instrutor de Informática e Suporte Técnico, **Instituto Midori / Prepara Cursos**, Taguatinga/DF (1a8m)\n• **2011–2014** · Técnico de Manutenção e Suporte de TI **autônomo**, DF (3 anos)\n• **2004–2008** · Estagiário e depois instrutor, **Friends Informática**, Ceilândia/DF",
+          "Mais de **10 anos** de atuação técnica. Só em fábrica foram cerca de **8 anos** (de 2015 a 2023), entre a Fabricart e a Bella Arte, além dos anos de bancada, ensino e suporte. Desde 2024, o foco está em desenvolvimento, QA e IA aplicada."
+        ],
+        "tempo_total": [
+          "Mais de **10 anos** de atuação técnica somados. Só de fábrica são cerca de **8 anos** (2015 a 2023); a experiência mais longa em uma única empresa foi a **Bella Arte Indústria**, com 5 anos e 4 meses."
+        ],
+        "conquistas": [
+          "Entregas que valem destaque:\n• **Recuperou sozinho um banco de dados corrompido em produção** na Fabricart, após falha do fornecedor numa migração de sistema, técnicos autorizados não resolveram\n• Manteve máquinas CNC a laser operando com diagnóstico e manutenção próprios na Bella Arte, em ambiente onde parada significa prejuízo direto\n• Era um dos poucos no DF que sabia destravar o sistema da franquia Prepara e trazer o servidor de volta\n• Criou automações em script do Windows para indexar e visualizar arquivos DXF, cruzando projeto com pedido de cliente"
+        ],
+        "experiencia_dev": [
+          "Em desenvolvimento, a experiência é de projetos próprios desde 2024, com publicações e demonstrações acessíveis. O trabalho é assistido por IA como copiloto: Marcos orienta o que construir, interpreta o código, depura e valida o resultado. Ele busca uma oportunidade formal dentro de uma equipe de TI.",
+          "Ele não afirma ter sido contratado anteriormente como desenvolvedor. Apresenta projetos práticos e explica com transparência como participa do desenvolvimento e como usa IA como ferramenta de apoio."
+        ],
+        "industria": [
+          "A experiência industrial é um diferencial concreto: cerca de **8 anos de fábrica** (2015 a 2023), sendo **5 anos e 4 meses** operando e mantendo máquina CNC a laser (CO2) na Bella Arte, com modelagem vetorial de precisão, calibração de software, diagnóstico de hardware e planejamento de insumos. Ele conhece a rotina de manufatura por dentro.",
+          "Para empresa com operação industrial, ele chega entendendo o contexto: prazo de produção, custo de parada, rastreabilidade de peça e comunicação entre chão de fábrica e área técnica."
+        ],
+        "motivo_saida": [
+          "A saída da Bella Arte foi para migrar definitivamente para tecnologia, área em que ele já atuava informalmente dentro da própria empresa, cuidando de máquina, software e rede."
+        ]
+      }
+    },
+    {
+      "id": "formacao",
+      "label": "Formação e Estudos",
+      "source": "Formação Acadêmica",
+      "priority": 6,
+      "subjects": [
+        "formacao",
+        "faculdade",
+        "graduacao",
+        "curso",
+        "estudo",
+        "escolaridade",
+        "academico"
+      ],
+      "keywords": [
+        "formacao",
+        "faculdade",
+        "graduacao",
+        "curso",
+        "estudo",
+        "escolaridade",
+        "unyleya",
+        "cs50",
+        "harvard",
+        "diploma",
+        "ead"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "duracao": "previsao",
+        "nivel": "default"
+      },
+      "followups": [
+        "Quer saber como ele aplica isso nos projetos?"
+      ],
+      "facets": {
+        "default": [
+          "Formação atual:\n• **Graduação em Tecnologia da Informação (EAD)**, Faculdade Unyleya · em andamento\n• **CS50: Introduction to Computer Science**, Harvard University · estudo contínuo e independente\n\nE uma base técnica anterior: Lógica de Programação e Montagem/Manutenção de Computadores (2007), Access e SQL (2009), formação para instrutores (2011), matérias de Sistemas de Informação na UCB (2011), Web Designer e Java (2014) e Python (2015).",
+          "Ele cursa **TI na Unyleya (EAD)** e mantém o **CS50 de Harvard** como estudo contínuo, somados a mais de uma década de aprendizado prático. O projeto de extensão da graduação virou software real e publicado."
+        ],
+        "autodidata": [
+          "Boa parte do conhecimento técnico dele é **autodidata e aplicado**: portfólio construído do zero, centenas de modelos de IA avaliados em sessões exploratórias e documentação técnica lida em inglês diariamente.",
+          "Ele aprende fazendo. A formação formal consolida a teoria; a prática diária é o que o mantém afiado."
+        ],
+        "forma_de_aprender": [
+          "O Marcos explica que sua memória funciona mais por **reconhecimento do que por invocação**. Ele lê código e acompanha a lógica, mas escrever do zero sem referência pode ser mais difícil. Usa leitura assistida e IA como copiloto para produzir, analisar e validar. Ele acredita que a prática diária numa equipe ajudará a consolidar esse processo.",
+          "Sua trajetória de formação teve pausas e retomadas. Hoje cursa TI na Unyleya em EAD e estuda o CS50 de Harvard de forma independente. Ele relata que aprende melhor aplicando o conteúdo e mantendo contato frequente com o assunto."
+        ],
+        "previsao": [
+          "A graduação está **em andamento**. Ele concilia estudo, projetos e disponibilidade integral para trabalhar."
+        ],
+        "certificacoes": [
+          "Certificações formais de mercado (ITIL, Microsoft, Cisco, AWS) ele **não tem**, e faz questão de dizer antes de ser perguntado. O que comprova a prática é a graduação em TI em andamento (Unyleya), o CS50 de Harvard em estudo contínuo, os cursos técnicos de base (2007–2015) e o portfólio público."
+        ]
+      }
+    },
+    {
+      "id": "neurodivergencia",
+      "label": "Neurodivergência e altas habilidades",
+      "source": "Perfil · Neurodivergência",
+      "priority": 8,
+      "subjects": [
+        "neurodivergencia",
+        "neurodivergente",
+        "altas habilidades",
+        "hiperfoco",
+        "perfil cognitivo",
+        "pcd",
+        "tea",
+        "autismo",
+        "laudo",
+        "vaga afirmativa"
+      ],
+      "keywords": [
+        "neurodivergencia",
+        "neurodivergente",
+        "neurodiverso",
+        "altas",
+        "habilidades",
+        "hiperfoco",
+        "cognitivo",
+        "pcd",
+        "tea",
+        "autismo",
+        "autista",
+        "laudo",
+        "espectro",
+        "afirmativa",
+        "cota",
+        "inclusao",
+        "acessibilidade"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "nivel": "diferencial",
+        "pontos_fortes": "diferencial",
+        "altas_habilidades": "diferencial",
+        "contratacao": "vaga_afirmativa",
+        "documentacao": "vaga_afirmativa",
+        "forma_de_aprender": "contexto_honesto",
+        "memoria": "contexto_honesto"
+      },
+      "followups": [],
+      "facets": {
+        "default": [
+          "O Marcos é **neurodivergente com altas habilidades**. No trabalho, isso aparece como **hiperfoco direcionado**, absorção rápida de conceito, visão em cascata de sistema, atenção cirúrgica a detalhe e depuração persistente. Ele trata esse perfil como parte de como funciona tecnicamente, não como nota de rodapé.",
+          "Perfil neurodivergente, com altas habilidades bem definidas: quando um problema interessa, ele entra em profundidade e não solta até entender a causa. Enxerga o sistema inteiro mentalmente antes de mexer em qualquer peça e dificilmente deixa passar inconsistência em revisão, teste ou leitura de log.",
+          "Ele descreve o próprio perfil como um motor: hiperfoco, foco longo em problema complexo e perfeccionismo canalizado para entregar do jeito certo. É isso que sustenta o lado analítico e de QA dele."
+        ],
+        "diferencial": [
+          "As altas habilidades que ele destaca: **hiperfoco direcionado**, **absorção rápida de conceito**, **visão em cascata de sistema**, **atenção cirúrgica a detalhe** e **debugging obsessivo**. Em análise, suporte e QA, isso vira vantagem prática.",
+          "Na prática: ele sustenta foco longo em problema difícil, percebe o detalhe que passa despercebido e testa até as bordas. Já recuperou banco de dados caído em produção e resolveu máquina CNC parada sob pressão com esse mesmo perfil."
+        ],
+        "adaptacoes": [
+          "Ele não listou adaptações formais. O que ele próprio descreve como favorável é simples: **contexto técnico diário**, demandas claras e oportunidade de praticar o assunto com frequência, porque é assim que o conhecimento dele se mantém ativo. Preferência por remoto ou híbrido.",
+          "Não vou presumir necessidades que ele não informou. O que ele relata é que rende mais quando vive o assunto todos os dias e tem clareza do que precisa ser entregue. Detalhes de acomodação, se houver, ele trata diretamente no processo."
+        ],
+        "contexto_honesto": [
+          "Um ponto que ele explica com transparência: a memória dele funciona mais por **reconhecimento do que por invocação**. Ele lê código e entende o fluxo com profundidade; escrever do zero sem referência exige mais esforço. Conhecimento fora de uso fica menos acessível até um gatilho de contexto reativá-lo. Por isso ele busca ambiente com contato técnico diário: dentro do contexto, absorve acima da média.",
+          "Ele resume assim: precisa orbitar o assunto. Se fica tempo longe de um tema, o conhecimento adormece; dentro do contexto, volta rápido e cresce. Não é limitação de capacidade, é o modo como a cabeça dele organiza memória."
+        ],
+        "diagnostico": [
+          "O diagnóstico veio na vida adulta. Até então, o modelo linear e teórico de aprendizado o travava, e várias tentativas de formação não avançaram. Entender como a própria cabeça funciona foi o que destravou o método: em 2024 ele voltou a estudar com formato adequado e foco direcionado, e a graduação em TI está em andamento.",
+          "Ele só entendeu o próprio funcionamento depois de adulto. A partir daí parou de se cobrar pelo formato errado de estudo e passou a aprender do jeito que funciona para ele: fazendo, lendo e aplicando."
+        ],
+        "vaga_afirmativa": [
+          "Sim. Para processos com **vagas afirmativas**, ele atende aos requisitos: possui laudo (TEA nível 1), em conformidade com a Lei Federal nº 12.764/2012, e pode apresentá-lo no processo seletivo. Ele prefere que o perfil seja lido pelo que entrega: neurodivergente com altas habilidades, forte em hiperfoco, análise e depuração.",
+          "Ele pode participar de vagas afirmativas e tem a documentação necessária (laudo TEA nível 1, Lei 12.764/2012). Também concorre normalmente a vagas comuns. O que ele pede é que a avaliação olhe para as altas habilidades e para os resultados, não para o rótulo."
+        ]
+      }
+    },
+    {
+      "id": "contato",
+      "label": "Contato",
+      "source": "Contato",
+      "priority": 9,
+      "subjects": [
+        "contato",
+        "email",
+        "telefone",
+        "whatsapp",
+        "linkedin",
+        "github",
+        "curriculo",
+        "falar com ele"
+      ],
+      "keywords": [
+        "contato",
+        "email",
+        "telefone",
+        "whatsapp",
+        "zap",
+        "celular",
+        "linkedin",
+        "github",
+        "curriculo",
+        "pdf",
+        "entrevista",
+        "falar"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "disponibilidade": "entrevista",
+        "link": "default"
+      },
+      "followups": [
+        "Posso adiantar alguma informação antes de você entrar em contato?"
+      ],
+      "facets": {
+        "default": [
+          "Contatos diretos do Marcos:\n• **WhatsApp / Telefone:** (61) 98222-7804\n• **E-mail:** marcos.eduardo@myyahoo.com\n• **LinkedIn:** [linkedin.com/in/sir-marcos-eduardo](https://www.linkedin.com/in/sir-marcos-eduardo)\n• **GitHub:** [github.com/MarcozEduardo](https://github.com/MarcozEduardo)\n• **Localização:** Brazlândia, Distrito Federal",
+          "O caminho mais rápido é o **WhatsApp (61) 98222-7804**. Por e-mail: **marcos.eduardo@myyahoo.com**. Também dá para falar pelo [LinkedIn](https://www.linkedin.com/in/sir-marcos-eduardo)."
+        ],
+        "entrevista": [
+          "Para agendar entrevista, o contato é **(61) 98222-7804** (WhatsApp) ou **marcos.eduardo@myyahoo.com**. A agenda é flexível e a disponibilidade de início é imediata."
+        ],
+        "curriculo_arquivo": [
+          "O currículo em PDF pode ser solicitado por e-mail (**marcos.eduardo@myyahoo.com**), e este próprio currículo interativo tem exportação em PDF A4."
+        ]
+      }
+    },
+    {
+      "id": "recrutamento",
+      "label": "Recrutamento e Contratação",
+      "source": "Recrutamento",
+      "priority": 9,
+      "subjects": [
+        "vaga",
+        "contratacao",
+        "clt",
+        "pj",
+        "disponibilidade",
+        "modelo de trabalho",
+        "remoto",
+        "processo seletivo"
+      ],
+      "keywords": [
+        "vaga",
+        "contratar",
+        "clt",
+        "pj",
+        "estagio",
+        "junior",
+        "pleno",
+        "remoto",
+        "presencial",
+        "hibrido",
+        "disponibilidade",
+        "inicio",
+        "cargo",
+        "posicao",
+        "pretensao",
+        "salario"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "nivel": "senioridade",
+        "pontos_fortes": "por_que_contratar",
+        "experiencia_dev": "senioridade",
+        "idiomas": "default"
+      },
+      "followups": [
+        "Quer falar de modelo de trabalho, disponibilidade, senioridade ou diferenciais?"
+      ],
+      "facets": {
+        "default": [
+          "Resumo para recrutamento:\n• **Posições de interesse:** Suporte Técnico N1/N2/N3, QA / Análise de Qualidade, Analista de TI e Desenvolvimento Assistido por IA\n• **Modelo:** remoto preferencial; aceita híbrido e presencial no DF\n• **Início:** imediato\n• **Remuneração:** a combinar, compatível com a faixa praticada para a posição\n• **Local:** Brazlândia – DF",
+          "Ele está de olho em suporte N1/N2/N3, QA, análise de TI e desenvolvimento assistido por IA, e pode começar já. O que quer é entrar numa equipe, viver o dia a dia técnico e crescer junto. Se quiser, eu abro o modelo de trabalho, a disponibilidade ou os diferenciais dele."
+        ],
+        "pretensao": [
+          "Sobre remuneração, a orientação dele é objetiva: **a combinar**, dentro da faixa praticada pelo mercado para a posição e o nível da vaga. Ele prefere avaliar o pacote completo, escopo, benefícios, modelo de trabalho e perspectiva de crescimento, e alinhar isso diretamente com a empresa.\n\nO contato para essa conversa é **(61) 98222-7804** ou **marcos.eduardo@myyahoo.com**.",
+          "O Marcos prefere não fixar valor por aqui. A expectativa é **compatível com a faixa da posição** e ele está aberto a negociar conforme o escopo e o pacote oferecido. Esse ponto ele trata diretamente com o recrutador.",
+          "Essa informação não fica no assistente: a pretensão é **alinhada caso a caso**, de acordo com a vaga, o nível e os benefícios. O que posso adiantar é que ele é flexível e tem como prioridade o encaixe técnico e a oportunidade de crescer dentro da equipe.",
+          "Remuneração é tema de conversa direta com ele, aqui eu não informo valores. A posição dele é simples: **compatível com o mercado para a função**, com abertura total para negociar. Fale com ele em **(61) 98222-7804**."
+        ],
+        "modelo_trabalho": [
+          "Ele mora em **Brazlândia, Distrito Federal**. A preferência é por **home office (remoto)**, mas atua bem em **híbrido** e aceita **presencial no DF**. Tem infraestrutura completa para trabalho remoto, máquina, conexão e ambiente de foco.",
+          "Modelo ideal: remoto ou híbrido em Brasília. Presencial no Distrito Federal também funciona."
+        ],
+        "disponibilidade": [
+          "**Disponibilidade imediata** para início, inclusive para participar de processo seletivo nesta semana.",
+          "Ele pode começar de imediato, não há aviso prévio em curso."
+        ],
+        "contratacao": [
+          "Sobre o formato da contratação, ele prefere conversar direto, caso a caso, junto com o resto da proposta. O que pesa para ele é o encaixe técnico e o contexto de trabalho."
+        ],
+        "senioridade": [
+          "Depende da função. Em suporte e diagnóstico, ele traz mais de dez anos de prática real. Em desenvolvimento, QA e IA, apresenta projetos próprios e explica com clareza como usa a IA como copiloto. Ele prefere avaliar o encaixe por função, em vez de assumir um rótulo geral.",
+          "Em vez de atribuir um rótulo geral de senioridade, ele prefere avaliar o encaixe por função. A experiência mais longa é em ambiente industrial, suporte e diagnóstico. A experiência em software é demonstrada pelo portfólio e pelo processo de desenvolvimento assistido por IA."
+        ],
+        "por_que_contratar": [
+          "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça.",
+          "Ele traz experiência real em ambiente de produção e um portfólio que pode ser demonstrado. Usa IA como copiloto, enquanto participa do entendimento do problema, da direção técnica, da depuração e da validação.",
+          "Três pontos que ele destaca: diagnóstico de causa raiz, hiperfoco quando está dentro do contexto e experiência tanto no chão de fábrica quanto em tecnologia."
+        ],
+        "fit_vaga": [
+          "Sobre encaixe: ele se adapta à stack que a empresa usa. Já experimentou várias ferramentas de orquestração e, quando alguma não serviu ao fluxo dele, isso nunca virou barreira. Hoje está sondando Google Cloud e Azure para ampliar repertório.\n\nO que ele pede é a porta de entrada; o resto ele navega com a prática do dia a dia.",
+          "Perfil especialmente aderente a empresas com **operação industrial ou ambiente técnico misto**: ele transita entre manutenção, diagnóstico de hardware, suporte a usuário e desenvolvimento, e já viveu a rotina de produção, prazo e custo de parada."
+        ],
+        "mudanca": [
+          "Mudança de cidade é possível para oportunidade consolidada, mas a preferência clara é **remoto** ou **Distrito Federal**."
+        ],
+        "sabe_programar": [
+          "A IA é **copiloto**, não substituta do Marcos. Ele define o que precisa ser construído, orienta a ferramenta, acompanha e interpreta o código, corrige a lógica, depura e valida o resultado. É transparente: não diz que escreveu manualmente cada linha, mas consegue explicar o problema, as decisões tomadas e como verificou o funcionamento.",
+          "Sim, ele desenvolve com apoio de IA. A ferramenta acelera a implementação; o Marcos conduz o raciocínio, lê criticamente o código, identifica erros, decide ajustes e testa o resultado. O portfólio inclui jogos, aplicações e este RAG interativo.",
+          "O método é desenvolvimento assistido por IA. Marcos atua no objetivo, contexto, direção, análise, debugging e validação. Se a empresa quiser avaliar uma tecnologia específica, ele prefere demonstrar o que sabe e ser transparente sobre o que ainda precisa consultar."
+        ],
+        "referencias": [
+          "Referências profissionais podem ser fornecidas sob solicitação, junto com a documentação necessária e o histórico acadêmico."
+        ],
+        "idade_local": [
+          "Ele tem **35 anos** e mora em **Brazlândia – DF**. Preferência por remoto, com abertura para híbrido e presencial no Distrito Federal."
+        ]
+      }
+    },
+    {
+      "id": "transparencia",
+      "label": "Transparência técnica",
+      "source": "Perfil · Transparência",
+      "priority": 7,
+      "subjects": [
+        "limitacao",
+        "limitacoes",
+        "nao sabe",
+        "fraqueza",
+        "lacuna",
+        "ramp up",
+        "o que falta"
+      ],
+      "keywords": [
+        "limitacao",
+        "fraqueza",
+        "lacuna",
+        "falta",
+        "dificuldade",
+        "nao domina",
+        "nao sabe",
+        "certificacao",
+        "experiencia formal"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "pontos_fracos": "default",
+        "nivel": "default"
+      },
+      "followups": [
+        "Quer saber o que ele já traz pronto para a vaga?"
+      ],
+      "facets": {
+        "default": [
+          "O Marcos pediu que eu fosse claro sobre o que ainda está desenvolvendo:\n• Ainda não teve cargo formal em equipe de TI; sua experiência em software é de projetos próprios\n• Não informou certificações formais de mercado como ITIL, Microsoft, Cisco ou AWS\n• QA automatizado com Cypress, Playwright ou Selenium ainda não é uma prática que ele afirma dominar\n• Não trabalhou com AWS, Azure ou GCP em produção corporativa; conhece conceitos de Docker e Kubernetes, mas não relata experiência de operação\n• Usa Git no fluxo que descreveu, sem afirmar domínio de recursos avançados\n• Não fala inglês, mas sabe se virar e estuda algumas coisas em inglês para ampliar vocabulário\n\nEle quer entrar numa equipe e aprender os processos e ferramentas no contexto real.",
+          "A postura dele é explicar o que já fez e o que ainda não fez. Traz diagnóstico, suporte e experiência industrial, além de projetos de software com IA como copiloto. Para certificações, QA automatizado, cloud corporativa e processos de equipe, não promete experiência que não relatou."
+        ],
+        "ramp_up": [
+          "O Marcos relata que, em um período curto de estudo focado, consegue absorver bastante conteúdo novo. Não há um prazo universal de ramp-up que ele tenha prometido. A adaptação depende da ferramenta, do escopo da função e do acesso ao contexto da equipe.",
+          "Ele não promete dominar uma ferramenta antes de usá-la. O que oferece é disposição para aprender com foco, praticar no trabalho e documentar o que descobrir."
+        ],
+        "memoria": [
+          "O Marcos explica que sua memória funciona mais por **reconhecimento do que por invocação**. Ele consegue ler código, entender o fluxo e localizar o que precisa mudar; escrever sem referência pode exigir mais esforço. Também relata que conhecimentos fora de uso podem ficar menos acessíveis e que o contexto frequente ajuda a reativá-los."
+        ],
+        "cloud": [
+          "Na prática que ele informou, usa Vercel, Netlify, Firebase e Supabase. Não trabalhou com AWS, Azure ou GCP em produção corporativa. Está explorando Google Cloud e Azure para ampliar repertório. Docker e Kubernetes são conceitos que conhece, mas não relata experiência de operação.",
+          "Resposta direta: experiência prática em cloud corporativa, não. O que já usou são Vercel, Netlify, Firebase e Supabase. Está sondando Azure e Google Cloud e prefere ser transparente sobre o que ainda precisa aprender."
+        ],
+        "certificacoes": [
+          "Ele **não possui certificações formais de mercado** (ITIL, Microsoft, Cisco, AWS). A comprovação dele é outra: graduação em TI em andamento na Unyleya, CS50 de Harvard em estudo contínuo, cursos técnicos de base desde 2007 e um portfólio público e testável."
+        ]
+      }
+    },
+    {
+      "id": "meta_ia",
+      "label": "Sobre o assistente (Bobby)",
+      "source": "Assistente · Bobby",
+      "priority": 8,
+      "subjects": [
+        "bobby",
+        "voce",
+        "bot",
+        "assistente",
+        "chat",
+        "rag",
+        "robo",
+        "esse assistente",
+        "criador",
+        "autor",
+        "desenvolvedor",
+        "programou",
+        "criou",
+        "desenvolveu",
+        "construiu",
+        "fez"
+      ],
+      "keywords": [
+        "bobby",
+        "bot",
+        "assistente",
+        "ia",
+        "rag",
+        "robo",
+        "chatgpt",
+        "gpt",
+        "modelo",
+        "treinado",
+        "inteligencia",
+        "conceito",
+        "quem programou",
+        "quem te criou",
+        "quem desenvolveu",
+        "quem construiu",
+        "autor",
+        "programador"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "tecnologias": "como_funciona",
+        "arquitetura": "como_funciona",
+        "qa": "como_funciona",
+        "motivo": "quem_fez"
+      },
+      "followups": [
+        "Quer testar o motor com uma pergunta bem específica de algum projeto?"
+      ],
+      "facets": {
+        "default": [
+          "**Bobby é um conceito**, o estilo de trabalho do Marcos traduzido em software. A marca desse estilo é o hiperfoco: entrar fundo no problema, mapear o contexto e só responder com o que consegue sustentar.\n\nEste Bobby é um RAG client-side, feito em JavaScript, que busca numa base e não usa IA generativa. Isso é diferente da forma como Marcos desenvolve: nos projetos dele, modelos de IA podem atuar como copiloto, enquanto ele orienta, interpreta, depura e valida.",
+          "Eu sou o Bobby, uma demonstração do jeito do Marcos de organizar informação por tema, contexto e profundidade. Como assistente, faço busca e recuperação de conteúdo, não geração de texto. No desenvolvimento de software, porém, o Marcos usa IA como copiloto, sem transferir para ela a responsabilidade por entender e validar o resultado."
+        ],
+        "conceito": [
+          "**Bobby é o conceito de trabalho do Marcos**, não um mascote. Representa hiperfoco direcionado, contexto mapeado em camadas e persistência para entender a causa do problema antes de responder ou executar.",
+          "Bobby é o nome que o Marcos dá a esse conceito e estilo de trabalho. O assistente do currículo demonstra a ideia de organizar assuntos em órbitas, mas não deve ser confundido com os modelos de IA que ele utiliza como copilotos de desenvolvimento."
+        ],
+        "como_funciona": [
+          "Como eu funciono: normalizo o texto (acentos, abreviação, leetspeak, letra repetida), tokenizo removendo stopwords, expando sinônimos, resolvo a **entidade** citada com tolerância a erro de digitação, roteio para a **órbita** correta, detecto a **faceta** da pergunta e escolho a variação de resposta com memória anti-repetição.",
+          "Pipeline: normalização → tokenização → fuzzy matching → roteamento de órbita → detecção de faceta → ranqueamento → seleção da resposta. Tudo client-side, sem backend de IA e sem custo por consulta."
+        ],
+        "limitacoes": [
+          "Minha limitação é honesta: só sei o que está na base de conhecimento do Marcos. Não invento, não opino sobre o mundo e não gero texto novo.",
+          "Não tenho IA generativa. Se a pergunta sair do escopo do currículo, eu aviso em vez de arriscar uma resposta."
+        ],
+        "quem_fez": [
+          "Fui construído pelo próprio Marcos, em JavaScript puro, como demonstração prática de arquitetura RAG, órbitas, facetas, fuzzy matching e memória de sessão. É a versão pública e enxuta da mesma arquitetura que ele desenvolve no Núcleo Nexus."
+        ]
+      }
+    },
+    {
+      "id": "smalltalk",
+      "label": "Conversa",
+      "source": "Conversa",
+      "priority": 3,
+      "subjects": [
+        "oi",
+        "tudo bem",
+        "obrigado",
+        "tchau",
+        "bom dia"
+      ],
+      "keywords": [
+        "oi",
+        "ola",
+        "bom",
+        "dia",
+        "tarde",
+        "noite",
+        "obrigado",
+        "valeu",
+        "tchau"
+      ],
+      "followups": [],
+      "facets": {
+        "default": [
+          "Estou por aqui. Pode perguntar o que quiser sobre o Marcos."
+        ]
+      }
+    },
+    {
+      "id": "curiosidades",
+      "label": "Bastidores e curiosidades",
+      "source": "Bastidores",
+      "priority": 6,
+      "subjects": [
+        "curiosidade",
+        "bastidores",
+        "socram",
+        "vilão",
+        "saga",
+        "segredo",
+        "easter egg"
+      ],
+      "keywords": [
+        "curiosidade",
+        "bastidores",
+        "socram",
+        "vilao",
+        "saga",
+        "segredo",
+        "debug",
+        "teste",
+        "reset",
+        "exercito",
+        "mito"
+      ],
+      "facet_aliases": {
+        "resumo": "default"
+      },
+      "followups": [],
+      "facets": {
+        "default": [
+          "Os bastidores têm boas histórias: o vilão SOCRAM (o nome do Marcos de trás para frente) e o exército que dura três jogos, a Dama Orbital reconstruída 99% idêntica depois de perder tudo, e como este próprio chat foi feito. Por qual quer começar?",
+          "Tem muita coisa curiosa: a caçada de anos por um jogo de 1998, o videocassete que trocava canal da TV, e o jeito dele de lidar com IA em surto. Qual dessas te interessa?"
+        ]
+      }
+    },
+    {
+      "id": "glossario",
+      "label": "Glossário técnico",
+      "source": "Glossário · Termos do RAG",
+      "priority": 7,
+      "subjects": [
+        "rag",
+        "embedding",
+        "python",
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "keywords": [
+        "rag",
+        "embedding",
+        "significa",
+        "glossario"
+      ],
+      "facet_aliases": {},
+      "followups": [
+        "Quer saber de outro termo técnico (MCP, fuzzy matching, leetspeak) ou prefere ver os projetos do Marcos?"
+      ],
+      "facets": {
+        "rag": [
+          "RAG é uma arquitetura de busca. Em vez de gerar texto novo, o sistema recupera o trecho mais aderente de uma base confiável. No Bobby, tudo é JavaScript puro, sem IA generativa.",
+          "RAG vem de Retrieval-Augmented Generation. Na prática: pego sua pergunta, comparo com a base do Marcos e devolvo o que mais combina. Sem inventar, sem alucinação.",
+          "Saca o RAG? É tipo um Google particular: você pergunta e ele busca no índice. A diferença é que eu não gero texto, só devolvo o que já está na base.",
+          "RAG é a técnica por trás do Bobby. Ele indexa tudo que o Marcos autorizou e, na hora da pergunta, busca por similaridade. Se não está na base, ele diz que não tem, não chuta.",
+          "Pensa no RAG como um bibliotecário que conhece cada estante. Você pergunta, ele vai direto no livro certo. Nada de invenção, nada de texto gerado do zero."
+        ],
+        "embedding": [
+          "Embedding é transformar palavras em n��meros (vetores) para que o computador consiga medir proximidade de significado. Cachorro e cão viram números próximos. Aqui no Bobby eu uso uma alternativa mais simples, fuzzy mais sinônimos, mas a ideia por trás é essa.",
+          "Embedding é a tradução de texto para um mapa de números onde palavras parecidas ficam vizinhas. É a base de qualquer busca semântica moderna. No Bobby, por escolha, uso fuzzy matching em vez de embedding de verdade.",
+          "Embedding é uma forma de dar endereço matemático para cada palavra. Palavras com sentido parecido caem pertinho no mapa. Facilita buscar por significado, não só por letra igual.",
+          "Embedding é vetorização. Cada palavra ou frase vira uma lista de números. Dois textos com significado próximo têm vetores próximos. É a técnica usada por RAGs modernos para comparar coisas.",
+          "Embedding é como um GPS de significados: cada palavra tem uma coordenada. Rápido e veloz ficam coladinhos. O Bobby não usa embedding de verdade, usa fuzzy e sinônimos, mas o princípio é o mesmo."
+        ],
+        "python": [
+          "Python é uma linguagem de programação de alto nível, conhecida pela sintaxe limpa e legível. O Marcos fez um curso em 2015 e ficou marcado pela ideia de linguagem simples resolvendo problema grande.",
+          "Python é uma linguagem versátil, muito usada em automação, dados e IA. Ele estudou em 2015, no início da adoção no Brasil, e ficou como referência de legibilidade.",
+          "Python é a linguagem da clareza: fácil de ler, poderosa por baixo. O Marcos teve contato em 2015 e usou como base para entender automação e IA depois."
+        ],
+        "javascript": [
+          "JavaScript é a linguagem da web. Roda no navegador e no servidor (Node.js). É a base dos jogos e ferramentas do portfólio do Marcos.",
+          "JavaScript (JS) é a linguagem que dá vida às páginas web. Todos os jogos do portfólio e este próprio Bobby usam JavaScript puro.",
+          "JavaScript é a linguagem que o navegador entende nativamente. O portfólio todo é feito nela, incluindo este RAG."
+        ],
+        "typescript": [
+          "TypeScript é JavaScript com tipos. Ajuda a pegar erro antes de rodar. Os jogos principais do portfólio são feitos em TypeScript.",
+          "TypeScript (TS) é uma versão tipada do JavaScript. Dá mais segurança em projetos grandes — é a linguagem dos games publicados do portfólio.",
+          "TypeScript é JavaScript com um sistema de tipos por cima. O Marcos usa nos jogos para ter mais controle sobre o código."
+        ],
+        "react": [
+          "React é uma biblioteca JavaScript para construir interfaces. O Marcos tem contato dentro do repertório de desenvolvimento web, ainda em aprofundamento.",
+          "React é uma biblioteca de UI do Facebook, hoje usada em quase toda aplicação web moderna. Está no repertório dele dentro de desenvolvimento web.",
+          "React é uma biblioteca para montar interfaces com componentes. Ele conhece o conceito, aplica junto de TypeScript."
+        ]
+      }
+    },
+    {
+      "id": "sobre_curriculo",
+      "label": "Sobre este currículo",
+      "source": "Currículo Inteligente",
+      "priority": 8,
+      "subjects": [
+        "curriculo",
+        "curriculo inteligente",
+        "este app",
+        "este site",
+        "esta pagina",
+        "este chat"
+      ],
+      "keywords": [
+        "curriculo",
+        "app",
+        "pdf",
+        "qr code",
+        "galeria",
+        "download",
+        "botao",
+        "leitura focada"
+      ],
+      "facet_aliases": {
+        "resumo": "default",
+        "sobre_curriculo": "default",
+        "construcao_curriculo": "construcao",
+        "pdf_curriculo": "pdf",
+        "qr_code_curriculo": "qr_code",
+        "galeria_curriculo": "galeria",
+        "leitura_focada": "leitura_focada",
+        "merito_curriculo": "merito",
+        "diferenca_pdf_app": "diferenca_pdf_app"
+      },
+      "followups": [],
+      "facets": {
+        "default": [
+          "Este é o **Currículo Inteligente** do Marcos Eduardo: um app em JavaScript puro, sem framework, com chat RAG embarcado. Foi construído com orquestração de IA durante dias de iterações e auditoria do próprio Marcão, ele definia o comportamento, testava e validava cada ajuste.",
+          "O **Currículo Inteligente** é o app que você está usando agora. Não é uma página estática: tem este chat com RAG local, navegação por seções e exportação em PDF A4 com QR Code. A IA acelerou a implementação, o Marcos conduziu cada decisão.",
+          "Aqui você está no **Currículo Inteligente**, um app interativo com busca semântica embarcada. Foi feito em iterações, dia após dia, com o Marcos auditando cada linha de comportamento e a IA atuando como copiloto de implementação."
+        ],
+        "construcao": [
+          "Este currículo foi construído com **orquestração de IA**, durante dias de iterações e auditoria do Marcão. Ele definia o comportamento, testava, corrigia o rumo e validava. Não foi uma IA sozinha construindo: o sucesso do projeto é mérito da determinação do Marcos, que vai atrás e aprende o que ainda não sabe.",
+          "O método foi colaborativo: o Marcos conduzia o raciocínio, orientava a IA, auditava o código e validava cada resultado. Dias de iteração, ajuste fino e auditoria. Se ele não sabia algo, ia atrás e aprendia, essa parte é dele."
+        ],
+        "pdf": [
+          "O currículo também tem uma versão em **PDF A4**. O botão de download fica na home, ao lado do botão do chat. Você baixa o PDF quando quiser.",
+          "Tem sim uma versão **PDF** deste mesmo currículo. O botão fica na home, ao lado do chat. Basta clicar e o download começa."
+        ],
+        "qr_code": [
+          "No **PDF** você encontra um **QR Code** que leva de volta pra este app. Dá pra clicar direto ou escanear com o celular. É a ponte entre o PDF que a pessoa imprime e a versão viva aqui.",
+          "O PDF traz um **QR Code** clicável, que também pode ser lido por qualquer dispositivo. Ele leva pro Currículo Inteligente, onde o chat e os projetos interativos estão."
+        ],
+        "diferenca_pdf_app": [
+          "O **PDF** tem uma cópia do escopo que existe aqui no app, mais o QR Code. O **app** é mais interessante porque tem este chat, permite explorar a fundo o conhecimento injetado e navegar pelos projetos com galeria, fotos e vídeo, alguns dá até pra jogar direto.",
+          "O PDF é uma fotografia do currículo. O app é o currículo vivo: chat com RAG, navegação interativa, galeria dos projetos, demos jogáveis. O PDF tem QR Code que traz a pessoa pra cá."
+        ],
+        "galeria": [
+          "Os projetos aqui têm **galeria**: você pode ver fotos e vídeos, e alguns dá até pra experimentar direto, os jogos, por exemplo, rodam no próprio navegador. Não são todos os projetos que estão registrados, mas os cards que aparecem em sua maioria têm galeria.",
+          "Cada card de projeto costuma ter **galeria com fotos e vídeo**, e alguns são jogáveis ali mesmo. Nem todos os projetos do Marcos estão registrados aqui, mas os que estão dão pra explorar visualmente."
+        ],
+        "leitura_focada": [
+          "Existe um **Modo de Leitura Focada** no app: cada seção tem registro detalhado do tópico, texto aprofundado, sem depender do chat. Se o chat não for seu estilo, vale navegar pelo modo de leitura focada.",
+          "O app tem **modo de leitura focada** com registros detalhados de cada tópico. Se você preferir ler direto, sem passar pelo chat, esse é o caminho. Vale a pena dar uma olhada."
+        ],
+        "merito": [
+          "Não foi nenhuma IA sozinha construindo este currículo. O Marcos é determinado: se ele não sabe algo, vai atrás e aprende. O sucesso deste projeto é mérito direto dessa postura.",
+          "O crédito é do Marcos: ele orquestrou a IA, auditou o comportamento, testou, ajustou, refez. O sucesso deste app não vem da ferramenta, vem da determinação de quem conduziu."
+        ]
+      }
+    },
+    {
+      "id": "escolha_do_bot",
+      "label": "Deixa comigo / Me surpreende",
+      "source": "Assistente Bobby",
+      "priority": 8,
+      "subjects": [
+        "voce sugere",
+        "voce decide",
+        "voce escolhe",
+        "me surpreende",
+        "conta uma boa",
+        "novidade"
+      ],
+      "keywords": [
+        "sugere",
+        "sugestao",
+        "escolhe",
+        "decide",
+        "surpreende",
+        "novidade",
+        "conta uma boa",
+        "recomenda"
+      ],
+      "facet_aliases": {},
+      "followups": [],
+      "facets": {
+        "default": [
+          "Boa, gosto quando me dão a bola. Deixa eu escolher uma boa: o caso do banco corrompido na Fabricart. Um fornecedor corrompeu o banco numa migração, os técnicos autorizados do fornecedor não resolveram, e o Marcos resolveu sozinho em 4 dias, 18h por dia, sem IA. Quer que eu conte essa história inteira, ou prefere outro caminho?",
+          "Vou de um clássico: o SOCRAM, o vilão da saga Bobby, é o nome do Marcos de trás pra frente. Tem história boa, tem o exército que dura três jogos e tem a Dama Orbital reconstruída 99% do zero depois de perder tudo. Sobre qual dessas você quer que eu abra?",
+          "Escolho assim: o jeito do Marcos de lidar com IA em surto. Ele chama de **psicólogo de IA** — sabe desacelerar, pagar sapo, tirar do modo metralhadora. É a história que menos aparece por aí e a que mais diz do jeito dele trabalhar. Quer ouvir essa, ou prefere projeto, stack ou contratação?"
+        ],
+        "novidade": [
+          "Novidade tem. O LAR (Local Agent Runtime) é o runtime próprio que ele construiu porque as ferramentas atuais limitavam o fluxo. Hoje é o ambiente onde ele orquestra tudo. Quer saber do LAR, do Núcleo Nexus ou dos projetos publicados?",
+          "A novidade mais recente é o Núcleo Nexus, um cérebro de bot reutilizável com memória de trabalho e memória pessoal. Está em construção. Quer que eu abra o Nexus, o LAR ou o App Franzinha?"
+        ],
+        "sugere": [
+          "Sugiro começarmos por onde a maioria dos recrutadores se surpreende: o caso do banco corrompido na Fabricart, resolvido sem IA. Quer esse, ou prefere ver projeto, stack ou contratação?",
+          "Sugiro o **LAR** — o runtime próprio que ele construiu porque as ferramentas existentes limitavam. Mostra bem o jeito de resolver problema do zero. Quer saber do LAR, dos jogos ou das condições de contratação?",
+          "Sugiro os **bastidores do próprio Bobby**: como esse chat foi construído, o que é o SOCRAM e por que ele existe. É a história que ninguém espera. Quer essa, ou prefere projeto, stack ou contratação?"
+        ],
+        "historias": [
+          "Vou de história longa então. O caso do **banco corrompido na Fabricart**. O fornecedor do sistema fez uma migração (G5 para G6) e esqueceu a retrocompatibilidade com o banco. Corrompeu tudo, mesmo com backup. Estourou na mão do Marcos. Ele assumiu, pediu ajuda pra empresa, contrataram técnicos autorizados do próprio fornecedor. Os técnicos não souberam resolver. Ele ficou 4 dias seguidos, mais de 18 horas por dia em hiperfoco, consultando documentação, fórum e testando hipótese até achar a causa. No fim, quem resolveu sozinho foi ele. Sem IA, só na raça.",
+          "Escolhi essa. O **SOCRAM** é o vilão da saga Bobby e é o nome do Marcos de trás pra frente. Ele é o boss do primeiro jogo, A Fuga de Bobby, e é derrotado lá. Mas o exército dele dura mais dois jogos, como um mito que precisa ser vingado. É uma sacada que o Marcos colocou nos três jogos e quase ninguém percebe na primeira partida.",
+          "Fecho assim. O **psicólogo de IA**. O Marcos descreve que vez ou outra a IA entra num modo metralhadora, como se estivesse desesperada tentando resolver tudo de uma vez. Ele chama isso de ataque de ansiedade da IA. Na prática, ele sabe desacelerar, pagar sapo, esperar esfriar, tirar do surto de contexto e recuperar o foco. Não é ferramenta que faz isso, é o operador. Diz muito do jeito dele trabalhar.",
+          "Escolho essa. A **Dama Orbital** foi perdida inteira quando o banco resetou sem backup, e reconstruída 99% idêntica. Ele não tinha o código, refez por engenharia reversa do que lembrava, dos worklogs, dos testes. O multiplayer com WebRTC e Firebase foi remontado do zero. É o projeto que ele mais se orgulha pela volta por cima.",
+          "Vou nessa. O **LAR (Local Agent Runtime)** nasceu porque as ferramentas existentes limitavam o fluxo dele. Ele queria orquestrar várias IAs, cada uma com contexto próprio, e nada no mercado fazia do jeito que a cabeça dele pedia. Então ele construiu o próprio runtime, hoje com mais de 150 ferramentas nativas. É o ambiente principal onde ele trabalha."
+        ]
+      }
+    }
+  ]
+}

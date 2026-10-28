@@ -1,0 +1,164 @@
+/* ================= PROJETOS & PORTFÓLIO ================= */
+.projects-section {
+  margin-top: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--orange-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 6px 0 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(217, 84, 10, 0.12);
+  border-left-color: var(--orange-dark);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.project-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.project-name:hover {
+  color: var(--orange-dark);
+}
+
+.project-sub {
+  font-size: 9.5px;
+  color: var(--orange-dark);
+  font-weight: 500;
+}
+
+/* Badges de Status */
+.status-badge {
+  font-size: 8.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.status-jogavel, .status-deploy { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+.status-em-refino, .status-refine { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+.status-em-testes, .status-test { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
+.status-concluido, .status-done { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+.status-em-deploy { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
+
+.project-stack {
+  font-size: 9.3px;
+  color: #666;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.project-desc {
+  font-size: 9.6px;
+  color: #4a453f;
+  line-height: 1.45;
+  margin: 0;
+  text-align: justify;
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9.2px;
+  font-weight: 600;
+  color: var(--orange-deep);
+  text-decoration: none;
+  margin-top: 6px;
+  padding: 4px 10px;
+  background: var(--cream);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.project-link-btn:hover {
+  background: #fde8d7;
+  border-color: var(--orange);
+  text-decoration: underline;
+}
+
+/* Card Nota do Autor */
+.author-note-card {
+  background: #FFFFFF;
+  border: 1px dashed #CBD5E1;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  page-break-inside: avoid;
+}
+.author-note-head {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--orange-deep);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.author-note-txt {
+  font-size: 9.5px;
+  color: #555;
+  line-height: 1.45;
+  margin: 0;
+  text-align: justify;
+}

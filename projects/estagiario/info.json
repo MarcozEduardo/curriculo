@@ -1,0 +1,17 @@
+{
+  "id": "estagiario",
+  "nome": "O Estagiário",
+  "subtitulo": "RPG Isométrico com Editor",
+  "stack": ["TypeScript", "Sprites", "Editor Próprio"],
+  "descricao": "**RPG isométrico** com **editor de cenários próprio**, construído do zero. A história acompanha **um estagiário que recebeu a missão de entregar documentos às 3 da manhã** em um escritório vazio — e cada escolha que ele faz pelo caminho **rende uma punição ou uma bênção**. O personagem se move em **8 direções**, com **física de colisão real** e **paredes que colapsam**. A migração completa de **pixel art canvas** pra **sprites de alta qualidade** deixou o visual muito mais refinado. **Em breve mais detalhes.**",
+  "cta": null,
+  "status_label": "Em Refino (80%)",
+  "media": {
+    "demo": false,
+    "drive": "https://drive.google.com/file/d/1Nk15NbAYTrDSU0lTWTMxY-DSja8rpQXp/view?usp=sharing",
+    "youtube": null,
+    "video": null,
+    "capa": null,
+    "prints": ["screenshots/Screenshot_1.png", "screenshots/Screenshot_2.png", "screenshots/Screenshot_3.png"]
+  }
+}

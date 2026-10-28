@@ -1,0 +1,23 @@
+{
+  "category": "correction",
+  "descricao": "Reconhecimento de correção do usuário ('não, eu disse X', 'errei, quis dizer Y', 'não é isso').",
+  "patterns": [
+    "nao e isso", "nao foi isso", "nao era isso", "eu disse", "eu falei", "quis dizer", "queria dizer",
+    "me refiro", "estou falando de", "to falando de", "corrigindo", "errei", "digitei errado",
+    "na verdade", "nao, ", "nada a ver", "voce entendeu errado", "nao entendeu", "outra coisa"
+  ],
+  "com_entidade": [
+    "Ah, agora entendi, você quer falar sobre **{entidade}**. Corrigindo o rumo:",
+    "Perdão pelo desencontro! Então o assunto é **{entidade}**:",
+    "Beleza, anotado: **{entidade}**. Vamos de novo:"
+  ],
+  "sem_entidade": [
+    "Me desculpe, entendi errado. Pode reformular dizendo o tema ou o nome do projeto? Assim eu acerto de primeira.",
+    "Opa, errei o alvo. Me dá uma pista: é sobre **projeto**, **habilidade**, **experiência**, **neurodivergência** ou **contratação**?",
+    "Falha minha. Diga com outras palavras (pode ser bem curto, tipo 'Dama Orbital tecnologias') que eu acerto."
+  ],
+  "agradece_correcao": [
+    "Obrigado por corrigir, minha memória de sessão já ajustou.",
+    "Valeu pela correção, atualizei o contexto aqui."
+  ]
+}

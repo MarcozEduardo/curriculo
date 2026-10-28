@@ -1,0 +1,29 @@
+{
+ "radicais": {
+ "mand": "entrega",
+ "pass": "entrega",
+ "envi": "entrega",
+ "solt": "entrega",
+ "col": "entrega",
+ "jog": "entrega",
+ "quer": "desejo",
+ "precis": "desejo",
+ "pod": "desejo",
+ "gostar": "desejo",
+ "fal": "comunicacao",
+ "cham": "comunicacao",
+ "inform": "comunicacao",
+ "respond": "comunicacao",
+ "sab": "saber",
+ "ach": "busca",
+ "encontr": "busca",
+ "cheg": "busca",
+ "vej": "busca",
+ "consegu": "busca"
+ },
+ "verbos_entrega": ["manda", "mandar", "mando", "passa", "passar", "passo", "envia", "enviar", "solta", "cola", "joga", "descola"],
+ "verbos_desejo": ["quero", "quer", "queria", "preciso", "precisa", "poderia", "pode", "posso", "gostaria"],
+ "verbos_comunicacao": ["fala", "falar", "fale", "falo", "conta", "contar", "chama", "chamar", "entra", "entrar", "informa", "informar", "responde", "responder"],
+ "verbos_saber": ["saber", "sabe", "sabem", "sei", "saiba", "sabia"],
+ "verbos_busca": ["acho", "achar", "encontro", "encontrar", "chego", "chegar", "vejo", "ver", "consigo", "conseguir"]
+}

@@ -1,0 +1,662 @@
+{
+  "orbit": "recrutamento",
+  "label": "Recrutamento e Contratação",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós. Regra: nunca informar valores de remuneração.",
+  "nodes": [
+    {
+      "id": "rc01",
+      "layer": 1,
+      "parent": null,
+      "label": "as posições de interesse",
+      "question": "Quais posições ele procura?",
+      "variants": [
+        "cargos de interesse",
+        "que vaga ele busca"
+      ],
+      "answer": "Suporte Técnico N1/N2/N3, QA / Análise de Qualidade, Análise de TI e Desenvolvimento Assistido por IA. Ele quer entrar numa equipe, viver o dia a dia técnico e crescer junto."
+    },
+    {
+      "id": "rc02",
+      "layer": 1,
+      "parent": null,
+      "label": "o modelo de trabalho",
+      "question": "Qual modelo de trabalho ele aceita?",
+      "variants": [
+        "remoto ou presencial",
+        "home office"
+      ],
+      "answer": "Preferência por remoto; aceita híbrido e presencial no Distrito Federal. Ele mora em Brazlândia/DF e tem infraestrutura completa para atuação a distância.",
+      "facet": "modelo_trabalho"
+    },
+    {
+      "id": "rc03",
+      "layer": 1,
+      "parent": null,
+      "label": "a disponibilidade",
+      "question": "Qual é a disponibilidade dele?",
+      "variants": [
+        "quando pode começar",
+        "início imediato"
+      ],
+      "answer": "Imediata. Não há aviso prévio em curso, e ele pode participar de processo seletivo a qualquer momento.",
+      "facet": "disponibilidade"
+    },
+    {
+      "id": "rc04",
+      "layer": 1,
+      "parent": null,
+      "label": "o formato da contratação",
+      "question": "Como é o formato da contratação?",
+      "variants": [
+        "tipo de contratação",
+        "regime de contratação",
+        "como ele quer ser contratado"
+      ],
+      "answer": "Isso ele prefere conversar direto, caso a caso, junto com o resto da proposta. O que pesa para ele é o encaixe técnico e o contexto de trabalho.",
+      "facet": "contratacao"
+    },
+    {
+      "id": "rc05",
+      "layer": 1,
+      "parent": null,
+      "label": "a remuneração",
+      "question": "Qual é a pretensão salarial?",
+      "variants": [
+        "quanto ele quer ganhar",
+        "faixa salarial"
+      ],
+      "answer": "A combinar, compatível com a faixa praticada para a posição. Ele prefere alinhar esse ponto diretamente com a empresa, avaliando escopo, benefícios, modelo de trabalho e perspectiva de crescimento.",
+      "facet": "pretensao"
+    },
+    {
+      "id": "rc06",
+      "layer": 1,
+      "parent": null,
+      "label": "por que considerar o perfil dele",
+      "question": "Por que contratar o Marcos?",
+      "variants": [
+        "diferencial para a vaga",
+        "por que ele"
+      ],
+      "answer": "Porque junta mais de dez anos resolvendo problema técnico real sob pressão com estudo e projetos recentes em software, QA e IA aplicada. Entrega com autonomia, documenta e não abandona problema difícil.",
+      "facet": "por_que_contratar"
+    },
+    {
+      "id": "rc07",
+      "layer": 1,
+      "parent": null,
+      "label": "a senioridade",
+      "question": "Qual é a senioridade dele?",
+      "variants": [
+        "ele é júnior ou pleno",
+        "nível profissional"
+      ],
+      "answer": "Depende da função. Em suporte e diagnóstico, traz mais de dez anos de prática. Em desenvolvimento, QA e IA, apresenta projetos próprios e explica com clareza o uso da IA como copiloto. Ele prefere avaliar o encaixe por função a assumir um rótulo geral. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "senioridade"
+    },
+    {
+      "id": "rc08",
+      "layer": 1,
+      "parent": null,
+      "label": "como ele programa",
+      "question": "Ele sabe programar ou é só IA?",
+      "variants": [
+        "a ia faz tudo",
+        "ele programa de verdade"
+      ],
+      "answer": "A IA é copiloto, não substituta. Ele define o que construir, orienta a ferramenta, lê e interpreta o código, corrige a lógica, depura e valida. Não afirma digitar cada linha; afirma entender e responder pelo resultado. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "sabe_programar"
+    },
+    {
+      "id": "rc09",
+      "layer": 1,
+      "parent": null,
+      "label": "o encaixe em suporte",
+      "question": "Ele serve para uma vaga de suporte?",
+      "variants": [
+        "fit para suporte técnico",
+        "perfil para helpdesk"
+      ],
+      "answer": "É o terreno mais forte dele: N1 a N3, diagnóstico de hardware e software, redes, Windows e Linux, atendimento a usuário final e chão de fábrica. O que precisaria de ramp-up é ferramenta corporativa de chamado e processo formal de ITIL.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc10",
+      "layer": 1,
+      "parent": null,
+      "label": "o encaixe em QA",
+      "question": "Ele serve para uma vaga de QA?",
+      "variants": [
+        "fit para testes",
+        "perfil de qa"
+      ],
+      "answer": "Para QA manual com julgamento, sim: depuração profunda, validação de regras, análise de fluxo e teste de bordas. Para QA automatizado sênior (Cypress, Playwright, Selenium), precisaria de ramp-up.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc11",
+      "layer": 1,
+      "parent": null,
+      "label": "o encaixe em desenvolvimento",
+      "question": "Ele serve para uma vaga de desenvolvimento?",
+      "variants": [
+        "fit para dev",
+        "vaga de programador"
+      ],
+      "answer": "Para desenvolvimento assistido por IA em nível de entrada, sim, com portfólio público em TypeScript, Canvas, WebRTC e Firebase. Ele é transparente: não há registro formal anterior como desenvolvedor.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc12",
+      "layer": 1,
+      "parent": null,
+      "label": "o encaixe em empresa industrial",
+      "question": "Ele se encaixa em empresa industrial?",
+      "variants": [
+        "perfil para indústria",
+        "ti em fábrica"
+      ],
+      "answer": "Especialmente bem. Ele transita entre manutenção de máquina, diagnóstico de hardware, suporte a usuário e software, e viveu por anos a rotina de produção, prazo e custo de parada.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc13",
+      "layer": 1,
+      "parent": null,
+      "label": "referências e documentos",
+      "question": "Ele fornece referências?",
+      "variants": [
+        "tem referência profissional",
+        "documentos para o processo",
+        "dá pra pedir referência na bella arte",
+        "referência na empresa anterior",
+        "quem pode dar referência",
+        "quem pode falar bem dele",
+        "tem recomendações"
+      ],
+      "answer": "Referências profissionais, histórico acadêmico e a documentação para vagas afirmativas podem ser fornecidos sob solicitação."
+    },
+    {
+      "id": "rc14",
+      "layer": 1,
+      "parent": null,
+      "label": "como agendar uma conversa",
+      "question": "Como agendar uma entrevista?",
+      "variants": [
+        "marcar entrevista",
+        "falar com ele para processo"
+      ],
+      "answer": "Pelo WhatsApp (61) 98222-7804 ou pelo e-mail marcos.eduardo@myyahoo.com. A agenda é flexível e a disponibilidade é imediata."
+    },
+    {
+      "id": "rc15",
+      "layer": 1,
+      "parent": null,
+      "label": "mudança de cidade",
+      "question": "Ele aceita mudança de cidade?",
+      "variants": [
+        "realocação",
+        "mudaria de estado"
+      ],
+      "answer": "Possível para oportunidade consolidada, mas a preferência clara é remoto ou atuação no Distrito Federal."
+    },
+    {
+      "id": "rc16",
+      "layer": 2,
+      "parent": "rc01",
+      "label": "a posição preferida",
+      "question": "Qual dessas posições ele prefere?",
+      "variants": [
+        "ele prefere suporte ou dev",
+        "primeira opção de cargo"
+      ],
+      "answer": "A base não estabelece ordem de preferência entre as quatro. O que ele enfatiza é entrar numa equipe, aprender por dentro e evoluir rápido."
+    },
+    {
+      "id": "rc17",
+      "layer": 2,
+      "parent": "rc02",
+      "label": "presencial",
+      "question": "Ele aceita presencial?",
+      "variants": [
+        "trabalho presencial",
+        "ir ao escritório"
+      ],
+      "answer": "Sim, no Distrito Federal. A preferência é remoto ou híbrido, mas presencial no DF funciona.",
+      "facet": "modelo_trabalho"
+    },
+    {
+      "id": "rc18",
+      "layer": 2,
+      "parent": "rc03",
+      "label": "aviso prévio",
+      "question": "Ele tem aviso prévio a cumprir?",
+      "variants": [
+        "está empregado",
+        "precisa cumprir aviso"
+      ],
+      "answer": "Não há aviso prévio em curso. Desde 2024 ele se dedica a projetos independentes e estudo.",
+      "facet": "disponibilidade"
+    },
+    {
+      "id": "rc19",
+      "layer": 2,
+      "parent": "rc04",
+      "label": "o regime",
+      "question": "Ele aceita contrato PJ?",
+      "variants": [
+        "contrato pj",
+        "pessoa jurídica",
+        "aceita clt",
+        "regime clt"
+      ],
+      "answer": "Esse ponto ele alinha direto com a empresa, caso a caso, junto com escopo e benefícios.",
+      "facet": "contratacao"
+    },
+    {
+      "id": "rc20",
+      "layer": 2,
+      "parent": "rc05",
+      "label": "negociação",
+      "question": "Ele negocia remuneração?",
+      "variants": [
+        "aberto a negociar",
+        "flexível no valor"
+      ],
+      "answer": "Sim. Ele é flexível e prioriza o encaixe técnico e a oportunidade de crescer na equipe. Valores não ficam neste assistente: o alinhamento é direto com ele.",
+      "facet": "pretensao"
+    },
+    {
+      "id": "rc21",
+      "layer": 2,
+      "parent": "rc06",
+      "label": "o risco de contratar em transição",
+      "question": "Qual o risco de contratar alguém em transição?",
+      "variants": [
+        "ele ainda está se formando",
+        "risco do perfil"
+      ],
+      "answer": "O risco declarado é o ramp-up em ferramenta corporativa e processo de equipe. O que reduz esse risco é a experiência real sob pressão, a autonomia comprovada e o portfólio que pode ser demonstrado antes da contratação.",
+      "facet": "por_que_contratar"
+    },
+    {
+      "id": "rc22",
+      "layer": 2,
+      "parent": "rc07",
+      "label": "júnior",
+      "question": "Ele entraria como júnior?",
+      "variants": [
+        "vaga júnior serve",
+        "ele aceita júnior"
+      ],
+      "answer": "Em desenvolvimento e QA formal, posição de entrada faz sentido e ele aceita. Em suporte, chega com uma década de responsabilidade técnica direta.",
+      "facet": "senioridade"
+    },
+    {
+      "id": "rc23",
+      "layer": 2,
+      "parent": "rc08",
+      "label": "trabalhar sem IA",
+      "question": "Ele consegue trabalhar sem IA?",
+      "variants": [
+        "e se não puder usar ia",
+        "sem copiloto ele funciona"
+      ],
+      "answer": "Em suporte, diagnóstico, redes e QA manual, sim: são dez anos de prática anteriores à IA. Em desenvolvimento, ele usa IA como ferramenta de produção; sem ela, a força continua sendo leitura crítica e depuração.",
+      "facet": "sabe_programar"
+    },
+    {
+      "id": "rc24",
+      "layer": 2,
+      "parent": "rc09",
+      "label": "atendimento a usuário",
+      "question": "Ele atende usuário final?",
+      "variants": [
+        "suporte presencial a pessoas",
+        "lida com usuário"
+      ],
+      "answer": "Sim: balcão, bancada, laboratório de informática e usuários de sistemas internos. Comunicação sob pressão com cliente final é parte da trajetória dele.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc25",
+      "layer": 2,
+      "parent": "rc10",
+      "label": "QA manual",
+      "question": "Ele faria QA manual?",
+      "variants": [
+        "aceita qa manual",
+        "teste manual"
+      ],
+      "answer": "Sim, e é onde o perfil dele encaixa naturalmente: depurar é prazer, não obrigação. Enquanto isso, aprende automação no contexto da equipe.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc26",
+      "layer": 3,
+      "parent": "rc16",
+      "label": "começar por suporte",
+      "question": "Ele aceitaria começar por suporte?",
+      "variants": [
+        "entrar pelo suporte",
+        "suporte como porta de entrada"
+      ],
+      "answer": "Sim. Suporte N1/N2/N3 é uma das quatro posições de interesse e o terreno em que ele tem mais história."
+    },
+    {
+      "id": "rc27",
+      "layer": 3,
+      "parent": "rc17",
+      "label": "onde ele mora",
+      "question": "Onde ele mora?",
+      "variants": [
+        "cidade dele",
+        "ele mora em brasília"
+      ],
+      "answer": "Em Brazlândia, região administrativa do Distrito Federal.",
+      "facet": "modelo_trabalho"
+    },
+    {
+      "id": "rc28",
+      "layer": 3,
+      "parent": "rc18",
+      "label": "começar esta semana",
+      "question": "Ele pode começar esta semana?",
+      "variants": [
+        "início rápido",
+        "disponível já"
+      ],
+      "answer": "Sim. A disponibilidade é imediata, inclusive para processo seletivo nesta semana.",
+      "facet": "disponibilidade"
+    },
+    {
+      "id": "rc29",
+      "layer": 3,
+      "parent": "rc19",
+      "label": "estágio ou trainee",
+      "question": "Ele aceita estágio ou trainee?",
+      "variants": [
+        "vaga de estágio",
+        "programa trainee"
+      ],
+      "answer": "A base não descreve esse formato. Para estágio ou trainee, o ideal é falar direto com ele.",
+      "facet": "contratacao"
+    },
+    {
+      "id": "rc30",
+      "layer": 3,
+      "parent": "rc20",
+      "label": "o que pesa além do valor",
+      "question": "O que pesa para ele além do valor?",
+      "variants": [
+        "prioridades na vaga",
+        "o que ele avalia na proposta"
+      ],
+      "answer": "Escopo, benefícios, modelo de trabalho, perspectiva de crescimento e, principalmente, contexto técnico diário para evoluir dentro da equipe.",
+      "facet": "pretensao"
+    },
+    {
+      "id": "rc31",
+      "layer": 3,
+      "parent": "rc21",
+      "label": "como reduzir o risco",
+      "question": "Como reduzir esse risco antes de contratar?",
+      "variants": [
+        "como validar o perfil",
+        "teste antes de contratar"
+      ],
+      "answer": "Pedindo demonstração: ele pode mostrar os projetos publicados, o LAR ao vivo e explicar decisões técnicas. Ele prefere demonstrar a descrever.",
+      "facet": "por_que_contratar"
+    },
+    {
+      "id": "rc32",
+      "layer": 3,
+      "parent": "rc22",
+      "label": "senioridade em suporte",
+      "question": "Em suporte ele seria júnior?",
+      "variants": [
+        "nível em suporte",
+        "experiência de suporte conta"
+      ],
+      "answer": "Não: são mais de dez anos de suporte, diagnóstico e manutenção em ambiente real. O que falta é apenas vivência em ferramenta corporativa de chamado e processo ITIL.",
+      "facet": "senioridade"
+    },
+    {
+      "id": "rc33",
+      "layer": 3,
+      "parent": "rc23",
+      "label": "política de IA da empresa",
+      "question": "E se a empresa não permitir IA?",
+      "variants": [
+        "empresa proíbe ia",
+        "sem acesso a ia"
+      ],
+      "answer": "A base não trata de política de IA específica. Ele se adapta à stack e às regras da empresa; suporte, diagnóstico e QA manual não dependem de IA.",
+      "facet": "sabe_programar"
+    },
+    {
+      "id": "rc34",
+      "layer": 3,
+      "parent": "rc24",
+      "label": "atendimento sob pressão",
+      "question": "Ele já fez atendimento sob pressão?",
+      "variants": [
+        "cliente esperando",
+        "balcão lotado"
+      ],
+      "answer": "Sim: guichê da Oi Atende, bancada técnica com cliente esperando e suporte a alunos e equipe na escola de informática.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc35",
+      "layer": 3,
+      "parent": "rc25",
+      "label": "automação de testes",
+      "question": "Ele sabe automação de testes?",
+      "variants": [
+        "cypress playwright",
+        "testes automatizados"
+      ],
+      "answer": "Ainda não no padrão de mercado. Entende o princípio e aprende rápido, mas hoje a prática é manual e analítica.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc36",
+      "layer": 4,
+      "parent": "rc26",
+      "label": "o objetivo de carreira",
+      "question": "Qual é o objetivo de carreira dele?",
+      "variants": [
+        "onde ele quer chegar",
+        "plano profissional"
+      ],
+      "answer": "Entrar numa equipe de TI, aprender por dentro e evoluir rápido. TI não é plano B para ele: é o caminho que sempre quis seguir."
+    },
+    {
+      "id": "rc37",
+      "layer": 4,
+      "parent": "rc27",
+      "label": "híbrido em Brasília",
+      "question": "Híbrido em Brasília funciona?",
+      "variants": [
+        "modelo híbrido no df",
+        "ir alguns dias ao escritório"
+      ],
+      "answer": "Sim. Híbrido em Brasília é um dos modelos ideais para ele, junto com remoto.",
+      "facet": "modelo_trabalho"
+    },
+    {
+      "id": "rc38",
+      "layer": 4,
+      "parent": "rc28",
+      "label": "situação atual de emprego",
+      "question": "Ele está empregado agora?",
+      "variants": [
+        "vínculo atual",
+        "está trabalhando"
+      ],
+      "answer": "Desde 2024 ele se dedica integralmente a projetos independentes, estudo e portfólio. A base não cita vínculo empregatício atual, e a disponibilidade é imediata.",
+      "facet": "disponibilidade"
+    },
+    {
+      "id": "rc39",
+      "layer": 4,
+      "parent": "rc29",
+      "label": "contrato temporário",
+      "question": "Ele aceita contrato temporário?",
+      "variants": [
+        "vaga temporária",
+        "projeto por prazo"
+      ],
+      "answer": "Isso ele conversa direto, de acordo com a vaga.",
+      "facet": "contratacao"
+    },
+    {
+      "id": "rc40",
+      "layer": 4,
+      "parent": "rc30",
+      "label": "avaliação técnica",
+      "question": "Ele aceita avaliação técnica?",
+      "variants": [
+        "teste técnico",
+        "prova prática",
+        "ele pode fazer um teste técnico",
+        "ele faz teste técnico",
+        "aceita teste técnico",
+        "pode fazer um case",
+        "ele faz um case"
+      ],
+      "answer": "Sim, e prefere formato que permita demonstrar: mostrar projeto, explicar decisão e depurar. Em prova seca de sintaxe ele é transparente sobre precisar de referência.",
+      "facet": "pretensao"
+    },
+    {
+      "id": "rc41",
+      "layer": 4,
+      "parent": "rc31",
+      "label": "demonstração ao vivo",
+      "question": "Ele pode demonstrar os projetos ao vivo?",
+      "variants": [
+        "demo em entrevista",
+        "mostrar o lar"
+      ],
+      "answer": "Sim. Os jogos e o gerador ABNT são públicos; LAR, Franzinha e Nexus ficam reservados, mas podem ser demonstrados em entrevista.",
+      "facet": "por_que_contratar"
+    },
+    {
+      "id": "rc42",
+      "layer": 4,
+      "parent": "rc32",
+      "label": "liderança",
+      "question": "Ele já liderou pessoas?",
+      "variants": [
+        "experiência de liderança",
+        "gestão de equipe"
+      ],
+      "answer": "De forma prática: gestão informal da unidade na Prepara, sócio operacional na Fabricart e sociedade em loja que cresceu de duas para dez pessoas. Não há cargo formal de liderança em TI.",
+      "facet": "senioridade"
+    },
+    {
+      "id": "rc43",
+      "layer": 4,
+      "parent": "rc33",
+      "label": "adaptação à stack",
+      "question": "Ele se adapta à stack da empresa?",
+      "variants": [
+        "aprende a stack",
+        "usa as ferramentas do time"
+      ],
+      "answer": "Sim. Já testou várias ferramentas de orquestração e, quando alguma não serviu ao fluxo dele, nunca foi barreira. Estando embarcado, aprende o que o time exigir. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "sabe_programar"
+    },
+    {
+      "id": "rc44",
+      "layer": 4,
+      "parent": "rc34",
+      "label": "um exemplo de atendimento",
+      "question": "Qual exemplo de atendimento ele cita?",
+      "variants": [
+        "caso de atendimento",
+        "história de balcão"
+      ],
+      "answer": "Na Oi Atende, estudou o sistema por dentro para resolver na própria loja casos que os colegas escalavam ao call center, e vendia bem oferecendo o plano que realmente servia ao cliente.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc45",
+      "layer": 4,
+      "parent": "rc35",
+      "label": "aprender Cypress",
+      "question": "Ele aprenderia Cypress ou Playwright?",
+      "variants": [
+        "disposição para automação",
+        "aprender teste automatizado"
+      ],
+      "answer": "Sim. Entende o princípio e diz que absorve bastante em dois dias intensos de hiperfoco. A automação entraria no contexto diário da equipe.",
+      "facet": "fit_vaga"
+    },
+    {
+      "id": "rc46",
+      "layer": 5,
+      "parent": "rc36",
+      "label": "onde ele quer chegar",
+      "question": "Onde ele quer chegar na carreira?",
+      "variants": [
+        "ambição profissional",
+        "meta de longo prazo"
+      ],
+      "answer": "A base descreve o próximo passo, não um cargo final: entrar, aprender por dentro e evoluir rápido numa equipe de tecnologia. Ele diz que, estando embarcado, navega para onde o time exigir."
+    },
+    {
+      "id": "rc47",
+      "layer": 5,
+      "parent": "rc38",
+      "label": "por que está disponível",
+      "question": "Por que ele está disponível?",
+      "variants": [
+        "motivo da disponibilidade",
+        "por que saiu do último emprego"
+      ],
+      "answer": "Porque fez uma transição estruturada: deixou a indústria para se dedicar a estudo e portfólio e agora quer atuar numa equipe de TI.",
+      "facet": "disponibilidade"
+    },
+    {
+      "id": "rc48",
+      "layer": 5,
+      "parent": "rc40",
+      "label": "teste prático",
+      "question": "Ele topa teste prático?",
+      "variants": [
+        "desafio técnico",
+        "case prático"
+      ],
+      "answer": "Sim. Teste prático é o formato em que ele mostra melhor o que faz: entender o problema, estruturar, depurar e validar.",
+      "facet": "pretensao"
+    },
+    {
+      "id": "rc49",
+      "layer": 5,
+      "parent": "rc42",
+      "label": "cargo de liderança",
+      "question": "Ele quer cargo de liderança?",
+      "variants": [
+        "ambição de liderar",
+        "quer ser gestor"
+      ],
+      "answer": "A base não informa essa meta. O foco declarado é entrar numa equipe de TI e evoluir tecnicamente.",
+      "facet": "senioridade"
+    },
+    {
+      "id": "rc50",
+      "layer": 5,
+      "parent": "rc43",
+      "label": "troca de ferramenta por exigência",
+      "question": "Ele já trocou de ferramenta por exigência?",
+      "variants": [
+        "mudou de stack",
+        "abandonou ferramenta"
+      ],
+      "answer": "Sim. Experimentou N8N, OpenClaw, OpenCode, ZCode e Claude Code; algumas não se encaixaram no fluxo dele e isso nunca impediu de seguir com outra. Hoje sonda Google Cloud e Azure.",
+      "facet": "sabe_programar"
+    }
+  ]
+}

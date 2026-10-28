@@ -1,0 +1,71 @@
+{
+  "category": "humanizer",
+  "descricao": "Camada de humanização: aberturas, transições e fechos aplicados por probabilidade e sem repetição próxima.",
+  "aberturas": {
+    "alta_confianca": [
+      "",
+      "",
+      "",
+      "Boa pergunta. ",
+      "Posso detalhar: ",
+      "Claro. ",
+      "Bora lá então. ",
+      "Se entendi bem, é o seguinte: ",
+      "Então, ",
+      "Nesse caso, ",
+      "Vou te dizer: ",
+      "Olha só: ",
+      "Saca essa: ",
+      "Boa. ",
+      "Certo. ",
+      "Deixa eu abrir: ",
+      "Direto ao ponto: ",
+      "Aqui vai: ",
+      "Sem rodeio: ",
+      "Curiosidade boa essa. ",
+      "Hmm, é o seguinte: ",
+      "Vamos por partes: ",
+      "Interessante isso. "
+    ],
+    "media_confianca": [
+      "Acho que entendi. ",
+      "Vou responder pelo que entendi: ",
+      "Se eu peguei certo, ",
+      "Deixa eu ver se te entendi: ",
+      "Se for isso, ",
+      "",
+      "",
+      ""
+    ],
+    "com_nome": [
+      "{nome}, ",
+      "Olha, {nome}: ",
+      "Então, {nome}, ",
+      "{nome}, saca isso: ",
+      "{nome}, aqui vai: ",
+      "{nome}, deixa eu te contar: ",
+      "",
+      "",
+      ""
+    ]
+  },
+  "transicoes": [
+    "Quer que eu aprofunde esse ponto?",
+    "Posso detalhar a parte técnica, se quiser.",
+    "Se quiser, eu comparo com outro projeto.",
+    "Quer que eu traga o lado prático disso para a vaga?",
+    "Posso seguir por outro ângulo, é só pedir.",
+    "",
+    "",
+    ""
+  ],
+  "confianca_baixa": [
+    "Não tenho certeza se entendi a pergunta. Você quis dizer algo sobre **{sugestao}**?",
+    "Acho que você está perguntando sobre **{sugestao}**, confirma pra mim?",
+    "Pode reformular? Talvez você esteja procurando **{sugestao}**."
+  ],
+  "ambiguidade": [
+    "Sua pergunta encaixa em mais de um tema: **{opcoes}**. Sobre qual deles você quer saber?",
+    "Posso responder por dois caminhos aqui: **{opcoes}**. Qual prefere?"
+  ]
+}

@@ -1,0 +1,658 @@
+{
+  "orbit": "experiencia",
+  "label": "Experiência Profissional",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós",
+  "nodes": [
+    {
+      "id": "ex01",
+      "layer": 1,
+      "parent": null,
+      "label": "a trajetória resumida",
+      "question": "Qual é a trajetória profissional dele em resumo?",
+      "variants": [
+        "resumo da carreira",
+        "por onde ele passou"
+      ],
+      "answer": "Friends Informática (2004 a 2008, estagiário e instrutor), trabalhos fora da área sempre perto de tecnologia (2009 a 2013), Prepara Cursos/Instituto Midori (2014 a 2016), Fabricart Indústria (2016 a 2018), Bella Arte Indústria (2018 a 2024) e, desde 2024, desenvolvimento assistido por IA, QA e portfólio público."
+    },
+    {
+      "id": "ex02",
+      "layer": 1,
+      "parent": null,
+      "label": "a Bella Arte",
+      "question": "O que ele fazia na Bella Arte?",
+      "variants": [
+        "trabalho na bella arte",
+        "projetista cnc"
+      ],
+      "answer": "Foi projetista industrial CNC e responsável técnico de operação em Vicente Pires/DF, de novembro de 2018 a fevereiro de 2024: modelagem vetorial para corte a laser CNC (CO2), manutenção de hardware e software das máquinas e planejamento logístico de insumos.",
+      "entity": "exp_bella_arte"
+    },
+    {
+      "id": "ex03",
+      "layer": 1,
+      "parent": null,
+      "label": "a Fabricart",
+      "question": "O que ele fazia na Fabricart?",
+      "variants": [
+        "trabalho na fabricart",
+        "fabricart indústria"
+      ],
+      "answer": "Assistente de logística, TI operacional e administrativo em Valparaíso de Goiás, de abril de 2016 a novembro de 2018. Atuava como sócio operacional: estoque, compras, orçamento, suporte a sistemas internos e modelagem em CorelDRAW para produção automatizada.",
+      "entity": "exp_fabricart"
+    },
+    {
+      "id": "ex04",
+      "layer": 1,
+      "parent": null,
+      "label": "a Prepara Cursos",
+      "question": "O que ele fazia na Prepara Cursos?",
+      "variants": [
+        "instituto midori",
+        "ele foi professor"
+      ],
+      "answer": "Instrutor de informática e suporte técnico em Taguatinga/DF, de agosto de 2014 a março de 2016. Ensinava Office, Photoshop, CorelDRAW, AutoCAD e manutenção de hardware e redes, administrava o laboratório e assumiu informalmente a gestão da unidade.",
+      "entity": "exp_prepara"
+    },
+    {
+      "id": "ex05",
+      "layer": 1,
+      "parent": null,
+      "label": "a Friends Informática",
+      "question": "O que foi a Friends Informática na carreira dele?",
+      "variants": [
+        "primeiro emprego",
+        "friends informática"
+      ],
+      "answer": "Foi o primeiro emprego formal, em Ceilândia/DF, de 2004 a 2008. Entrou como estagiário e virou instrutor de informática. Lá fez os cursos de Lógica de Programação e de Montagem e Manutenção que abriram o caminho técnico dele.",
+      "entity": "exp_friends"
+    },
+    {
+      "id": "ex06",
+      "layer": 1,
+      "parent": null,
+      "label": "o período autônomo",
+      "question": "O que ele fazia como técnico autônomo?",
+      "variants": [
+        "trabalho autônomo",
+        "assistência técnica própria"
+      ],
+      "answer": "De 2011 a 2014, no Distrito Federal: montagem de computadores sob medida, diagnóstico de placas, formatação e instalação de sistemas, com atendimento direto a clientes finais e empresas locais em bancada técnica.",
+      "entity": "exp_autonomo"
+    },
+    {
+      "id": "ex07",
+      "layer": 1,
+      "parent": null,
+      "label": "o trabalho atual",
+      "question": "O que ele faz hoje?",
+      "variants": [
+        "trabalho atual",
+        "o que ele está fazendo agora"
+      ],
+      "answer": "Desde 2024 se dedica a desenvolvimento web assistido por IA e QA em projetos independentes com deploy público: trilogia de games, web apps, sistema de loja com IA, este currículo com RAG e a ferramenta interna de orquestração (LAR). Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "entity": "exp_atual"
+    },
+    {
+      "id": "ex08",
+      "layer": 1,
+      "parent": null,
+      "label": "o tempo total de experiência",
+      "question": "Quantos anos de experiência ele tem?",
+      "variants": [
+        "tempo de carreira",
+        "há quanto tempo trabalha"
+      ],
+      "answer": "Mais de dez anos resolvendo problema técnico real em suporte, manutenção, rede e indústria. Só em fábrica foram cerca de 8 anos, de 2015 a 2023; a experiência mais longa em uma só empresa foi a Bella Arte: 5 anos e 4 meses.",
+      "facet": "tempo_total"
+    },
+    {
+      "id": "ex09",
+      "layer": 1,
+      "parent": null,
+      "label": "a experiência industrial",
+      "question": "Ele tem experiência industrial?",
+      "variants": [
+        "chão de fábrica",
+        "ambiente fabril"
+      ],
+      "answer": "Sim. Foram cerca de 8 anos de fábrica (2015 a 2023), além de oficina e balcão: corte a laser CNC, manutenção das próprias máquinas, modelagem vetorial de precisão, controle de rede e diagnóstico de falhas críticas.",
+      "facet": "industria"
+    },
+    {
+      "id": "ex10",
+      "layer": 1,
+      "parent": null,
+      "label": "a sociedade na loja",
+      "question": "Ele já foi sócio de uma loja?",
+      "variants": [
+        "sociedade em loja de informática",
+        "ele empreendeu"
+      ],
+      "answer": "Sim, de 2012 a 2013, em uma loja de informática. Entrou quando era uma loja só e participou do crescimento para dez funcionários e três lojas. O negócio encerrou por divergência de gestão entre os sócios.",
+      "entity": "exp_sociedade_loja"
+    },
+    {
+      "id": "ex11",
+      "layer": 1,
+      "parent": null,
+      "label": "a Oi Atende",
+      "question": "O que ele fez na Oi Atende?",
+      "variants": [
+        "trabalho na oi",
+        "atendente de guichê"
+      ],
+      "answer": "Em 2010 foi atendente de guichê presencial da Oi Atende Brasília, vendendo planos no balcão. Estudou o sistema por dentro para resolver na loja casos que normalmente eram escalados ao call center.",
+      "entity": "exp_oi"
+    },
+    {
+      "id": "ex12",
+      "layer": 1,
+      "parent": null,
+      "label": "a maior conquista",
+      "question": "Qual foi a maior conquista profissional dele?",
+      "variants": [
+        "maior entrega",
+        "caso de sucesso"
+      ],
+      "answer": "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça.",
+      "facet": "conquistas"
+    },
+    {
+      "id": "ex13",
+      "layer": 1,
+      "parent": null,
+      "label": "a saída da Bella Arte",
+      "question": "Por que ele saiu da Bella Arte?",
+      "variants": [
+        "motivo de saída",
+        "por que deixou a indústria"
+      ],
+      "answer": "Para migrar de vez para tecnologia, área em que já atuava informalmente dentro da própria empresa, cuidando de máquina, software, rede e automações próprias.",
+      "facet": "motivo_saida"
+    },
+    {
+      "id": "ex14",
+      "layer": 1,
+      "parent": null,
+      "label": "os anos fora da área",
+      "question": "Quais foram os trabalhos fora de TI?",
+      "variants": [
+        "o que ele fez entre 2009 e 2013",
+        "empregos fora da área"
+      ],
+      "answer": "Estágio na Dokas 1.99 (2009), guichê da Oi Atende (2010), alguns meses na Porto Seguro Consórcio (2011), aulas em duas escolas de informática (2011) e a sociedade na loja de informática (2012 a 2013). Em todos, ele orbitava tecnologia."
+    },
+    {
+      "id": "ex15",
+      "layer": 1,
+      "parent": null,
+      "label": "gestão e liderança",
+      "question": "Ele já teve responsabilidade de gestão?",
+      "variants": [
+        "ele liderou equipe",
+        "experiência de gestão"
+      ],
+      "answer": "Sim, de forma prática: gestão informal da unidade na Prepara (caixa, processos seletivos, apoio à decisão), atuação como sócio operacional na Fabricart e a sociedade em loja que cresceu de duas para dez pessoas."
+    },
+    {
+      "id": "ex16",
+      "layer": 2,
+      "parent": "ex01",
+      "label": "a experiência mais longa",
+      "question": "Qual foi a experiência mais longa?",
+      "variants": [
+        "onde ficou mais tempo",
+        "maior tempo de empresa",
+        "qual o nome da empresa onde ele trabalhou mais tempo",
+        "empresa onde ficou mais tempo",
+        "onde ele trabalhou mais tempo",
+        "em qual empresa ele ficou mais"
+      ],
+      "answer": "A Bella Arte Indústria: 5 anos e 4 meses, de novembro de 2018 a fevereiro de 2024. Foi também a que mais o formou tecnicamente.",
+      "entity": "exp_bella_arte"
+    },
+    {
+      "id": "ex17",
+      "layer": 2,
+      "parent": "ex02",
+      "label": "o trabalho com CNC",
+      "question": "O que ele fazia com CNC exatamente?",
+      "variants": [
+        "corte a laser",
+        "projetos cnc"
+      ],
+      "answer": "Projetos técnicos de ponta a ponta: vetorização, modelagem de encaixe e preparação de arquivo para corte a laser CNC (CO2), do desenho à peça final, além do diagnóstico e reparo das próprias máquinas.",
+      "entity": "exp_bella_arte"
+    },
+    {
+      "id": "ex18",
+      "layer": 2,
+      "parent": "ex03",
+      "label": "o banco de dados da Fabricart",
+      "question": "O que aconteceu com o banco de dados na Fabricart?",
+      "variants": [
+        "banco corrompido",
+        "migração g5 g6"
+      ],
+      "answer": "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça.",
+      "entity": "exp_fabricart"
+    },
+    {
+      "id": "ex19",
+      "layer": 2,
+      "parent": "ex04",
+      "label": "o que ele ensinava",
+      "question": "O que ele ensinava na Prepara?",
+      "variants": [
+        "aulas que ele dava",
+        "matérias como instrutor"
+      ],
+      "answer": "Photoshop, CorelDRAW, AutoCAD, Pacote Office completo, manutenção de rede e hardware. Foi onde ganhou prática de oratória técnica: traduzir conceito complexo para quem nunca viu.",
+      "entity": "exp_prepara"
+    },
+    {
+      "id": "ex20",
+      "layer": 2,
+      "parent": "ex05",
+      "label": "como entrou na Friends",
+      "question": "Como ele entrou na Friends Informática?",
+      "variants": [
+        "como conseguiu o primeiro emprego",
+        "início na friends"
+      ],
+      "answer": "A mãe dele conseguiu a vaga: levou-o à loja e ele foi aceito como estagiário. Foi ali que começou a estudar informática de verdade.",
+      "entity": "exp_friends"
+    },
+    {
+      "id": "ex21",
+      "layer": 2,
+      "parent": "ex06",
+      "label": "os serviços como autônomo",
+      "question": "Que serviços ele prestava como autônomo?",
+      "variants": [
+        "o que ele consertava",
+        "serviços de bancada"
+      ],
+      "answer": "Montagem de PC sob medida, diagnóstico de placa, formatação, instalação de sistema operacional e suporte direto a clientes finais e pequenas empresas, em bancada técnica.",
+      "entity": "exp_autonomo"
+    },
+    {
+      "id": "ex22",
+      "layer": 2,
+      "parent": "ex07",
+      "label": "o que ele produz hoje",
+      "question": "O que ele produz hoje, na prática?",
+      "variants": [
+        "entregas recentes",
+        "o que ele construiu desde 2024"
+      ],
+      "answer": "Três jogos publicados, dois em refino final, três ferramentas, um gerador acadêmico publicado, este currículo com RAG, um sistema de loja com IA e o LAR, além do benchmarking de mais de 400 modelos de IA.",
+      "entity": "exp_atual"
+    },
+    {
+      "id": "ex23",
+      "layer": 2,
+      "parent": "ex08",
+      "label": "experiência formal em TI",
+      "question": "Quantos anos de TI formal ele tem?",
+      "variants": [
+        "carteira assinada em ti",
+        "cargo formal de ti"
+      ],
+      "answer": "Cargo formal em equipe de TI ainda não teve, e ele diz isso com clareza. O que tem são mais de dez anos de responsabilidade técnica real em suporte, indústria e sistemas, mais o portfólio recente de software.",
+      "facet": "experiencia_dev"
+    },
+    {
+      "id": "ex24",
+      "layer": 2,
+      "parent": "ex09",
+      "label": "máquina parada sob pressão",
+      "question": "Ele sabe lidar com máquina parada sob pressão?",
+      "variants": [
+        "pressão na indústria",
+        "parada de produção"
+      ],
+      "answer": "Sim. Ele cita máquina CNC parada em cima da hora como um dos problemas que resolveu com ferramenta improvisada, prazo apertado e cliente esperando. Quando travava, quem abria a máquina era ele.",
+      "facet": "industria"
+    },
+    {
+      "id": "ex25",
+      "layer": 2,
+      "parent": "ex10",
+      "label": "o aprendizado da sociedade",
+      "question": "O que ele aprendeu na sociedade da loja?",
+      "variants": [
+        "lição de empreender",
+        "o que a loja ensinou"
+      ],
+      "answer": "Foi a primeira tentativa real de empreender na área técnica e de aprender na prática o que é gerir operação: equipe, estoque, atendimento e custo.",
+      "entity": "exp_sociedade_loja"
+    },
+    {
+      "id": "ex26",
+      "layer": 3,
+      "parent": "ex16",
+      "label": "por que a Bella Arte marcou",
+      "question": "Por que a Bella Arte foi tão importante para ele?",
+      "variants": [
+        "o que a bella arte ensinou",
+        "importância da bella arte"
+      ],
+      "answer": "Porque lá ele tinha liberdade para testar as próprias teorias. Chegou a enxergar o plano de corte na chapa antes de desenhar e a prever o comportamento da operação pelo som da máquina.",
+      "entity": "exp_bella_arte"
+    },
+    {
+      "id": "ex27",
+      "layer": 3,
+      "parent": "ex17",
+      "label": "manutenção das máquinas",
+      "question": "Ele fazia a manutenção das máquinas?",
+      "variants": [
+        "ele consertava a cnc",
+        "manutenção industrial"
+      ],
+      "answer": "Sim: diagnóstico físico, manutenção preventiva e corretiva de hardware e calibração de software das máquinas CNC.",
+      "entity": "exp_bella_arte"
+    },
+    {
+      "id": "ex28",
+      "layer": 3,
+      "parent": "ex18",
+      "label": "quem resolveu o banco",
+      "question": "Quem resolveu o problema do banco no fim?",
+      "variants": [
+        "os técnicos resolveram",
+        "ele resolveu sozinho"
+      ],
+      "answer": "Ele. Os técnicos autorizados do fornecedor não deram conta; ele consultou documentação e fórum, testou até achar a causa raiz e recuperou o banco. Chegou a bancar parte do atendimento do próprio bolso.",
+      "entity": "exp_fabricart"
+    },
+    {
+      "id": "ex29",
+      "layer": 3,
+      "parent": "ex19",
+      "label": "a gestão da unidade",
+      "question": "Ele gerenciava a unidade da Prepara?",
+      "variants": [
+        "ele era gestor",
+        "gestão administrativa"
+      ],
+      "answer": "Informalmente, sim: controle de caixa, processos seletivos e apoio à decisão, além de ser um dos poucos no DF que sabia destravar o sistema da franquia e fazer o servidor voltar.",
+      "entity": "exp_prepara"
+    },
+    {
+      "id": "ex30",
+      "layer": 3,
+      "parent": "ex20",
+      "label": "de estagiário a instrutor",
+      "question": "Como ele virou instrutor?",
+      "variants": [
+        "como passou a dar aula",
+        "promoção na friends"
+      ],
+      "answer": "O curso de Montagem e Manutenção de Computadores, com o professor Roberto, abriu a primeira oportunidade real: ele passou a ensinar Office, manutenção e o básico de informática a quem nunca tinha tocado num PC.",
+      "entity": "exp_friends"
+    },
+    {
+      "id": "ex31",
+      "layer": 3,
+      "parent": "ex21",
+      "label": "atendimento a empresas",
+      "question": "Ele atendia empresas como autônomo?",
+      "variants": [
+        "clientes empresariais",
+        "suporte a comércio"
+      ],
+      "answer": "Sim, clientes finais e empresas locais, em suporte e manutenção direta na bancada.",
+      "entity": "exp_autonomo"
+    },
+    {
+      "id": "ex32",
+      "layer": 3,
+      "parent": "ex22",
+      "label": "projetos públicos",
+      "question": "Esses projetos estão públicos?",
+      "variants": [
+        "dá para verificar",
+        "onde ver as entregas"
+      ],
+      "answer": "Os jogos e o gerador ABNT têm deploy público na Vercel; DirectSend e Marketbobby estão no GitHub. LAR, Franzinha e Nexus ficam reservados, mas podem ser demonstrados em entrevista.",
+      "entity": "exp_atual"
+    },
+    {
+      "id": "ex33",
+      "layer": 3,
+      "parent": "ex23",
+      "label": "por que não teve cargo formal",
+      "question": "Por que ele ainda não teve cargo formal em TI?",
+      "variants": [
+        "o que impediu a entrada em ti",
+        "por que demorou"
+      ],
+      "answer": "Ele relata anos de portas fechadas: falta de diploma na época, condição financeira difícil, entrevistas ruins e empregos fora da área. Mesmo assim, nunca saiu da órbita da tecnologia.",
+      "facet": "experiencia_dev"
+    },
+    {
+      "id": "ex34",
+      "layer": 3,
+      "parent": "ex24",
+      "label": "antecipar problemas",
+      "question": "Ele conseguia antecipar problemas na operação?",
+      "variants": [
+        "previa falhas",
+        "visão de operação"
+      ],
+      "answer": "Sim. Ele conta que sabia o que ia acontecer com a operação antes de acontecer, e que fazia dedução de custo e de venda pelo próprio ouvido, pelo som da máquina.",
+      "facet": "industria"
+    },
+    {
+      "id": "ex35",
+      "layer": 3,
+      "parent": "ex25",
+      "label": "o crescimento da loja",
+      "question": "A loja cresceu enquanto ele era sócio?",
+      "variants": [
+        "quantos funcionários a loja teve",
+        "quantas lojas"
+      ],
+      "answer": "Sim: de dois para dez funcionários, chegando a três lojas no fim do período.",
+      "entity": "exp_sociedade_loja"
+    },
+    {
+      "id": "ex36",
+      "layer": 4,
+      "parent": "ex26",
+      "label": "automações na Bella Arte",
+      "question": "Ele automatizou algo na Bella Arte?",
+      "variants": [
+        "scripts na indústria",
+        "ele criou sistema lá"
+      ],
+      "answer": "Sim. Como a empresa não queria sistema pronto, ele usou script do próprio Windows para indexar arquivos em pesquisa, montou janelas em PowerShell para visualizar DXF e cruzou arquivo de projeto com pedido de cliente. Tinha bug, mas funcionava e era dele.",
+      "entity": "exp_bella_arte"
+    },
+    {
+      "id": "ex37",
+      "layer": 4,
+      "parent": "ex27",
+      "label": "o tipo de máquina",
+      "question": "Que tipo de máquina era?",
+      "variants": [
+        "qual cnc",
+        "laser co2"
+      ],
+      "answer": "Máquinas de corte a laser CNC de CO2, usadas em MDF e material similar.",
+      "entity": "exp_bella_arte"
+    },
+    {
+      "id": "ex38",
+      "layer": 4,
+      "parent": "ex28",
+      "label": "o cargo na época do banco",
+      "question": "Ele tinha cargo de TI nessa época?",
+      "variants": [
+        "ele era o ti da empresa",
+        "função oficial na fabricart"
+      ],
+      "answer": "Não. Era assistente de logística e administrativo, atuando como sócio operacional. Resolveu o banco sem cargo formal de TI e sem diploma na época.",
+      "entity": "exp_fabricart"
+    },
+    {
+      "id": "ex39",
+      "layer": 4,
+      "parent": "ex29",
+      "label": "reconhecimento na Prepara",
+      "question": "O trabalho dele era reconhecido na Prepara?",
+      "variants": [
+        "ele foi valorizado lá",
+        "reconhecimento"
+      ],
+      "answer": "Ele relata que entregava números bons e sustentava a operação da unidade, com jornadas longas, mas sem reconhecimento formal, em parte por não ter diploma na época.",
+      "entity": "exp_prepara"
+    },
+    {
+      "id": "ex40",
+      "layer": 4,
+      "parent": "ex30",
+      "label": "os cursos na Friends",
+      "question": "Que cursos ele fez na Friends?",
+      "variants": [
+        "formação na friends",
+        "lógica de programação em 2007"
+      ],
+      "answer": "Lógica de Programação (2007), onde aprendeu a pensar como programador pela primeira vez, e Montagem e Manutenção de Computadores (2007), com o professor Roberto.",
+      "entity": "exp_friends"
+    },
+    {
+      "id": "ex41",
+      "layer": 4,
+      "parent": "ex31",
+      "label": "PCs sob medida",
+      "question": "Ele montava computadores sob medida?",
+      "variants": [
+        "montagem personalizada",
+        "ele monta pc"
+      ],
+      "answer": "Sim, montagem sob medida, além de diagnóstico de placas e instalação de sistemas. Desde moleque já montava e desmontava máquina por prazer.",
+      "entity": "exp_autonomo"
+    },
+    {
+      "id": "ex42",
+      "layer": 4,
+      "parent": "ex32",
+      "label": "o benchmarking de modelos",
+      "question": "O que foi o benchmarking de modelos?",
+      "variants": [
+        "teste de 400 modelos",
+        "como ele testou ia"
+      ],
+      "answer": "Sessões exploratórias com mais de 400 modelos de IA, para entender limites e comportamento real de cada família, sem catálogo documentado. Virou base para orquestração de agentes e RAG. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "entity": "exp_atual"
+    },
+    {
+      "id": "ex43",
+      "layer": 4,
+      "parent": "ex33",
+      "label": "a virada de 2024",
+      "question": "O que mudou em 2024?",
+      "variants": [
+        "por que 2024 foi diferente",
+        "transição de carreira"
+      ],
+      "answer": "Voltou a estudar com diagnóstico e método: graduação em TI em EAD e mergulho em IA. Pela primeira vez sentiu que o trilho existia: formato adaptado, ferramenta certa e foco direcionado.",
+      "facet": "experiencia_dev"
+    },
+    {
+      "id": "ex44",
+      "layer": 4,
+      "parent": "ex34",
+      "label": "processos industriais",
+      "question": "Ele conhece processos industriais?",
+      "variants": [
+        "logística de insumos",
+        "planejamento de produção"
+      ],
+      "answer": "Sim: planejamento logístico de insumos, otimização de processos e atuação no planejamento financeiro do setor, unindo visão técnica e operacional.",
+      "facet": "industria"
+    },
+    {
+      "id": "ex45",
+      "layer": 4,
+      "parent": "ex35",
+      "label": "o fim da sociedade",
+      "question": "Por que a sociedade terminou?",
+      "variants": [
+        "o que deu errado na loja",
+        "por que fechou"
+      ],
+      "answer": "Por divergência de gestão: o sócio não colaborava e o negócio acabou quebrando. Ele guarda o aprendizado de operação e equipe.",
+      "entity": "exp_sociedade_loja"
+    },
+    {
+      "id": "ex46",
+      "layer": 5,
+      "parent": "ex36",
+      "label": "PowerShell na prática",
+      "question": "Ele usava PowerShell?",
+      "variants": [
+        "scripts ps1",
+        "automação em windows"
+      ],
+      "answer": "Sim. Montou janelas em PS1 para visualizar arquivos DXF e usou scripts do Windows para indexação e cruzamento de dados, tudo juntando fórum, vídeo e ideia própria.",
+      "entity": "exp_bella_arte"
+    },
+    {
+      "id": "ex47",
+      "layer": 5,
+      "parent": "ex38",
+      "label": "isso conta como TI",
+      "question": "Isso conta como experiência de TI?",
+      "variants": [
+        "vale como experiência técnica",
+        "é experiência real"
+      ],
+      "answer": "Formalmente não era cargo de TI, mas o trabalho foi de TI: recuperação de banco em produção, suporte a sistemas e automação. Ele apresenta assim, sem inflar o título e sem apagar o conteúdo.",
+      "entity": "exp_fabricart"
+    },
+    {
+      "id": "ex48",
+      "layer": 5,
+      "parent": "ex40",
+      "label": "o professor Roberto",
+      "question": "Quem foi o professor Roberto?",
+      "variants": [
+        "professor da friends",
+        "quem ensinou manutenção"
+      ],
+      "answer": "O professor do curso de Montagem e Manutenção de Computadores na Friends Informática, em 2007. Foi esse curso que levou o Marcos a virar instrutor.",
+      "entity": "exp_friends"
+    },
+    {
+      "id": "ex49",
+      "layer": 5,
+      "parent": "ex43",
+      "label": "desenvolvimento assistido por IA",
+      "question": "O que é desenvolvimento assistido por IA, para ele?",
+      "variants": [
+        "definição de dev assistido",
+        "como ele chama o trabalho atual"
+      ],
+      "answer": "Ele conduz o raciocínio e usa IA como copiloto para acelerar escrita e iteração: define o que construir, lê e interpreta o código, depura e valida. A responsabilidade técnica pelo resultado é dele. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "experiencia_dev"
+    },
+    {
+      "id": "ex50",
+      "layer": 5,
+      "parent": "ex44",
+      "label": "visão de operação",
+      "question": "Como essa visão de operação ajuda em TI?",
+      "variants": [
+        "indústria ajuda em suporte",
+        "transferência da indústria"
+      ],
+      "answer": "Em suporte e QA, ele chega entendendo prazo, custo de parada e documentação de processo. Na indústria, erro custa material e máquina; esse rigor virou o olhar dele para software.",
+      "facet": "industria"
+    }
+  ]
+}

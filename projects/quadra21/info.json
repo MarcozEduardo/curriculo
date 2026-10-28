@@ -1,0 +1,17 @@
+{
+  "id": "quadra21",
+  "nome": "Quadra 21 – Barra Pesada",
+  "subtitulo": "Beat'em Up com Editor de Fase",
+  "stack": ["TypeScript", "Canvas 2D", "Editor Próprio"],
+  "descricao": "**Beat'em up** inspirado nos clássicos do gênero. Tem **intro cinematográfica** feita em sprite, **4 personagens jogáveis** e suporte a **até 3 players simultâneos**. A colisão é avançada: dá pra subir em cima do carro, cair do teto pro capô, usar objetos como arma. Vem com um **editor visual de fases** próprio, montado do zero, pra criar cenários sem mexer em código.",
+  "cta": null,
+  "status_label": "Em Refino (90%)",
+  "media": {
+    "demo": false,
+    "drive": "https://drive.google.com/file/d/1p0asfIV5RfYVrDY8bJ3XBFgf09KPZBQv/view?usp=sharing",
+    "youtube": null,
+    "video": null,
+    "capa": null,
+    "prints": ["screenshots/Screenshot_1.png", "screenshots/Screenshot_2.png", "capa/CapaQuadra.png"]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "orbita": "recrutamento",
+  "facet": "pretensao",
+  "arquivo": "AnswerPretensao.json",
+  "versao": "1.0",
+  "descricao": "Respostas modulares para pretensao salarial. Sempre evasivas em primeiro contato. Numero real so quando o recrutador insiste.",
+
+  "dados": {
+    "WHATSAPP": "**WhatsApp (61) 98222-7804**",
+    "REF_MIN": "**R$ 3.500**"
+  },
+
+  "frases": {
+    "EVASIVA": [
+      "Olha, pretensão salarial é algo bem relativo...",
+      "Esse ponto de salário é o tipo de coisa que ele prefere alinhar direto...",
+      "Pretensão é sempre um número que depende do pacote...",
+      "Ele quase não explorou esse tema comigo...",
+      "Essa é a típica pergunta que ele responde caso a caso..."
+    ],
+    "OFERTA_WPP": [
+      "que tal chamá-lo no {WHATSAPP}?",
+      "o caminho é falar com ele no {WHATSAPP}.",
+      "chama ele no {WHATSAPP} e alinha.",
+      "manda um oi no {WHATSAPP} que ele te responde."
+    ],
+    "TESTE": [
+      "Aí você propõe um teste: cria algo do zero, manda um bug pra ele debugar. Isso te ajuda a montar a proposta.",
+      "Sugere um teste prático: manda um problema real e vê como ele resolve. Aí você calibra o valor.",
+      "Propõe um desafio técnico curto. Ele responde melhor no teste do que no número.",
+      "Manda um bug pra ele resolver. Aí você sente o nível dele e negocia melhor."
+    ],
+    "PERFIL": [
+      "Ele tem mais de 10 anos resolvendo problema técnico real, do chão de fábrica ao código.",
+      "Ele vem de uma trajetória de 20+ anos de curiosidade técnica, com portfólio publicado.",
+      "Ele é analista de TI com foco em suporte, QA e desenvolvimento assistido por IA.",
+      "Ele tem um portfólio sólido: trilogia de games em TypeScript, ferramentas web e RAG."
+    ],
+    "IA_COPILOTO": [
+      "Ele não digita sintaxe de cor, mas orquestra a IA como copiloto, entende o fluxo e entrega.",
+      "Ele usa IA para acelerar a escrita, mas quem depura, lê e valida é ele.",
+      "Ele não sabe tudo de sintaxe de memória, mas com IA ele resolve e documenta.",
+      "Ele programa com IA, do mesmo jeito que tá fazendo agora. O cérebro é dele, a ferramenta acelera."
+    ],
+    "JUNIOR": [
+      "Ele aceitaria um júnior pra abrir a porta, mas o portfólio já fala por si.",
+      "Ele não tem medo de entrar como júnior, mas o nível técnico ele mostra no teste.",
+      "Ele topa começar como júnior pra entrar, mas o que ele entrega é maior que isso.",
+      "Ele aceita um júnior como porta, mas prefere que você teste antes de rotular."
+    ],
+    "BENEFICIOS": [
+      "Plano de saúde e benefícios padrão não são o atrativo principal. O que pega é oportunidade real e voto de confiança.",
+      "Benefício comum ele já tem. O que move é a chance de provar e aprender na prática.",
+      "Ele valoriza mais a porta de entrada e o desafio técnico do que o pacote de benefícios.",
+      "Plano e vale não são o chamariz. O chamariz é oportunidade de mostrar serviço."
+    ],
+    "RECICLAGEM": [
+      "Ele passou os últimos 2 anos e meio em reciclagem e transição estruturada pra TI.",
+      "Nos últimos 2 anos e meio, ele focou em estudo, portfólio e transição de carreira.",
+      "Ele dedicou os últimos 2 anos e meio a estudar, construir portfólio e se preparar pra TI.",
+      "Foi um período de reciclagem e foco total em transição pra tecnologia."
+    ],
+    "INSISTE": [
+      "Se você quer um número de referência, ele aceitaria algo em torno de {REF_MIN}. Mas isso depende do pacote e do modelo.",
+      "Como referência de entrada, {REF_MIN}. Mas o valor real é a combinar.",
+      "Ele topa começar em {REF_MIN} se for pra abrir porta. Mas prefere negociar contigo.",
+      "A base de entrada é {REF_MIN}. A partir daí é conversa."
+    ]
+  },
+
+  "receitas": {
+    "evasiva_oferta": {
+      "descricao": "Recrutador perguntou uma vez. Resposta evasiva + oferta do zap.",
+      "linhas": ["{EVASIVA} {OFERTA_WPP}"]
+    },
+    "evasiva_teste": {
+      "descricao": "Recrutador perguntou e insiste. Evasiva + sugere teste.",
+      "linhas": ["{EVASIVA} {TESTE} {OFERTA_WPP}"]
+    },
+    "junior_perfil": {
+      "descricao": "Recrutador pede pra ser júnior. Destaca portfólio.",
+      "linhas": ["{JUNIOR} {PERFIL} {OFERTA_WPP}"]
+    },
+    "copiloto_beneficios": {
+      "descricao": "Recrutador pergunta como ele programa e menciona benefícios.",
+      "linhas": ["{IA_COPILOTO} {BENEFICIOS}"]
+    },
+    "reciclagem_junior": {
+      "descricao": "Recrutador pergunta sobre o gap de 2 anos.",
+      "linhas": ["{RECICLAGEM} {JUNIOR}"]
+    },
+    "insiste": {
+      "descricao": "Recrutador insiste no número. Aí sim entrega referência.",
+      "linhas": ["{INSISTE} {OFERTA_WPP}"]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "category": "smalltalk",
+  "intents": [
+    {
+      "id": "como_vai",
+      "patterns": [
+        "tudo bem",
+        "como vai",
+        "como voce esta",
+        "tudo certo",
+        "beleza",
+        "tudo joia",
+        "como ta"
+      ],
+      "variations": [
+        "Tudo ótimo por aqui, rodando 100% no seu navegador, sem servidor e sem custo 🙂 E você, procurando perfil para alguma vaga?",
+        "Tudo certo! Eu não canso, não tomo café e não esqueço nenhum dado do currículo. Como posso ajudar?",
+        "Tudo tranquilo! Pronto para qualquer pergunta sobre o Marcão."
+      ]
+    },
+    {
+      "id": "agradecimento",
+      "patterns": [
+        "obrigado",
+        "obrigada",
+        "valeu",
+        "agradeco",
+        "grato",
+        "thanks",
+        "vlw",
+        "show de bola",
+        "massa"
+      ],
+      "variations": [
+        "Imagina, é um prazer! Se quiser, posso detalhar outro ponto do currículo.",
+        "Disponha! Qualquer outra dúvida sobre projetos, stack ou contratação, é só perguntar.",
+        "Por nada 🙂 Se achar que faz sentido, chame o Marcão direto no WhatsApp **(61) 98222-7804**."
+      ]
+    },
+    {
+      "id": "despedida",
+      "patterns": [
+        "tchau",
+        "ate mais",
+        "falou",
+        "ate logo",
+        "adeus",
+        "vou indo",
+        "bye",
+        "ate breve",
+        "fui"
+      ],
+      "variations": [
+        "Até mais! Se quiser retomar, é só abrir o chat. E o contato direto do Marcão é **(61) 98222-7804**.",
+        "Valeu pela visita! Boa sorte no processo, e, se o perfil fez sentido, chame o Marcão no [LinkedIn](https://www.linkedin.com/in/sir-marcos-eduardo).",
+        "Até logo! Fico por aqui guardando o currículo 🙂"
+      ]
+    },
+    {
+      "id": "elogio",
+      "patterns": [
+        "voce e bom",
+        "muito bom",
+        "gostei",
+        "legal esse bot",
+        "impressionante",
+        "parabens",
+        "top",
+        "que daora",
+        "que legal"
+      ],
+      "variations": [
+        "Valeu! Mérito do Marcão: eu sou JavaScript puro, sem IA generativa, toda a inteligência está na arquitetura de órbitas e facetas que ele escreveu.",
+        "Obrigado! Se gostou de mim, vale dar uma olhada nos jogos dele, a mesma cabeça que me montou escreveu motor de jogo do zero.",
+        "Fico feliz 🙂 Esse chat é literalmente uma amostra do trabalho dele: arquitetura, QA e documentação."
+      ]
+    },
+    {
+      "id": "piada",
+      "patterns": [
+        "conta uma piada",
+        "me faz rir",
+        "voce e engracado",
+        "kkk",
+        "haha",
+        "rsrs"
+      ],
+      "variations": [
+        "Humor não é minha especialidade, mas posso contar que o Marcão tem um jogo chamado 'O Estagiário', isso já é meio engraçado por si só 😄 Quer saber dele?",
+        "kkkk boa. Mas meu show é outro: me pergunte algo bem difícil do currículo e veja se eu acerto."
+      ]
+    },
+    {
+      "id": "ajuda",
+      "patterns": [
+        "o que voce faz",
+        "como usar",
+        "me ajuda",
+        "o que posso perguntar",
+        "quais opcoes",
+        "ajuda",
+        "comandos",
+        "menu"
+      ],
+      "variations": [
+        "Posso responder sobre:\n• **Projetos** (tecnologia, desafio, status, link e a história por trás de cada um)\n• **Habilidades** e nível em cada tecnologia\n• **Experiência** (10+ anos, empresa por empresa)\n• **Formação** (Unyleya, CS50)\n• **neurodivergência e altas habilidades** e adaptações\n• **Recrutamento** (pretensão, modelo, disponibilidade, contratação)\n• **Contato**\n\nPergunte do seu jeito, eu aguento erro de digitação e gíria.",
+        "Pode me entrevistar como entrevistaria o candidato: pergunte 'qual o projeto mais complexo?', 'qual a pretensão?', 'ele sabe programar mesmo?' ou 'quanto tempo levou o Dama Orbital?'."
+      ]
+    }
+  ]
+}

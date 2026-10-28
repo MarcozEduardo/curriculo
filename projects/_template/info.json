@@ -1,0 +1,18 @@
+{
+  "id": "nome-do-projeto",
+  "nome": "Nome do Projeto",
+  "subtitulo": "Subtítulo curto",
+  "stack": ["Tecnologia 1", "Tecnologia 2"],
+  "descricao": "Descrição curta do projeto.",
+  "cta": {
+    "label": "Jogar Agora",
+    "url": "https://exemplo.com",
+    "icone": "fa-play"
+  },
+  "media": {
+    "demo": false,
+    "video": "video/main.mp4",
+    "capa": "capa/cover.jpg",
+    "prints": ["screenshots/01.jpg", "screenshots/02.jpg"]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "orbita": "contato",
+  "arquivo": "GrammarContact.json",
+  "versao": "1.0",
+  "descricao": "Gramática de contato. Cada token acumula peso. Quando atinge 0.55, dispara. Se tem canal específico + canal genérico, entrega os dois.",
+
+  "regras": {
+    "threshold_hit": 0.55,
+    "threshold_duvida": 0.30,
+    "canal_obrigatorio": true
+  },
+
+  "compostos": {
+    "git hub": "github",
+    "whats app": "whatsapp",
+    "whats zap": "whatsapp",
+    "linked in": "linkedin",
+    "e mail": "email",
+    "e-mail": "email",
+    "whatsapp app": "whatsapp"
+  },
+
+  "familias": {
+    "PEDIDO": {
+      "peso": 0.25,
+      "palavras": ["manda", "mandar", "passa", "passar", "fala", "falar", "fale", "envia", "enviar", "manda ai", "solta", "soltar", "cola", "colar", "joga", "jogar", "descola", "bora", "mostra", "mostrar", "detalha", "preciso", "gostaria", "quero", "queria"]
+    },
+    "INTERROGATIVO": {
+      "peso": 0.15,
+      "palavras": ["qual", "quais", "como", "onde", "quem", "quanto", "cade", "tem", "teria", "existe"]
+    },
+    "CORTESIA": {
+      "peso": 0.05,
+      "palavras": ["poderia", "pode", "por favor", "gentileza", "agradeco", "grato", "se possivel", "se puder"]
+    },
+    "SUJEITO": {
+      "peso": 0.10,
+      "palavras": ["dele", "dela", "do marcos", "do marcao", "do marcos eduardo", "do candidato", "do cara", "do moço", "do moço", "dele mesmo", "sobre ele"]
+    },
+    "ADICAO": {
+      "peso": 0.05,
+      "palavras": ["tambem", "também", "tb", "tbm", "mais", "e o", "e a", "mais o", "mais a", "tambem o", "tambem a"]
+    },
+    "CANAL": {
+      "whatsapp": {
+        "peso": 0.30,
+        "especifico": true,
+        "palavras": ["whatsapp", "whats", "zap", "zapzap", "wpp", "celular", "fone", "numero", "telefone", "tel", "whatsapp dele"]
+      },
+      "github": {
+        "peso": 0.30,
+        "especifico": true,
+        "palavras": ["github", "git", "repo", "repositorio", "codigo", "git hub"]
+      },
+      "linkedin": {
+        "peso": 0.30,
+        "especifico": true,
+        "palavras": ["linkedin", "linked in", "li"]
+      },
+      "email": {
+        "peso": 0.30,
+        "especifico": true,
+        "palavras": ["email", "e-mail", "mail"]
+      },
+      "generico": {
+        "peso": 0.15,
+        "especifico": false,
+        "palavras": ["contato", "contatinho", "canal", "meio", "caminho", "jeito", "forma"]
+      }
+    }
+  }
+}

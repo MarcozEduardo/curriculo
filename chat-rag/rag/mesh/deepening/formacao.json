@@ -1,0 +1,634 @@
+{
+  "orbit": "formacao",
+  "label": "Formação e Estudos",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós",
+  "nodes": [
+    {
+      "id": "fo01",
+      "layer": 1,
+      "parent": null,
+      "label": "a formação atual",
+      "question": "Qual é a formação atual dele?",
+      "variants": [
+        "o que ele está cursando",
+        "formação acadêmica"
+      ],
+      "answer": "Graduação em Tecnologia da Informação (EAD) na Faculdade Unyleya, em andamento, e CS50: Introduction to Computer Science, da Harvard University, em estudo contínuo e independente."
+    },
+    {
+      "id": "fo02",
+      "layer": 1,
+      "parent": null,
+      "label": "a graduação na Unyleya",
+      "question": "Como é a graduação na Unyleya?",
+      "variants": [
+        "curso de ti da unyleya",
+        "faculdade dele"
+      ],
+      "answer": "É uma graduação em TI em formato EAD, em andamento. Ele diz que foi o curso que o fez voltar a acreditar que conseguiria concluir uma formação formal, porque o formato encaixa com o jeito de aprender dele.",
+      "entity": "form_unyleya"
+    },
+    {
+      "id": "fo03",
+      "layer": 1,
+      "parent": null,
+      "label": "o CS50",
+      "question": "O que é o CS50 na formação dele?",
+      "variants": [
+        "curso de harvard",
+        "cs50 harvard"
+      ],
+      "answer": "É o curso de introdução à ciência da computação de Harvard. Ele estuda de forma independente para consolidar a base teórica: algoritmos, estruturas de dados e lógica de programação.",
+      "entity": "form_cs50"
+    },
+    {
+      "id": "fo04",
+      "layer": 1,
+      "parent": null,
+      "label": "os cursos de origem",
+      "question": "Quais foram os primeiros cursos técnicos dele?",
+      "variants": [
+        "cursos de 2007 a 2011",
+        "formação técnica antiga"
+      ],
+      "answer": "Lógica de Programação e Montagem e Manutenção de Computadores (Friends Informática, 2007), palestras práticas de Access e SQL (Microlins, 2009), formação interna para instrutores (NewWorld Informática e Via Educação, 2011) e matérias de Sistemas de Informação na UCB (2011).",
+      "entity": "form_cursos_origem"
+    },
+    {
+      "id": "fo05",
+      "layer": 1,
+      "parent": null,
+      "label": "os cursos de 2014 e 2015",
+      "question": "Quais cursos ele fez em 2014 e 2015?",
+      "variants": [
+        "cursos na prepara",
+        "web designer java python"
+      ],
+      "answer": "Web Designer (Prepara Cursos, 2014), Java com foco em componentes (Prepara, 2014) e Python (2015), no início da adoção da linguagem no Brasil.",
+      "entity": "form_cursos_tecnicos"
+    },
+    {
+      "id": "fo06",
+      "layer": 1,
+      "parent": null,
+      "label": "como ele aprende",
+      "question": "Como ele aprende melhor?",
+      "variants": [
+        "método de estudo",
+        "jeito de aprender"
+      ],
+      "answer": "Fazendo e lendo. Ele aplica na prática o que estuda, no próprio ritmo, sem depender de aula linear. A memória dele funciona mais por reconhecimento do que por invocação, e é assim que ele organiza o estudo.",
+      "facet": "forma_de_aprender"
+    },
+    {
+      "id": "fo07",
+      "layer": 1,
+      "parent": null,
+      "label": "as pausas na formação",
+      "question": "Por que a formação dele teve pausas?",
+      "variants": [
+        "por que ele trancou cursos",
+        "idas e vindas na faculdade"
+      ],
+      "answer": "Por falta de encaixe, não de vontade: o modelo linear e teórico o travava, e algumas pausas vieram de questões financeiras e de vida. Ele só entendeu o motivo técnico depois do diagnóstico de neurodivergência, já adulto."
+    },
+    {
+      "id": "fo08",
+      "layer": 1,
+      "parent": null,
+      "label": "o primeiro contato com programação",
+      "question": "Quando ele teve o primeiro contato com programação?",
+      "variants": [
+        "começo na programação",
+        "primeiro curso de lógica"
+      ],
+      "answer": "Em 2007, no curso de Lógica de Programação da Friends Informática, em Ceilândia. Na prática, antes disso ele já escrevia scripts para o Windows sem saber que aquilo era programar."
+    },
+    {
+      "id": "fo09",
+      "layer": 1,
+      "parent": null,
+      "label": "banco de dados nos estudos",
+      "question": "Ele estudou banco de dados?",
+      "variants": [
+        "curso de sql",
+        "access e sql"
+      ],
+      "answer": "Sim: palestras práticas de Access e SQL na Microlins, em 2009, o primeiro contato direto com banco relacional. Depois, na prática, lidou com o banco do sistema da Fabricart."
+    },
+    {
+      "id": "fo10",
+      "layer": 1,
+      "parent": null,
+      "label": "a passagem pela UCB",
+      "question": "Ele cursou faculdade antes da Unyleya?",
+      "variants": [
+        "ucb sistemas de informação",
+        "universidade católica"
+      ],
+      "answer": "Cursou parte das matérias de Sistemas de Informação na UCB (Universidade Católica de Brasília) em 2011, antes de precisar pausar por questões de vida e de custo."
+    },
+    {
+      "id": "fo11",
+      "layer": 1,
+      "parent": null,
+      "label": "o curso de Python",
+      "question": "Como foi o curso de Python?",
+      "variants": [
+        "python em 2015",
+        "ele aprendeu python onde"
+      ],
+      "answer": "Foi um curso curto em 2015, no início da adoção da linguagem no Brasil. Ele diz que foi onde viu pela primeira vez o poder de uma linguagem simples para resolver problema grande."
+    },
+    {
+      "id": "fo12",
+      "layer": 1,
+      "parent": null,
+      "label": "o curso de Java",
+      "question": "Ele estudou Java?",
+      "variants": [
+        "java em 2014",
+        "orientação a objetos"
+      ],
+      "answer": "Sim, em 2014, na Prepara Cursos, com foco em componentes. Foi o primeiro contato mais sério com linguagem orientada a objetos."
+    },
+    {
+      "id": "fo13",
+      "layer": 1,
+      "parent": null,
+      "label": "o curso de Web Designer",
+      "question": "O que ele aprendeu no curso de Web Designer?",
+      "variants": [
+        "web design 2014",
+        "curso de sites"
+      ],
+      "answer": "HTML, CSS, Photoshop, CorelDRAW, estrutura de sites e criação visual, em 2014, na Prepara Cursos. Virou trabalho no mesmo ano, com os primeiros sites comerciais."
+    },
+    {
+      "id": "fo14",
+      "layer": 1,
+      "parent": null,
+      "label": "a formação em IA",
+      "question": "Onde ele estudou IA?",
+      "variants": [
+        "curso de inteligência artificial",
+        "formação em ia"
+      ],
+      "answer": "Na prática, a partir de 2024, junto com a graduação: meses de testes exploratórios com centenas de modelos, orquestração de agentes e arquitetura RAG aplicada em projetos próprios. Sem certificação formal na área. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+    },
+    {
+      "id": "fo15",
+      "layer": 1,
+      "parent": null,
+      "label": "certificações",
+      "question": "Ele tem certificações formais?",
+      "variants": [
+        "certificados",
+        "diplomas de certificação"
+      ],
+      "answer": "Não informou certificações de mercado como ITIL, Microsoft, Cisco ou AWS. A comprovação é a graduação em andamento, o CS50, os cursos técnicos e o portfólio público e testável.",
+      "facet": "certificacoes"
+    },
+    {
+      "id": "fo16",
+      "layer": 2,
+      "parent": "fo01",
+      "label": "a fase da graduação",
+      "question": "A graduação está em que fase?",
+      "variants": [
+        "quando ele se forma",
+        "semestre atual"
+      ],
+      "answer": "Em andamento. A base não informa o semestre nem a previsão exata de conclusão; ele concilia estudo, projetos e disponibilidade para trabalhar.",
+      "entity": "form_unyleya"
+    },
+    {
+      "id": "fo17",
+      "layer": 2,
+      "parent": "fo02",
+      "label": "por que EAD",
+      "question": "Por que ele escolheu EAD?",
+      "variants": [
+        "vantagem do ead para ele",
+        "estudo a distância"
+      ],
+      "answer": "Porque estuda no próprio ritmo, aplica na prática o que aprende e não depende de aula linear para absorver. É o formato que finalmente encaixou com a cabeça dele.",
+      "entity": "form_unyleya"
+    },
+    {
+      "id": "fo18",
+      "layer": 2,
+      "parent": "fo03",
+      "label": "o conteúdo do CS50",
+      "question": "O que ele estuda no CS50?",
+      "variants": [
+        "matérias do cs50",
+        "o que o cs50 ensina"
+      ],
+      "answer": "Algoritmos, estruturas de dados e lógica de programação de verdade. Ele usa o curso para consolidar a teoria que complementa o que construiu na prática.",
+      "entity": "form_cs50"
+    },
+    {
+      "id": "fo19",
+      "layer": 2,
+      "parent": "fo04",
+      "label": "a Friends Informática",
+      "question": "O que era a Friends Informática?",
+      "variants": [
+        "onde ficava a friends",
+        "friends informática ceilândia"
+      ],
+      "answer": "Uma loja e escola de informática no centro da Ceilândia, hoje extinta. Foi o primeiro emprego dele e onde fez os cursos de lógica e de montagem e manutenção.",
+      "entity": "form_cursos_origem"
+    },
+    {
+      "id": "fo20",
+      "layer": 2,
+      "parent": "fo05",
+      "label": "o que o Web Designer ensinou",
+      "question": "O curso de Web Designer serviu para quê?",
+      "variants": [
+        "utilidade do curso de web",
+        "o que ficou do web designer"
+      ],
+      "answer": "Deu a base visual e de estrutura de sites que ele usou nos primeiros trabalhos comerciais de 2014, cuidando de layout e experiência do usuário.",
+      "entity": "form_cursos_tecnicos"
+    },
+    {
+      "id": "fo21",
+      "layer": 2,
+      "parent": "fo06",
+      "label": "memória por reconhecimento",
+      "question": "O que significa memória por reconhecimento?",
+      "variants": [
+        "reconhecimento versus invocação",
+        "como a memória dele funciona"
+      ],
+      "answer": "Ele lê um código e entende perfeitamente o que faz, enxerga o fluxo e identifica erro. Mas escrever aquilo do zero, sem referência, exige muito mais esforço. Não é falta de capacidade: é como o cérebro dele se organizou.",
+      "facet": "forma_de_aprender"
+    },
+    {
+      "id": "fo22",
+      "layer": 2,
+      "parent": "fo07",
+      "label": "quantas tentativas",
+      "question": "Quantas tentativas de formação não deram certo?",
+      "variants": [
+        "quantas vezes ele começou faculdade",
+        "tentativas frustradas"
+      ],
+      "answer": "Seis tentativas que não avançaram antes do diagnóstico. Ele diz que cada uma doía, e que a estrutura engessada o apagava mesmo com toda a força no começo."
+    },
+    {
+      "id": "fo23",
+      "layer": 2,
+      "parent": "fo08",
+      "label": "o curso de lógica",
+      "question": "O que ele aprendeu no curso de lógica?",
+      "variants": [
+        "lógica de programação da friends",
+        "primeiro passo em programação"
+      ],
+      "answer": "A pensar como programador pela primeira vez: estruturar o raciocínio antes de escrever qualquer código."
+    },
+    {
+      "id": "fo24",
+      "layer": 2,
+      "parent": "fo09",
+      "label": "SQL hoje",
+      "question": "Ele usa SQL hoje?",
+      "variants": [
+        "nível de sql",
+        "ele domina sql"
+      ],
+      "answer": "Entende o princípio e a arquitetura de consulta, mas numa prova seca de sintaxe precisaria de apoio. Nas palavras dele: sintaxe se recupera com referência; raciocínio de arquitetura, não."
+    },
+    {
+      "id": "fo25",
+      "layer": 2,
+      "parent": "fo10",
+      "label": "a pausa na UCB",
+      "question": "Por que ele pausou a UCB?",
+      "variants": [
+        "motivo de sair da católica",
+        "ucb trancada"
+      ],
+      "answer": "Não conseguiu manter o custo e o desânimo pesou com a falta de base em comparação aos colegas. Foi uma das tentativas que não avançaram antes do diagnóstico."
+    },
+    {
+      "id": "fo26",
+      "layer": 3,
+      "parent": "fo16",
+      "label": "diploma como exigência",
+      "question": "A falta de diploma concluído atrapalha a candidatura?",
+      "variants": [
+        "precisa ter se formado",
+        "sem diploma dá"
+      ],
+      "answer": "Ele é transparente: a graduação está em andamento. Enquanto conclui, soma mais de dez anos de prática técnica a um portfólio verificável.",
+      "entity": "form_unyleya"
+    },
+    {
+      "id": "fo27",
+      "layer": 3,
+      "parent": "fo17",
+      "label": "estudo no próprio ritmo",
+      "question": "Ele estuda no próprio ritmo?",
+      "variants": [
+        "rotina de estudo",
+        "como ele organiza o estudo"
+      ],
+      "answer": "Sim. Esse é o ponto do EAD para ele: ritmo próprio e aplicação imediata. Quando o assunto interessa, entra em hiperfoco e avança rápido.",
+      "entity": "form_unyleya"
+    },
+    {
+      "id": "fo28",
+      "layer": 3,
+      "parent": "fo18",
+      "label": "o CS50 em inglês",
+      "question": "O CS50 é em inglês?",
+      "variants": [
+        "ele estuda em inglês",
+        "curso em inglês"
+      ],
+      "answer": "O CS50 é em inglês, e esse é um dos jeitos que ele usa para treinar vocabulário. Ele estuda algumas coisas em inglês justamente para melhorar, mas não se considera intermediário.",
+      "entity": "form_cs50"
+    },
+    {
+      "id": "fo29",
+      "layer": 3,
+      "parent": "fo19",
+      "label": "trabalho na Friends",
+      "question": "Ele também trabalhou na Friends?",
+      "variants": [
+        "ele foi funcionário da friends",
+        "estágio na friends"
+      ],
+      "answer": "Sim: entrou como estagiário em 2004 e virou instrutor de informática, ficando até 2008.",
+      "entity": "form_cursos_origem"
+    },
+    {
+      "id": "fo30",
+      "layer": 3,
+      "parent": "fo20",
+      "label": "do curso para o trabalho",
+      "question": "O curso de Web Designer virou trabalho?",
+      "variants": [
+        "ele fez sites depois do curso",
+        "aplicação do curso"
+      ],
+      "answer": "Sim. Em 2014, já na Prepara Cursos, ele participou dos primeiros sites comerciais: o da unidade de Taguatinga, o de uma empresa de cursos e RH e o de uma banda.",
+      "entity": "form_cursos_tecnicos"
+    },
+    {
+      "id": "fo31",
+      "layer": 3,
+      "parent": "fo21",
+      "label": "efeito em escrever código",
+      "question": "Como isso afeta escrever código?",
+      "variants": [
+        "ele consegue escrever do zero",
+        "dificuldade de escrever"
+      ],
+      "answer": "Escrever do zero sem referência trava mais; ler, entender e corrigir flui. Por isso a IA como copiloto encaixou: ele lê o retorno, valida o comportamento, ajusta a lógica e entrega funcionando. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "forma_de_aprender"
+    },
+    {
+      "id": "fo32",
+      "layer": 3,
+      "parent": "fo22",
+      "label": "o diagnóstico e o estudo",
+      "question": "O diagnóstico mudou a forma de estudar?",
+      "variants": [
+        "o que mudou depois do diagnóstico",
+        "estudo depois do laudo"
+      ],
+      "answer": "Sim. Ele parou de se culpar pelo formato errado e passou a aprender do jeito que funciona: fazendo, lendo e aplicando, com foco direcionado. Em 2024 voltou a estudar com método."
+    },
+    {
+      "id": "fo33",
+      "layer": 3,
+      "parent": "fo23",
+      "label": "a sequência de programação",
+      "question": "Ele continuou estudando programação depois?",
+      "variants": [
+        "estudos de programação seguintes",
+        "depois da lógica"
+      ],
+      "answer": "Sim: Java em 2014, Python em 2015, matérias de Sistemas de Informação na UCB e, hoje, graduação em TI e CS50."
+    },
+    {
+      "id": "fo34",
+      "layer": 3,
+      "parent": "fo24",
+      "label": "o curso de banco de dados",
+      "question": "Ele já fez curso de banco de dados?",
+      "variants": [
+        "formação em banco de dados",
+        "curso de access"
+      ],
+      "answer": "Sim, palestras práticas de Access e SQL na Microlins, em 2009. Foi o primeiro contato direto com banco de dados relacional."
+    },
+    {
+      "id": "fo35",
+      "layer": 3,
+      "parent": "fo25",
+      "label": "voltar à UCB",
+      "question": "Ele pretende voltar à UCB?",
+      "variants": [
+        "vai terminar a católica",
+        "retomar a ucb"
+      ],
+      "answer": "A base não informa. O caminho atual é a graduação em TI na Unyleya, em andamento."
+    },
+    {
+      "id": "fo36",
+      "layer": 4,
+      "parent": "fo26",
+      "label": "projeto gerado pela graduação",
+      "question": "A Unyleya gerou algum projeto?",
+      "variants": [
+        "trabalho de extensão",
+        "projeto da faculdade"
+      ],
+      "answer": "Sim: o sistema da Extensão Institucional Unyleya, um gerador de slides em normas ABNT com exportação em PPT, concluído e publicado na Vercel.",
+      "entity": "form_unyleya"
+    },
+    {
+      "id": "fo37",
+      "layer": 4,
+      "parent": "fo27",
+      "label": "aplicar o que aprende",
+      "question": "Ele aplica o que aprende na faculdade?",
+      "variants": [
+        "estudo e prática juntos",
+        "aplicação prática"
+      ],
+      "answer": "Sim. Ele diz que aprende fazendo e entende lendo: o conteúdo da graduação e do CS50 entra direto nos projetos do portfólio.",
+      "entity": "form_unyleya"
+    },
+    {
+      "id": "fo38",
+      "layer": 4,
+      "parent": "fo28",
+      "label": "documentação em inglês",
+      "question": "Ele lê documentação em inglês?",
+      "variants": [
+        "inglês técnico",
+        "lê docs em inglês"
+      ],
+      "answer": "Ele lê alguns conteúdos técnicos em inglês para ampliar vocabulário, apoiado pelo contexto. Não se considera intermediário, mas sabe se virar.",
+      "entity": "form_cs50"
+    },
+    {
+      "id": "fo39",
+      "layer": 4,
+      "parent": "fo29",
+      "label": "cursos feitos na Friends",
+      "question": "Quais cursos ele fez na Friends?",
+      "variants": [
+        "formação na friends informática",
+        "cursos de 2007"
+      ],
+      "answer": "Lógica de Programação e Montagem e Manutenção de Computadores, ambos em 2007. O segundo, com o professor Roberto, foi o que o levou a virar instrutor.",
+      "entity": "form_cursos_origem"
+    },
+    {
+      "id": "fo40",
+      "layer": 4,
+      "parent": "fo30",
+      "label": "os sites de 2014",
+      "question": "Quais sites ele fez em 2014?",
+      "variants": [
+        "primeiros sites",
+        "sites comerciais"
+      ],
+      "answer": "O site da Prepara Cursos Taguatinga, o de uma empresa terceirizada de cursos e RH e o de uma banda de igreja. No da banda, ele cuidou do layout e da experiência; um colega cuidou do back-end.",
+      "entity": "form_cursos_tecnicos"
+    },
+    {
+      "id": "fo41",
+      "layer": 4,
+      "parent": "fo31",
+      "label": "a IA nesse ponto",
+      "question": "A IA ajuda nesse ponto da memória?",
+      "variants": [
+        "ia compensa a memória",
+        "ferramenta de apoio"
+      ],
+      "answer": "Sim. Com ferramenta de orquestração e leitura assistida, ele produz de verdade: lê, valida, ajusta e entrega. E acredita que, dentro de uma equipe, a prática diária transforma leitura em escrita natural. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "forma_de_aprender"
+    },
+    {
+      "id": "fo42",
+      "layer": 4,
+      "parent": "fo32",
+      "label": "o que é método para ele",
+      "question": "O que ele chama de método?",
+      "variants": [
+        "estudo com método",
+        "o que mudou no método"
+      ],
+      "answer": "Formato adaptado, ferramenta certa e foco direcionado: estudar no ritmo próprio, aplicar na prática e usar o hiperfoco a favor, em vez de brigar com aula linear."
+    },
+    {
+      "id": "fo43",
+      "layer": 4,
+      "parent": "fo33",
+      "label": "orientação a objetos",
+      "question": "O curso de Java foi o primeiro contato com orientação a objetos?",
+      "variants": [
+        "quando aprendeu poo",
+        "orientação a objetos em java"
+      ],
+      "answer": "Sim. O Java de 2014, com foco em componentes, foi o primeiro contato mais sério com linguagem orientada a objetos."
+    },
+    {
+      "id": "fo44",
+      "layer": 4,
+      "parent": "fo34",
+      "label": "o que ficou do Access",
+      "question": "O que ficou do curso de Access e SQL?",
+      "variants": [
+        "aprendizado de access",
+        "base de banco relacional"
+      ],
+      "answer": "A noção de banco relacional e de consulta. Anos depois, isso ajudou quando ele precisou entender e recuperar o banco do sistema da Fabricart."
+    },
+    {
+      "id": "fo45",
+      "layer": 4,
+      "parent": "fo35",
+      "label": "pós-graduação",
+      "question": "Ele pensa em pós-graduação?",
+      "variants": [
+        "especialização",
+        "planos de estudo futuros"
+      ],
+      "answer": "A base não informa planos de pós-graduação. O foco declarado é concluir a graduação em TI e entrar numa equipe formal."
+    },
+    {
+      "id": "fo46",
+      "layer": 5,
+      "parent": "fo36",
+      "label": "o gerador ABNT",
+      "question": "O que o gerador ABNT faz?",
+      "variants": [
+        "funcionalidade do gerador abnt",
+        "slides abnt"
+      ],
+      "answer": "Gera slides interativos com temas personalizáveis, aplica as regras ABNT e exporta em PPT. Está em programa-de-extens-o-institucional.vercel.app.",
+      "entity": "form_unyleya"
+    },
+    {
+      "id": "fo47",
+      "layer": 5,
+      "parent": "fo38",
+      "label": "aulas em inglês",
+      "question": "Ele consegue acompanhar aulas em inglês?",
+      "variants": [
+        "entende aula em inglês",
+        "inglês para estudar"
+      ],
+      "answer": "Com esforço e contexto ele acompanha partes, mas o CS50 é treino de vocabulário, não prova de fluência. Ele é claro: não fala inglês, mas sabe se virar.",
+      "entity": "form_cs50"
+    },
+    {
+      "id": "fo48",
+      "layer": 5,
+      "parent": "fo41",
+      "label": "dependência da IA para aprender",
+      "question": "Ele depende da IA para aprender?",
+      "variants": [
+        "sem ia ele aprende",
+        "ia é muleta"
+      ],
+      "answer": "Não. A base dele vem de cursos, prática de bancada e indústria, muito antes da IA. A IA é ferramenta que acelera produção e leitura assistida; o entendimento continua sendo dele.",
+      "facet": "forma_de_aprender"
+    },
+    {
+      "id": "fo49",
+      "layer": 5,
+      "parent": "fo43",
+      "label": "a impressão sobre Python",
+      "question": "O que ele achou do Python?",
+      "variants": [
+        "opinião sobre python",
+        "por que gostou de python"
+      ],
+      "answer": "Que uma linguagem simples pode resolver problema grande. Foi essa a impressão do curso curto de 2015, retomada hoje no CS50."
+    },
+    {
+      "id": "fo50",
+      "layer": 5,
+      "parent": "fo44",
+      "label": "banco de dados no trabalho",
+      "question": "Ele usou banco de dados no trabalho?",
+      "variants": [
+        "experiência prática com banco",
+        "banco em empresa"
+      ],
+      "answer": "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça."
+    }
+  ]
+}

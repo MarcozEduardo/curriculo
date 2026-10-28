@@ -1,0 +1,418 @@
+{
+  "orbit": "sobre_curriculo",
+  "label": "Sobre este currículo",
+  "generated_by": "manual",
+  "total": 81,
+  "format": [
+    "facet",
+    "entity",
+    "tokens"
+  ],
+  "entries": [
+    [
+      "default",
+      "",
+      "o que e este curriculo"
+    ],
+    [
+      "default",
+      "",
+      "o que e este curriculo curriculo"
+    ],
+    [
+      "default",
+      "",
+      "o que e este curriculo inteligente"
+    ],
+    [
+      "default",
+      "",
+      "o que e o curriculo inteligente"
+    ],
+    [
+      "default",
+      "",
+      "o que e o curriculo inteligente curriculo"
+    ],
+    [
+      "default",
+      "",
+      "o que e o curriculo inteligente inteligente"
+    ],
+    [
+      "default",
+      "",
+      "sobre esse curriculo"
+    ],
+    [
+      "default",
+      "",
+      "sobre esse curriculo curriculo"
+    ],
+    [
+      "default",
+      "",
+      "sobre esse curriculo inteligente"
+    ],
+    [
+      "default",
+      "",
+      "o que e esse app"
+    ],
+    [
+      "default",
+      "",
+      "o que e esse app curriculo"
+    ],
+    [
+      "default",
+      "",
+      "o que e esse app inteligente"
+    ],
+    [
+      "construcao",
+      "",
+      "como foi construido"
+    ],
+    [
+      "construcao",
+      "",
+      "como foi construido curriculo"
+    ],
+    [
+      "construcao",
+      "",
+      "como foi construido inteligente"
+    ],
+    [
+      "construcao",
+      "",
+      "como foi feito"
+    ],
+    [
+      "construcao",
+      "",
+      "como foi feito curriculo"
+    ],
+    [
+      "construcao",
+      "",
+      "como foi feito inteligente"
+    ],
+    [
+      "construcao",
+      "",
+      "quem fez"
+    ],
+    [
+      "construcao",
+      "",
+      "quem fez curriculo"
+    ],
+    [
+      "construcao",
+      "",
+      "quem fez inteligente"
+    ],
+    [
+      "construcao",
+      "",
+      "usa qual ia"
+    ],
+    [
+      "construcao",
+      "",
+      "usa qual ia curriculo"
+    ],
+    [
+      "construcao",
+      "",
+      "usa qual ia inteligente"
+    ],
+    [
+      "pdf",
+      "",
+      "tem pdf"
+    ],
+    [
+      "pdf",
+      "",
+      "tem pdf curriculo"
+    ],
+    [
+      "pdf",
+      "",
+      "tem pdf inteligente"
+    ],
+    [
+      "pdf",
+      "",
+      "como baixar"
+    ],
+    [
+      "pdf",
+      "",
+      "como baixar curriculo"
+    ],
+    [
+      "pdf",
+      "",
+      "como baixar inteligente"
+    ],
+    [
+      "pdf",
+      "",
+      "onde baixa"
+    ],
+    [
+      "pdf",
+      "",
+      "onde baixa curriculo"
+    ],
+    [
+      "pdf",
+      "",
+      "onde baixa inteligente"
+    ],
+    [
+      "pdf",
+      "",
+      "link pdf"
+    ],
+    [
+      "pdf",
+      "",
+      "link pdf curriculo"
+    ],
+    [
+      "pdf",
+      "",
+      "link pdf inteligente"
+    ],
+    [
+      "qr_code",
+      "",
+      "tem qr code"
+    ],
+    [
+      "qr_code",
+      "",
+      "tem qr code curriculo"
+    ],
+    [
+      "qr_code",
+      "",
+      "tem qr code inteligente"
+    ],
+    [
+      "qr_code",
+      "",
+      "o que e o qr code"
+    ],
+    [
+      "qr_code",
+      "",
+      "o que e o qr code curriculo"
+    ],
+    [
+      "qr_code",
+      "",
+      "o que e o qr code inteligente"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "diferenca do pdf"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "diferenca do pdf curriculo"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "diferenca do pdf inteligente"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "por que app"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "por que app curriculo"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "por que app inteligente"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "por que curriculo inteligente"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "por que curriculo inteligente curriculo"
+    ],
+    [
+      "diferenca_pdf_app",
+      "",
+      "por que curriculo inteligente inteligente"
+    ],
+    [
+      "galeria",
+      "",
+      "tem fotos"
+    ],
+    [
+      "galeria",
+      "",
+      "tem fotos curriculo"
+    ],
+    [
+      "galeria",
+      "",
+      "tem fotos inteligente"
+    ],
+    [
+      "galeria",
+      "",
+      "tem video"
+    ],
+    [
+      "galeria",
+      "",
+      "tem video curriculo"
+    ],
+    [
+      "galeria",
+      "",
+      "tem video inteligente"
+    ],
+    [
+      "galeria",
+      "",
+      "da pra jogar"
+    ],
+    [
+      "galeria",
+      "",
+      "da pra jogar curriculo"
+    ],
+    [
+      "galeria",
+      "",
+      "da pra jogar inteligente"
+    ],
+    [
+      "galeria",
+      "",
+      "tem galeria"
+    ],
+    [
+      "galeria",
+      "",
+      "tem galeria curriculo"
+    ],
+    [
+      "galeria",
+      "",
+      "tem galeria inteligente"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "modo leitura focada"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "modo leitura focada curriculo"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "modo leitura focada inteligente"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "tem versao texto"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "tem versao texto curriculo"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "tem versao texto inteligente"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "leitura detalhada"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "leitura detalhada curriculo"
+    ],
+    [
+      "leitura_focada",
+      "",
+      "leitura detalhada inteligente"
+    ],
+    [
+      "merito",
+      "",
+      "quem construiu"
+    ],
+    [
+      "merito",
+      "",
+      "quem construiu curriculo"
+    ],
+    [
+      "merito",
+      "",
+      "quem construiu inteligente"
+    ],
+    [
+      "merito",
+      "",
+      "foi a ia que fez"
+    ],
+    [
+      "merito",
+      "",
+      "foi a ia que fez curriculo"
+    ],
+    [
+      "merito",
+      "",
+      "foi a ia que fez inteligente"
+    ],
+    [
+      "merito",
+      "",
+      "quem teve o merito"
+    ],
+    [
+      "merito",
+      "",
+      "quem teve o merito curriculo"
+    ],
+    [
+      "merito",
+      "",
+      "quem teve o merito inteligente"
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "fuga-de-bobby",
+  "nome": "A Fuga de Bobby",
+  "subtitulo": "Plataforma Retrô 2D",
+  "stack": ["TypeScript", "Canvas 2D", "Vercel"],
+  "descricao": "Jogo de plataforma retrô com **3 estágios de dano**, **ciclo dia/noite** e **powerups**. O herói enfrenta o **boss carcereiro** na fortaleza, pega a **chave**, aciona a **estação de rádio** e chama o **foguete** para escapar. Totalmente **jogável em desktop e mobile**, com física de colisão própria e renderização **Canvas 2D** sem engine de terceiros.",
+  "cta": {
+    "label": "Jogar Agora",
+    "url": "https://game-a-fuga-de-bobby-final.vercel.app",
+    "icone": "fa-play"
+  },
+  "media": {
+    "demo": false,
+    "drive": "https://drive.google.com/file/d/1K5HfhB5Fm_kgVUK8RIYCaSV6Twbgl6CT/view?usp=sharing",
+    "youtube": null,
+    "video": null,
+    "capa": "capa/CapaFuga.png",
+    "prints": ["screenshots/print1.png", "screenshots/print2.png", "screenshots/print3.png"]
+  }
+}

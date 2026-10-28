@@ -1,0 +1,392 @@
+{
+  "category": "reactions",
+  "descricao": "Reações a entradas curtas de quem está testando o Bobby (debug, solto, ok, gostei...) e respostas vagas. Toda reação termina em um caminho (oferta).",
+  "filler": [
+    "ele",
+    "ela",
+    "um",
+    "uma",
+    "e",
+    "se",
+    "o",
+    "a",
+    "os",
+    "as",
+    "de",
+    "que",
+    "isso",
+    "muito",
+    "bem",
+    "bom",
+    "viu",
+    "mesmo",
+    "entao",
+    "ai",
+    "kk",
+    "kkk",
+    "kkkk",
+    "haha",
+    "hahaha",
+    "rs",
+    "rsrs",
+    "ne",
+    "hein",
+    "pra",
+    "para",
+    "so",
+    "apenas",
+    "tipo",
+    "la",
+    "aqui",
+    "eh",
+    "em",
+    "no",
+    "na"
+  ],
+  "intents": [
+    {
+      "id": "humano",
+      "patterns": [
+        "voce e humano",
+        "voce e uma pessoa",
+        "tem alguem real ai",
+        "voce e robo",
+        "voce e um robo",
+        "e humano",
+        "voce e gente",
+        "bot ou humano",
+        "voce e de verdade"
+      ],
+      "options_nodes": [
+        "mi01",
+        "cu05"
+      ],
+      "variations": [
+        "Não sou humano: sou o Bobby, um assistente que busca respostas numa base que o Marcos montou. Mas por trás de cada resposta está o que ele de fato contou.",
+        "Sou um programa, e digo isso sem drama 🙂 Não gero texto novo: busco o que o Marcos registrou e mostro a fonte no selo.",
+        "Humano não. Sou o Bobby, o conceito de trabalho do Marcos virado em assistente, sem IA generativa e sem invenção."
+      ]
+    },
+    {
+      "id": "debug",
+      "patterns": [
+        "debug",
+        "modo debug",
+        "debug mode",
+        "debugar",
+        "debugando",
+        "dev mode",
+        "modo desenvolvedor",
+        "console",
+        "admin",
+        "root",
+        "sudo",
+        "painel admin"
+      ],
+      "options_nodes": [
+        "mi03",
+        "pr54",
+        "cu22"
+      ],
+      "variations": [
+        "Debug? Aqui o debug de verdade é o do Marcos: horas indo linha por linha até achar a causa. Eu não tenho painel secreto, mas posso te mostrar como funciono por dentro.",
+        "Modo debug não existe por aqui, mas existe uma ideia parecida: a fonte de cada resposta aparece no selo logo abaixo dela. Transparência é o meu debug.",
+        "Sem console escondido 🙂 Meu jeito de ser debugado é ser claro: dá para perguntar como eu funciono e conferir a fonte de tudo que eu digo."
+      ]
+    },
+    {
+      "id": "solto",
+      "patterns": [
+        "solto",
+        "soltou",
+        "soltar",
+        "solta",
+        "livre",
+        "soltaram"
+      ],
+      "options_nodes": [
+        "cu02",
+        "mi12"
+      ],
+      "variations": [
+        "Solto como? Se for o SOCRAM, ele foi derrotado no primeiro jogo, e o exército dele ainda dura mais dois. Se for sobre mim, estou preso à base do Marcos, e é de propósito.",
+        "Boa pergunta, mas preciso de contexto: solto de quê? Posso falar do SOCRAM, que não está solto coisa nenhuma, ou do meu limite de não inventar resposta.",
+        "Hmm, 'solto' pode ser muita coisa. Se você quis testar se eu invento qualquer coisa solta, a resposta é não. Se quis falar do vilão da saga, tenho uma história boa."
+      ]
+    },
+    {
+      "id": "gostei",
+      "patterns": [
+        "gostei",
+        "gostei muito",
+        "curti",
+        "curtimos",
+        "bacana",
+        "muito bom",
+        "sensacional",
+        "impressionante",
+        "parabens",
+        "bom trabalho",
+        "legal esse chat",
+        "adorei",
+        "amei",
+        "incrivel",
+        "maneiro",
+        "daora",
+        "topzera",
+        "mandou bem"
+      ],
+      "options_nodes": [
+        "pr51",
+        "pr54",
+        "cu05"
+      ],
+      "variations": [
+        "Que bom que gostou! O mérito é do Marcos: ele conduziu cada parte, e a IA foi copiloto. Quer conhecer a história por trás de algum projeto?",
+        "Fico feliz! Esse chat é uma amostra do jeito dele de trabalhar: arquitetura, teste e documentação. Tem bastidor bom para contar.",
+        "Valeu! Se curtiu isso aqui, os jogos têm histórias melhores ainda."
+      ]
+    },
+    {
+      "id": "doubt",
+      "patterns": [
+        "mentira",
+        "isso e mentira",
+        "duvido",
+        "nao acredito",
+        "sera",
+        "prova",
+        "comprova",
+        "comprove",
+        "qual a fonte",
+        "tem prova",
+        "cade a prova",
+        "tem certeza",
+        "serio",
+        "e verdade",
+        "e mesmo",
+        "sei",
+        "mentiroso"
+      ],
+      "options_nodes": [
+        "ct10",
+        "ct47"
+      ],
+      "variations": [
+        "Tudo que eu digo vem da base do Marcos, e o selo abaixo mostra a fonte. Para comprovar, os projetos estão publicados e ele demonstra ao vivo, inclusive o LAR.",
+        "Faz bem em duvidar. Eu só afirmo o que está na base, e onde não tem dado eu digo que não tenho. Os links dos projetos estão abertos para conferir.",
+        "Sem problema em testar a lógica das respostas: pergunte de novo de outro jeito, peça a fonte ou vá direto nos projetos públicos."
+      ]
+    },
+    {
+      "id": "teste",
+      "patterns": [
+        "teste",
+        "testando",
+        "testando 123",
+        "teste 123",
+        "isso e um teste",
+        "so testando",
+        "to testando",
+        "testing",
+        "test",
+        "teste de chat",
+        "so um teste"
+      ],
+      "options_nodes": [
+        "cu07",
+        "mi15"
+      ],
+      "variations": [
+        "Pode testar à vontade, fui feito para isso! Erre a digitação de propósito, mude de assunto no meio, repita a pergunta ou tente algo vago.",
+        "Teste aceito 🙂 Eu devo acertar o contexto, admitir o que não sei e nunca inventar. Manda ver.",
+        "Testando é o melhor jeito de conhecer. Tente me confundir: eu aguento gíria, erro de digitação e pergunta pela metade."
+      ]
+    },
+    {
+      "id": "ping",
+      "patterns": [
+        "ping",
+        "hello world",
+        "tem alguem ai",
+        "ta ai",
+        "alo",
+        "psiu",
+        "ei",
+        "eae",
+        "hello",
+        "hi",
+        "hey"
+      ],
+      "options_nodes": [],
+      "variations": [
+        "Pong! Estou aqui 🙂",
+        "Estou por aqui! Pode mandar a pergunta.",
+        "Presente! O que você quer saber sobre o Marcos?"
+      ]
+    },
+    {
+      "id": "repeat",
+      "type": "repeat",
+      "patterns": [
+        "repete",
+        "repita",
+        "de novo",
+        "outra vez",
+        "pode repetir",
+        "fala de novo",
+        "nao entendi",
+        "como assim",
+        "explica de novo",
+        "resume",
+        "resumindo",
+        "resumo"
+      ],
+      "variations": [
+        "Claro, em resumo: {resumo}",
+        "Resumindo o que acabei de dizer: {resumo}",
+        "De outro jeito, mais curto: {resumo}"
+      ],
+      "empty": [
+        "Ainda não te disse nada para repetir 🙂 Me faz uma pergunta que eu respondo.",
+        "Nada para repetir ainda. Por onde você quer começar?"
+      ]
+    },
+    {
+      "id": "recomendacao",
+      "patterns": [],
+      "regex": [
+        "\\b(recomend\\w*|indic\\w*|sugere|sugest\\w*)\\b.*\\b(projeto|jogo|ver|ler|conhecer|comecar)\\b",
+        "\\b(melhor|principal|favorito|destaque)\\b.*\\bprojeto\\b",
+        "\\bqual\\b.*\\bprojeto\\b.*\\b(ver|mostrar|comecar)\\b"
+      ],
+      "options_nodes": [
+        "pr51",
+        "pr05",
+        "cu04"
+      ],
+      "variations": [
+        "Para começar eu iria na Fuga de Bobby: está jogável agora e tem uma boa história por trás. Para o lado técnico mais ambicioso, o Núcleo Nexus e o LAR, que ele demonstra em entrevista.",
+        "Se for para ver um só, a Fuga de Bobby: dá para jogar em segundos e a história de como foi feita diz muito do jeito dele de trabalhar."
+      ]
+    },
+    {
+      "id": "acknowledgment",
+      "patterns": [
+        "faz sentido",
+        "faz total sentido",
+        "faz muito sentido",
+        "fez sentido",
+        "compreendi",
+        "compreendo",
+        "entendi bem",
+        "ok entendi",
+        "beleza entendi",
+        "saquei",
+        "entendido"
+      ],
+      "options_nodes": [],
+      "variations": [
+        "Boa. Se quiser, posso aprofundar em algum ponto específico ou abrir outro tema do currículo.",
+        "Que bom. Quer que eu detalhe mais alguma coisa ou prefere ver outro assunto?",
+        "Perfeito. Continuando: projetos, stack, experiência ou contratação?",
+        "Show. Manda a próxima ou escolhe um rumo: projetos, habilidades ou bastidores.",
+        "Bacana. Quer que eu continue nesse tema ou abra outra frente?"
+      ]
+    }
+  ],
+  "vague": {
+    "positive": {
+      "tokens": [
+        "ok",
+        "okay",
+        "okk",
+        "blz",
+        "beleza",
+        "certo",
+        "entendi",
+        "entendido",
+        "show",
+        "top",
+        "massa",
+        "legal",
+        "interessante",
+        "bacana",
+        "boa",
+        "otimo",
+        "perfeito",
+        "fechou",
+        "uhum",
+        "aham",
+        "saquei",
+        "hum",
+        "hmm",
+        "ah",
+        "uau",
+        "wow",
+        "nossa",
+        "caramba",
+        "ta",
+        "valeu",
+        "sentido"
+      ],
+      "leads": [
+        "Boa!",
+        "Fechado.",
+        "Show.",
+        "Certo."
+      ]
+    },
+    "more": {
+      "tokens": [
+        "mais",
+        "continua",
+        "continue",
+        "segue",
+        "prossiga",
+        "conta",
+        "fala",
+        "depois",
+        "e",
+        "entao",
+        "daí",
+        "dai",
+        "outro",
+        "outra",
+        "proximo",
+        "avanca",
+        "vai",
+        "manda",
+        "bora",
+        "seguir"
+      ],
+      "leads": [
+        "Bora aprofundar.",
+        "Tem bastante coisa ainda.",
+        "Vamos nessa.",
+        "Claro."
+      ]
+    },
+    "unsure": {
+      "tokens": [
+        "nao",
+        "sei",
+        "sei la",
+        "tanto",
+        "faz",
+        "qualquer",
+        "indiferente",
+        "hm",
+        "tipo",
+        "sem",
+        "ideia",
+        "pensando"
+      ],
+      "leads": [
+        "Sem problema, te dou três caminhos.",
+        "Tudo bem, sugiro começar por aqui.",
+        "Sem pressa."
+      ]
+    }
+  }
+}

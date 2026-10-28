@@ -1,0 +1,614 @@
+{
+  "orbit": "transparencia",
+  "label": "Transparência técnica",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós",
+  "nodes": [
+    {
+      "id": "tr01",
+      "layer": 1,
+      "parent": null,
+      "label": "o que ele ainda não domina",
+      "question": "O que ele ainda não domina?",
+      "variants": [
+        "limitações técnicas",
+        "lacunas"
+      ],
+      "answer": "Cargo formal em equipe de TI ainda não teve; não informou certificações de mercado; QA automatizado, cloud corporativa, Docker/Kubernetes em operação e Git avançado estão fora do que afirma dominar; ele não fala inglês, mas sabe se virar."
+    },
+    {
+      "id": "tr02",
+      "layer": 1,
+      "parent": null,
+      "label": "a experiência formal em TI",
+      "question": "Ele tem experiência formal em TI?",
+      "variants": [
+        "carteira assinada em ti",
+        "cargo de ti"
+      ],
+      "answer": "Não como cargo formal em equipe de TI. Tem mais de dez anos de trabalho técnico real em outras funções e um portfólio de software público e verificável desde 2024."
+    },
+    {
+      "id": "tr03",
+      "layer": 1,
+      "parent": null,
+      "label": "certificações",
+      "question": "Ele tem certificações?",
+      "variants": [
+        "itil microsoft cisco",
+        "certificado de mercado"
+      ],
+      "answer": "Não informou certificações formais de mercado (ITIL, Microsoft, Cisco, AWS). A comprovação é formação em andamento, CS50, cursos técnicos desde 2007 e projetos publicados."
+    },
+    {
+      "id": "tr04",
+      "layer": 1,
+      "parent": null,
+      "label": "QA automatizado",
+      "question": "Ele sabe QA automatizado?",
+      "variants": [
+        "cypress playwright selenium",
+        "automação de testes"
+      ],
+      "answer": "Ainda não no padrão que o mercado exige. Entende o princípio e aprende rápido; hoje a prática dele é QA manual com julgamento, depuração e análise de fluxo."
+    },
+    {
+      "id": "tr05",
+      "layer": 1,
+      "parent": null,
+      "label": "cloud",
+      "question": "Ele conhece cloud?",
+      "variants": [
+        "aws azure gcp",
+        "nuvem corporativa"
+      ],
+      "answer": "Prática real com Vercel, Netlify, Firebase e Supabase. Não trabalhou com AWS, Azure ou GCP em produção corporativa. Está sondando Google Cloud e Azure."
+    },
+    {
+      "id": "tr06",
+      "layer": 1,
+      "parent": null,
+      "label": "Git avançado",
+      "question": "Ele domina Git avançado?",
+      "variants": [
+        "rebase cherry pick",
+        "git em equipe grande"
+      ],
+      "answer": "Usa Git no fluxo simples: commit, push, branch e PR. Não é especialista em rebase interativo, cherry-pick ou resolução de conflito complexo em equipe grande."
+    },
+    {
+      "id": "tr07",
+      "layer": 1,
+      "parent": null,
+      "label": "inglês",
+      "question": "Como está o inglês dele?",
+      "variants": [
+        "nível de inglês",
+        "ele fala inglês",
+        "qual o nível de inglês dele",
+        "qual o nível de inglês",
+        "nível de inglês dele",
+        "como está o inglês dele",
+        "ele é fluente em inglês",
+        "ele tem inglês intermediário"
+      ],
+      "answer": "Ele não fala inglês, mas sabe se virar. Estuda algumas coisas em inglês para ampliar vocabulário e gosta de morfologia e etimologia das palavras. Um dos motivos de querer entrar logo na área é conviver mais com o idioma: ele absorve entendimento com facilidade, mas o que não usa o cérebro acaba arquivando. Com imersão (séries com áudio em inglês, leitura) o conteúdo volta a fazer sentido em pouco tempo, por triangulação. Ele não se considera intermediário.",
+      "facet": "idiomas"
+    },
+    {
+      "id": "tr08",
+      "layer": 1,
+      "parent": null,
+      "label": "ferramentas de chamado",
+      "question": "Ele conhece ferramentas de chamado como Jira Service ou GLPI?",
+      "variants": [
+        "freshdesk",
+        "sistema de tickets"
+      ],
+      "answer": "A base não registra uso dessas ferramentas. Ele diz que, se a vaga exigir ticket estruturado em ferramenta específica, vai precisar de ramp-up nas primeiras semanas."
+    },
+    {
+      "id": "tr09",
+      "layer": 1,
+      "parent": null,
+      "label": "ITIL",
+      "question": "Ele conhece ITIL?",
+      "variants": [
+        "processo itil",
+        "boas práticas de suporte"
+      ],
+      "answer": "Não tem certificação nem registra processo formalizado de ITIL. O que traz pronto é resolver o problema, documentar direito e não deixar voltar."
+    },
+    {
+      "id": "tr10",
+      "layer": 1,
+      "parent": null,
+      "label": "Docker e Kubernetes",
+      "question": "Ele conhece Docker e Kubernetes?",
+      "variants": [
+        "containers",
+        "k8s"
+      ],
+      "answer": "Entende o conceito, mas não domina a operação. Se a vaga exigir DevOps sênior, ele diz que ainda não é o terreno dele."
+    },
+    {
+      "id": "tr11",
+      "layer": 1,
+      "parent": null,
+      "label": "UI/UX",
+      "question": "Ele é designer de UI/UX?",
+      "variants": [
+        "design de produto",
+        "ux formado"
+      ],
+      "answer": "Não, e diz isso abertamente. Traz repertório visual real de gráfica e vetor, modelagem de produção e noção de acabamento, mas UX de produto digital ele aprenderia no trabalho."
+    },
+    {
+      "id": "tr12",
+      "layer": 1,
+      "parent": null,
+      "label": "sintaxe de SQL",
+      "question": "Ele passa numa prova seca de SQL?",
+      "variants": [
+        "sintaxe de sql de cor",
+        "teste de sql"
+      ],
+      "answer": "Ele mesmo diz que chutaria numa prova seca de sintaxe. Mas entende o princípio e a arquitetura de consulta. Sintaxe se recupera com apoio; raciocínio, não."
+    },
+    {
+      "id": "tr13",
+      "layer": 1,
+      "parent": null,
+      "label": "profundidade em React",
+      "question": "Qual a profundidade dele em React?",
+      "variants": [
+        "ele domina react",
+        "experiência com react"
+      ],
+      "answer": "React está nas habilidades e o currículo cita React entre as tecnologias dos projetos independentes, mas a base não detalha um projeto React específico. Os jogos são em TypeScript e Canvas 2D."
+    },
+    {
+      "id": "tr14",
+      "layer": 1,
+      "parent": null,
+      "label": "memória e arquivamento",
+      "question": "O que é esse arquivamento de memória que ele menciona?",
+      "variants": [
+        "ele esquece o que aprendeu",
+        "memória fora de uso"
+      ],
+      "answer": "Conhecimento fora de uso ativo fica menos acessível, o que pode virar lapso. Um gatilho de contexto traz tudo de volta. Por isso ele busca contexto técnico diário."
+    },
+    {
+      "id": "tr15",
+      "layer": 1,
+      "parent": null,
+      "label": "como ele compensa as lacunas",
+      "question": "Como ele compensa essas lacunas?",
+      "variants": [
+        "o que ele faz sobre as limitações",
+        "plano para as lacunas"
+      ],
+      "answer": "Transparência, demonstração e ramp-up: diz o que não sabe antes de ser perguntado, mostra o que já fez e aprende no contexto da equipe com foco intenso."
+    },
+    {
+      "id": "tr16",
+      "layer": 2,
+      "parent": "tr01",
+      "label": "esconder lacunas",
+      "question": "Ele esconde lacunas?",
+      "variants": [
+        "ele omite limitações",
+        "é honesto no currículo"
+      ],
+      "answer": "Não. O currículo dele traz um bloco de contexto real em cada área, dizendo o que é forte, o que precisa de ramp-up e o que ainda não é o terreno dele."
+    },
+    {
+      "id": "tr17",
+      "layer": 2,
+      "parent": "tr02",
+      "label": "o que conta como experiência",
+      "question": "O que conta como experiência dele, então?",
+      "variants": [
+        "experiência válida",
+        "como avaliar a experiência"
+      ],
+      "answer": "Dez anos de suporte, manutenção, rede e indústria com responsabilidade direta, mais projetos de software públicos com arquitetura e documentação. Tudo verificável por links ou demonstração."
+    },
+    {
+      "id": "tr18",
+      "layer": 2,
+      "parent": "tr03",
+      "label": "planos de certificação",
+      "question": "Ele pretende tirar certificações?",
+      "variants": [
+        "vai fazer itil",
+        "planeja certificar"
+      ],
+      "answer": "A base não informa planos de certificação. O que está declarado é a graduação em andamento, o CS50 e a disposição de aprender o que a empresa exigir."
+    },
+    {
+      "id": "tr19",
+      "layer": 2,
+      "parent": "tr04",
+      "label": "o princípio da automação",
+      "question": "Ele entende o princípio dos testes automatizados?",
+      "variants": [
+        "sabe o conceito de automação",
+        "entende cypress"
+      ],
+      "answer": "Sim, entende o princípio e consegue aprender rápido. O que falta é prática na ferramenta corporativa."
+    },
+    {
+      "id": "tr20",
+      "layer": 2,
+      "parent": "tr05",
+      "label": "o que ele usa em nuvem",
+      "question": "O que ele usa em nuvem hoje?",
+      "variants": [
+        "serviços de deploy",
+        "onde hospeda"
+      ],
+      "answer": "Vercel, Netlify, Firebase e Supabase, em projetos próprios com deploy público."
+    },
+    {
+      "id": "tr21",
+      "layer": 2,
+      "parent": "tr06",
+      "label": "o que ele sabe de Git",
+      "question": "O que ele sabe de Git?",
+      "variants": [
+        "comandos de git",
+        "fluxo de versionamento"
+      ],
+      "answer": "Commit, push, branch e PR, com segurança. Recursos avançados ele não domina e não finge dominar."
+    },
+    {
+      "id": "tr22",
+      "layer": 2,
+      "parent": "tr07",
+      "label": "leitura técnica em inglês",
+      "question": "Ele lê inglês técnico?",
+      "variants": [
+        "documentação em inglês",
+        "lê docs"
+      ],
+      "answer": "Ele lê algumas coisas em inglês para treinar vocabulário, e gosta de morfologia e etimologia das palavras, mas não se apresenta como alguém que domina o idioma. Sabe se virar."
+    },
+    {
+      "id": "tr23",
+      "layer": 2,
+      "parent": "tr08",
+      "label": "ramp-up em ferramenta de chamado",
+      "question": "Quanto tempo de ramp-up em ferramenta de chamado?",
+      "variants": [
+        "tempo para aprender jira",
+        "adaptação ao sistema de tickets"
+      ],
+      "answer": "Ele fala em primeiras semanas, sem prometer prazo fixo. A lógica de chamado ele conhece da prática; a ferramenta específica é o que precisa de adaptação."
+    },
+    {
+      "id": "tr24",
+      "layer": 2,
+      "parent": "tr09",
+      "label": "registro do que faz",
+      "question": "Ele registra o que faz, mesmo sem ITIL?",
+      "variants": [
+        "documenta atendimento",
+        "deixa registro"
+      ],
+      "answer": "Sim. Documentar cada atendimento virou hábito desde o período autônomo, e documentação modular é parte do estilo de trabalho dele."
+    },
+    {
+      "id": "tr25",
+      "layer": 2,
+      "parent": "tr10",
+      "label": "necessidade para a vaga alvo",
+      "question": "Ele precisa disso para as vagas que busca?",
+      "variants": [
+        "docker é necessário",
+        "faz falta para suporte"
+      ],
+      "answer": "Depende da vaga. Para suporte N1 a N3, QA manual e análise de TI, não é requisito central. Para DevOps sênior, sim, e ele é claro que não é o alvo dele."
+    },
+    {
+      "id": "tr26",
+      "layer": 3,
+      "parent": "tr16",
+      "label": "falar disso em entrevista",
+      "question": "Ele fala dessas lacunas em entrevista?",
+      "variants": [
+        "assume limitações ao vivo",
+        "postura na entrevista"
+      ],
+      "answer": "Sim. A postura dele é dizer o que não sabe antes de ser perguntado e mostrar o que já fez."
+    },
+    {
+      "id": "tr27",
+      "layer": 3,
+      "parent": "tr17",
+      "label": "como verificar",
+      "question": "Dá para verificar essa experiência?",
+      "variants": [
+        "como comprovar",
+        "evidências"
+      ],
+      "answer": "Os projetos públicos têm link; os reservados podem ser demonstrados; referências profissionais e histórico acadêmico podem ser fornecidos sob solicitação."
+    },
+    {
+      "id": "tr28",
+      "layer": 3,
+      "parent": "tr18",
+      "label": "o valor da certificação para ele",
+      "question": "Ele valoriza certificação?",
+      "variants": [
+        "opinião sobre certificados",
+        "certificação importa"
+      ],
+      "answer": "A base não traz opinião dele sobre isso. O que ele apresenta como prova é o portfólio público e a formação em andamento."
+    },
+    {
+      "id": "tr29",
+      "layer": 3,
+      "parent": "tr19",
+      "label": "tempo para aprender Cypress",
+      "question": "Quanto tempo para aprender Cypress?",
+      "variants": [
+        "prazo para automação",
+        "ramp-up em teste automatizado"
+      ],
+      "answer": "Ele não prometeu prazo. Relata que absorve bastante em dois dias intensos de hiperfoco, e que a consolidação vem com uso diário na equipe."
+    },
+    {
+      "id": "tr30",
+      "layer": 3,
+      "parent": "tr20",
+      "label": "estudo de Azure e GCP",
+      "question": "Ele está estudando Azure ou GCP?",
+      "variants": [
+        "aprendendo cloud",
+        "sondando nuvem"
+      ],
+      "answer": "Sim, está sondando Google Cloud e Azure para ampliar repertório, ainda sem experiência de produção corporativa."
+    },
+    {
+      "id": "tr31",
+      "layer": 3,
+      "parent": "tr21",
+      "label": "rebase e cherry-pick",
+      "question": "Ele sabe rebase e cherry-pick?",
+      "variants": [
+        "git avançado de verdade",
+        "resolver conflito complexo"
+      ],
+      "answer": "Não domina. É um dos pontos que ele declara abertamente como fora do repertório atual."
+    },
+    {
+      "id": "tr32",
+      "layer": 3,
+      "parent": "tr22",
+      "label": "conversação em inglês",
+      "question": "E conversação em inglês?",
+      "variants": [
+        "entrevista em inglês",
+        "fala inglês"
+      ],
+      "answer": "Ele não fala inglês. Sabe se virar, mas prefere ser claro: para uma entrevista em inglês, melhor combinar o formato com ele antes."
+    },
+    {
+      "id": "tr33",
+      "layer": 3,
+      "parent": "tr23",
+      "label": "como ele aprenderia a ferramenta",
+      "question": "Como ele aprenderia uma ferramenta de chamado?",
+      "variants": [
+        "método para aprender jira",
+        "adaptação prática"
+      ],
+      "answer": "Usando no contexto real: ele aprende fazendo, documenta o caminho e usa o hiperfoco para fechar o entendimento em poucos dias."
+    },
+    {
+      "id": "tr34",
+      "layer": 3,
+      "parent": "tr24",
+      "label": "exemplo de registro",
+      "question": "Qual exemplo de registro que ele mantém?",
+      "variants": [
+        "documentação que ele faz",
+        "amostra de registro"
+      ],
+      "answer": "Os README por pasta deste chat, com dependências e responsabilidades, e as automações documentadas que criou na indústria para indexar e cruzar arquivos."
+    },
+    {
+      "id": "tr35",
+      "layer": 3,
+      "parent": "tr25",
+      "label": "DevOps como alvo",
+      "question": "DevOps é o alvo dele?",
+      "variants": [
+        "quer ser devops",
+        "vaga de infraestrutura cloud"
+      ],
+      "answer": "Não. Os alvos são suporte N1/N2/N3, QA, análise de TI e desenvolvimento assistido por IA."
+    },
+    {
+      "id": "tr36",
+      "layer": 4,
+      "parent": "tr26",
+      "label": "ponto fraco ou honestidade",
+      "question": "Isso é ponto fraco ou honestidade?",
+      "variants": [
+        "transparência conta a favor",
+        "como ler as lacunas"
+      ],
+      "answer": "As lacunas existem e estão declaradas. A honestidade é a forma como ele lida com elas: sem inflar título, sem apagar conteúdo e com plano de ramp-up."
+    },
+    {
+      "id": "tr37",
+      "layer": 4,
+      "parent": "tr27",
+      "label": "os links de verificação",
+      "question": "Quais links comprovam o trabalho?",
+      "variants": [
+        "onde ver os projetos",
+        "links públicos"
+      ],
+      "answer": "game-a-fuga-de-bobby-final.vercel.app, game-a-viagem-de-bobby.vercel.app, dama-orbital.vercel.app, programa-de-extens-o-institucional.vercel.app e github.com/MarcozEduardo."
+    },
+    {
+      "id": "tr38",
+      "layer": 4,
+      "parent": "tr28",
+      "label": "certificado do CS50",
+      "question": "O CS50 dá certificado?",
+      "variants": [
+        "ele concluiu o cs50",
+        "certificado de harvard"
+      ],
+      "answer": "A base descreve o CS50 como estudo contínuo e independente e não informa conclusão ou certificado emitido."
+    },
+    {
+      "id": "tr39",
+      "layer": 4,
+      "parent": "tr29",
+      "label": "QA manual enquanto aprende",
+      "question": "Ele faria QA manual enquanto aprende automação?",
+      "variants": [
+        "começar por qa manual",
+        "transição para automação"
+      ],
+      "answer": "Sim. QA manual com julgamento é o terreno dele hoje; a automação entraria com a prática diária da equipe."
+    },
+    {
+      "id": "tr40",
+      "layer": 4,
+      "parent": "tr30",
+      "label": "por que Azure e GCP",
+      "question": "Por que Azure e Google Cloud?",
+      "variants": [
+        "motivo de estudar essas nuvens",
+        "escolha de cloud"
+      ],
+      "answer": "Para ampliar repertório, nas palavras dele. Não há na base um motivo específico além disso."
+    },
+    {
+      "id": "tr41",
+      "layer": 4,
+      "parent": "tr31",
+      "label": "conflito de merge",
+      "question": "Ele resolve conflito de merge?",
+      "variants": [
+        "merge conflict",
+        "conflito no git"
+      ],
+      "answer": "No fluxo simples, sim. Conflito complexo em equipe grande é o que ele declara não dominar."
+    },
+    {
+      "id": "tr42",
+      "layer": 4,
+      "parent": "tr32",
+      "label": "entrevista em inglês",
+      "question": "Ele conversa em inglês numa entrevista?",
+      "variants": [
+        "entrevista em inglês possível",
+        "nível para entrevista"
+      ],
+      "answer": "Ele não fala inglês e diz isso abertamente, embora saiba se virar. Para entrevista em inglês, melhor alinhar o formato com ele."
+    },
+    {
+      "id": "tr43",
+      "layer": 4,
+      "parent": "tr33",
+      "label": "dois dias de hiperfoco",
+      "question": "O que significa dois dias de hiperfoco?",
+      "variants": [
+        "aprende em dois dias",
+        "estudo intensivo"
+      ],
+      "answer": "É como ele descreve a própria capacidade de absorção: dois dias intensos em um assunto novo rendem bastante. Não é promessa de domínio completo."
+    },
+    {
+      "id": "tr44",
+      "layer": 4,
+      "parent": "tr34",
+      "label": "exemplo de documentação",
+      "question": "Pode dar um exemplo de documentação dele?",
+      "variants": [
+        "amostra de readme",
+        "como ele documenta"
+      ],
+      "answer": "Este bundle: README geral, README por camada (chat, motor, mesh, dicionários, filtros, respostas) e guia de instalação em HTML puro."
+    },
+    {
+      "id": "tr45",
+      "layer": 4,
+      "parent": "tr35",
+      "label": "deploy e produção",
+      "question": "O que ele sabe de deploy?",
+      "variants": [
+        "publicar projeto",
+        "deploy em produção"
+      ],
+      "answer": "Coloca projeto no ar rápido com Vercel e Netlify, configura ambiente, resolve conflito de dependência e investiga log de erro em produção."
+    },
+    {
+      "id": "tr46",
+      "layer": 5,
+      "parent": "tr36",
+      "label": "por que expor as lacunas",
+      "question": "Por que ele expõe as próprias lacunas?",
+      "variants": [
+        "motivo da transparência",
+        "estratégia de honestidade"
+      ],
+      "answer": "Porque prefere ser avaliado pelo que entrega e aprende, não por um título inflado. Ele diz: resolver o problema, documentar direito e não deixar voltar é o que ele traz pronto."
+    },
+    {
+      "id": "tr47",
+      "layer": 5,
+      "parent": "tr39",
+      "label": "QA manual basta",
+      "question": "QA manual é suficiente para uma empresa?",
+      "variants": [
+        "qa manual serve",
+        "vale só manual"
+      ],
+      "answer": "Depende da vaga. Para QA com julgamento, exploratório e validação de regra, é o terreno dele. Para esteira automatizada sênior, ele precisaria de ramp-up e diz isso."
+    },
+    {
+      "id": "tr48",
+      "layer": 5,
+      "parent": "tr41",
+      "label": "uso de PR",
+      "question": "Ele usa pull request?",
+      "variants": [
+        "pr no fluxo",
+        "trabalha com pr"
+      ],
+      "answer": "Sim, PR faz parte do fluxo simples que ele usa: commit, push, branch e PR."
+    },
+    {
+      "id": "tr49",
+      "layer": 5,
+      "parent": "tr43",
+      "label": "vale para qualquer tema",
+      "question": "Isso vale para qualquer tema?",
+      "variants": [
+        "aprende qualquer coisa rápido",
+        "limite da absorção"
+      ],
+      "answer": "Vale quando o assunto o interessa e está em uso. Ele é claro: precisa orbitar o tema; fora de contexto, o conhecimento arquiva."
+    },
+    {
+      "id": "tr50",
+      "layer": 5,
+      "parent": "tr45",
+      "label": "erro em produção web",
+      "question": "Ele já resolveu erro em produção web?",
+      "variants": [
+        "bug em produção",
+        "log de erro"
+      ],
+      "answer": "O currículo cita investigar log de erro em produção como parte da prática de deploy dele nos projetos próprios. Em ambiente corporativo web, ainda não há registro."
+    }
+  ]
+}

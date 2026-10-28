@@ -1,0 +1,385 @@
+/* ================= EXPERIÊNCIA, HABILIDADES & FORMAÇÃO ================= */
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.badge {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--orange);
+  color: #FFF6ED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.badge-big {
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.contact-list li:hover {
+  color: var(--orange-dark);
+}
+.contact-list li i {
+  color: var(--orange-dark);
+  width: 14px;
+  text-align: center;
+  font-size: 10.5px;
+}
+
+/* Meta inline no título (localização + telefone) */
+.card-title-meta {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #6b5f52;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.card-title-meta i {
+  color: var(--orange-dark);
+  font-size: 10px;
+}
+
+.card-title-meta #copyPhone {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.card-title-meta #copyPhone:hover {
+  color: var(--orange-dark);
+}
+
+.card-title-meta .ct-dot {
+  color: #c4b8a8;
+  font-weight: 700;
+}
+
+.resumo-txt {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #3a342e;
+  text-align: left;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* Card Neurodivergente / PCD */
+.pcd-card {
+  background: #FFF6EC; /* Creme suave idêntico ao tom original de destaque */
+  border: 1.5px solid #F3C49B;
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  box-shadow: 0 2px 8px rgba(184, 66, 10, 0.04);
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.pcd-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--orange-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+.pcd-desc {
+  font-size: 9.6px;
+  color: #4a453f;
+  line-height: 1.45;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Formação */
+.formacao-item {
+  margin-bottom: 10px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.formacao-item:last-child { margin-bottom: 0; }
+.formacao-title { font-weight: 600; font-size: 11px; color: var(--ink); }
+.formacao-sub { font-size: 9.8px; color: var(--orange-dark); font-style: italic; margin-top: 2px; }
+
+/* Habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 22px;
+}
+
+@media (max-width: 700px) {
+  .skills-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+.skill-group {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 2px 8px rgba(70, 45, 20, 0.05);
+}
+
+.skill-group h4 {
+  margin: 0 0 12px 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #B8420A;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #FFF1E0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill {
+  background: #FFF6EC;
+  border: 1px solid #F3C49B;
+  color: #3A342E;
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(70, 45, 20, 0.04);
+}
+
+/* Linha do Tempo / Experiência */
+.exp-section { margin-top: 22px; }
+.exp-item {
+  display: flex;
+  gap: 14px;
+  position: relative;
+  padding-bottom: 16px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.exp-item:last-child { padding-bottom: 0; }
+.exp-line { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 16px; }
+.exp-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--orange);
+  border: 3px solid var(--cream);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.exp-track { flex: 1; width: 2px; background: #F3D9BE; margin-top: 2px; }
+.exp-item:last-child .exp-track { display: none; }
+
+.exp-body { flex: 1; }
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.exp-title { font-weight: 600; font-size: 11.2px; color: var(--ink); }
+.exp-date {
+  background: var(--cream);
+  color: var(--orange-deep);
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.exp-company { font-size: 9.7px; color: var(--orange-dark); font-style: italic; margin-top: 2px; }
+.exp-desc { font-size: 9.6px; color: #4a453f; margin: 6px 0 0 0; padding-left: 15px; text-align: justify; }
+.exp-desc li { margin-bottom: 3px; }
+
+/* Footer */
+/* ================= NOTA PCD DISCRETA (RODAPÉ) ================= */
+.pcd-footer-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 14px 26px 8px 26px;
+  background: #FFFFFF;
+  border-top: 1px dashed #E8DFD5;
+  color: #9A9086;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 400;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.pcd-footer-note i {
+  color: #C4B8A8;
+  font-size: 11px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.pcd-footer-note p {
+  margin: 0;
+  font-size: 10px;
+  color: #9A9086;
+  text-align: left;
+}
+
+.footer {
+  background: #fff;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 10px;
+  color: var(--orange-deep);
+  border-top: 1px solid #F3D9BE;
+  font-weight: 500;
+  page-break-inside: avoid;
+}
+.footer i { color: var(--orange-dark); margin: 0 4px; }
+
+/* ================= DIVISOR SOBRE MIM ================= */
+.about-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 14px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #b8420a;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.about-divider::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #f3c49b 0%, rgba(243, 196, 155, 0) 100%);
+  border-radius: 2px;
+}
+
+.about-divider i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(160deg, #FF8C42 0%, #FF7A2E 45%, #F26418 100%);
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0 2px 6px rgba(217, 84, 10, 0.22);
+}
+
+/* ================= CARD SOBRE MIM (FULL WIDTH) ================= */
+.card-about {
+  margin-bottom: 20px !important;
+  background: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #26221E;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  border-left: 3px solid #D9540A;
+}
+
+.about-list li > i {
+  flex-shrink: 0;
+  color: #D9540A;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+.about-list li > span {
+  flex: 1;
+}
+
+.about-list strong {
+  color: #D9540A;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .about-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* ================= CARD RECURSOS DE ORQUESTRAÇÃO ================= */
+.card-orquestracao {
+  margin-bottom: 20px;
+}
+
+.orq-txt {
+  margin: 0 0 10px 0;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #3a342e;
+  text-align: left;
+}
+
+.orq-txt:last-child {
+  margin-bottom: 0;
+}
+
+.orq-txt strong {
+  color: #B8420A;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .orq-txt { font-size: 12px; }
+}

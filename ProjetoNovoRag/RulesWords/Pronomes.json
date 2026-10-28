@@ -1,0 +1,6 @@
+{
+  "primeira_pessoa": ["eu", "me", "mim", "comigo", "meu", "minha", "meus", "minhas"],
+  "terceira_pessoa_m": ["ele", "dele"],
+  "terceira_pessoa_f": ["ela", "dela"],
+  "possessivo_contextual": ["seu", "sua", "seus", "suas"]
+}

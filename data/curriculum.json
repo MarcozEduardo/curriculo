@@ -1,0 +1,205 @@
+{
+  "perfil": {
+    "nome": "Marcos Eduardo da Silva dos Reis",
+    "cargo": "Analista de TI · Suporte Técnico & QA · Dev Assistido por IA",
+    "email": "marcos.eduardo@myyahoo.com",
+    "telefone": "(61) 98222-7804",
+    "github": "https://github.com/MarcozEduardo",
+    "github_user": "MarcozEduardo",
+    "linkedin": "https://www.linkedin.com/in/sir-marcos-eduardo",
+    "localizacao": "Brasília, Distrito Federal",
+    "foto_url": "https://github.com/MarcozEduardo/curriculo/blob/main/img/foto.png?raw=true",
+    "pcd": {
+      "ativo": true,
+      "titulo": "Profissional Neurodivergente (TEA Nível 1)",
+      "descricao": "Laudo comprobatório para vaga PCD. Perfil analítico com hiperfoco técnico, atenção cirúrgica a detalhes, excelência em depuração de erros e raciocínio lógico estruturado."
+    }
+  },
+  "resumo": "Profissional de TI com mais de 10 anos de experiência prática em suporte técnico industrial e administrativo, diagnóstico avançado de hardware/software, redes e resolução de incidentes complexos. Atua com foco em Desenvolvimento Web Assistido por IA e Garantia de Qualidade (QA), com portfólio ativo em TypeScript, React, HTML5 Canvas e integrações WebRTC/Firebase. Autor de uma trilogia de games e múltiplas ferramentas próprias, com deploys públicos e benchmarking de mais de 400 modelos de IA.",
+  "nota_autor": "Vários projetos abaixo estão em fase de refinamento simultâneo. Nos últimos meses dediquei parte do tempo à construção de uma ferramenta interna de orquestração pessoal (misto de MCP com camada própria) que utilizo como meu ambiente principal de desenvolvimento. Ela nasceu tool por tool durante a criação destes projetos, e agora está me permitindo retomar e finalizar todos com muito mais velocidade e qualidade.",
+  "projetos": {
+    "games": [
+      {
+        "nome": "A Fuga de Bobby",
+        "subtitulo": "Plataforma Retrô 2D",
+        "stack": "TypeScript · Canvas 2D · Vercel",
+        "status": "jogavel",
+        "status_label": "Jogável",
+        "link": "https://game-a-fuga-de-bobby-final.vercel.app",
+        "desc": "Jogo de plataforma retrô com 3 estágios de dano, ciclo dia/noite, powerups e boss carcereiro na fortaleza. Ao derrotar o chefe, o herói pega a chave, aciona a estação de rádio e chama o foguete para escapar. Jogável em desktop e mobile."
+      },
+      {
+        "nome": "A Viagem de Bobby",
+        "subtitulo": "Shoot-em-up Espacial",
+        "stack": "TypeScript · Canvas 2D · Vercel",
+        "status": "jogavel",
+        "status_label": "Jogável",
+        "link": "https://game-a-viagem-de-bobby.vercel.app",
+        "desc": "Continuação de A Fuga de Bobby. Foguete atira contra frota inimiga, cometas se dilaceram em dejetos menores, planeta Terra se aproxima em sprite e cutscene final mira no Brasil. Controles adaptados para desktop e mobile."
+      },
+      {
+        "nome": "Dama Orbital",
+        "subtitulo": "Dama Multiplayer com Sprites 2002",
+        "stack": "TypeScript · WebRTC · Firebase Auth · QR Code",
+        "status": "em-deploy",
+        "status_label": "Em Deploy",
+        "link": "",
+        "desc": "Fecha a trilogia de Bobby. Dama multiplayer navegador-a-navegador com pareamento por QR Code ou Firebase Auth. Tabuleiro gira 180° a cada turno, rádio de zoeira, observadores assistindo em tempo real. Modo local também disponível."
+      },
+      {
+        "nome": "Quadra 21 – Barra Pesada",
+        "subtitulo": "Beat'em Up com Editor de Fase",
+        "stack": "TypeScript · Canvas 2D · Editor Próprio",
+        "status": "em-refino",
+        "status_label": "Em Refino (90%)",
+        "link": "",
+        "desc": "Beat'em up inspirado em Streets of Rage. Intro cinematográfica, 4 personagens jogáveis, até 3 players simultâneos, colisão avançada (subir em carro, queda do teto para o capô, usar objetos como arma). Editor visual de fases quase finalizado."
+      },
+      {
+        "nome": "O Estagiário",
+        "subtitulo": "RPG Isométrico com Editor",
+        "stack": "TypeScript · Sprites · Editor Próprio",
+        "status": "em-refino",
+        "status_label": "Em Refino (80%)",
+        "link": "",
+        "desc": "RPG isométrico com editor próprio, objetos únicos, física de colisão, paredes que colapsam e personagem em 8 direções. Migração completa de pixel art canvas para sprites de alta qualidade."
+      }
+    ],
+    "ferramentas": [
+      {
+        "nome": "DirectSend",
+        "subtitulo": "LocalSend Web P2P",
+        "stack": "JavaScript · WebRTC · QR Code",
+        "status": "em-testes",
+        "status_label": "Em Testes",
+        "link": "https://github.com/MarcozEduardo/DirectSend",
+        "desc": "Transferência local de arquivos entre dispositivos via emparelhamento por QR Code. Nasceu como teste para validar integração Firebase + Vercel e evoluiu para projeto próprio."
+      },
+      {
+        "nome": "Marketbobby",
+        "subtitulo": "Lista de Mercado com IA",
+        "stack": "HTML · JavaScript · IA + OCR",
+        "status": "em-refino",
+        "status_label": "Em Refino",
+        "link": "https://github.com/MarcozEduardo/Marketbobby",
+        "desc": "Lista de compras inteligente: foto da prateleira ou placa de preço vira lista automática via IA. Filtros, organização e categorização de produtos. Próximos passos: fuzzy matching para nomes e comparador de mercados."
+      },
+      {
+        "nome": "DevOrador",
+        "subtitulo": "Auditor de Interface para IA",
+        "stack": "JavaScript · DOM Inspector",
+        "status": "funcional",
+        "status_label": "Funcional",
+        "link": "",
+        "desc": "Ferramenta injetada em qualquer projeto que audita a interface via seringa DOM. Copia o código do elemento junto com o endereço completo do atributo, entregando à IA um mapa preciso do local a ser editado."
+      },
+      {
+        "nome": "Portfólio Pessoal",
+        "subtitulo": "Site com Chat Inteligente",
+        "stack": "React · TypeScript · Chat Agent",
+        "status": "em-refino",
+        "status_label": "Em Refino (70%)",
+        "link": "",
+        "desc": "Site pessoal com chat inteligente que navega pelas páginas, conta a história dos projetos e conversa diretamente com recrutadores."
+      },
+      {
+        "nome": "Currículo Interativo (este)",
+        "subtitulo": "CV com RAG Local",
+        "stack": "HTML · CSS · JS · RAG Client-Side",
+        "status": "em-producao",
+        "status_label": "Em Produção",
+        "link": "https://github.com/MarcozEduardo/curriculo",
+        "desc": "Este próprio currículo. Sistema modular com base RAG local, chat assistente e exportação para PDF A4 profissional."
+      }
+    ],
+    "academico": [
+      {
+        "nome": "Extensão Institucional Unyleya",
+        "subtitulo": "Gerador de Slides ABNT",
+        "stack": "TypeScript · PPTX Engine · Vercel",
+        "status": "concluido",
+        "status_label": "Concluído",
+        "link": "https://programa-de-extens-o-institucional.vercel.app",
+        "desc": "Trabalho de extensão da Faculdade Unyleya. Sistema interativo com temas personalizáveis, geração automática de slides seguindo regras ABNT e exportação em PPT."
+      }
+    ],
+    "experimentos": [
+      "DrogaBOA (Gaveta virtual de medicamentos, será refeito com IA e RAG)",
+      "Gerador de Documentos para Professores (protótipo em pausa)",
+      "Divisor de Chunks para IA de contexto longo",
+      "ZapTestador Multi-Agente (testa vários prompts com uma única API)",
+      "Organizadores de código e parsers de sintaxe (muitos viraram tools internas)"
+    ]
+  },
+  "formacao": [
+    {
+      "curso": "Graduação em Tecnologia da Informação (EAD)",
+      "instituicao": "Faculdade Unyleya",
+      "status": "Em andamento"
+    },
+    {
+      "curso": "CS50: Introduction to Computer Science",
+      "instituicao": "Harvard University",
+      "status": "Estudo contínuo"
+    }
+  ],
+  "habilidades": {
+    "IA & Orquestração": ["Prompt Engineering", "RAG (Busca Vetorial)", "Benchmarking de Modelos", "Orquestração de Agentes", "Automação de Fluxos", "MCP (Model Context Protocol)"],
+    "Desenvolvimento & Web": ["TypeScript", "React", "JavaScript (ES6+)", "HTML5 & CSS3", "APIs REST / JSON", "Canvas 2D", "WebRTC", "Firebase Auth"],
+    "Suporte Técnico & Infra": ["Suporte N1 / N2 / N3", "Diagnóstico HW/SW", "Redes TCP/IP", "Manutenção de Máquinas", "Windows & Linux"],
+    "QA & Qualidade": ["Garantia de Qualidade (QA)", "Depuração Crítica (Debugging)", "Testes de Usabilidade", "Validação de Regras"],
+    "Ferramentas & Design": ["Git & GitHub", "Vercel Deploy", "CorelDRAW / Vetorial", "Photoshop", "Pacote Office"]
+  },
+  "experiencias": [
+    {
+      "cargo": "Desenvolvedor Web Assistido por IA & QA (Portfólio Prático)",
+      "empresa": "Projetos Independentes & Deploys Vercel",
+      "periodo": "2024 – Atual",
+      "pontos": [
+        "Desenvolvimento e publicação de trilogia de games e web apps em TypeScript, React, HTML5 Canvas, WebRTC e Firebase.",
+        "Construção de ferramenta interna de orquestração (MCP com camada própria) para desenvolvimento assistido por IA.",
+        "Implementação de arquitetura RAG (busca vetorial e semântica) e integração de APIs REST.",
+        "Benchmarking prático de mais de 400 modelos de IA para automação de tarefas técnicas.",
+        "Garantia de qualidade contínua: testes de usabilidade, compatibilidade cross-browser e segurança básica."
+      ]
+    },
+    {
+      "cargo": "Projetista Industrial CNC & Manutenção Técnica",
+      "empresa": "Bella Arte Indústria · Vicente Pires, DF · 5 anos e 4 meses",
+      "periodo": "Nov 2018 – Fev 2024",
+      "pontos": [
+        "Projetos técnicos e modelagem vetorial de alta precisão para corte a laser CNC (CO2).",
+        "Diagnóstico físico, manutenção preventiva/corretiva de hardware e calibração de software das máquinas CNC.",
+        "Gestão operacional, planejamento logístico e otimização de processos industriais."
+      ]
+    },
+    {
+      "cargo": "Assistente de Logística, TI Operacional & Administrativo",
+      "empresa": "Fabricart Indústria · Valparaíso de Goiás, GO · 2 anos e 8 meses",
+      "periodo": "Abr 2016 – Nov 2018",
+      "pontos": [
+        "Sócio operacional responsável por controle de estoque, compras, orçamento e suporte a sistemas internos.",
+        "Modelagem em CorelDRAW para produção industrial automatizada.",
+        "Solução autônoma de problemas técnicos e operacionais."
+      ]
+    },
+    {
+      "cargo": "Instrutor de Informática & Suporte Técnico",
+      "empresa": "Instituto Midori / Prepara Cursos · Taguatinga, DF · 1 ano e 8 meses",
+      "periodo": "Ago 2014 – Mar 2016",
+      "pontos": [
+        "Ensino prático de Pacote Office, Photoshop, CorelDRAW, AutoCAD e Manutenção de Hardware/Redes.",
+        "Administração da infraestrutura do laboratório de informática da franquia."
+      ]
+    },
+    {
+      "cargo": "Técnico de Manutenção & Suporte TI Autônomo",
+      "empresa": "Atuação Independente · Distrito Federal · 3 anos",
+      "periodo": "2011 – 2014",
+      "pontos": [
+        "Montagem de computadores sob medida, diagnóstico de placas, formatação e instalação de sistemas operacionais.",
+        "Atendimento e suporte direto a clientes finais e empresas locais."
+      ]
+    }
+  ]
+}

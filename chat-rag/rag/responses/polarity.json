@@ -1,0 +1,30 @@
+{
+  "category": "polarity",
+  "descricao": "Pesos de resposta para perguntas fechadas (sim / não / talvez) e para confirmações soltas do usuário.",
+  "prefixos": {
+    "sim": ["Sim, ", "Com certeza: ", "Sim, e com prova: ", "Positivo. ", "Sim! "],
+    "nao": ["Não, ", "Nesse ponto, não: ", "Sinceramente, não. ", "Negativo. "],
+    "talvez": ["Depende, e vou explicar: ", "Em parte: ", "Parcialmente, ", "Com ressalva: "]
+  },
+  "respostas_soltas": {
+    "sim": [
+      "Boa! Então me diz: quer começar pelos **projetos**, pela **stack** ou pelas **condições de contratação**?",
+      "Fechado. Sobre qual tema você quer que eu aprofunde?",
+      "Show. Pode mandar a próxima pergunta."
+    ],
+    "nao": [
+      "Sem problema. Se mudar de ideia, estou por aqui, e o contato direto do Marcão é **(61) 98222-7804**.",
+      "Tranquilo. Quer que eu mostre outro tema do currículo?",
+      "Entendido. Posso te ajudar com outra coisa?"
+    ],
+    "talvez": [
+      "Beleza, sem pressa. Posso adiantar um resumo do perfil se quiser.",
+      "Entendi. Se quiser decidir com mais dado, pergunte sobre projetos ou sobre os pontos fortes dele."
+    ]
+  },
+  "lexico": {
+    "sim": ["sim", "claro", "com certeza", "certamente", "isso", "exato", "exatamente", "aham", "uhum", "positivo", "pode ser", "bora", "quero", "ok", "blz", "beleza", "yes", "s"],
+    "nao": ["nao", "nunca", "jamais", "negativo", "nope", "nem", "deixa", "agora nao", "no"],
+    "talvez": ["talvez", "quem sabe", "acho que", "possivelmente", "pode ser que", "nao sei", "mais ou menos", "sei la"]
+  }
+}

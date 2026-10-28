@@ -1,0 +1,35 @@
+{
+  "prateleira_verbos": {
+    "entrega": ["manda", "mandar", "passa", "passar", "envia", "enviar", "solta", "cola", "joga", "descola"],
+    "desejo": ["quero", "quer", "queria", "preciso", "precisa", "poderia", "pode", "posso", "gostaria"],
+    "comunicacao": ["fala", "falar", "fale", "conta", "chama", "chamar", "liga", "ligar"]
+  },
+  "prateleira_objetos": {
+    "canais": {
+      "zap": { "genero": "m", "transferivel": true },
+      "whatsapp": { "genero": "m", "transferivel": true },
+      "telefone": { "genero": "m", "transferivel": true },
+      "numero": { "genero": "m", "transferivel": true },
+      "email": { "genero": "m", "transferivel": true },
+      "github": { "genero": "m", "transferivel": true },
+      "linkedin": { "genero": "m", "transferivel": true },
+      "contato": { "genero": "m", "transferivel": true },
+      "contatinho": { "genero": "m", "transferivel": true }
+    },
+    "pessoas": {
+      "marcos": { "genero": "m", "transferivel": false },
+      "marcao": { "genero": "m", "transferivel": false },
+      "ele": { "genero": "m", "transferivel": false }
+    },
+    "ambiguos": {
+      "link": { "genero": "m", "depende_contexto": true },
+      "perfil": { "genero": "m", "depende_contexto": true }
+    }
+  },
+  "prateleira_apontadores": {
+    "definidos_m": ["o", "os"],
+    "definidos_f": ["a", "as"],
+    "pertencimento": ["do", "da", "de", "dele", "dela"]
+  },
+  "prateleira_sujeitos": ["marcos", "marcao", "ele", "eu", "me", "mim"]
+}

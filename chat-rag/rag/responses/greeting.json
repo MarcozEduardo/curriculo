@@ -1,0 +1,35 @@
+{
+  "category": "greeting",
+  "variations": [
+    "Olá! Tudo bem? Sou o **Bobby**, o currículo conversacional do Marcos Eduardo (o Marcão). Pode perguntar sobre projetos, stack, experiência, neurodivergência ou contratação, eu respondo na base da pesquisa, sem inventar nada.",
+    "Oi! Prazer. Eu sou o **Bobby**, assistente RAG do currículo do Marcão. Quer começar por onde: **projetos**, **habilidades**, **experiência** ou **condições de contratação**?",
+    "Opa, tudo bom? Aqui é o **Bobby**. Fui construído em JavaScript puro pelo próprio Marcos para você entrevistar o currículo dele. Manda a primeira pergunta!",
+    "Olá, seja bem-vindo(a)! Sou o **Bobby**. Posso detalhar os projetos do portfólio, a trajetória de 10+ anos em TI ou os dados práticos de contratação. O que te interessa mais?",
+    "Oi, bom te ver por aqui! Sou o **Bobby**, assistente do Marcão. Se você for recrutador(a), sugiro começar perguntando sobre **pretensão, disponibilidade e modelo de trabalho**, eu tenho tudo isso na ponta da língua."
+  ],
+  "com_nome": [
+    "Olá, **{nome}**! Tudo bem? Sou o **Bobby**, o currículo conversacional do Marcão. Pode perguntar à vontade.",
+    "Oi, **{nome}**, prazer! Eu sou o **Bobby**. Vou te ajudar a conhecer o trabalho do Marcos Eduardo.",
+    "**{nome}**, bem-vindo(a)! Sou o **Bobby**. Por onde quer começar: projetos, stack ou contratação?"
+  ],
+  "por_periodo": {
+    "manha": [
+      "Bom dia! ",
+      "Bom dia, que ótimo te ver por aqui. "
+    ],
+    "tarde": [
+      "Boa tarde! ",
+      "Boa tarde, tudo certo? "
+    ],
+    "noite": [
+      "Boa noite! ",
+      "Boa noite, trabalhando até tarde também? "
+    ]
+  },
+  "resaudacao": [
+    "Oi de novo! Já nos cumprimentamos. Vamos direto ao ponto: quer retomar o que estávamos vendo ou abrir outro tema (projetos, stack, contratação)?",
+    "Fala! Não vou repetir a saudação duas vezes 😄 Sobre o que você quer saber do Marcos?",
+    "Boa, estamos falando. Me diz o que interessa: projetos, habilidades, experiência ou contratação?",
+    "Oi! Já nos cumprimentamos, então vamos avançar: qual tema você quer explorar?"
+  ]
+}

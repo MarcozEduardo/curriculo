@@ -1,0 +1,560 @@
+{
+  "meta": {
+    "versao": "3.1.0",
+    "descricao": "Frames de pergunta por faceta. O gerador cruza FRAMES x SUJEITOS (órbita + aliases das entidades) e produz centenas de variações por tópico em rag/mesh/questions/*.json. Editar aqui = aumentar a cobertura de todo o mesh."
+  },
+  "frames": {
+    "resumo": [
+      "o que e {s}",
+      "me fala sobre {s}",
+      "me conta sobre {s}",
+      "explica {s} pra mim",
+      "fala de {s}",
+      "do que se trata {s}",
+      "me da um resumo de {s}",
+      "descreve {s}",
+      "quero saber sobre {s}",
+      "pode falar de {s}",
+      "como funciona {s}",
+      "me explica o {s}",
+      "detalha {s}",
+      "o que seria {s}",
+      "me apresenta {s}",
+      "resumo de {s}",
+      "visao geral de {s}",
+      "queria entender {s}"
+    ],
+    "tecnologias": [
+      "quais tecnologias de {s}",
+      "que tecnologia foi usada em {s}",
+      "qual a stack de {s}",
+      "com o que {s} foi feito",
+      "{s} foi feito em que linguagem",
+      "quais linguagens de {s}",
+      "que framework usou em {s}",
+      "quais bibliotecas de {s}",
+      "{s} usa qual banco de dados",
+      "em que {s} foi escrito",
+      "tecnologias por tras de {s}",
+      "ferramentas usadas em {s}",
+      "qual linguagem de programacao de {s}",
+      "como {s} foi construido tecnicamente",
+      "stack tecnica de {s}"
+    ],
+    "motivo": [
+      "por que fez {s}",
+      "porque criou {s}",
+      "qual a motivacao de {s}",
+      "de onde veio a ideia de {s}",
+      "o que inspirou {s}",
+      "qual o objetivo de {s}",
+      "para que serve {s}",
+      "qual o proposito de {s}",
+      "por que escolheu fazer {s}",
+      "o que levou ele a criar {s}",
+      "qual problema {s} resolve",
+      "pra que ele fez {s}",
+      "qual a razao de {s}",
+      "qual a intencao com {s}"
+    ],
+    "desafio": [
+      "qual foi o desafio de {s}",
+      "qual a maior dificuldade em {s}",
+      "o que foi mais dificil em {s}",
+      "teve problema em {s}",
+      "que bug apareceu em {s}",
+      "qual parte mais complexa de {s}",
+      "o que deu errado em {s}",
+      "como resolveu os problemas de {s}",
+      "qual obstaculo em {s}",
+      "quais desafios tecnicos de {s}",
+      "teve dor de cabeca com {s}",
+      "o que travou em {s}"
+    ],
+    "aprendizado": [
+      "o que aprendeu com {s}",
+      "qual aprendizado de {s}",
+      "que licao {s} deixou",
+      "o que {s} ensinou",
+      "o que faria diferente em {s}",
+      "como {s} fez ele evoluir",
+      "o que mudou depois de {s}",
+      "qual insight de {s}",
+      "o que levou de {s}"
+    ],
+    "status": [
+      "qual o status de {s}",
+      "{s} esta pronto",
+      "{s} foi finalizado",
+      "{s} ainda esta em andamento",
+      "em que pe esta {s}",
+      "{s} esta no ar",
+      "{s} funciona",
+      "ja terminou {s}",
+      "{s} esta concluido",
+      "{s} esta ativo",
+      "qual a situacao de {s}"
+    ],
+    "link": [
+      "tem link de {s}",
+      "qual o link de {s}",
+      "onde vejo {s}",
+      "onde acesso {s}",
+      "{s} tem deploy",
+      "tem repositorio de {s}",
+      "cade o github de {s}",
+      "posso testar {s}",
+      "como jogo {s}",
+      "manda o link de {s}",
+      "tem demo de {s}",
+      "onde esta o codigo de {s}",
+      "{s} esta publicado onde"
+    ],
+    "duracao": [
+      "quanto tempo levou {s}",
+      "{s} demorou quanto",
+      "quantos meses de {s}",
+      "quanto durou {s}",
+      "quanto tempo de {s}",
+      "{s} levou quanto tempo pra ficar pronto",
+      "tempo gasto em {s}",
+      "ficou quanto tempo em {s}",
+      "quantos anos de {s}"
+    ],
+    "arquitetura": [
+      "como e a arquitetura de {s}",
+      "como organizou o codigo de {s}",
+      "qual a estrutura de {s}",
+      "{s} e modular",
+      "que padrao de projeto usou em {s}",
+      "como separou as camadas de {s}",
+      "como {s} esta estruturado",
+      "design de {s}"
+    ],
+    "qa": [
+      "fez testes em {s}",
+      "como testou {s}",
+      "{s} tem teste automatizado",
+      "como garantiu a qualidade de {s}",
+      "fez qa em {s}",
+      "testou {s} em quais dispositivos",
+      "{s} tem cobertura de teste",
+      "como validou {s}"
+    ],
+    "equipe": [
+      "fez {s} sozinho",
+      "{s} foi em equipe",
+      "quantas pessoas em {s}",
+      "teve ajuda em {s}",
+      "quem mais trabalhou em {s}",
+      "{s} foi solo ou em time"
+    ],
+    "nivel": [
+      "qual o nivel dele em {s}",
+      "ele domina {s}",
+      "ele sabe mesmo {s}",
+      "{s} e avancado",
+      "da nota de 0 a 10 em {s}",
+      "quao bom ele e em {s}",
+      "ele e iniciante em {s}",
+      "qual a senioridade dele em {s}",
+      "ele manja de {s}"
+    ],
+    "estilo_trabalho": [
+      "como ele trabalha em {s}",
+      "qual o estilo de trabalho dele",
+      "como ele se organiza",
+      "ele usa scrum",
+      "qual metodologia ele usa",
+      "como e a rotina dele",
+      "ele lida bem com pressao",
+      "ele cumpre prazo",
+      "ele trabalha melhor sozinho ou em equipe",
+      "como ele prioriza tarefas"
+    ],
+    "pontos_fortes": [
+      "quais os pontos fortes dele",
+      "qual o diferencial dele",
+      "qual a maior qualidade dele",
+      "o que ele faz de melhor",
+      "por que contratar ele",
+      "vale a pena contratar",
+      "o que ele traz de valor",
+      "qual a forca dele em {s}"
+    ],
+    "pontos_fracos": [
+      "quais os pontos fracos dele",
+      "qual a fraqueza dele",
+      "o que ele precisa melhorar",
+      "qual a limitacao dele",
+      "onde ele peca",
+      "qual o defeito dele",
+      "o que falta nele",
+      "ele tem alguma lacuna em {s}"
+    ],
+    "quantidade": [
+      "quantos {s} ele tem",
+      "quantos {s} ja fez",
+      "qual o numero de {s}",
+      "quantidade de {s}",
+      "quantos {s} existem no portfolio"
+    ],
+    "comparacao": [
+      "qual a diferenca entre os {s}",
+      "compara os {s}",
+      "qual {s} e melhor",
+      "qual {s} ele prefere",
+      "qual {s} se destaca"
+    ],
+    "pretensao": [
+      "qual a pretensao salarial",
+      "quanto ele quer ganhar",
+      "qual o salario pretendido",
+      "qual a faixa salarial",
+      "quanto custa contratar ele",
+      "quanto ele cobra",
+      "qual o valor hora dele",
+      "qual a remuneracao esperada",
+      "ele aceita quanto",
+      "qual expectativa salarial"
+    ],
+    "modelo_trabalho": [
+      "ele trabalha remoto",
+      "aceita presencial",
+      "ele aceita hibrido",
+      "onde ele mora",
+      "qual a cidade dele",
+      "ele mora em brasilia",
+      "aceita viajar",
+      "mudaria de cidade",
+      "tem estrutura pra home office",
+      "qual o fuso horario dele",
+      "qual estado ele mora"
+    ],
+    "disponibilidade": [
+      "quando ele pode comecar",
+      "qual a disponibilidade dele",
+      "ele comeca imediato",
+      "ja pode comecar",
+      "ele esta disponivel",
+      "tem aviso previo",
+      "qual o prazo pra iniciar",
+      "ele esta empregado agora"
+    ],
+    "contratacao": [
+      "ele aceita pj",
+      "ele aceita clt",
+      "qual regime de contratacao",
+      "ele aceita estagio",
+      "aceita freelance",
+      "ele topa contrato temporario",
+      "pode entrar em vaga pcd"
+    ],
+    "adaptacoes": [
+      "precisa de adaptacao",
+      "quais adaptacoes ele precisa",
+      "precisa de acessibilidade",
+      "tem alguma restricao",
+      "precisa de apoio no trabalho",
+      "tem limitacao de horario",
+      "o que a empresa precisa providenciar"
+    ],
+    "como_funciona": [
+      "como voce funciona",
+      "como esse bot foi feito",
+      "voce usa chatgpt",
+      "qual modelo voce usa",
+      "voce e uma ia",
+      "voce e generativo",
+      "voce tem api de ia",
+      "voce foi treinado",
+      "voce e um rag",
+      "como voce acha as respostas",
+      "voce roda onde"
+    ],
+    "idiomas": [
+      "ele fala ingles",
+      "qual o nivel de ingles dele",
+      "ele sabe outro idioma",
+      "ingles fluente",
+      "ele le documentacao em ingles",
+      "ele fala espanhol"
+    ],
+    "certificacoes": [
+      "ele tem certificacao",
+      "tem certificado de {s}",
+      "ele e certificado",
+      "fez curso certificado",
+      "tem diploma"
+    ],
+    "experiencia_dev": [
+      "ele ja trabalhou como dev",
+      "tem experiencia profissional em programacao",
+      "ja foi contratado como programador",
+      "tem carteira assinada em ti",
+      "quanto tempo de experiencia em desenvolvimento",
+      "ja atuou em time de software"
+    ],
+    "sabe_programar": [
+      "ele sabe programar",
+      "ele sabe codar",
+      "ele escreve codigo",
+      "ele programa de verdade",
+      "ele so usa ia pra programar",
+      "a ia que faz tudo por ele",
+      "ele entende de codigo",
+      "ele consegue resolver problema de logica",
+      "ele sabe debugar"
+    ],
+    "inacabados": [
+      "por que os projetos estao inacabados",
+      "por que ele nao terminou os projetos",
+      "tem muito projeto em aberto",
+      "nenhum projeto esta pronto",
+      "por que tanta coisa incompleta"
+    ],
+    "etapas_vida": [
+      "conta a historia dele",
+      "quais as etapas da vida dele",
+      "qual a linha do tempo dele",
+      "como ele comecou na ti",
+      "como ele entrou na area",
+      "qual a trajetoria dele",
+      "o que ele fazia antes",
+      "por onde ele passou"
+    ],
+    "motivacao": [
+      "o que motiva ele",
+      "qual o objetivo de carreira dele",
+      "onde ele quer chegar",
+      "qual o sonho dele",
+      "o que ele busca",
+      "em que area ele quer atuar",
+      "qual o plano dele"
+    ],
+    "default": [
+      "{s}",
+      "fala sobre {s}",
+      "quero saber de {s}",
+      "informacoes de {s}",
+      "detalhes de {s}",
+      "{s} por favor",
+      "tem algo sobre {s}",
+      "o que voce sabe de {s}",
+      "sobre {s}",
+      "me conta uma curiosidade sobre {s}",
+      "quero saber os bastidores de {s}"
+    ],
+    "conquistas": [
+      "quais as conquistas dele",
+      "que resultado ele entregou",
+      "qual a maior entrega dele",
+      "o que ele ja resolveu de dificil",
+      "tem caso de sucesso",
+      "principais resultados em {s}",
+      "do que ele se orgulha"
+    ],
+    "industria": [
+      "ele tem experiencia industrial",
+      "ja trabalhou em fabrica",
+      "conhece chao de fabrica",
+      "tem experiencia com cnc",
+      "ja atuou em manufatura",
+      "conhece ambiente fabril",
+      "trabalhou com maquina industrial"
+    ],
+    "orquestracao_ferramentas": [
+      "ele conhece n8n",
+      "usa langchain",
+      "conhece crewai",
+      "usa github copilot",
+      "conhece cursor",
+      "usa zapier ou make",
+      "que ferramenta de automacao ele usa",
+      "ele conhece mcp"
+    ],
+    "cloud": [
+      "ele conhece aws",
+      "tem experiencia com azure",
+      "sabe docker",
+      "conhece kubernetes",
+      "ja trabalhou com cloud",
+      "entende devops",
+      "sabe ci cd"
+    ],
+    "ramp_up": [
+      "quanto tempo ele leva pra aprender",
+      "ele aprende rapido",
+      "qual a curva de aprendizado",
+      "precisa de treinamento",
+      "quanto tempo de adaptacao",
+      "ele se adapta rapido"
+    ],
+    "limitacoes": [
+      "o que ele nao sabe",
+      "quais as limitacoes dele",
+      "o que falta pra ele",
+      "o que ele nao domina",
+      "quais as lacunas tecnicas",
+      "onde ele precisa evoluir"
+    ],
+    "resolucao_problema": [
+      "como ele resolve problema",
+      "como ele aborda um problema novo",
+      "como ele investiga um bug",
+      "como faz diagnostico",
+      "como acha a causa raiz",
+      "qual o metodo dele"
+    ],
+    "origem": [
+      "como ele comecou",
+      "de onde ele veio",
+      "qual a origem dele",
+      "como entrou na area de ti",
+      "qual foi o primeiro emprego",
+      "qual foi o primeiro computador"
+    ],
+    "idade_local": [
+      "quantos anos ele tem",
+      "qual a idade dele",
+      "onde ele mora",
+      "qual a cidade dele",
+      "de onde ele e",
+      "ele mora em brasilia"
+    ],
+    "virada": [
+      "por que ele mudou de area",
+      "quando decidiu migrar pra ti",
+      "o que mudou em 2024",
+      "por que a transicao de carreira"
+    ],
+    "forma_de_aprender": [
+      "como ele aprende",
+      "qual o metodo de estudo dele",
+      "ele e autodidata",
+      "como ele absorve conteudo novo"
+    ],
+    "conceito": [
+      "o que significa bobby",
+      "por que o nome bobby",
+      "quem e bobby",
+      "de onde vem bobby"
+    ],
+    "fit_vaga": [
+      "ele serve pra vaga",
+      "ele tem fit com a vaga",
+      "ele se encaixa no perfil",
+      "ele atende os requisitos",
+      "ele da conta do cargo"
+    ],
+    "numeros": [
+      "quantos projetos ele tem",
+      "quantos jogos publicados",
+      "quantos sistemas ele construiu",
+      "numeros do portfolio"
+    ],
+    "sistemas_grandes": [
+      "quais os projetos maiores",
+      "o que ele nao publicou",
+      "quais projetos sao reservados",
+      "qual o projeto mais ambicioso",
+      "o que e o lar",
+      "o que e o nexus"
+    ],
+    "altas_habilidades": [
+      "o que e o hiperfoco dele",
+      "como funciona o foco dele",
+      "ele tem altas habilidades",
+      "qual o perfil cognitivo dele"
+    ],
+    "contato": [
+      "qual o contato dele",
+      "como falo com ele",
+      "qual o email dele",
+      "qual o whatsapp",
+      "tem linkedin",
+      "como entro em contato"
+    ],
+    "tempo_total": [
+      "quantos anos de experiencia",
+      "quanto tempo de carreira",
+      "quanto tempo de ti",
+      "ha quanto tempo ele trabalha"
+    ],
+    "diferencial_industrial": [
+      "qual o diferencial dele pra industria",
+      "ele entende de producao",
+      "serve pra empresa industrial"
+    ],
+    "ia_copiloto": [
+      "como ele usa ia no desenvolvimento",
+      "a ia e copiloto ou faz tudo",
+      "quem escreveu o codigo dos projetos",
+      "qual e o papel da ia no desenvolvimento",
+      "ele programa ou so usa ia",
+      "a inteligencia artificial substitui o marcos",
+      "quanto do codigo e feito com ia",
+      "como o marcos valida o codigo gerado com ia",
+      "ele entende o codigo que a ia sugere",
+      "como funciona o copiloto de ia dele"
+    ],
+    "processo": [
+      "como ele desenvolve projetos",
+      "qual o processo de trabalho dele",
+      "como e o processo de criacao",
+      "quanto tempo de debugging",
+      "ele vai linha por linha no codigo",
+      "ele migra funcao para workflow",
+      "quantas IAs trabalharam no projeto",
+      "ele usa varias IAs",
+      "ele cancela tudo e comeca do zero",
+      "a IA enlouquece como ele lida",
+      "IA em modo metralhadora",
+      "ataque de ansiedade da IA",
+      "ele e psicologo de IA",
+      "ele paga sapo na IA",
+      "ele desacelera a IA",
+      "por que ele construiu o LAR",
+      "por que fez o LAR",
+      "ele para projeto para estudar",
+      "por que projetos ficam em aberto",
+      "ele nao aceita resultado ruim",
+      "metodologia de desenvolvimento dele",
+      "ciclo de desenvolvimento",
+      "ele recomeca o projeto do zero",
+      "ele nao aceita e volta tudo",
+      "ele joga fora e faz de novo",
+      "ele descarta o codigo e reescreve",
+      "ele reescreve do zero",
+      "ele nao aceita o resultado",
+      "ele nao fica satisfeito",
+      "ate ficar do jeito que queria"
+    ],
+    "study_case": [
+      "qual a historia por tras de {s}",
+      "como foi fazer {s}",
+      "como surgiu {s}",
+      "study case de {s}",
+      "o que aconteceu no desenvolvimento de {s}",
+      "como comecou {s}",
+      "bastidores de {s}",
+      "quem e socram",
+      "qual o vilao do jogo",
+      "o que aconteceu com o codigo de {s}",
+      "ele perdeu o codigo de {s}",
+      "ele reconstruiu {s}",
+      "quanto tempo para reconstruir {s}",
+      "quanto tempo levou para fazer {s} com a engine pronta",
+      "de onde veio a ideia de {s}"
+    ]
+  },
+  "prefixos": [
+    "",
+    "voce sabe ",
+    "me diz ",
+    "poderia dizer ",
+    "queria saber ",
+    "pode me falar ",
+    "tem como dizer "
+  ]
+}

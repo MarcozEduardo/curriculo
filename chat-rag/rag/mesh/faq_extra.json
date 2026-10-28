@@ -1,0 +1,461 @@
+{
+  "descricao": "Perguntas de recrutador que futrica, fora das árvores 15+10+10+10+5 (layer 0). Só fatos confirmados; quando não há dado, a resposta diz isso e mostra o que existe.",
+  "items": [
+    {
+      "id": "fq01",
+      "orbit": "experiencia",
+      "label": "o período desde 2024",
+      "question": "Por que ficou sem trabalhar desde 2024?",
+      "variants": [
+        "tem lacuna no currículo",
+        "quanto tempo ficou desempregado",
+        "por que está parado",
+        "ele está desempregado",
+        "o que ele fez nesse tempo",
+        "lacuna de emprego"
+      ],
+      "answer": "Desde que deixou a indústria ele se dedicou a estudo e portfólio: graduação em TI, CS50, testes com centenas de modelos de IA, a trilogia de jogos, ferramentas, o LAR e este chat. Ele vê esse período como a transição que estruturou, não como lacuna."
+    },
+    {
+      "id": "fq02",
+      "orbit": "experiencia",
+      "label": "demissão",
+      "question": "Ele já foi demitido?",
+      "variants": [
+        "foi mandado embora",
+        "já levou justa causa",
+        "por que saiu dos empregos"
+      ],
+      "answer": "A base não registra demissão. Sobre a saída da Bella Arte, o que ele conta é que saiu para migrar de vez para tecnologia, área em que já atuava informalmente dentro da empresa.",
+      "facet": "motivo_saida"
+    },
+    {
+      "id": "fq03",
+      "orbit": "sobre_marcos",
+      "label": "metodologias ágeis",
+      "question": "Ele conhece Scrum ou metodologias ágeis?",
+      "variants": [
+        "trabalha com scrum",
+        "metodologias ágeis",
+        "ele conhece kanban",
+        "ele já usou scrum",
+        "trabalha com metodologia ágil"
+      ],
+      "answer": "A base não registra experiência com Scrum ou outras metodologias ágeis formais. O que ele descreve é o método dele: mapear o problema, investigar o fluxo, testar hipótese e documentar o que faz."
+    },
+    {
+      "id": "fq04",
+      "orbit": "recrutamento",
+      "label": "viagens a trabalho",
+      "question": "Ele aceita viajar a trabalho?",
+      "variants": [
+        "disponível para viagens",
+        "viagens a trabalho",
+        "ele viaja"
+      ],
+      "answer": "A base não informa disponibilidade para viagens. O que está confirmado é a preferência por remoto, com abertura para híbrido e presencial no Distrito Federal."
+    },
+    {
+      "id": "fq05",
+      "orbit": "recrutamento",
+      "label": "horário de trabalho",
+      "question": "Qual horário ele prefere trabalhar?",
+      "variants": [
+        "ele trabalha de madrugada",
+        "horário de trabalho",
+        "ele faz hora extra",
+        "turno que ele prefere"
+      ],
+      "answer": "A base não define um horário preferido nem posição sobre hora extra. Ele relata que trabalha bem sob pressão de prazo e que já sustentou jornadas longas quando a operação exigiu."
+    },
+    {
+      "id": "fq06",
+      "orbit": "recrutamento",
+      "label": "estrutura para remoto",
+      "question": "Ele tem notebook e estrutura própria?",
+      "variants": [
+        "ele tem notebook próprio",
+        "qual o computador dele",
+        "ele tem internet em casa",
+        "estrutura para home office"
+      ],
+      "answer": "O currículo diz que ele tem infraestrutura completa para atuar a distância: máquina, conexão e ambiente de foco. O modelo do equipamento não está registrado.",
+      "facet": "modelo_trabalho"
+    },
+    {
+      "id": "fq08",
+      "orbit": "projetos",
+      "label": "os próximos projetos",
+      "question": "Qual o próximo projeto dele?",
+      "variants": [
+        "o que ele vai fazer agora",
+        "o que vem pela frente",
+        "projetos futuros",
+        "planos para os projetos"
+      ],
+      "answer": "Pelo que ele conta: terminar o Quadra 21 (cerca de 90%) e O Estagiário (cerca de 80%), refinar DirectSend e Marketbobby e seguir aprofundando o Núcleo Nexus e o LAR."
+    },
+    {
+      "id": "fq09",
+      "orbit": "projetos",
+      "label": "o projeto que deu mais trabalho",
+      "question": "Qual projeto deu mais trabalho?",
+      "variants": [
+        "qual jogo foi mais difícil",
+        "projeto mais trabalhoso",
+        "qual deu mais dor de cabeça"
+      ],
+      "answer": "Ele conta que A Viagem de Bobby foi o que menos deu trabalho (cerca de 40 minutos com a engine pronta). O primeiro jogo teve mais dificuldade de jogo e a Dama Orbital mais debugs de lógica e física, além do episódio de perder o jogo e reconstruir 99% idêntico."
+    },
+    {
+      "id": "fq10",
+      "orbit": "projetos",
+      "label": "projetos abandonados",
+      "question": "Ele já abandonou algum projeto?",
+      "variants": [
+        "projetos abandonados",
+        "ele larga projeto no meio",
+        "quantos projetos ele começou"
+      ],
+      "answer": "Ele não fala em abandono, fala em projetos em refino: pausa para estudar, melhorar a forma de desenvolver e se aprofundar, e volta quando as ideias amadurecem. Os três jogos principais estão publicados.",
+      "facet": "processo"
+    },
+    {
+      "id": "fq11",
+      "orbit": "skills",
+      "label": "PC que não liga",
+      "question": "Como ele resolveria um PC que não liga?",
+      "variants": [
+        "e se o computador não ligar",
+        "diagnóstico de computador que não liga",
+        "passo a passo de diagnóstico",
+        "como ele faz diagnóstico de hardware"
+      ],
+      "answer": "A base não traz um passo a passo, mas traz o método: isolar variável, testar hipótese e separar hardware de software. Ele praticou isso por anos em bancada (diagnóstico de placas, formatação, instalação) e na manutenção das máquinas CNC.",
+      "facet": "suporte"
+    },
+    {
+      "id": "fq12",
+      "orbit": "skills",
+      "label": "queda de rede",
+      "question": "E se a rede cair na empresa?",
+      "variants": [
+        "como ele trataria uma queda de rede",
+        "rede fora do ar",
+        "problema de rede"
+      ],
+      "answer": "Pelo histórico dele: diagnóstico de causa raiz, com experiência em manutenção de rede e em montar rede do zero em ambiente que ninguém tinha mexido. Procedimentos específicos de cada empresa ele aprende no contexto.",
+      "facet": "suporte"
+    },
+    {
+      "id": "fq13",
+      "orbit": "skills",
+      "label": "priorizar chamados",
+      "question": "Como ele priorizaria vários chamados ao mesmo tempo?",
+      "variants": [
+        "priorizar 10 chamados",
+        "como ele prioriza tarefas",
+        "fila de chamados"
+      ],
+      "answer": "A base não traz um critério formal de priorização, e ele diz que não tem processo ITIL formalizado. O que traz pronto: resolver o problema, documentar direito e não deixar voltar."
+    },
+    {
+      "id": "fq14",
+      "orbit": "recrutamento",
+      "label": "resumo do candidato",
+      "question": "Faz um resumo do candidato em poucas linhas",
+      "variants": [
+        "resumo executivo do candidato",
+        "qual o pitch dele",
+        "me vende esse candidato",
+        "convence a gente a chamar ele",
+        "por que devo chamar ele para entrevista",
+        "resumo em 3 linhas"
+      ],
+      "answer": "Mais de 10 anos resolvendo problema técnico real, sendo cerca de 8 só em fábrica (de 2015 a 2023), com suporte, rede, diagnóstico e CNC. Portfólio público: trilogia de jogos, ferramentas P2P, o LAR e este chat. E um jeito próprio de trabalhar: IA como copiloto, hiperfoco e transparência sobre o que ainda não domina."
+    },
+    {
+      "id": "fq15",
+      "orbit": "historia_pessoal",
+      "label": "jogos que ele gosta",
+      "question": "Ele joga videogame?",
+      "variants": [
+        "de que jogos ele gosta",
+        "ele gosta de games",
+        "ele joga"
+      ],
+      "answer": "Os jogos que ele cita com carinho: Age of Empires II (o melhor da saga, para ele), Caesar III e Age of Mythology. Também passou anos mexendo no Counter-Strike 1.6, com mods e mapas."
+    },
+    {
+      "id": "fq16",
+      "orbit": "skills",
+      "label": "séries em inglês",
+      "question": "Ele gosta de séries?",
+      "variants": [
+        "assiste série",
+        "ele vê séries em inglês"
+      ],
+      "answer": "Ele cita assistir séries com áudio em inglês como forma de imersão: em pouco tempo o conteúdo volta a fazer sentido, por triangulação."
+    },
+    {
+      "id": "fq17",
+      "orbit": "historia_pessoal",
+      "label": "hobbies",
+      "question": "Ele tem hobby?",
+      "variants": [
+        "o que ele faz no tempo livre",
+        "passatempo"
+      ],
+      "answer": "A base não lista hobbies. O que ele conta com paixão são os jogos e mexer neles (mods, mapas, tradução) e estudar tecnologia."
+    },
+    {
+      "id": "fq18",
+      "orbit": "contato",
+      "label": "blog e open source",
+      "question": "Ele tem blog ou contribui com open source?",
+      "variants": [
+        "ele tem blog",
+        "ele contribui com open source",
+        "ele tem canal no youtube",
+        "stack overflow",
+        "contribuições open source"
+      ],
+      "answer": "A base não cita blog, canal ou contribuições open source. Os canais registrados são GitHub e LinkedIn."
+    },
+    {
+      "id": "fq19",
+      "orbit": "recrutamento",
+      "label": "desafio de código ao vivo",
+      "question": "Como ele se sai em desafio de código ao vivo?",
+      "variants": [
+        "ele resolve desafio de código ao vivo",
+        "como ele se sai em entrevista técnica",
+        "teste de lógica ao vivo",
+        "code challenge",
+        "live coding"
+      ],
+      "answer": "Ele é transparente: numa prova seca de sintaxe, como SQL de memória, precisaria de referência. Onde ele rende é entender o problema, ler e depurar código, explicar decisões e demonstrar o que já construiu."
+    },
+    {
+      "id": "fq20",
+      "orbit": "sobre_marcos",
+      "label": "conflito em equipe",
+      "question": "Como ele lida com conflito na equipe?",
+      "variants": [
+        "conflito no trabalho",
+        "como ele resolve conflito",
+        "briga na equipe"
+      ],
+      "answer": "A base não traz um relato sobre conflito em equipe. O que existe: gestão informal de unidade na Prepara, uma sociedade que terminou por divergência de gestão e autonomia em operações onde não havia a quem escalar."
+    },
+    {
+      "id": "fq21",
+      "orbit": "experiencia",
+      "label": "cliente difícil",
+      "question": "Como ele lida com cliente difícil?",
+      "variants": [
+        "cliente bravo",
+        "ele atenderia cliente bravo",
+        "atendimento sob pressão"
+      ],
+      "answer": "A base não traz um relato específico de cliente difícil, mas traz atendimento sob pressão: guichê da Oi Atende, bancada técnica com cliente esperando e suporte a alunos e equipe."
+    },
+    {
+      "id": "fq22",
+      "orbit": "skills",
+      "label": "segurança da informação",
+      "question": "Ele conhece segurança da informação?",
+      "variants": [
+        "ele sabe de segurança",
+        "ele conhece lgpd",
+        "pentest",
+        "owasp",
+        "criptografia"
+      ],
+      "answer": "O currículo cita segurança básica dentro do QA, junto de testes de usabilidade e compatibilidade cross-browser. Segurança da informação formal, LGPD ou pentest não estão registrados."
+    },
+    {
+      "id": "fq23",
+      "orbit": "experiencia",
+      "label": "ERP e SAP",
+      "question": "Ele conhece ERP ou SAP?",
+      "variants": [
+        "ele já trabalhou com sap",
+        "ele conhece erp",
+        "sistemas de gestão",
+        "sistema de gestão empresarial"
+      ],
+      "answer": "A base cita o sistema de gestão da Fabricart (migração do G5 para o G6) e a recuperação do banco de dados dele, mas não registra SAP."
+    },
+    {
+      "id": "fq24",
+      "orbit": "skills",
+      "label": "Excel e Office",
+      "question": "Ele sabe Excel e Pacote Office?",
+      "variants": [
+        "ele sabe excel",
+        "ele sabe office",
+        "planilhas",
+        "macros"
+      ],
+      "answer": "Sim: Pacote Office faz parte das habilidades e das aulas que ele deu, e desde cedo ele montava sistemas com planilha no Excel (tabela dinâmica, fórmula condicional e macro simples)."
+    },
+    {
+      "id": "fq25",
+      "orbit": "skills",
+      "label": "Photoshop, Corel e AutoCAD",
+      "question": "Ele sabe Photoshop, CorelDRAW e AutoCAD?",
+      "variants": [
+        "ele sabe photoshop",
+        "ele sabe coreldraw",
+        "ele sabe autocad",
+        "ferramentas de design"
+      ],
+      "answer": "CorelDRAW e Photoshop estão nas habilidades, com anos de uso prático (vetor para corte a laser CNC e aulas). AutoCAD ele ensinou como instrutor.",
+      "facet": "design"
+    },
+    {
+      "id": "fq26",
+      "orbit": "skills",
+      "label": "as linguagens que ele cita",
+      "question": "Ele sabe Python, Java ou outras linguagens?",
+      "variants": [
+        "ele sabe python",
+        "ele sabe java",
+        "ele sabe node",
+        "ele sabe javascript",
+        "ele sabe c#",
+        "ele sabe php",
+        "quais linguagens ele sabe"
+      ],
+      "answer": "Nas habilidades: TypeScript, JavaScript, React, Python e SQL. Java e Python ele estudou em cursos (2014 e 2015), e Node entra no fluxo dos projetos. Outras linguagens, como PHP e C#, não estão registradas."
+    },
+    {
+      "id": "fq27",
+      "orbit": "skills",
+      "label": "frontend e backend",
+      "question": "Ele já fez frontend e backend?",
+      "variants": [
+        "ele já fez api",
+        "ele já fez backend",
+        "ele já fez front-end",
+        "fullstack",
+        "ele é full stack"
+      ],
+      "answer": "Frontend sim, e público: os jogos e as páginas em TypeScript, Canvas e JavaScript. Backend aparece no Firebase do multiplayer, em integrações de API e no LAR (Node), mas ele não se apresenta como especialista em backend."
+    },
+    {
+      "id": "fq28",
+      "orbit": "skills",
+      "label": "testes e boas práticas",
+      "question": "Ele faz teste unitário ou conhece TDD?",
+      "variants": [
+        "ele conhece tdd",
+        "teste unitário",
+        "clean code",
+        "solid",
+        "design patterns",
+        "padrões de projeto",
+        "boas práticas de código"
+      ],
+      "answer": "A base não registra TDD, teste unitário formal, SOLID ou padrões de projeto. O que ele descreve: QA manual com análise de fluxo, testes de bordas e depuração, e documentação modular dos projetos.",
+      "facet": "qa"
+    },
+    {
+      "id": "fq30",
+      "orbit": "experiencia",
+      "label": "ensino e mentoria",
+      "question": "Ele já ensinou ou daria mentoria?",
+      "variants": [
+        "ele já ensinou alguém",
+        "ele dá aula",
+        "ele daria mentoria",
+        "ele sabe ensinar",
+        "ele sabe falar em público",
+        "como ele explica coisas técnicas"
+      ],
+      "answer": "Ele foi instrutor de informática por anos (Friends e Prepara), ensinando Office, Photoshop, CorelDRAW, AutoCAD e manutenção de hardware e redes. Mentoria formal não está registrada, mas a didática de traduzir conceito complexo faz parte da trajetória."
+    },
+    {
+      "id": "fq32",
+      "orbit": "recrutamento",
+      "label": "empresa específica",
+      "question": "Ele conhece a ASSA ABLOY?",
+      "variants": [
+        "por que a assa abloy",
+        "ele quer trabalhar na assa abloy",
+        "conhece nossa empresa",
+        "ele conhece a nossa empresa"
+      ],
+      "answer": "Não tenho informações sobre a empresa em si, e prefiro não fingir que tenho. Posso mostrar o encaixe dele com operação industrial: cerca de 8 anos de fábrica, manutenção de máquina e diagnóstico, somados a suporte e desenvolvimento."
+    },
+    {
+      "id": "fq33",
+      "orbit": "sobre_marcos",
+      "label": "vida pessoal",
+      "question": "Ele é casado ou tem filhos?",
+      "variants": [
+        "ele tem filhos",
+        "ele é casado",
+        "estado civil",
+        "qual o signo dele",
+        "ele tem medo de quê",
+        "do que ele tem medo",
+        "o que ele teme",
+        "ele tem medo de algo"
+      ],
+      "answer": "Isso é pessoal e não está na base. Para o que importa na vaga (perfil, projetos, disponibilidade), eu respondo com prazer."
+    },
+    {
+      "id": "fq36",
+      "orbit": "formacao",
+      "label": "o que ele estuda agora",
+      "question": "O que ele estuda agora?",
+      "variants": [
+        "o que ele pretende aprender",
+        "o que ele está aprendendo",
+        "próximos estudos"
+      ],
+      "answer": "Hoje ele cursa Tecnologia da Informação na Unyleya (EAD), estuda o CS50 de Harvard, sonda Google Cloud e Azure e se aprofunda em arquitetura de IA, RAG e orquestração de agentes."
+    },
+    {
+      "id": "fq37",
+      "orbit": "recrutamento",
+      "label": "onde ele quer chegar",
+      "question": "Onde ele se vê em 5 anos?",
+      "variants": [
+        "planos de carreira",
+        "onde quer chegar",
+        "objetivos de longo prazo"
+      ],
+      "answer": "A base não traz uma meta de cargo. O que ele declara: entrar numa equipe de TI, aprender por dentro e evoluir rápido, com contexto técnico diário."
+    },
+    {
+      "id": "fq38",
+      "orbit": "recrutamento",
+      "label": "o primeiro dia de trabalho",
+      "question": "O que ele faria no primeiro dia de trabalho?",
+      "variants": [
+        "primeiros 90 dias",
+        "como seria a adaptação",
+        "como ele começa num emprego novo"
+      ],
+      "answer": "A base não descreve um plano de primeiros dias. Pelo método dele: mapear o ambiente, entender o fluxo antes de mexer, documentar o caminho e aprender as ferramentas da equipe no contexto real."
+    },
+    {
+      "id": "fq40",
+      "orbit": "sobre_marcos",
+      "label": "erros e aprendizados",
+      "question": "Qual foi o maior erro profissional dele?",
+      "variants": [
+        "maior erro profissional",
+        "qual foi o maior erro dele",
+        "erro que ele cometeu",
+        "o que ele faria diferente",
+        "o que ele aprendeu com os erros",
+        "já errou feio"
+      ],
+      "answer": "A base não traz um relato de erro profissional específico. O que ele conta, como aprendizado, é a sociedade em loja que terminou por divergência de gestão e as formações que não avançaram antes de entender o próprio jeito de aprender."
+    }
+  ]
+}

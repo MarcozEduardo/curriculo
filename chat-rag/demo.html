@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo · Chat RAG Bobby</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chat/chat.css">
+  <style>
+    :root {
+      --orange: #FF7A2E;
+      --orange-dark: #D9540A;
+      --orange-deep: #B8420A;
+      --cream: #FFF7EE;
+      --ink: #1F1B18;
+      --gray: #5F5953;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; padding: 40px 20px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+      font-family: 'Inter', Arial, sans-serif; background: var(--cream); color: var(--ink);
+    }
+    h1 { font-family: 'Poppins', sans-serif; font-size: 24px; margin: 0; text-align: center; }
+    p.sub { color: var(--gray); font-size: 14px; margin: 0; text-align: center; max-width: 520px; }
+    .card {
+      background: #fff; border: 1px solid #F0E0CD; border-radius: 20px;
+      padding: 24px; max-width: 560px; width: 100%; box-shadow: 0 10px 28px rgba(31,27,24,.08);
+    }
+    code { background: var(--cream); padding: 2px 6px; border-radius: 6px; font-size: 12px; }
+    ul { font-size: 13px; color: var(--gray); line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <h1>Demo do bundle Chat + RAG</h1>
+  <p class="sub">Página isolada para testar o motor mesh do Bobby sem o currículo em volta.</p>
+
+  <div class="card">
+    <strong>Perguntas para testar o motor:</strong>
+    <ul>
+      <li>“Você sabe quem eu sou?” · “Meu nome é Ana, sou recrutadora da Acme”</li>
+      <li>“Me fala do DirectSend” e depois só “condições” (troca de tema) ou “2” (escolhe a opção oferecida)</li>
+      <li>“Qual projeto foi o mais demorado?” · “E o mais recente?”</li>
+      <li>“Quais tecnolgias do dama orbtial?” (com erro de digitação)</li>
+      <li>“Ele sabe programar mesmo ou é só IA?”</li>
+      <li>“Qual a pretensão salarial e a disponibilidade?”</li>
+      <li>“Qual a receita de bolo de cenoura?” (resposta sagrada)</li>
+    </ul>
+  </div>
+
+  <button id="chatBtn" class="chat-fab"><i class="fa-solid fa-comment-dots"></i> Conversar com o Bobby</button>
+
+  <div class="chat-modal" id="chatModal" role="dialog" aria-modal="true" aria-label="Chat com Bobby">
+    <div class="chat-box">
+      <header class="chat-header">
+        <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
+        <div class="chat-header-info">
+          <h3>Bobby</h3>
+          <p><span class="chat-status-dot"></span>RAG local · currículo do Marcão</p>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-engine-note" id="chatEngineNote">carregando motor...</div>
+      <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Pergunte algo sobre o Marcos..." autocomplete="off" maxlength="400">
+        <button class="chat-send-btn" id="chatSend" aria-label="Enviar"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ordem obrigatória de dependências -->
+  <script src="rag/config.js"></script>
+  <script src="rag/engine/leet_normalizer.js"></script>
+  <script src="rag/engine/fuzzy.js"></script>
+  <script src="rag/engine/tokenizer.js"></script>
+  <script src="rag/filters/profanity_filter.js"></script>
+  <script src="rag/filters/input_guard.js"></script>
+  <script src="rag/engine/memory.js"></script>
+  <script src="rag/engine/similarity.js"></script>
+  <script src="rag/engine/facet_detector.js"></script>
+  <script src="rag/engine/entity_resolver.js"></script>
+  <script src="rag/engine/orbit_router.js"></script>
+  <script src="rag/engine/polarity.js"></script>
+  <script src="rag/engine/humanizer.js"></script>
+  <script src="rag/engine/dialog_state.js"></script>
+  <script src="rag/engine/reaction_engine.js"></script>
+  <script src="rag/engine/ranker.js"></script>
+  <script src="chat/message_formatter.js"></script>
+  <script src="chat/chat_agent.js"></script>
+</body>
+</html>

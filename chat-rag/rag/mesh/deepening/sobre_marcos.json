@@ -1,0 +1,635 @@
+{
+  "orbit": "sobre_marcos",
+  "label": "Sobre o Marcos",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós",
+  "nodes": [
+    {
+      "id": "sm01",
+      "layer": 1,
+      "parent": null,
+      "label": "quem ele é",
+      "question": "Quem é o Marcos?",
+      "variants": [
+        "me apresenta o marcos",
+        "perfil resumido"
+      ],
+      "answer": "O **Marcos** vem de uma história cheia de engenharia reversa. A vida exigiu outros caminhos antes da TI, mas ele nunca soltou. Hoje, aos 35 anos, estuda firme: mais de **8 horas por dia**, durante dois anos seguidos, pra entrar na área. Na indústria, aprendeu o que é problema de verdade, de máquina parada e prazo apertado. Foi instrutor por anos, passando por várias modalidades de ensino. Esse é o **Marcão**."
+    },
+    {
+      "id": "sm02",
+      "layer": 1,
+      "parent": null,
+      "label": "idade e cidade",
+      "question": "Quantos anos ele tem e onde mora?",
+      "variants": [
+        "idade dele",
+        "onde ele mora"
+      ],
+      "answer": "Tem 35 anos e mora em Brazlândia, região administrativa do Distrito Federal.",
+      "facet": "idade_local"
+    },
+    {
+      "id": "sm03",
+      "layer": 1,
+      "parent": null,
+      "label": "o que ele faz hoje",
+      "question": "O que ele faz hoje?",
+      "variants": [
+        "atividade atual",
+        "no que ele trabalha agora"
+      ],
+      "answer": "Desde 2024, desenvolvimento web assistido por IA e QA em projetos próprios com deploy público: trilogia de games, ferramentas, sistema de loja com IA, este currículo com RAG e o runtime de orquestração LAR. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+    },
+    {
+      "id": "sm04",
+      "layer": 1,
+      "parent": null,
+      "label": "o que ele busca",
+      "question": "O que ele busca agora?",
+      "variants": [
+        "objetivo profissional",
+        "o que ele procura"
+      ],
+      "answer": "Suporte N1/N2/N3, QA / Análise de Qualidade, Análise de TI ou Desenvolvimento Assistido por IA. Entrar numa equipe, viver o dia a dia técnico e evoluir rápido."
+    },
+    {
+      "id": "sm05",
+      "layer": 1,
+      "parent": null,
+      "label": "como ele resolve problema",
+      "question": "Como ele resolve problema?",
+      "variants": [
+        "método de resolução",
+        "abordagem de problema"
+      ],
+      "answer": "Quando um problema não faz sentido, ele não solta: rastreia o fluxo, testa hipótese, isola variável e volta do zero se preciso, até achar a causa raiz. É um jeito de trabalhar que ele carrega há mais de dez anos.",
+      "facet": "resolucao_problema"
+    },
+    {
+      "id": "sm06",
+      "layer": 1,
+      "parent": null,
+      "label": "o estilo de trabalho",
+      "question": "Qual é o estilo de trabalho dele?",
+      "variants": [
+        "como ele trabalha",
+        "jeito de trabalhar"
+      ],
+      "answer": "Hiperfoco direcionado, visão de sistema inteiro antes de agir e documentação do que faz. Ele usa IA como copiloto e assume a direção, a depuração e a validação. Bobby é o nome que ele dá a esse conceito de trabalho. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "estilo_trabalho"
+    },
+    {
+      "id": "sm07",
+      "layer": 1,
+      "parent": null,
+      "label": "os pontos fortes",
+      "question": "Quais são os pontos fortes dele?",
+      "variants": [
+        "qualidades",
+        "no que ele é bom"
+      ],
+      "answer": "Diagnóstico de causa raiz, hiperfoco, atenção cirúrgica a detalhe, visão em cascata de sistema, autonomia, documentação e didática: ele ensinou informática por anos.",
+      "facet": "pontos_fortes"
+    },
+    {
+      "id": "sm08",
+      "layer": 1,
+      "parent": null,
+      "label": "os pontos a desenvolver",
+      "question": "Quais são os pontos a desenvolver?",
+      "variants": [
+        "pontos fracos",
+        "o que falta"
+      ],
+      "answer": "Ele é transparente: ainda não teve cargo formal em equipe de TI, não tem certificações de mercado, não domina QA automatizado nem cloud corporativa, e ele não fala inglês, mas sabe se virar. Em tudo isso, pede contexto para o ramp-up.",
+      "facet": "pontos_fracos"
+    },
+    {
+      "id": "sm09",
+      "layer": 1,
+      "parent": null,
+      "label": "o que motiva",
+      "question": "O que motiva ele?",
+      "variants": [
+        "motivação",
+        "o que move o marcos"
+      ],
+      "answer": "Resolver problema real. Quase todo projeto dele nasceu de uma dor concreta: mandar arquivo sem servidor, organizar compras, ajudar uma loja de bairro, dar contexto preciso à IA.",
+      "facet": "motivacao"
+    },
+    {
+      "id": "sm10",
+      "layer": 1,
+      "parent": null,
+      "label": "o que é Bobby para ele",
+      "question": "O que é Bobby para ele?",
+      "variants": [
+        "significado de bobby",
+        "por que bobby"
+      ],
+      "answer": "Um conceito: o estilo de trabalho dele traduzido em nome. Hiperfoco, contexto mapeado em camadas e resposta só depois de entender o problema inteiro. Aparece nos jogos, no Marketbobby e neste assistente."
+    },
+    {
+      "id": "sm11",
+      "layer": 1,
+      "parent": null,
+      "label": "a origem com computadores",
+      "question": "Como começou a relação dele com computadores?",
+      "variants": [
+        "desde quando mexe com pc",
+        "origem na informática"
+      ],
+      "answer": "Desde moleque: fuçava fórum, resolvia PC de conhecido, criava skin e pixel shader para liberar jogo, montava e desmontava máquina. Sempre foi prazer e vocação; faltava o trilho certo.",
+      "facet": "origem"
+    },
+    {
+      "id": "sm12",
+      "layer": 1,
+      "parent": null,
+      "label": "o primeiro PC",
+      "question": "Qual foi o primeiro computador dele?",
+      "variants": [
+        "primeiro pc",
+        "primeira máquina"
+      ],
+      "answer": "Veio aos 15 anos: um Pentium Slot 1 de 333 MHz com overclock, 256 MB de RAM e HD de 40 GB, que sofria para rodar Windows XP. Antes disso, era PC da tia ou lan house.",
+      "facet": "origem"
+    },
+    {
+      "id": "sm13",
+      "layer": 1,
+      "parent": null,
+      "label": "o contexto de origem",
+      "question": "De que contexto familiar ele vem?",
+      "variants": [
+        "origem familiar",
+        "ele vem de família simples"
+      ],
+      "answer": "De família de origem simples. Ele diz que isso nunca foi desculpa, foi só o cenário. Em 2004 começou como estagiário numa loja de informática e dali virou instrutor.",
+      "facet": "origem"
+    },
+    {
+      "id": "sm14",
+      "layer": 1,
+      "parent": null,
+      "label": "por que TI",
+      "question": "Por que ele quer TI?",
+      "variants": [
+        "ti é plano b",
+        "por que a área de tecnologia"
+      ],
+      "answer": "Porque é o caminho que sempre quis seguir e agora tem como. Nas palavras dele, TI não é hobby nem plano B. Tecnologia é a língua natural dele."
+    },
+    {
+      "id": "sm15",
+      "layer": 1,
+      "parent": null,
+      "label": "ele em uma frase",
+      "question": "Como ele se descreve em uma frase?",
+      "variants": [
+        "resumo em uma linha",
+        "frase que define"
+      ],
+      "answer": "Alguém que não vem do zero: vem do chão de fábrica, do balcão e da máquina parada, e agora quer provar isso dentro de uma equipe de TI."
+    },
+    {
+      "id": "sm16",
+      "layer": 2,
+      "parent": "sm01",
+      "label": "o nome completo",
+      "question": "Qual é o nome completo dele?",
+      "variants": [
+        "nome inteiro",
+        "como se chama"
+      ],
+      "answer": "Marcos Eduardo da Silva dos Reis. Informalmente, Marcão."
+    },
+    {
+      "id": "sm17",
+      "layer": 2,
+      "parent": "sm02",
+      "label": "onde fica Brazlândia",
+      "question": "Brazlândia fica onde?",
+      "variants": [
+        "brazlândia é em brasília",
+        "localização de brazlândia"
+      ],
+      "answer": "É uma região administrativa do Distrito Federal. Por isso ele considera remoto, híbrido ou presencial no DF.",
+      "facet": "idade_local"
+    },
+    {
+      "id": "sm18",
+      "layer": 2,
+      "parent": "sm03",
+      "label": "dev assistido por IA",
+      "question": "O que é desenvolvimento assistido por IA?",
+      "variants": [
+        "significado de dev assistido",
+        "como ele programa com ia"
+      ],
+      "answer": "Ele conduz o raciocínio e usa IA como copiloto: define o que construir, orienta a ferramenta, lê e interpreta o código, depura e valida. A IA acelera; a responsabilidade técnica é dele. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+    },
+    {
+      "id": "sm19",
+      "layer": 2,
+      "parent": "sm04",
+      "label": "cargo formal em TI",
+      "question": "Ele já teve cargo formal em equipe de TI?",
+      "variants": [
+        "ele já trabalhou em equipe de ti",
+        "carteira assinada em ti"
+      ],
+      "answer": "Cargo formal dentro de uma equipe de TI ainda não aconteceu. O trabalho técnico real vem de mais de dez anos em outras funções e do portfólio de software publicado."
+    },
+    {
+      "id": "sm20",
+      "layer": 2,
+      "parent": "sm05",
+      "label": "um exemplo de causa raiz",
+      "question": "Pode dar um exemplo de causa raiz que ele encontrou?",
+      "variants": [
+        "caso de diagnóstico",
+        "exemplo prático"
+      ],
+      "answer": "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça.",
+      "facet": "resolucao_problema"
+    },
+    {
+      "id": "sm21",
+      "layer": 2,
+      "parent": "sm06",
+      "label": "documentação no estilo dele",
+      "question": "Ele documenta o que faz?",
+      "variants": [
+        "ele escreve documentação",
+        "readme"
+      ],
+      "answer": "Sim. Trabalha com README modular por pasta, mapeando dependências e responsabilidades. Este chat segue exatamente essa estrutura.",
+      "facet": "estilo_trabalho"
+    },
+    {
+      "id": "sm22",
+      "layer": 2,
+      "parent": "sm07",
+      "label": "o maior ponto forte",
+      "question": "Qual é o maior ponto forte dele?",
+      "variants": [
+        "principal qualidade",
+        "ponto forte número um"
+      ],
+      "answer": "O hiperfoco direcionado: quando o problema interessa, ele entra em profundidade e não solta até entender. É o motor de tudo o mais.",
+      "facet": "pontos_fortes"
+    },
+    {
+      "id": "sm23",
+      "layer": 2,
+      "parent": "sm08",
+      "label": "admitir o que não sabe",
+      "question": "Ele admite o que não sabe?",
+      "variants": [
+        "ele é honesto sobre limitações",
+        "transparência"
+      ],
+      "answer": "Sim, antes mesmo de ser perguntado. O currículo dele traz contexto real em cada área: o que domina, o que precisa de ramp-up e o que ainda não é o terreno dele.",
+      "facet": "pontos_fracos"
+    },
+    {
+      "id": "sm24",
+      "layer": 2,
+      "parent": "sm09",
+      "label": "projetos a partir de problemas reais",
+      "question": "Os projetos dele nasceram de problemas reais?",
+      "variants": [
+        "motivação dos projetos",
+        "problema real por trás"
+      ],
+      "answer": "Sim. DirectSend veio da necessidade de transferir arquivo sem servidor, Marketbobby da lista de compras, Franzinha da loja de amigos, DevOrador da precisão que a IA precisava para editar código.",
+      "facet": "motivacao"
+    },
+    {
+      "id": "sm25",
+      "layer": 2,
+      "parent": "sm10",
+      "label": "Bobby como personagem",
+      "question": "Bobby é um personagem?",
+      "variants": [
+        "bobby é mascote",
+        "quem é bobby nos jogos"
+      ],
+      "answer": "Nos jogos, sim: protagoniza A Fuga de Bobby e A Viagem de Bobby. Mas para o Marcos é antes de tudo um conceito de trabalho, e este assistente é a demonstração disso."
+    },
+    {
+      "id": "sm26",
+      "layer": 3,
+      "parent": "sm16",
+      "label": "como prefere ser chamado",
+      "question": "Como ele prefere ser chamado?",
+      "variants": [
+        "marcos ou marcão",
+        "tratamento"
+      ],
+      "answer": "Marcos. Marcão é o apelido informal que aparece em alguns textos do currículo."
+    },
+    {
+      "id": "sm27",
+      "layer": 3,
+      "parent": "sm17",
+      "label": "cidades onde trabalhou",
+      "question": "Ele trabalhou em outras cidades?",
+      "variants": [
+        "locais de trabalho",
+        "onde ele já trabalhou"
+      ],
+      "answer": "Ceilândia e Taguatinga (DF), Vicente Pires (DF), Valparaíso de Goiás (GO) e atendimentos pelo Distrito Federal como técnico autônomo.",
+      "facet": "idade_local"
+    },
+    {
+      "id": "sm28",
+      "layer": 3,
+      "parent": "sm18",
+      "label": "escrever do zero",
+      "question": "Ele escreve código do zero?",
+      "variants": [
+        "ele digita o código",
+        "programa sem ia"
+      ],
+      "answer": "Ele é honesto: a memória dele funciona mais por reconhecimento do que por invocação, então escrever do zero sem referência custa mais. Ler, entender, corrigir e validar é onde ele é forte."
+    },
+    {
+      "id": "sm29",
+      "layer": 3,
+      "parent": "sm19",
+      "label": "por que ainda não aconteceu",
+      "question": "Por que a oportunidade formal ainda não aconteceu?",
+      "variants": [
+        "o que impediu",
+        "por que demorou tanto"
+      ],
+      "answer": "Anos de portas fechadas: falta de diploma na época, condição financeira difícil, entrevistas ruins e patrões que o viam pequeno. Ele nunca saiu da órbita da tecnologia, mas a entrada formal não veio."
+    },
+    {
+      "id": "sm30",
+      "layer": 3,
+      "parent": "sm20",
+      "label": "voltar do zero",
+      "question": "Ele volta do zero quando precisa?",
+      "variants": [
+        "recomeça a investigação",
+        "persistência no diagnóstico"
+      ],
+      "answer": "Sim. Faz parte do método: se a hipótese não fecha, ele volta ao início e refaz o caminho até a causa raiz aparecer.",
+      "facet": "resolucao_problema"
+    },
+    {
+      "id": "sm31",
+      "layer": 3,
+      "parent": "sm21",
+      "label": "a documentação deste chat",
+      "question": "Este chat tem documentação?",
+      "variants": [
+        "readme do bobby",
+        "documentação do assistente"
+      ],
+      "answer": "Tem: um README por camada (chat, motor, mesh, dicionários, filtros, respostas) e um guia de instalação em HTML puro, pensado para que outra pessoa ou outra IA consiga instalar.",
+      "facet": "estilo_trabalho"
+    },
+    {
+      "id": "sm32",
+      "layer": 3,
+      "parent": "sm22",
+      "label": "o que o hiperfoco entrega",
+      "question": "O que o hiperfoco entrega na prática?",
+      "variants": [
+        "resultado do hiperfoco",
+        "hiperfoco no trabalho"
+      ],
+      "answer": "Sessões longas de diagnóstico sem perder o fio, persistência em bug difícil e absorção rápida de assunto novo quando está em contexto.",
+      "facet": "pontos_fortes"
+    },
+    {
+      "id": "sm33",
+      "layer": 3,
+      "parent": "sm23",
+      "label": "um exemplo do que não sabe",
+      "question": "Qual exemplo de algo que ele não domina?",
+      "variants": [
+        "limitação concreta",
+        "o que ele assume não saber"
+      ],
+      "answer": "Cloud corporativa (AWS, Azure, GCP), Docker e Kubernetes em operação, QA automatizado com Cypress ou Playwright e Git avançado. Ele diz isso com todas as letras.",
+      "facet": "pontos_fracos"
+    },
+    {
+      "id": "sm34",
+      "layer": 3,
+      "parent": "sm24",
+      "label": "o projeto da loja de bairro",
+      "question": "Qual projeto nasceu de uma loja de bairro?",
+      "variants": [
+        "sistema para loja",
+        "projeto para amigos"
+      ],
+      "answer": "O App Franzinha: sistema de estoque, caixa e clientes com IA embarcada, pensado a partir da dificuldade real de uma loja de dois amigos.",
+      "facet": "motivacao"
+    },
+    {
+      "id": "sm35",
+      "layer": 3,
+      "parent": "sm25",
+      "label": "onde Bobby aparece",
+      "question": "Onde o nome Bobby aparece?",
+      "variants": [
+        "projetos com bobby no nome",
+        "uso do nome bobby"
+      ],
+      "answer": "Em A Fuga de Bobby, A Viagem de Bobby, no Marketbobby e neste assistente do currículo."
+    },
+    {
+      "id": "sm36",
+      "layer": 4,
+      "parent": "sm26",
+      "label": "o apelido Marcão",
+      "question": "Quem é o Marcão?",
+      "variants": [
+        "marcão é ele",
+        "apelido"
+      ],
+      "answer": "É o próprio Marcos; Marcão é o apelido informal. Em contexto formal, use Marcos."
+    },
+    {
+      "id": "sm37",
+      "layer": 4,
+      "parent": "sm27",
+      "label": "trabalhar no DF",
+      "question": "Ele aceita trabalhar em qualquer lugar do DF?",
+      "variants": [
+        "presencial no plano piloto",
+        "deslocamento no df"
+      ],
+      "answer": "Sim, presencial ou híbrido no Distrito Federal está dentro do que ele aceita; a preferência é remoto.",
+      "facet": "idade_local"
+    },
+    {
+      "id": "sm38",
+      "layer": 4,
+      "parent": "sm28",
+      "label": "leitura de código",
+      "question": "Ele lê código bem?",
+      "variants": [
+        "leitura crítica",
+        "entende código alheio"
+      ],
+      "answer": "Sim, é um dos pontos mais fortes: entende o fluxo, identifica erro e sabe o que precisa ser mudado. Ele descreve a si mesmo como alguém que entende lendo."
+    },
+    {
+      "id": "sm39",
+      "layer": 4,
+      "parent": "sm29",
+      "label": "como ele lida com esse histórico",
+      "question": "Como ele lida com esse histórico de portas fechadas?",
+      "variants": [
+        "ele guarda mágoa",
+        "postura sobre o passado"
+      ],
+      "answer": "Com transparência e sem vitimismo: relata as dificuldades, mas foca no que construiu desde então e no que quer provar dentro de uma equipe."
+    },
+    {
+      "id": "sm40",
+      "layer": 4,
+      "parent": "sm30",
+      "label": "fórum e documentação",
+      "question": "Ele consulta fórum e documentação?",
+      "variants": [
+        "como ele pesquisa",
+        "fonte de pesquisa"
+      ],
+      "answer": "Sim, desde sempre. Fórum, documentação e tentativa e erro foram a primeira escola técnica dele, e foi assim que recuperou o banco de dados em produção.",
+      "facet": "resolucao_problema"
+    },
+    {
+      "id": "sm41",
+      "layer": 4,
+      "parent": "sm31",
+      "label": "organização da documentação",
+      "question": "Como a documentação dele é organizada?",
+      "variants": [
+        "estrutura dos readmes",
+        "padrão de documentação"
+      ],
+      "answer": "Um manifesto por pasta, com função, dependências, quem usa o quê e como editar. É o mesmo princípio modular que ele aplica no código.",
+      "facet": "estilo_trabalho"
+    },
+    {
+      "id": "sm42",
+      "layer": 4,
+      "parent": "sm32",
+      "label": "o custo do hiperfoco",
+      "question": "O hiperfoco tem custo?",
+      "variants": [
+        "lado difícil do foco",
+        "desvantagem"
+      ],
+      "answer": "O que ele relata é a memória: o que fica fora de uso é arquivado até um gatilho reativá-lo. A resposta dele para isso é contexto diário.",
+      "facet": "pontos_fortes"
+    },
+    {
+      "id": "sm43",
+      "layer": 4,
+      "parent": "sm33",
+      "label": "pedir ajuda",
+      "question": "Ele pede ajuda quando precisa?",
+      "variants": [
+        "sabe pedir apoio",
+        "trabalha sozinho demais"
+      ],
+      "answer": "Ele busca documentação e fórum e, quando o problema exige, aciona quem conhece, como fez chamando técnicos autorizados na Fabricart antes de resolver por conta própria.",
+      "facet": "pontos_fracos"
+    },
+    {
+      "id": "sm44",
+      "layer": 4,
+      "parent": "sm34",
+      "label": "o problema da loja",
+      "question": "O que ele queria resolver na loja?",
+      "variants": [
+        "dor do comércio pequeno",
+        "objetivo do franzinha"
+      ],
+      "answer": "A dificuldade de quem toca comércio pequeno: estoque, caixa e cliente num sistema só, com um agente de IA ajudando o operador sem custo recorrente de API.",
+      "facet": "motivacao"
+    },
+    {
+      "id": "sm45",
+      "layer": 4,
+      "parent": "sm35",
+      "label": "Bobby e o Nexus",
+      "question": "Bobby tem relação com o Núcleo Nexus?",
+      "variants": [
+        "bobby é o nexus",
+        "ligação entre bobby e nexus"
+      ],
+      "answer": "Compartilham o princípio: contexto em órbitas e resposta coerente. Este assistente é a versão pública e enxuta; o Nexus é o cérebro reutilizável que ele está construindo."
+    },
+    {
+      "id": "sm46",
+      "layer": 5,
+      "parent": "sm36",
+      "label": "formalidade do apelido",
+      "question": "O apelido Marcão é usado profissionalmente?",
+      "variants": [
+        "posso chamar de marcão",
+        "apelido em entrevista"
+      ],
+      "answer": "É informal. Em entrevista e em documento, o nome é Marcos Eduardo."
+    },
+    {
+      "id": "sm47",
+      "layer": 5,
+      "parent": "sm38",
+      "label": "revisar código de outros",
+      "question": "Ele revisa código de outras pessoas?",
+      "variants": [
+        "code review",
+        "revisão em equipe"
+      ],
+      "answer": "A base não registra prática formal de revisão em equipe. O que registra é leitura crítica forte, que é a base de uma boa revisão."
+    },
+    {
+      "id": "sm48",
+      "layer": 5,
+      "parent": "sm40",
+      "label": "o papel dos fóruns",
+      "question": "Qual o papel dos fóruns na formação dele?",
+      "variants": [
+        "aprendeu em fórum",
+        "comunidades online"
+      ],
+      "answer": "Foram a primeira escola técnica: fórum, comunidade de jogo, tradução colaborativa e tentativa e erro. Ninguém ensinou; ele descobriu.",
+      "facet": "resolucao_problema"
+    },
+    {
+      "id": "sm49",
+      "layer": 5,
+      "parent": "sm42",
+      "label": "descanso do hiperfoco",
+      "question": "Como ele descansa do hiperfoco?",
+      "variants": [
+        "equilíbrio",
+        "como relaxa"
+      ],
+      "answer": "A base não informa rotina de descanso. O que ele descreve é o hiperfoco como motor e a necessidade de contexto para manter o conhecimento ativo."
+    },
+    {
+      "id": "sm50",
+      "layer": 5,
+      "parent": "sm45",
+      "label": "o que diferencia o Bobby",
+      "question": "O que diferencia o Bobby de um chatbot comum?",
+      "variants": [
+        "diferença para chatbot",
+        "por que não é um bot qualquer"
+      ],
+      "answer": "Ele não gera texto: busca numa base organizada em órbitas, satélites e facetas, entende erro de digitação, lembra o contexto da conversa e assume quando não tem o dado."
+    }
+  ]
+}

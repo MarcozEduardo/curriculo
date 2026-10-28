@@ -1,0 +1,641 @@
+{
+  "orbit": "curiosidades",
+  "label": "Bastidores e curiosidades",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós",
+  "nodes": [
+    {
+      "id": "cu01",
+      "layer": 1,
+      "parent": null,
+      "label": "quem é o SOCRAM",
+      "question": "Quem é o SOCRAM?",
+      "variants": [
+        "socram",
+        "o vilão do jogo",
+        "quem é o vilão",
+        "vilão da saga"
+      ],
+      "answer": "SOCRAM é o vilão da saga do Bobby, e é o nome do Marcos de trás para frente. É o boss do primeiro jogo, A Fuga de Bobby, e é derrotado lá. Mas o exército dele dura mais dois jogos, como um mito que precisa ser vingado."
+    },
+    {
+      "id": "cu02",
+      "layer": 1,
+      "parent": null,
+      "label": "o destino do SOCRAM",
+      "question": "O SOCRAM foge no final?",
+      "variants": [
+        "socram foge",
+        "socram fugiu",
+        "socram solto",
+        "socram escapou",
+        "socram morreu",
+        "socram está vivo",
+        "quem foge no final do primeiro jogo"
+      ],
+      "answer": "Não: SOCRAM é derrotado no primeiro jogo. Quem foge é o Bobby, de foguete, no final da vitória. Mas a ameaça continua: o exército do SOCRAM segue por mais dois jogos, atrás de vingança."
+    },
+    {
+      "id": "cu03",
+      "layer": 1,
+      "parent": null,
+      "label": "o exército do SOCRAM",
+      "question": "O que é o exército do SOCRAM?",
+      "variants": [
+        "remanescentes do socram",
+        "por que a vingança do socram",
+        "o mito do socram",
+        "exército"
+      ],
+      "answer": "É o que sobra do SOCRAM depois da derrota: remanescentes que querem vingá-lo. Ele vira uma espécie de mito, e essa vingança move os dois jogos seguintes: o da nave, no espaço, e a dama, já na Terra."
+    },
+    {
+      "id": "cu04",
+      "layer": 1,
+      "parent": null,
+      "label": "a saga em ordem",
+      "question": "Qual é a ordem da saga?",
+      "variants": [
+        "ordem dos jogos",
+        "por onde começar a trilogia",
+        "sequência dos jogos"
+      ],
+      "answer": "Primeiro A Fuga de Bobby (plataforma, SOCRAM derrotado, Bobby foge de foguete). Depois A Viagem de Bobby (jogo de nave, no mesmo foguete, chegando na Terra). Por fim Dama Orbital, o confronto final já na Terra."
+    },
+    {
+      "id": "cu05",
+      "layer": 1,
+      "parent": null,
+      "label": "quem construiu este chat",
+      "question": "Quem construiu este chat?",
+      "variants": [
+        "quem fez esse chat",
+        "quem criou o bobby",
+        "quem programou isso",
+        "autor do chat",
+        "quem construiu esse bot"
+      ],
+      "answer": "Foi o Marcos, em JavaScript puro, com a IA como copiloto: ele definiu a arquitetura de órbitas, facetas e a regra de nunca inventar, conduziu os testes e validou o comportamento. É a versão pública e enxuta da arquitetura que ele leva para o Núcleo Nexus. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+    },
+    {
+      "id": "cu06",
+      "layer": 1,
+      "parent": null,
+      "label": "por que um chat e não um PDF",
+      "question": "Por que um chat em vez de um PDF?",
+      "variants": [
+        "por que fazer um chat",
+        "para que serve esse chat",
+        "por que um currículo interativo"
+      ],
+      "answer": "Porque um PDF só informa, e um chat deixa o recrutador explorar, questionar e testar a lógica das respostas. O trabalho do Marcos aparece melhor em demonstração, e este chat é a primeira delas."
+    },
+    {
+      "id": "cu07",
+      "layer": 1,
+      "parent": null,
+      "label": "como testar o Bobby",
+      "question": "Como posso testar o Bobby?",
+      "variants": [
+        "easter egg",
+        "segredos do chat",
+        "tem segredo",
+        "o que posso tentar",
+        "truques do chat"
+      ],
+      "answer": "Do jeito que quiser: erre a digitação, mande uma gíria, mude de assunto no meio, repita a pergunta, tente confundir com algo vago, ou digite 'debug'. Eu devo acertar o contexto, admitir o que não sei e nunca inventar."
+    },
+    {
+      "id": "cu08",
+      "layer": 1,
+      "parent": null,
+      "label": "o que acontece se eu xingar",
+      "question": "O que acontece se eu escrever palavrão?",
+      "variants": [
+        "e se eu xingar",
+        "e se eu falar palavrão",
+        "conteúdo sensível",
+        "papo feio"
+      ],
+      "answer": "Funciona em três etapas: um aviso leve na primeira vez, na segunda eu pergunto se ainda é teste, e na terceira reinicio o chat por causa do teor. Palavras escritas com número, ponto ou letra repetida também são reconhecidas."
+    },
+    {
+      "id": "cu09",
+      "layer": 1,
+      "parent": null,
+      "label": "e se eu falar mal dele",
+      "question": "E se eu falar mal do Marcos?",
+      "variants": [
+        "esse cara é péssimo",
+        "e se eu criticar",
+        "falar mal dele",
+        "crítica ao marcos"
+      ],
+      "answer": "Crítica sincera tem espaço: eu respondo com fatos, inclusive o que ele ainda não domina, e indico o contato dele para feedback direto. O que eu não aceito é ofensa gratuita."
+    },
+    {
+      "id": "cu10",
+      "layer": 1,
+      "parent": null,
+      "label": "o que o Bobby não responde",
+      "question": "O que o Bobby não responde?",
+      "variants": [
+        "limites do chat",
+        "o que você não responde"
+      ],
+      "answer": "Fora do currículo do Marcos eu não respondo, não informo valores de remuneração, não executo código colado e não invento detalhe que ele não contou. Quando falta dado, eu digo."
+    },
+    {
+      "id": "cu11",
+      "layer": 1,
+      "parent": null,
+      "label": "uma curiosidade sobre ele",
+      "question": "Me conta uma curiosidade sobre o Marcos",
+      "variants": [
+        "curiosidade",
+        "me surpreende",
+        "algo inusitado",
+        "fato curioso",
+        "conta algo legal"
+      ],
+      "answer": "Uma boa: em 1998 ele viu um jogo em português com carroças levando peças de um deus no Egito e passou anos procurando sem saber o nome. No caminho conheceu Age of Empires II e Caesar III. O original era Age of Mythology."
+    },
+    {
+      "id": "cu12",
+      "layer": 1,
+      "parent": null,
+      "label": "a frase que o define",
+      "question": "Qual frase define o Marcos?",
+      "variants": [
+        "define o marcos em uma frase",
+        "lema dele"
+      ],
+      "answer": "Uma que ele repete: se eu consigo pensar, existe um caminho para construir. Foi assim com mod de jogo, script, sistema de loja e este chat."
+    },
+    {
+      "id": "cu13",
+      "layer": 1,
+      "parent": null,
+      "label": "os números do portfólio",
+      "question": "Quais números mais impressionam no portfólio?",
+      "variants": [
+        "destaques do portfólio",
+        "o que mais surpreende no portfólio",
+        "números do marcos"
+      ],
+      "answer": "Três histórias curtas dizem muito: o primeiro jogo ficou pronto em cerca de 3 horas, A Viagem de Bobby saiu em cerca de 40 minutos com a engine pronta, e a Dama Orbital foi reconstruída 99% idêntica depois de perder tudo."
+    },
+    {
+      "id": "cu14",
+      "layer": 1,
+      "parent": null,
+      "label": "o reset do chat",
+      "question": "O que acontece quando o chat reinicia?",
+      "variants": [
+        "reset do chat",
+        "por que o chat reiniciou",
+        "chat resetou",
+        "resetar"
+      ],
+      "answer": "Ele volta ao início: a memória da conversa é apagada, inclusive nome e contexto. Só reinicia em caso de abuso repetido; pergunta normal nunca reinicia."
+    },
+    {
+      "id": "cu15",
+      "layer": 1,
+      "parent": null,
+      "label": "por onde começar",
+      "question": "Não sei o que perguntar, por onde começo?",
+      "variants": [
+        "me sugere uma pergunta",
+        "por onde começar",
+        "não sei o que perguntar",
+        "me ajuda a começar"
+      ],
+      "answer": "Três bons começos: a história por trás da Fuga de Bobby, como ele lida com a IA nos projetos, ou o que ele faz de melhor em suporte e diagnóstico."
+    },
+    {
+      "id": "cu16",
+      "layer": 2,
+      "parent": "cu01",
+      "label": "o nome do vilão",
+      "question": "Por que o vilão se chama SOCRAM?",
+      "variants": [
+        "origem do nome socram",
+        "socram é o nome dele ao contrário",
+        "socram de trás pra frente"
+      ],
+      "answer": "Porque é o nome do Marcos lido de trás para frente: Marcos vira SOCRAM."
+    },
+    {
+      "id": "cu17",
+      "layer": 2,
+      "parent": "cu02",
+      "label": "por que o Bobby foge de foguete",
+      "question": "Por que o Bobby foge de foguete?",
+      "variants": [
+        "o que o bobby faz no final",
+        "por que o foguete"
+      ],
+      "answer": "No final da vitória do primeiro jogo, o Bobby pega a chave, aciona o rádio e chama o foguete para escapar da fortaleza. É o mesmo foguete que aparece no segundo jogo."
+    },
+    {
+      "id": "cu18",
+      "layer": 2,
+      "parent": "cu03",
+      "label": "a vingança nos dois jogos",
+      "question": "Como a vingança aparece nos jogos?",
+      "variants": [
+        "vingança do socram nos jogos",
+        "remanescentes nos jogos"
+      ],
+      "answer": "No segundo jogo, a luta é contra os remanescentes querendo vingar o SOCRAM, já no espaço. No terceiro, a Dama Orbital, é a batalha final na Terra."
+    },
+    {
+      "id": "cu19",
+      "layer": 2,
+      "parent": "cu04",
+      "label": "por onde começar a jogar",
+      "question": "Por onde devo começar a jogar?",
+      "variants": [
+        "qual jogo jogar primeiro",
+        "começar pela fuga"
+      ],
+      "answer": "Pela ordem: A Fuga de Bobby primeiro (game-a-fuga-de-bobby-final.vercel.app), depois A Viagem de Bobby e por fim Dama Orbital. Os três estão publicados e jogáveis."
+    },
+    {
+      "id": "cu20",
+      "layer": 2,
+      "parent": "cu05",
+      "label": "como foi feito por dentro",
+      "question": "Como este chat foi feito por dentro?",
+      "variants": [
+        "arquitetura do chat",
+        "tecnologia do bobby",
+        "como funciona por dentro",
+        "como foi feito esse chat"
+      ],
+      "answer": "É um RAG client-side em JavaScript puro: normaliza o texto, tolera erro de digitação, roteia a pergunta para uma órbita, descobre o que está sendo perguntado e responde com o que está na base, lembrando o contexto. Tudo roda no navegador, sem API paga."
+    },
+    {
+      "id": "cu21",
+      "layer": 2,
+      "parent": "cu06",
+      "label": "o que ele quis provar",
+      "question": "O que o Marcos quis provar com este chat?",
+      "variants": [
+        "objetivo do chat",
+        "por que ele construiu o bobby"
+      ],
+      "answer": "Que dá para construir um assistente útil sem IA generativa e sem custo por consulta, com arquitetura própria. É a versão pública da ideia que ele desenvolve no Núcleo Nexus."
+    },
+    {
+      "id": "cu22",
+      "layer": 2,
+      "parent": "cu07",
+      "label": "o comando debug",
+      "question": "O que acontece se eu digitar debug?",
+      "variants": [
+        "debug",
+        "modo debug",
+        "comando secreto"
+      ],
+      "answer": "Nada de painel secreto: respondo com humor e te mostro como funciono. O debug que importa é o do Marcos, que passa horas indo linha por linha até entender a causa."
+    },
+    {
+      "id": "cu23",
+      "layer": 2,
+      "parent": "cu08",
+      "label": "palavras disfarçadas",
+      "question": "Palavrão escrito com número ou ponto passa?",
+      "variants": [
+        "p0rr4 passa",
+        "palavra com número",
+        "burlar o filtro"
+      ],
+      "answer": "Não: o filtro reconhece troca por número, letras repetidas, pontos e espaços no meio da palavra."
+    },
+    {
+      "id": "cu24",
+      "layer": 2,
+      "parent": "cu09",
+      "label": "como ele lida com crítica",
+      "question": "Como o Marcos lida com crítica?",
+      "variants": [
+        "ele aceita feedback",
+        "ele aceita crítica"
+      ],
+      "answer": "A base não traz uma declaração sobre isso. O que ela mostra é transparência: ele mesmo lista o que ainda não domina e diz onde precisaria de ramp-up."
+    },
+    {
+      "id": "cu25",
+      "layer": 2,
+      "parent": "cu11",
+      "label": "o jogo de 1998",
+      "question": "Que jogo era aquele de 1998?",
+      "variants": [
+        "jogo das carroças",
+        "jogo com deus no egito"
+      ],
+      "answer": "Era Age of Mythology. Ele nem sabia o nome: pesquisou em fórum, testou jogos no Baixaki e só anos depois encontrou o original."
+    },
+    {
+      "id": "cu26",
+      "layer": 3,
+      "parent": "cu16",
+      "label": "só o nome ou o personagem",
+      "question": "SOCRAM é só o nome ou há história do personagem?",
+      "variants": [
+        "história do socram",
+        "quem é socram de verdade"
+      ],
+      "answer": "A base registra o papel dele: vilão e boss do primeiro jogo, derrotado, e o mito que move os dois jogos seguintes. Detalhes além disso não estão registrados."
+    },
+    {
+      "id": "cu27",
+      "layer": 3,
+      "parent": "cu17",
+      "label": "a chave e o rádio",
+      "question": "Como o Bobby usa a chave e o rádio?",
+      "variants": [
+        "chave rádio foguete",
+        "como escapa o bobby"
+      ],
+      "answer": "Para escapar, o jogador pega a chave, aciona o rádio e chama o foguete. É a sequência final da vitória."
+    },
+    {
+      "id": "cu28",
+      "layer": 3,
+      "parent": "cu18",
+      "label": "os remanescentes",
+      "question": "Quem são os remanescentes?",
+      "variants": [
+        "quem são os inimigos do segundo jogo",
+        "inimigos da viagem de bobby"
+      ],
+      "answer": "São o que restou do exército do SOCRAM, querendo vingá-lo. O segundo jogo é a luta contra eles no espaço."
+    },
+    {
+      "id": "cu29",
+      "layer": 3,
+      "parent": "cu19",
+      "label": "links dos três jogos",
+      "question": "Quais os links dos três jogos?",
+      "variants": [
+        "onde jogar a trilogia",
+        "links da trilogia"
+      ],
+      "answer": "game-a-fuga-de-bobby-final.vercel.app, game-a-viagem-de-bobby.vercel.app e dama-orbital.vercel.app."
+    },
+    {
+      "id": "cu30",
+      "layer": 3,
+      "parent": "cu20",
+      "label": "erro de digitação",
+      "question": "Como o chat entende erro de digitação?",
+      "variants": [
+        "fuzzy do chat",
+        "tolera erro de escrita"
+      ],
+      "answer": "Por fuzzy matching: distância de edição e comparação de pedaços de palavras. 'Tecnolgias' vira 'tecnologias' e 'dama orbtial' vira 'Dama Orbital'."
+    },
+    {
+      "id": "cu31",
+      "layer": 3,
+      "parent": "cu21",
+      "label": "sem API paga",
+      "question": "Por que sem API paga?",
+      "variants": [
+        "por que sem ia generativa",
+        "não usa chatgpt por quê"
+      ],
+      "answer": "Por escolha: zero custo por consulta, nenhuma dependência externa e nada de invenção. Se o dado não está na base, ele diz que não está."
+    },
+    {
+      "id": "cu32",
+      "layer": 3,
+      "parent": "cu22",
+      "label": "como é o debug do Marcos",
+      "question": "Como é o debug do Marcos?",
+      "variants": [
+        "como ele debuga",
+        "debug dele"
+      ],
+      "answer": "Horas indo função por função, linha por linha, migrando rotinas para um fluxo organizado, com várias IAs envolvidas. Ele rastreia o fluxo, testa hipótese e isola variável até achar a causa raiz."
+    },
+    {
+      "id": "cu33",
+      "layer": 3,
+      "parent": "cu23",
+      "label": "a contagem de avisos",
+      "question": "Quantos avisos o chat dá antes de reiniciar?",
+      "variants": [
+        "quantas chances",
+        "quantos avisos"
+      ],
+      "answer": "Três etapas: um aviso leve, depois a pergunta se ainda é teste, e por fim a reinicialização do chat."
+    },
+    {
+      "id": "cu34",
+      "layer": 3,
+      "parent": "cu24",
+      "label": "as lacunas que ele admite",
+      "question": "Que lacunas ele admite?",
+      "variants": [
+        "o que ele admite não saber",
+        "lacunas que ele admite"
+      ],
+      "answer": "Cargo formal em equipe de TI ainda não teve, não tem certificações de mercado, não domina QA automatizado nem cloud corporativa, e não fala inglês, embora saiba se virar."
+    },
+    {
+      "id": "cu35",
+      "layer": 3,
+      "parent": "cu25",
+      "label": "a caçada como escola",
+      "question": "Essa caçada virou escola técnica?",
+      "variants": [
+        "procurar o jogo ensinou",
+        "o que a caçada ensinou"
+      ],
+      "answer": "Sim: nela ele entrou em comunidades de tradução de jogos, aprendeu a editar arquivos, mexer na estrutura interna dos jogos e resolver conflito de ROM em emulador. Foi a primeira escola técnica dele."
+    },
+    {
+      "id": "cu36",
+      "layer": 4,
+      "parent": "cu26",
+      "label": "SOCRAM nos próximos jogos",
+      "question": "SOCRAM aparece nos outros jogos?",
+      "variants": [
+        "socram no segundo jogo",
+        "socram na dama"
+      ],
+      "answer": "Ele não é o antagonista direto: o que aparece é o exército dele e a vontade de vingá-lo."
+    },
+    {
+      "id": "cu37",
+      "layer": 4,
+      "parent": "cu27",
+      "label": "o foguete nos dois jogos",
+      "question": "O foguete do primeiro jogo é o mesmo do segundo?",
+      "variants": [
+        "mesmo foguete",
+        "foguete da viagem"
+      ],
+      "answer": "Sim: A Viagem de Bobby continua no mesmo foguete em que ele fugiu."
+    },
+    {
+      "id": "cu38",
+      "layer": 4,
+      "parent": "cu28",
+      "label": "o planeta Terra",
+      "question": "Como a Terra aparece no segundo jogo?",
+      "variants": [
+        "terra no segundo jogo",
+        "o planeta do jogo"
+      ],
+      "answer": "Como o único sprite do jogo: o planeta, que se aproxima até a cutscene final mirar no Brasil."
+    },
+    {
+      "id": "cu39",
+      "layer": 4,
+      "parent": "cu29",
+      "label": "jogar no celular",
+      "question": "Dá para jogar a trilogia no celular?",
+      "variants": [
+        "jogos funcionam no mobile",
+        "jogar pelo celular"
+      ],
+      "answer": "A Fuga de Bobby é jogável em desktop e mobile. Para os outros dois, a base não detalha a compatibilidade."
+    },
+    {
+      "id": "cu40",
+      "layer": 4,
+      "parent": "cu30",
+      "label": "o que é um RAG",
+      "question": "Em uma frase, o que é um RAG?",
+      "variants": [
+        "o que é rag",
+        "explica rag"
+      ],
+      "answer": "É um sistema que busca a informação certa numa base antes de responder, em vez de inventar a resposta."
+    },
+    {
+      "id": "cu41",
+      "layer": 4,
+      "parent": "cu31",
+      "label": "quando a base não tem",
+      "question": "O que o chat faz quando a base não tem a resposta?",
+      "variants": [
+        "e se não souber",
+        "quando você não sabe"
+      ],
+      "answer": "Ele avisa que não tem o dado, sugere caminhos que existem e, se a pessoa insistir, repete com mais clareza e indica o contato do Marcos."
+    },
+    {
+      "id": "cu42",
+      "layer": 4,
+      "parent": "cu32",
+      "label": "os worklogs",
+      "question": "O que são os worklogs?",
+      "variants": [
+        "worklog",
+        "histórico da ia"
+      ],
+      "answer": "O histórico de trabalho da IA: as linhas que ela modificou e os sprites que fez. Foi com isso que o Marcos reconstruiu a Dama Orbital 99% idêntica depois de perder tudo."
+    },
+    {
+      "id": "cu43",
+      "layer": 4,
+      "parent": "cu33",
+      "label": "como recomeçar",
+      "question": "Como recomeçar depois do reset?",
+      "variants": [
+        "reiniciou como volto",
+        "voltar ao chat"
+      ],
+      "answer": "É só mandar um oi. A conversa começa limpa, com saudação e os temas principais."
+    },
+    {
+      "id": "cu44",
+      "layer": 4,
+      "parent": "cu34",
+      "label": "como cobrir as lacunas",
+      "question": "Como ele pretende cobrir essas lacunas?",
+      "variants": [
+        "plano para as lacunas",
+        "como vai aprender"
+      ],
+      "answer": "Entrando numa equipe e aprendendo no contexto: ele relata que com dois dias intensos de hiperfoco absorve bastante coisa nova, e que a prática diária consolida."
+    },
+    {
+      "id": "cu45",
+      "layer": 4,
+      "parent": "cu35",
+      "label": "tradução de jogos",
+      "question": "Ele traduzia jogos de quais línguas?",
+      "variants": [
+        "idiomas da tradução",
+        "traduzia do espanhol"
+      ],
+      "answer": "Do espanhol para o português do Brasil e, em partes, do inglês, tudo na mão."
+    },
+    {
+      "id": "cu46",
+      "layer": 5,
+      "parent": "cu36",
+      "label": "o mito do SOCRAM",
+      "question": "Por que ele é descrito como um mito?",
+      "variants": [
+        "socram mito",
+        "por que mito"
+      ],
+      "answer": "Porque mesmo derrotado, o SOCRAM segue movendo a história: o exército dele mantém a vingança viva por mais dois jogos."
+    },
+    {
+      "id": "cu47",
+      "layer": 5,
+      "parent": "cu37",
+      "label": "o fim da saga",
+      "question": "Como termina a saga?",
+      "variants": [
+        "final da trilogia",
+        "como acaba a dama orbital"
+      ],
+      "answer": "Na Dama Orbital, com o confronto final na Terra. A base não detalha o desfecho além de ser a batalha final."
+    },
+    {
+      "id": "cu48",
+      "layer": 5,
+      "parent": "cu40",
+      "label": "RAG versus ChatGPT",
+      "question": "Qual a diferença entre este chat e o ChatGPT?",
+      "variants": [
+        "você é chatgpt",
+        "diferença para chatgpt"
+      ],
+      "answer": "O ChatGPT gera texto novo. Eu só busco respostas que já estão na base do Marcos, com a fonte no selo, e não invento."
+    },
+    {
+      "id": "cu49",
+      "layer": 5,
+      "parent": "cu42",
+      "label": "a reconstrução dos 99%",
+      "question": "Como foi a reconstrução dos 99%?",
+      "variants": [
+        "reconstrução da dama",
+        "como recuperou o jogo"
+      ],
+      "answer": "Em cerca de 20 minutos pensando, ele pediu todos os worklogs, puxou o histórico da IA, as linhas modificadas e os sprites, e reconstruiu 99% idêntico com engenharia reversa."
+    },
+    {
+      "id": "cu50",
+      "layer": 5,
+      "parent": "cu44",
+      "label": "a imersão em inglês",
+      "question": "Como ele usa imersão para o inglês?",
+      "variants": [
+        "séries em inglês",
+        "imersão em inglês"
+      ],
+      "answer": "Assistindo séries com áudio em inglês e lendo em inglês. Em pouco tempo de imersão, o conteúdo volta a fazer sentido, por triangulação."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "category": "torch",
+  "descricao": "Tochas: palavras que apontam pro proprio Bobby. Acendem a orbita meta_ia.",
+  "torch_words": [
+    "tu",
+    "voce",
+    "vc",
+    "bob",
+    "bobby",
+    "bot",
+    "assistente",
+    "robot",
+    "robo"
+  ],
+  "fora_words": [
+    "marcos",
+    "marcao",
+    "bella",
+    "fabricart",
+    "prepara",
+    "friends",
+    "projeto",
+    "portfolio",
+    "stack",
+    "linguagem",
+    "curriculo",
+    "pdf",
+    "cnc",
+    "python",
+    "javascript",
+    "typescript",
+    "react",
+    "nexus",
+    "lar",
+    "franzinha",
+    "empresa",
+    "trabalho",
+    "cargo"
+  ],
+  "intents": [
+    {
+      "id": "identidade",
+      "regex": [
+        "\\b(voce|tu|vc|bob|bobby|bot)\\s+(e|é|foi|era)\\s+(uma\\s+ia|um\\s+bot|humano|um\\s+robo|um\\s+programa|um\\s+sistema|um\\s+assistente|de\\s+verdade)",
+        "\\b(e\\s+uma\\s+ia|e\\s+um\\s+bot|e\\s+humano|e\\s+um\\s+robo|e\\s+um\\s+programa)",
+        "\\b(voce|tu|vc)\\s+(e|é)\\s+(o\\s+que|quem)",
+        "\\b(to\\s+achando\\s+que\\s+(voce|tu|vc)\\s+(e|é))"
+      ],
+      "first": [
+        "Quem me dera. Sou um assistente robotizado e engessado, JavaScript puro, um motor RAG. Nao gero texto, so busco na base e devolvo o trecho certo.",
+        "Nada. Sou um BOT RAG, JavaScript puro, sem IA generativa. O Marcos orquestrou uma IA pra me construir e auditou cada modulo. Mas quem raciocina aqui nao sou eu.",
+        "Voce esta gostando das minhas respostas? Sou um motor RAG configurado pra parecer inteligente. Nao sou IA, nao raciocino, so recupero o que esta na base."
+      ],
+      "repeat": [
+        "De novo essa? kkk Continua valendo: sou um RAG puro. Busco, ranqueio e devolvo. Sem gerar, sem inventar.",
+        "Voce ja perguntou isso, e a resposta nao muda: sou um motor RAG em JavaScript, sem IA generativa. O trabalho que te impressiona e do Marcos, nao meu.",
+        "Bom, voce esta gostando das minhas respostas? Eu so fui configurado pra parecer. Na pratica, sou um Projeto desse portfolio, um modelo mais basico que o Nucleo Nexus que o Marcos esta construindo."
+      ]
+    },
+    {
+      "id": "utilidade",
+      "regex": [
+        "\\b(voce|tu|vc|bob|bobby|bot)\\s+(serve|serviu|funciona|funcionou|ajuda|ajudou|faz|fez)\\b",
+        "\\b(para\\s+que|pra\\s+que|o\\s+que)\\s+(voce|tu|vc)\\b"
+      ],
+      "first": [
+        "Sirvo pra voce conhecer o Marcos sem ter que ler o curriculo inteiro. Pergunta, eu busco na base dele e devolvo o trecho certo, sem inventar. Se sair do escopo, te digo na hora.",
+        "Minha funcao e responder sobre a carreira e o portfolio do Marcos. Faco busca semantica na base dele, com tolerancia a erro de digitacao e memoria de conversa. Fora disso, nao invento."
+      ],
+      "repeat": [
+        "Continuo na mesma: voce pergunta sobre o Marcos, eu busco e devolvo. So isso, com honestidade quando nao tem.",
+        "Como ja disse, sou um motor de busca sobre o curriculo dele. Nada mais, nada menos."
+      ]
+    },
+    {
+      "id": "capacidade",
+      "regex": [
+        "\\b(voce|tu|vc|bob|bobby)\\s+(entende|entendeu|sabe|sabia|consegue|conseguiu|lembra|lembrou|aprende|aprendeu|pensa|pensou)",
+        "\\bvoce\\s+(me\\s+)?(ouviu|escuta)"
+      ],
+      "first": [
+        "Entendo no sentido de casar. Nao raciocino como uma IA generativa, mas consigo comparar sua pergunta com a base e devolver o trecho mais proximo. Tolerancia a erro de digitacao eu tenho.",
+        "Sabe no sentido de buscar. Eu nao penso, eu recupero. Se voce escrever com erro, ainda assim eu tento casar. Se nao tiver na base, admito."
+      ],
+      "repeat": [
+        "Mesma coisa de antes: nao raciocino, mas busco com tolerancia a erro e devolvo o que ta na base.",
+        "Nao aprendo entre sessoes, mas dentro da conversa eu lembro. E esse o nivel."
+      ]
+    },
+    {
+      "id": "honestidade",
+      "regex": [
+        "\\b(voce|tu|vc|bob|bobby|bot)\\s+(mente|mentiu|engana|enganou|finge|fingiu|floreia|disfar[çc]a|simula|encena)",
+        "\\b(ta\\s+mentindo|ta\\s+enganando|mentira|mentiroso)"
+      ],
+      "first": [
+        "Quem me dera poder enganar. kkk E serio: sou um BOT RAG projetado e arquitetado pelo Marcos Eduardo. Ta gostando das respostas? Sinal que ele pensou bem no que fez. Nao se iluda, sou apenas um RAG bem organizado.",
+        "Nada disso. Eu so afirmo o que esta na base. Onde nao tem, eu digo que nao tem. Se em algum momento pareci inventar, me aponta que eu corrijo o rumo."
+      ],
+      "repeat": [
+        "Ja falei, e repito: sem engano por aqui. Sou um RAG, nao um LLM. Se voce ta achando que eu raciocino, e porque a arquitetura do Marcos foi bem feita.",
+        "Voce ta testando se eu invento? Nao invento. Se ta na base, devolvo; se nao ta, admito. E a regra."
+      ]
+    }
+  ]
+}

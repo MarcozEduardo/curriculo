@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "versao": "3.0.0",
+    "descricao": "Moldes de frase reutilizáveis para montar respostas compostas (superlativos, rankings, comparações e encaminhamentos). Placeholders entre chaves."
+  },
+  "superlativos": {
+    "mais_recente": "O mais recente é **{entidade}**.",
+    "mais_antigo": "O mais antigo é **{entidade}**.",
+    "maior": "O maior (em volume de código e escopo) é **{entidade}**.",
+    "menor": "O menor é **{entidade}**.",
+    "mais_rapido": "O mais rápido de construir foi **{entidade}**.",
+    "mais_demorado": "O que levou mais tempo foi **{entidade}**."
+  },
+  "ranking": "Ranking: {lista}",
+  "comparacao": "Comparando **{a}** e **{b}**: {diferenca}",
+  "encaminhamento": {
+    "whatsapp": "Para falar direto com o Marcão: **(61) 98222-7804**.",
+    "email": "Por e-mail: **marcos.eduardo@myyahoo.com**.",
+    "linkedin": "No LinkedIn: [sir-marcos-eduardo](https://www.linkedin.com/in/sir-marcos-eduardo)."
+  },
+  "fonte": "{orbita} · {entidade}",
+  "fechos": [
+    "Quer que eu aprofunde esse ponto?",
+    "Posso detalhar a parte técnica, se quiser.",
+    "Se quiser, comparo com outro projeto."
+  ]
+}

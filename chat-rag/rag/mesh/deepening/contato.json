@@ -1,0 +1,623 @@
+{
+  "orbit": "contato",
+  "label": "Contato",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós",
+  "nodes": [
+    {
+      "id": "ct01",
+      "layer": 1,
+      "parent": null,
+      "label": "os canais de contato",
+      "question": "Quais são os canais de contato dele?",
+      "variants": [
+        "como falo com ele",
+        "contatos"
+      ],
+      "answer": "WhatsApp e telefone (61) 98222-7804, e-mail marcos.eduardo@myyahoo.com, LinkedIn linkedin.com/in/sir-marcos-eduardo e GitHub github.com/MarcozEduardo. Ele está em Brazlândia, Distrito Federal."
+    },
+    {
+      "id": "ct02",
+      "layer": 1,
+      "parent": null,
+      "label": "o WhatsApp",
+      "question": "Qual é o WhatsApp dele?",
+      "variants": [
+        "número de telefone",
+        "celular"
+      ],
+      "answer": "(61) 98222-7804. É o canal mais rápido para falar com ele."
+    },
+    {
+      "id": "ct03",
+      "layer": 1,
+      "parent": null,
+      "label": "o e-mail",
+      "question": "Qual é o e-mail dele?",
+      "variants": [
+        "endereço de email",
+        "mandar email"
+      ],
+      "answer": "marcos.eduardo@myyahoo.com."
+    },
+    {
+      "id": "ct04",
+      "layer": 1,
+      "parent": null,
+      "label": "o LinkedIn",
+      "question": "Ele tem LinkedIn?",
+      "variants": [
+        "perfil no linkedin",
+        "link do linkedin"
+      ],
+      "answer": "Sim: linkedin.com/in/sir-marcos-eduardo."
+    },
+    {
+      "id": "ct05",
+      "layer": 1,
+      "parent": null,
+      "label": "o GitHub",
+      "question": "Qual é o GitHub dele?",
+      "variants": [
+        "repositórios",
+        "perfil no github"
+      ],
+      "answer": "github.com/MarcozEduardo, onde ficam DirectSend e Marketbobby, entre outros repositórios."
+    },
+    {
+      "id": "ct06",
+      "layer": 1,
+      "parent": null,
+      "label": "a localização",
+      "question": "Onde ele está localizado?",
+      "variants": [
+        "cidade",
+        "onde mora"
+      ],
+      "answer": "Brazlândia, região administrativa do Distrito Federal. Atua remoto, híbrido ou presencial no DF."
+    },
+    {
+      "id": "ct07",
+      "layer": 1,
+      "parent": null,
+      "label": "melhor horário",
+      "question": "Qual o melhor horário para contato?",
+      "variants": [
+        "quando posso ligar",
+        "horário de atendimento"
+      ],
+      "answer": "A base não define um horário. Como a disponibilidade dele é imediata e a agenda é flexível, uma mensagem no WhatsApp a qualquer hora comercial costuma resolver."
+    },
+    {
+      "id": "ct08",
+      "layer": 1,
+      "parent": null,
+      "label": "como agendar entrevista",
+      "question": "Como agendar uma entrevista?",
+      "variants": [
+        "marcar conversa",
+        "agendar processo seletivo",
+        "posso agendar uma call",
+        "marcar uma call",
+        "agendar uma call",
+        "call com ele",
+        "agendar reunião",
+        "marcar uma reunião",
+        "marcar videochamada",
+        "posso marcar uma conversa"
+      ],
+      "answer": "Pelo WhatsApp (61) 98222-7804 ou pelo e-mail marcos.eduardo@myyahoo.com, informando vaga, empresa e formato. A disponibilidade é imediata.",
+      "facet": "entrevista"
+    },
+    {
+      "id": "ct09",
+      "layer": 1,
+      "parent": null,
+      "label": "o currículo em PDF",
+      "question": "Tem currículo em PDF?",
+      "variants": [
+        "versão em pdf",
+        "baixar currículo"
+      ],
+      "answer": "Sim. Este currículo interativo tem exportação em PDF A4, e o arquivo também pode ser solicitado por e-mail.",
+      "facet": "curriculo_arquivo"
+    },
+    {
+      "id": "ct10",
+      "layer": 1,
+      "parent": null,
+      "label": "os links do portfólio",
+      "question": "Onde estão os links do portfólio?",
+      "variants": [
+        "links dos projetos",
+        "deploys"
+      ],
+      "answer": "game-a-fuga-de-bobby-final.vercel.app, game-a-viagem-de-bobby.vercel.app, dama-orbital.vercel.app, programa-de-extens-o-institucional.vercel.app e github.com/MarcozEduardo."
+    },
+    {
+      "id": "ct11",
+      "layer": 1,
+      "parent": null,
+      "label": "ligar por telefone",
+      "question": "Posso ligar para ele?",
+      "variants": [
+        "aceita ligação",
+        "telefone funciona para ligar"
+      ],
+      "answer": "Sim, o número (61) 98222-7804 é telefone e WhatsApp."
+    },
+    {
+      "id": "ct12",
+      "layer": 1,
+      "parent": null,
+      "label": "tempo de resposta",
+      "question": "Ele responde rápido?",
+      "variants": [
+        "prazo de resposta",
+        "demora para responder"
+      ],
+      "answer": "A base não informa prazo de resposta. O WhatsApp é indicado como o canal mais rápido."
+    },
+    {
+      "id": "ct13",
+      "layer": 1,
+      "parent": null,
+      "label": "outras redes",
+      "question": "Ele tem outras redes sociais?",
+      "variants": [
+        "instagram",
+        "redes profissionais"
+      ],
+      "answer": "Os canais informados são WhatsApp, e-mail, LinkedIn e GitHub. Outras redes não constam na base."
+    },
+    {
+      "id": "ct14",
+      "layer": 1,
+      "parent": null,
+      "label": "contato para proposta",
+      "question": "Como enviar uma proposta?",
+      "variants": [
+        "mandar oferta",
+        "enviar vaga"
+      ],
+      "answer": "Por e-mail (marcos.eduardo@myyahoo.com) ou WhatsApp (61) 98222-7804. Remuneração e condições ele alinha diretamente nessa conversa."
+    },
+    {
+      "id": "ct15",
+      "layer": 1,
+      "parent": null,
+      "label": "mencionar o chat",
+      "question": "Devo mencionar que falei com o Bobby?",
+      "variants": [
+        "citar o chat na mensagem",
+        "como me referir a esta conversa"
+      ],
+      "answer": "Ajuda: diga que conheceu o perfil pelo currículo interativo e qual tema interessou. Isso acelera a conversa com ele."
+    },
+    {
+      "id": "ct16",
+      "layer": 2,
+      "parent": "ct01",
+      "label": "o canal mais rápido",
+      "question": "Qual é o canal mais rápido?",
+      "variants": [
+        "melhor forma de contato",
+        "canal preferido"
+      ],
+      "answer": "O WhatsApp: (61) 98222-7804."
+    },
+    {
+      "id": "ct17",
+      "layer": 2,
+      "parent": "ct02",
+      "label": "o DDD 61",
+      "question": "DDD 61 é de onde?",
+      "variants": [
+        "código de área",
+        "de onde é o número"
+      ],
+      "answer": "Do Distrito Federal, onde ele mora."
+    },
+    {
+      "id": "ct18",
+      "layer": 2,
+      "parent": "ct03",
+      "label": "proposta por e-mail",
+      "question": "Posso enviar proposta por e-mail?",
+      "variants": [
+        "email para proposta",
+        "mandar vaga por email"
+      ],
+      "answer": "Sim, marcos.eduardo@myyahoo.com recebe propostas, descrição de vaga e agendamento."
+    },
+    {
+      "id": "ct19",
+      "layer": 2,
+      "parent": "ct04",
+      "label": "o conteúdo do LinkedIn",
+      "question": "O que tem no LinkedIn dele?",
+      "variants": [
+        "linkedin atualizado",
+        "perfil profissional"
+      ],
+      "answer": "A base informa o endereço do perfil, não o conteúdo detalhado. Para o histórico completo, este currículo e o GitHub são as fontes mais ricas."
+    },
+    {
+      "id": "ct20",
+      "layer": 2,
+      "parent": "ct05",
+      "label": "repositórios públicos",
+      "question": "Quais repositórios são públicos?",
+      "variants": [
+        "o que tem no github",
+        "projetos no github"
+      ],
+      "answer": "DirectSend (github.com/MarcozEduardo/DirectSend) e Marketbobby (github.com/MarcozEduardo/Marketbobby) têm link informado. LAR, Franzinha e Nexus ficam reservados."
+    },
+    {
+      "id": "ct21",
+      "layer": 2,
+      "parent": "ct06",
+      "label": "Brazlândia e o DF",
+      "question": "Brazlândia fica longe do centro de Brasília?",
+      "variants": [
+        "distância até o plano piloto",
+        "deslocamento"
+      ],
+      "answer": "É uma região administrativa do Distrito Federal. A base não informa tempo de deslocamento; ele aceita híbrido e presencial no DF."
+    },
+    {
+      "id": "ct22",
+      "layer": 2,
+      "parent": "ct07",
+      "label": "fins de semana",
+      "question": "Ele atende em fins de semana?",
+      "variants": [
+        "contato no sábado",
+        "fora do horário comercial"
+      ],
+      "answer": "A base não informa. O mais seguro é enviar mensagem e combinar o horário."
+    },
+    {
+      "id": "ct23",
+      "layer": 2,
+      "parent": "ct08",
+      "label": "entrevista remota",
+      "question": "A entrevista pode ser remota?",
+      "variants": [
+        "entrevista online",
+        "videochamada"
+      ],
+      "answer": "Sim. Ele tem infraestrutura completa para atuação a distância, então entrevista online é viável. Confirme o formato com ele.",
+      "facet": "entrevista"
+    },
+    {
+      "id": "ct24",
+      "layer": 2,
+      "parent": "ct09",
+      "label": "exportar o PDF",
+      "question": "Como exportar o currículo em PDF?",
+      "variants": [
+        "gerar pdf",
+        "imprimir currículo"
+      ],
+      "answer": "O currículo interativo tem exportação em PDF A4 na própria página. Se preferir o arquivo pronto, peça por e-mail.",
+      "facet": "curriculo_arquivo"
+    },
+    {
+      "id": "ct25",
+      "layer": 2,
+      "parent": "ct10",
+      "label": "onde estão os deploys",
+      "question": "Onde estão hospedados os projetos?",
+      "variants": [
+        "hospedagem",
+        "plataforma de deploy"
+      ],
+      "answer": "Na Vercel. Os repositórios ficam no GitHub."
+    },
+    {
+      "id": "ct26",
+      "layer": 3,
+      "parent": "ct16",
+      "label": "mensagem direta",
+      "question": "Posso mandar mensagem direta sem aviso?",
+      "variants": [
+        "chamar no whatsapp direto",
+        "precisa agendar antes"
+      ],
+      "answer": "Sim. Uma mensagem direta no WhatsApp com vaga e empresa é o caminho esperado."
+    },
+    {
+      "id": "ct27",
+      "layer": 3,
+      "parent": "ct17",
+      "label": "atendimento fora do DF",
+      "question": "Ele atende empresas fora do DF?",
+      "variants": [
+        "empresa de outro estado",
+        "contratante de fora"
+      ],
+      "answer": "Sim, em modelo remoto, que é a preferência dele."
+    },
+    {
+      "id": "ct28",
+      "layer": 3,
+      "parent": "ct18",
+      "label": "o que colocar no e-mail",
+      "question": "O que colocar no e-mail?",
+      "variants": [
+        "conteúdo da mensagem",
+        "informações para enviar"
+      ],
+      "answer": "Vaga, empresa, formato de trabalho e próximos passos do processo. Remuneração ele alinha diretamente na conversa."
+    },
+    {
+      "id": "ct29",
+      "layer": 3,
+      "parent": "ct19",
+      "label": "LinkedIn e currículo",
+      "question": "O LinkedIn tem o mesmo conteúdo deste currículo?",
+      "variants": [
+        "diferença entre linkedin e site",
+        "qual é mais completo"
+      ],
+      "answer": "A base não compara os dois. Este currículo interativo traz a trajetória, os projetos e o contexto em detalhe."
+    },
+    {
+      "id": "ct30",
+      "layer": 3,
+      "parent": "ct20",
+      "label": "código dos jogos",
+      "question": "O código dos jogos é público?",
+      "variants": [
+        "repositório dos games",
+        "github dos jogos"
+      ],
+      "answer": "A base informa os deploys públicos dos jogos, mas não repositórios específicos deles. Para o código, o melhor é pedir diretamente a ele."
+    },
+    {
+      "id": "ct31",
+      "layer": 3,
+      "parent": "ct21",
+      "label": "deslocamento para Brasília",
+      "question": "Ele se desloca para Brasília?",
+      "variants": [
+        "vai ao escritório",
+        "presencial no centro"
+      ],
+      "answer": "Sim, híbrido e presencial no Distrito Federal estão dentro do que ele aceita."
+    },
+    {
+      "id": "ct32",
+      "layer": 3,
+      "parent": "ct22",
+      "label": "fuso horário",
+      "question": "Qual é o fuso horário dele?",
+      "variants": [
+        "horário de brasília",
+        "fuso"
+      ],
+      "answer": "Horário de Brasília."
+    },
+    {
+      "id": "ct33",
+      "layer": 3,
+      "parent": "ct23",
+      "label": "estrutura para chamada",
+      "question": "Ele tem estrutura para videochamada?",
+      "variants": [
+        "câmera e internet",
+        "equipamento para remoto"
+      ],
+      "answer": "Sim, infraestrutura completa para trabalho e reuniões a distância, segundo o currículo.",
+      "facet": "entrevista"
+    },
+    {
+      "id": "ct34",
+      "layer": 3,
+      "parent": "ct24",
+      "label": "formato do PDF",
+      "question": "O PDF sai em que formato?",
+      "variants": [
+        "tamanho do pdf",
+        "layout de impressão"
+      ],
+      "answer": "Em A4, pela exportação do próprio currículo interativo.",
+      "facet": "curriculo_arquivo"
+    },
+    {
+      "id": "ct35",
+      "layer": 3,
+      "parent": "ct25",
+      "label": "link do Dama Orbital",
+      "question": "Qual é o link do Dama Orbital?",
+      "variants": [
+        "jogar dama orbital",
+        "endereço do dama"
+      ],
+      "answer": "dama-orbital.vercel.app."
+    },
+    {
+      "id": "ct36",
+      "layer": 4,
+      "parent": "ct26",
+      "label": "a primeira mensagem",
+      "question": "O que mandar na primeira mensagem?",
+      "variants": [
+        "como iniciar a conversa",
+        "modelo de mensagem"
+      ],
+      "answer": "Nome, empresa, vaga e formato (remoto, híbrido ou presencial). Se quiser, mencione que conheceu o perfil pelo currículo interativo."
+    },
+    {
+      "id": "ct37",
+      "layer": 4,
+      "parent": "ct27",
+      "label": "trabalho remoto anterior",
+      "question": "Ele já trabalhou remoto?",
+      "variants": [
+        "experiência em home office",
+        "remoto formal"
+      ],
+      "answer": "Os projetos desde 2024 foram feitos remotamente, com deploy público. Experiência remota formal em empresa não está registrada na base."
+    },
+    {
+      "id": "ct38",
+      "layer": 4,
+      "parent": "ct28",
+      "label": "resposta ao e-mail",
+      "question": "Ele responde e-mail com rapidez?",
+      "variants": [
+        "prazo de resposta por email",
+        "e-mail demora"
+      ],
+      "answer": "A base não informa prazo. Para urgência, o WhatsApp é o canal indicado."
+    },
+    {
+      "id": "ct39",
+      "layer": 4,
+      "parent": "ct30",
+      "label": "o LAR no GitHub",
+      "question": "O LAR está no GitHub?",
+      "variants": [
+        "código do lar",
+        "repositório do lar"
+      ],
+      "answer": "Não. O LAR fica reservado por enquanto e pode ser demonstrado em entrevista."
+    },
+    {
+      "id": "ct40",
+      "layer": 4,
+      "parent": "ct31",
+      "label": "presencial integral",
+      "question": "Ele aceita presencial integral?",
+      "variants": [
+        "cinco dias no escritório",
+        "totalmente presencial"
+      ],
+      "answer": "Sim, no Distrito Federal. A preferência é remoto ou híbrido, mas presencial no DF está dentro do que ele aceita."
+    },
+    {
+      "id": "ct41",
+      "layer": 4,
+      "parent": "ct32",
+      "label": "contato comercial",
+      "question": "Qual o melhor contato para assunto comercial?",
+      "variants": [
+        "proposta de trabalho freelance",
+        "contratar serviço"
+      ],
+      "answer": "WhatsApp (61) 98222-7804 ou e-mail marcos.eduardo@myyahoo.com."
+    },
+    {
+      "id": "ct42",
+      "layer": 4,
+      "parent": "ct33",
+      "label": "entrevista técnica online",
+      "question": "Ele pode fazer entrevista técnica online?",
+      "variants": [
+        "teste técnico remoto",
+        "demonstração por vídeo"
+      ],
+      "answer": "Sim. Ele pode compartilhar tela e demonstrar os projetos, inclusive o LAR, em chamada.",
+      "facet": "entrevista"
+    },
+    {
+      "id": "ct43",
+      "layer": 4,
+      "parent": "ct34",
+      "label": "PDF ou chat",
+      "question": "O PDF substitui este chat?",
+      "variants": [
+        "vale mais o pdf",
+        "diferença entre pdf e chat"
+      ],
+      "answer": "São complementares: o PDF é o resumo formal; o chat traz contexto, detalhes e as perguntas que você quiser fazer.",
+      "facet": "curriculo_arquivo"
+    },
+    {
+      "id": "ct44",
+      "layer": 4,
+      "parent": "ct35",
+      "label": "links dos outros jogos",
+      "question": "Quais são os links dos outros jogos?",
+      "variants": [
+        "link da fuga e da viagem",
+        "endereços dos games"
+      ],
+      "answer": "game-a-fuga-de-bobby-final.vercel.app e game-a-viagem-de-bobby.vercel.app."
+    },
+    {
+      "id": "ct45",
+      "layer": 4,
+      "parent": "ct36",
+      "label": "identificar-se",
+      "question": "Preciso me identificar?",
+      "variants": [
+        "posso falar anônimo",
+        "preciso dizer quem sou"
+      ],
+      "answer": "Não é obrigatório, mas ajuda: nome, empresa e vaga tornam a resposta dele mais objetiva."
+    },
+    {
+      "id": "ct46",
+      "layer": 5,
+      "parent": "ct36",
+      "label": "enviar descrição da vaga",
+      "question": "Posso enviar a descrição da vaga?",
+      "variants": [
+        "mandar o job description",
+        "enviar requisitos"
+      ],
+      "answer": "Sim, por e-mail ou WhatsApp. Com a descrição em mãos, ele consegue dizer com transparência onde já atende e onde precisaria de ramp-up."
+    },
+    {
+      "id": "ct47",
+      "layer": 5,
+      "parent": "ct39",
+      "label": "demonstração do LAR",
+      "question": "Ele demonstra o LAR em entrevista?",
+      "variants": [
+        "mostrar o lar ao vivo",
+        "ver o lar funcionando"
+      ],
+      "answer": "Sim. É reservado para publicação, mas pode ser demonstrado ao vivo quando fizer sentido no processo."
+    },
+    {
+      "id": "ct48",
+      "layer": 5,
+      "parent": "ct40",
+      "label": "região do DF",
+      "question": "Em que região do DF ele mora?",
+      "variants": [
+        "bairro",
+        "região administrativa"
+      ],
+      "answer": "Brazlândia."
+    },
+    {
+      "id": "ct49",
+      "layer": 5,
+      "parent": "ct42",
+      "label": "ferramentas de vídeo",
+      "question": "Que ferramentas de videochamada ele usa?",
+      "variants": [
+        "meet ou teams",
+        "plataforma de reunião"
+      ],
+      "answer": "A base não especifica. Ele tem infraestrutura para reuniões remotas e se adapta à ferramenta da empresa."
+    },
+    {
+      "id": "ct50",
+      "layer": 5,
+      "parent": "ct44",
+      "label": "link do gerador ABNT",
+      "question": "Qual é o link do gerador ABNT?",
+      "variants": [
+        "acessar o projeto da unyleya",
+        "endereço do gerador de slides"
+      ],
+      "answer": "programa-de-extens-o-institucional.vercel.app."
+    }
+  ]
+}

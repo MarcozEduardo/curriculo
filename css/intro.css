@@ -1,0 +1,155 @@
+/* ================= INTRO OVERLAY ================= */
+
+#neuralCanvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9998;
+  pointer-events: none;
+  display: block;
+  background: transparent;
+  transition: opacity 0.8s ease;
+}
+
+#introOverlay {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(at 30% 30%, rgba(255, 140, 66, 0.18) 0px, transparent 55%),
+    radial-gradient(at 70% 70%, rgba(0, 240, 255, 0.10) 0px, transparent 55%),
+    linear-gradient(160deg, #0d0e11 0%, #14171c 100%);
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#introOverlay.fade-out {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none;
+}
+
+#neuralCanvas.fade-out {
+  opacity: 0 !important;
+}
+
+.intro-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 40px 30px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.system-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 8px #22d3ee, 0 0 16px rgba(34, 211, 238, 0.5);
+  animation: introPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes introPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
+}
+
+.status-text {
+  color: #7dd3fc;
+  font-weight: 600;
+}
+
+.intro-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  min-height: 52px;
+  text-shadow: 0 4px 24px rgba(255, 122, 46, 0.35);
+}
+
+.intro-title::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  color: #FF7A2E;
+  animation: introBlink 0.9s step-end infinite;
+}
+
+@keyframes introBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.loader-wrap {
+  width: 100%;
+  max-width: 380px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.loader-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #FF8C42 0%, #F26418 100%);
+  border-radius: 4px;
+  transition: width 0.15s linear;
+  box-shadow: 0 0 12px rgba(255, 122, 46, 0.6);
+}
+
+.loader-text {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0;
+  letter-spacing: 0.4px;
+  min-height: 16px;
+}
+
+/* Desfoque aplicado no currículo durante a intro */
+.intro-blur {
+  filter: blur(15px);
+  opacity: 0.03;
+  transition: filter 0.15s linear, opacity 0.15s linear;
+}
+
+@media (max-width: 700px) {
+  .intro-title { font-size: 30px; min-height: 38px; }
+  .loader-wrap { max-width: 260px; }
+  .system-status { font-size: 10px; padding: 5px 12px; }
+  .loader-text { font-size: 11px; }
+}

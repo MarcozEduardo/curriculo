@@ -1,0 +1,9 @@
+{
+  "projetos": {
+    "fuga-de-bobby": "projects/fuga-de-bobby/info.json",
+    "viagem-de-bobby": "projects/viagem-de-bobby/info.json",
+    "dama-orbital": "projects/dama-orbital/info.json",
+    "quadra21": "projects/quadra21/info.json",
+    "estagiario": "projects/estagiario/info.json"
+  }
+}

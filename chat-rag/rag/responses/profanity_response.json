@@ -1,0 +1,22 @@
+{
+  "category": "profanity_response",
+  "descricao": "Escada de moderação por contagem: 1 aviso leve, 2 pergunta se ainda é teste, 3 reinicia o chat.",
+  "niveis": {
+    "1": [
+      "Percebi conteúdo sensível. Se isso é um teste, acredito que fui configurado bem! Vamos manter o papo profissional?",
+      "Opa, esse tipo de linguagem eu filtro. Se foi um teste, passei? Seguimos com o currículo do Marcos?",
+      "Conteúdo sensível detectado. Se for teste, o filtro está funcionando 🙂 Vamos voltar ao que importa?"
+    ],
+    "2": [
+      "Ainda testando? Já são duas mensagens com linguagem pesada. Posso continuar se a conversa voltar ao currículo do Marcos.",
+      "Segunda vez. Se é teste, já deu para ver que o filtro funciona. Se não é, prefiro manter o respeito. Seguimos?"
+    ],
+    "3": [
+      "Bom, não me parece um teste. Vou resetar este chat por causa do teor de baixo nível. Quando quiser recomeçar com respeito, é só mandar um oi.",
+      "Isso já passou do ponto de teste. Vou reiniciar a conversa por causa do conteúdo. Se quiser voltar com respeito, estou aqui."
+    ]
+  },
+  "variations": [
+    "Vamos manter a conversa profissional? Posso falar dos projetos, habilidades e experiências do Marcos."
+  ]
+}

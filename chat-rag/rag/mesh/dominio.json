@@ -1,0 +1,263 @@
+{
+  "dominios": [
+    {
+      "id": "fabricart",
+      "label": "Fabricart",
+      "aliases": [
+        "fabricart",
+        "fabrica fabricart",
+        "fabricart industria"
+      ],
+      "fragmentos": [
+        {
+          "id": "o_que_e",
+          "gatilhos": [
+            "o que e fabricart",
+            "o que a fabricart faz",
+            "o que era a fabricart",
+            "que empresa e fabricart"
+          ],
+          "texto": "A Fabricart é uma indústria de fabricação de projetos e artesanatos, em Valparaíso de Goiás/GO. O Marcos atuou lá como sócio operacional, então não era um funcionário qualquer: ele cuidava da operação inteira, do desenho técnico ao estoque, do sistema interno ao pessoal."
+        },
+        {
+          "id": "funcao",
+          "gatilhos": [
+            "o que ele fazia na fabricart",
+            "qual funcao",
+            "qual cargo",
+            "o que fazia la"
+          ],
+          "texto": "Ele acumulava várias frentes: assistente de logística, TI operacional e administrativo. Na prática, fazia estoque, compras, orçamento, suporte a sistemas internos, modelagem em CorelDRAW para produção automatizada, administrava o pessoal, realizava entrevistas e folha de ponto."
+        },
+        {
+          "id": "tempo",
+          "gatilhos": [
+            "quanto tempo na fabricart",
+            "quanto tempo ficou",
+            "quando entrou",
+            "quando saiu",
+            "qual periodo"
+          ],
+          "texto": "Ele ficou na Fabricart de abril de 2016 a novembro de 2018, ou seja, 2 anos e 8 meses. Foi o primeiro trabalho dele em ambiente industrial, antes da Bella Arte."
+        },
+        {
+          "id": "local",
+          "gatilhos": [
+            "onde fica a fabricart",
+            "qual cidade",
+            "qual endereco",
+            "onde era"
+          ],
+          "texto": "A Fabricart fica em Valparaíso de Goiás, GO, no entorno do Distrito Federal. Ele saía de Brazlândia/DF para trabalhar lá todos os dias."
+        },
+        {
+          "id": "cnc_na_fabricart",
+          "gatilhos": [
+            "ele operava cnc la",
+            "fazia manutencao na fabricart",
+            "desenhos tecnicos"
+          ],
+          "texto": "Na Fabricart ele já trabalhava diretamente com desenho técnico e produção: montava arquivos para recorte, operava a máquina CNC laser e fazia manutenção delas. Foi ali que começou a base industrial que depois virou 5 anos na Bella Arte."
+        },
+        {
+          "id": "gestao",
+          "gatilhos": [
+            "ele administrava",
+            "cuidava do pessoal",
+            "fazia entrevista",
+            "folha de ponto"
+          ],
+          "texto": "Além da parte técnica, ele também tinha função de gestão: administrava os estoques, cuidava do pessoal, realizava entrevistas e folha de ponto. É o tipo de experiência que não aparece em currículo de dev júnior."
+        }
+      ]
+    },
+    {
+      "id": "cnc_laser",
+      "label": "CNC Laser",
+      "aliases": [
+        "cnc",
+        "cnc laser",
+        "laser",
+        "corte a laser",
+        "maquina cnc",
+        "maquina",
+        "maquinas",
+        "cnc maquina",
+        "maquinas cnc"
+      ],
+      "fragmentos": [
+        {
+          "id": "definicao",
+          "gatilhos": [
+            "o que e cnc",
+            "o que e cnc laser",
+            "o que e uma cnc",
+            "definicao de cnc",
+            "o que e laser"
+          ],
+          "texto": "A CNC laser é uma máquina de recorte a laser focado. Usa tubos de CO2 e é uma máquina delicada e cara. No mercado técnico, a mecânica e a manutenção delas são valiosas: pouca gente sabe mexer por dentro, e uma máquina parada significa prejuízo imediato na produção."
+        },
+        {
+          "id": "co2",
+          "gatilhos": [
+            "o que e co2",
+            "tubo de co2",
+            "co2 no laser",
+            "para que serve o co2"
+          ],
+          "texto": "O CO2 é o tubo usado como carga da CNC laser, é ele que gera o feixe que faz o corte. Sem esse tubo em bom estado, a máquina não corta com precisão. É uma peça de desgaste, exige troca periódica e ajuste fino."
+        },
+        {
+          "id": "manutencao",
+          "gatilhos": [
+            "ele consertava",
+            "fazia manutencao",
+            "manutencao da cnc",
+            "como conserta"
+          ],
+          "texto": "Fazer manutenção de uma CNC laser não é para qualquer um: envolve trocar rolamentos, ajustar correia dentada, alinhar eixos e resolver problemas de software e conexão de rede da máquina. O Marcos fez isso na prática por mais de 5 anos, na Bella Arte e antes na Fabricart."
+        },
+        {
+          "id": "materiais",
+          "gatilhos": [
+            "o que corta",
+            "materiais",
+            "o que a cnc corta",
+            "que material"
+          ],
+          "texto": "Essas máquinas cortam MDF, Metal, Acrílico, Couro e Papel. De preferência materiais que não sejam altamente inflamáveis, porque o laser esquenta muito no ponto de corte."
+        },
+        {
+          "id": "mercado",
+          "gatilhos": [
+            "e dificil",
+            "mercado tecnico",
+            "e raro saber",
+            "vale a pena"
+          ],
+          "texto": "A mecânica e a manutenção de CNC laser são valiosas no mercado técnico. Não é uma área cheia de profissional, e quem sabe fazer o diagnóstico certo, sem trocar peça à toa, economiza muito dinheiro para a empresa."
+        }
+      ]
+    },
+    {
+      "id": "bella_arte",
+      "label": "Bella Arte",
+      "aliases": [
+        "bella arte",
+        "bella arte industria"
+      ],
+      "fragmentos": [
+        {
+          "id": "o_que_e",
+          "gatilhos": [
+            "o que e bella arte",
+            "o que faz a bella arte",
+            "que empresa"
+          ],
+          "texto": "A Bella Arte Indústria fica em Vicente Pires/DF e atua com projetos industriais e serviços de corte a laser. Foi onde o Marcos passou mais tempo em uma única empresa: 5 anos e 4 meses como projetista CNC e responsável pela manutenção técnica das máquinas."
+        },
+        {
+          "id": "funcao",
+          "gatilhos": [
+            "o que ele fazia na bella arte",
+            "qual cargo la",
+            "funcao"
+          ],
+          "texto": "Ele era Projetista Industrial CNC e responsável pela Manutenção Técnica. Fazia modelagem vetorial de precisão para corte a laser, calibração de software, diagnóstico de hardware, planejamento de insumos e cuidava das máquinas de ponta a ponta."
+        },
+        {
+          "id": "tempo",
+          "gatilhos": [
+            "quanto tempo na bella arte",
+            "quando entrou",
+            "quando saiu"
+          ],
+          "texto": "Na Bella Arte ele ficou de novembro de 2018 a fevereiro de 2024, 5 anos e 4 meses. É a experiência mais longa dele em uma única empresa, e foi de onde saiu para migrar definitivamente para TI."
+        },
+        {
+          "id": "local",
+          "gatilhos": [
+            "onde fica a bella arte",
+            "cidade"
+          ],
+          "texto": "A Bella Arte fica em Vicente Pires, no Distrito Federal. Fica relativamente perto de Brazlândia, onde ele mora."
+        }
+      ]
+    },
+    {
+      "id": "prepara_cursos",
+      "label": "Prepara Cursos",
+      "aliases": [
+        "prepara",
+        "prepara cursos",
+        "instituto midori"
+      ],
+      "fragmentos": [
+        {
+          "id": "o_que_e",
+          "gatilhos": [
+            "o que e prepara",
+            "o que e prepara cursos",
+            "que escola"
+          ],
+          "texto": "A Prepara Cursos (Instituto Midori) é uma rede de cursos profissionalizantes com unidade em Taguatinga/DF. O Marcos atuou como Instrutor de Informática e Suporte Técnico, ensinando Pacote Office, Photoshop, CorelDRAW, AutoCAD, manutenção de hardware e redes."
+        },
+        {
+          "id": "funcao",
+          "gatilhos": [
+            "o que ele ensinava",
+            "qual funcao la",
+            "era professor de que"
+          ],
+          "texto": "Como instrutor, ele dava aula prática e também fazia suporte técnico na unidade. Ele relata que o ensino consolidou muito do que sabia, porque explicar força a organizar o raciocínio."
+        },
+        {
+          "id": "tempo",
+          "gatilhos": [
+            "quanto tempo na prepara",
+            "quando entrou",
+            "quando saiu"
+          ],
+          "texto": "Ficou na Prepara de agosto de 2014 a março de 2016, 1 ano e 8 meses."
+        }
+      ]
+    },
+    {
+      "id": "friends_informatica",
+      "label": "Friends Informática",
+      "aliases": [
+        "friends",
+        "friends informatica"
+      ],
+      "fragmentos": [
+        {
+          "id": "o_que_e",
+          "gatilhos": [
+            "o que e friends",
+            "o que era a friends",
+            "que loja"
+          ],
+          "texto": "A Friends Informática era uma loja e escola de informática no centro da Ceilândia/DF, hoje extinta. Foi o primeiro emprego formal do Marcos, em 2004, e onde ele fez os cursos de Lógica de Programação e de Montagem e Manutenção."
+        },
+        {
+          "id": "funcao",
+          "gatilhos": [
+            "o que ele fazia na friends",
+            "qual funcao la",
+            "como comecou"
+          ],
+          "texto": "Ele entrou como estagiário e depois virou instrutor. Foi ali que ele descobriu que gostava de ensinar e de resolver problema técnico, muito antes de pensar em TI como carreira formal."
+        },
+        {
+          "id": "tempo",
+          "gatilhos": [
+            "quanto tempo na friends",
+            "quando entrou",
+            "quando saiu"
+          ],
+          "texto": "De 2004 a 2008, cerca de 4 anos. Foi a primeira experiência profissional dele na área de tecnologia."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "description": "Respostas curtas a opções oferecidas pelo assistente. Uma escolha explícita troca a órbita e limpa o satélite anterior da memória."
+  },
+  "choices": [
+    {
+      "id": "hiring_conditions",
+      "orbit": "recrutamento",
+      "facet": "default",
+      "phrases": [
+        "condicoes",
+        "condicoes de contratacao",
+        "condicoes da vaga",
+        "condicoes de trabalho",
+        "contratacao",
+        "recrutamento",
+        "vaga",
+        "vagas",
+        "clt",
+        "pj"
+      ]
+    },
+    {
+      "id": "salary",
+      "orbit": "recrutamento",
+      "facet": "pretensao",
+      "phrases": [
+        "salario",
+        "pretensao",
+        "pretensao salarial",
+        "remuneracao",
+        "faixa salarial"
+      ]
+    },
+    {
+      "id": "work_model",
+      "orbit": "recrutamento",
+      "facet": "modelo_trabalho",
+      "phrases": [
+        "modelo de trabalho",
+        "remoto",
+        "hibrido",
+        "presencial"
+      ]
+    },
+    {
+      "id": "availability",
+      "orbit": "recrutamento",
+      "facet": "disponibilidade",
+      "phrases": [
+        "disponibilidade",
+        "inicio",
+        "quando comeca",
+        "quando pode comecar"
+      ]
+    },
+    {
+      "id": "projects",
+      "orbit": "projetos",
+      "facet": "default",
+      "phrases": [
+        "projetos",
+        "projeto",
+        "portfolio",
+        "portifolio",
+        "games",
+        "jogos",
+        "ferramentas"
+      ]
+    },
+    {
+      "id": "skills",
+      "orbit": "skills",
+      "facet": "default",
+      "phrases": [
+        "stack",
+        "habilidades",
+        "skills",
+        "tecnologias",
+        "competencias"
+      ]
+    },
+    {
+      "id": "experience",
+      "orbit": "experiencia",
+      "facet": "default",
+      "phrases": [
+        "experiencia",
+        "carreira",
+        "historico profissional"
+      ]
+    },
+    {
+      "id": "education",
+      "orbit": "formacao",
+      "facet": "default",
+      "phrases": [
+        "formacao",
+        "estudos",
+        "faculdade",
+        "cursos",
+        "escolaridade"
+      ]
+    },
+    {
+      "id": "neurodivergencia",
+      "orbit": "neurodivergencia",
+      "facet": "default",
+      "phrases": [
+        "neurodivergencia",
+        "neurodivergente",
+        "altas habilidades",
+        "hiperfoco",
+        "perfil cognitivo",
+        "pcd",
+        "tea",
+        "autismo"
+      ]
+    },
+    {
+      "id": "contact",
+      "orbit": "contato",
+      "facet": "default",
+      "phrases": [
+        "contato",
+        "telefone",
+        "whatsapp",
+        "email",
+        "linkedin",
+        "github"
+      ]
+    },
+    {
+      "id": "curiosidades",
+      "orbit": "curiosidades",
+      "facet": "default",
+      "phrases": [
+        "curiosidades",
+        "bastidores",
+        "segredos",
+        "historias dos jogos"
+      ]
+    }
+  ]
+}

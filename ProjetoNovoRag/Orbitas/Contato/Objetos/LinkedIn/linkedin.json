@@ -1,0 +1,248 @@
+{
+  "_meta": {
+    "padrao": "Orbitas · Objeto Semântico",
+    "versao_padrao": "2.1",
+    "versao_arquivo": "2.2-piloto",
+    "tipo": "ficha-objeto",
+    "descricao": "Ficha semântica do objeto 'linkedin'. NÃO contém texto de resposta — só identidade, atributos, donos, sensores, mapa de intenções e CAPACIDADE INTERROGATIVA. Textos moram em caminho_resposta.",
+    "convencoes": {
+      "posse": "Modelo 'cascata'. Resolve pelo campo 'dono' até objeto com 'hierarquia'. 'pertence_ao_marcos' nos atributos é DISPLAY-ONLY.",
+      "case": "Matching case-insensitive. Aliases em minúsculas.",
+      "prioridade": "Escala 0-10. Maior vence. Fallback geral = 0, fallback interrogativo = 1.",
+      "modo": "'all' | 'any' | 'any_of_sets' | 'always' | 'manual'. 'manual' = nao participa de casarIntencao; e invocado explicitamente pelo motor (ex: acao_fallback_interrogativo).",
+      "interrogativos": "Bloco 'interrogativos' declara, POR SUBTIPO do RulesWords/Interrogativos.json, se este objeto sabe responder (sabe_responder: true/false) e qual atributo usar. Se false → motor cai em acao_fallback_interrogativo. Se true → motor usa o atributo apontado. É declaração de CAPACIDADE, complementar às intenções (que são regras de DISPARO).",
+      "requer_sensor": "Intenção só executa se o sensor for true.",
+      "depende": "'on_depende_fail': 'auto_run' | 'suggest' | 'bypass' | 'error'.",
+      "estado": "Schema no objeto; valores em estado_local por sessão.",
+      "fuzzy": "Typo é responsabilidade do Fuzzy Operário. Nunca hardcodar typo em aliases.",
+      "on_missing": "Arquivo ausente: 'skip' | 'placeholder' | 'error'."
+    },
+    "arquivos_relacionados": [
+      "RulesWords/Interrogativos.json",
+      "RulesWords/Verbos.json",
+      "Global/Bibliotecas/Link.json"
+    ]
+  },
+  "linkedin": {
+    "id": "linkedin",
+    "aliases": ["linkedin", "linked in", "perfil profissional", "rede profissional"],
+    "tamanho": 8,
+    "genero": "m",
+    "modelo_posse": "cascata",
+    "estado_schema": {
+      "contado_historia": false,
+      "explicado_historia": false
+    },
+    "estado_reset_on": "session",
+    "estado_local": "Sessions/{user_id}/linkedin.json",
+    "hierarquia": {
+      "pertence_ao_marcos": true,
+      "pertence_ao_contato": true
+    },
+    "sensores": {
+      "acesso_user": true,
+      "tem_historia": true,
+      "tem_explicacao_de_historia": true,
+      "tem_definicao": true,
+      "tem_dinamica": true,
+      "tem_execucao": true,
+      "tem_quantidade": true
+    },
+    "interrogativos": {
+      "interrogativo_definicao": {
+        "sabe_responder": true,
+        "atributo": "definicao",
+        "prioridade": 10
+      },
+      "interrogativo_explicacao": {
+        "sabe_responder": true,
+        "atributo": "explicacao_da_historia",
+        "prioridade": 10,
+        "requer_estado": "contado_historia",
+        "on_estado_fail": "suggest"
+      },
+      "interrogativo_historia": {
+        "sabe_responder": true,
+        "atributo": "historia",
+        "prioridade": 9
+      },
+      "interrogativo_local": {
+        "sabe_responder": true,
+        "atributo": "link",
+        "prioridade": 8
+      },
+      "interrogativo_dinamica": {
+        "sabe_responder": true,
+        "atributo": "dinamica",
+        "prioridade": 8
+      },
+      "interrogativo_execucao": {
+        "sabe_responder": true,
+        "atributo": "execucao",
+        "prioridade": 7
+      },
+      "interrogativo_pessoa": {
+        "sabe_responder": false,
+        "motivo": "LinkedIn nao tem atributo 'de quem e' separado. O dono (Marcos) e respondivel via cascata. 'quem fez' cai em interrogativo_execucao (atributo execucao)."
+      },
+      "interrogativo_quantidade": {
+        "sabe_responder": true,
+        "atributo": "quantidade",
+        "prioridade": 6
+      }
+    },
+    "atributos": {
+      "link": {
+        "dono": "linkedin",
+        "pertence_ao_marcos": false,
+        "tipo": "entregavel",
+        "buscar_em": "Global/Bibliotecas/Link.json",
+        "caminho_resposta": "Orbitas/Contato/Objetos/LinkedIn/Link.json",
+        "on_missing": "error"
+      },
+      "historia": {
+        "dono": "linkedin",
+        "pertence_ao_marcos": false,
+        "tipo": "explicavel",
+        "buscar_em": null,
+        "caminho_resposta": "Orbitas/Contato/Objetos/LinkedIn/Historia.json",
+        "on_missing": "placeholder"
+      },
+      "explicacao_da_historia": {
+        "dono": "linkedin",
+        "pertence_ao_marcos": false,
+        "tipo": "explicavel",
+        "buscar_em": null,
+        "caminho_resposta": "Orbitas/Contato/Objetos/LinkedIn/Explicacao.json",
+        "on_missing": "placeholder"
+      },
+      "definicao": {
+        "dono": "linkedin",
+        "pertence_ao_marcos": null,
+        "tipo": "explicavel",
+        "buscar_em": null,
+        "caminho_resposta": "Orbitas/Contato/Objetos/LinkedIn/Definition.json",
+        "on_missing": "placeholder"
+      },
+      "dinamica": {
+        "dono": "linkedin",
+        "pertence_ao_marcos": true,
+        "tipo": "explicavel",
+        "buscar_em": null,
+        "caminho_resposta": "Orbitas/Contato/Objetos/LinkedIn/Dinamica.json",
+        "on_missing": "placeholder"
+      },
+      "execucao": {
+        "dono": "linkedin",
+        "pertence_ao_marcos": false,
+        "tipo": "explicavel",
+        "buscar_em": null,
+        "caminho_resposta": "Orbitas/Contato/Objetos/LinkedIn/Execucao.json",
+        "on_missing": "placeholder"
+      },
+      "quantidade": {
+        "dono": "linkedin",
+        "pertence_ao_marcos": true,
+        "tipo": "explicavel",
+        "buscar_em": null,
+        "caminho_resposta": "Orbitas/Contato/Objetos/LinkedIn/Quantidade.json",
+        "on_missing": "placeholder"
+      }
+    },
+    "intencoes": {
+      "acao_entrega_link": {
+        "descricao": "Entrega do link. Regra: verbo_entrega OU interrogativo_local OU verbo_desejo + artigo OU verbo_saber + artigo.",
+        "modo": "any_of_sets",
+        "prioridade": 10,
+        "acionado_por": { "sets": [ { "modo": "all", "sinais": ["verbo_entrega"] }, { "modo": "all", "sinais": ["interrogativo_local"] }, { "modo": "all", "sinais": ["verbo_desejo", "artigo_definido"] }, { "modo": "all", "sinais": ["verbo_saber", "artigo_definido"] } ] },
+        "modificadores_opcionais": [],
+        "boost_com_modificador": 0,
+        "requer_sensor": "acesso_user",
+        "atributo_alvo": "link",
+        "depende_de": null,
+        "on_depende_fail": null
+      },
+      "acao_historia_com_link": {
+        "descricao": "Caso especial: usuario quer SABER SOBRE o LinkedIn (posse indireta, 'do linkedin'). Entrega historia E anexa link no fim.",
+        "modo": "any_of_sets",
+        "prioridade": 9,
+        "acionado_por": { "sets": [ { "modo": "all", "sinais": ["verbo_desejo", "verbo_saber", "conector_posse"] }, { "modo": "all", "sinais": ["verbo_saber", "conector_posse"] } ] },
+        "modificadores_opcionais": [],
+        "boost_com_modificador": 0,
+        "requer_sensor": "tem_historia",
+        "atributo_alvo": "historia",
+        "complemento_atributo": "link",
+        "depende_de": null,
+        "on_depende_fail": null
+      },
+      "acao_contar_historia": {
+        "descricao": "Historia do LinkedIn. (verbo_explicacao + conector_posse) OU interrogativo_historia OU verbo_comunicacao.",
+        "modo": "any_of_sets",
+        "prioridade": 8,
+        "acionado_por": {
+          "sets": [
+            { "modo": "all", "sinais": ["verbo_explicacao", "conector_posse"] },
+            { "modo": "all", "sinais": ["interrogativo_historia"] },
+            { "modo": "all", "sinais": ["verbo_comunicacao"] }
+          ]
+        },
+        "modificadores_opcionais": ["artigo_definido"],
+        "boost_com_modificador": 1,
+        "requer_sensor": "tem_historia",
+        "atributo_alvo": "historia",
+        "depende_de": null,
+        "on_depende_fail": null
+      },
+      "acao_explicar_historia": {
+        "descricao": "Aprofundar/entender a historia.",
+        "modo": "any",
+        "prioridade": 5,
+        "acionado_por": ["verbo_explicacao", "interrogativo_explicacao"],
+        "modificadores_opcionais": ["artigo_definido"],
+        "boost_com_modificador": 1,
+        "requer_sensor": "tem_explicacao_de_historia",
+        "atributo_alvo": "explicacao_da_historia",
+        "depende_de": "acao_contar_historia",
+        "on_depende_fail": "suggest"
+      },
+      "acao_definir_objeto": {
+        "descricao": "O que e o LinkedIn.",
+        "modo": "any",
+        "prioridade": 3,
+        "acionado_por": ["interrogativo_definicao"],
+        "modificadores_opcionais": ["artigo_definido", "verbo_explicacao"],
+        "boost_com_modificador": 1,
+        "requer_sensor": "tem_definicao",
+        "atributo_alvo": "definicao",
+        "depende_de": null,
+        "on_depende_fail": null
+      },
+      "acao_fallback_interrogativo": {
+        "descricao": "Interrogativo reconhecido mas que o LinkedIn NAO sabe responder (sabe_responder: false no bloco interrogativos). Invocado pelo motor via resolverInterrogativo, nao por casarIntencao.",
+        "modo": "manual",
+        "prioridade": 1,
+        "acionado_por": [],
+        "modificadores_opcionais": [],
+        "boost_com_modificador": 0,
+        "requer_sensor": null,
+        "atributo_alvo": null,
+        "depende_de": null,
+        "on_depende_fail": null,
+        "resposta_inline": "Sobre o LinkedIn eu consigo te dar o link, contar a historia, dizer o que e, pra que serve, quem criou ou falar do estado atual. Qual desses te serve?"
+      },
+      "acao_fallback": {
+        "descricao": "Fallback geral. Nenhuma intencao casou E nao e interrogativo reconhecido.",
+        "modo": "always",
+        "prioridade": 0,
+        "acionado_por": [],
+        "modificadores_opcionais": [],
+        "boost_com_modificador": 0,
+        "requer_sensor": null,
+        "atributo_alvo": null,
+        "depende_de": null,
+        "on_depende_fail": null,
+        "resposta_inline": "Nao entendi. Voce quer o link, a historia, a definicao, pra que serve, quem criou ou o estado atual do LinkedIn?"
+      }
+    }
+  }
+}

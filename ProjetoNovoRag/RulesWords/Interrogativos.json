@@ -1,0 +1,106 @@
+{
+  "_meta": {
+    "padrao": "Orbitas · Léxico Semântico",
+    "versao_padrao": "1.0",
+    "versao_arquivo": "1.0-piloto",
+    "tipo": "lexico-semantico",
+    "categoria": "interrogativos",
+    "descricao": "Léxico de interrogativos do RAG semântico. Quebra a classe genérica 'pergunta' em SUBTIPOS semânticos que o motor casa contra as intenções dos objetos. Em PT-BR, 'interrogativo' sozinho é grosseiro: 'o que é' e 'por que' caem no mesmo balde e geram resposta errada.",
+    "fonte_conceitual": "ARQUITETURA_RAG.md (seção 2, 'Regra da Dúvida'). Evolução: a Camada 2 do documento descreve um Global/Gramatica.json monolítico; na prática, RulesWords/ materializa o mesmo conceito com granularidade POR CATEGORIA. Ver README_RulesWords.md.",
+    "convencoes_gerais": "Ver README_RulesWords.md. Resumo: (1) todo arquivo começa com _meta; (2) sinais são substantivos no singular, sem gênero na chave; (3) gênero vira dado separado ou sufixo explícito só quando o motor precisar; (4) matching é case-insensitive; (5) prioridade 0-10, maior vence; (6) empate: ordem de declaração vence.",
+    "como_usar": "Nas intenções dos objetos: 'acionado_por': ['interrogativo_definicao'], 'acionado_por': ['interrogativo_historia'], etc. O genérico 'interrogativo' NÃO existe — cada intenção referencia o subtipo que entende.",
+    "arquivos_relacionados": [
+      "RulesWords/Verbos.json",
+      "RulesWords/Conectores.json",
+      "RulesWords/Artigos.json",
+      "RulesWords/Somadores.json",
+      "RulesWords/Pronomes.json",
+      "Orbitas/Contato/Objetos/LinkedIn/linkedin.json"
+    ]
+  },
+  "interrogativos": {
+    "interrogativo_definicao": {
+      "descricao": "Pergunta sobre identidade, significado ou natureza ('o que é X').",
+      "marcadores": ["o que é", "o que e", "o que significa", "o que quer dizer", "qual é", "quais são", "me define", "me explica o que é", "me explica o que significa"],
+      "exemplos": ["O que é LinkedIn?", "Me explica o que é o LinkedIn", "Qual é a desse LinkedIn?"],
+      "prioridade": 10,
+      "conflita_com": ["interrogativo_explicacao"],
+      "desempate": "Se a frase tem 'por que', vira interrogativo_explicacao.",
+      "requer_objeto": true,
+      "requer_sensor_do_objeto": "tem_definicao"
+    },
+    "interrogativo_explicacao": {
+      "descricao": "Pergunta sobre motivo, razão, 'como assim'.",
+      "marcadores": ["por que", "por quê", "porque", "por que motivo", "por que razão", "como assim", "me explica por que", "qual a razão", "por qual motivo"],
+      "exemplos": ["Por que você fez isso no LinkedIn?", "Como assim LinkedIn do Marcos?", "Por que criou a história?"],
+      "prioridade": 10,
+      "conflita_com": ["interrogativo_definicao"],
+      "desempate": "'por que' vence sobre 'o que é'.",
+      "requer_objeto": true,
+      "requer_sensor_do_objeto": "tem_explicacao_de_historia"
+    },
+    "interrogativo_historia": {
+      "descricao": "Pergunta sobre trajetória, tempo ou sequência de eventos.",
+      "marcadores": ["como foi", "como começou", "quando", "quando começou", "me conta", "me conta a história", "qual a história", "qual a trajetória", "que trajetória", "como surgiu"],
+      "exemplos": ["Como foi o LinkedIn do Marcos?", "Me conta a história do LinkedIn", "Quando começou o LinkedIn?"],
+      "prioridade": 9,
+      "conflita_com": [],
+      "desempate": "Se a frase também tem 'por que', vira interrogativo_explicacao (prioridade 10).",
+      "requer_objeto": true,
+      "requer_sensor_do_objeto": "tem_historia",
+      "nota": "Interrogativo_historia SOZINHO já basta para disparar acao_contar_historia. Ver LinkedIn JSON, intenção acao_contar_historia com modo any_of_sets."
+    },
+    "interrogativo_local": {
+      "descricao": "Pergunta sobre local, URL ou 'onde encontrar'.",
+      "marcadores": ["onde", "aonde", "em que lugar", "que link", "qual o link"],
+      "exemplos": ["Onde tá o LinkedIn?", "Qual o link do LinkedIn?", "Onde fica o LinkedIn do Marcos?"],
+      "prioridade": 8,
+      "conflita_com": [],
+      "desempate": "Se acoplado a verbo_entrega na frase, o motor prioriza acao_entrega_link (prioridade 10) sobre interpretação puramente interrogativa.",
+      "requer_objeto": true
+    },
+    "interrogativo_dinamica": {
+      "descricao": "Pergunta sobre propósito ou uso ('pra que serve X').",
+      "marcadores": ["pra que serve", "para que serve", "serve para que", "serve pra que", "serve pra quê", "pra que", "pra quê", "serve pra", "usado pra", "utilizado pra", "pra que usa", "qual a utilidade", "qual o proposito"],
+      "exemplos": ["Pra que serve o LinkedIn?", "Pra que usa LinkedIn?", "Qual a utilidade do LinkedIn?"],
+      "prioridade": 8,
+      "conflita_com": [],
+      "requer_objeto": true,
+      "requer_sensor_do_objeto": "tem_dinamica"
+    },
+    "interrogativo_execucao": {
+      "descricao": "Pergunta sobre quem fez, como foi feito ou como roda.",
+      "marcadores": ["como roda", "como funciona", "quem fez", "quem criou", "quem construiu", "como foi feito", "como montou", "como construiu"],
+      "exemplos": ["Como funciona o LinkedIn?", "Quem fez o LinkedIn?", "Como foi feito?"],
+      "prioridade": 7,
+      "conflita_com": ["interrogativo_historia"],
+      "desempate": "Se a frase tem 'como foi' ou 'comecou', vira historia (prio 9). Sem esses, fica execucao.",
+      "requer_objeto": true,
+      "requer_sensor_do_objeto": "tem_execucao"
+    },
+    "interrogativo_pessoa": {
+      "descricao": "Pergunta sobre pessoa, sujeito ou dono.",
+      "marcadores": ["quem", "com quem", "de quem"],
+      "exemplos": ["Quem fez o LinkedIn?", "De quem é o LinkedIn?"],
+      "prioridade": 7,
+      "conflita_com": [],
+      "desempate": "Ambíguo. 'quem fez' tende a história (prioridade 9 vence); 'de quem é' tende a posse — o Fuzzy Chefe resolve pelo verbo.",
+      "requer_objeto": true
+    },
+    "interrogativo_quantidade": {
+      "descricao": "Pergunta sobre quantidade ou medida.",
+      "marcadores": ["quanto", "quantos", "quantas", "que horas"],
+      "exemplos": ["Quantos projetos tem no LinkedIn?"],
+      "prioridade": 6,
+      "conflita_com": [],
+      "requer_objeto": true
+    }
+  },
+  "regras_compostas": {
+    "multi_marcador": "Se a frase tem mais de um interrogativo (ex: 'por que e como foi'), vence o de MAIOR prioridade. Empate: ordem de declaração neste JSON vence.",
+    "com_verbo": "Interrogativo + verbo_explicacao reforçam a intenção (boost documentado em 'modificadores_opcionais' das intenções do objeto).",
+    "sem_verbo": "Interrogativo sozinho só dispara intenção se a intenção do objeto aceitar 'interrogativo_*' puro em 'acionado_por'.",
+    "interrogativo_composto": "'O que é e como funciona' casa interrogativo_definicao (10) e interrogativo_historia (9). Vence definição. Compostos mais complexos exigem intenção dedicada no objeto — não aqui no léxico.",
+    "negacao": "v1 NÃO trata negação ('não me conta a história'). Fora do escopo — Fuzzy Chefe pode resolver em v2 com um marcador 'negacao' que inverte a intenção."
+  }
+}

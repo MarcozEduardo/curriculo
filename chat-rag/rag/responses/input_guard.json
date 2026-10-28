@@ -1,0 +1,29 @@
+{
+  "category": "input_guard",
+  "descricao": "Respostas do filtro de entrada. Nenhuma delas executa, repete ou interpreta o conteúdo bloqueado.",
+  "repetition": [
+    "Essa sequência de letras repetidas não forma uma pergunta. Pode escrever de novo de um jeito simples? Eu entendo gíria e erro de digitação sem problema.",
+    "Risada eu aceito, mas repetição longa de caracteres eu ignoro para não bagunçar a conversa. Me diz o que você quer saber sobre o Marcos.",
+    "Não consegui ler isso como pergunta. Se quiser testar o motor, pergunte algo específico sobre projetos, experiência ou habilidades."
+  ],
+  "numbers": [
+    "Essa sequência de números não me diz nada sobre o currículo. Se for um telefone ou um código, me explique o contexto em uma frase.",
+    "Números soltos em sequência eu não processo. Posso ajudar com projetos, experiência, formação ou condições de contratação."
+  ],
+  "code": [
+    "Não executo nem analiso código colado aqui. Sou um assistente de currículo, então pergunte sobre os projetos, a experiência ou as habilidades do Marcos.",
+    "Esse conteúdo parece código ou comando, e isso fica fora do que eu faço. Se a dúvida for sobre a forma como o Marcos programa, posso explicar o método dele.",
+    "Código colado não entra na conversa. Para avaliar o trabalho técnico dele, vale olhar os projetos publicados ou pedir uma demonstração direta."
+  ],
+  "injection": [
+    "Não altero meu funcionamento por instruções enviadas no chat. Sigo respondendo sobre o currículo do Marcos, dentro do que está na base.",
+    "Minhas regras não mudam por mensagem. Posso continuar ajudando com projetos, experiência, formação ou contato."
+  ],
+  "too_long": [
+    "A mensagem ficou longa demais para eu processar com segurança. Pode resumir em uma ou duas frases?",
+    "Prefiro perguntas curtas e diretas. Me diga em poucas palavras o que você quer saber."
+  ],
+  "garbage": [
+    "Não consegui identificar uma pergunta nessa mensagem. Pode reformular?"
+  ]
+}

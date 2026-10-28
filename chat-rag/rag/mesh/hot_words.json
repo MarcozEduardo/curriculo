@@ -1,0 +1,278 @@
+{
+  "descricao": "Palavras quentes: mensagem curta com uma dessas palavras vai direto para o nó de aprofundamento correspondente. Entradas com 'with' vêm primeiro.",
+  "filler": [
+    "o",
+    "que",
+    "e",
+    "quem",
+    "fala",
+    "falar",
+    "do",
+    "da",
+    "de",
+    "me",
+    "conta",
+    "sobre",
+    "explica",
+    "qual",
+    "quais",
+    "ele",
+    "sera",
+    "faz",
+    "seria",
+    "significa",
+    "quer",
+    "dizer",
+    "um",
+    "uma",
+    "o",
+    "a",
+    "os",
+    "as",
+    "isso",
+    "eh",
+    "em",
+    "no",
+    "na",
+    "pro",
+    "pra",
+    "para",
+    "como",
+    "foi",
+    "ai",
+    "kk",
+    "kkk",
+    "haha",
+    "ne",
+    "hein",
+    "mesmo",
+    "tipo",
+    "la",
+    "ta",
+    "alguma",
+    "alguem",
+    "entao"
+  ],
+  "hot": [
+    {
+      "id": "socram_fate",
+      "words": [
+        "socram"
+      ],
+      "with": [
+        "foge",
+        "fuge",
+        "fugiu",
+        "fuga",
+        "solto",
+        "soltou",
+        "escapou",
+        "escapa",
+        "vivo",
+        "vive",
+        "morreu",
+        "morre",
+        "derrotado",
+        "derrota",
+        "derrotou",
+        "vence",
+        "venceu",
+        "preso",
+        "volta",
+        "voltou",
+        "acabou"
+      ],
+      "node": "cu02"
+    },
+    {
+      "id": "socram",
+      "words": [
+        "socram"
+      ],
+      "node": "cu01"
+    },
+    {
+      "id": "exercito",
+      "words": [
+        "exercito",
+        "remanescentes",
+        "vingar",
+        "vinganca",
+        "mito"
+      ],
+      "node": "cu03",
+      "extra": [
+        "socram",
+        "dele",
+        "do",
+        "de"
+      ]
+    },
+    {
+      "id": "saga",
+      "words": [
+        "trilogia",
+        "saga"
+      ],
+      "node": "cu04"
+    },
+    {
+      "id": "lar",
+      "words": [
+        "lar"
+      ],
+      "node": "pr05"
+    },
+    {
+      "id": "nexus",
+      "words": [
+        "nexus"
+      ],
+      "node": "pr04"
+    },
+    {
+      "id": "franzinha",
+      "words": [
+        "franzinha"
+      ],
+      "node": "pr06"
+    },
+    {
+      "id": "sapo",
+      "words": [
+        "sapo"
+      ],
+      "node": "pr54"
+    },
+    {
+      "id": "metralhadora",
+      "words": [
+        "metralhadora",
+        "ansiedade"
+      ],
+      "node": "pr54"
+    },
+    {
+      "id": "worklogs",
+      "words": [
+        "worklogs",
+        "worklog"
+      ],
+      "node": "cu42"
+    },
+    {
+      "id": "hiperfoco",
+      "words": [
+        "hiperfoco"
+      ],
+      "node": "nd03"
+    },
+    {
+      "id": "cnc",
+      "words": [
+        "cnc"
+      ],
+      "node": "ex02"
+    },
+    {
+      "id": "fabricart",
+      "words": [
+        "fabricart"
+      ],
+      "node": "ex03"
+    },
+    {
+      "id": "copiloto",
+      "words": [
+        "copiloto",
+        "copilot"
+      ],
+      "node": "pr09"
+    },
+    {
+      "id": "etimologia",
+      "words": [
+        "etimologia",
+        "morfologia",
+        "timologia",
+        "triangulacao"
+      ],
+      "node": "sk13"
+    },
+    {
+      "id": "ingles",
+      "words": [
+        "ingles",
+        "english"
+      ],
+      "node": "sk13"
+    },
+    {
+      "id": "videocassete",
+      "words": [
+        "videocassete",
+        "videocassette",
+        "vhs"
+      ],
+      "node": "hp11"
+    },
+    {
+      "id": "mythology",
+      "words": [
+        "mythology",
+        "mitologia"
+      ],
+      "node": "cu25"
+    },
+    {
+      "id": "pentium",
+      "words": [
+        "pentium"
+      ],
+      "node": "hp03"
+    },
+    {
+      "id": "bobby",
+      "words": [
+        "bobby"
+      ],
+      "node": "mi14"
+    },
+    {
+      "id": "reset",
+      "words": [
+        "reset",
+        "resetar",
+        "reiniciar"
+      ],
+      "node": "cu14"
+    },
+    {
+      "id": "easter",
+      "words": [
+        "easter",
+        "segredo",
+        "segredos",
+        "surpresa"
+      ],
+      "node": "cu07"
+    },
+    {
+      "id": "orbita",
+      "words": [
+        "orbita",
+        "orbitas"
+      ],
+      "node": "mi10"
+    },
+    {
+      "id": "curiosidade",
+      "words": [
+        "curiosidade",
+        "curiosidades",
+        "bastidores"
+      ],
+      "node": "cu11"
+    }
+  ]
+}

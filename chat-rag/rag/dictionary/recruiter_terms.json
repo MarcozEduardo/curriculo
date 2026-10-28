@@ -1,0 +1,9 @@
+{
+  "modelo_trabalho": ["home office", "remoto", "hibrido", "presencial", "brasilia", "df", "horario", "fuso", "realocacao", "mudanca"],
+  "disponibilidade": ["quando pode comecar", "inicio imediato", "disponivel", "contratacao", "aviso previo", "start"],
+  "senioridade": ["junior", "pleno", "senior", "nivel", "experiencia", "tempo de ti", "estagiario", "trainee"],
+  "contratacao": ["clt", "pj", "estagio", "prestador", "vaga pcd", "temporario", "freelance", "cooperado"],
+  "beneficios": ["vale", "plano de saude", "vr", "va", "auxilio", "pacote", "beneficio"],
+  "processo": ["entrevista", "teste tecnico", "case", "dinamica", "triagem", "feedback", "proposta", "oferta"],
+  "cargos": ["suporte", "analista", "qa", "tester", "desenvolvedor", "dev", "programador", "infra", "helpdesk", "tecnico de ti"]
+}

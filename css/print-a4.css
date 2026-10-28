@@ -1,0 +1,113 @@
+/* ================= REGRAS PDF A4 PROFISSIONAL ================= */
+
+/* Container A4 real: 210mm x 297mm */
+.capture-mode {
+  padding: 0 !important;
+  background: #fff !important;
+  margin: 0 !important;
+}
+
+.capture-mode body,
+body.capture-mode {
+  background: #fff !important;
+  background-image: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.capture-mode .phone-frame {
+  width: 210mm !important;
+  min-height: 297mm !important;
+  max-width: 210mm !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  overflow: visible !important;
+}
+
+.capture-mode .app-header {
+  border-radius: 0 !important;
+  padding: 12mm 12mm 14mm 12mm !important;
+}
+
+.capture-mode .sheet {
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  padding: 8mm 12mm 12mm 12mm !important;
+  background: #fff !important;
+}
+
+.capture-mode .card {
+  background: #fff !important;
+  border: 1px solid #E5DDD3 !important;
+  box-shadow: none !important;
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.capture-mode .project-card,
+.capture-mode .pcd-card,
+.capture-mode .author-note-card {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+.capture-mode .exp-item {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.capture-mode .photo-circle {
+  box-shadow: none !important;
+}
+
+/* Oculta tudo que é interativo/tela */
+.capture-mode .floating-actions,
+.capture-mode .mobile-tabs,
+.capture-mode .back-top,
+.capture-mode .sticky-mini-header,
+.capture-mode .chat-modal,
+.capture-mode .toast-container,
+.capture-mode .link-confirm-modal,
+.capture-mode .header-top-row .icon-btn,
+.capture-mode .photo-add-btn,
+.capture-mode .focused-nav,
+.capture-mode .focused-nav-compact,
+.capture-mode .focus-overlay,
+.capture-mode .app-header-compact {
+  display: none !important;
+}
+
+/* Wallpaper NUNCA aparece no PDF */
+@media print {
+  body {
+    background: #fff !important;
+    background-image: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .phone-frame {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 210mm !important;
+    max-width: 210mm !important;
+    margin: 0 !important;
+  }
+  .floating-actions,
+  .mobile-tabs,
+  .back-top,
+  .sticky-mini-header,
+  .chat-modal,
+  .toast-container,
+  .link-confirm-modal {
+    display: none !important;
+  }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}

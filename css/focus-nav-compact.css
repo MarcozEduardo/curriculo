@@ -1,0 +1,84 @@
+/* ================= NAV FOCADA (HEADER COMPACTA) ================= */
+
+.focused-nav-compact {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  z-index: 199;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 16px;
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0px, rgba(255, 255, 255, 0.08) 2px, transparent 2px, transparent 14px),
+    linear-gradient(160deg, rgba(255, 140, 66, 0.88) 0%, rgba(255, 122, 46, 0.88) 45%, rgba(242, 100, 24, 0.88) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease, visibility 0.25s ease;
+  will-change: transform, opacity;
+}
+
+.focused-nav-compact.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.fn-label-compact {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 6px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.fn-label-compact i { font-size: 11px; }
+
+.fn-pill-compact {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(184, 66, 10, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.fn-pill-compact i { font-size: 10px; opacity: 1; }
+
+.fn-pill-compact:hover {
+  background: rgba(242, 100, 24, 1);
+  border-color: #fff;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.fn-pill-compact:active { transform: translateY(0); }
+
+@media (max-width: 700px) {
+  .focused-nav-compact { top: 56px; padding: 6px 10px; gap: 5px; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  .fn-label-compact { display: none; }
+  .focused-nav-compact::-webkit-scrollbar { display: none; }
+  .fn-pill-compact { font-size: 9.5px; padding: 4px 9px; flex-shrink: 0; }
+  .fn-pill-compact i { font-size: 9px; }
+}

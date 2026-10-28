@@ -1,0 +1,628 @@
+{
+  "orbit": "neurodivergencia",
+  "label": "Neurodivergência e altas habilidades",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós. Regra editorial: valorizar as altas habilidades; detalhes de laudo e lei só quando perguntados diretamente.",
+  "nodes": [
+    {
+      "id": "nd01",
+      "layer": 1,
+      "parent": null,
+      "label": "o que isso significa no caso dele",
+      "question": "O que significa neurodivergente com altas habilidades no caso dele?",
+      "variants": [
+        "ele é neurodivergente",
+        "o que é esse perfil"
+      ],
+      "answer": "Significa que a cabeça dele funciona de um jeito específico e que isso rende tecnicamente: hiperfoco direcionado, absorção rápida de conceito, visão em cascata de sistema, atenção cirúrgica a detalhe e depuração persistente. Ele trata isso como parte de como trabalha, não como nota de rodapé."
+    },
+    {
+      "id": "nd02",
+      "layer": 1,
+      "parent": null,
+      "label": "as altas habilidades",
+      "question": "Quais são as altas habilidades dele?",
+      "variants": [
+        "lista das altas habilidades",
+        "pontos fortes cognitivos"
+      ],
+      "answer": "Cinco: **hiperfoco direcionado**, **absorção rápida de conceito**, **visão em cascata de sistema**, **atenção cirúrgica a detalhe** e **debugging obsessivo**.",
+      "facet": "diferencial"
+    },
+    {
+      "id": "nd03",
+      "layer": 1,
+      "parent": null,
+      "label": "o hiperfoco",
+      "question": "O que é o hiperfoco dele?",
+      "variants": [
+        "como funciona o hiperfoco",
+        "hiperfoco direcionado"
+      ],
+      "answer": "Quando um problema interessa, ele entra em profundidade e não solta até entender por completo. Ele chama isso de motor: é o que sustenta sessões longas de diagnóstico e a persistência em bug difícil."
+    },
+    {
+      "id": "nd04",
+      "layer": 1,
+      "parent": null,
+      "label": "como aparece no trabalho",
+      "question": "Como isso aparece no trabalho dele?",
+      "variants": [
+        "efeito prático no dia a dia",
+        "neurodivergência no trabalho"
+      ],
+      "answer": "Em revisão, teste e leitura de log, pouca coisa escapa. Ele enxerga o sistema inteiro mentalmente antes de mexer em qualquer peça e procura a causa raiz em vez de tratar o sintoma."
+    },
+    {
+      "id": "nd05",
+      "layer": 1,
+      "parent": null,
+      "label": "o que favorece o trabalho dele",
+      "question": "Ele precisa de adaptações?",
+      "variants": [
+        "adaptações no trabalho",
+        "o que a empresa precisa providenciar"
+      ],
+      "answer": "Ele não listou adaptações formais. O que descreve como favorável é contexto técnico diário, demandas claras e oportunidade de praticar o assunto com frequência. Preferência por remoto ou híbrido.",
+      "facet": "adaptacoes"
+    },
+    {
+      "id": "nd06",
+      "layer": 1,
+      "parent": null,
+      "label": "o enquadramento em vagas afirmativas",
+      "question": "Ele atende a vagas afirmativas?",
+      "variants": [
+        "ele é pcd",
+        "tem laudo",
+        "vaga afirmativa"
+      ],
+      "answer": "Ele é neurodivergente com altas habilidades: hiperfoco, atenção cirúrgica a detalhe e depuração persistente. Para processos com vagas afirmativas, atende aos requisitos e possui laudo (TEA nível 1), em conformidade com a Lei Federal nº 12.764/2012, apresentado quando solicitado. Ele também concorre normalmente a vagas comuns e prefere ser avaliado pelas altas habilidades e pelos resultados.",
+      "facet": "vaga_afirmativa"
+    },
+    {
+      "id": "nd07",
+      "layer": 1,
+      "parent": null,
+      "label": "quando veio o diagnóstico",
+      "question": "Quando ele recebeu o diagnóstico?",
+      "variants": [
+        "diagnóstico tardio",
+        "descobriu adulto"
+      ],
+      "answer": "Na vida adulta. Até então, o modelo linear e teórico de aprendizado o travava sem que ele entendesse o motivo. Entender o próprio funcionamento foi o que destravou o método de estudo e de trabalho.",
+      "facet": "diagnostico"
+    },
+    {
+      "id": "nd08",
+      "layer": 1,
+      "parent": null,
+      "label": "como a memória dele funciona",
+      "question": "Como a memória dele funciona?",
+      "variants": [
+        "memória por reconhecimento",
+        "ele esquece coisas"
+      ],
+      "answer": "Mais por reconhecimento do que por invocação: lê código e entende o fluxo com profundidade; escrever do zero sem referência exige mais esforço. Conhecimento fora de uso fica menos acessível até um gatilho de contexto reativá-lo.",
+      "facet": "contexto_honesto"
+    },
+    {
+      "id": "nd09",
+      "layer": 1,
+      "parent": null,
+      "label": "trabalho sob pressão",
+      "question": "Ele trabalha bem sob pressão?",
+      "variants": [
+        "lida com prazo",
+        "pressão de prazo"
+      ],
+      "answer": "Sim. Nas palavras dele, trabalha bem sob pressão de prazo. Os exemplos vêm da indústria: máquina CNC parada em cima da hora e banco de dados caído em produção."
+    },
+    {
+      "id": "nd10",
+      "layer": 1,
+      "parent": null,
+      "label": "por que hiperfoco é motor",
+      "question": "Por que ele chama o hiperfoco de motor?",
+      "variants": [
+        "hiperfoco é doença",
+        "hiperfoco como vantagem"
+      ],
+      "answer": "Porque é o que o move: hiperfoco técnico não é doença, é motor. Canalizado, vira obsessão saudável por entregar do jeito certo."
+    },
+    {
+      "id": "nd11",
+      "layer": 1,
+      "parent": null,
+      "label": "o reflexo em QA",
+      "question": "Isso ajuda em QA?",
+      "variants": [
+        "neurodivergência e testes",
+        "perfil para qa"
+      ],
+      "answer": "Muito. Depurar, para ele, é prazer e não obrigação. Ele acha bug onde o olhar comum passa reto e testa até as bordas: caminho feliz, caminho errado, dado sujo, entrada inválida e navegadores diferentes."
+    },
+    {
+      "id": "nd12",
+      "layer": 1,
+      "parent": null,
+      "label": "como ele aprende",
+      "question": "Como ele lida com aprendizado?",
+      "variants": [
+        "absorção de conceito",
+        "aprende rápido"
+      ],
+      "answer": "Absorve conhecimento direcionado com muita facilidade quando o assunto interessa e está em uso. Aprende fazendo e entende lendo; aula linear e teórica sem recompensa prática é o formato que não funciona para ele."
+    },
+    {
+      "id": "nd13",
+      "layer": 1,
+      "parent": null,
+      "label": "comunicação",
+      "question": "Ele é bom em comunicação?",
+      "variants": [
+        "ele se comunica bem",
+        "sabe explicar"
+      ],
+      "answer": "Sim, e de forma comprovada: foi instrutor de informática por anos, ensinando de criança a aposentado, e ganhou prática real de oratória técnica, traduzindo conceito complexo para quem nunca viu."
+    },
+    {
+      "id": "nd14",
+      "layer": 1,
+      "parent": null,
+      "label": "o que a empresa ganha",
+      "question": "O que a empresa ganha com esse perfil?",
+      "variants": [
+        "vantagem de contratar",
+        "valor do perfil neurodivergente"
+      ],
+      "answer": "Alguém que sustenta foco longo em problema complexo, percebe inconsistência que passa despercebida, documenta o que faz e não abandona bug difícil. Em análise, suporte e QA, isso é vantagem competitiva."
+    },
+    {
+      "id": "nd15",
+      "layer": 1,
+      "parent": null,
+      "label": "sozinho ou em equipe",
+      "question": "Ele prefere trabalhar sozinho ou em equipe?",
+      "variants": [
+        "trabalha em equipe",
+        "perfil solo"
+      ],
+      "answer": "Ele tem autonomia comprovada em anos de operação, mas o que busca agora é justamente uma equipe formal de TI: contexto diário para manter o conhecimento ativo e evoluir por dentro."
+    },
+    {
+      "id": "nd16",
+      "layer": 2,
+      "parent": "nd01",
+      "label": "rótulo ou perfil de trabalho",
+      "question": "Isso é um rótulo clínico ou um perfil de trabalho?",
+      "variants": [
+        "é diagnóstico ou característica",
+        "como ele enxerga o rótulo"
+      ],
+      "answer": "Para ele, é parte de como funciona tecnicamente. Ele prefere que o tema seja lido pelo que entrega: um perfil com altas habilidades, e não pela classificação."
+    },
+    {
+      "id": "nd17",
+      "layer": 2,
+      "parent": "nd02",
+      "label": "visão em cascata de sistema",
+      "question": "O que é visão em cascata de sistema?",
+      "variants": [
+        "o que significa visão sistêmica",
+        "enxergar o sistema inteiro"
+      ],
+      "answer": "É enxergar o sistema inteiro mentalmente antes de mexer em qualquer peça: como uma mudança se propaga pelo fluxo e qual efeito colateral pode aparecer.",
+      "facet": "diferencial"
+    },
+    {
+      "id": "nd18",
+      "layer": 2,
+      "parent": "nd03",
+      "label": "o custo do hiperfoco",
+      "question": "O hiperfoco atrapalha em algo?",
+      "variants": [
+        "lado negativo do hiperfoco",
+        "o hiperfoco tem custo"
+      ],
+      "answer": "O ponto que ele próprio descreve é a memória: o que fica fora de uso é arquivado. Por isso precisa orbitar o assunto diariamente. Dentro do contexto, absorve mais rápido que a média."
+    },
+    {
+      "id": "nd19",
+      "layer": 2,
+      "parent": "nd04",
+      "label": "um exemplo concreto",
+      "question": "Pode dar um exemplo concreto?",
+      "variants": [
+        "caso prático do perfil",
+        "exemplo de atenção a detalhe"
+      ],
+      "answer": "A recuperação do banco de dados na Fabricart: especialistas contratados não resolveram, e ele rastreou o fluxo, testou hipóteses e isolou variáveis até achar a causa raiz."
+    },
+    {
+      "id": "nd20",
+      "layer": 2,
+      "parent": "nd05",
+      "label": "o ambiente que favorece",
+      "question": "Que tipo de ambiente favorece o trabalho dele?",
+      "variants": [
+        "ambiente ideal",
+        "onde ele rende mais"
+      ],
+      "answer": "Um ambiente com contato técnico diário, expectativas claras e espaço para resolver problema de ponta a ponta. Remoto ou híbrido é a preferência declarada.",
+      "facet": "adaptacoes"
+    },
+    {
+      "id": "nd21",
+      "layer": 2,
+      "parent": "nd06",
+      "label": "a documentação",
+      "question": "Que documentação ele tem para vaga afirmativa?",
+      "variants": [
+        "qual é o laudo",
+        "documento para cota"
+      ],
+      "answer": "Laudo de TEA nível 1, em conformidade com a Lei Federal nº 12.764/2012, apresentado no processo seletivo quando necessário.",
+      "facet": "vaga_afirmativa"
+    },
+    {
+      "id": "nd22",
+      "layer": 2,
+      "parent": "nd07",
+      "label": "por que o diagnóstico tardio importa",
+      "question": "Por que o diagnóstico tardio importa na história dele?",
+      "variants": [
+        "o que o diagnóstico explicou",
+        "efeito de descobrir tarde"
+      ],
+      "answer": "Porque explicou anos de formações iniciadas e interrompidas: não era falta de vontade, era falta de encaixe. Com o entendimento, veio o método, e em 2024 o estudo deslanchou.",
+      "facet": "diagnostico"
+    },
+    {
+      "id": "nd23",
+      "layer": 2,
+      "parent": "nd08",
+      "label": "memória por reconhecimento",
+      "question": "O que é memória por reconhecimento?",
+      "variants": [
+        "explica reconhecimento versus invocação",
+        "ele lembra lendo"
+      ],
+      "answer": "Ele reconhece e entende com profundidade o que lê, mas invocar do zero, sem referência, custa mais. É por isso que leitura crítica e depuração são pontos fortes dele.",
+      "facet": "contexto_honesto"
+    },
+    {
+      "id": "nd24",
+      "layer": 2,
+      "parent": "nd09",
+      "label": "exemplo de pressão",
+      "question": "Qual exemplo de trabalho sob pressão?",
+      "variants": [
+        "situação de pressão real",
+        "prazo apertado na prática"
+      ],
+      "answer": "Máquina CNC parada em cima da hora na indústria, banco caído em produção e, na Prepara, jornadas de mais de 14 horas sustentando a operação da unidade."
+    },
+    {
+      "id": "nd25",
+      "layer": 2,
+      "parent": "nd10",
+      "label": "perfeccionismo canalizado",
+      "question": "Como ele canaliza o perfeccionismo?",
+      "variants": [
+        "perfeccionismo atrapalha",
+        "ele é perfeccionista"
+      ],
+      "answer": "Ele descreve o perfeccionismo como algo que, canalizado, vira obsessão saudável por entregar do jeito certo: testar, revisar e documentar antes de considerar pronto."
+    },
+    {
+      "id": "nd26",
+      "layer": 3,
+      "parent": "nd16",
+      "label": "falar abertamente sobre isso",
+      "question": "Ele fala abertamente sobre isso?",
+      "variants": [
+        "ele esconde a neurodivergência",
+        "transparência sobre o perfil"
+      ],
+      "answer": "Sim. Ele mesmo escreve sobre o assunto no currículo, explica como a cabeça dele funciona e pede que isso seja lido como motor, não como limitação."
+    },
+    {
+      "id": "nd27",
+      "layer": 3,
+      "parent": "nd17",
+      "label": "efeito em programar e depurar",
+      "question": "Como isso ajuda a programar e depurar?",
+      "variants": [
+        "visão sistêmica no código",
+        "depuração com visão de sistema"
+      ],
+      "answer": "Ele entende a arquitetura antes de escrever e enxerga o fluxo de dados inteiro. Na depuração, rastreia o fluxo, isola a variável e volta do zero se preciso, até a causa raiz.",
+      "facet": "diferencial"
+    },
+    {
+      "id": "nd28",
+      "layer": 3,
+      "parent": "nd18",
+      "label": "conhecimento fora de uso",
+      "question": "O que acontece quando ele fica tempo sem usar um conhecimento?",
+      "variants": [
+        "ele esquece o que não usa",
+        "arquivar memória"
+      ],
+      "answer": "Pode virar lapso, esquecimento, às vezes a sensação de nunca ter visto. Só que um gatilho de contexto faz tudo voltar de uma vez. Por isso ele busca vaga com contexto técnico diário."
+    },
+    {
+      "id": "nd29",
+      "layer": 3,
+      "parent": "nd19",
+      "label": "problemas que ninguém explica",
+      "question": "Ele resolve problemas que outros não conseguem explicar?",
+      "variants": [
+        "diagnóstico de problema obscuro",
+        "caso difícil de diagnóstico"
+      ],
+      "answer": "Esse é o forte dele em suporte: diagnóstico de problema que ninguém sabe explicar. Já recuperou banco em produção, resolveu CNC parada e montou rede do zero em ambiente desconhecido."
+    },
+    {
+      "id": "nd30",
+      "layer": 3,
+      "parent": "nd20",
+      "label": "remoto como ambiente",
+      "question": "Trabalho remoto favorece o perfil dele?",
+      "variants": [
+        "ele rende em home office",
+        "remoto é melhor para ele"
+      ],
+      "answer": "Sim, remoto ou híbrido é a preferência declarada dele, e ele tem infraestrutura completa para atuar a distância. Presencial no Distrito Federal também funciona.",
+      "facet": "adaptacoes"
+    },
+    {
+      "id": "nd31",
+      "layer": 3,
+      "parent": "nd21",
+      "label": "vaga afirmativa é obrigatória",
+      "question": "Ele precisa que a vaga seja afirmativa?",
+      "variants": [
+        "só concorre em cota",
+        "aceita vaga comum"
+      ],
+      "answer": "Não. Ele concorre normalmente a vagas comuns. O enquadramento afirmativo existe e está documentado, mas não é condição.",
+      "facet": "vaga_afirmativa"
+    },
+    {
+      "id": "nd32",
+      "layer": 3,
+      "parent": "nd22",
+      "label": "as tentativas de formação",
+      "question": "Quantas tentativas de formação não deram certo?",
+      "variants": [
+        "quantas faculdades ele começou",
+        "tentativas antes do diagnóstico"
+      ],
+      "answer": "Seis. Cada uma começou com força total e foi apagada pela estrutura engessada. Hoje a graduação em TI está em andamento, com formato que encaixa.",
+      "facet": "diagnostico"
+    },
+    {
+      "id": "nd33",
+      "layer": 3,
+      "parent": "nd23",
+      "label": "isso impede escrever código",
+      "question": "Isso impede ele de escrever código?",
+      "variants": [
+        "ele não consegue programar",
+        "limitação para codar"
+      ],
+      "answer": "Não. Com referência e com IA como copiloto ele produz, valida e entrega. E acredita que a prática diária dentro de uma equipe transforma leitura em escrita natural. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "contexto_honesto"
+    },
+    {
+      "id": "nd34",
+      "layer": 3,
+      "parent": "nd24",
+      "label": "ritmo intenso sustentado",
+      "question": "Ele sustentou ritmo intenso por muito tempo?",
+      "variants": [
+        "jornada longa",
+        "ele aguenta ritmo forte"
+      ],
+      "answer": "Sim. Na Prepara, relata jornadas de mais de 14 horas com entrega consistente. Na indústria, cerca de oito anos mantendo operação de máquina crítica."
+    },
+    {
+      "id": "nd35",
+      "layer": 3,
+      "parent": "nd25",
+      "label": "perfeccionismo e prazo",
+      "question": "O perfeccionismo vira lentidão?",
+      "variants": [
+        "ele demora por perfeccionismo",
+        "atrasa por detalhe"
+      ],
+      "answer": "Ele descreve o perfeccionismo como canalizado para entregar certo, junto com trabalho bom sob pressão de prazo. A base não relata atrasos por excesso de detalhe."
+    },
+    {
+      "id": "nd36",
+      "layer": 4,
+      "parent": "nd26",
+      "label": "como ele prefere que o tema seja tratado",
+      "question": "Como ele prefere que o tema seja tratado?",
+      "variants": [
+        "como falar disso com ele",
+        "abordagem sobre neurodivergência"
+      ],
+      "answer": "Pelo valor: neurodivergente com altas habilidades, forte em hiperfoco, análise e depuração. Detalhes de documentação ele trata quando o processo pede, sem que isso seja o primeiro assunto."
+    },
+    {
+      "id": "nd37",
+      "layer": 4,
+      "parent": "nd27",
+      "label": "bug que outros não veem",
+      "question": "Ele acha bug onde outros não veem?",
+      "variants": [
+        "percepção de erro",
+        "detalhe que passa reto"
+      ],
+      "answer": "É o que ele relata: acha bug onde o olho comum passa reto e nada escapa em revisão, teste ou leitura de log.",
+      "facet": "diferencial"
+    },
+    {
+      "id": "nd38",
+      "layer": 4,
+      "parent": "nd28",
+      "label": "o que reativa o conhecimento",
+      "question": "O que reativa um conhecimento arquivado?",
+      "variants": [
+        "gatilho de memória",
+        "como ele recupera o que sabia"
+      ],
+      "answer": "Um gatilho de contexto: voltar a ler, tocar no sistema ou ver o código. Por isso ele diz que precisa viver o assunto e estar dentro do contexto."
+    },
+    {
+      "id": "nd39",
+      "layer": 4,
+      "parent": "nd29",
+      "label": "um diagnóstico difícil",
+      "question": "Qual o exemplo mais difícil de diagnóstico?",
+      "variants": [
+        "caso mais complicado",
+        "o problema mais difícil"
+      ],
+      "answer": "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça."
+    },
+    {
+      "id": "nd40",
+      "layer": 4,
+      "parent": "nd30",
+      "label": "estrutura para remoto",
+      "question": "Ele tem estrutura para trabalhar remoto?",
+      "variants": [
+        "home office equipado",
+        "infraestrutura em casa"
+      ],
+      "answer": "Sim, infraestrutura completa para atuação a distância, segundo o currículo.",
+      "facet": "adaptacoes"
+    },
+    {
+      "id": "nd41",
+      "layer": 4,
+      "parent": "nd31",
+      "label": "mencionar na entrevista",
+      "question": "Ele menciona isso em entrevista?",
+      "variants": [
+        "ele conta na entrevista",
+        "é tratado no processo"
+      ],
+      "answer": "Sim, com transparência e no momento adequado do processo. Ele prefere que a conversa comece pelas habilidades e pelos resultados.",
+      "facet": "vaga_afirmativa"
+    },
+    {
+      "id": "nd42",
+      "layer": 4,
+      "parent": "nd32",
+      "label": "o que fez a tentativa atual dar certo",
+      "question": "O que mudou para a formação atual dar certo?",
+      "variants": [
+        "por que agora funciona",
+        "diferença da tentativa atual"
+      ],
+      "answer": "Três coisas: o diagnóstico, o formato EAD no ritmo próprio e o foco direcionado com aplicação prática. É a primeira vez que ele sente que o trilho existe.",
+      "facet": "diagnostico"
+    },
+    {
+      "id": "nd43",
+      "layer": 4,
+      "parent": "nd33",
+      "label": "a IA como apoio",
+      "question": "Como a IA ajuda nesse ponto?",
+      "variants": [
+        "ia e memória",
+        "copiloto e leitura"
+      ],
+      "answer": "A IA acelera a escrita, e ele entra com o que faz de melhor: ler o retorno, validar o comportamento, ajustar a lógica e garantir que funciona. Copiloto, não substituto. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "contexto_honesto"
+    },
+    {
+      "id": "nd44",
+      "layer": 4,
+      "parent": "nd34",
+      "label": "cumprimento de prazo",
+      "question": "Ele cumpre prazos?",
+      "variants": [
+        "entrega no prazo",
+        "confiável com prazo"
+      ],
+      "answer": "Ele afirma trabalhar bem sob pressão de prazo e traz histórico de operação industrial, onde atraso custa material e máquina. A base não registra ocorrências de atraso."
+    },
+    {
+      "id": "nd45",
+      "layer": 4,
+      "parent": "nd35",
+      "label": "revisão do próprio trabalho",
+      "question": "Ele revisa o próprio trabalho?",
+      "variants": [
+        "autorrevisão",
+        "ele testa o que faz"
+      ],
+      "answer": "Sim: revisa, testa e lê log antes de considerar pronto. Ele diz que nada escapa do olho em revisão, em teste e em leitura de log."
+    },
+    {
+      "id": "nd46",
+      "layer": 5,
+      "parent": "nd36",
+      "label": "valorizar em vez de rotular",
+      "question": "Por que valorizar em vez de rotular?",
+      "variants": [
+        "por que não chamar de deficiência",
+        "valor do perfil"
+      ],
+      "answer": "Porque o que importa para a vaga é o que o perfil entrega: foco, precisão, persistência e visão de sistema. O rótulo descreve uma condição; as altas habilidades descrevem o trabalho."
+    },
+    {
+      "id": "nd47",
+      "layer": 5,
+      "parent": "nd37",
+      "label": "aplicação em análise de sistemas",
+      "question": "Isso serve para análise de sistemas?",
+      "variants": [
+        "perfil para analista",
+        "neurodivergência e análise"
+      ],
+      "answer": "Sim. Visão em cascata, atenção a detalhe e busca de causa raiz são exatamente o que análise de sistemas, suporte N3 e QA exigem."
+    },
+    {
+      "id": "nd48",
+      "layer": 5,
+      "parent": "nd38",
+      "label": "manter o conhecimento ativo",
+      "question": "Como manter esse conhecimento ativo numa empresa?",
+      "variants": [
+        "como a empresa aproveita melhor",
+        "evitar que arquive"
+      ],
+      "answer": "Com contexto diário: envolvimento contínuo com os sistemas e os problemas do time. Dentro do contexto, ele absorve acima da média e continua crescendo."
+    },
+    {
+      "id": "nd49",
+      "layer": 5,
+      "parent": "nd42",
+      "label": "o método hoje",
+      "question": "O que ele faz hoje para manter o método?",
+      "variants": [
+        "rotina de estudo atual",
+        "como mantém o foco"
+      ],
+      "answer": "Estuda no ritmo próprio (graduação EAD e CS50), aplica tudo em projetos próprios com deploy público e mantém o hiperfoco direcionado para o que está construindo."
+    },
+    {
+      "id": "nd50",
+      "layer": 5,
+      "parent": "nd44",
+      "label": "prazo apertado em produção",
+      "question": "Ele já lidou com prazo apertado em produção?",
+      "variants": [
+        "entrega urgente real",
+        "prazo crítico"
+      ],
+      "answer": "Sim, em ambiente industrial: máquina CNC parada em cima da hora, com produção esperando, resolvida com ferramenta improvisada e diagnóstico rápido."
+    }
+  ]
+}

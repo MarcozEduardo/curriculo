@@ -1,0 +1,624 @@
+{
+  "orbit": "skills",
+  "label": "Habilidades e Stack",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós",
+  "nodes": [
+    {
+      "id": "sk01",
+      "layer": 1,
+      "parent": null,
+      "label": "as áreas de habilidade",
+      "question": "Quais são as áreas de habilidade dele?",
+      "variants": [
+        "como as habilidades estão organizadas",
+        "quais categorias de skill"
+      ],
+      "answer": "Seis áreas: **IA & Orquestração**, **Desenvolvimento & Web**, **Suporte & Infra**, **QA & Qualidade**, **Ferramentas & Deploy** e **Design & Documentação**, além das **altas habilidades** do perfil neurodivergente. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+    },
+    {
+      "id": "sk02",
+      "layer": 1,
+      "parent": null,
+      "label": "onde ele é mais forte",
+      "question": "Em que ele é mais forte?",
+      "variants": [
+        "qual o ponto mais forte tecnicamente",
+        "maior habilidade"
+      ],
+      "answer": "Em diagnóstico e depuração: encontrar a causa de problema que ninguém sabe explicar, enxergar o sistema inteiro antes de mexer e não soltar até resolver. É o que ele levou de dez anos de suporte e indústria para o software."
+    },
+    {
+      "id": "sk03",
+      "layer": 1,
+      "parent": null,
+      "label": "IA e orquestração",
+      "question": "O que ele sabe de IA e orquestração?",
+      "variants": [
+        "habilidades em inteligência artificial",
+        "ele entende de ia"
+      ],
+      "answer": "Prompt engineering, orquestração de agentes, arquitetura RAG, fuzzy matching, benchmarking de modelos e extensão via MCP. É a área em que ele mais se aprofundou nos últimos dois anos e que trata como diferencial real. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "ia"
+    },
+    {
+      "id": "sk04",
+      "layer": 1,
+      "parent": null,
+      "label": "linguagens e web",
+      "question": "Quais linguagens e tecnologias web ele usa?",
+      "variants": [
+        "stack de desenvolvimento",
+        "quais linguagens ele programa"
+      ],
+      "answer": "TypeScript, React, JavaScript (ES6+), Python, SQL, HTML5 e CSS3, REST/JSON, Canvas 2D, WebRTC e Firebase. Ele produz com IA como copiloto, mantendo a leitura crítica e a validação do código. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "dev"
+    },
+    {
+      "id": "sk05",
+      "layer": 1,
+      "parent": null,
+      "label": "suporte e infraestrutura",
+      "question": "Como é a experiência dele em suporte e infraestrutura?",
+      "variants": [
+        "ele faz suporte técnico",
+        "nível de suporte"
+      ],
+      "answer": "Mais de dez anos de prática: suporte N1, N2 e N3, diagnóstico de hardware e software, manutenção de rede, recuperação de sistemas, Windows, Linux e redes TCP/IP, em oficina, indústria e balcão.",
+      "facet": "suporte"
+    },
+    {
+      "id": "sk06",
+      "layer": 1,
+      "parent": null,
+      "label": "QA e qualidade",
+      "question": "Como ele trabalha com QA?",
+      "variants": [
+        "experiência em testes",
+        "ele faz qa"
+      ],
+      "answer": "Depuração profunda, testes de usabilidade, validação de regras, análise de fluxo e atenção a detalhe. Testa caminho feliz, caminho errado, dado sujo, entrada inválida e navegadores diferentes. Hoje a prática é manual.",
+      "facet": "qa"
+    },
+    {
+      "id": "sk07",
+      "layer": 1,
+      "parent": null,
+      "label": "ferramentas e deploy",
+      "question": "Quais ferramentas de deploy e versionamento ele usa?",
+      "variants": [
+        "ele usa git",
+        "como ele publica os projetos"
+      ],
+      "answer": "Git e GitHub, Vercel, Netlify, Firebase, Supabase, terminal/Bash, Node.js e administração do Windows (inclusive Regedit). Coloca projeto no ar e investiga log de erro em produção.",
+      "facet": "ferramentas"
+    },
+    {
+      "id": "sk08",
+      "layer": 1,
+      "parent": null,
+      "label": "design e documentação",
+      "question": "Ele tem habilidades de design e documentação?",
+      "variants": [
+        "ele sabe design",
+        "ele documenta bem"
+      ],
+      "answer": "CorelDRAW e modelagem vetorial, Photoshop, documentação técnica, README modular e pensamento de interface. Vem de trabalho prático com gráfica e corte a laser, não de formação em design.",
+      "facet": "design"
+    },
+    {
+      "id": "sk09",
+      "layer": 1,
+      "parent": null,
+      "label": "ferramentas de automação",
+      "question": "Quais ferramentas de automação e orquestração ele já testou?",
+      "variants": [
+        "ele conhece n8n",
+        "ferramentas de agentes que ele usou"
+      ],
+      "answer": "Já experimentou N8N, OpenClaw, OpenCode, ZCode e Claude Code. Está sondando Google Cloud e Azure. Conhece de nome e se dispõe a aprender LangChain, CrewAI, AutoGen, Cursor, GitHub Copilot, Make e Zapier.",
+      "facet": "orquestracao_ferramentas"
+    },
+    {
+      "id": "sk10",
+      "layer": 1,
+      "parent": null,
+      "label": "a IA no fluxo de trabalho",
+      "question": "Como a IA entra no fluxo de trabalho dele?",
+      "variants": [
+        "ele depende de ia",
+        "ia como copiloto"
+      ],
+      "answer": "Como copiloto. O Marcos define o objetivo, orienta a ferramenta, lê e interpreta o código, decide os ajustes, depura e valida. A IA acelera a implementação; o entendimento e a validação continuam com ele. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "ia_copiloto"
+    },
+    {
+      "id": "sk11",
+      "layer": 1,
+      "parent": null,
+      "label": "Python e SQL",
+      "question": "Ele conhece Python e SQL?",
+      "variants": [
+        "ele sabe sql",
+        "ele programa em python"
+      ],
+      "answer": "Ambos estão na lista de habilidades. Python ele estudou em 2015 e no CS50; SQL desde 2009 (Access e SQL) e na prática com sistemas de empresa. Ele é honesto: entende o princípio e a arquitetura, mas pode precisar de referência para sintaxe de memória."
+    },
+    {
+      "id": "sk12",
+      "layer": 1,
+      "parent": null,
+      "label": "Linux e Windows",
+      "question": "Ele trabalha com Linux e Windows?",
+      "variants": [
+        "ele conhece linux",
+        "sistemas operacionais"
+      ],
+      "answer": "Sim, os dois estão nas habilidades de suporte. A vivência mais longa é em Windows, incluindo scripts, PowerShell e Regedit em ambiente industrial; Linux entra no repertório de suporte e infraestrutura."
+    },
+    {
+      "id": "sk13",
+      "layer": 1,
+      "parent": null,
+      "label": "inglês",
+      "question": "Ele sabe inglês?",
+      "variants": [
+        "nível de inglês",
+        "ele fala inglês",
+        "qual o nível de inglês dele",
+        "qual o nível de inglês",
+        "nível de inglês dele",
+        "como está o inglês dele",
+        "ele é fluente em inglês",
+        "ele tem inglês intermediário"
+      ],
+      "answer": "Ele não fala inglês, mas sabe se virar. Estuda algumas coisas em inglês para ampliar vocabulário e gosta de morfologia e etimologia das palavras. Um dos motivos de querer entrar logo na área é conviver mais com o idioma: ele absorve entendimento com facilidade, mas o que não usa o cérebro acaba arquivando. Com imersão (séries com áudio em inglês, leitura) o conteúdo volta a fazer sentido em pouco tempo, por triangulação. Ele não se considera intermediário.",
+      "facet": "idiomas"
+    },
+    {
+      "id": "sk14",
+      "layer": 1,
+      "parent": null,
+      "label": "certificações",
+      "question": "Ele tem certificações?",
+      "variants": [
+        "certificados de mercado",
+        "ele é certificado"
+      ],
+      "answer": "Não informou certificações formais de mercado (ITIL, Microsoft, Cisco, AWS). A comprovação é a graduação em TI em andamento, o CS50 em estudo, os cursos técnicos desde 2007 e o portfólio público.",
+      "facet": "certificacoes"
+    },
+    {
+      "id": "sk15",
+      "layer": 1,
+      "parent": null,
+      "label": "as altas habilidades",
+      "question": "O que são as altas habilidades dele?",
+      "variants": [
+        "perfil cognitivo dele",
+        "o que é hiperfoco direcionado"
+      ],
+      "answer": "Hiperfoco direcionado, absorção rápida de conceito, visão em cascata de sistema, atenção cirúrgica a detalhe e debugging obsessivo. Vêm do perfil neurodivergente e explicam muito do que ele entrega bem.",
+      "facet": "altas_habilidades"
+    },
+    {
+      "id": "sk16",
+      "layer": 2,
+      "parent": "sk01",
+      "label": "o maior diferencial",
+      "question": "Qual área ele considera seu maior diferencial?",
+      "variants": [
+        "onde ele se destaca mais",
+        "diferencial técnico"
+      ],
+      "answer": "IA & Orquestração. Não é saber usar IA: é entender como ela funciona por dentro, quando erra e como fazê-la trabalhar em problema real, montando pipeline de resposta que não depende de API paga. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+    },
+    {
+      "id": "sk17",
+      "layer": 2,
+      "parent": "sk02",
+      "label": "um problema resolvido",
+      "question": "Pode dar um exemplo de problema que ele resolveu?",
+      "variants": [
+        "exemplo de diagnóstico difícil",
+        "caso real que ele resolveu"
+      ],
+      "answer": "Três casos: recuperou um banco de dados caído em produção após falha de fornecedor, resolveu máquina CNC parada em cima da hora e montou uma rede do zero em ambiente que ninguém tinha mexido."
+    },
+    {
+      "id": "sk18",
+      "layer": 2,
+      "parent": "sk03",
+      "label": "o que ele entende por RAG",
+      "question": "O que ele entende por RAG?",
+      "variants": [
+        "ele sabe o que é rag",
+        "rag para ele"
+      ],
+      "answer": "Busca semântica sobre uma base própria, com recuperação do trecho certo antes de responder. Este chat é um exemplo em JavaScript puro; o Núcleo Nexus e o App Franzinha usam a mesma ideia com contexto em órbitas."
+    },
+    {
+      "id": "sk19",
+      "layer": 2,
+      "parent": "sk04",
+      "label": "React nos projetos",
+      "question": "Ele usa React em projetos?",
+      "variants": [
+        "qual projeto usa react",
+        "experiência com react"
+      ],
+      "answer": "React está na lista de habilidades e o currículo cita React entre as tecnologias dos projetos independentes. A base não detalha qual projeto o usa especificamente; os jogos são em TypeScript e Canvas 2D."
+    },
+    {
+      "id": "sk20",
+      "layer": 2,
+      "parent": "sk05",
+      "label": "experiência com redes",
+      "question": "Ele tem experiência com redes?",
+      "variants": [
+        "ele entende de rede",
+        "redes tcp ip"
+      ],
+      "answer": "Sim: manutenção de rede, redes TCP/IP e controle de rede em ambiente industrial. Já montou rede do zero e ensinava manutenção de redes como instrutor."
+    },
+    {
+      "id": "sk21",
+      "layer": 2,
+      "parent": "sk06",
+      "label": "testes automatizados",
+      "question": "Ele usa ferramentas de teste automatizado?",
+      "variants": [
+        "ele conhece cypress",
+        "qa automatizado"
+      ],
+      "answer": "Ainda não domina Cypress, Playwright ou Selenium do jeito que o mercado padrão exige. Entende o princípio e aprende rápido. O lado QA dele vive hoje na depuração manual e no raciocínio de fluxo."
+    },
+    {
+      "id": "sk22",
+      "layer": 2,
+      "parent": "sk07",
+      "label": "como ele usa Git",
+      "question": "Como ele usa Git?",
+      "variants": [
+        "nível de git",
+        "ele sabe git avançado"
+      ],
+      "answer": "No fluxo simples e seguro: commit, push, branch e PR. Não é especialista em recursos avançados como rebase interativo, cherry-pick ou resolução de conflito complexo em equipe grande."
+    },
+    {
+      "id": "sk23",
+      "layer": 2,
+      "parent": "sk08",
+      "label": "a origem do CorelDRAW",
+      "question": "De onde vem a experiência com CorelDRAW?",
+      "variants": [
+        "ele trabalhou com vetor",
+        "experiência gráfica"
+      ],
+      "answer": "De anos de trabalho prático: gráfica e revenda de serviços gráficos, produção de adesivos, modelagem vetorial de precisão para corte a laser CNC em MDF na Fabricart e na Bella Arte, e aulas de CorelDRAW como instrutor."
+    },
+    {
+      "id": "sk24",
+      "layer": 2,
+      "parent": "sk09",
+      "label": "ferramentas que não encaixaram",
+      "question": "Por que ele não se adaptou a algumas ferramentas?",
+      "variants": [
+        "por que largou o n8n",
+        "ferramentas que ele abandonou"
+      ],
+      "answer": "Algumas ele testou a fundo e não se adaptou ao modelo de trabalho. Ele deixa claro que isso nunca foi barreira: não vê problema em se adaptar à stack que a empresa exige."
+    },
+    {
+      "id": "sk25",
+      "layer": 2,
+      "parent": "sk10",
+      "label": "se a IA só é aprovada",
+      "question": "A IA escreve o código e ele só aprova?",
+      "variants": [
+        "ele só revisa o que a ia faz",
+        "a ia programa sozinha"
+      ],
+      "answer": "Não. O ciclo real é depurar, refinar, repassar e iterar até funcionar. Ele conduz o raciocínio, lê criticamente o código, identifica erros, decide ajustes e testa. A IA acelera; a responsabilidade técnica é dele."
+    },
+    {
+      "id": "sk26",
+      "layer": 3,
+      "parent": "sk16",
+      "label": "como ele aprendeu IA",
+      "question": "Como ele aprendeu IA?",
+      "variants": [
+        "de onde vem o conhecimento em ia",
+        "ele fez curso de ia"
+      ],
+      "answer": "Na prática, a partir de 2024: meses testando centenas de modelos em sessões exploratórias longas, às vezes com mais de 20 horas contínuas, para entender limites e comportamento real de cada um. Sem certificação formal."
+    },
+    {
+      "id": "sk27",
+      "layer": 3,
+      "parent": "sk17",
+      "label": "a recuperação do banco",
+      "question": "Como foi a recuperação do banco de dados?",
+      "variants": [
+        "o caso do banco corrompido",
+        "banco de dados da fabricart"
+      ],
+      "answer": "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça."
+    },
+    {
+      "id": "sk28",
+      "layer": 3,
+      "parent": "sk18",
+      "label": "RAG ou fine-tuning",
+      "question": "Ele sabe quando usar RAG em vez de fine-tuning?",
+      "variants": [
+        "ele entende arquitetura de ia",
+        "conversa de arquitetura de llm"
+      ],
+      "answer": "Ele diz que acompanha bem conversas sobre arquitetura e princípio: quando usar RAG ou fine-tuning, quando fuzzy resolve e quando não resolve. Para citar paper ou benchmark publicado específico, ele pesquisa antes de afirmar."
+    },
+    {
+      "id": "sk29",
+      "layer": 3,
+      "parent": "sk19",
+      "label": "domínio de TypeScript",
+      "question": "Ele domina TypeScript?",
+      "variants": [
+        "nível de typescript",
+        "ele escreve typescript"
+      ],
+      "answer": "A trilogia de jogos e o gerador ABNT são em TypeScript. Ele produz com IA como copiloto, lê o código com profundidade e depura. Prefere mostrar isso em projeto do que atribuir um nível a si mesmo. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+    },
+    {
+      "id": "sk30",
+      "layer": 3,
+      "parent": "sk20",
+      "label": "montar rede do zero",
+      "question": "Ele já montou uma rede do zero?",
+      "variants": [
+        "experiência montando rede",
+        "ele configurou rede"
+      ],
+      "answer": "Sim, em ambiente que ninguém tinha mexido antes. Ele cita isso como exemplo de problema que precisou resolver com ferramenta improvisada, prazo apertado e cliente esperando."
+    },
+    {
+      "id": "sk31",
+      "layer": 3,
+      "parent": "sk21",
+      "label": "o que ele testa à mão",
+      "question": "Que tipo de testes ele faz manualmente?",
+      "variants": [
+        "como ele testa",
+        "o que ele verifica em um teste"
+      ],
+      "answer": "Caminho feliz, caminho errado, dado sujo, entrada inválida e comportamento em navegadores diferentes. Ele procura o efeito colateral, não só o sintoma."
+    },
+    {
+      "id": "sk32",
+      "layer": 3,
+      "parent": "sk22",
+      "label": "terminal e Node",
+      "question": "Ele usa terminal e Node?",
+      "variants": [
+        "ele conhece node js",
+        "usa linha de comando"
+      ],
+      "answer": "Sim. Terminal/Bash e Node.js estão nas ferramentas do dia a dia, e o LAR, ambiente principal dele, conversa com um backend Node."
+    },
+    {
+      "id": "sk33",
+      "layer": 3,
+      "parent": "sk23",
+      "label": "designer de UI/UX",
+      "question": "Ele é designer de UI/UX?",
+      "variants": [
+        "ele faz design de produto",
+        "ele é ux designer"
+      ],
+      "answer": "Não é UI/UX designer de produto digital com formação, e diz isso abertamente. O que traz é repertório visual real, modelagem vetorial de produção e noção de acabamento. UX de produto ele aprenderia no trabalho."
+    },
+    {
+      "id": "sk34",
+      "layer": 3,
+      "parent": "sk24",
+      "label": "cloud em estudo",
+      "question": "Ele está aprendendo cloud?",
+      "variants": [
+        "ele estuda azure",
+        "google cloud"
+      ],
+      "answer": "Está sondando Google Cloud e Azure para ampliar repertório. Na prática atual usa Vercel, Netlify, Firebase e Supabase; não trabalhou com AWS, Azure ou GCP em produção corporativa."
+    },
+    {
+      "id": "sk35",
+      "layer": 3,
+      "parent": "sk25",
+      "label": "como ele valida a IA",
+      "question": "Como ele valida o que a IA produz?",
+      "variants": [
+        "ele testa o código da ia",
+        "validação do copiloto"
+      ],
+      "answer": "Lê o retorno, valida o comportamento, ajusta a lógica e só entrega quando funciona. Em linguagem nova, explora o conceito antes de escrever: o que ela resolve e onde é a escolha certa."
+    },
+    {
+      "id": "sk36",
+      "layer": 4,
+      "parent": "sk26",
+      "label": "catálogo dos modelos",
+      "question": "Ele catalogou os modelos que testou?",
+      "variants": [
+        "tem relatório dos testes de ia",
+        "lista dos modelos testados"
+      ],
+      "answer": "Não. Os testes foram exploratórios, para entender comportamento, e não para gerar relatório. O que ficou foi a intuição treinada de quem passou centenas de horas testando."
+    },
+    {
+      "id": "sk37",
+      "layer": 4,
+      "parent": "sk27",
+      "label": "a lição do banco",
+      "question": "Que lição ele tirou desse episódio?",
+      "variants": [
+        "o que o banco de dados ensinou",
+        "aprendizado da fabricart"
+      ],
+      "answer": "Foi quando percebeu que já tinha cabeça de TI, mesmo sem crachá: resolveu com documentação, fórum e persistência o que os especialistas contratados não resolveram."
+    },
+    {
+      "id": "sk38",
+      "layer": 4,
+      "parent": "sk28",
+      "label": "papers e benchmarks",
+      "question": "Ele acompanha papers e benchmarks publicados?",
+      "variants": [
+        "ele lê paper de ia",
+        "benchmark de modelo novo"
+      ],
+      "answer": "Ele é transparente: se a conversa exigir paper específico ou benchmark publicado de modelo novo, pesquisa antes de falar. O forte dele é arquitetura e comportamento prático dos modelos."
+    },
+    {
+      "id": "sk39",
+      "layer": 4,
+      "parent": "sk29",
+      "label": "prova seca de sintaxe",
+      "question": "O que acontece numa prova seca de sintaxe?",
+      "variants": [
+        "ele passa em teste de sintaxe",
+        "sabe sintaxe de cor"
+      ],
+      "answer": "Ele mesmo dá o exemplo do SQL: numa prova seca de sintaxe, chutaria. Mas entende o princípio, como consulta em tempo real com vários usuários. Sintaxe se recupera com apoio; raciocínio de arquitetura, não."
+    },
+    {
+      "id": "sk40",
+      "layer": 4,
+      "parent": "sk30",
+      "label": "suporte a usuário final",
+      "question": "Ele faz suporte a usuário final?",
+      "variants": [
+        "atende pessoas leigas",
+        "suporte ao usuário"
+      ],
+      "answer": "Sim: bancada de informática para clientes finais e empresas, balcão de atendimento, alunos em laboratório e usuários de sistemas internos nas empresas em que trabalhou."
+    },
+    {
+      "id": "sk41",
+      "layer": 4,
+      "parent": "sk31",
+      "label": "testes em navegadores",
+      "question": "Ele testa em navegadores diferentes?",
+      "variants": [
+        "compatibilidade cross browser",
+        "testa no chrome e firefox"
+      ],
+      "answer": "Sim, e desde 2014: na época dos primeiros sites, com plugin Flash, testar em cada navegador era o maior pesadelo. Foi onde aprendeu a garantir que funciona em todo lugar."
+    },
+    {
+      "id": "sk42",
+      "layer": 4,
+      "parent": "sk32",
+      "label": "Docker e Kubernetes",
+      "question": "Ele conhece Docker e Kubernetes?",
+      "variants": [
+        "ele usa docker",
+        "containers"
+      ],
+      "answer": "Entende o conceito, mas não domina a operação. Se a vaga exigir DevOps sênior, ele diz que ainda não é o terreno dele."
+    },
+    {
+      "id": "sk43",
+      "layer": 4,
+      "parent": "sk33",
+      "label": "documentação que ele escreve",
+      "question": "Ele escreve documentação?",
+      "variants": [
+        "ele faz readme",
+        "documentação técnica"
+      ],
+      "answer": "Sim. Trabalha com README modular por pasta, com dependências e responsabilidades mapeadas. Este chat é um exemplo: cada camada tem o próprio manifesto."
+    },
+    {
+      "id": "sk44",
+      "layer": 4,
+      "parent": "sk34",
+      "label": "aprender a stack da empresa",
+      "question": "Ele aceita aprender a stack da empresa?",
+      "variants": [
+        "ele se adapta a outra stack",
+        "aprende ferramenta nova"
+      ],
+      "answer": "Sim. Nas palavras dele: estando embarcado, navega para qualquer conhecimento que o time exigir. O que ele pede é a porta de entrada."
+    },
+    {
+      "id": "sk45",
+      "layer": 4,
+      "parent": "sk35",
+      "label": "tempo para aprender ferramenta",
+      "question": "Quanto tempo ele leva para aprender uma ferramenta nova?",
+      "variants": [
+        "ele aprende rápido",
+        "curva de aprendizado"
+      ],
+      "answer": "Ele relata que com dois dias intensos de hiperfoco absorve bastante coisa nova. Não promete prazo fixo: depende da ferramenta e do acesso ao contexto da equipe."
+    },
+    {
+      "id": "sk46",
+      "layer": 5,
+      "parent": "sk36",
+      "label": "quantos modelos testou",
+      "question": "Quantos modelos de IA ele testou?",
+      "variants": [
+        "número de modelos testados",
+        "400 modelos"
+      ],
+      "answer": "O currículo registra benchmarking prático de mais de 400 modelos. Ele descreve esse trabalho como exploratório, feito para entender comportamento, sem catálogo documentado."
+    },
+    {
+      "id": "sk47",
+      "layer": 5,
+      "parent": "sk39",
+      "label": "raciocínio de banco de dados",
+      "question": "Ele consegue raciocinar sobre arquitetura de banco?",
+      "variants": [
+        "ele entende modelagem de dados",
+        "arquitetura de banco"
+      ],
+      "answer": "Sim, no nível de princípio: ele cita que dado em tempo real, com vários usuários no mesmo sistema, só fica instantâneo se a consulta estiver bem desenhada. É esse raciocínio que ele considera o que não se recupera com apoio."
+    },
+    {
+      "id": "sk48",
+      "layer": 5,
+      "parent": "sk41",
+      "label": "origem do lado QA",
+      "question": "Essa preocupação com navegadores virou QA?",
+      "variants": [
+        "de onde vem o qa dele",
+        "como começou a testar"
+      ],
+      "answer": "Sim. Garantir que o site funcionasse em todo lugar foi a origem prática do lado QA dele. Depois vieram a indústria, onde erro custa material e prazo, e os projetos próprios."
+    },
+    {
+      "id": "sk49",
+      "layer": 5,
+      "parent": "sk43",
+      "label": "onde ver a documentação",
+      "question": "Onde posso ver a documentação dele?",
+      "variants": [
+        "exemplo de readme dele",
+        "documentação pública"
+      ],
+      "answer": "Nos repositórios públicos do GitHub (github.com/MarcozEduardo) e neste próprio chat, cujo bundle tem README por camada: chat, motor, mesh, dicionários, filtros e respostas."
+    },
+    {
+      "id": "sk50",
+      "layer": 5,
+      "parent": "sk45",
+      "label": "o que ele precisa para aprender",
+      "question": "O que ele precisa para aprender rápido?",
+      "variants": [
+        "condição para ele render",
+        "como ele mantém o conhecimento"
+      ],
+      "answer": "Contexto diário. Ele explica que precisa orbitar o assunto: dentro do contexto, absorve acima da média; longe dele por muito tempo, o conhecimento adormece até um gatilho reativá-lo."
+    }
+  ]
+}

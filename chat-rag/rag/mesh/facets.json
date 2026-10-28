@@ -1,0 +1,1597 @@
+{
+  "meta": {
+    "versao": "3.1.0",
+    "descricao": "Facetas = o QUE está sendo perguntado. A mesma faceta aplicada a órbitas/entidades diferentes gera respostas diferentes. 'triggers' são frases canônicas (fuzzy) e 'regex' são padrões tolerantes a erro."
+  },
+  "facets": [
+    {
+      "id": "tecnologias",
+      "label": "Tecnologias e linguagens",
+      "weight": 3.2,
+      "triggers": [
+        "qual tecnologia",
+        "quais tecnologias",
+        "que tecnologia usou",
+        "qual linguagem",
+        "quais linguagens",
+        "foi feito com o que",
+        "feito em que",
+        "qual stack",
+        "com o que foi feito",
+        "que framework",
+        "usou qual framework",
+        "qual ferramenta usou",
+        "como foi construido",
+        "em que linguagem",
+        "qual lib",
+        "quais bibliotecas",
+        "usa banco de dados",
+        "tech stack"
+      ],
+      "regex": [
+        "\\b(tecnolog\\w*|linguag\\w*|stack|framework|bibliotec\\w*|lib|ferramenta[s]?)\\b",
+        "\\bfeito\\s+(em|com|no)\\b",
+        "\\bconstru[ií]d\\w+\\s+(em|com)\\b",
+        "\\bescrit\\w+\\s+em\\b"
+      ]
+    },
+    {
+      "id": "motivo",
+      "label": "Motivação / por que fez",
+      "weight": 3,
+      "triggers": [
+        "por que fez",
+        "porque fez",
+        "qual a motivacao",
+        "motivo do projeto",
+        "o que inspirou",
+        "de onde veio a ideia",
+        "por que criou",
+        "qual o objetivo",
+        "para que serve",
+        "qual o proposito",
+        "por que escolheu"
+      ],
+      "regex": [
+        "\\b(por\\s*qu[eê]|porqu[eê])\\b",
+        "\\b(motiva[cç]\\w*|inspira\\w*|objetiv\\w*|prop[oó]sit\\w*|ideia)\\b",
+        "\\bpra\\s+qu[eê]\\b"
+      ]
+    },
+    {
+      "id": "desafio",
+      "label": "Desafios e dificuldades",
+      "weight": 3.1,
+      "triggers": [
+        "qual foi o desafio",
+        "qual a maior dificuldade",
+        "o que foi mais dificil",
+        "teve problema",
+        "qual problema enfrentou",
+        "o que deu errado",
+        "qual bug mais dificil",
+        "como resolveu o problema",
+        "maior obstaculo",
+        "parte mais complexa"
+      ],
+      "regex": [
+        "\\b(desafi\\w*|dificuld\\w*|dif[ií]cil|problema[s]?|obst[áa]cul\\w*|complic\\w*|travou|bug\\w*|erro[s]?)\\b",
+        "\\bmais\\s+complex\\w+\\b"
+      ]
+    },
+    {
+      "id": "aprendizado",
+      "label": "Aprendizados",
+      "weight": 2.9,
+      "triggers": [
+        "o que aprendeu",
+        "qual aprendizado",
+        "que licao tirou",
+        "o que levou desse projeto",
+        "o que mudou depois",
+        "faria diferente",
+        "o que faria diferente hoje"
+      ],
+      "regex": [
+        "\\b(aprend\\w*|li[cç][aã]o|ensin\\w*|evolu\\w*)\\b",
+        "\\bfaria\\s+diferente\\b"
+      ]
+    },
+    {
+      "id": "status",
+      "label": "Status do projeto",
+      "weight": 3,
+      "triggers": [
+        "qual o status",
+        "esta pronto",
+        "terminou",
+        "finalizou",
+        "esta concluido",
+        "ainda esta fazendo",
+        "em que pe esta",
+        "ja acabou",
+        "esta no ar",
+        "esta funcionando"
+      ],
+      "regex": [
+        "\\b(status|pronto|conclu[ií]d\\w*|finaliz\\w*|termin\\w*|acab\\w*|andamento|inacab\\w*|no ar|funcionando)\\b",
+        "\\bem que p[ée]\\b"
+      ]
+    },
+    {
+      "id": "link",
+      "label": "Link, deploy e repositório",
+      "weight": 3.3,
+      "triggers": [
+        "tem link",
+        "qual o link",
+        "onde vejo",
+        "onde acesso",
+        "tem deploy",
+        "tem repositorio",
+        "cade o github",
+        "onde esta o codigo",
+        "posso testar",
+        "como jogo",
+        "manda o link",
+        "tem demo"
+      ],
+      "regex": [
+        "\\b(link|url|deploy|reposit[óo]ri\\w*|github|vercel|demo|acess\\w*|testar|jogar)\\b",
+        "\\bonde\\s+(vejo|acesso|est[áa])\\b"
+      ]
+    },
+    {
+      "id": "duracao",
+      "label": "Tempo e duração",
+      "weight": 3,
+      "triggers": [
+        "quanto tempo levou",
+        "demorou quanto",
+        "quanto tempo ficou",
+        "quanto durou",
+        "levou quantos meses",
+        "quanto tempo de projeto",
+        "quanto tempo de empresa",
+        "ficou quanto tempo",
+        "quanto tempo para fazer o jogo com a engine pronta",
+        "quanto tempo com a engine pronta",
+        "quanto tempo para um jogo completo",
+        "em quanto tempo o jogo ficou pronto"
+      ],
+      "regex": [
+        "\\bquanto\\s+tempo\\b",
+        "\\b(demor\\w*|dura[cç]\\w*|durou|levou|meses|anos)\\b",
+        "\\bquantos?\\s+(meses|anos|dias)\\b"
+      ]
+    },
+    {
+      "id": "arquitetura",
+      "label": "Arquitetura e organização",
+      "weight": 2.8,
+      "triggers": [
+        "como foi a arquitetura",
+        "como organizou o codigo",
+        "qual a estrutura",
+        "como e modular",
+        "tem padrao de projeto",
+        "como separou as camadas",
+        "usa design pattern"
+      ],
+      "regex": [
+        "\\b(arquitet\\w*|estrutur\\w*|modular\\w*|camada[s]?|padr[aã]o|pattern|organiz\\w*)\\b"
+      ]
+    },
+    {
+      "id": "qa",
+      "label": "Testes e qualidade",
+      "weight": 2.9,
+      "triggers": [
+        "fez testes",
+        "como testou",
+        "tem teste automatizado",
+        "como garantiu a qualidade",
+        "fez qa",
+        "testou em que dispositivos",
+        "tem cobertura de teste"
+      ],
+      "regex": [
+        "\\b(teste[s]?|testou|testar|qa|qualidade|regress\\w*|cobertura|valida[cç]\\w*)\\b"
+      ]
+    },
+    {
+      "id": "equipe",
+      "label": "Time e colaboração",
+      "weight": 2.7,
+      "triggers": [
+        "fez sozinho",
+        "trabalhou em equipe",
+        "quantas pessoas",
+        "teve ajuda",
+        "foi em time",
+        "quem mais participou"
+      ],
+      "regex": [
+        "\\b(sozinh\\w*|equipe|time|colabor\\w*|ajuda|dupla|squad|pessoas)\\b"
+      ]
+    },
+    {
+      "id": "resumo",
+      "label": "Resumo / o que é",
+      "weight": 2.2,
+      "triggers": [
+        "o que e",
+        "me fala sobre",
+        "me conta sobre",
+        "explica",
+        "descreve",
+        "resume",
+        "do que se trata",
+        "como funciona isso",
+        "me explica"
+      ],
+      "regex": [
+        "\\b(o que (é|e)|do que se trata|resum\\w*|descrev\\w*|explic\\w*|conta sobre|fala sobre)\\b"
+      ]
+    },
+    {
+      "id": "nivel",
+      "label": "Nível de domínio",
+      "weight": 3,
+      "triggers": [
+        "qual o nivel",
+        "domina mesmo",
+        "sabe de verdade",
+        "e avancado",
+        "e iniciante",
+        "quao bom e",
+        "nota de 0 a 10",
+        "senioridade tecnica"
+      ],
+      "regex": [
+        "\\b(n[ií]vel|domin\\w*|avan[cç]ad\\w*|iniciant\\w*|b[aá]sic\\w*|intermedi\\w*|nota\\b|0 a 10|senior\\w*|j[úu]nior|plen\\w*)\\b"
+      ],
+      "home_orbit": "skills"
+    },
+    {
+      "id": "estilo_trabalho",
+      "label": "Estilo de trabalho",
+      "weight": 2.9,
+      "triggers": [
+        "como ele trabalha",
+        "qual o estilo de trabalho",
+        "como se organiza",
+        "trabalha melhor sozinho",
+        "metodologia",
+        "usa scrum",
+        "rotina de trabalho",
+        "como lida com prazo",
+        "lida bem com pressao"
+      ],
+      "regex": [
+        "\\b(estilo|rotina|metodolog\\w*|scrum|kanban|[áa]gil|organiza\\w*|press[aã]o|prazo[s]?|disciplin\\w*)\\b"
+      ],
+      "home_orbit": "sobre_marcos"
+    },
+    {
+      "id": "pontos_fortes",
+      "label": "Pontos fortes",
+      "weight": 3,
+      "triggers": [
+        "quais os pontos fortes",
+        "qual o diferencial",
+        "qual a maior qualidade",
+        "o que ele faz de melhor",
+        "por que contratar",
+        "vale a pena contratar"
+      ],
+      "regex": [
+        "\\b(ponto[s]? fort\\w*|qualidade[s]?|diferencia\\w*|melhor\\w*|vantag\\w*|contratar)\\b"
+      ],
+      "home_orbit": "sobre_marcos"
+    },
+    {
+      "id": "pontos_fracos",
+      "label": "Pontos a desenvolver",
+      "weight": 3.1,
+      "triggers": [
+        "quais os pontos fracos",
+        "qual a fraqueza",
+        "o que precisa melhorar",
+        "qual a limitacao",
+        "onde ele peca",
+        "defeito"
+      ],
+      "regex": [
+        "\\b(ponto[s]? fraco\\w*|fraquez\\w*|limita[cç]\\w*|defeit\\w*|melhorar|peca\\b|dificuldade dele)\\b"
+      ],
+      "home_orbit": "sobre_marcos"
+    },
+    {
+      "id": "quantidade",
+      "label": "Quantidade",
+      "weight": 2.8,
+      "triggers": [
+        "quantos projetos",
+        "quantos jogos",
+        "quantas empresas",
+        "quantos anos de experiencia",
+        "quantos modelos testou",
+        "quantidade"
+      ],
+      "regex": [
+        "\\bquant[oa]s?\\b"
+      ]
+    },
+    {
+      "id": "comparacao",
+      "label": "Comparação entre itens",
+      "weight": 2.9,
+      "triggers": [
+        "qual a diferenca",
+        "compara os dois",
+        "qual e melhor",
+        "qual prefere",
+        "diferenca entre"
+      ],
+      "regex": [
+        "\\b(diferen[cç]\\w*|compar\\w*|versus|vs\\b|melhor que|prefere)\\b"
+      ]
+    },
+    {
+      "id": "pretensao",
+      "label": "Pretensão salarial",
+      "weight": 3.8,
+      "triggers": [
+        "qual a pretensao",
+        "pretensao salarial",
+        "quanto quer ganhar",
+        "qual o salario",
+        "salario pretendido",
+        "faixa salarial",
+        "quanto custa contratar",
+        "quanto ele cobra",
+        "valor hora",
+        "remuneracao esperada",
+        "quanto ele ganha",
+        "expectativa salarial",
+        "quanto pede",
+        "qual o valor",
+        "cache",
+        "quanto voce cobra",
+        "qual a faixa",
+        "quanto de salario",
+        "aceita quanto",
+        "valor da hora",
+        "custo do profissional",
+        "salary",
+        "how much does he want",
+        "how much does he earn",
+        "wage",
+        "compensation",
+        "pay range",
+        "expected salary",
+        "how much does he charge",
+        "ele aceita cifrão",
+        "aceita dolar",
+        "aceita em dolar",
+        "how much in dollars",
+        "usd",
+        "$"
+      ],
+      "regex": [
+        "\\b(pretens\\w*|sal[áa]ri\\w*|remunera\\w*|honor[áa]ri\\w*)\\b",
+        "\\bquanto\\s+(quer|ele|voc[êe]|custa|cobra|ganha|pede|pretende|receb\\w*)\\b",
+        "\\b(faixa|expectativa)\\s+(salarial|de valor|de pagamento)\\b",
+        "\\br\\$|\\breais\\b|\\bmensal\\w*\\b.*\\b(valor|pagamento)\\b",
+        "\\$[0-9]",
+        "\\b\\d[\\d.,]*\\s*(usd|eur|dolar|dólar|dólares|euros)\\b"
+      ],
+      "home_orbit": "recrutamento"
+    },
+    {
+      "id": "modelo_trabalho",
+      "label": "Modelo de trabalho e local",
+      "weight": 3.3,
+      "triggers": [
+        "trabalha remoto",
+        "aceita presencial",
+        "e hibrido",
+        "onde mora",
+        "qual cidade",
+        "mora onde",
+        "mudaria de cidade",
+        "qual estado",
+        "remote",
+        "home office",
+        "onsite",
+        "hybrid",
+        "where does he live",
+        "work from home",
+        "relocation",
+        "move cities"
+      ],
+      "regex": [
+        "\\b(remoto|home\\s*office|presencial|h[íi]brid\\w*|mora|cidade|estado|bras[íi]lia|df\\b|mudan[cç]a|realocar)\\b"
+      ],
+      "home_orbit": "recrutamento"
+    },
+    {
+      "id": "disponibilidade",
+      "label": "Disponibilidade de início",
+      "weight": 3.3,
+      "triggers": [
+        "quando pode comecar",
+        "disponibilidade",
+        "inicio imediato",
+        "ja pode comecar",
+        "esta disponivel",
+        "tem aviso previo",
+        "when can he start",
+        "availability",
+        "available to start",
+        "notice period",
+        "start date",
+        "immediately available"
+      ],
+      "regex": [
+        "\\b(dispon[íi]v\\w*|disponibilid\\w*|come[cç]ar|in[íi]cio|imediat\\w*|aviso pr[ée]vio)\\b"
+      ],
+      "home_orbit": "recrutamento"
+    },
+    {
+      "id": "contratacao",
+      "label": "Modalidade de contratação",
+      "weight": 3.2,
+      "triggers": [
+        "aceita pj",
+        "aceita clt",
+        "qual regime",
+        "estagio",
+        "freelance",
+        "contrato",
+        "vaga pcd",
+        "clt",
+        "pj",
+        "contract type",
+        "hire him",
+        "employment type",
+        "internship",
+        "trainee"
+      ],
+      "regex": [
+        "\\b(clt|pj\\b|regime|contrat\\w*|est[áa]gio|freela\\w*|tempor[áa]ri\\w*|cooperad\\w*)\\b"
+      ],
+      "home_orbit": "recrutamento"
+    },
+    {
+      "id": "adaptacoes",
+      "label": "Adaptações e acessibilidade",
+      "weight": 3.2,
+      "triggers": [
+        "precisa de adaptacao",
+        "quais adaptacoes",
+        "precisa de acessibilidade",
+        "tem restricao",
+        "alguma limitacao no trabalho",
+        "precisa de apoio"
+      ],
+      "regex": [
+        "\\b(adapta[cç]\\w*|acessibilid\\w*|restri[cç]\\w*|apoio|necessidade[s]? especia\\w*)\\b"
+      ],
+      "home_orbit": "neurodivergencia"
+    },
+    {
+      "id": "como_funciona",
+      "label": "Como o bot funciona",
+      "weight": 3,
+      "triggers": [
+        "como voce funciona",
+        "como foi feito esse bot",
+        "usa chatgpt",
+        "qual modelo voce usa",
+        "voce e uma ia",
+        "voce e generativo",
+        "voce tem api"
+      ],
+      "regex": [
+        "\\b(como voc[êe] funciona|chatgpt|gpt|openai|api de ia|modelo de linguagem|llm|generativ\\w*|treinad\\w*)\\b"
+      ],
+      "home_orbit": "meta_ia"
+    },
+    {
+      "id": "idiomas",
+      "label": "Idiomas",
+      "weight": 3.2,
+      "triggers": [
+        "fala ingles",
+        "qual nivel de ingles",
+        "sabe outro idioma",
+        "ingles fluente",
+        "espanhol"
+      ],
+      "regex": [
+        "\\b(ingl[êe]s|idioma[s]?|espanhol|fluente|english)\\b"
+      ],
+      "home_orbit": "skills"
+    },
+    {
+      "id": "certificacoes",
+      "label": "Certificações",
+      "weight": 3.4,
+      "triggers": [
+        "tem certificacao",
+        "tem certificado",
+        "e certificado",
+        "fez algum curso certificado"
+      ],
+      "regex": [
+        "\\b(certifica\\w*|certificad\\w*|diploma|credencia\\w*)\\b"
+      ],
+      "home_orbit": "formacao"
+    },
+    {
+      "id": "experiencia_dev",
+      "label": "Experiência como desenvolvedor",
+      "weight": 3.1,
+      "triggers": [
+        "ja trabalhou como dev",
+        "tem experiencia profissional em programacao",
+        "ja foi contratado como programador",
+        "tem carteira assinada em ti",
+        "experiencia com desenvolvimento",
+        "has he worked as a developer",
+        "professional experience programming",
+        "hired as a developer before"
+      ],
+      "regex": [
+        "\\b(experi[êe]ncia (como|em) (dev|desenvolv\\w*|program\\w*))\\b",
+        "\\bcarteira assinada\\b",
+        "\\bj[áa] trabalhou como\\b"
+      ],
+      "home_orbit": "experiencia"
+    },
+    {
+      "id": "sabe_programar",
+      "label": "Sabe programar?",
+      "weight": 3.2,
+      "triggers": [
+        "ele sabe programar",
+        "sabe codar",
+        "escreve codigo",
+        "programa de verdade",
+        "sabe mesmo programar",
+        "so usa ia",
+        "a ia que faz tudo",
+        "can he code",
+        "does he code",
+        "can he program",
+        "is he a programmer",
+        "does he really code",
+        "is it just AI"
+      ],
+      "regex": [
+        "\\bsabe\\s+(programar|codar|c[óo]digo|desenvolver)\\b",
+        "\\b(s[óo]|somente|apenas)\\s+(usa|usou)\\s+ia\\b",
+        "\\bia que faz\\b"
+      ],
+      "home_orbit": "recrutamento"
+    },
+    {
+      "id": "inacabados",
+      "label": "Projetos em aberto",
+      "weight": 3.5,
+      "triggers": [
+        "por que os projetos estao inacabados",
+        "por que nao terminou",
+        "muitos projetos em aberto",
+        "nenhum projeto pronto"
+      ],
+      "regex": [
+        "\\b(inacab\\w*|n[aã]o terminou|em aberto|incomplet\\w*|abandon\\w*)\\b"
+      ],
+      "home_orbit": "projetos"
+    },
+    {
+      "id": "etapas_vida",
+      "label": "Linha do tempo pessoal",
+      "weight": 2.8,
+      "triggers": [
+        "conta a historia dele",
+        "etapas da vida",
+        "linha do tempo",
+        "como começou na ti",
+        "como entrou na area",
+        "trajetoria"
+      ],
+      "regex": [
+        "\\b(hist[óo]ria|trajet[óo]ria|linha do tempo|etapa[s]?|come[cç]ou|entrou na [áa]rea|in[íi]cio de carreira)\\b"
+      ],
+      "home_orbit": "sobre_marcos"
+    },
+    {
+      "id": "motivacao",
+      "label": "Motivação de carreira",
+      "weight": 2.8,
+      "triggers": [
+        "o que motiva ele",
+        "qual o objetivo de carreira",
+        "onde quer chegar",
+        "qual o sonho",
+        "o que busca",
+        "qual area quer atuar"
+      ],
+      "regex": [
+        "\\b(motiva\\w*|objetivo de carreira|onde quer chegar|sonho|aspira\\w*|pretende atuar|busca)\\b"
+      ],
+      "home_orbit": "sobre_marcos"
+    },
+    {
+      "id": "contato",
+      "label": "Contato",
+      "weight": 3.6,
+      "home_orbit": "contato",
+      "triggers": [
+        "qual o contato",
+        "como falar com ele",
+        "como entrar em contato",
+        "tem email",
+        "qual o email",
+        "qual o whatsapp",
+        "qual o telefone",
+        "tem linkedin",
+        "manda o contato",
+        "como chamo ele",
+        "falar com o marcos",
+        "email",
+        "phone",
+        "whatsapp",
+        "linkedin",
+        "github",
+        "how to contact",
+        "how to reach",
+        "contact him"
+      ],
+      "regex": [
+        "\\b(contato|contatos|email|e-mail|whatsapp|telefone|celular|linkedin|falar com)\\b"
+      ]
+    },
+    {
+      "id": "conquistas",
+      "label": "Resultados e conquistas",
+      "weight": 3.2,
+      "home_orbit": "experiencia",
+      "triggers": [
+        "quais as conquistas",
+        "que resultado entregou",
+        "maior entrega",
+        "o que ele ja resolveu",
+        "caso de sucesso",
+        "principais resultados",
+        "que problema grande resolveu",
+        "do que ele se orgulha"
+      ],
+      "regex": [
+        "\\b(conquist\\w*|resultad\\w*|entreg\\w*|realiza[cç]\\w*|orgulh\\w*|caso de sucesso)\\b",
+        "\\bj[áa]\\s+resolveu\\b"
+      ]
+    },
+    {
+      "id": "industria",
+      "label": "Experiência industrial",
+      "weight": 3.2,
+      "home_orbit": "experiencia",
+      "triggers": [
+        "experiencia industrial",
+        "trabalhou em industria",
+        "conhece chao de fabrica",
+        "ja trabalhou em fabrica",
+        "experiencia com cnc",
+        "manufatura",
+        "producao industrial",
+        "ambiente fabril",
+        "maquina industrial"
+      ],
+      "regex": [
+        "\\b(ind[úu]stri\\w*|f[áa]bric\\w*|fabril|manufatur\\w*|cnc|ch[aã]o de f[áa]brica|produ[cç][aã]o|maquin[áa]ri\\w*|laser)\\b"
+      ]
+    },
+    {
+      "id": "orquestracao_ferramentas",
+      "label": "Ferramentas de orquestração e automação",
+      "weight": 3.3,
+      "home_orbit": "skills",
+      "triggers": [
+        "conhece n8n",
+        "usa langchain",
+        "conhece crewai",
+        "usa copilot",
+        "conhece cursor",
+        "usa zapier",
+        "conhece make",
+        "ferramentas de automacao",
+        "ferramenta de orquestracao",
+        "usa claude code",
+        "conhece autogen",
+        "sabe usar mcp"
+      ],
+      "regex": [
+        "\\b(n8n|langchain|crewai|autogen|cursor|copilot|zapier|make\\b|openclaw|opencode|zcode|claude code|mcp)\\b",
+        "\\bautoma[cç][aã]o\\b"
+      ]
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud e DevOps",
+      "weight": 3.5,
+      "home_orbit": "transparencia",
+      "triggers": [
+        "conhece aws",
+        "usa azure",
+        "conhece gcp",
+        "sabe docker",
+        "conhece kubernetes",
+        "experiencia com cloud",
+        "trabalha com nuvem",
+        "sabe devops",
+        "conhece ci cd"
+      ],
+      "regex": [
+        "\\b(aws|azure|gcp|google cloud|docker|kubernetes|k8s|devops|ci\\s*/?\\s*cd|nuvem|cloud)\\b"
+      ]
+    },
+    {
+      "id": "ramp_up",
+      "label": "Curva de aprendizado",
+      "weight": 3.1,
+      "home_orbit": "transparencia",
+      "triggers": [
+        "quanto tempo pra aprender",
+        "aprende rapido",
+        "curva de aprendizado",
+        "precisa de treinamento",
+        "quanto tempo de adaptacao",
+        "consegue aprender",
+        "se adapta rapido",
+        "precisa de ramp up"
+      ],
+      "regex": [
+        "\\b(aprende[r]?\\s+r[áa]pido|curva de aprendiz\\w*|ramp[\\s-]?up|adapta[cç]\\w*|treinament\\w*|capacita[cç]\\w*)\\b"
+      ]
+    },
+    {
+      "id": "limitacoes",
+      "label": "Limitações e lacunas",
+      "weight": 3.4,
+      "home_orbit": "transparencia",
+      "triggers": [
+        "o que ele nao sabe",
+        "quais as limitacoes",
+        "o que falta pra ele",
+        "onde ele peca",
+        "qual a lacuna",
+        "o que ele nao domina",
+        "quais as fraquezas",
+        "nao tem experiencia em que"
+      ],
+      "regex": [
+        "\\b(limita[cç]\\w*|lacuna[s]?|n[aã]o sabe|n[aã]o domina|n[aã]o tem experi[êe]ncia|falta\\w*|defici[êe]nci\\w* t[ée]cnic\\w*|fraquez\\w*)\\b"
+      ]
+    },
+    {
+      "id": "resolucao_problema",
+      "label": "Como resolve problema",
+      "weight": 3.1,
+      "home_orbit": "sobre_marcos",
+      "triggers": [
+        "como ele resolve problema",
+        "como aborda um problema",
+        "como investiga",
+        "como faz diagnostico",
+        "como lida com bug dificil",
+        "metodo de resolucao",
+        "como acha a causa raiz"
+      ],
+      "regex": [
+        "\\b(resolve[r]? problema|causa raiz|diagn[óo]stic\\w*|investig\\w*|abordagem|m[ée]todo)\\b"
+      ]
+    },
+    {
+      "id": "origem",
+      "label": "Origem e início",
+      "weight": 2.9,
+      "home_orbit": "historia_pessoal",
+      "triggers": [
+        "como ele comecou",
+        "de onde ele veio",
+        "qual a origem",
+        "como entrou na area",
+        "quando comecou na ti",
+        "primeiro emprego",
+        "primeiro computador",
+        "infancia"
+      ],
+      "regex": [
+        "\\b(origem|come[cç]ou|primeiro (emprego|computador|pc)|inf[âa]nci\\w*|desde (crian[cç]a|moleque|pequeno))\\b"
+      ]
+    },
+    {
+      "id": "idade_local",
+      "label": "Idade e localização",
+      "weight": 3.8,
+      "home_orbit": "historia_pessoal",
+      "triggers": [
+        "quantos anos ele tem",
+        "qual a idade",
+        "onde ele mora",
+        "qual a cidade dele",
+        "de onde ele e",
+        "qual o estado",
+        "mora onde",
+        "quantos anos ele tem e onde mora",
+        "qual a idade e a cidade",
+        "ele tem quantos anos"
+      ],
+      "regex": [
+        "\\bquantos anos\\b",
+        "\\bidade\\b",
+        "\\bonde\\s+(ele\\s+)?mora\\b",
+        "\\bqual\\s+(a\\s+)?cidade\\b",
+        "\\bbrazl[âa]ndia\\b"
+      ]
+    },
+    {
+      "id": "virada",
+      "label": "Virada de carreira",
+      "weight": 3,
+      "home_orbit": "historia_pessoal",
+      "triggers": [
+        "por que mudou de area",
+        "quando decidiu migrar",
+        "o que mudou em 2024",
+        "por que a transicao",
+        "quando virou a chave"
+      ],
+      "regex": [
+        "\\b(transi[cç][aã]o|mudou de [áa]rea|migra[rç]\\w*|virada|mudan[cç]a de carreira|2024)\\b"
+      ]
+    },
+    {
+      "id": "forma_de_aprender",
+      "label": "Como aprende",
+      "weight": 3,
+      "home_orbit": "formacao",
+      "triggers": [
+        "como ele aprende",
+        "qual o metodo de estudo",
+        "como estuda",
+        "aprende sozinho",
+        "como absorve conteudo",
+        "e autodidata"
+      ],
+      "regex": [
+        "\\b(como (ele )?aprende|m[ée]todo de estudo|autodidata|absorve|estuda[r]?\\b)\\b"
+      ]
+    },
+    {
+      "id": "conceito",
+      "label": "O conceito Bobby",
+      "weight": 3.2,
+      "home_orbit": "meta_ia",
+      "triggers": [
+        "o que significa bobby",
+        "por que bobby",
+        "quem e bobby",
+        "o que e bobby",
+        "de onde vem o nome bobby",
+        "por que esse nome"
+      ],
+      "regex": [
+        "\\bbobby\\b.*\\b(nome|significa|conceito|quem|por qu[êe])\\b",
+        "\\b(nome|conceito)\\b.*\\bbobby\\b"
+      ]
+    },
+    {
+      "id": "fit_vaga",
+      "label": "Encaixe na vaga",
+      "weight": 3.1,
+      "home_orbit": "recrutamento",
+      "triggers": [
+        "ele serve pra vaga",
+        "tem fit",
+        "se encaixa",
+        "e o perfil que procuro",
+        "atende o requisito",
+        "combina com a vaga",
+        "da conta do cargo",
+        "is he a good fit",
+        "does he fit",
+        "fit for the role",
+        "match the role",
+        "right profile"
+      ],
+      "regex": [
+        "\\b(fit\\b|encaix\\w*|perfil (certo|ideal|adequado)|atende\\w*|requisit\\w*|serve (pra|para))\\b"
+      ]
+    },
+    {
+      "id": "numeros",
+      "label": "Números do portfólio",
+      "weight": 2.9,
+      "home_orbit": "projetos",
+      "triggers": [
+        "quantos projetos",
+        "quantos jogos",
+        "quantos games publicados",
+        "numeros do portfolio",
+        "quantos sistemas"
+      ],
+      "regex": [
+        "\\bquant[oa]s\\s+(projeto|jogo|game|sistema|app|ferramenta)\\w*\\b"
+      ]
+    },
+    {
+      "id": "sistemas_grandes",
+      "label": "Sistemas de maior porte",
+      "weight": 3.2,
+      "home_orbit": "projetos",
+      "triggers": [
+        "projetos maiores",
+        "sistemas grandes",
+        "o que ele nao publicou",
+        "projetos reservados",
+        "o que tem de mais ambicioso",
+        "maior projeto dele"
+      ],
+      "regex": [
+        "\\b(lar\\b|local agent runtime|nexus|franzinha|reservad\\w*|n[aã]o publicad\\w*|mais ambicios\\w*)\\b"
+      ]
+    },
+    {
+      "id": "altas_habilidades",
+      "label": "Perfil cognitivo",
+      "weight": 3.4,
+      "home_orbit": "neurodivergencia",
+      "triggers": [
+        "hiperfoco",
+        "altas habilidades",
+        "perfil cognitivo",
+        "como funciona a cabeca dele",
+        "capacidade de foco",
+        "atencao a detalhe"
+      ],
+      "regex": [
+        "\\b(hiperfoco|altas habilidad\\w*|cognitiv\\w*|foco\\b|aten[cç][aã]o a detalhe)\\b"
+      ]
+    },
+    {
+      "id": "ia_copiloto",
+      "label": "Uso da IA como copiloto",
+      "weight": 3.8,
+      "home_orbit": "skills",
+      "triggers": [
+        "como ele usa ia",
+        "ia como copiloto",
+        "a ia e copiloto",
+        "a ia fez tudo",
+        "quem escreveu o codigo",
+        "quem programa de verdade",
+        "ele so usa ia",
+        "quanto do codigo foi feito por ia",
+        "qual o papel da ia no desenvolvimento",
+        "ele usa ia como ferramenta",
+        "a inteligencia artificial substitui o marcos"
+      ],
+      "regex": [
+        "\\b(copiloto|co-piloto|copilot)\\b",
+        "\\b(ia|inteligencia artificial)\\b.*\\b(fez tudo|escreveu tudo|substitui|copiloto|ajuda|apoio)\\b",
+        "\\b(quem|como)\\b.*\\b(escreveu|programa|codigo|desenvolvimento)\\b"
+      ]
+    },
+    {
+      "id": "vaga_afirmativa",
+      "label": "Vagas afirmativas",
+      "weight": 4.2,
+      "home_orbit": "neurodivergencia",
+      "triggers": [
+        "ele e pcd",
+        "e pcd",
+        "vaga pcd",
+        "vaga afirmativa",
+        "cota pcd",
+        "tem laudo",
+        "qual o laudo",
+        "ele e autista",
+        "tem tea",
+        "e tea",
+        "lei 12764",
+        "pode concorrer a vaga afirmativa",
+        "enquadramento pcd",
+        "tem deficiencia",
+        "pcd",
+        "laudo",
+        "cota",
+        "ele e tea",
+        "tea",
+        "autista",
+        "autismo"
+      ],
+      "regex": [
+        "\\bpcd\\b",
+        "\\btea\\b",
+        "\\bautis\\w*",
+        "\\blaudo\\b",
+        "\\bafirmativ\\w*",
+        "\\bcota[s]?\\b",
+        "\\bdefici[êe]nci\\w*",
+        "\\b12\\.?764\\b",
+        "\\bespectro\\b"
+      ]
+    },
+    {
+      "id": "diagnostico",
+      "label": "Diagnóstico",
+      "weight": 3,
+      "home_orbit": "neurodivergencia",
+      "triggers": [
+        "quando foi diagnosticado",
+        "quando descobriu",
+        "quando recebeu o diagnostico",
+        "diagnostico tardio",
+        "descobriu adulto"
+      ],
+      "regex": [
+        "\\bdiagn[óo]stic\\w*",
+        "\\bdescobriu\\b.*\\b(adulto|tarde|neurodiverg\\w*)\\b"
+      ]
+    },
+    {
+      "id": "study_case",
+      "label": "História por trás (study case)",
+      "weight": 4,
+      "home_orbit": "projetos",
+      "triggers": [
+        "qual a historia por tras",
+        "historia do projeto",
+        "study case",
+        "como foi fazer",
+        "como foi desenvolver",
+        "o que aconteceu nesse projeto",
+        "como comecou",
+        "de onde veio a ideia",
+        "como surgiu",
+        "historia real",
+        "bastidores",
+        "por tras do projeto",
+        "como foi o processo de criacao",
+        "socram",
+        "vilao do jogo",
+        "quem e socram",
+        "foguete do jogo",
+        "perdeu o codigo",
+        "voltou do zero",
+        "reconstruiu o jogo",
+        "banco de dados resetou",
+        "sem backup",
+        "worklogs",
+        "engenharia reversa para recuperar",
+        "quanto tempo com a engine pronta",
+        "engine pronta quanto tempo",
+        "quanto tempo para finalizar o jogo",
+        "quanto tempo levou para fazer",
+        "em quanto tempo ficou pronto o jogo",
+        "jogo hiper rapido",
+        "quanto tempo para um jogo completo",
+        "quanto tempo para fazer o jogo",
+        "quanto tempo levou o jogo",
+        "em quanto tempo ficou pronto"
+      ],
+      "regex": [
+        "\\b(study ?case|hist[óo]ria|bastidores|por tr[áa]s)\\b",
+        "\\bsocram\\b",
+        "\\b(vil[aã]o|boss|chefe final)\\b",
+        "\\b(perdeu|perdi|resetou|sem backup|reconstruiu|recuperou)\\b.*\\b(c[óo]digo|projeto|jogo|banco)\\b",
+        "\\b(voltou|come[cç]ou) do zero\\b",
+        "\\bworklogs\\b",
+        "\\bengenharia reversa\\b",
+        "\\bengine (pronta|reutilizada|reaproveitada)\\b",
+        "\\b(40|quarenta) minutos\\b",
+        "\\bjogo (completo|inteiro) em\\b.*\\bminutos\\b"
+      ]
+    },
+    {
+      "id": "processo",
+      "label": "Processo de trabalho e debugging",
+      "weight": 3.5,
+      "home_orbit": "projetos",
+      "triggers": [
+        "como ele desenvolve",
+        "processo de trabalho",
+        "processo de criacao",
+        "como foi o processo",
+        "horas de debug",
+        "indo na funcao linha por linha",
+        "migrou funcao para workflow",
+        "varias IAs envolvidas",
+        "varias IAs no projeto",
+        "cancelou tudo e comecou do zero",
+        "voltou tudo do zero",
+        "nao aceitava o resultado",
+        "IA enlouqueceu",
+        "ataque de ansiedade da IA",
+        "IA em modo metralhadora",
+        "IA desesperada",
+        "psicologo de IA",
+        "pagar sapo na IA",
+        "desacelerar a IA",
+        "recuperar foco da IA",
+        "t tirar IA de surto",
+        "tirar IA do contexto",
+        "limitado pelas ferramentas",
+        "por que construiu o LAR",
+        "por que fez o LAR",
+        "metodologia de desenvolvimento",
+        "como ele programa com IA",
+        "ciclo de desenvolvimento dele"
+      ],
+      "regex": [
+        "\\b(debugg\\w*|debug\\w*|linha por linha|fun[cç][aã]o por fun[cç][aã]o)\\b",
+        "\\b(varias|multiplas|diferentes) IAs\\b",
+        "\\b(do zero|recome[cç]ar|cancelou tudo|descarta\\w*|reescrev\\w*|joga fora)\\b",
+        "\\b(n[ãa]o aceitava|n[ãa]o fica satisfeito|perfeccion\\w*)\\b",
+        "\\b(metralhadora|desesperad\\w*|enlouquecid\\w*|surto)\\b",
+        "\\b(psicol[óo]g\\w* de IA|sapo)\\b",
+        "\\b(desacelerar|esfriar)\\b",
+        "\\b(lar\\b|local agent runtime)\\b",
+        "\\b(parar para estudar|pausa para estudar|aprofundar o assunto)\\b"
+      ]
+    },
+    {
+      "id": "rag",
+      "label": "Termo RAG",
+      "weight": 3.4,
+      "home_orbit": "glossario",
+      "triggers": [
+        "o que e rag",
+        "oque e rag",
+        "significa rag",
+        "explica rag",
+        "rag"
+      ],
+      "regex": [
+        "\\brag\\b"
+      ]
+    },
+    {
+      "id": "embedding",
+      "label": "Termo embedding",
+      "weight": 3.4,
+      "home_orbit": "glossario",
+      "triggers": [
+        "o que e embedding",
+        "oque e embedding",
+        "significa embedding",
+        "explica embedding",
+        "embedding"
+      ],
+      "regex": [
+        "\\bembedding\\b",
+        "\\bembeddings\\b"
+      ]
+    },
+    {
+      "id": "por_que_contratar",
+      "label": "Por que contratar",
+      "weight": 4,
+      "home_orbit": "recrutamento",
+      "triggers": [
+        "por que contratar ele",
+        "por que contratar o marcos",
+        "por que considerar",
+        "por que vale a pena",
+        "por que deveria contratar",
+        "por que contratar o candidato"
+      ],
+      "regex": [
+        "\\bpor\\s+que\\s+contratar\\b"
+      ]
+    },
+    {
+      "id": "quem_fez",
+      "label": "Quem criou / desenvolveu",
+      "weight": 4,
+      "home_orbit": "meta_ia",
+      "triggers": [
+        "quem criou",
+        "quem desenvolveu",
+        "quem construiu",
+        "quem programou",
+        "quem fez o bobby",
+        "quem fez esse chat",
+        "quem fez este chat",
+        "quem fez o assistente",
+        "quem fez o site",
+        "autor do chat",
+        "quem desenvolveu o bobby",
+        "quem criou o bobby",
+        "quem criou isso",
+        "quem criou esse projeto",
+        "quem criou este projeto",
+        "quem e o criador",
+        "quero saber do criador",
+        "criador desse projeto",
+        "criador desse chat",
+        "criador do bobby",
+        "autor do projeto",
+        "quem e o autor",
+        "quem programou isso",
+        "quem te criou",
+        "quem te desenvolveu",
+        "quem te fez",
+        "quem criou voce",
+        "quem programou voce"
+      ],
+      "regex": [
+        "\\bquem\\s+(criou|desenvolveu|construiu|programou|fez)\\b"
+      ]
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "weight": 3.4,
+      "home_orbit": "glossario",
+      "triggers": [
+        "o que e python",
+        "oque e python",
+        "significa python",
+        "explica python",
+        "python"
+      ],
+      "regex": [
+        "\\bpython\\b"
+      ]
+    },
+    {
+      "id": "javascript",
+      "label": "JavaScript",
+      "weight": 3.4,
+      "home_orbit": "glossario",
+      "triggers": [
+        "o que e javascript",
+        "oque e javascript",
+        "significa javascript",
+        "explica javascript",
+        "javascript"
+      ],
+      "regex": [
+        "\\bjavascript\\b",
+        "\\bjs\\b"
+      ]
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "weight": 3.4,
+      "home_orbit": "glossario",
+      "triggers": [
+        "o que e typescript",
+        "oque e typescript",
+        "significa typescript",
+        "typescript"
+      ],
+      "regex": [
+        "\\btypescript\\b",
+        "\\bts\\b"
+      ]
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "weight": 3.4,
+      "home_orbit": "glossario",
+      "triggers": [
+        "o que e react",
+        "oque e react",
+        "significa react",
+        "react"
+      ],
+      "regex": [
+        "\\breact\\b"
+      ]
+    },
+    {
+      "id": "sobre_curriculo",
+      "label": "Sobre este currículo",
+      "weight": 3.8,
+      "home_orbit": "sobre_curriculo",
+      "triggers": [
+        "o que e este curriculo",
+        "o que e o curriculo inteligente",
+        "sobre esse curriculo",
+        "sobre este app",
+        "o que e esse app",
+        "fala do curriculo",
+        "sobre o curriculo"
+      ],
+      "regex": [
+        "\\bcurriculo\\s+(inteligente|interativo)\\b",
+        "\\beste\\s+(app|site|curriculo|chat)\\b"
+      ]
+    },
+    {
+      "id": "construcao_curriculo",
+      "label": "Como o currículo foi construído",
+      "weight": 3.6,
+      "home_orbit": "sobre_curriculo",
+      "triggers": [
+        "como foi construido o curriculo",
+        "como foi feito o curriculo",
+        "quem fez o curriculo",
+        "como construiu esse app",
+        "foi a ia que construiu",
+        "como foi construido esse curriculo",
+        "como construiu esse curriculo",
+        "como foi feito esse curriculo",
+        "como foi feito esse app",
+        "esse curriculo foi feito como",
+        "esse app foi feito como"
+      ],
+      "regex": [
+        "\\bcomo\\s+(foi|construiu|fez)\\s+(o\\s+)?(curriculo|app|esse\\s+chat)\\b"
+      ]
+    },
+    {
+      "id": "pdf_curriculo",
+      "label": "PDF e download",
+      "weight": 3.6,
+      "home_orbit": "sobre_curriculo",
+      "triggers": [
+        "tem pdf",
+        "como baixar o pdf",
+        "onde baixa o pdf",
+        "link do pdf",
+        "tem versao em pdf",
+        "como faco o download"
+      ],
+      "regex": [
+        "\\b(pdf|download)\\b.*\\b(curriculo|app)\\b"
+      ]
+    },
+    {
+      "id": "qr_code_curriculo",
+      "label": "QR Code do PDF",
+      "weight": 3.5,
+      "home_orbit": "sobre_curriculo",
+      "triggers": [
+        "tem qr code",
+        "o que e o qr code",
+        "para que serve o qr code",
+        "qr code do curriculo"
+      ],
+      "regex": [
+        "\\bqr\\s*code\\b"
+      ]
+    },
+    {
+      "id": "galeria_curriculo",
+      "label": "Galeria e projetos interativos",
+      "weight": 3.3,
+      "home_orbit": "sobre_curriculo",
+      "triggers": [
+        "tem fotos",
+        "tem video",
+        "tem galeria",
+        "da pra jogar aqui",
+        "os projetos dao pra testar"
+      ],
+      "regex": [
+        "\\b(galeria|fotos?|v[ií]deos?)\\b.*\\b(projeto|card)\\b"
+      ]
+    },
+    {
+      "id": "leitura_focada",
+      "label": "Modo de leitura focada",
+      "weight": 3.3,
+      "home_orbit": "sobre_curriculo",
+      "triggers": [
+        "modo leitura focada",
+        "tem versao texto",
+        "leitura detalhada",
+        "ler sem chat",
+        "modo de leitura"
+      ],
+      "regex": [
+        "\\bleitura\\s+focada\\b"
+      ]
+    },
+    {
+      "id": "merito_curriculo",
+      "label": "Mérito do Marcos",
+      "weight": 3.4,
+      "home_orbit": "sobre_curriculo",
+      "triggers": [
+        "quem teve o merito",
+        "foi a ia que fez",
+        "quem construiu mesmo",
+        "foi o marcos ou a ia",
+        "foi a ia que construiu",
+        "a ia fez tudo",
+        "a ia construiu isso",
+        "o merito e de quem",
+        "quem fez mesmo"
+      ],
+      "regex": [
+        "\\b(ia|intelig[êe]ncia)\\b.*\\b(construiu|fez)\\b.*\\b(curriculo|app)\\b"
+      ]
+    },
+    {
+      "id": "diferenca_pdf_app",
+      "label": "Diferença entre PDF e app",
+      "weight": 3.4,
+      "home_orbit": "sobre_curriculo",
+      "triggers": [
+        "qual a diferenca do pdf",
+        "diferenca entre pdf e app",
+        "por que usar o app",
+        "por que o app e melhor",
+        "o pdf e o app sao iguais"
+      ],
+      "regex": [
+        "\\b(diferenca|por\\s+que)\\b.*\\b(pdf|app)\\b"
+      ]
+    },
+    {
+      "id": "escolha_do_bot",
+      "label": "Deixa o Bobby escolher",
+      "weight": 3.6,
+      "home_orbit": "escolha_do_bot",
+      "triggers": [
+        "o que voce sugere",
+        "voce sugere o que",
+        "voce decide",
+        "voce escolhe",
+        "me surpreende",
+        "conta uma boa",
+        "conta uma boa ai",
+        "manda uma boa",
+        "escolhe voce",
+        "qual voce recomenda",
+        "me surpreenda",
+        "manda ver",
+        "surpreende ai",
+        "faz uma escolha",
+        "escolhe pra mim",
+        "decide pra mim",
+        "voce decide pra mim"
+      ],
+      "regex": [
+        "\\b(voce|vc)\\s+(sugere|decide|escolhe|recomenda)\\b",
+        "\\b(me\\s+surpreende|conta\\s+uma\\s+boa|manda\\s+uma\\s+boa)\\b"
+      ]
+    },
+    {
+      "id": "novidade",
+      "label": "Novidade / tem algo novo",
+      "weight": 3.5,
+      "home_orbit": "escolha_do_bot",
+      "triggers": [
+        "e a novidade",
+        "tem novidade",
+        "o que tem de novo",
+        "novidades",
+        "tem algo novo",
+        "o que mudou",
+        "o que ha de novo"
+      ],
+      "regex": [
+        "\\b(novidade|novidades)\\b"
+      ]
+    },
+    {
+      "id": "duvida_de_que",
+      "label": "Pergunta sem sujeito (X de quê?)",
+      "weight": 3.7,
+      "home_orbit": "escolha_do_bot",
+      "triggers": [
+        "quanto tempo",
+        "quanto tempo?",
+        "quanto tempo exatamente",
+        "e o tempo",
+        "e a duracao"
+      ],
+      "regex": [
+        "^\\s*quanto\\s+tempo\\s*\\??\\s*$",
+        "^\\s*e\\s+o\\s+tempo\\s*\\??\\s*$"
+      ]
+    }
+  ],
+  "superlatives": [
+    {
+      "id": "mais_recente",
+      "triggers": [
+        "mais recente",
+        "mais novo",
+        "ultimo",
+        "mais atual",
+        "feito por ultimo",
+        "recentemente"
+      ],
+      "field": "ano_inicio",
+      "order": "desc"
+    },
+    {
+      "id": "mais_antigo",
+      "triggers": [
+        "mais antigo",
+        "mais velho",
+        "primeiro",
+        "o primeiro de todos",
+        "comecou com qual"
+      ],
+      "field": "ano_inicio",
+      "order": "asc"
+    },
+    {
+      "id": "maior",
+      "triggers": [
+        "mais robusto",
+        "mais complexo",
+        "o principal",
+        "maior projeto",
+        "maior dos projetos",
+        "projeto mais grande",
+        "maior em tamanho",
+        "mais volumoso"
+      ],
+      "field": "linhas_aprox",
+      "order": "desc"
+    },
+    {
+      "id": "menor",
+      "triggers": [
+        "menor",
+        "menorzinho",
+        "mais simples",
+        "mais pequeno",
+        "mais basico",
+        "menos complexo"
+      ],
+      "field": "linhas_aprox",
+      "order": "asc"
+    },
+    {
+      "id": "mais_rapido",
+      "triggers": [
+        "mais rapido",
+        "fez mais rapido",
+        "menos tempo",
+        "mais veloz",
+        "foi mais agil"
+      ],
+      "field": "duracao_meses",
+      "order": "asc"
+    },
+    {
+      "id": "mais_demorado",
+      "triggers": [
+        "mais demorado",
+        "demorou mais",
+        "mais tempo",
+        "mais lento",
+        "levou mais tempo"
+      ],
+      "field": "duracao_meses",
+      "order": "desc"
+    },
+    {
+      "id": "mais_ambicioso",
+      "triggers": [
+        "mais ambicioso",
+        "projeto mais ambicioso",
+        "maior ambicao"
+      ],
+      "field": "ambitionRank",
+      "order": "asc"
+    }
+  ]
+}

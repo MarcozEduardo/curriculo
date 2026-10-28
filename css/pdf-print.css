@@ -1,0 +1,67 @@
+/* ===================== MODO IMPRESSÃO NATIVA ===================== */
+/* Esconde TUDO do site quando imprime e mostra só as .pdf-page */
+
+@media print {
+  /* Reset global */
+  html, body {
+    background: #FFFFFF !important;
+    background-image: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+  }
+
+  /* Esconde o site inteiro */
+  body > .phone-frame,
+  body > .sticky-mini-header,
+  body > .floating-actions,
+  body > .back-top,
+  body > .toast-container,
+  body > .chat-modal,
+  body > .link-confirm-modal,
+  body > #focusedNavCompact,
+  body > .pdf-toolbar,
+  body > .pdf-progress-overlay,
+  body > .pdf-toast {
+    display: none !important;
+  }
+
+  /* Reset do wrapper do preview */
+  body.pdf-preview {
+    background: #FFFFFF !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  .pdf-pages {
+    display: block !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Cada página vira uma folha A4 */
+  .pdf-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .pdf-page:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+
+  /* Configuração da página A4 */
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}

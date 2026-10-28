@@ -1,0 +1,154 @@
+/* ================= LAYOUT GLOBAL, RESET & WALLPAPER TECH ================= */
+:root {
+  --orange: #FF7A2E;
+  --orange-dark: #D9540A;
+  --orange-deep: #B8420A;
+  --cream: #FFF7EE;
+  --ink: #1F1B18;
+  --gray: #5F5953;
+  --card-bg: #FFFFFF;
+  --border-light: #BFB09D; /* Borda com contraste real */
+  --border-focus: #F3C49B;
+  --radius-xl: 36px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --status-active: #10b981;
+  --status-refining: #f59e0b;
+  --status-testing: #6366f1;
+  --status-done: #0284c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ECE5DD; /* Fundo bege quente clássico da mesa */
+  /* Pattern Tech Doodle Estilo WhatsApp (Terminal, Chip, Gamepad, Database, Code, Bug) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' width='400' height='400'%3E%3Cg fill='none' stroke='%23CBBFA8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.45'%3E%3C!-- Terminal --%3E%3Crect x='30' y='30' width='44' height='30' rx='4'/%3E%3Cpath d='M38 42 L44 47 L38 52 M48 52 L56 52'/%3E%3C!-- Gamepad --%3E%3Cpath d='M230 45 C230 38 238 32 250 32 C262 32 270 38 270 45 L274 65 C275 70 270 76 264 76 L258 76 L254 70 L246 70 L242 76 L236 76 C230 76 225 70 226 65 Z'/%3E%3Cpath d='M238 48 L244 48 M241 45 L241 51'/%3E%3Ccircle cx='258' cy='46' r='1.5' fill='%23AFA290'/%3E%3Ccircle cx='263' cy='51' r='1.5' fill='%23AFA290'/%3E%3C!-- Chip/CPU --%3E%3Crect x='135' y='140' width='36' height='36' rx='3'/%3E%3Crect x='143' y='148' width='20' height='20' rx='1' fill='%23AFA290' fill-opacity='0.15'/%3E%3Cline x1='141' y1='134' x2='141' y2='140'/%3E%3Cline x1='153' y1='134' x2='153' y2='140'/%3E%3Cline x1='165' y1='134' x2='165' y2='140'/%3E%3Cline x1='141' y1='176' x2='141' y2='182'/%3E%3Cline x1='153' y1='176' x2='153' y2='182'/%3E%3Cline x1='165' y1='176' x2='165' y2='182'/%3E%3C!-- Database --%3E%3Cellipse cx='340' cy='150' rx='20' ry='7'/%3E%3Cpath d='M320 150 L320 170 C320 174 329 177 340 177 C351 177 360 174 360 170 L360 150'/%3E%3Cpath d='M320 160 C320 164 329 167 340 167 C351 167 360 164 360 160'/%3E%3C!-- Code Tag --%3E%3Cpath d='M45 250 L32 262 L45 274 M65 250 L78 262 L65 274 M58 246 L52 278'/%3E%3C!-- Robot Head --%3E%3Crect x='230' y='250' width='38' height='30' rx='6'/%3E%3Ccircle cx='241' cy='263' r='3' fill='%23AFA290'/%3E%3Ccircle cx='257' cy='263' r='3' fill='%23AFA290'/%3E%3Cline x1='249' y1='250' x2='249' y2='242'/%3E%3Ccircle cx='249' cy='240' r='2' fill='%23AFA290'/%3E%3C!-- Bug / QA --%3E%3Cellipse cx='145' cy='345' rx='10' ry='13'/%3E%3Ccircle cx='145' cy='330' r='5'/%3E%3Cpath d='M135 340 L125 336 M155 340 L165 336 M135 348 L123 350 M155 348 L167 350 M137 355 L127 362 M153 355 L163 362'/%3E%3C!-- Coffee Cup --%3E%3Cpath d='M330 335 L330 355 C330 362 336 366 345 366 C354 366 360 362 360 355 L360 335 Z'/%3E%3Cpath d='M360 340 C366 340 370 344 370 348 C370 352 366 356 360 356'/%3E%3Cline x1='326' y1='370' x2='364' y2='370'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  padding: 24px 10px 90px 10px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.phone-frame {
+  width: 820px;
+  max-width: 100%;
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  overflow: visible; /* Permite que o Header Sticky funcione */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  position: relative;
+  margin: 20px auto;
+}
+
+/* ================= SHEET GRID ================= */
+.sheet {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  margin-top: 0;
+  position: relative;
+  z-index: 3;
+  padding: 26px 24px 34px 24px;
+}
+
+.sheet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.col-left, .col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Cartões flutuando sobre o papel: branco puro, bordas nítidas e sombra leve */
+.card {
+  background: #F8FAFC !important; /* Fundo cinza gelo extremamente descansativo */
+  border: 1px solid #E2E8F0 !important; /* Borda fina e precisa */
+  border-radius: var(--radius-md) !important;
+  padding: 16px 18px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* ================= LINK CONFIRM MODAL ================= */
+.link-confirm-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(2px);
+}
+.link-confirm-modal.open {
+  display: flex;
+}
+
+.link-confirm-box {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 26px 22px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: modalPop 0.25s ease;
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.link-confirm-icon { font-size: 32px; color: var(--orange-dark); margin-bottom: 10px; }
+.link-confirm-box h3 { margin: 0 0 6px 0; font-size: 16px; font-weight: 700; color: var(--ink); }
+.link-confirm-box p { margin: 0 0 18px 0; font-size: 12px; color: var(--gray); line-height: 1.5; }
+.link-confirm-actions { display: flex; gap: 10px; justify-content: center; }
+.link-confirm-btn { padding: 10px 18px; border-radius: 20px; font-weight: 600; font-size: 12px; cursor: pointer; border: none; }
+.link-confirm-cancel { background: var(--cream); border: 1px solid var(--border-focus); color: var(--orange-deep); }
+.link-confirm-open { background: var(--orange-dark); color: #fff; }
+.link-confirm-open:hover { background: var(--orange-deep); }
+
+/* ================= TOAST SYSTEM ================= */
+.toast-container {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.toast {
+  background: var(--ink);
+  color: #fff;
+  padding: 9px 16px;
+  border-radius: 30px;
+  font-size: 11.5px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: toastIn 0.3s ease, toastOut 0.3s ease 2.2s forwards;
+}
+.toast i { color: var(--orange); }
+@keyframes toastIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes toastOut { from { opacity: 1; } to { opacity: 0; transform: translateY(-10px); } }

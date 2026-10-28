@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "candidato": "Marcos Eduardo da Silva dos Reis",
+    "versao": "3.1.0-rag-mesh",
+    "politica_salarial": "Nenhum chunk pode conter valor, faixa ou moeda.",
+    "descricao": "Chunks de fallback semântico, usados quando o roteamento por órbita/faceta não atinge confiança suficiente."
+  },
+  "chunks": [
+    {
+      "id": "perfil_resumo",
+      "orbit": "sobre_marcos",
+      "category": "Sobre",
+      "title": "Resumo Profissional",
+      "keywords": [
+        "quem",
+        "sobre",
+        "marcos",
+        "resumo",
+        "perfil",
+        "analista",
+        "ti",
+        "suporte",
+        "qa",
+        "candidato"
+      ],
+      "content": "Marcos Eduardo da Silva dos Reis, 35 anos, de Brazlândia/DF. Analista de TI com mais de 10 anos resolvendo problema técnico real em suporte, manutenção de hardware e software, redes e diagnóstico industrial. Em transição estruturada para TI, com foco em Suporte Técnico N1/N2/N3, QA/Análise de Qualidade, Análise de TI e Desenvolvimento Assistido por IA. Portfólio prático e recente: trilogia de games em TypeScript, ferramentas web e currículo interativo com busca semântica (RAG). Familiaridade com Git, GitHub, Vercel, Firebase, APIs REST, Windows e Linux. Neurodivergente com altas habilidades: hiperfoco, atenção a detalhe e depuração.",
+      "source": "Perfil · Resumo"
+    },
+    {
+      "id": "contato",
+      "orbit": "contato",
+      "category": "Contato",
+      "title": "Contatos",
+      "keywords": [
+        "contato",
+        "email",
+        "telefone",
+        "whatsapp",
+        "linkedin",
+        "github",
+        "localizacao",
+        "brazlandia",
+        "brasilia"
+      ],
+      "content": "Telefone/WhatsApp: (61) 98222-7804\nEmail: marcos.eduardo@myyahoo.com\nGitHub: https://github.com/MarcozEduardo\nLinkedIn: https://www.linkedin.com/in/sir-marcos-eduardo\nLocalização: Brazlândia, Distrito Federal.",
+      "source": "Contato"
+    },
+    {
+      "id": "neurodivergencia",
+      "orbit": "neurodivergencia",
+      "category": "Sobre",
+      "title": "Neurodivergência e altas habilidades",
+      "keywords": [
+        "neurodivergente",
+        "neurodivergencia",
+        "altas habilidades",
+        "hiperfoco",
+        "atencao",
+        "detalhe",
+        "debugging",
+        "pcd",
+        "tea",
+        "laudo",
+        "afirmativa"
+      ],
+      "content": "Marcos é neurodivergente com altas habilidades: hiperfoco direcionado, absorção rápida de conceito, visão em cascata de sistema, atenção cirúrgica a detalhe e depuração persistente. Para processos com vagas afirmativas, possui a documentação necessária (laudo TEA nível 1, Lei 12.764/2012), apresentada quando solicitada.",
+      "source": "Perfil · Neurodivergência"
+    },
+    {
+      "id": "nota_autor",
+      "orbit": "projetos",
+      "category": "Projetos",
+      "title": "Nota do Autor, projetos em refinamento",
+      "keywords": [
+        "nota",
+        "orquestracao",
+        "mcp",
+        "ferramenta interna",
+        "inacabado",
+        "aberto",
+        "refino"
+      ],
+      "content": "Vários projetos estão em fase de refinamento simultâneo. Nos últimos meses, parte do tempo foi dedicada à construção de uma ferramenta interna de orquestração pessoal (misto de MCP com camada própria), utilizada como ambiente principal de desenvolvimento. Ela nasceu ferramenta por ferramenta durante a criação dos projetos, permitindo retomá-los e finalizá-los com alta velocidade e qualidade.",
+      "source": "Nota do Autor"
+    },
+    {
+      "id": "skills",
+      "orbit": "skills",
+      "category": "Habilidades",
+      "title": "Habilidades e competências",
+      "keywords": [
+        "skills",
+        "stack",
+        "react",
+        "typescript",
+        "javascript",
+        "python",
+        "sql",
+        "ia",
+        "qa",
+        "suporte",
+        "redes",
+        "linux",
+        "git"
+      ],
+      "content": "IA & Orquestração: Prompt Engineering, RAG (busca vetorial), benchmarking de modelos, orquestração de agentes, automação, MCP.\nDesenvolvimento & Web: TypeScript, React, JavaScript ES6+, Python, SQL, HTML5/CSS3, REST/JSON, Canvas 2D, WebRTC, Firebase.\nSuporte & Qualidade: Suporte N1/N2/N3, diagnóstico HW/SW, redes TCP/IP, debugging, testes de usabilidade, Windows e Linux.\nFerramentas & Design: Git e GitHub, Vercel, Netlify, Supabase, Firebase, CorelDRAW/vetorial, Photoshop, Pacote Office.",
+      "source": "Habilidades & Competências"
+    },
+    {
+      "id": "formacao",
+      "orbit": "formacao",
+      "category": "Formação",
+      "title": "Formação acadêmica",
+      "keywords": [
+        "formacao",
+        "unyleya",
+        "cs50",
+        "harvard",
+        "graduacao",
+        "ead",
+        "curso",
+        "escolaridade"
+      ],
+      "content": "Graduação em Tecnologia da Informação (EAD), Faculdade Unyleya, em andamento.\nCS50: Introduction to Computer Science, Harvard University, estudo contínuo e independente.\nBase técnica anterior: Lógica de Programação e Montagem/Manutenção de Computadores (2007), Access e SQL (2009), formação para instrutores (2011), matérias de Sistemas de Informação na UCB (2011), Web Designer e Java (2014), Python (2015).",
+      "source": "Formação Acadêmica"
+    },
+    {
+      "id": "experiencia",
+      "orbit": "experiencia",
+      "category": "Experiência",
+      "title": "Trajetória profissional",
+      "keywords": [
+        "experiencia",
+        "carreira",
+        "bella arte",
+        "cnc",
+        "fabricart",
+        "prepara",
+        "midori",
+        "friends",
+        "autonomo"
+      ],
+      "content": "2024–Atual: Desenvolvedor Web Assistido por IA e QA, projetos independentes com deploys públicos.\nNov/2018–Fev/2024: Projetista Industrial CNC e Manutenção Técnica, Bella Arte Indústria, Vicente Pires/DF (5 anos e 4 meses).\nAbr/2016–Nov/2018: Assistente de Logística, TI Operacional e Administrativo, Fabricart Indústria, Valparaíso de Goiás/GO (2 anos e 8 meses).\nAgo/2014–Mar/2016: Instrutor de Informática e Suporte Técnico, Instituto Midori / Prepara Cursos, Taguatinga/DF (1 ano e 8 meses).\n2011–2014: Técnico de Manutenção e Suporte de TI autônomo, Distrito Federal (3 anos).\n2004–2008: Estagiário e instrutor, Friends Informática, Ceilândia/DF.\nEm fábrica, cerca de 8 anos (de 2015 a 2023).",
+      "source": "Experiência Profissional"
+    },
+    {
+      "id": "recrutamento",
+      "orbit": "recrutamento",
+      "category": "Recrutamento",
+      "title": "Condições de contratação",
+      "keywords": [
+        "vaga",
+        "contratacao",
+        "clt",
+        "pj",
+        "remoto",
+        "disponibilidade",
+        "inicio",
+        "cargo",
+        "pcd"
+      ],
+      "content": "Posições de interesse: Suporte Técnico N1/N2/N3, QA/Análise de Qualidade, Analista de TI e Desenvolvimento Assistido por IA. Modelo preferencial remoto, com abertura para híbrido e presencial no Distrito Federal. Disponibilidade imediata. Remuneração a combinar, compatível com a faixa praticada para a posição.",
+      "source": "Recrutamento"
+    },
+    {
+      "id": "bobby_conceito",
+      "orbit": "meta_ia",
+      "category": "Meta",
+      "title": "Bobby, conceito e assistente",
+      "keywords": [
+        "bobby",
+        "rag",
+        "bot",
+        "assistente",
+        "chat",
+        "conceito",
+        "hiperfoco",
+        "motor",
+        "busca"
+      ],
+      "content": "Bobby é o conceito de trabalho do Marcos: hiperfoco direcionado, contexto mapeado em camadas e resposta só depois de entender o problema inteiro. Como software, é um assistente RAG client-side em JavaScript puro: normalização de texto, tokenização com stopwords e sinônimos, fuzzy matching por Levenshtein e Dice, roteamento por órbitas temáticas, detecção de facetas, memória de sessão com anti-repetição e banco de respostas em JSON. Não usa IA generativa nem API externa.",
+      "source": "Assistente · Bobby"
+    },
+    {
+      "id": "transparencia",
+      "orbit": "transparencia",
+      "category": "Transparência",
+      "title": "Lacunas declaradas",
+      "keywords": [
+        "limitacao",
+        "lacuna",
+        "certificacao",
+        "aws",
+        "docker",
+        "cypress",
+        "itil",
+        "ingles",
+        "ramp up",
+        "qa automatizado",
+        "experiencia formal"
+      ],
+      "content": "Pontos declarados abertamente: sem experiência formal registrada em equipe de TI (a vivência de código é de portfólio próprio, público e verificável); sem certificações de mercado (ITIL, Microsoft, Cisco, AWS); QA automatizado (Cypress, Playwright, Selenium) ainda em formação; cloud corporativa (AWS, Azure, GCP), Docker e Kubernetes no nível de conceito e não de operação; Git no fluxo padrão, sem domínio de recursos avançados; não fala inglês, mas sabe se virar e estuda alguns conteúdos em inglês para ampliar vocabulário.",
+      "source": "Perfil · Transparência"
+    }
+  ]
+}

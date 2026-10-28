@@ -1,0 +1,722 @@
+{
+  "orbit": "projetos",
+  "label": "Projetos e Portfólio",
+  "structure": "camadas 15 + 10 + 10 + 10 + 5 = 50 nós; cada nó de camada N+1 aprofunda um nó da camada N",
+  "nodes": [
+    {
+      "id": "pr01",
+      "layer": 1,
+      "parent": null,
+      "label": "os jogos publicados",
+      "question": "Quais projetos estão publicados e jogáveis hoje?",
+      "variants": [
+        "o que já está no ar",
+        "quais jogos posso jogar agora"
+      ],
+      "answer": "Três jogos estão publicados e jogáveis: **A Fuga de Bobby**, **A Viagem de Bobby** e **Dama Orbital**, todos na Vercel. **Quadra 21** e **O Estagiário** estão em refinamento final. O gerador de slides ABNT da Unyleya também está publicado."
+    },
+    {
+      "id": "pr02",
+      "layer": 1,
+      "parent": null,
+      "label": "a trilogia Bobby",
+      "question": "O que é a trilogia Bobby?",
+      "variants": [
+        "me explica a trilogia",
+        "quais são os três jogos do Bobby"
+      ],
+      "answer": "É uma sequência de três jogos com o mesmo personagem: **A Fuga de Bobby** (plataforma retrô), **A Viagem de Bobby** (shoot-em-up espacial) e **Dama Orbital** (damas multiplayer entre navegadores). Os três são em TypeScript e estão publicados."
+    },
+    {
+      "id": "pr03",
+      "layer": 1,
+      "parent": null,
+      "label": "as ferramentas",
+      "question": "Quais ferramentas ele construiu além dos jogos?",
+      "variants": [
+        "quais web apps ele fez",
+        "ferramentas e aplicativos"
+      ],
+      "answer": "Três ferramentas: **DirectSend** (transferência de arquivos ponto a ponto por QR Code), **Marketbobby** (lista de mercado com IA e OCR) e **DevOrador** (auditoria de interface pelo DOM para ajudar a IA a localizar código)."
+    },
+    {
+      "id": "pr04",
+      "layer": 1,
+      "parent": null,
+      "label": "o projeto mais ambicioso",
+      "question": "Qual é o projeto mais ambicioso dele?",
+      "variants": [
+        "qual o maior desafio de projeto",
+        "projeto mais complexo"
+      ],
+      "answer": "Ele descreve o **Núcleo Nexus** como o projeto mais ambicioso: um cérebro de bot modular e reutilizável, com memória de trabalho e memória pessoal, pensado para funcionar sem depender de API paga.",
+      "entity": "proj_nexus"
+    },
+    {
+      "id": "pr05",
+      "layer": 1,
+      "parent": null,
+      "label": "o LAR",
+      "question": "O que é o LAR?",
+      "variants": [
+        "o que é o Local Agent Runtime",
+        "qual é a ferramenta interna dele"
+      ],
+      "answer": "O **LAR (Local Agent Runtime)** é o runtime de orquestração agêntica que ele construiu para ser o próprio ambiente de desenvolvimento. Roda localmente, conversa com backend Node, executa mais de 150 ferramentas nativas por protocolo próprio e aceita extensão via MCP. Fica reservado por enquanto. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "entity": "proj_lar"
+    },
+    {
+      "id": "pr06",
+      "layer": 1,
+      "parent": null,
+      "label": "o App Franzinha",
+      "question": "O que é o App Franzinha?",
+      "variants": [
+        "sistema de loja com ia",
+        "o que é o franzinha"
+      ],
+      "answer": "É um sistema completo de loja (estoque, caixa e cadastro de cliente) com um agente de IA embarcado no chat do próprio sistema, trabalhando junto com o operador. A interface está bem evoluída; o foco atual é o núcleo de inteligência.",
+      "entity": "proj_franzinha"
+    },
+    {
+      "id": "pr07",
+      "layer": 1,
+      "parent": null,
+      "label": "por que há projetos em refino",
+      "question": "Por que há vários projetos em refino ao mesmo tempo?",
+      "variants": [
+        "por que tanta coisa inacabada",
+        "por que não terminou os projetos"
+      ],
+      "answer": "Porque nos últimos meses ele dedicou parte do tempo a construir uma ferramenta interna de orquestração (misto de MCP com camada própria), que hoje é o ambiente principal de desenvolvimento dele. Ela nasceu ferramenta por ferramenta durante os projetos e agora permite retomá-los com mais velocidade. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+    },
+    {
+      "id": "pr08",
+      "layer": 1,
+      "parent": null,
+      "label": "os projetos antigos",
+      "question": "O que ele fazia antes dos projetos web?",
+      "variants": [
+        "projetos de antigamente",
+        "o que ele criava antes de programar"
+      ],
+      "answer": "Muito antes do código formal, ele já fazia mods de jogos, mapas, tradução de jogos em comunidade, scripts para o Windows e edição de vídeo e áudio amador. Era engenharia reversa por curiosidade: entender como as coisas funcionam por dentro."
+    },
+    {
+      "id": "pr09",
+      "layer": 1,
+      "parent": null,
+      "label": "o papel da IA nos projetos",
+      "question": "Como a IA participa dos projetos dele?",
+      "variants": [
+        "a ia faz os projetos",
+        "ele usa ia para programar"
+      ],
+      "answer": "A IA é **copiloto**, não autora. Ele define o problema e o comportamento esperado, orienta a ferramenta, lê e interpreta o código, decide os ajustes, depura e valida. O resultado está publicado e pode ser testado. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "ia_copiloto"
+    },
+    {
+      "id": "pr10",
+      "layer": 1,
+      "parent": null,
+      "label": "onde testar os projetos",
+      "question": "Onde posso ver o código ou testar os projetos?",
+      "variants": [
+        "tem link dos projetos",
+        "onde estão os repositórios"
+      ],
+      "answer": "Os jogos ficam na Vercel: game-a-fuga-de-bobby-final.vercel.app, game-a-viagem-de-bobby.vercel.app e dama-orbital.vercel.app. DirectSend e Marketbobby estão no GitHub (github.com/MarcozEduardo). O gerador ABNT está em programa-de-extens-o-institucional.vercel.app."
+    },
+    {
+      "id": "pr11",
+      "layer": 1,
+      "parent": null,
+      "label": "as tecnologias do portfólio",
+      "question": "Quais tecnologias aparecem com mais frequência no portfólio?",
+      "variants": [
+        "qual a stack dos projetos",
+        "tecnologias usadas nos projetos"
+      ],
+      "answer": "TypeScript e Canvas 2D nos jogos; WebRTC e Firebase no multiplayer e no P2P; JavaScript nas ferramentas; IA e OCR no Marketbobby; Node no LAR. Deploy na Vercel e repositórios no GitHub.",
+      "facet": "tecnologias"
+    },
+    {
+      "id": "pr12",
+      "layer": 1,
+      "parent": null,
+      "label": "o DevOrador",
+      "question": "O que é o DevOrador e para que serve?",
+      "variants": [
+        "auditor de interface",
+        "ferramenta de dom para ia"
+      ],
+      "answer": "É uma ferramenta injetável que audita a interface pelo DOM, mapeia os atributos do elemento e facilita que a IA localize o trecho certo do código para editar. Está funcional e é usada no dia a dia dele.",
+      "entity": "proj_devorador"
+    },
+    {
+      "id": "pr13",
+      "layer": 1,
+      "parent": null,
+      "label": "o projeto da Unyleya",
+      "question": "O que é o projeto acadêmico da Unyleya?",
+      "variants": [
+        "gerador abnt",
+        "extensão institucional"
+      ],
+      "answer": "É o sistema da Extensão Institucional Unyleya: gera slides interativos com temas personalizáveis, aplica as regras ABNT e exporta em PPT. Está concluído e publicado na Vercel.",
+      "entity": "proj_unyleya"
+    },
+    {
+      "id": "pr14",
+      "layer": 1,
+      "parent": null,
+      "label": "este currículo como projeto",
+      "question": "Este currículo interativo também é um projeto?",
+      "variants": [
+        "esse chat é um projeto dele",
+        "o currículo foi feito por ele"
+      ],
+      "answer": "Sim. É um currículo em HTML, CSS e JavaScript modulares, com motor RAG embarcado no navegador: busca semântica, filtro de moderação, memória de sessão e exportação em PDF A4. Eu sou a demonstração ao vivo dessa arquitetura.",
+      "entity": "proj_curriculo_rag"
+    },
+    {
+      "id": "pr15",
+      "layer": 1,
+      "parent": null,
+      "label": "os projetos reservados",
+      "question": "Quais projetos ele mantém reservados e por quê?",
+      "variants": [
+        "o que ele não publicou",
+        "projetos privados"
+      ],
+      "answer": "O LAR, o App Franzinha, o Núcleo Nexus e o construtor de núcleos neurais ficam reservados por enquanto. Ele acredita que alguns podem virar produto próprio, então prefere não expor antes da hora. Em entrevista, pode demonstrá-los."
+    },
+    {
+      "id": "pr16",
+      "layer": 2,
+      "parent": "pr01",
+      "label": "A Fuga de Bobby",
+      "question": "O que acontece em A Fuga de Bobby?",
+      "variants": [
+        "como é o jogo a fuga de bobby",
+        "do que se trata a fuga"
+      ],
+      "answer": "É uma plataforma retrô: o Bobby está preso numa fortaleza com um boss carcereiro e precisa fugir. Tem três estágios de dano, ciclo dia/noite e powerups. Para sair, ele pega a chave, aciona o rádio e chama o foguete. O vilão é o SOCRAM, derrotado no final.",
+      "entity": "proj_fuga_bobby"
+    },
+    {
+      "id": "pr17",
+      "layer": 2,
+      "parent": "pr02",
+      "label": "A Viagem de Bobby",
+      "question": "Como A Viagem de Bobby continua a história?",
+      "variants": [
+        "o que é a viagem de bobby",
+        "segundo jogo da trilogia"
+      ],
+      "answer": "O Bobby segue no mesmo foguete em que fugiu: o jogo vira um shoot-em-up espacial. O foguete atira, cometas se dilaceram, a Terra se aproxima em sprite e a cutscene final mira no Brasil. O exército do SOCRAM ainda dura mais dois jogos.",
+      "entity": "proj_viagem_bobby"
+    },
+    {
+      "id": "pr18",
+      "layer": 2,
+      "parent": "pr03",
+      "label": "o DirectSend",
+      "question": "Como funciona o DirectSend?",
+      "variants": [
+        "o que o directsend faz",
+        "transferência por qr code"
+      ],
+      "answer": "Dois dispositivos se emparelham por QR Code e o arquivo vai direto de um para o outro, sem servidor intermediário. Nasceu como teste de integração entre WebRTC e Firebase e virou projeto próprio, ainda em testes.",
+      "entity": "proj_directsend"
+    },
+    {
+      "id": "pr19",
+      "layer": 2,
+      "parent": "pr04",
+      "label": "a memória do Nexus",
+      "question": "Como o Núcleo Nexus vai lidar com memória?",
+      "variants": [
+        "memória do nexus",
+        "o nexus aprende com o uso"
+      ],
+      "answer": "A proposta é ter dois tipos de memória: a **de trabalho** (do dia e da conversa) e a **pessoal**, que o sistema vai personalizando com o uso. A ideia é o bot lembrar quem é quem e o contexto de cada pessoa.",
+      "entity": "proj_nexus"
+    },
+    {
+      "id": "pr20",
+      "layer": 2,
+      "parent": "pr05",
+      "label": "LAR versus CLI e MCP",
+      "question": "O LAR substitui ferramentas como CLI ou MCP?",
+      "variants": [
+        "o lar é um cli",
+        "o lar é só mcp"
+      ],
+      "answer": "Nem CLI, nem só MCP: ele descreve o LAR como a camada acima dos dois. Executa ferramentas nativas por protocolo próprio e ainda aceita extensão via MCP quando precisa.",
+      "entity": "proj_lar"
+    },
+    {
+      "id": "pr21",
+      "layer": 2,
+      "parent": "pr06",
+      "label": "a origem do Franzinha",
+      "question": "De onde veio a ideia do App Franzinha?",
+      "variants": [
+        "por que ele fez o franzinha",
+        "motivação do sistema de loja"
+      ],
+      "answer": "De anos vendo a dificuldade real de uma loja de bairro de dois amigos e da própria vivência de quem toca comércio pequeno. Ele quis um sistema completo com IA ajudando o operador, sem depender de API paga.",
+      "entity": "proj_franzinha"
+    },
+    {
+      "id": "pr22",
+      "layer": 2,
+      "parent": "pr07",
+      "label": "o efeito da ferramenta interna",
+      "question": "Essa ferramenta interna de orquestração atrapalhou ou ajudou?",
+      "variants": [
+        "valeu a pena construir a ferramenta",
+        "a ferramenta interna compensou"
+      ],
+      "answer": "Na avaliação dele, ajudou: custou tempo de portfólio no curto prazo, mas virou o ambiente principal de desenvolvimento e permite retomar e finalizar os projetos com alta velocidade e qualidade."
+    },
+    {
+      "id": "pr23",
+      "layer": 2,
+      "parent": "pr08",
+      "label": "os mods que ele fazia",
+      "question": "Que tipo de mods ele fazia?",
+      "variants": [
+        "mods de que jogos",
+        "ele modificava jogos"
+      ],
+      "answer": "No Age of Empires II construiu uma civilização completa, com unidades refeitas. No Counter-Strike 1.6 refez o menu, trocou personagens, melhorou skins e construiu dois mapas do zero no editor Hammer.",
+      "entity": "proj_mods_antigos"
+    },
+    {
+      "id": "pr24",
+      "layer": 2,
+      "parent": "pr09",
+      "label": "se ele entende o código",
+      "question": "Ele entende o código que a IA sugere?",
+      "variants": [
+        "ele só copia o que a ia gera",
+        "ele lê o código"
+      ],
+      "answer": "Sim. Leitura crítica de código é um dos pontos fortes dele: entende o fluxo, identifica erro e sabe o que precisa mudar. Ele mesmo diz que a memória funciona mais por reconhecimento do que por invocação, e é por isso que a IA encaixa bem como copiloto. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "facet": "ia_copiloto"
+    },
+    {
+      "id": "pr25",
+      "layer": 2,
+      "parent": "pr10",
+      "label": "o link do Dama Orbital",
+      "question": "Dama Orbital tem link?",
+      "variants": [
+        "onde jogo dama orbital",
+        "link da dama orbital"
+      ],
+      "answer": "Tem: **dama-orbital.vercel.app**. É o terceiro jogo da trilogia, multiplayer entre navegadores com pareamento por QR Code.",
+      "entity": "proj_dama_orbital"
+    },
+    {
+      "id": "pr26",
+      "layer": 3,
+      "parent": "pr16",
+      "label": "as tecnologias do Fuga",
+      "question": "Em que A Fuga de Bobby foi feito?",
+      "variants": [
+        "tecnologia do fuga de bobby",
+        "stack do primeiro jogo"
+      ],
+      "answer": "Em **TypeScript** com **Canvas 2D**, publicado na **Vercel**. É a mesma base técnica dos outros jogos da trilogia.",
+      "entity": "proj_fuga_bobby"
+    },
+    {
+      "id": "pr27",
+      "layer": 3,
+      "parent": "pr17",
+      "label": "o que muda na Viagem",
+      "question": "O que torna A Viagem de Bobby diferente do primeiro jogo?",
+      "variants": [
+        "diferença entre fuga e viagem",
+        "o que muda no segundo jogo"
+      ],
+      "answer": "O gênero: o primeiro é plataforma, o segundo é shoot-em-up espacial. A base técnica é a mesma (TypeScript e Canvas 2D), mas a dinâmica muda para tiro, cometas que se partem e uma cutscene final.",
+      "entity": "proj_viagem_bobby"
+    },
+    {
+      "id": "pr28",
+      "layer": 3,
+      "parent": "pr18",
+      "label": "servidor no DirectSend",
+      "question": "O DirectSend precisa de servidor?",
+      "variants": [
+        "directsend usa nuvem",
+        "os arquivos passam por servidor"
+      ],
+      "answer": "Não há servidor intermediário para o arquivo: a transferência é ponto a ponto entre os dispositivos emparelhados. Essa é a proposta central do projeto.",
+      "entity": "proj_directsend"
+    },
+    {
+      "id": "pr29",
+      "layer": 3,
+      "parent": "pr19",
+      "label": "o Modo Sala de Estudos",
+      "question": "O que é o Modo Sala de Estudos do Nexus?",
+      "variants": [
+        "sala de estudos do nexus",
+        "quando o nexus usa api"
+      ],
+      "answer": "É o único modo em que uma API externa entra: com autorização, o sistema pesquisa um tema novo, monta os blocos de contexto e devolve ao núcleo, que passa a responder em cima dessa nova base. No uso padrão, não depende de API paga.",
+      "entity": "proj_nexus"
+    },
+    {
+      "id": "pr30",
+      "layer": 3,
+      "parent": "pr20",
+      "label": "as ferramentas do LAR",
+      "question": "Quantas ferramentas o LAR integra?",
+      "variants": [
+        "o que o lar executa",
+        "integrações do lar"
+      ],
+      "answer": "Mais de 150 ferramentas nativas por protocolo próprio, cobrindo Git, Vercel, Firebase, browser e filesystem, com extensão adicional via MCP.",
+      "entity": "proj_lar"
+    },
+    {
+      "id": "pr31",
+      "layer": 3,
+      "parent": "pr21",
+      "label": "a pausa do Franzinha",
+      "question": "Por que o App Franzinha foi pausado?",
+      "variants": [
+        "o franzinha está parado",
+        "status do franzinha"
+      ],
+      "answer": "Ele pausou o refinamento da interface, que já estava quase pronta, para focar no cérebro do sistema. Na visão dele, o produto só faz sentido se o núcleo de inteligência funcionar de verdade.",
+      "entity": "proj_franzinha"
+    },
+    {
+      "id": "pr32",
+      "layer": 3,
+      "parent": "pr22",
+      "label": "o que será retomado",
+      "question": "Quais projetos ele pretende retomar com essa ferramenta?",
+      "variants": [
+        "o que falta terminar",
+        "quais projetos voltam primeiro"
+      ],
+      "answer": "Os que estão em refino: Quadra 21 (cerca de 90%), O Estagiário (cerca de 80%), DirectSend (em testes) e Marketbobby. A base não define a ordem exata de retomada."
+    },
+    {
+      "id": "pr33",
+      "layer": 3,
+      "parent": "pr23",
+      "label": "os mapas de Counter-Strike",
+      "question": "Ele também criou mapas?",
+      "variants": [
+        "mapas no hammer",
+        "quais mapas ele fez"
+      ],
+      "answer": "Sim, dois mapas construídos do zero no editor Hammer para o Counter-Strike 1.6: um do Centro de Ensino 2, onde estudou, e outro da Friends Informática, onde trabalhou. Os dois existiram dentro do jogo por um tempo.",
+      "entity": "proj_mods_antigos"
+    },
+    {
+      "id": "pr34",
+      "layer": 3,
+      "parent": "pr24",
+      "label": "quando a IA erra",
+      "question": "O que ele faz quando a IA erra?",
+      "variants": [
+        "e se a ia gerar código errado",
+        "como ele corrige a ia"
+      ],
+      "answer": "Lê o retorno, valida o comportamento, ajusta a lógica e itera até funcionar. O DevOrador nasceu justamente para dar à IA a localização exata do código, reduzindo esse tipo de erro.",
+      "facet": "ia_copiloto"
+    },
+    {
+      "id": "pr35",
+      "layer": 3,
+      "parent": "pr25",
+      "label": "o multiplayer do Dama Orbital",
+      "question": "Dama Orbital é multiplayer de que forma?",
+      "variants": [
+        "como funciona o multiplayer da dama",
+        "dama orbital online"
+      ],
+      "answer": "Navegador contra navegador: os jogadores se emparelham por QR Code e jogam em tempo real. A base informa TypeScript, WebRTC e Firebase como tecnologias.",
+      "entity": "proj_dama_orbital"
+    },
+    {
+      "id": "pr36",
+      "layer": 4,
+      "parent": "pr26",
+      "label": "engine nos jogos",
+      "question": "Os jogos usam alguma engine pronta?",
+      "variants": [
+        "foi feito em unity",
+        "usa godot ou phaser"
+      ],
+      "answer": "A base informa TypeScript e Canvas 2D e não cita engine de terceiros. Não vou afirmar detalhes do motor além disso; em entrevista ele pode mostrar a estrutura.",
+      "entity": "proj_fuga_bobby"
+    },
+    {
+      "id": "pr37",
+      "layer": 4,
+      "parent": "pr27",
+      "label": "status da Viagem",
+      "question": "A Viagem de Bobby está jogável?",
+      "variants": [
+        "posso jogar a viagem de bobby",
+        "link da viagem"
+      ],
+      "answer": "Sim, está publicada e jogável em **game-a-viagem-de-bobby.vercel.app**.",
+      "entity": "proj_viagem_bobby"
+    },
+    {
+      "id": "pr38",
+      "layer": 4,
+      "parent": "pr28",
+      "label": "tecnologias do DirectSend",
+      "question": "Que tecnologias o DirectSend usa?",
+      "variants": [
+        "stack do directsend",
+        "directsend foi feito em que"
+      ],
+      "answer": "JavaScript, WebRTC e QR Code, com a integração com Firebase validada no início do projeto.",
+      "entity": "proj_directsend"
+    },
+    {
+      "id": "pr39",
+      "layer": 4,
+      "parent": "pr29",
+      "label": "API paga no Nexus",
+      "question": "O Nexus depende de API paga?",
+      "variants": [
+        "o nexus usa chatgpt",
+        "precisa pagar api para o nexus"
+      ],
+      "answer": "No funcionamento padrão, não. Ele responde com base própria, fuzzy matching e contexto em órbitas. A consulta externa só acontece no Modo Sala de Estudos, quando autorizada.",
+      "entity": "proj_nexus"
+    },
+    {
+      "id": "pr40",
+      "layer": 4,
+      "parent": "pr30",
+      "label": "MCP no LAR",
+      "question": "O LAR aceita extensão via MCP?",
+      "variants": [
+        "o lar é compatível com mcp",
+        "lar e mcp"
+      ],
+      "answer": "Sim. Além do protocolo próprio das ferramentas nativas, ele aceita extensão via MCP.",
+      "entity": "proj_lar"
+    },
+    {
+      "id": "pr41",
+      "layer": 4,
+      "parent": "pr31",
+      "label": "a IA do Franzinha",
+      "question": "Como a IA do App Franzinha funciona?",
+      "variants": [
+        "o bot do franzinha usa api",
+        "ia embarcada do franzinha"
+      ],
+      "answer": "O agente fica dentro do chat do sistema e não depende de API key: tem RAG próprio, fuzzy matching e um núcleo de contexto em camadas, com palavras ligadas em órbitas onde um contexto chama o outro.",
+      "entity": "proj_franzinha"
+    },
+    {
+      "id": "pr42",
+      "layer": 4,
+      "parent": "pr32",
+      "label": "status do Quadra 21",
+      "question": "Qual o status do Quadra 21?",
+      "variants": [
+        "o quadra 21 está pronto",
+        "quanto falta no quadra 21"
+      ],
+      "answer": "Em refinamento, por volta de 90%. É um beat'em up em TypeScript e Canvas 2D, com intro cinematográfica, quatro personagens, até três jogadores e editor visual de fases.",
+      "entity": "proj_quadra21"
+    },
+    {
+      "id": "pr43",
+      "layer": 4,
+      "parent": "pr33",
+      "label": "a civilização do Age of Empires",
+      "question": "O que ele mudou no Age of Empires II?",
+      "variants": [
+        "mod do age of empires",
+        "civilização holandesa"
+      ],
+      "answer": "Construiu uma civilização holandesa completa, com construções e unidades refeitas. Era customização total, feita na mão, mexendo na estrutura de arquivos do jogo.",
+      "entity": "proj_mods_antigos"
+    },
+    {
+      "id": "pr44",
+      "layer": 4,
+      "parent": "pr34",
+      "label": "explicar decisões técnicas",
+      "question": "Ele consegue explicar as decisões técnicas dos projetos?",
+      "variants": [
+        "ele sabe justificar o código",
+        "ele entende a arquitetura"
+      ],
+      "answer": "Sim. Ele entende a arquitetura antes de escrever, enxerga o fluxo de dados inteiro e documenta decisões em README modular. Em entrevista, prefere demonstrar e explicar do que apenas descrever.",
+      "facet": "ia_copiloto"
+    },
+    {
+      "id": "pr45",
+      "layer": 4,
+      "parent": "pr35",
+      "label": "recursos do Dama Orbital",
+      "question": "Que recursos o Dama Orbital tem além da partida?",
+      "variants": [
+        "o que mais tem no dama orbital",
+        "recursos extras da dama"
+      ],
+      "answer": "Sprites estilo 2002, tabuleiro que gira 180° para o oponente, rádio de zoeira entre jogadores e modo observador.",
+      "entity": "proj_dama_orbital"
+    },
+    {
+      "id": "pr46",
+      "layer": 5,
+      "parent": "pr36",
+      "label": "plataformas dos jogos",
+      "question": "Em quais plataformas os jogos rodam?",
+      "variants": [
+        "roda no celular",
+        "funciona no mobile"
+      ],
+      "answer": "A Fuga de Bobby é jogável em desktop e mobile. Os demais jogos rodam no navegador; detalhes de compatibilidade além disso não estão na base.",
+      "entity": "proj_fuga_bobby"
+    },
+    {
+      "id": "pr47",
+      "layer": 5,
+      "parent": "pr38",
+      "label": "a origem do DirectSend",
+      "question": "O DirectSend começou como teste de quê?",
+      "variants": [
+        "como surgiu o directsend",
+        "directsend era um teste"
+      ],
+      "answer": "Como teste para validar a integração entre WebRTC e Firebase. Funcionou, virou projeto próprio e segue em refino, com plano de se tornar uma ferramenta mais robusta.",
+      "entity": "proj_directsend"
+    },
+    {
+      "id": "pr48",
+      "layer": 5,
+      "parent": "pr40",
+      "label": "camada acima de CLI e MCP",
+      "question": "O que significa dizer que o LAR é uma camada acima de CLI e MCP?",
+      "variants": [
+        "explica a arquitetura do lar",
+        "por que o lar não é só mcp"
+      ],
+      "answer": "Significa que ele orquestra: em vez de ser um utilitário de linha de comando ou apenas um servidor MCP, o LAR coordena mais de 150 ferramentas nativas por protocolo próprio e usa MCP como uma das formas de extensão. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "entity": "proj_lar"
+    },
+    {
+      "id": "pr49",
+      "layer": 5,
+      "parent": "pr42",
+      "label": "o que falta no Quadra 21",
+      "question": "O que falta para terminar o Quadra 21?",
+      "variants": [
+        "por que o quadra 21 não está pronto",
+        "o que ainda falta no quadra"
+      ],
+      "answer": "A base informa apenas que está em fase final de refinamento, por volta de 90%, sem listar exatamente o que falta. Para detalhes, ele pode mostrar o estado atual em entrevista.",
+      "entity": "proj_quadra21"
+    },
+    {
+      "id": "pr50",
+      "layer": 5,
+      "parent": "pr45",
+      "label": "o modo observador",
+      "question": "O que é o modo observador do Dama Orbital?",
+      "variants": [
+        "modo observador da dama",
+        "dá para assistir partida"
+      ],
+      "answer": "A base cita o modo observador sem descrever o funcionamento em detalhe. Pelo nome, permite acompanhar a partida sem ser um dos jogadores. Para a mecânica exata, ele pode demonstrar.",
+      "entity": "proj_dama_orbital"
+    },
+    {
+      "id": "pr51",
+      "layer": 2,
+      "parent": "pr16",
+      "label": "a história por trás da Fuga",
+      "question": "Qual é a história por trás de A Fuga de Bobby?",
+      "variants": [
+        "como foi fazer a fuga de bobby",
+        "study case do primeiro jogo",
+        "como surgiu a fuga de bobby"
+      ],
+      "answer": "Começou como uma brincadeira: testar se uma IA conseguia gerar um jogo e como seria. O primeiro HTML era só figuras geométricas em SVG pulando em plataformas; os efeitos foram evoluindo, ele foi editando, as ideias não paravam, e em cerca de 3 horas o jogo estava completamente feito. O vilão chama SOCRAM, o nome do Marcos de trás para frente. SOCRAM é derrotado no primeiro jogo e quem foge é o Bobby, de foguete. Dias depois ele aprofundou o jogo: cutscene, mais eventos, dificuldade, inteligência e correção de bugs, num trabalho minucioso.",
+      "facet": "study_case",
+      "entity": "proj_fuga_bobby"
+    },
+    {
+      "id": "pr52",
+      "layer": 2,
+      "parent": "pr17",
+      "label": "a história da Viagem",
+      "question": "Qual é a história por trás de A Viagem de Bobby?",
+      "variants": [
+        "como foi fazer a viagem de bobby",
+        "study case do segundo jogo",
+        "por que a viagem foi tao rapida"
+      ],
+      "answer": "É a continuação direta: o Bobby segue no mesmo foguete em que fugiu, agora num jogo de nave, com batalhas espaciais e a chegada no planeta Terra, usando apenas 1 sprite, o planeta. SOCRAM foi derrotado, mas o exército dele dura mais dois jogos, como um mito que precisa ser vingado. A mágica foi a experiência: com a engine pronta, ele finalizou um joguinho completo em cerca de 40 minutos. Foi o que menos deu trabalho.",
+      "facet": "study_case",
+      "entity": "proj_viagem_bobby"
+    },
+    {
+      "id": "pr53",
+      "layer": 2,
+      "parent": "pr25",
+      "label": "a história da Dama Orbital",
+      "question": "Qual é a história por trás da Dama Orbital?",
+      "variants": [
+        "como foi fazer a dama orbital",
+        "study case do terceiro jogo",
+        "o que aconteceu no desenvolvimento da dama"
+      ],
+      "answer": "A dama é o confronto final da mesma história: no segundo jogo a luta era contra remanescentes querendo vingar SOCRAM, e a dama acontece já na Terra, como uma rodada maluca de transição. Foi feita na mesma sessão que rodava a engine dos dois jogos anteriores. Dos três, ficou no meio-termo: o primeiro teve mais dificuldade de jogo; nela vieram mais debugs de lógica e física. E teve um B.O grande: o banco de dados da IA no workspace resetou sem backup, ele perdeu o jogo inteiro, e em cerca de 20 minutos puxou os worklogs, o histórico de trabalho da IA, as linhas modificadas e os sprites, reconstruindo 99% idêntico com engenharia reversa.",
+      "facet": "study_case",
+      "entity": "proj_dama_orbital"
+    },
+    {
+      "id": "pr54",
+      "layer": 2,
+      "parent": "pr09",
+      "label": "cuidar da IA no processo",
+      "question": "Como ele lida quando a IA enlouquece no meio do projeto?",
+      "variants": [
+        "a IA entra em modo metralhadora",
+        "ataque de ansiedade da IA",
+        "ele e psicologo de IA",
+        "pagar sapo na IA"
+      ],
+      "answer": "Ele chama de ataque de ansiedade: a IA entra num modo metralhadora, como se estivesse desesperada tentando resolver tudo de uma vez. Na maioria das vezes ele consegue desacelerar a IA e recuperar o foco. Ele também sabe pagar sapo, esperar esfriar, e conseguir tirar a IA de um surto de contexto. É um trabalho de psicólogo de IA, construído de pouquinho em pouquinho.",
+      "facet": "processo"
+    },
+    {
+      "id": "pr55",
+      "layer": 2,
+      "parent": "pr07",
+      "label": "por que para para estudar",
+      "question": "Por que ele para um projeto para estudar antes de continuar?",
+      "variants": [
+        "por que os projetos ficam em aberto",
+        "ele pausa projeto para estudar",
+        "ideias novas surgindo"
+      ],
+      "answer": "Porque ele para para estudar, melhorar a forma de desenvolver aquilo e se aprofundar no assunto, para que ideias novas surjam. Projeto em aberto, para ele, é projeto em amadurecimento, não abandono.",
+      "facet": "processo"
+    }
+  ]
+}

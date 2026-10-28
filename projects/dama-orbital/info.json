@@ -1,0 +1,20 @@
+{
+  "id": "dama-orbital",
+  "nome": "Dama Orbital",
+  "subtitulo": "Dama Multiplayer com Sprites 2002",
+  "stack": ["TypeScript", "WebRTC", "Firebase", "QR Code"],
+  "descricao": "**Batalha final** da trilogia Bobby. É um jogo de **Dama multiplayer** que roda direto no navegador, com pareamento entre jogadores via **QR Code** ou **Firebase Auth**. O **tabuleiro gira 180°** a cada turno para o adversário ver de cabeça pra baixo. Tem **rádio de zoeira** entre os jogadores e modo observador pra quem entra depois. Também funciona em **modo local** para duas pessoas no mesmo dispositivo.",
+  "cta": {
+    "label": "Jogar Agora",
+    "url": "https://dama-orbital.vercel.app/",
+    "icone": "fa-play"
+  },
+  "media": {
+    "demo": false,
+    "drive": "https://drive.google.com/file/d/14Uc9UJ3cy7g8FlQqBCa77TPmsCkXXmQR/view?usp=sharing",
+    "youtube": null,
+    "video": null,
+    "capa": "capa/CapaDama.png",
+    "prints": ["screenshots/FightDama.png", "screenshots/FightDama2.png", "screenshots/FightDama3.png"]
+  }
+}

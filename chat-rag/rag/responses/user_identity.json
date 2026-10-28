@@ -1,0 +1,54 @@
+{
+  "category": "user_identity",
+  "descricao": "Respostas para quando o visitante fala de si mesmo ou testa o bot ('você sabe quem eu sou?').",
+  "intents": [
+    {
+      "id": "sabe_quem_sou",
+      "patterns": [
+        "voce sabe quem eu sou", "sabe quem eu sou", "quem sou eu", "sabe quem e que ta falando",
+        "me conhece", "voce me conhece", "sabe com quem voce esta falando", "adivinha quem sou",
+        "qual o meu nome", "sabe meu nome", "lembra de mim", "ja me viu antes", "quem fala com voce"
+      ],
+      "sem_nome": [
+        "Sinceramente? Não sei, e eu não chuto. Eu só sei o que você me contar nesta conversa. Se disser **\"meu nome é ...\"**, eu guardo e uso daqui pra frente.",
+        "Ainda não 🙂 Não tenho login, cookie nem rastreamento: minha memória começa quando a conversa começa. Me diga quem você é que eu registro.",
+        "Não faço ideia, e prefiro admitir a inventar. Quer se apresentar? Pode dizer o nome e a empresa que eu guardo durante a sessão.",
+        "Não sei ainda. Mas arrisco um palpite sobre o *papel*: se você está aqui, provavelmente é recrutador(a), tech lead ou alguém avaliando o perfil do Marcão. Acertei?"
+      ],
+      "com_nome": [
+        "Claro que sei: você é **{nome}**{empresa}. Ficou guardado aqui na memória da sessão.",
+        "Sei sim, **{nome}**{empresa}. Anotei assim que você se apresentou.",
+        "Você é **{nome}**{empresa} 🙂 Memória de sessão funcionando direitinho."
+      ]
+    },
+    {
+      "id": "apresentacao",
+      "patterns": ["meu nome e", "me chamo", "sou o", "sou a", "aqui e o", "aqui e a", "pode me chamar de"],
+      "variations": [
+        "Prazer, **{nome}**! Anotado. Pode perguntar o que quiser sobre o Marcão, projetos, stack, experiência, neurodivergência ou contratação.",
+        "Muito prazer, **{nome}**! Vou te chamar assim durante a conversa. Por onde começamos?",
+        "Opa, **{nome}**, seja bem-vindo(a)! Já registrei seu nome. Quer começar pelos projetos ou pelas condições de contratação?"
+      ]
+    },
+    {
+      "id": "empresa_visitante",
+      "patterns": ["sou da empresa", "trabalho na", "sou recrutador", "sou recrutadora", "sou do rh", "sou tech lead", "represento a"],
+      "variations": [
+        "Anotado{saudacao}: **{empresa}**. Se for útil, posso ir direto ao que normalmente interessa no processo: pretensão, disponibilidade, modelo de trabalho e o perfil neurodivergente com altas habilidades.",
+        "Legal, {empresa} registrada aqui{saudacao}. Quer que eu monte um resumo objetivo do perfil para triagem?"
+      ]
+    },
+    {
+      "id": "teste_bot",
+      "patterns": [
+        "estou te testando", "to te testando", "isso e um teste", "quero testar voce", "voce e burro",
+        "voce nao sabe nada", "aposto que nao sabe", "prova que e inteligente", "me surpreenda"
+      ],
+      "variations": [
+        "Pode testar, é pra isso que eu existo 🙂 Só adianto a regra do jogo: eu **não invento**. Se a resposta não estiver na base do Marcos, eu digo que não sei.",
+        "Manda ver. Sugestão de teste difícil: pergunte **qual projeto demorou mais**, **qual o mais recente** ou **qual tecnologia do Dama Orbital**. Eu resolvo isso com dado, não com chute.",
+        "Bora. Erro de digitação, gíria e leetspeak eu aguento, tenho fuzzy match. O que eu não faço é gerar texto sobre o que não está na base."
+      ]
+    }
+  ]
+}

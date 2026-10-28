@@ -1,0 +1,943 @@
+{
+  "meta": {
+    "candidato": "Marcos Eduardo da Silva dos Reis",
+    "apelido": "Marcão",
+    "idade": 35,
+    "local": "Brazlândia, Distrito Federal",
+    "versao": "3.1.0-mesh",
+    "politica_salarial": "OCULTA, nunca informar valores. Responder sempre 'a combinar / compatível com a faixa da posição'.",
+    "descricao": "Satélites da rede mesh. Cada entidade pertence a uma órbita e expõe facetas (a mesma pergunta muda de resposta conforme a órbita/satélite ativo)."
+  },
+  "entities": [
+    {
+      "id": "proj_fuga_bobby",
+      "orbit": "projetos",
+      "name": "A Fuga de Bobby",
+      "aliases": [
+        "fuga de bobby",
+        "a fuga",
+        "fuga do bobby",
+        "plataforma retro",
+        "primeiro jogo da trilogia"
+      ],
+      "meta": {
+        "status": "publicado e jogável",
+        "ordem": 1,
+        "link": "https://game-a-fuga-de-bobby-final.vercel.app"
+      },
+      "facets": {
+        "resumo": [
+          "**A Fuga de Bobby** é um jogo de plataforma retrô em TypeScript e Canvas 2D. Tem três estágios de dano, ciclo dia/noite, powerups e um boss carcereiro na fortaleza. Para escapar, o jogador pega a chave, aciona o rádio e chama o foguete. Está publicado e jogável em desktop e mobile."
+        ],
+        "tecnologias": [
+          "No currículo, a stack informada é **TypeScript, Canvas 2D e Vercel**."
+        ],
+        "status": [
+          "Status: **publicado e jogável**."
+        ],
+        "link": [
+          "Deploy: [game-a-fuga-de-bobby-final.vercel.app](https://game-a-fuga-de-bobby-final.vercel.app)"
+        ],
+        "study_case": [
+          "A história de **A Fuga de Bobby** começa como uma brincadeira: o Marcos queria testar se uma IA conseguia gerar um jogo, e como seria esse processo. O primeiro HTML era só figuras geométricas em SVG pulando em plataformas. Os efeitos foram evoluindo, ele foi editando, as ideias não paravam de vir, e em cerca de **3 horas** o jogo estava completamente feito.",
+          "O vilão chama **SOCRAM**, que é o nome do Marcos de trás para frente. SOCRAM é **derrotado** no primeiro jogo, e quem foge é o **Bobby**, de foguete, no final da vitória.",
+          "Dias depois, já com novas tecnologias e conceitos na bagagem, ele voltou e aprofundou: cutscene, mais detalhes, mais eventos, dificuldade, inteligência inimiga e correção de bugs, num trabalho minucioso. Teve muito debugging, indo função por função, linha por linha, com várias IAs envolvidas, e às vezes cancelava tudo e começava do zero, porque não aceitava enquanto não ficasse do jeito que queria."
+        ]
+      }
+    },
+    {
+      "id": "proj_viagem_bobby",
+      "orbit": "projetos",
+      "name": "A Viagem de Bobby",
+      "aliases": [
+        "viagem de bobby",
+        "a viagem",
+        "shoot em up",
+        "jogo de nave",
+        "jogo espacial",
+        "segundo jogo"
+      ],
+      "meta": {
+        "status": "publicado e jogável",
+        "ordem": 2,
+        "link": "https://game-a-viagem-de-bobby.vercel.app"
+      },
+      "facets": {
+        "resumo": [
+          "**A Viagem de Bobby** é um shoot-em-up espacial, continuação da saga. O foguete atira, os cometas se dilaceram, a Terra se aproxima em sprite e a cutscene final mira no Brasil. Está publicado e jogável."
+        ],
+        "tecnologias": [
+          "No currículo, a stack informada é **TypeScript, Canvas 2D e Vercel**."
+        ],
+        "status": [
+          "Status: **publicado e jogável**."
+        ],
+        "link": [
+          "Deploy: [game-a-viagem-de-bobby.vercel.app](https://game-a-viagem-de-bobby.vercel.app)"
+        ],
+        "study_case": [
+          "A mágica de **A Viagem de Bobby** foi a experiência acumulada: com a engine já pronta dos dois primeiros jogos, ele finalizou um joguinho completo em cerca de **40 minutos**. Não precisava mais se acabar corrigindo bugs. Foi voado, e foi o que menos deu trabalho da trilogia.",
+          "A história continua no mesmo foguete em que o Bobby fugiu no final do primeiro jogo: agora é um jogo de nave, com batalhas espaciais e a chegada no planeta Terra. SOCRAM foi derrotado, mas o exército dele dura mais dois jogos, como um mito que precisa ser vingado. Visualmente o projeto é hiper enxuto: usa apenas **1 sprite**, que é o planeta."
+        ],
+        "duracao": [
+          "Com a engine pronta dos jogos anteriores, ele finalizou um joguinho completo em cerca de **40 minutos**. Foi o projeto que menos deu trabalho da trilogia."
+        ]
+      }
+    },
+    {
+      "id": "proj_dama_orbital",
+      "orbit": "projetos",
+      "name": "Dama Orbital",
+      "aliases": [
+        "dama orbital",
+        "damas",
+        "jogo multiplayer",
+        "multiplayer",
+        "jogo de tabuleiro",
+        "jogo online",
+        "terceiro jogo"
+      ],
+      "meta": {
+        "status": "publicado e jogável",
+        "ordem": 3,
+        "link": "https://dama-orbital.vercel.app"
+      },
+      "facets": {
+        "resumo": [
+          "**Dama Orbital** fecha a trilogia. É um jogo de damas multiplayer entre navegadores, com sprites estilo 2002, pareamento por QR Code, tabuleiro que gira 180°, rádio de zoeira entre jogadores e modo observador. Está publicado e jogável."
+        ],
+        "tecnologias": [
+          "Tecnologias informadas: **TypeScript, WebRTC, Firebase e QR Code**."
+        ],
+        "status": [
+          "Status: **publicado e jogável**."
+        ],
+        "link": [
+          "Deploy: [dama-orbital.vercel.app](https://dama-orbital.vercel.app)"
+        ],
+        "study_case": [
+          "Pode não parecer da mesma história, mas **Dama Orbital** é a continuação: no segundo jogo a luta era contra remanescentes querendo vingar SOCRAM, e a dama é a batalha já na Terra, o confronto final. Foi feita como uma rodada maluca de transição, na mesma sessão em que rodava a engine dos dois jogos anteriores.",
+          "Dos três, a Dama ficou no meio-termo: o primeiro teve mais dificuldade de jogo; nela vieram mais debugs, de lógica e de física.",
+          "Aí aconteceu um B.O grande: ele perdeu o jogo inteiro, porque o banco de dados da IA no workspace resetou e não havia backup. Depois de cerca de **20 minutos pensando**, ele solicitou todos os worklogs, puxou o histórico de trabalho da IA, as linhas que ela tinha modificado e os sprites que ela tinha feito, e com engenharia reversa eles reconstruíram **99% idêntico** o jogo."
+        ]
+      }
+    },
+    {
+      "id": "proj_quadra21",
+      "orbit": "projetos",
+      "name": "Quadra 21 – Barra Pesada",
+      "aliases": [
+        "quadra 21",
+        "quadra21",
+        "barra pesada",
+        "beat em up",
+        "jogo de luta",
+        "editor de fases"
+      ],
+      "meta": {
+        "status": "em refino (~90%)",
+        "ordem": 4,
+        "link": null
+      },
+      "facets": {
+        "resumo": [
+          "**Quadra 21, Barra Pesada** é um beat'em up em TypeScript e Canvas 2D, com intro cinematográfica, quatro personagens, até três jogadores, colisões que incluem subir em carros e usar objetos como armas, e um editor visual próprio de fases."
+        ],
+        "tecnologias": [
+          "Tecnologias informadas: **TypeScript, Canvas 2D e editor próprio**."
+        ],
+        "status": [
+          "Status: **em refinamento, cerca de 90%**."
+        ]
+      }
+    },
+    {
+      "id": "proj_estagiario",
+      "orbit": "projetos",
+      "name": "O Estagiário",
+      "aliases": [
+        "estagiario",
+        "o estagiario",
+        "rpg isometrico",
+        "isometrico",
+        "jogo de rpg"
+      ],
+      "meta": {
+        "status": "em refino (~80%)",
+        "ordem": 5,
+        "link": null
+      },
+      "facets": {
+        "resumo": [
+          "**O Estagiário** é um RPG isométrico com editor de cenários, física de colisão, paredes que colapsam, movimentação em oito direções e sprites de alta qualidade."
+        ],
+        "tecnologias": [
+          "Tecnologias informadas: **TypeScript, sprites e editor próprio**."
+        ],
+        "status": [
+          "Status: **em refinamento, cerca de 80%**."
+        ]
+      }
+    },
+    {
+      "id": "proj_directsend",
+      "orbit": "projetos",
+      "name": "DirectSend",
+      "aliases": [
+        "directsend",
+        "direct send",
+        "transferencia de arquivo",
+        "localsend",
+        "enviar arquivo",
+        "qr code"
+      ],
+      "meta": {
+        "status": "em testes",
+        "ordem": 6,
+        "link": "https://github.com/MarcozEduardo/DirectSend"
+      },
+      "facets": {
+        "resumo": [
+          "**DirectSend** transfere arquivos ponto a ponto entre dispositivos por pareamento com QR Code, sem servidor intermediário. Começou como teste de integração WebRTC e Firebase e virou projeto próprio."
+        ],
+        "tecnologias": [
+          "Tecnologias informadas: **JavaScript, WebRTC e QR Code**, com validação de integração com Firebase."
+        ],
+        "motivo": [
+          "Nasceu como um teste para validar a integração entre WebRTC e Firebase, e evoluiu para um projeto próprio."
+        ],
+        "status": [
+          "Status: **em testes e refinamento**, com plano de se tornar uma ferramenta mais robusta."
+        ],
+        "link": [
+          "Repositório: [github.com/MarcozEduardo/DirectSend](https://github.com/MarcozEduardo/DirectSend)"
+        ]
+      }
+    },
+    {
+      "id": "proj_marketbobby",
+      "orbit": "projetos",
+      "name": "Marketbobby",
+      "aliases": [
+        "marketbobby",
+        "market bobby",
+        "lista de mercado",
+        "lista de compras",
+        "ocr",
+        "supermercado"
+      ],
+      "meta": {
+        "status": "em refino",
+        "ordem": 7,
+        "link": "https://github.com/MarcozEduardo/Marketbobby"
+      },
+      "facets": {
+        "resumo": [
+          "**Marketbobby** é uma lista de mercado com IA e OCR. Uma foto de prateleira ou placa de preço pode virar itens organizados, com filtros e categorização de compras."
+        ],
+        "tecnologias": [
+          "Tecnologias informadas: **HTML, JavaScript, IA e OCR**."
+        ],
+        "status": [
+          "Status: **em refinamento**."
+        ],
+        "link": [
+          "Repositório: [github.com/MarcozEduardo/Marketbobby](https://github.com/MarcozEduardo/Marketbobby)"
+        ]
+      }
+    },
+    {
+      "id": "proj_devorador",
+      "orbit": "projetos",
+      "name": "DevOrador",
+      "aliases": [
+        "devorador",
+        "dev orador",
+        "auditor de interface",
+        "dom inspector",
+        "auditoria de dom"
+      ],
+      "meta": {
+        "status": "funcional",
+        "ordem": 8,
+        "link": null
+      },
+      "facets": {
+        "resumo": [
+          "**DevOrador** é uma ferramenta injetável que audita a interface pelo DOM, mapeia atributos e ajuda a IA a localizar o trecho certo para editar."
+        ],
+        "tecnologias": [
+          "Tecnologias informadas: **JavaScript e DOM Inspector**."
+        ],
+        "status": [
+          "Status: **funcional**."
+        ]
+      }
+    },
+    {
+      "id": "proj_unyleya",
+      "orbit": "projetos",
+      "name": "Extensão Institucional Unyleya (Gerador ABNT)",
+      "aliases": [
+        "unyleya",
+        "abnt",
+        "gerador abnt",
+        "extensao institucional",
+        "gerador de slides",
+        "pptx",
+        "projeto academico"
+      ],
+      "meta": {
+        "status": "concluído",
+        "ordem": 9,
+        "link": "https://programa-de-extens-o-institucional.vercel.app"
+      },
+      "facets": {
+        "resumo": [
+          "A **Extensão Institucional Unyleya** é um gerador de slides com temas personalizáveis, regras ABNT e exportação em PPT."
+        ],
+        "tecnologias": [
+          "Tecnologias informadas: **TypeScript, PPTX Engine e Vercel**."
+        ],
+        "status": [
+          "Status: **concluído**."
+        ],
+        "link": [
+          "Deploy: [programa-de-extens-o-institucional.vercel.app](https://programa-de-extens-o-institucional.vercel.app)"
+        ]
+      }
+    },
+    {
+      "id": "proj_curriculo_rag",
+      "orbit": "projetos",
+      "name": "Currículo Interativo com RAG",
+      "aliases": [
+        "curriculo interativo",
+        "curriculo inteligente",
+        "rag do curriculo",
+        "assistente do curriculo"
+      ],
+      "meta": {
+        "status": "ativo e em evolução",
+        "ordem": 10,
+        "link": null
+      },
+      "facets": {
+        "resumo": [
+          "Este currículo interativo foi feito com HTML, CSS e JavaScript modulares. Inclui um RAG client-side com busca semântica, filtro de moderação, memória de sessão e exportação para PDF A4."
+        ],
+        "tecnologias": [
+          "Tecnologias informadas: **HTML, CSS, JavaScript, JSON e RAG client-side**."
+        ],
+        "motivo": [
+          "A ideia é permitir que recrutadores façam perguntas ao currículo, em vez de apenas ler um documento estático, e demonstrar na prática o RAG."
+        ],
+        "status": [
+          "Status: **ativo e em evolução**."
+        ]
+      }
+    },
+    {
+      "id": "proj_lar",
+      "orbit": "projetos",
+      "name": "LAR, Local Agent Runtime",
+      "aliases": [
+        "lar",
+        "local agent runtime",
+        "runtime de orquestracao",
+        "ferramenta interna de orquestracao",
+        "runtime local",
+        "camada de orquestracao",
+        "ambiente principal de desenvolvimento"
+      ],
+      "meta": {
+        "status": "em uso diário (reservado)",
+        "ordem": 11,
+        "link": null
+      },
+      "facets": {
+        "resumo": [
+          "O **LAR, Local Agent Runtime**, é um runtime local de orquestração agêntica e o ambiente principal de desenvolvimento do Marcos. Roda com backend Node e mais de 150 ferramentas nativas via protocolo próprio, incluindo Git, Vercel, Firebase, browser e filesystem. Também aceita extensão via MCP. Não é CLI e não é apenas MCP, é uma camada acima dos dois. O projeto fica reservado por enquanto."
+        ],
+        "tecnologias": [
+          "Informações confirmadas: runtime local, backend **Node**, protocolo próprio de ferramentas e extensão via **MCP**. O conjunto inclui integrações com Git, Vercel, Firebase, browser e filesystem."
+        ],
+        "status": [
+          "Status: **em uso diário e reservado**. Pode ser demonstrado quando fizer sentido."
+        ],
+        "sistemas_grandes": [
+          "O **LAR, Local Agent Runtime**, é um runtime local de orquestração agêntica e o ambiente principal de desenvolvimento do Marcos. Roda com backend Node e mais de 150 ferramentas nativas via protocolo próprio, incluindo Git, Vercel, Firebase, browser e filesystem. Também aceita extensão via MCP. Não é CLI e não é apenas MCP, é uma camada acima dos dois. O projeto fica reservado por enquanto."
+        ]
+      }
+    },
+    {
+      "id": "proj_franzinha",
+      "orbit": "projetos",
+      "name": "App Franzinha, sistema de loja com IA embarcada",
+      "aliases": [
+        "franzinha",
+        "app franzinha",
+        "sistema de loja",
+        "pdv",
+        "sistema comercial",
+        "estoque",
+        "caixa"
+      ],
+      "meta": {
+        "status": "interface quase pronta, núcleo em foco",
+        "ordem": 12,
+        "link": null
+      },
+      "facets": {
+        "resumo": [
+          "O **App Franzinha** é um sistema de loja para estoque, caixa e cadastro de clientes, com um agente de IA dentro do chat para apoiar o operador. Nasceu de uma necessidade observada em uma loja de bairro. A interface está avançada; o trabalho foi pausado para priorizar o núcleo de inteligência."
+        ],
+        "motivo": [
+          "O projeto nasceu da dificuldade real de uma pequena loja de bairro. A proposta é oferecer um sistema de gestão com um agente de IA embarcado."
+        ],
+        "status": [
+          "Status: **interface avançada, núcleo de inteligência em foco**."
+        ],
+        "sistemas_grandes": [
+          "O **App Franzinha** é um sistema de loja para estoque, caixa e cadastro de clientes, com um agente de IA dentro do chat para apoiar o operador. A interface está avançada; o desenvolvimento foi pausado para priorizar o núcleo de inteligência."
+        ]
+      }
+    },
+    {
+      "id": "proj_nexus",
+      "orbit": "projetos",
+      "name": "Núcleo Nexus, cérebro de bot reutilizável",
+      "aliases": [
+        "nexus",
+        "nucleo nexus",
+        "cerebro de bot",
+        "nucleo neural",
+        "motor de bot",
+        "memoria de bot"
+      ],
+      "meta": {
+        "status": "em construção",
+        "ordem": 13,
+        "link": null,
+        "ambitionRank": 1
+      },
+      "facets": {
+        "resumo": [
+          "O **Núcleo Nexus** é a proposta de um cérebro de bot modular e reutilizável. Planeja combinar memória de trabalho, memória pessoal e respostas ligadas por órbitas de contexto. O Modo Sala de Estudos permitiria consultar uma API apenas com autorização, criar contexto novo e devolver esse conteúdo ao núcleo. O funcionamento padrão não dependeria de API paga."
+        ],
+        "motivo": [
+          "O objetivo é criar um núcleo reutilizável que responda com coerência, reconheça quando não sabe e só consulte uma fonte externa quando isso for autorizado."
+        ],
+        "status": [
+          "Status: **em construção**. O Marcos o descreve como seu projeto mais ambicioso."
+        ],
+        "sistemas_grandes": [
+          "O **Núcleo Nexus** é a proposta de um cérebro de bot modular e reutilizável, com memória de trabalho, memória pessoal e respostas ligadas por órbitas de contexto. O Modo Sala de Estudos permitiria pesquisar um assunto com uma API somente quando autorizado e devolver esse conhecimento ao núcleo. O Marcos o descreve como seu projeto mais ambicioso."
+        ]
+      }
+    },
+    {
+      "id": "proj_construtor_nucleos",
+      "orbit": "projetos",
+      "name": "Construtor de núcleos neurais",
+      "aliases": [
+        "construtor de nucleos",
+        "construtor visual",
+        "editor de contexto",
+        "montador de rede"
+      ],
+      "meta": {
+        "status": "fase inicial",
+        "ordem": 14,
+        "link": null
+      },
+      "facets": {
+        "resumo": [
+          "O **Construtor de núcleos neurais** é uma ferramenta visual em fase inicial para montar redes de palavras ligadas em órbitas de contexto, camada sobre camada."
+        ],
+        "status": [
+          "Status: **fase inicial**, com consolidação prevista depois que o LAR estiver pronto."
+        ]
+      }
+    },
+    {
+      "id": "proj_mods_antigos",
+      "orbit": "projetos",
+      "name": "Mods, mapas e engenharia reversa",
+      "aliases": [
+        "mods",
+        "skins",
+        "counter strike",
+        "cs 1.6",
+        "age of empires",
+        "mapas",
+        "traducao de jogos",
+        "engenharia reversa",
+        "hammer"
+      ],
+      "meta": {
+        "status": "histórico",
+        "ordem": 0,
+        "link": null
+      },
+      "facets": {
+        "resumo": [
+          "Antes dos projetos web, o Marcos fazia mods e mapas: criou uma civilização holandesa para Age of Empires II, refez menu, personagens e skins de Counter-Strike 1.6, e construiu dois mapas no Hammer, inspirados no Centro de Ensino 2 e na Friends Informática. Também participou de comunidades de tradução de jogos e editava arquivos manualmente."
+        ],
+        "tecnologias": [
+          "Ferramentas e práticas citadas: editor Hammer, edição de arquivos de jogos, tradução manual, scripts .bat, Regedit, emuladores e planilhas de Excel com fórmulas e macros."
+        ],
+        "status": [
+          "Status: **projetos históricos**, parte dos arquivos se perdeu, mas a experiência técnica ficou."
+        ]
+      }
+    },
+    {
+      "id": "proj_sites_2014",
+      "orbit": "projetos",
+      "name": "Primeiros sites comerciais (2014)",
+      "aliases": [
+        "sites comerciais",
+        "primeiros sites",
+        "site da prepara",
+        "site de banda",
+        "flash",
+        "web 2014"
+      ],
+      "meta": {
+        "status": "histórico",
+        "ordem": 0,
+        "link": null,
+        "ano_inicio": 2014,
+        "ano_fim": 2014
+      },
+      "facets": {
+        "resumo": [
+          "Em 2014, o Marcos participou da criação de sites para a Prepara Cursos Taguatinga, uma empresa de cursos e RH e uma banda. No site da banda, ele cuidou do layout e da experiência; um parceiro cuidou do back-end."
+        ],
+        "status": [
+          "Status: **trabalhos históricos de 2014**."
+        ],
+        "desafio": [
+          "A época exigia plugins Flash e testes em diferentes navegadores. A experiência com compatibilidade cross-browser ajudou a formar o interesse dele por QA."
+        ]
+      }
+    },
+    {
+      "id": "exp_atual",
+      "orbit": "experiencia",
+      "name": "Desenvolvedor Web Assistido por IA & QA (portfólio prático)",
+      "aliases": [
+        "atual",
+        "trabalho atual",
+        "emprego atual",
+        "hoje",
+        "2024",
+        "2025",
+        "portfolio pratico"
+      ],
+      "meta": {
+        "ano_inicio": 2024,
+        "ano_fim": null,
+        "status": "em andamento",
+        "ordem": 0
+      },
+      "facets": {
+        "resumo": [
+          "**2024 até hoje, Projetos independentes e deploys na Vercel.** Desenvolvimento e publicação da trilogia de games e de web apps em TypeScript, React, Canvas, WebRTC e Firebase; construção de ferramenta interna de orquestração (MCP com camada própria); implementação de arquitetura RAG e integração de APIs REST; benchmarking de mais de 400 modelos de IA; e QA contínuo com testes de usabilidade, compatibilidade cross-browser e segurança básica.",
+          "Período de transição estruturada: ele transformou estudo em entrega pública, com portfólio verificável em links e repositórios."
+        ],
+        "tecnologias": [
+          "TypeScript, React, JavaScript ES6+, Python, SQL, Canvas 2D, WebRTC, Firebase, Supabase, Node.js, Git/GitHub, Vercel, Netlify, RAG e orquestração de agentes."
+        ],
+        "desafio": [
+          "Transformar aprendizado em entrega pública: cada projeto precisa de deploy, link e demonstração, não basta ficar no disco."
+        ],
+        "aprendizado": [
+          "Construiu uma camada própria de orquestração (LAR), nascida ferramenta por ferramenta durante os projetos."
+        ],
+        "motivo": [
+          "O objetivo é entrar numa equipe formal de TI com portfólio comprovável na mão, não só com discurso."
+        ]
+      }
+    },
+    {
+      "id": "exp_bella_arte",
+      "orbit": "experiencia",
+      "name": "Bella Arte Indústria",
+      "aliases": [
+        "bella arte",
+        "bela arte",
+        "projetista cnc",
+        "corte a laser",
+        "vicente pires",
+        "industria"
+      ],
+      "meta": {
+        "ano_inicio": 2018,
+        "ano_fim": 2024,
+        "duracao_meses": 64,
+        "status": "encerrado",
+        "ordem": 1,
+        "longestTenure": true
+      },
+      "facets": {
+        "resumo": [
+          "**Projetista Industrial CNC e Manutenção Técnica, Bella Arte Indústria, Vicente Pires/DF (nov/2018 a fev/2024, 5 anos e 4 meses).** Projetos técnicos e modelagem vetorial de alta precisão para corte a laser CNC (CO2); diagnóstico físico, manutenção preventiva e corretiva de hardware e calibração de software das máquinas; gestão operacional, planejamento logístico de insumos e otimização de processos.",
+          "Foi a experiência mais longa da carreira dele e a que mais o formou tecnicamente: quando a máquina travava, quem abria para resolver era ele."
+        ],
+        "tecnologias": [
+          "CorelDRAW e modelagem vetorial, software de CAM/CNC, manutenção de hardware, redes internas, Windows, scripts PowerShell e `.bat`."
+        ],
+        "desafio": [
+          "A empresa não queria investir em sistema pronto. Ele resolveu por baixo: indexou os arquivos com script do próprio Windows, montou janelas em PowerShell para visualizar DXF e cruzou arquivo de projeto com pedido de cliente. Funcionava, e era autoral."
+        ],
+        "aprendizado": [
+          "Rigor de produção industrial: erro custa material, máquina e prazo. É de onde vem o olhar de QA dele."
+        ],
+        "duracao": [
+          "**5 anos e 4 meses**, a experiência mais longa da carreira."
+        ],
+        "motivo": [
+          "Saiu para migrar definitivamente para tecnologia, área em que já atuava informalmente dentro da própria empresa."
+        ],
+        "resultado": [
+          "Chegou a prever custo e comportamento da operação pelo som da máquina e a enxergar o plano de corte na chapa antes de desenhar, nível avançado de domínio do processo."
+        ]
+      }
+    },
+    {
+      "id": "exp_fabricart",
+      "orbit": "experiencia",
+      "name": "Fabricart Indústria",
+      "aliases": [
+        "fabricart",
+        "valparaiso",
+        "logistica",
+        "ti operacional",
+        "socio operacional",
+        "banco de dados caido"
+      ],
+      "meta": {
+        "ano_inicio": 2016,
+        "ano_fim": 2018,
+        "duracao_meses": 32,
+        "status": "encerrado",
+        "ordem": 2
+      },
+      "facets": {
+        "resumo": [
+          "**Assistente de Logística, TI Operacional e Administrativo, Fabricart Indústria, Valparaíso de Goiás/GO (abr/2016 a nov/2018, 2 anos e 8 meses).** Atuou como sócio operacional: controle de estoque, compras, orçamento, suporte a sistemas internos e modelagem em CorelDRAW para produção industrial automatizada.",
+          "Ajudou a reestruturar a empresa e a migrá-la para um galpão industrial, organizando processo, estoque e orçamento com autonomia."
+        ],
+        "tecnologias": [
+          "Sistemas de gestão internos, banco de dados, CorelDRAW, Pacote Office, controle de estoque e suporte a estações."
+        ],
+        "desafio": [
+          "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça.",
+          "Foi nesse episódio que ficou claro que ele já tinha cabeça de TI, mesmo sem cargo formal na área."
+        ],
+        "aprendizado": [
+          "Visão de processo ponta a ponta e responsabilidade direta sobre a continuidade da operação."
+        ],
+        "duracao": [
+          "**2 anos e 8 meses**."
+        ],
+        "resultado": [
+          "Recuperação de banco de dados em produção após falha de fornecedor, sem perda definitiva da operação."
+        ]
+      }
+    },
+    {
+      "id": "exp_prepara",
+      "orbit": "experiencia",
+      "name": "Prepara Cursos / Instituto Midori",
+      "aliases": [
+        "prepara",
+        "prepara cursos",
+        "midori",
+        "instituto midori",
+        "instrutor",
+        "professor",
+        "taguatinga",
+        "aula"
+      ],
+      "meta": {
+        "ano_inicio": 2014,
+        "ano_fim": 2016,
+        "duracao_meses": 20,
+        "status": "encerrado",
+        "ordem": 3
+      },
+      "facets": {
+        "resumo": [
+          "**Instrutor de Informática e Suporte Técnico, Instituto Midori / Prepara Cursos, Taguatinga/DF (ago/2014 a mar/2016, 1 ano e 8 meses).** Ensino prático de Pacote Office, Photoshop, CorelDRAW, AutoCAD e manutenção de hardware e redes, além da administração da infraestrutura do laboratório de informática da franquia.",
+          "Também assumiu informalmente a gestão administrativa da unidade: controle de caixa, processos seletivos e apoio à decisão."
+        ],
+        "tecnologias": [
+          "Windows, Pacote Office, Photoshop, CorelDRAW, AutoCAD, manutenção de laboratório e redes locais."
+        ],
+        "desafio": [
+          "Era um dos poucos no DF que entendia os bugs do sistema da franquia: fazia o servidor voltar e as aulas rodarem quando o sistema travava."
+        ],
+        "aprendizado": [
+          "Didática e oratória técnica: traduzir conceito complexo para quem nunca viu. É daí que vem a clareza dele ao documentar e explicar decisão técnica."
+        ],
+        "duracao": [
+          "**1 ano e 8 meses**."
+        ],
+        "resultado": [
+          "Sustentou operação de unidade inteira com entrega consistente, acumulando ensino, suporte e gestão."
+        ]
+      }
+    },
+    {
+      "id": "exp_sociedade_loja",
+      "orbit": "experiencia",
+      "name": "Sociedade em loja de informática",
+      "aliases": [
+        "sociedade",
+        "socio",
+        "loja de informatica",
+        "empreender",
+        "2012",
+        "2013"
+      ],
+      "meta": {
+        "ano_inicio": 2012,
+        "ano_fim": 2013,
+        "status": "encerrado",
+        "ordem": 4
+      },
+      "facets": {
+        "resumo": [
+          "**Sócio em loja de informática (2012–2013).** Entrou quando era uma loja só e participou do crescimento de 2 para 10 funcionários, chegando a 3 lojas. O negócio encerrou por divergência de gestão entre os sócios."
+        ],
+        "aprendizado": [
+          "Primeira experiência real de gestão de operação técnica: equipe, estoque, atendimento e custo. Ensinou a enxergar negócio, não só máquina."
+        ],
+        "resultado": [
+          "Crescimento de 2 para 10 colaboradores e de 1 para 3 lojas no período."
+        ]
+      }
+    },
+    {
+      "id": "exp_oi",
+      "orbit": "experiencia",
+      "name": "Oi Atende Brasília",
+      "aliases": [
+        "oi",
+        "oi atende",
+        "guiche",
+        "atendente",
+        "telefonia",
+        "call center",
+        "2010"
+      ],
+      "meta": {
+        "ano_inicio": 2010,
+        "ano_fim": 2010,
+        "status": "encerrado",
+        "ordem": 5
+      },
+      "facets": {
+        "resumo": [
+          "**Atendente de guichê presencial, Oi Atende Brasília (2010).** Venda e atendimento de planos no balcão, com forte desempenho comercial."
+        ],
+        "desafio": [
+          "Para resolver mais casos no próprio balcão, ele estudou o sistema por dentro, inclusive acionando o call center com a própria matrícula para entender o fluxo. Resultado: passou a resolver na loja o que normalmente era escalado."
+        ],
+        "aprendizado": [
+          "Comunicação sob pressão com cliente final e leitura de sistema corporativo por conta própria."
+        ]
+      }
+    },
+    {
+      "id": "exp_friends",
+      "orbit": "experiencia",
+      "name": "Friends Informática",
+      "aliases": [
+        "friends",
+        "friends informatica",
+        "primeiro emprego",
+        "estagiario",
+        "2004",
+        "ceilandia"
+      ],
+      "meta": {
+        "ano_inicio": 2004,
+        "ano_fim": 2008,
+        "duracao_meses": 48,
+        "status": "encerrado",
+        "ordem": 6
+      },
+      "facets": {
+        "resumo": [
+          "**Friends Informática, Ceilândia/DF (2004–2008).** Primeiro emprego formal: entrou como estagiário e virou **instrutor de informática**, ensinando Pacote Office, manutenção e fundamentos a quem nunca tinha usado um computador.",
+          "Foi lá que ele fez os cursos de **Lógica de Programação** e **Montagem e Manutenção de Computadores**, a base de tudo que veio depois."
+        ],
+        "aprendizado": [
+          "O começo real da carreira técnica: aprender, ensinar e manter máquina funcionando ao mesmo tempo."
+        ],
+        "duracao": [
+          "Cerca de **4 anos** entre estágio e instrutoria."
+        ],
+        "motivo": [
+          "É onde a vocação virou profissão: ele já era, desde moleque, o cara que resolvia o computador dos outros."
+        ]
+      }
+    },
+    {
+      "id": "exp_autonomo",
+      "orbit": "experiencia",
+      "name": "Técnico de Manutenção e Suporte TI Autônomo",
+      "aliases": [
+        "autonomo",
+        "freelancer",
+        "bancada",
+        "montagem de pc",
+        "assistencia tecnica",
+        "2011"
+      ],
+      "meta": {
+        "ano_inicio": 2011,
+        "ano_fim": 2014,
+        "duracao_meses": 36,
+        "status": "encerrado",
+        "ordem": 7
+      },
+      "facets": {
+        "resumo": [
+          "**Técnico de Manutenção e Suporte de TI autônomo, Distrito Federal (2011–2014, 3 anos).** Montagem de computadores sob medida, diagnóstico de placas, formatação e instalação de sistemas operacionais, com atendimento direto a clientes finais e empresas locais em bancada técnica."
+        ],
+        "tecnologias": [
+          "Hardware, diagnóstico de placa, Windows, redes TCP/IP e recuperação de dados."
+        ],
+        "desafio": [
+          "Atender cliente final sem equipe de apoio: diagnóstico certo na primeira visita, com o que estivesse disponível."
+        ],
+        "aprendizado": [
+          "Autonomia total e responsabilidade direta pelo resultado, origem do hábito de documentar cada atendimento."
+        ],
+        "duracao": [
+          "Cerca de **3 anos**."
+        ]
+      }
+    },
+    {
+      "id": "form_unyleya",
+      "orbit": "formacao",
+      "name": "Graduação em Tecnologia da Informação, Unyleya",
+      "aliases": [
+        "graduacao",
+        "faculdade",
+        "unyleya",
+        "curso superior",
+        "ead",
+        "tecnologia da informacao"
+      ],
+      "meta": {
+        "ano_inicio": 2024,
+        "ano_fim": null,
+        "status": "em andamento",
+        "ordem": 1
+      },
+      "facets": {
+        "resumo": [
+          "**Graduação em Tecnologia da Informação (EAD), Faculdade Unyleya**, em andamento. É o formato que encaixou com o modo de aprender dele: ritmo próprio, aplicação prática imediata e sem dependência de aula linear. Dela nasceu o projeto de extensão que virou o Gerador ABNT publicado."
+        ],
+        "duracao": [
+          "Em andamento."
+        ],
+        "aprendizado": [
+          "Fundamentos de sistemas, banco de dados, redes e gestão de TI, aplicados diretamente nos projetos do portfólio."
+        ],
+        "motivo": [
+          "Foi o curso que o fez voltar a acreditar que conseguiria concluir uma formação formal."
+        ]
+      }
+    },
+    {
+      "id": "form_cs50",
+      "orbit": "formacao",
+      "name": "CS50, Harvard University",
+      "aliases": [
+        "cs50",
+        "harvard",
+        "ciencia da computacao",
+        "curso de harvard"
+      ],
+      "meta": {
+        "ano_inicio": 2024,
+        "ano_fim": null,
+        "status": "estudo contínuo",
+        "ordem": 2
+      },
+      "facets": {
+        "resumo": [
+          "**CS50: Introduction to Computer Science, Harvard University**, em estudo contínuo e independente. É a consolidação da base teórica que complementa a prática: algoritmos, estruturas de dados e lógica de programação de verdade."
+        ],
+        "aprendizado": [
+          "Fundamentos de computação, complexidade, memória e pensamento algorítmico, sustentando o que ele já faz na prática."
+        ]
+      }
+    },
+    {
+      "id": "form_cursos_origem",
+      "orbit": "formacao",
+      "name": "Cursos de origem (2007–2011)",
+      "aliases": [
+        "friends informatica curso",
+        "microlins",
+        "ucb",
+        "universidade catolica",
+        "newworld",
+        "via educacao",
+        "logica de programacao",
+        "sistemas de informacao"
+      ],
+      "meta": {
+        "ano_inicio": 2007,
+        "ano_fim": 2011,
+        "status": "concluído/parcial",
+        "ordem": 3
+      },
+      "facets": {
+        "resumo": [
+          "A base técnica começou muito antes do EAD:\n• **2007 · Lógica de Programação**, Friends Informática (Ceilândia/DF)\n• **2007 · Montagem e Manutenção de Computadores**, Friends Informática\n• **2009 · Access e SQL (banco de dados)**, Microlins\n• **2011 · Formação interna para instrutores**, NewWorld Informática e Via Educação\n• **2011 · Matérias de Sistemas de Informação**, UCB (cursadas parcialmente)",
+          "Foi nesses cursos que ele aprendeu a pensar como programador pela primeira vez e teve o primeiro contato com banco de dados relacional."
+        ],
+        "motivo": [
+          "Ele sempre orbitou a área: mesmo sem conseguir entrar formalmente em TI, continuou se formando tecnicamente."
+        ]
+      }
+    },
+    {
+      "id": "form_cursos_tecnicos",
+      "orbit": "formacao",
+      "name": "Cursos técnicos (2014–2015)",
+      "aliases": [
+        "web designer",
+        "curso de java",
+        "curso de python",
+        "prepara curso",
+        "2014",
+        "2015"
+      ],
+      "meta": {
+        "ano_inicio": 2014,
+        "ano_fim": 2015,
+        "status": "concluído",
+        "ordem": 4
+      },
+      "facets": {
+        "resumo": [
+          "• **2014 · Web Designer** (Prepara Cursos), HTML, CSS, Photoshop, CorelDRAW, estrutura de sites e criação visual\n• **2014 · Java** com foco em componentes, primeiro contato sério com orientação a objetos\n• **2015 · Python**, no início da adoção da linguagem no Brasil, curso curto, mas definiu a visão dele sobre linguagem simples resolvendo problema grande"
+        ],
+        "aprendizado": [
+          "Fundamentos de web e de orientação a objetos que sustentam o que ele constrói hoje em TypeScript e React."
+        ]
+      }
+    }
+  ]
+}

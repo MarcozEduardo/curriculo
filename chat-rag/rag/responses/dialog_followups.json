@@ -1,0 +1,69 @@
+{
+  "category": "dialog_followups",
+  "descricao": "Textos usados pelo DialogState para oferecer continuação e tratar a resposta do visitante. Toda oferta corresponde a conteúdo que existe na base.",
+  "offer_templates": [
+    "Se quiser, posso seguir por {opcoes}.",
+    "Posso continuar por {opcoes}. Qual prefere?",
+    "Dá para aprofundar em {opcoes}.",
+    "Quer que eu continue por {opcoes}?",
+    "Próximos caminhos possíveis: {opcoes}."
+  ],
+  "single_offer_templates": [
+    "Quer que eu detalhe {opcao}?",
+    "Posso explicar {opcao}, se fizer sentido.",
+    "Se quiser, continuo por {opcao}."
+  ],
+  "reask": [
+    "Combinado. Por qual você prefere começar: {opcoes}?",
+    "Claro. Qual dessas: {opcoes}?",
+    "Pode ser. Me diga por onde: {opcoes}."
+  ],
+  "decline": [
+    "Tudo bem. Se quiser mudar de assunto, posso falar de projetos, habilidades, experiência ou condições de contratação.",
+    "Sem problema. Posso ajudar com outro tema: projetos, experiência, formação ou contato.",
+    "Certo. Quando quiser, é só perguntar sobre qualquer parte do currículo."
+  ],
+  "revisit": [
+    "Retomando o que já comentei: ",
+    "Como eu disse antes: ",
+    "Esse ponto já apareceu, mas repito: "
+  ],
+  "facet_labels": {
+    "tecnologias": "as tecnologias usadas",
+    "status": "o status atual",
+    "link": "onde acessar",
+    "motivo": "por que foi criado",
+    "desafio": "o maior desafio",
+    "aprendizado": "o que ele aprendeu",
+    "duracao": "quanto tempo levou",
+    "arquitetura": "como foi organizado",
+    "qa": "como foi testado",
+    "equipe": "quem participou",
+    "sistemas_grandes": "o contexto desse sistema",
+    "resultado": "o resultado entregue",
+    "conquistas": "as principais entregas",
+    "industria": "a experiência industrial",
+    "ia_copiloto": "o papel da IA no trabalho dele",
+    "experiencia_dev": "a experiência em desenvolvimento",
+    "motivo_saida": "por que ele saiu",
+    "tempo_total": "o tempo total de experiência",
+    "vaga_afirmativa": "o enquadramento em vagas afirmativas",
+    "adaptacoes": "o que favorece o trabalho dele",
+    "diferencial": "o diferencial prático",
+    "diagnostico": "quando veio o diagnóstico",
+    "contexto_honesto": "como ele mantém o conhecimento ativo",
+    "pretensao": "a remuneração",
+    "modelo_trabalho": "o modelo de trabalho",
+    "disponibilidade": "a disponibilidade",
+    "contratacao": "o tipo de contratação",
+    "senioridade": "a senioridade",
+    "por_que_contratar": "por que considerar o perfil dele",
+    "fit_vaga": "o encaixe com a vaga",
+    "sabe_programar": "como ele programa",
+    "entrevista": "como agendar uma conversa",
+    "curriculo_arquivo": "o currículo em PDF",
+    "study_case": "a história por trás",
+    "processo": "o processo de trabalho",
+    "idiomas": "o inglês dele"
+  }
+}

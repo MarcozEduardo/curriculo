@@ -1,0 +1,6 @@
+{
+  "interacao": ["com", "pro", "pra", "para"],
+  "posse_m": ["do", "dele"],
+  "posse_f": ["da", "dela"],
+  "preposicao_geral": ["de", "em", "no", "na", "ao"]
+}

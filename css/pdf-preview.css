@@ -1,0 +1,602 @@
+/* ===================== MODO PDF PREVIEW ===================== */
+
+/* 1. Esconder o site normal inteiro */
+body.pdf-preview > .phone-frame,
+body.pdf-preview > .sticky-mini-header,
+body.pdf-preview > .floating-actions,
+body.pdf-preview > .back-top,
+body.pdf-preview > .toast-container,
+body.pdf-preview > .chat-modal,
+body.pdf-preview > .link-confirm-modal,
+body.pdf-preview > #focusedNavCompact {
+  display: none !important;
+}
+
+/* 2. Backdrop escuro */
+body.pdf-preview {
+  background: #141414 !important;
+  background-image: none !important;
+  padding: 70px 20px 60px 20px !important;
+  margin: 0 !important;
+  display: block !important;
+  min-height: 100vh !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+}
+
+/* 3. Toolbar */
+.pdf-toolbar {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 99999;
+  background: #0d0e11;
+  border-bottom: 2px solid #f26418;
+  color: #fff;
+  padding: 12px 24px;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Inter', sans-serif;
+}
+body.pdf-preview .pdf-toolbar { display: flex; }
+.pt-icon { color: #f26418; font-size: 18px; }
+.pt-info { flex: 1; font-size: 13px; color: #cbd5e1; }
+.pt-info strong { color: #fff; font-weight: 700; }
+.pt-info span { color: #94a3b8; margin-left: 8px; }
+.pt-close {
+  padding: 8px 18px;
+  background: linear-gradient(160deg, #FF8C42 0%, #FF7A2E 45%, #F26418 100%);
+  border: none; border-radius: 8px; color: #fff;
+  font-weight: 600; font-size: 12px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Inter', sans-serif;
+}
+.pt-close:hover { transform: translateY(-1px); }
+
+.pt-download {
+  padding: 8px 18px;
+  background: #16a34a;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.15s ease, transform 0.15s ease;
+  margin-right: 8px;
+}
+.pt-download:hover { background: #15803d; transform: translateY(-1px); }
+
+/* ================= PROGRESS OVERLAY ================= */
+.pdf-progress-overlay {
+  display: none;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483647 !important;
+  background: rgba(13, 14, 17, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  align-items: center;
+  justify-content: center;
+}
+.pdf-progress-overlay.show { display: flex; }
+
+.pdf-progress-box {
+  background: #16181d;
+  border: 1px solid #2e3541;
+  border-radius: 18px;
+  padding: 32px 40px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  font-family: 'Inter', sans-serif;
+}
+
+.pp-spinner {
+  font-size: 42px;
+  color: #f26418;
+  margin-bottom: 14px;
+  animation: pdfSpin 1.4s ease-in-out infinite;
+}
+
+@keyframes pdfSpin {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.12); opacity: 0.7; }
+}
+
+.pp-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.pp-step {
+  font-size: 12.5px;
+  color: #94a3b8;
+  margin-bottom: 18px;
+  min-height: 18px;
+}
+
+.pp-bar {
+  width: 100%;
+  height: 6px;
+  background: #23262d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pp-bar-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #FF8C42 0%, #F26418 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* ================= TOAST PDF (substitui alert) ================= */
+.pdf-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  z-index: 100001;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: #16181d;
+  border: 1px solid #f26418;
+  border-radius: 12px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(242, 100, 24, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+  max-width: 90vw;
+}
+
+.pdf-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.pdf-toast i {
+  color: #f26418;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.pdf-toast span {
+  line-height: 1.4;
+}
+
+/* 4. Container de páginas */
+.pdf-pages {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+body.pdf-preview .pdf-pages { display: flex; }
+
+/* Container silencioso (usado durante download): off-screen, sem gap */
+.pdf-pages-silent {
+  gap: 0 !important;
+  align-items: flex-start !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+
+/* Backdrop do preview NÃO aparece durante o download silencioso */
+body.pdf-silent {
+  background: initial !important;
+  padding: initial !important;
+}
+
+/* Toolbar e progress ficam visíveis durante o silent (progress é o que importa) */
+body.pdf-silent .pdf-toolbar {
+  display: none !important;
+}
+
+/* 5. Cada página A4 */
+.pdf-page {
+  width: 210mm;
+  height: 297mm;
+  background: #FFFFFF;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #26221E;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+/* 6. Rodapé de página (número) */
+.pdf-page-footer {
+  flex-shrink: 0;
+  height: 8mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: #b0a89c;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #f0e9dd;
+  margin: 0 10mm;
+  padding: 0 10mm;
+}
+
+/* 7. Área de conteúdo da página */
+.pdf-page-body {
+  flex: 1;
+  min-height: 0;
+  padding: 10mm;
+  overflow: hidden;
+}
+
+/* 8. Header grande na 1ª página (largura total) */
+.pdf-page-header {
+  flex-shrink: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body.pdf-preview .pdf-page-header .app-header {
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 8mm 10mm 10mm 10mm !important;
+  box-shadow: none !important;
+}
+
+/* 9. Reset geral dentro das páginas */
+body.pdf-preview .pdf-page * {
+  box-shadow: none !important;
+}
+
+/* Esconde SÓ a nav focada (botões do Modo Leitura Focada) */
+body.pdf-preview .pdf-page .focused-nav {
+  display: none !important;
+}
+
+/* QR Code no header do PDF — textos FORA do bloco laranja */
+body.pdf-preview .pdf-page .pdf-qr-wrap {
+  position: absolute !important;
+  top: 8mm !important;
+  right: 8mm !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 1.5mm !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: normal !important;
+  z-index: 100 !important;
+  pointer-events: none !important;
+}
+
+body.pdf-preview .pdf-page .pdf-qr-title {
+  position: absolute !important;
+  top: -3mm !important;
+  right: 0 !important;
+  left: auto !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  z-index: 101;
+}
+
+body.pdf-preview .pdf-page .pdf-qr-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F26418 !important;
+  background-image: none !important;
+  padding: 3mm !important;
+  border-radius: 4mm !important;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.28) !important;
+}
+
+body.pdf-preview .pdf-page .pdf-qr-box {
+  position: relative;
+  width: 34mm;
+  height: 34mm;
+  background: #FFFFFF !important;
+  padding: 1.5mm !important;
+  border-radius: 2mm !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+body.pdf-preview .pdf-page .pdf-qr-box img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: contain;
+}
+
+body.pdf-preview .pdf-page .pdf-qr-fallback {
+  font-size: 9px;
+  color: #B8420A;
+  text-align: center;
+}
+
+body.pdf-preview .pdf-page .pdf-qr-m {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9mm;
+  height: 9mm;
+  background: #FFFFFF;
+  border-radius: 1.5mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 6mm;
+  font-weight: 700;
+  color: #B8420A;
+  border: 2px solid #FF7A2E;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+body.pdf-preview .pdf-page .pdf-qr-info {
+  font-family: 'Inter', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: #B8420A;
+  padding: 3px 12px;
+  border-radius: 12px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+  color: #FFFFFF;
+  background: #B8420A;
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+  border-radius: 10px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+/* PDF não mexe no CSS do site original */
+body.pdf-preview .pdf-page .phone-frame,
+body.pdf-preview .pdf-page .sheet {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 0 !important;
+}
+
+body.pdf-preview .pdf-page .sheet {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  background: #FFFFFF !important;
+}
+
+/* Header encosta no topo da folha (quebra o padding do body) */
+body.pdf-preview .pdf-page-body > .app-header-expanded {
+  margin: -10mm -10mm 6mm -10mm !important;
+  width: calc(100% + 20mm) !important;
+  border-radius: 0 !important;
+  padding: 8mm 10mm 10mm 10mm !important;
+  box-shadow: none !important;
+}
+
+/* Respiro embaixo dos cards pra não colar na borda */
+body.pdf-preview .pdf-page-body {
+  padding: 10mm 10mm 14mm 10mm !important;
+}
+
+body.pdf-preview .pdf-page .card-habilidades,
+body.pdf-preview .pdf-page .card-diferenciais,
+body.pdf-preview .pdf-page .card-about,
+body.pdf-preview .pdf-page .projects-section,
+body.pdf-preview .pdf-page .exp-section {
+  margin-bottom: 0 !important;
+}
+
+body.pdf-preview .pdf-page .card,
+body.pdf-preview .pdf-page .card-about,
+body.pdf-preview .pdf-page .card-diferenciais,
+body.pdf-preview .pdf-page .card-habilidades,
+body.pdf-preview .pdf-page .card.projects-section,
+body.pdf-preview .pdf-page .exp-section {
+  padding: 5mm !important;
+  margin: 0 0 4mm 0 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5DDD3 !important;
+  border-radius: 4px !important;
+}
+
+/* Divisor */
+body.pdf-preview .pdf-page .about-divider {
+  margin: 1mm 0 2mm 0 !important;
+  font-size: 10px !important;
+}
+
+/* Sobre Mim (cards list) */
+body.pdf-preview .pdf-page .about-list li {
+  padding: 5px 8px !important;
+  font-size: 10px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 3px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5DDD3 !important;
+  border-left: 3px solid #D9540A !important;
+}
+
+/* Skills grid no PDF: 1 coluna (4 cards empilhados) */
+body.pdf-preview .pdf-page .skills-grid {
+  grid-template-columns: 1fr !important;
+  gap: 1.2mm !important;
+}
+/* No PDF: cada skill-group vira bloco compacto (título + pills lineares) */
+body.pdf-preview .pdf-page .skill-group {
+  padding: 0 0 1.8mm 0 !important;
+  border: none !important;
+  border-bottom: 1px dashed #E5DDD3 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  margin: 0 !important;
+}
+
+body.pdf-preview .pdf-page .skill-group:last-child {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+body.pdf-preview .pdf-page .skill-group h4 {
+  font-size: 9px !important;
+  margin: 0 0 1mm 0 !important;
+  padding: 0 !important;
+  border-bottom: none !important;
+  display: block !important;
+}
+
+body.pdf-preview .pdf-page .pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 1mm !important;
+}
+
+body.pdf-preview .pdf-page .pill {
+  font-size: 7.8px !important;
+  padding: 1px 6px !important;
+  border-radius: 10px !important;
+  background: #FFF6EC !important;
+  border: 1px solid #F3C49B !important;
+}
+
+/* Reduz o card-habilidades externo pra caber mais */
+body.pdf-preview .pdf-page .card-habilidades {
+  padding: 3mm 4mm 3mm 4mm !important;
+  margin: 0 0 2mm 0 !important;
+}
+
+body.pdf-preview .pdf-page .card-habilidades .card-title {
+  margin-bottom: 2mm !important;
+}
+
+body.pdf-preview .pdf-page .card-habilidades .skills-grid {
+  gap: 1.5mm !important;
+}
+
+/* Projetos */
+body.pdf-preview .pdf-page .project-card {
+  padding: 4mm !important;
+  margin-bottom: 3mm !important;
+  font-size: 9.5px !important;
+}
+body.pdf-preview .pdf-page .projects-grid {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 3mm !important;
+}
+
+/* Experiências */
+body.pdf-preview .pdf-page .exp-item {
+  padding-bottom: 3mm !important;
+  margin-bottom: 3mm !important;
+}
+body.pdf-preview .pdf-page .exp-title {
+  font-size: 10px !important;
+}
+
+/* Título de card */
+body.pdf-preview .pdf-page .card-title {
+  font-size: 11px !important;
+  margin-bottom: 3mm !important;
+}
+
+/* Card Recursos de Orquestração no PDF: compacto */
+body.pdf-preview .pdf-page .card-orquestracao {
+  padding: 4mm !important;
+  margin: 3mm 0 3mm 0 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5DDD3 !important;
+  border-radius: 4px !important;
+}
+
+body.pdf-preview .pdf-page .orq-txt {
+  font-size: 9.5px !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+  color: #3a342e !important;
+}
+
+body.pdf-preview .pdf-page .orq-txt strong {
+  color: #B8420A !important;
+  font-weight: 700 !important;
+}
+
+body.pdf-preview .pdf-page #divider-orquestracao {
+  margin: 4mm 0 2mm 0 !important;
+  font-size: 10px !important;
+}
+
+/* Rodapé institucional (Desenvolvimento / QA / Marcos) */
+body.pdf-preview .pdf-page .footer {
+  padding: 3mm !important;
+  font-size: 8.5px !important;
+  margin: 0 !important;
+  border-top: 1px solid #E5DDD3 !important;
+  background: #FFFFFF !important;
+}
+
+/* Nota PCD */
+body.pdf-preview .pdf-page .pcd-footer-note {
+  padding: 3mm !important;
+  font-size: 8px !important;
+  border-top: 1px dashed #E5DDD3 !important;
+}
+
+/* Blocos que precisam quebrar juntos */
+.pdf-block {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Mobile: reduz escala */
+@media (max-width: 900px) {
+  body.pdf-preview { padding: 60px 6px 30px 6px !important; }
+  .pdf-page {
+    transform: scale(0.42);
+    transform-origin: top center;
+    margin-bottom: -170mm;
+  }
+}

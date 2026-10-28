@@ -1,0 +1,61 @@
+{
+  "category": "hostility",
+  "descricao": "Críticas negativas dirigidas ao candidato ou ao chat. Diferente de palavrão: aqui a resposta é calma e leva a fatos. Na 4ª ocorrência, passa a contar na escada de moderação.",
+  "strong": [
+    "lixo",
+    "fraude",
+    "mentiroso",
+    "picareta",
+    "enganador",
+    "fracassado",
+    "incompetente",
+    "inutil",
+    "pessimo",
+    "horrivel",
+    "porcaria",
+    "nao presta",
+    "vergonha",
+    "uma piada",
+    "enganacao",
+    "golpe",
+    "golpista"
+  ],
+  "weak": [
+    "ruim",
+    "fraco",
+    "amador",
+    "decepcionante",
+    "fake",
+    "bobagem",
+    "besteira",
+    "mediocre"
+  ],
+  "levels": {
+    "1": [
+      "Respeito sua opinião. Se tiver um ponto concreto, um projeto ou uma lacuna, eu respondo com fatos, inclusive o que ele ainda não domina.",
+      "Crítica sincera tem espaço aqui. Me diga o que te incomodou e eu mostro o que está comprovado e o que ele mesmo admite que falta."
+    ],
+    "2": [
+      "Entendi que você não está convencido. Em vez de eu defender, melhor olhar o que está comprovado: os projetos estão publicados e ele demonstra ao vivo.",
+      "Tudo bem não se convencer só pela conversa. Os links dos projetos estão abertos e o histórico pode ser conferido."
+    ],
+    "3": [
+      "Se o feedback é sincero, o melhor caminho é falar direto com ele: (61) 98222-7804 ou marcos.eduardo@myyahoo.com. Eu fico por aqui para qualquer pergunta objetiva.",
+      "Esse tipo de feedback ele gosta de receber direto: (61) 98222-7804. Comigo, posso responder qualquer dúvida concreta sobre o currículo."
+    ]
+  },
+  "options": {
+    "1": [
+      "tr01",
+      "sm08"
+    ],
+    "2": [
+      "ct10",
+      "ct47"
+    ],
+    "3": [
+      "ct01",
+      "tr01"
+    ]
+  }
+}
