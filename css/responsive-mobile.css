@@ -1,0 +1,257 @@
+/* ============================================================
+   RESPONSIVE MOBILE — Ajustes cirúrgicos para celular
+   Carregado por ÚLTIMO no <head> do index.html.
+   Sobrescreve SÓ o que atrapalha no mobile. Desktop intacto.
+   Reversão: apagar este arquivo + a linha no <head>.
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  /* ---- FRAME E FOLHA: menos padding lateral ---- */
+  .phone-frame {
+    border-radius: 0;
+    margin: 0 auto;
+  }
+  .sheet {
+    padding: 16px 12px 28px 12px;
+    border-radius: 0;
+  }
+
+  /* ---- HEADER: enxugar tudo ---- */
+  .app-header {
+    padding: 14px 14px 20px 14px;
+    border-radius: 0;
+  }
+  .header-top-row .icon-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .phone-num-topright {
+    font-size: 11px;
+    padding: 4px 9px;
+  }
+  .header-photo-row {
+    margin-top: 14px;
+    gap: 12px;
+  }
+  .photo-circle {
+    width: 76px;
+    height: 76px;
+    border-width: 2.5px;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.55);
+  }
+  .photo-add-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 9px;
+    border-width: 2px;
+  }
+  .header-name-block {
+    flex: 1;
+    min-width: 0;
+  }
+  .header-name-block h1 {
+    font-size: 17px;
+    line-height: 1.15;
+    word-break: break-word;
+  }
+  .header-role {
+    font-size: 10.8px;
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+  .header-phone-shrink {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  /* GitHub flutuante do header estoura no mobile; link existe no card de contato e no header compacto */
+  .header-github {
+    display: none;
+  }
+  /* Nav focada do header: só aperta o layout no mobile; a versão compacta cobre */
+  .focused-nav {
+    margin-top: 12px;
+    padding-top: 10px;
+    gap: 5px;
+  }
+
+  /* ---- CARDS: menos padding ---- */
+  .card {
+    padding: 12px 12px !important;
+    border-radius: 12px !important;
+  }
+  .card-title {
+    font-size: 12.5px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .card-title-meta {
+    margin-left: 0;
+    width: 100%;
+    font-size: 9.5px;
+    padding-top: 2px;
+  }
+  .badge {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  /* ---- Sobre mim ---- */
+  .about-divider {
+    font-size: 12px;
+    gap: 8px;
+    margin: 6px 0 10px 0;
+  }
+  .about-divider i {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+  }
+  .about-list li {
+    padding: 9px 11px;
+    font-size: 12px;
+    line-height: 1.55;
+    gap: 10px;
+  }
+  .about-list li > i {
+    font-size: 13px;
+  }
+
+  /* ---- Skills ---- */
+  .skills-grid {
+    gap: 12px;
+  }
+  .skill-group {
+    padding: 12px 12px;
+  }
+  .skill-group h4 {
+    font-size: 10.5px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+  }
+  .pill {
+    font-size: 10.5px;
+    padding: 4px 10px;
+  }
+
+  /* ---- Projetos ---- */
+  .project-card {
+    padding: 10px 10px;
+    border-left-width: 3px;
+  }
+  .project-header {
+    gap: 6px;
+  }
+  .project-title-group {
+    flex: 1;
+    min-width: 0;
+  }
+  .project-name {
+    font-size: 11.5px;
+  }
+  .project-sub {
+    font-size: 9px;
+  }
+  .status-badge {
+    font-size: 7.8px;
+    padding: 2px 6px;
+  }
+  .project-stack {
+    font-size: 8.8px;
+  }
+  .project-desc {
+    font-size: 9.4px;
+  }
+  .project-link-btn {
+    font-size: 9px;
+    padding: 4px 8px;
+    word-break: break-all;
+  }
+  .author-note-card {
+    padding: 10px 11px;
+  }
+  .author-note-txt {
+    font-size: 9.3px;
+  }
+
+  /* ---- Experiência ---- */
+  .exp-section {
+    margin-top: 14px;
+  }
+  .exp-item {
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+  .exp-line {
+    width: 12px;
+  }
+  .exp-dot {
+    width: 11px;
+    height: 11px;
+    border-width: 2.5px;
+  }
+  .exp-title {
+    font-size: 10.8px;
+  }
+  .exp-company {
+    font-size: 9.3px;
+  }
+  .exp-desc {
+    font-size: 9.4px;
+    padding-left: 12px;
+  }
+
+  /* ---- Rodapé ---- */
+  .pcd-footer-note {
+    padding: 12px 14px 6px 14px;
+  }
+  .pcd-footer-note p {
+    font-size: 9.5px;
+  }
+  .footer {
+    padding: 12px 14px;
+    font-size: 9.5px;
+  }
+}
+
+/* ---- Ajustes finos para celulares estreitos (<= 400px) ---- */
+@media (max-width: 400px) {
+  .sheet {
+    padding: 12px 10px 24px 10px;
+  }
+  .app-header {
+    padding: 12px 12px 18px 12px;
+  }
+  .photo-circle {
+    width: 68px;
+    height: 68px;
+  }
+  .header-name-block h1 {
+    font-size: 16px;
+  }
+  .phone-num-topright {
+    font-size: 10px;
+    padding: 3px 7px;
+  }
+  .card {
+    padding: 10px 10px !important;
+  }
+  .about-list li {
+    font-size: 11.5px;
+    padding: 8px 10px;
+  }
+  .pill {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  .project-desc {
+    font-size: 9.2px;
+  }
+  .exp-desc {
+    font-size: 9.2px;
+  }
+}
