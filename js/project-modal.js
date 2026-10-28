@@ -143,7 +143,23 @@
 
 
 
-    // Prints column
+    // VÍDEOS EXTRAS (playlist YouTube)
+  const extras = media.youtube_extra || [];
+  if (extras.length > 0) {
+    const extraRow = el("div", "pm-extra-videos");
+    extraRow.style.cssText = "display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;";
+    extras.forEach(function (url) {
+      const wrap = el("div");
+      wrap.style.cssText = "aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#000;";
+      const emb = youtubeEmbed(url);
+      if (emb) wrap.appendChild(emb);
+      extraRow.appendChild(wrap);
+    });
+    row.style.flexDirection = "column";
+    row.appendChild(extraRow);
+  }
+
+// Prints column
     const prints = media.prints || [];
     if (prints.length > 0) {
       const thumbs = el('div', 'pm-thumbs');
