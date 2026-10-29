@@ -79,8 +79,16 @@ class ReactionEngine {
     return null;
   }
 
-  restAllowed(tokens, hit, allowed) {
-    return tokens.every((t, i) => (i >= hit.start && i < hit.start + hit.len) || allowed.has(t));
+  restAllowed(tokens, hit, allowed, tolerance) {
+    const tol = tolerance || 0;
+    let extras = 0;
+    for (let i = 0; i < tokens.length; i++) {
+      if (i >= hit.start && i < hit.start + hit.len) continue;
+      if (allowed.has(tokens[i])) continue;
+      extras++;
+      if (extras > tol) return false;
+    }
+    return true;
   }
 
   /* --------------------------- Hostilidade --------------------------- */
@@ -120,7 +128,7 @@ class ReactionEngine {
         const hit = this.locate(t, w);
         if (!hit) continue;
         const allowed = new Set([...this.hotFiller, ...withWords, ...(entry.extra || []).flatMap((w) => this.words(w))]);
-        if (this.restAllowed(t, hit, allowed)) return { kind: "hot", entry };
+        if (this.restAllowed(t, hit, allowed, 1)) return { kind: "hot", entry };
       }
     }
 

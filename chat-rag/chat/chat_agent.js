@@ -174,7 +174,35 @@
           if (projRes) { // FIX SCORE LEGO: o motor já decidiu internamente, se ele devolveu, é pra usar.
             response = projRes;
           } else {
-            response = ranker.answer(text);
+            const blocos = splitBlocks(text);
+            if (blocos.length >= 2) {
+              const MAX = 3;
+              const usados = blocos.slice(0, MAX);
+              const respostas = [];
+              let ultimaFonte = null;
+              for (let bi = 0; bi < usados.length; bi++) {
+                let r = null;
+                try {
+                  const pr = window.projetoEngine ? window.projetoEngine.answer(usados[bi]) : null;
+                  r = pr || ranker.answer(usados[bi]);
+                } catch (e) { r = null; }
+                if (r && r.text) {
+                  let t = r.text;
+                  if (bi < usados.length - 1) {
+                    t = t.replace(/\n\n(Quer que eu continue|Posso continuar|Quer que eu siga|Pr[oó]ximos caminhos|D[aá] para aprofundar)[^]*$/i, "").trim();
+                  }
+                  respostas.push(t);
+                  ultimaFonte = r.source || ultimaFonte;
+                }
+              }
+              let textoFinal = respostas.join("\n\n");
+              if (blocos.length > MAX) {
+                textoFinal += "\n\nRecebi " + blocos.length + " pedidos, respondi os " + MAX + " primeiros. Manda os outros depois que eu sigo.";
+              }
+              response = { text: textoFinal, source: ultimaFonte };
+            } else {
+              response = ranker.answer(text);
+            }
           }
         } catch (err) {
           console.error("[Bobby] erro ao responder:", err);
@@ -194,6 +222,13 @@
         input.focus();
       }, delay);
     }
+
+function splitBlocks(t) {
+  const raw = String(t || "").trim();
+  if (!raw) return [];
+  const parts = raw.split(/[,;]+|\s+(?:e|com|mais)\s+/i).map(function(s){return s.trim();}).filter(function(s){return s.length >= 3;});
+  return parts.length ? parts : [raw];
+}
 
     function startConversation() {
       messages.innerHTML = "";

@@ -51,9 +51,198 @@
     "ta",
     "alguma",
     "alguem",
-    "entao"
+    "entao",
+    "pode",
+    "ser",
+    "vamos",
+    "nesse",
+    "esse",
+    "essa",
+    "este",
+    "esta",
+    "primeiro",
+    "segundo",
+    "terceiro",
+    "combinado",
+    "continuar",
+    "seguir",
+    "prefere",
+    "comecar",
+    "aprofundar",
+    "beleza",
+    "ok",
+    "claro",
+    "bora",
+    "manda",
+    "fale",
+    "envia",
+    "envie",
+    "envio",
+    "enviar",
+    "enviei",
+    "mandar",
+    "mande",
+    "mando",
+    "mandou",
+    "pedir",
+    "pedi",
+    "peco",
+    "pede",
+    "quero",
+    "queria",
+    "precisa",
+    "preciso",
+    "precisava",
+    "mim",
+    "enviado",
+    "mandado",
+    "mandam",
+    "mandava",
+    "dele",
+    "dela",
+    "deles",
+    "delas",
+    "desse",
+    "dessa",
+    "desses",
+    "dessas",
+    "passa",
+    "passar",
+    "passou",
+    "passe",
+    "passo",
+    "passam",
+    "passava",
+    "passando"
   ],
   "hot": [
+    {
+      "id": "canal_whatsapp",
+      "words": [
+        "whatsapp",
+        "whats",
+        "zap",
+        "zapzap",
+        "wpp",
+        "ligar",
+        "telefone",
+        "numero",
+        "fone"
+      ],
+      "node": "ct02"
+    },
+    {
+      "id": "canal_email",
+      "words": [
+        "email",
+        "e-mail",
+        "mail",
+        "correio"
+      ],
+      "node": "ct03"
+    },
+    {
+      "id": "canal_rapido",
+      "words": [
+        "canal mais rapido",
+        "mais rapido",
+        "urgencia"
+      ],
+      "node": "ct16"
+    },
+    {
+      "id": "tecnologias_portfolio",
+      "words": [
+        "tecnologias"
+      ],
+      "node": "pr11"
+    },
+    {
+      "id": "stacks_portfolio",
+      "words": [
+        "stacks",
+        "stack"
+      ],
+      "node": "pr11"
+    },
+    {
+      "id": "tecnologia_ctx_portfolio",
+      "words": [
+        "tecnologia"
+      ],
+      "with": [
+        "portfolio",
+        "projetos",
+        "jogos",
+        "ferramentas",
+        "stack"
+      ],
+      "node": "pr11"
+    },
+    {
+      "id": "bobby_proj_ctx",
+      "words": [
+        "bobby"
+      ],
+      "with": [
+        "trilogia",
+        "jogo",
+        "jogos",
+        "fuga",
+        "viagem",
+        "dama",
+        "projeto",
+        "manda",
+        "ver",
+        "quero",
+        "esse",
+        "desse",
+        "ai"
+      ],
+      "node": "pr02"
+    },
+    {
+      "id": "trilogia_bobby",
+      "words": [
+        "trilogia",
+        "saga"
+      ],
+      "with": [
+        "bobby",
+        "jogo",
+        "jogos",
+        "primeiro",
+        "segundo",
+        "terceiro"
+      ],
+      "node": "pr02"
+    },
+    {
+      "id": "trilogia_proj",
+      "words": [
+        "trilogia"
+      ],
+      "node": "pr02"
+    },
+    {
+      "id": "jogos_publicados",
+      "words": [
+        "jogos",
+        "publicados",
+        "publicado",
+        "jogavel",
+        "jogaveis"
+      ],
+      "node": "pr01"
+    },
+    {
+      "id": "ferramentas_proj",
+      "words": [
+        "ferramentas",
+        "ferramenta"
+      ],
+      "node": "pr03"
+    },
     {
       "id": "socram_fate",
       "words": [

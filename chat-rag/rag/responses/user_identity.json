@@ -5,9 +5,19 @@
     {
       "id": "sabe_quem_sou",
       "patterns": [
-        "voce sabe quem eu sou", "sabe quem eu sou", "quem sou eu", "sabe quem e que ta falando",
-        "me conhece", "voce me conhece", "sabe com quem voce esta falando", "adivinha quem sou",
-        "qual o meu nome", "sabe meu nome", "lembra de mim", "ja me viu antes", "quem fala com voce"
+        "voce sabe quem eu sou",
+        "sabe quem eu sou",
+        "quem sou eu",
+        "sabe quem e que ta falando",
+        "me conhece",
+        "voce me conhece",
+        "sabe com quem voce esta falando",
+        "adivinha quem sou",
+        "qual o meu nome",
+        "sabe meu nome",
+        "lembra de mim",
+        "ja me viu antes",
+        "quem fala com voce"
       ],
       "sem_nome": [
         "Sinceramente? Não sei, e eu não chuto. Eu só sei o que você me contar nesta conversa. Se disser **\"meu nome é ...\"**, eu guardo e uso daqui pra frente.",
@@ -23,7 +33,15 @@
     },
     {
       "id": "apresentacao",
-      "patterns": ["meu nome e", "me chamo", "sou o", "sou a", "aqui e o", "aqui e a", "pode me chamar de"],
+      "patterns": [
+        "meu nome e",
+        "me chamo",
+        "sou o",
+        "sou a",
+        "aqui e o",
+        "aqui e a",
+        "pode me chamar de"
+      ],
       "variations": [
         "Prazer, **{nome}**! Anotado. Pode perguntar o que quiser sobre o Marcão, projetos, stack, experiência, neurodivergência ou contratação.",
         "Muito prazer, **{nome}**! Vou te chamar assim durante a conversa. Por onde começamos?",
@@ -31,8 +49,28 @@
       ]
     },
     {
+      "id": "troca_nome",
+      "patterns": [
+        "meu nome e",
+        "me chamo"
+      ],
+      "variations": [
+        "Anotado, agora vou te chamar de NOME. Antes eu tinha ANTERIOR na memoria; fica valendo NOME daqui pra frente. Bora falar do Marcao que e o foco.",
+        "Troquei: antes ANTERIOR, agora NOME. Fechado, e assim que te chamo. O que quer saber do Marcao?",
+        "Certo, atualizei: ANTERIOR virou NOME. Pode perguntar."
+      ]
+    },
+    {
       "id": "empresa_visitante",
-      "patterns": ["sou da empresa", "trabalho na", "sou recrutador", "sou recrutadora", "sou do rh", "sou tech lead", "represento a"],
+      "patterns": [
+        "sou da empresa",
+        "trabalho na",
+        "sou recrutador",
+        "sou recrutadora",
+        "sou do rh",
+        "sou tech lead",
+        "represento a"
+      ],
       "variations": [
         "Anotado{saudacao}: **{empresa}**. Se for útil, posso ir direto ao que normalmente interessa no processo: pretensão, disponibilidade, modelo de trabalho e o perfil neurodivergente com altas habilidades.",
         "Legal, {empresa} registrada aqui{saudacao}. Quer que eu monte um resumo objetivo do perfil para triagem?"
@@ -41,8 +79,15 @@
     {
       "id": "teste_bot",
       "patterns": [
-        "estou te testando", "to te testando", "isso e um teste", "quero testar voce", "voce e burro",
-        "voce nao sabe nada", "aposto que nao sabe", "prova que e inteligente", "me surpreenda"
+        "estou te testando",
+        "to te testando",
+        "isso e um teste",
+        "quero testar voce",
+        "voce e burro",
+        "voce nao sabe nada",
+        "aposto que nao sabe",
+        "prova que e inteligente",
+        "me surpreenda"
       ],
       "variations": [
         "Pode testar, é pra isso que eu existo 🙂 Só adianto a regra do jogo: eu **não invento**. Se a resposta não estiver na base do Marcos, eu digo que não sei.",

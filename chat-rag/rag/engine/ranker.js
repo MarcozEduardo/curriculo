@@ -279,17 +279,40 @@ class RagRanker {
     if (this.reaction.detectHostile(raw)) return this.handleHostile(raw);
 
     /* 2. Identidade do visitante --------------------------------------- */
-    const newName = this.memory.extractUserName(raw);
+    const previousName = this.memory.userName;
+    if (/(?:meu nome (?:é|e)|me chamo|pode me chamar de|me chamam de|sou chamad[oa] de)[\s.…!?]*$/i.test(light)) {
+        this.memory.record(raw, { orbit: "identidade_visitante", facet: "nome_incompleto", intentId: "nome_incompleto", summary: "Nome incompleto" });
+        return this.result("Ficou faltando o nome aí. Manda assim: **meu nome é João**.", {
+          source: "Memória da Conversa",
+          orbit: "identidade_visitante",
+          facet: "nome_incompleto",
+          confidence: 5,
+        });
+      }
+      const newName = this.memory.extractUserName(raw);
     this.memory.extractCompany(raw);
     this.memory.extractRole(raw);
+    if (newName && previousName && previousName !== newName && /^[A-Za-zÀ-ÿ]{2,}$/.test(newName)) {
+      const tI = this.responses.user_identity && this.responses.user_identity.intents && this.responses.user_identity.intents.find(function(i){return i.id === "troca_nome";});
+      const tL = (tI && tI.variations) || [];
+      let tT = this.pick(tL, "troca_nome").split("NOME").join(newName).split("ANTERIOR").join(previousName);
+      this.memory.record(raw, { orbit: "identidade_visitante", facet: "troca_nome", intentId: "troca_nome", summary: "Troca de nome" });
+      return this.result(this.humanizer.fill(tT), {
+      source: "Memoria da Conversa",
+      orbit: "identidade_visitante",
+      facet: "troca_nome",
+      confidence: 5,
+      });
+    }
     if (newName && /(?:meu nome|me chamo|sou o|sou a|aqui e|pode me chamar)/i.test(light)) {
-      const list = this.responses.user_identity?.intents?.find((i) => i.id === "apresentacao")?.variations || [];
-      this.memory.record(raw, { orbit: "identidade_visitante", facet: "apresentacao", intentId: "apresentacao", summary: "Apresentação do visitante" });
-      return this.result(this.humanizer.fill(this.pick(list, "apresentacao")), {
-        source: "Memória da Conversa",
-        orbit: "identidade_visitante",
-        facet: "apresentacao",
-        confidence: 5,
+      const aI = this.responses.user_identity && this.responses.user_identity.intents && this.responses.user_identity.intents.find(function(i){return i.id === "apresentacao";});
+      const aL = (aI && aI.variations) || [];
+      this.memory.record(raw, { orbit: "identidade_visitante", facet: "apresentacao", intentId: "apresentacao", summary: "Apresentacao do visitante" });
+      return this.result(this.humanizer.fill(this.pick(aL, "apresentacao")), {
+      source: "Memoria da Conversa",
+      orbit: "identidade_visitante",
+      facet: "apresentacao",
+      confidence: 5,
       });
     }
 

@@ -42,16 +42,28 @@ class SessionMemory {
 
   extractUserName(text) {
     const clean = String(text || "").trim();
-    const patterns = [
-      /(?:meu nome (?:é|e)|me chamo|pode me chamar de|aqui (?:é|e) o|aqui (?:é|e) a)\s+([a-zà-ÿ]{2,20})/i,
+    const explicitPatterns = [
+      /(?:meu nome (?:é|e)|me chamo|pode me chamar de|aqui (?:é|e) o|aqui (?:é|e) a|me chamam de|sou chamad[oa] de)\s+([a-zà-ÿ]{2,20})/i,
+      /([a-zà-ÿ]{2,20})\s+(?:é|e)\s+meu nome/i,
+    ];
+    const implicitPatterns = [
       /^(?:sou|eu sou)\s+(?:o|a)?\s*([a-zà-ÿ]{2,20})\b/i,
     ];
     const blocked = new Set([
-      "marcos", "marcao", "bobby", "recrutador", "recrutadora", "dev", "programador",
+      "bobby", "recrutador", "recrutadora", "dev", "programador",
       "visitante", "eu", "uma", "um", "de", "do", "da", "rh", "tech", "lead", "gerente",
-      "analista", "curioso", "humano", "pessoa", "gente",
+      "analista", "curioso", "humano", "pessoa", "gente", "qual", "quais", "que", "quem", "como", "onde", "quando", "porque", "nome", "nomes", "meu", "minha", "seu", "sua",
     ]);
-    for (const pat of patterns) {
+    for (const pat of explicitPatterns) {
+      const m = clean.match(pat);
+      if (m && m[1]) {
+        const raw = m[1].toLowerCase();
+        if (blocked.has(window.LeetNormalizer.deburr(raw))) continue;
+        this.userName = raw.charAt(0).toUpperCase() + raw.slice(1);
+        return this.userName;
+      }
+    }
+    for (const pat of implicitPatterns) {
       const m = clean.match(pat);
       if (m && m[1]) {
         const raw = m[1].toLowerCase();
