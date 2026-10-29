@@ -126,6 +126,11 @@
         if (!p) return;
         const avail = p.clientWidth;
         if (avail <= 0) return;
+        if (wrap.classList.contains('is-fullscreen')) {
+          iframe.style.zoom = '';
+          iframe.style.transform = '';
+          return;
+        }
         const z = avail / 700;
         if (CSS.supports('zoom', '0.5')) {
           iframe.style.zoom = z;
@@ -607,5 +612,23 @@ mainWrap.appendChild(preview);
     });
   });
 
-  window.ProjectModal = { open: openProject, close: closeModal };
+  if (!window.__pmDriveFsBound) {
+  window.__pmDriveFsBound = true;
+  const onFsChange = function () {
+    const fsEl = document.fullscreenElement || document.webkitFullscreenElement || null;
+    document.querySelectorAll('.pm-drive-wrap').forEach(function (w) {
+      const ifr = w.querySelector('iframe');
+      if (!ifr) return;
+      if (fsEl === ifr) {
+        w.classList.add('is-fullscreen');
+      } else if (!fsEl) {
+        w.classList.remove('is-fullscreen');
+      }
+    });
+  };
+  document.addEventListener('fullscreenchange', onFsChange);
+  document.addEventListener('webkitfullscreenchange', onFsChange);
+}
+
+window.ProjectModal = { open: openProject, close: closeModal };
 })();

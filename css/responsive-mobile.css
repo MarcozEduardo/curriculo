@@ -297,6 +297,9 @@
     .pm-main-media:has(.pm-drive-wrap) > .pm-drive-wrap iframe {
       zoom: calc((100vw - 32px) / 700px);
     }
+    .pm-main-media:has(.pm-drive-wrap) > .pm-drive-wrap.is-fullscreen iframe {
+      zoom: 1;
+    }
   }
   /* defensivo: thumbs nao estouram container */
   .pm-thumbs {
