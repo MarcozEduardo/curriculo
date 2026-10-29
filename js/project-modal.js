@@ -114,6 +114,13 @@
       catch (e) { return false; }
     })();
 
+    const isSafari = (function () {
+      const ua = navigator.userAgent || '';
+      const isiOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const isSafariUA = /Safari/.test(ua) && !/Chrome|Chromium|CriOS|Edg|OPR|Firefox|FxiOS|SamsungBrowser/.test(ua);
+      return isSafariUA || isiOS;
+    })();
+
     if (!supportsZoomCalc) {
       const applySizing = function () {
         if (window.innerWidth > 700) {
@@ -146,6 +153,52 @@
       setTimeout(applySizing, 120);
       setTimeout(applySizing, 400);
       window.addEventListener('resize', applySizing);
+    } else if (isSafari) {
+      iframe.style.zoom = '1';
+      const applySafari = function () {
+        const p = wrap.parentElement;
+        if (!p) return;
+        if (window.innerWidth > 700 || wrap.classList.contains('is-fullscreen')) {
+          wrap.style.width = '';
+          wrap.style.height = '';
+          wrap.style.transform = '';
+          wrap.style.transformOrigin = '';
+          iframe.style.removeProperty('width');
+          iframe.style.removeProperty('height');
+          p.style.height = '';
+          p.style.minHeight = '';
+          p.style.aspectRatio = '';
+          return;
+        }
+        const avail = p.clientWidth;
+        if (avail <= 0) return;
+        const z = avail / 700;
+        wrap.style.width = '700px';
+        wrap.style.height = '394px';
+        wrap.style.transformOrigin = 'top left';
+        wrap.style.transform = 'scale(' + z + ')';
+        iframe.style.setProperty('width', '700px', 'important');
+        iframe.style.setProperty('height', '394px', 'important');
+        p.style.height = (394 * z) + 'px';
+        p.style.minHeight = '0';
+        p.style.aspectRatio = 'auto';
+      };
+      const attachObserver = function () {
+        const p = wrap.parentElement;
+        if (!p) { requestAnimationFrame(attachObserver); return; }
+        applySafari();
+        if (window.ResizeObserver) {
+          const ro = new ResizeObserver(function () { applySafari(); });
+          ro.observe(p);
+        }
+        setTimeout(applySafari, 120);
+        setTimeout(applySafari, 400);
+        setTimeout(applySafari, 1200);
+      };
+      requestAnimationFrame(attachObserver);
+      window.addEventListener('resize', applySafari);
+      document.addEventListener('fullscreenchange', applySafari);
+      document.addEventListener('webkitfullscreenchange', applySafari);
     }
 
     return wrap;
@@ -159,8 +212,21 @@
   const mainWrap = el('div', 'pm-main-media');
   if (media.drive && !demo) {
     const emb = driveEmbed(media.drive);
-    if (emb) mainWrap.appendChild(emb);
-    else if (media.capa) mainWrap.appendChild(imgWithFallback(basePath + '/' + media.capa, info.nome, 'capa'));
+    if (emb) {
+      mainWrap.appendChild(emb);
+      const photoOverlay = document.createElement('img');
+      photoOverlay.src = 'img/foto.png';
+      photoOverlay.alt = 'Marcos';
+      photoOverlay.className = 'pm-drive-photo-overlay';
+      photoOverlay.addEventListener('click', function (e) {
+        e.stopPropagation();
+        photoOverlay.classList.add('pm-drive-photo-pulse');
+        setTimeout(function () {
+          photoOverlay.classList.remove('pm-drive-photo-pulse');
+        }, 350);
+      });
+      mainWrap.appendChild(photoOverlay);
+    } else if (media.capa) mainWrap.appendChild(imgWithFallback(basePath + '/' + media.capa, info.nome, 'capa'));
   } else if (media.youtube && !demo) {
     const emb = youtubeEmbed(media.youtube);
     if (emb) mainWrap.appendChild(emb);

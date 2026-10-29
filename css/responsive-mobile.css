@@ -311,6 +311,30 @@
     overflow: hidden;
   }
 
+  /* ---- DRIVE: foto overlay cobre botao expandir do Google ---- */
+  .pm-main-media > .pm-drive-photo-overlay {
+    display: block !important;
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 38px !important;
+    height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    border-radius: 50% !important;
+    border: 2px solid #fff !important;
+    object-fit: cover !important;
+    cursor: pointer !important;
+    z-index: 60 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+    transition: transform 0.2s ease !important;
+  }
+  .pm-drive-photo-overlay.pm-drive-photo-pulse {
+    transform: scale(1.4);
+  }
+
   /* ---- CHAT RAG: header travado + input sobe com teclado ---- */
   .chat-header {
     position: sticky;
@@ -401,6 +425,11 @@
     grid-template-columns: 1fr !important;
     gap: 8px !important;
   }
+}
+
+@media (min-width: 701px) {
+  /* Desktop: esconde overlay (mouse ja resolve) */
+  .pm-drive-photo-overlay { display: none !important; }
 }
 
 /* ---- Ajustes finos para celulares estreitos (<= 400px) ---- */
