@@ -335,23 +335,29 @@
     transform: scale(1.4);
   }
 
-  /* ---- CHAT RAG: header travado + input sobe com teclado ---- */
+  /* ---- CHAT RAG: header fixo + input empurrado pelo teclado ---- */
   .chat-header {
     position: sticky;
     top: 0;
     z-index: 10;
+    flex-shrink: 0;
     padding-top: max(16px, env(safe-area-inset-top));
   }
   .chat-box {
     height: 100dvh;
     max-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-messages {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
   .chat-input-area {
     padding-bottom: max(12px, env(safe-area-inset-bottom));
     flex-shrink: 0;
-  }
-  .chat-messages {
-    overscroll-behavior: contain;
   }
 
   /* ---- MODAL: alinhamento correto no navegador mobile ---- */
