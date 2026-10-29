@@ -103,11 +103,45 @@
 
     const iframe = document.createElement('iframe');
     iframe.src = 'https://drive.google.com/file/d/' + id + '/preview';
-    iframe.style.cssText = 'width:100%;height:100%;border:0;display:block;';
+    iframe.style.cssText = 'width:700px;height:394px;border:0;display:block;';
     iframe.allow = 'autoplay; encrypted-media';
     iframe.allowFullscreen = true;
     iframe.referrerPolicy = 'strict-origin-when-cross-origin';
     wrap.appendChild(iframe);
+
+    const supportsZoomCalc = (function () {
+      try { return CSS.supports('zoom', 'calc(1px / 1px)'); }
+      catch (e) { return false; }
+    })();
+
+    if (!supportsZoomCalc) {
+      const applySizing = function () {
+        if (window.innerWidth > 700) {
+          iframe.style.zoom = '';
+          iframe.style.transform = '';
+          iframe.style.transformOrigin = '';
+          return;
+        }
+        const p = wrap.parentElement;
+        if (!p) return;
+        const avail = p.clientWidth;
+        if (avail <= 0) return;
+        const z = avail / 700;
+        if (CSS.supports('zoom', '0.5')) {
+          iframe.style.zoom = z;
+          iframe.style.transform = '';
+          iframe.style.transformOrigin = '';
+        } else {
+          iframe.style.zoom = '';
+          iframe.style.transformOrigin = 'top left';
+          iframe.style.transform = 'scale(' + z + ')';
+        }
+      };
+      requestAnimationFrame(applySizing);
+      setTimeout(applySizing, 120);
+      setTimeout(applySizing, 400);
+      window.addEventListener('resize', applySizing);
+    }
 
     return wrap;
   }

@@ -216,6 +216,188 @@
     padding: 12px 14px;
     font-size: 9.5px;
   }
+
+  /* ---- GALERIA DOS CARDS: dedo indicador (SÓ mobile) ---- */
+  .project-card.has-gallery .project-gallery-slide {
+    left: 0;
+    width: 46px;
+    gap: 5px;
+    padding: 6px 2px;
+    cursor: pointer;
+    box-shadow: 0 0 14px rgba(255, 122, 46, 0.55), inset -1px 0 0 rgba(255,255,255,0.25);
+    transition: none;
+  }
+  .project-card.has-gallery .project-gallery-slide::after {
+    display: none;
+  }
+  .project-card.has-gallery .project-gallery-slide > i.fa-images {
+    display: none;
+  }
+  .project-card.has-gallery .project-gallery-slide::before {
+    content: '\f25a';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    animation: pmFingerTap 1.3s ease-in-out infinite;
+  }
+  @keyframes pmFingerTap {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-3px) scale(1.12); }
+  }
+  .project-card.has-gallery .project-gallery-slide span {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 7.5px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    line-height: 1.1;
+    text-align: center;
+    padding: 0 2px;
+    word-break: break-word;
+  }
+  .project-card.has-gallery .project-body-wrap {
+    padding-left: 54px !important;
+  }
+
+  /* ---- MODAL DA GALERIA: thumbs com altura visível ---- */
+  .pm-thumb {
+    aspect-ratio: 1 / 1;
+    min-height: 70px;
+  }
+
+  /* ---- GOOGLE DRIVE: aspect-ratio + CSS zoom scoped (Chrome) + JS fallback (Safari) ---- */
+  .pm-main-media:has(.pm-drive-wrap) {
+    aspect-ratio: 700 / 394;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+  .pm-main-media:has(.pm-drive-wrap) > .pm-drive-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+  }
+  .pm-main-media:has(.pm-drive-wrap) > .pm-drive-wrap iframe {
+    width: 700px;
+    height: 394px;
+    border: 0;
+    display: block;
+  }
+  @supports (zoom: calc(1px / 1px)) {
+    .pm-main-media:has(.pm-drive-wrap) > .pm-drive-wrap iframe {
+      zoom: calc((100vw - 32px) / 700px);
+    }
+  }
+  /* defensivo: thumbs nao estouram container */
+  .pm-thumbs {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .pm-thumb {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  /* ---- CHAT RAG: header travado + input sobe com teclado ---- */
+  .chat-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding-top: max(16px, env(safe-area-inset-top));
+  }
+  .chat-box {
+    height: 100dvh;
+    max-height: 100dvh;
+  }
+  .chat-input-area {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    flex-shrink: 0;
+  }
+  .chat-messages {
+    overscroll-behavior: contain;
+  }
+
+  /* ---- MODAL: alinhamento correto no navegador mobile ---- */
+  .pm-overlay {
+    padding: 6px;
+    padding-top: max(6px, env(safe-area-inset-top));
+    padding-bottom: max(6px, env(safe-area-inset-bottom));
+    padding-left: max(6px, env(safe-area-inset-left));
+    padding-right: max(6px, env(safe-area-inset-right));
+  }
+  .pm-frame {
+    max-height: calc(100vh - 12px);
+    max-height: calc(100dvh - 12px);
+    border-radius: 14px;
+  }
+
+  /* ---- GOOGLE DRIVE: mais altura pro player caber ---- */
+  /* Drive player tem controles que precisam de espaço vertical.
+     Em 16:9 num celular, sobra pouca área útil e o player buga ao dar play. */
+  .pm-main-media:has(.pm-drive-wrap) {
+    aspect-ratio: 4 / 3;
+    min-height: 240px;
+    background: #000;
+  }
+  .pm-drive-wrap iframe {
+    min-width: 100% !important;
+    min-height: 100% !important;
+  }
+
+  /* ---- MODAL: alinhamento no navegador mobile (safe-area + dvh) ---- */
+  .pm-overlay {
+    padding: 6px;
+    padding-top: max(6px, env(safe-area-inset-top));
+    padding-bottom: max(6px, env(safe-area-inset-bottom));
+    padding-left: max(6px, env(safe-area-inset-left));
+    padding-right: max(6px, env(safe-area-inset-right));
+  }
+  .pm-frame {
+    max-height: calc(100vh - 12px);
+    max-height: calc(100dvh - 12px);
+    border-radius: 14px;
+  }
+
+  /* ---- MODAL: controles de vídeo compactos ---- */
+  .pm-yt-playbtn {
+    width: 60px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 11px;
+  }
+  .pm-yt-playbtn::before {
+    border-radius: 16px;
+  }
+  .pm-back-to-video {
+    top: 8px;
+    left: 8px;
+    padding: 6px 11px;
+    font-size: 10.5px;
+    gap: 5px;
+  }
+  .pm-thumb-preview::after {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  /* ---- MODAL: vídeos extras em 1 coluna no mobile ---- */
+  .pm-extra-videos {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
 }
 
 /* ---- Ajustes finos para celulares estreitos (<= 400px) ---- */
