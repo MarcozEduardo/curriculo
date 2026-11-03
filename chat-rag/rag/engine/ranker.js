@@ -1001,6 +1001,30 @@ if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet &
 
   /** Palavras quentes, reações de teste e respostas vagas. */
   handleLight(hit, raw) {
+    // Prioridade: smalltalk polite (agradecimento/elogio/despedida) vence hot word
+    const politeIds = ["agradecimento", "elogio", "despedida"];
+    const politeList = (this.responses.smalltalk?.intents || []).filter(function(i){ return politeIds.indexOf(i.id) >= 0; });
+    const rawNorm = window.LeetNormalizer.light(String(raw || ""));
+    const tokensPolite = rawNorm.replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(Boolean);
+    for (const pi of politeList) {
+      const wc = tokensPolite.length;
+      const matched = (pi.patterns || []).some(function(pt){
+        const phrase = pt.indexOf(" ") >= 0;
+        const wcLimit = phrase ? pt.split(" ").length + 2 : (pt.length >= 6 ? 4 : 2);
+        if (wc > wcLimit) return false;
+        if (rawNorm.indexOf(pt) < 0) return false;
+        return true;
+      });
+      if (matched) {
+        this.memory.record(raw, { orbit: "smalltalk", facet: pi.id, intentId: "smalltalk:" + pi.id, summary: pi.id });
+        return this.result(this.pick(pi.variations, "smalltalk:" + pi.id), {
+          source: "Conversa",
+          orbit: "smalltalk",
+          facet: pi.id,
+          confidence: 5,
+        });
+      }
+    }
     if (hit.kind === "hot") {
       const node = this.dialog.get(hit.entry.node);
       return node ? this.answerNode(node, raw) : null;

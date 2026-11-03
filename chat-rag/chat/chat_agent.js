@@ -67,6 +67,7 @@
         const badge = document.createElement("div");
         badge.className = "msg-source";
         badge.innerHTML = `<i class="fa-solid fa-bookmark"></i> ${window.MessageFormatter.escape(source)}`;
+        attachBadgeToast(badge);
         wrap.appendChild(badge);
       }
 
@@ -89,7 +90,33 @@
       return wrap;
     }
 
-    function scrollBottom() {
+    function attachBadgeToast(badge) {
+    if (!badge || badge.dataset.toastBound === '1') return;
+    badge.dataset.toastBound = '1';
+    badge.style.cursor = 'pointer';
+    badge.addEventListener('click', function () {
+      if (badge.dataset.toasting === '1') return;
+      var original = badge.innerHTML;
+      badge.dataset.toasting = '1';
+      var msg = 'Essa é a órbita atual do Bobby';
+      var i = 0;
+      function step() {
+        if (i >= msg.length) {
+          setTimeout(function () {
+            badge.innerHTML = original;
+            delete badge.dataset.toasting;
+          }, 2200);
+          return;
+        }
+        i++;
+        badge.innerHTML = '<i class="fa-solid fa-circle-info"></i> ' + msg.slice(0, i);
+        setTimeout(step, 25);
+      }
+      step();
+    });
+  }
+
+  function scrollBottom() {
     const el = document.getElementById("chatMessages");
     if (!el) return;
     requestAnimationFrame(function () {
@@ -136,6 +163,7 @@
       const badge = document.createElement("div");
       badge.className = "msg-source";
       badge.innerHTML = '<i class="fa-solid fa-bookmark"></i> ' + window.MessageFormatter.escape(source);
+      attachBadgeToast(badge);
       wrap.appendChild(badge);
     }
     messages.appendChild(wrap);
