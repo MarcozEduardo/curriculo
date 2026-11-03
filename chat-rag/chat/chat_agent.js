@@ -85,17 +85,72 @@
       }
 
       messages.appendChild(wrap);
-      messages.scrollTop = messages.scrollHeight;
+    scrollBottom();
       return wrap;
     }
 
-    function showTyping() {
+    function scrollBottom() {
+    const el = document.getElementById("chatMessages");
+    if (!el) return;
+    requestAnimationFrame(function () {
+      el.scrollTop = el.scrollHeight;
+      requestAnimationFrame(function () { el.scrollTop = el.scrollHeight; });
+    });
+  }
+
+  let activeStream = null;
+  function streamText(contentEl, fullText) {
+    if (activeStream) { clearTimeout(activeStream); activeStream = null; }
+    const formatter = window.MessageFormatter;
+    if (!formatter || !fullText) {
+      if (contentEl) contentEl.textContent = fullText || "";
+      return Promise.resolve();
+    }
+    const total = fullText.length;
+    const CHUNK = total > 400 ? 4 : (total > 150 ? 2 : 1);
+    const SPEED = total > 400 ? 6 : (total > 150 ? 10 : 14);
+    return new Promise(function (resolve) {
+      let i = 0;
+      function step() {
+        i = Math.min(i + CHUNK, total);
+        try {
+          contentEl.innerHTML = formatter.format(fullText.slice(0, i));
+        } catch (e) {
+          contentEl.textContent = fullText.slice(0, i);
+        }
+        scrollBottom();
+        if (i >= total) { activeStream = null; resolve(); return; }
+        activeStream = setTimeout(step, SPEED);
+      }
+      step();
+    });
+  }
+
+  async function addBotMessageStreaming(text, source) {
+    const wrap = document.createElement("div");
+    wrap.className = "msg bot";
+    const content = document.createElement("div");
+    content.className = "msg-content";
+    wrap.appendChild(content);
+    if (source && window.MessageFormatter) {
+      const badge = document.createElement("div");
+      badge.className = "msg-source";
+      badge.innerHTML = '<i class="fa-solid fa-bookmark"></i> ' + window.MessageFormatter.escape(source);
+      wrap.appendChild(badge);
+    }
+    messages.appendChild(wrap);
+    scrollBottom();
+    await streamText(content, text);
+    return wrap;
+  }
+
+  function showTyping() {
       const el = document.createElement("div");
       el.className = "typing-indicator";
       el.id = "chatTyping";
       el.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
       messages.appendChild(el);
-      messages.scrollTop = messages.scrollHeight;
+    scrollBottom();
     }
 
     function hideTyping() {
@@ -159,6 +214,7 @@
       sendBtn && (sendBtn.disabled = true);
       addMessage("user", text);
       input.value = "";
+      if (window.innerWidth <= 700) { input.blur(); }
       showTyping();
 
       if (!ready) await bootPromise;
@@ -166,7 +222,7 @@
       const [minDelay, maxDelay] = (window.RAG_CONFIG && window.RAG_CONFIG.typingDelay) || [320, 720];
       const delay = minDelay + Math.random() * (maxDelay - minDelay) + Math.min(text.length * 6, 400);
 
-      window.setTimeout(() => {
+      window.setTimeout(async () => {
         hideTyping();
         let response;
         try {
@@ -211,7 +267,12 @@
             source: "Sistema",
           };
         }
-        addMessage("bot", response.text, [], response.source);
+    try {
+      await addBotMessageStreaming(response.text, response.source);
+    } catch (errStream) {
+      console.error("[Bobby] erro no streaming, cai no modo normal:", errStream);
+      addMessage("bot", response.text, [], response.source);
+    }
         logInteraction(text, response);
         if (response.action === "reset") {
           scheduleReset();
@@ -219,7 +280,7 @@
         }
         busy = false;
         sendBtn && (sendBtn.disabled = false);
-        input.focus();
+        if (window.innerWidth > 700) input.focus();
       }, delay);
     }
 
@@ -245,7 +306,7 @@ function splitBlocks(t) {
       modal.classList.add("open");
       document.body.classList.add("modal-open");
       if (!started) startConversation();
-      window.setTimeout(() => input.focus(), 150);
+      if (window.innerWidth > 700) { window.setTimeout(function () { input.focus(); }, 150); }
     }
 
     function closeChat() {

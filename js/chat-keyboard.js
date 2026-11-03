@@ -15,6 +15,13 @@
       if (h > 0) {
         chatBox.style.height = h + 'px';
         chatBox.style.maxHeight = h + 'px';
+        var msgs = document.getElementById("chatMessages");
+        if (msgs) {
+          requestAnimationFrame(function () {
+            msgs.scrollTop = msgs.scrollHeight;
+            requestAnimationFrame(function () { msgs.scrollTop = msgs.scrollHeight; });
+          });
+        }
       }
     }
     if (vv) {

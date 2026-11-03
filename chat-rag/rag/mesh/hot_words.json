@@ -117,6 +117,33 @@
   ],
   "hot": [
     {
+      "id": "sobre_marcos_ctx",
+      "words": [
+        "marcos",
+        "marcao",
+        "eduardo"
+      ],
+      "with": [
+        "fale",
+        "fala",
+        "conte",
+        "conta",
+        "historia",
+        "quem",
+        "sobre",
+        "seu",
+        "dele",
+        "perfil",
+        "apresenta",
+        "resume",
+        "resumo",
+        "bio",
+        "biografia",
+        "origem"
+      ],
+      "node": "sm01"
+    },
+    {
       "id": "canal_whatsapp",
       "words": [
         "whatsapp",
