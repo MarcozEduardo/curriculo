@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<!-- NUCLEO NEXUS · MODULO INDEPENDENTE
+<!-- NUCLEO PRIME · MODULO INDEPENDENTE
      Recebe snapshot via postMessage do bridge (nucleo-bridge.js).
      TODO: cascade animation, memory chip, pulsing lines, cache gradient, auto-zoom mobile. Ver README.md -->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Núcleo Nexus · Teia de Nós (universo + ciano)</title>
+<title>Núcleo Prime · Teia Vetorial de Nós</title>
 
 <!--
 ═══════════════════════════════════════════════════════════════════
@@ -346,7 +346,7 @@
 <div class="chip-header" id="chip-header">
   <span id="chip-header-icon"></span>
   <div>
-    <div class="titulo">Núcleo Nexus</div>
+    <div class="titulo">Núcleo Prime</div>
     <div class="sub" id="chip-header-sub">Clique para abrir a Teia</div>
   </div>
 </div>
@@ -356,8 +356,8 @@
   <div class="nexus-topbar">
     <div class="icon" id="nexus-top-icon"></div>
     <div class="label">
-      <b>NÚCLEO NEXUS · TEIA SEMÂNTICA DE NÓS</b>
-      <span>Clique nas bolhas para espalhar atributos · Clique no Chip para convergir energia</span>
+      <b>NÚCLEO PRIME · TEIA VETORIAL DE NÓS</b>
+      <span>Em refinamento: "Clique nos elementos para ver ações neurais."</span>
     </div>
     <button id="fechar-nucleo">← Voltar pro Chat</button>
   </div>
@@ -798,7 +798,7 @@ class NucleoChip {
     ctx.font = "800 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
     ctx.textAlign = 'center';
     ctx.fillStyle = energy > 0.4 ? '#ffffff' : '#ffd199';
-    ctx.fillText(this.convergido ? '⚡ CHIP EM SÍNTESE TOTAL' : 'NÚCLEO NEXUS · SILICON DIE', 0, half + 17);
+    ctx.fillText(this.convergido ? '⚡ CHIP EM SÍNTESE TOTAL' : 'NÚCLEO PRIME · SILICON DIE', 0, half + 17);
   }
 
   _impactarChip(cor, forca = 1) {

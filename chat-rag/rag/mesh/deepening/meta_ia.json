@@ -614,6 +614,111 @@
         "autorização de api"
       ],
       "answer": "Somente quando o usuário autoriza o Modo Sala de Estudos. Fora disso, o Nexus responde com a base própria e aprende com o uso."
+    },
+    {
+      "id": "mi51",
+      "layer": 2,
+      "parent": "mi04",
+      "label": "esse RAG é o vetorial",
+      "question": "Este RAG que está rodando aqui é o vetorial?",
+      "variants": [
+        "esse chat é vetorial",
+        "que tipo de rag é esse aqui",
+        "o bobby é vetorial",
+        "vetorial ou semantico"
+      ],
+      "answer": "Este é o primeiro RAG do Marcos. Funciona por **fator vetorial**.\n\nA ideia é direta: o sistema numera cada palavra e busca match dentro da base, mesmo que o usuário erre a digitação, use gíria ou escreva sinônimo próximo. Por isso ele aguenta pergunta torta sem travar.\n\nÉ o que está rodando agora, público, esse que você está conversando. Simples por fora, trabalhoso por dentro.",
+      "facet": "rag_vetorial"
+    },
+    {
+      "id": "mi52",
+      "layer": 3,
+      "parent": "mi51",
+      "label": "o semântico",
+      "question": "E o RAG semântico que ele menciona?",
+      "variants": [
+        "fala do semantico",
+        "o que e o rag semantico",
+        "quando sai o semantico",
+        "semantico do marcos"
+      ],
+      "answer": "O **RAG semântico** é o próximo projeto do Marcos. Mesmo motor de base, por isso o vídeo lá no card Bônus parece o mesmo sistema.\n\nMas por dentro é bem mais complexo. Em vez de só casar palavras parecidas, ele entende o sentido real da frase: interpreta artigo, substantivo, verbo, objeto, contexto. O robô daquele RAG entende **o que a palavra significa**, não só o token.\n\nO Marcos está finalizando os dois em paralelo. Este atual já está no ar, o semântico está no forno.",
+      "facet": "rag_semantico"
+    },
+    {
+      "id": "mi53",
+      "layer": 1,
+      "parent": null,
+      "label": "o Núcleo Bobby Prime",
+      "question": "O que é o Núcleo Bobby Prime?",
+      "variants": [
+        "o que e o nucleo do bobby",
+        "fala do nucleo prime",
+        "nucleo do chat",
+        "nucleo vetorial"
+      ],
+      "answer": "O **Núcleo Prime** é o núcleo visual deste chat. Fica no botão **Ver NÚCLEO Ativo** no cabeçalho, ao lado do nome Bobby.\n\nÉ um canvas 2D animado que mostra as órbitas (os neurônios), os satélites (as facets) e as conexões entre eles. Cada clique expande, chacoalha, dispara pacotes de energia pela teia.\n\nÉ a parte mais bonita do projeto. Poucos chats mostram o interior do RAG desse jeito.",
+      "facet": "nucleo_prime"
+    },
+    {
+      "id": "mi54",
+      "layer": 2,
+      "parent": "mi53",
+      "label": "como funciona o botão",
+      "question": "Como funciona o botão Ver Núcleo?",
+      "variants": [
+        "como abre o nucleo",
+        "o que acontece quando clico no nucleo",
+        "como usar o nucleo"
+      ],
+      "answer": "Clica no botão **Ver NÚCLEO Ativo** que o painel abre em tela cheia.\n\nO chip central brilha, dispara a informação pra órbita ativa, a órbita reage, acende o caminho até o nó. Dá pra explorar os neurônios, expandir satélites, ver o que cada atributo carrega.\n\nÉ uma janela pra dentro do RAG. No celular o botão de interrogação guarda os detalhes pra não poluir a tela.",
+      "facet": "nucleo_prime"
+    },
+    {
+      "id": "mi55",
+      "layer": 2,
+      "parent": "mi09",
+      "label": "o outro núcleo",
+      "question": "O outro núcleo também é você?",
+      "variants": [
+        "fala do outro nucleo",
+        "qual nucleo",
+        "temos quantos nucleos",
+        "nucleo nexus e igual"
+      ],
+      "answer": "Cuidado com a confusão: tem **3 núcleos** no momento.\n\nO **Núcleo Nexus** é o projeto universal que o Marcos vem montando separado. Puxa mais pro semântico, arquitetura diferente, ainda em construção.\n\nO **Lexical Semântico** é o próximo RAG que ele está finalizando. Mesma base do atual, mas com entendimento real de sentido.\n\nO **Prime Vetorial** é este chat que você está usando agora, público, no ar.\n\nQual deles você quer que ele detalhe?",
+      "facet": "nucleos"
+    },
+    {
+      "id": "mi56",
+      "layer": 1,
+      "parent": null,
+      "label": "12 versus 17 órbita",
+      "question": "Por que o núcleo mostra 12 órbitas e não 17?",
+      "variants": [
+        "12 orbitas",
+        "17 orbitas",
+        "por que tem 12",
+        "faltam orbitas"
+      ],
+      "answer": "O Núcleo Prime mostra as **12 órbitas principais**, as que têm árvore de aprofundamento visível no canvas.\n\nO RAG trabalha internamente com 17. As outras 5 (identidade do visitante, smalltalk, glossário, sobre o currículo, PCD) existem como perguntas, mas não têm árvore de nós pra desenhar.\n\nNão é falta, é design. Melhor 12 órbitas bem feitas do que 17 dispersas.",
+      "facet": "nucleo_prime"
+    },
+    {
+      "id": "mi57",
+      "layer": 2,
+      "parent": "mi53",
+      "label": "Bobby pode abrir o núcleo",
+      "question": "Você consegue abrir o Núcleo Prime pra mim?",
+      "variants": [
+        "abre o nucleo",
+        "voce pode abrir o nucleo",
+        "mostra o nucleo pra mim",
+        "abre o nucleo ai bob",
+        "voce abre o nucleo"
+      ],
+      "answer": "Não consigo abrir diretamente. Meu ambiente é sandbox: eu respondo, mas não controlo a interface. Por segurança, quem executa ação é sempre o usuário.\n\nMas é fácil configurar: a arquitetura do Núcleo Prime já tem comunicação pronta via **postMessage**. Se o Marcos quiser liberar essa ação, é uma chamada nova no bridge. Por enquanto, é só clicar no botão **Ver NUCLEO Ativo** que abre.\n\nMete brasa aí.",
+      "facet": "nucleo_prime"
     }
   ]
 }

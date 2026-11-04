@@ -717,6 +717,80 @@
       ],
       "answer": "Porque ele para para estudar, melhorar a forma de desenvolver aquilo e se aprofundar no assunto, para que ideias novas surjam. Projeto em aberto, para ele, é projeto em amadurecimento, não abandono.",
       "facet": "processo"
+    },
+    {
+      "id": "pr56",
+      "layer": 1,
+      "parent": null,
+      "label": "o Lelecriando",
+      "question": "O que é o Lelecriando?",
+      "variants": [
+        "fala do lelecriando",
+        "o que e o canal lelecriando",
+        "projeto lelecriando",
+        "canal de musica infantil"
+      ],
+      "answer": "O **Lelecriando** e o canal de música infantil multilíngue que o Marcos construiu em 2025, junto com os dois filhos.\n\nNasceu de uma brincadeira num domingo de manhã: ele acordou as crianças cantando uma música que tinha acabado de inventar. A música ficou boa, ele procurou uma IA que gerasse áudio, achou o **Mureka**, e o resto virou projeto.\n\nFoi ali que ele começou a testar IA generativa de verdade. Música no Mureka, depois **Suno**, vídeo no **Pippit**, orquestração com scripts PS1 e BAT rodando num A54 com um i7 de quarta geração.\n\nO canal ganhou versão web, domínio .com e .br, e hoje segue parado. Sobrou o Pinterest com algumas imagens e o **@lelecriando** no YouTube. Dá pra assistir alguns vídeos direto do card do projeto aqui no currículo.",
+      "facet": "lelecriando"
+    },
+    {
+      "id": "pr57",
+      "layer": 2,
+      "parent": "pr56",
+      "label": "os personagens",
+      "question": "Quem são os personagens do Lelecriando?",
+      "variants": [
+        "personagens do canal",
+        "quem sao leleca dudu rafael mariana",
+        "protagonistas do lelecriando"
+      ],
+      "answer": "São **4 protagonistas**, cada um com personalidade própria. Todos desenhados à mão pelo Marcos.\n\n**Leleca**: cabelo curto, óculos na cabeça com tiara, macacão jeans estilo anos 90, meia colorida e tênis vermelho. Adora bagunça e brincadeira de rua.\n\n**Dudu**: menino de ascendência africana, cabelo black power curto, short verde, camisa amarela com Dino Rex na barriga, tênis verde, meia branca, óculos quadradinho. Adora leitura.\n\n**Rafael** (filho do Marcos): topetinho, camisa branca com foguete azul, short preto, tênis preto, mochila vermelha com drone dentro. Adora tecnologia e ciência.\n\n**Mariana** (filha do Marcos): vestido rosa, cabelo curto loiro, margarida de 5 pétalas no cabelo, bolso lateral com 3 giz de cera (amarelo, vermelho, azul). Adora dançar e pintar.",
+      "facet": "lelecriando"
+    },
+    {
+      "id": "pr58",
+      "layer": 2,
+      "parent": "pr56",
+      "label": "as músicas multilíngues",
+      "question": "Como foram feitas as músicas do Lelecriando?",
+      "variants": [
+        "musicas do lelecriando",
+        "idiomas das musicas",
+        "como fazia as letras",
+        "lelecriando em outras linguas"
+      ],
+      "answer": "No início o Marcos fazia as músicas em **italiano, espanhol, inglês e português**.\n\nAuditava linha por linha. Exigia tradução fiel, tom parecido, queria que a música ficasse idêntica em todos os idiomas. Fez isso com umas 4 músicas.\n\nFoi onde percebeu que o mundo não dava bola pra esse nível de detalhe, e o YouTube bagunçava os álbuns. O padrão de trabalho ficou, o canal seguiu por outro caminho.",
+      "facet": "lelecriando"
+    },
+    {
+      "id": "pr59",
+      "layer": 3,
+      "parent": "pr56",
+      "label": "o legado técnico",
+      "question": "O que o Lelecriando deixou de técnico pro Marcos?",
+      "variants": [
+        "legado do lelecriando",
+        "o que aprendeu com lelecriando",
+        "lelecriando e a ti",
+        "lelecriando e a carreira"
+      ],
+      "answer": "O Lelecriando foi a base técnica que trouxe o Marcos até aqui.\n\nFoi ali que ele aprendeu a montar workflow com IA, testar modelos em escala (o benchmark monumental de mais de 400 IAs), lançar site, fazer o Google indexar tanto em busca quanto em imagem.\n\nFoi também ali que nasceu o interesse por games com temática, que virou a trilogia Bobby depois.\n\nEle fala do Lelecriando como o projeto que mostrou a cabeça dele funcionando com IA. Foi ali que entendeu como ele próprio aprende.",
+      "facet": "lelecriando"
+    },
+    {
+      "id": "pr60",
+      "layer": 3,
+      "parent": "pr56",
+      "label": "status atual do Lelecriando",
+      "question": "O Lelecriando está ativo hoje?",
+      "variants": [
+        "status do lelecriando",
+        "canal parado",
+        "o lelecriando acabou",
+        "lelecriando hoje"
+      ],
+      "answer": "Hoje o canal está **parado**. A vida mudou de rumo e o foco virou TI.\n\nAs músicas foram distribuídas via **DistroKid** pras plataformas. Tudo organizado. O domínio próprio .com e .br foi encerrado.\n\nSobrou o **@lelecriando** no YouTube e algumas imagens no Pinterest. O projeto existe, é público, e o Marcos fala dele com carinho: foi onde ele aprendeu a cabeça dele funcionando com IA.",
+      "facet": "lelecriando"
     }
   ]
 }
