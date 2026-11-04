@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/intro.css">
   <link rel="stylesheet" href="css/project-modal.css">
  <link rel="stylesheet" href="css/responsive-mobile.css">
+  <link rel="stylesheet" href="nucleo/nucleo.css">
 </head>
 <body>
 
@@ -609,7 +610,7 @@
       <header class="chat-header">
         <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
         <div class="chat-header-info">
-          <h3>Bobby <span class="chat-temp-badge">RAG temp — em construção</span></h3>
+          <h3>Bobby <span class="chat-temp-badge chat-nucleo-trigger" id="nucleoOpenBtn" role="button" tabindex="0" title="Abrir Núcleo Nexus"><i class="fa-solid fa-microchip"></i> Ver NÚCLEO Ativo</span></h3>
           <p>Assistente com RAG · Conceito Virtual do Marcos</p>
         </div>
         <button class="chat-close" id="chatClose" aria-label="Fechar Chat"><i class="fa-solid fa-xmark"></i></button>
@@ -649,5 +650,13 @@
 
   <script src="js/projects/video_loader_mask.js"></script>
  <script src="js/chat-keyboard.js"></script>
+
+<!-- Nucleo Nexus Modal -->
+<div class="nucleo-modal" id="nucleoModal" role="dialog" aria-label="Núcleo Nexus">
+  <button type="button" class="nucleo-modal-close" id="nucleoCloseBtn" aria-label="Fechar Núcleo"><i class="fa-solid fa-xmark"></i></button>
+  <iframe id="nucleoIframe" src="nucleo/nucleo.html" title="Núcleo Nexus - Teia de Nós"></iframe>
+</div>
+<script src="nucleo/nucleo-data.js"></script>
+<script src="nucleo/nucleo-bridge.js"></script>
 </body>
 </html>

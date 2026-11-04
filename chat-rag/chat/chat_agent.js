@@ -258,8 +258,28 @@
           if (projRes) { // FIX SCORE LEGO: o motor já decidiu internamente, se ele devolveu, é pra usar.
             response = projRes;
           } else {
+        const _nl = String.fromCharCode(10);
+        const _nxMatch = text.match(/^cliquei no neur[oou]nio "([^"]+)"(?: da orbita ([a-z_]+))?, me fale sobre/i);
             const blocos = splitBlocks(text);
-            if (blocos.length >= 2) {
+        if (_nxMatch) {
+          const _nxRotulo = _nxMatch[1];
+          const _nxOrbita = _nxMatch[2] || _nxRotulo;
+          try { if (ranker && ranker.memory && _nxMatch[2]) ranker.memory.activeOrbit = _nxMatch[2]; } catch (e) {}
+          const _nx1 = "Opa, ta me testando ai?" + _nl + _nl
+            + "Voce acabou de acessar conteudo da orbita " + _nxOrbita + ", mais especificamente do neuronio " + _nxRotulo + "." + _nl + _nl
+            + "Para evitar que eu entre em um delirio chato, me fala sobre o que voce tem interesse nesse assunto." + _nl + _nl
+            + "Se eu responder mal, tenha paciencia. Esse RAG e **VETORIAL** em construcao.";
+          const _nx2 = "Alguem andou clicando na teia." + _nl + _nl
+            + "Voce puxou o neuronio " + _nxRotulo + " que pertence a orbita " + _nxOrbita + "." + _nl + _nl
+            + "Me diz o que te interessa especificamente nesse assunto e eu foco a resposta." + _nl + _nl
+            + "Lembra: esse RAG e **VETORIAL** em construcao. Se eu tropecar, e parte do processo.";
+          const _nx3 = "Vi que voce veio do Nucleo Nexus." + _nl + _nl
+            + "Voce acessou o neuronio " + _nxRotulo + " da orbita " + _nxOrbita + "." + _nl + _nl
+            + "Me fala sobre o que voce quer saber dentro desse assunto, que eu evito delirio." + _nl + _nl
+            + "Paciencia se eu falhar: esse aqui e o RAG **VETORIAL**, ainda em construcao.";
+          const _nxArr = [_nx1, _nx2, _nx3];
+          response = { text: _nxArr[Math.floor(Math.random() * _nxArr.length)], source: "Nucleo Nexus" };
+        } else if (blocos.length >= 2) {
               const MAX = 3;
               const usados = blocos.slice(0, MAX);
               const respostas = [];

@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- NUCLEO NEXUS · MODULO INDEPENDENTE
+     Recebe snapshot via postMessage do bridge (nucleo-bridge.js).
+     TODO: cascade animation, memory chip, pulsing lines, cache gradient, auto-zoom mobile. Ver README.md -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Núcleo Nexus · Teia de Nós (universo + ciano)</title>
+
+<!--
+═══════════════════════════════════════════════════════════════════
+  PORTE FIEL de NucleoChip.tsx + estética da v1 (universo, LIVE, ciano)
+
+  MUDANÇAS vs. porte puro:
+  ✓ Fundo canvas: azul cósmico #0b1525 → #02060f (era marrom/preto)
+  ✓ 280 estrelas twinkling em world-space
+  ✓ Grade PCB em ciano sutil (era laranja)
+  ✓ Halo radial ciano (era laranja)
+  ✓ Botões HUD em azul claro (#94e1f0) com glow ciano no hover
+  ✓ Badge LIVE pulsante no canto sup-dir
+  ✓ Legend desceu pra dar espaço ao LIVE
+
+  MANTIDO:
+  · Chip Pixel Art 36×36 dourado/laranja (identidade)
+  · Órbitas com suas cores (laranja, roxo, verde, amarelo, ciano)
+  · Cascata de posse, onda Fourier, barramentos PCB
+  · Satélites, atributos, física de mola
+  · Zoom/pan/pinch, HUD, inspector
+
+  INTEGRAÇÃO: chip.setSnapshot(r.snapshot) após cada POST /api/chat
+  (ver bloco abaixo do primeiro <script>)
+═══════════════════════════════════════════════════════════════════
+-->
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    background: #040a14;
+    color: #f5e7d8;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* ─────────────────────── CHIP DO HEADER ─────────────────────── */
+  .chip-header {
+    position: fixed; top: 10px; left: 10px; z-index: 100;
+    display: flex; align-items: center; gap: 10px;
+    padding: 6px 12px 6px 6px;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #1f1209, #2b170a);
+    border: 1px solid rgba(253, 224, 71, 0.4);
+    box-shadow: 0 4px 20px rgba(120, 55, 0, 0.45);
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .chip-header:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 26px rgba(255, 122, 0, 0.55);
+  }
+  .chip-header .titulo { font-size: 12.5px; font-weight: 800; color: #fbbf24; line-height: 1.1; }
+  .chip-header .sub    { font-size: 10px; color: rgba(255, 179, 100, 0.75); font-family: ui-monospace, Menlo, monospace; }
+
+  /* ─────────────────────── OVERLAY DO NÚCLEO ─────────────────────── */
+  #nucleo-overlay {
+    position: fixed; inset: 0; z-index: 200;
+    display: flex; flex-direction: column;
+    background: #02060f;
+  }
+  #nucleo-overlay[hidden] { display: none; }
+
+  .nexus-topbar {
+    flex-shrink: 0;
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 14px;
+    background: linear-gradient(90deg, #1f1209, #2b170a, #1a0f07);
+    border-bottom: 1px solid rgba(255, 122, 0, 0.3);
+    color: #fff;
+    font-size: 12px;
+  }
+  .nexus-topbar .icon { border-radius: 8px; overflow: hidden; box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.5); }
+  .nexus-topbar .label { flex: 1; }
+  .nexus-topbar .label b { display: block; font-size: 13px; letter-spacing: 0.06em; color: #fbbf24; }
+  .nexus-topbar .label span { display: block; font-size: 9.5px; font-family: ui-monospace, Menlo, monospace; color: rgba(255, 179, 100, 0.8); }
+  .nexus-topbar button {
+    padding: 6px 12px; font-size: 11px; font-weight: 800;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 122, 0, 0.4);
+    background: rgba(255, 122, 0, 0.2);
+    color: #fef3c7;
+    cursor: pointer;
+    transition: 0.15s;
+    font-family: inherit;
+  }
+  .nexus-topbar button:hover { background: #ff7a00; color: #fff; }
+
+  #nexus-canvas-wrap {
+    position: relative;
+    flex: 1; min-height: 0;
+    background: #02060f;
+    overflow: hidden;
+  }
+  #nexus-canvas {
+    display: block;
+    width: 100%; height: 100%;
+    cursor: grab;
+    user-select: none;
+      touch-action: none;
+  }
+  #nexus-canvas:active { cursor: grabbing; }
+
+  /* ─────────────────────── BOTÃO LIVE (pulsante) ─────────────────────── */
+  .nx-live {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px 5px 9px;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #22d3ee;
+    border-radius: 999px;
+    background: rgba(6, 182, 212, 0.09);
+    border: 1px solid rgba(6, 182, 212, 0.32);
+    backdrop-filter: blur(6px);
+    pointer-events: none;
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.55);
+  }
+  .nx-live::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 10px #22d3ee, 0 0 20px rgba(34, 211, 238, 0.6);
+    animation: nx-live-blink 1.4s ease-in-out infinite;
+  }
+  @keyframes nx-live-blink {
+    0%, 100% { opacity: 1;   transform: scale(1); }
+    50%      { opacity: 0.3; transform: scale(0.75); }
+  }
+
+  /* ─────────────────────── HUD (botões AZUL CLARO) ─────────────────────── */
+  .nx-hud { position: absolute; top: 12px; left: 12px; z-index: 10; display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .nx-hud-btn {
+    padding: 6px 11px;
+    border-radius: 8px;
+    border: 1px solid rgba(6, 182, 212, 0.28);
+    background: rgba(6, 182, 212, 0.07);
+    color: #94e1f0;
+    font-size: 10.5px;
+    font-weight: 700;
+    font-family: ui-monospace, Menlo, monospace;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: all 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .nx-hud-btn:hover {
+    background: rgba(6, 182, 212, 0.2);
+    border-color: rgba(6, 182, 212, 0.7);
+    color: #c7f4ff;
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.35);
+  }
+  .nx-hud-btn:active { transform: scale(0.97); }
+  .nx-hud-btn.ativo {
+    background: rgba(6, 182, 212, 0.28);
+    color: #ffffff;
+    border-color: rgba(34, 211, 238, 0.9);
+    box-shadow: 0 0 18px rgba(6, 182, 212, 0.55);
+  }
+
+  /* ─────────────────────── LEGEND (desceu 48px pro LIVE) ─────────────────────── */
+  .nx-legend {
+    position: absolute;
+    top: 52px;   /* ← desceu pra dar lugar ao LIVE */
+    right: 12px;
+    z-index: 10;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(6, 182, 212, 0.22);
+    background: rgba(4, 12, 22, 0.82);
+    backdrop-filter: blur(8px);
+    font-size: 10px;
+    line-height: 1.6;
+    color: #c9e5f0;
+    pointer-events: none;
+  }
+  .nx-legend .titulo {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #22d3ee;
+    margin-bottom: 4px;
+  }
+  .nx-legend .linha { display: flex; align-items: center; gap: 6px; }
+  .nx-legend .swatch { width: 8px; height: 8px; border-radius: 2px; display: inline-block; box-shadow: 0 0 4px currentColor; }
+  .nx-legend .regras {
+    margin-top: 6px; padding-top: 6px;
+    border-top: 1px solid rgba(34, 211, 238, 0.15);
+    font-size: 9.5px;
+    color: rgba(148, 225, 240, 0.75);
+  }
+
+  /* ─────────────────────── INSPECTOR (mantido escuro) ─────────────────────── */
+  .nx-inspector {
+    position: absolute; bottom: 12px; left: 12px; z-index: 10;
+    max-width: min(92vw, 340px);
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 122, 0, 0.35);
+    background: rgba(18, 11, 7, 0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
+    font-size: 11px;
+    color: #f5e7d8;
+  }
+  .nx-inspector .badge {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 9.5px; font-weight: 800;
+    letter-spacing: 0.08em;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .nx-inspector .badge button { background: none; border: none; color: rgba(255,255,255,0.5); cursor: pointer; font-size: 12px; }
+  .nx-inspector .badge button:hover { color: #fff; }
+  .nx-inspector h3 { font-size: 13px; font-weight: 800; color: #fff; margin-top: 2px; }
+  .nx-inspector .sub { font-size: 10px; color: rgba(251, 191, 36, 0.8); }
+  .nx-inspector .linhas { margin-top: 6px; font-size: 10px; color: #dbc7b6; line-height: 1.5; }
+  .nx-inspector .acao {
+    margin-top: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff7a00, #e85d00);
+    color: #fff;
+    font-size: 10.5px; font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s;
+    font-family: inherit;
+  }
+  .nx-inspector .acao:hover { filter: brightness(1.1); }
+
+  .nx-zoom {
+    position: absolute; bottom: 12px; right: 12px; z-index: 10;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(6, 182, 212, 0.28);
+    background: rgba(2, 8, 18, 0.7);
+    color: #94e1f0;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    pointer-events: none;
+  }
+
+  /* ─────────────────────── DEMO CONTROLS (azul claro) ─────────────────────── */
+  .nx-demo {
+    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+    z-index: 20;
+    display: flex; gap: 6px;
+    padding: 6px;
+    border-radius: 12px;
+    background: rgba(4, 12, 22, 0.88);
+    border: 1px solid rgba(6, 182, 212, 0.28);
+    backdrop-filter: blur(6px);
+  }
+  .nx-demo button {
+    padding: 5px 10px;
+    font-size: 10px; font-weight: 700;
+    border-radius: 7px;
+    border: 1px solid rgba(6, 182, 212, 0.28);
+    background: rgba(6, 182, 212, 0.07);
+    color: #94e1f0;
+    cursor: pointer;
+    font-family: ui-monospace, Menlo, monospace;
+    transition: all 0.15s;
+  }
+  .nx-demo button:hover {
+    background: rgba(6, 182, 212, 0.22);
+    border-color: rgba(6, 182, 212, 0.7);
+    color: #c7f4ff;
+    box-shadow: 0 0 14px rgba(6, 182, 212, 0.32);
+  }
+  /* ============ MEMORY CHIP — INICIO ============ */
+  .nx-memory {
+    position: absolute; bottom: 48px; right: 12px; z-index: 10;
+    padding: 8px 10px; border-radius: 10px;
+    border: 1px solid rgba(6, 182, 212, 0.28);
+    background: rgba(4, 12, 22, 0.82); backdrop-filter: blur(8px);
+    font-family: ui-monospace, Menlo, monospace; font-size: 9px; color: #94e1f0;
+    min-width: 140px; max-width: 200px; pointer-events: none;
+  }
+  .nx-memory .titulo { font-size: 9px; font-weight: 800; letter-spacing: 0.08em; color: #22d3ee; margin-bottom: 5px; text-shadow: 0 0 6px rgba(34,211,238,0.5); }
+  .nx-memory .row { display: flex; align-items: center; gap: 5px; margin-bottom: 2px; font-size: 8.5px; }
+  .nx-memory .barra { flex: 1; height: 4px; background: rgba(34, 211, 238, 0.12); border-radius: 2px; overflow: hidden; }
+  .nx-memory .fill { height: 100%; background: linear-gradient(90deg, #22d3ee, #06b6d4); box-shadow: 0 0 4px rgba(34,211,238,0.7); transition: width 0.4s ease; }
+  .nx-memory .nome { min-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .nx-memory .num { min-width: 22px; text-align: right; color: #22d3ee; font-weight: 700; }
+  /* ============ MEMORY CHIP — FIM ============ */
+
+  /* NUCLEO: hide legend + backup hide botão + toggle mobile */
+  .nx-legend { display: none !important; }
+  #insp-perguntar { display: none !important; }
+  .nx-insp-toggle { display: none; }
+  @media (max-width: 700px) {
+    .nx-insp-toggle {
+      display: flex; position: absolute;
+      bottom: 80px; left: 12px; z-index: 15;
+      width: 46px; height: 46px; padding: 0;
+      border-radius: 50%;
+      background: rgba(4, 12, 22, 0.9);
+      border: 1.5px solid rgba(255, 122, 0, 0.6);
+      color: #fbbf24; font-size: 18px; font-weight: 800;
+      font-family: ui-monospace, Menlo, monospace;
+      cursor: pointer;
+      align-items: center; justify-content: center;
+    }
+    .nx-insp-toggle.nx-pulse {
+      animation: nxInspPulse 1.8s ease-in-out infinite;
+    }
+    @keyframes nxInspPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 18px rgba(255, 122, 0, 0.35); }
+      50% { transform: scale(1.08); box-shadow: 0 0 26px rgba(255, 122, 0, 0.65); }
+    }
+    .nx-inspector {
+      display: none !important;
+      bottom: 140px !important;
+      left: 12px !important; right: 12px !important;
+      max-width: none !important;
+    }
+    .nx-inspector.nx-mobile-open { display: block !important; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Chip no header -->
+<div class="chip-header" id="chip-header">
+  <span id="chip-header-icon"></span>
+  <div>
+    <div class="titulo">Núcleo Nexus</div>
+    <div class="sub" id="chip-header-sub">Clique para abrir a Teia</div>
+  </div>
+</div>
+
+<!-- Overlay do Núcleo -->
+<div id="nucleo-overlay" hidden>
+  <div class="nexus-topbar">
+    <div class="icon" id="nexus-top-icon"></div>
+    <div class="label">
+      <b>NÚCLEO NEXUS · TEIA SEMÂNTICA DE NÓS</b>
+      <span>Clique nas bolhas para espalhar atributos · Clique no Chip para convergir energia</span>
+    </div>
+    <button id="fechar-nucleo">← Voltar pro Chat</button>
+  </div>
+
+  <div id="nexus-canvas-wrap">
+    <canvas id="nexus-canvas"></canvas>
+
+    <!-- LIVE pulsante -->
+    <div class="nx-live">LIVE</div>
+
+    <!-- HUD superior esquerdo — botões AZUL CLARO -->
+    <div class="nx-hud">
+      <button class="nx-hud-btn" id="btn-zoom-mais">+ Zoom</button>
+      <button class="nx-hud-btn" id="btn-zoom-menos">− Zoom</button>
+      <button class="nx-hud-btn" id="btn-centralizar">Centralizar</button>
+      <button class="nx-hud-btn" id="btn-espalhar">🕸️ Espalhar Toda a Teia</button>
+      <button class="nx-hud-btn" id="btn-convergir">⚡ Convergir no Chip</button>
+    </div>
+
+    <!-- Legend (desceu pro LIVE) -->
+    <div class="nx-legend">
+      <div class="titulo">TEIA NEURAL · TEMAS</div>
+      <div id="legend-temas"></div>
+      <div class="regras">
+        · Clique no <b>Chip</b>: implode/brilha<br>
+        · Clique na <b>Bolha</b>: espalha nós<br>
+        · Roda/Pinça: zoom (<span id="legend-zoom">1.00</span>×)
+      </div>
+    </div>
+
+    <button class="nx-insp-toggle" id="nxInspToggle" aria-label="Detalhes">?</button>
+    <div class="nx-inspector" id="inspector"></div>
+    <!-- MEMORY CHIP — INICIO -->
+    <div class="nx-memory" id="nx-memory">
+      <div class="titulo">MEMÓRIA DA SESSÃO</div>
+      <div id="nx-mem-rows"></div>
+    </div>
+    <!-- MEMORY CHIP — FIM -->
+    <div class="nx-zoom">ZOOM <span id="zoom-val">1.00</span>×</div>
+
+    <div class="nx-demo">
+      <button data-demo="linkedin">Entregar LinkedIn</button>
+      <button data-demo="github-hist">História GitHub</button>
+      <button data-demo="projetos">Ir Projetos</button>
+      <button data-demo="pretensao">Abrir Pretensão</button>
+      <button data-demo="nexus">Perguntar ao Bob</button>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ═══════════════════════════════════════════════════════════════════
+   TEMA_ORBITA (idêntico ao React)
+   ═══════════════════════════════════════════════════════════════════ */
+const TEMA_ORBITA = {
+  contato:              { base: '#ff7a00', neon: '#ffb703', nucleo: '#fff3b0', rgb: [255, 122, 0],   rotulo: 'COMUNICAÇÃO' },
+  marcos:               { base: '#f59e0b', neon: '#fde047', nucleo: '#fef9c3', rgb: [245, 158, 11],  rotulo: 'RAIZ' },
+  sobre_marcos:         { base: '#fbbf24', neon: '#fcd34d', nucleo: '#fef3c7', rgb: [251, 191, 36],  rotulo: 'IDENTIDADE' },
+  projetos:             { base: '#10b981', neon: '#34d399', nucleo: '#d1fae5', rgb: [16, 185, 129],  rotulo: 'CÓDIGO' },
+  skills:               { base: '#3b82f6', neon: '#60a5fa', nucleo: '#dbeafe', rgb: [59, 130, 246],  rotulo: 'STACK' },
+  experiencia:          { base: '#f97316', neon: '#fb923c', nucleo: '#ffedd5', rgb: [249, 115, 22],  rotulo: 'TRAJETÓRIA' },
+  formacao:             { base: '#8b5cf6', neon: '#a78bfa', nucleo: '#ede9fe', rgb: [139, 92, 246],  rotulo: 'ACADÊMICO' },
+  neurodivergencia:     { base: '#ec4899', neon: '#f472b6', nucleo: '#fce7f3', rgb: [236, 72, 153],  rotulo: 'HIPERFOCO' },
+  recrutamento:         { base: '#7c3aed', neon: '#a78bfa', nucleo: '#ede9fe', rgb: [124, 58, 237],  rotulo: 'PROCESSO' },
+  recrutador:           { base: '#a855f7', neon: '#e879f9', nucleo: '#fae8ff', rgb: [168, 85, 247],  rotulo: 'NEGOCIAÇÃO' },
+  transparencia:        { base: '#14b8a6', neon: '#2dd4bf', nucleo: '#ccfbf1', rgb: [20, 184, 166],  rotulo: 'ABERTURA' },
+  meta_ia:              { base: '#6366f1', neon: '#818cf8', nucleo: '#e0e7ff', rgb: [99, 102, 241],  rotulo: 'META-IA' },
+  smalltalk:            { base: '#94a3b8', neon: '#cbd5e1', nucleo: '#f1f5f9', rgb: [148, 163, 184], rotulo: 'CONVERSA' },
+  curiosidades:         { base: '#eab308', neon: '#facc15', nucleo: '#fef9c3', rgb: [234, 179, 8],   rotulo: 'BASTIDORES' },
+  glossario:            { base: '#64748b', neon: '#94a3b8', nucleo: '#e2e8f0', rgb: [100, 116, 139], rotulo: 'GLOSSÁRIO' },
+  sobre_curriculo:      { base: '#0891b2', neon: '#22d3ee', nucleo: '#cffafe', rgb: [8, 145, 178],   rotulo: 'ESTE CHAT' },
+  identidade_visitante: { base: '#f43f5e', neon: '#fb7185', nucleo: '#ffe4e6', rgb: [244, 63, 94],   rotulo: 'VISITANTE' },
+  pcd:                  { base: '#fb7185', neon: '#fda4af', nucleo: '#ffe4e6', rgb: [251, 113, 133], rotulo: 'DOCS PCD' },
+  historia_pessoal:     { base: '#dc2626', neon: '#ef4444', nucleo: '#fee2e2', rgb: [220, 38, 38],   rotulo: 'HISTÓRIA' },
+  nexus:                { base: '#06b6d4', neon: '#22d3ee', nucleo: '#cffafe', rgb: [6, 182, 212],   rotulo: 'MOTOR FOURIER' },
+};
+
+function temaDe(slug, corFallback) {
+  if (TEMA_ORBITA[slug]) return TEMA_ORBITA[slug];
+  return { base: corFallback || '#ff7a00', neon: '#ffb703', nucleo: '#fff3b0', rgb: [255, 122, 0], rotulo: 'ÓRBITA EXTRA' };
+}
+function rgba(rgb, a) {
+  return `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${Math.max(0, Math.min(1, a))})`;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   PixelChipIcon — SVG 24×24 idêntico ao React
+   ═══════════════════════════════════════════════════════════════════ */
+function criarPixelChipIcon(snapshot, size = 38) {
+  const orbAtiva = (snapshot && snapshot.orbita_ativa) || 'contato';
+  const tema = temaDe(orbAtiva);
+  const quente = Math.max(0.35, ...((snapshot && snapshot.orbitas) || []).map(o => o.temperatura));
+  const turnos = (snapshot && snapshot.turnos) || 0;
+  const pinos = [5, 8, 11, 14, 17];
+
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('width', size); svg.setAttribute('height', size);
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('shape-rendering', 'crispEdges');
+  svg.setAttribute('aria-label', 'Núcleo Nexus Pixel Chip');
+
+  const rect = (x, y, w, h, fill) => {
+    const r = document.createElementNS(svgNS, 'rect');
+    r.setAttribute('x', x); r.setAttribute('y', y);
+    r.setAttribute('width', w); r.setAttribute('height', h);
+    r.setAttribute('fill', fill);
+    svg.appendChild(r);
+  };
+
+  rect(0, 0, 24, 24, '#100905');
+  rect(11, 0, 2, 24, '#29180d');
+  rect(0, 11, 24, 2, '#29180d');
+
+  pinos.forEach((p, idx) => {
+    const aceso = idx % 2 === turnos % 2;
+    const corPino = aceso ? tema.neon : '#d97706';
+    rect(p, 1, 2, 3, corPino);  rect(p, 20, 2, 3, corPino);
+    rect(1, p, 3, 2, corPino);  rect(20, p, 3, 2, corPino);
+  });
+
+  rect(4, 4, 16, 16, '#1c110a');
+  rect(4, 4, 16, 1, '#4a3020');  rect(4, 4, 1, 16, '#4a3020');
+  rect(4, 19, 16, 1, '#090503'); rect(19, 4, 1, 16, '#090503');
+  rect(5, 5, 2, 1, '#fde047');   rect(5, 6, 1, 1, '#fde047');
+  rect(7, 7, 10, 10, '#0d0704');
+
+  const die = document.createElementNS(svgNS, 'rect');
+  die.setAttribute('x', 8); die.setAttribute('y', 8);
+  die.setAttribute('width', 8); die.setAttribute('height', 8);
+  die.setAttribute('fill', tema.base);
+  die.setAttribute('opacity', String(0.35 + quente * 0.55));
+  svg.appendChild(die);
+
+  rect(8, 8, 3, 3, '#ff7a00');  rect(13, 8, 3, 3, '#06b6d4');
+  rect(8, 13, 3, 3, '#10b981'); rect(13, 13, 3, 3, '#a855f7');
+  rect(10, 10, 4, 4, tema.neon); rect(11, 11, 2, 2, '#ffffff');
+
+  return svg;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DEMO (apagar em produção — só serve pro preview viver)
+   ═══════════════════════════════════════════════════════════════════ */
+class Demo {
+  constructor() {
+    this.turnos = 0;
+    this.orbita_ativa = 'contato'; this.objeto_ativo = 'linkedin'; this.assunto_ativo = 'link';
+    this.entregues_sessao = []; this.satelite = [];
+    this.orbitas = [
+      { slug: 'contato', nome: 'Contato', cor: '#ff7a00', temperatura: 0.55, fechada: false,
+        objetos: [
+          { slug: 'linkedin', rotulo: 'LinkedIn', genero: 'm', dono: 'marcos', tipo_entidade: 'elemento',
+            serve_para: 'apresentar o perfil profissional', ativo: false, no_rastro: false, calor_rastro: 0, assunto: null,
+            atributos: [
+              { nome: 'link',     tipo: 'entregavel', dono: 'linkedin', pendente: false, entregue: false },
+              { nome: 'historia', tipo: 'explicavel', dono: 'linkedin', pendente: true,  entregue: false },
+              { nome: 'definicao',tipo: 'explicavel', dono: 'linkedin', pendente: true,  entregue: false },
+            ]},
+          { slug: 'github', rotulo: 'GitHub', genero: 'm', dono: 'marcos', tipo_entidade: 'elemento',
+            serve_para: 'publicar código aberto', ativo: false, no_rastro: false, calor_rastro: 0, assunto: null,
+            atributos: [
+              { nome: 'link',     tipo: 'entregavel', dono: 'github', pendente: false, entregue: false },
+              { nome: 'historia', tipo: 'explicavel', dono: 'github', pendente: true,  entregue: false },
+            ]},
+          { slug: 'whatsapp', rotulo: 'WhatsApp', genero: 'm', dono: 'marcos', tipo_entidade: 'elemento',
+            serve_para: 'canal rápido', ativo: false, no_rastro: false, calor_rastro: 0, assunto: null,
+            atributos: [{ nome: 'link', tipo: 'entregavel', dono: 'whatsapp', pendente: false, entregue: false }]},
+          { slug: 'email', rotulo: 'e-mail', genero: 'm', dono: 'marcos', tipo_entidade: 'elemento',
+            serve_para: 'canal formal', ativo: false, no_rastro: false, calor_rastro: 0, assunto: null,
+            atributos: [{ nome: 'link', tipo: 'entregavel', dono: 'email', pendente: false, entregue: false }]},
+        ]},
+      { slug: 'recrutador', nome: 'Recrutador', cor: '#a855f7', temperatura: 0.25, fechada: false,
+        objetos: [
+          { slug: 'pretensao', rotulo: 'Pretensão', genero: 'f', dono: 'marcos', tipo_entidade: 'conceito',
+            serve_para: 'alinhar expectativa', ativo: false, no_rastro: false, calor_rastro: 0, assunto: null,
+            atributos: [
+              { nome: 'evasiva',    tipo: 'explicavel', dono: 'pretensao', pendente: false, entregue: false },
+              { nome: 'referencia', tipo: 'entregavel', dono: 'pretensao', pendente: false, entregue: false },
+              { nome: 'teste',      tipo: 'explicavel', dono: 'pretensao', pendente: false, entregue: false },
+            ]}
+        ]},
+      { slug: 'projetos', nome: 'Projetos', cor: '#10b981', temperatura: 0.25, fechada: false,
+        objetos: [
+          { slug: 'projetos', rotulo: 'Portfólio', genero: 'm', dono: 'marcos', tipo_entidade: 'elemento',
+            serve_para: 'provar entregas em código', ativo: false, no_rastro: false, calor_rastro: 0, assunto: null,
+            atributos: [
+              { nome: 'resumo',   tipo: 'entregavel', dono: 'projetos', pendente: false, entregue: false },
+              { nome: 'historia', tipo: 'explicavel', dono: 'projetos', pendente: true,  entregue: false },
+            ]}
+        ]},
+      { slug: 'marcos', nome: 'Marcos', cor: '#f59e0b', temperatura: 0.30, fechada: false,
+        objetos: [
+          { slug: 'marcos', rotulo: 'Marcos', genero: 'm', dono: null, tipo_entidade: 'pessoa',
+            serve_para: 'candidato apresentado', ativo: false, no_rastro: false, calor_rastro: 0, assunto: null,
+            atributos: [
+              { nome: 'perfil',         tipo: 'explicavel', dono: 'marcos', pendente: false, entregue: false },
+              { nome: 'historia',       tipo: 'explicavel', dono: 'marcos', pendente: false, entregue: false },
+              { nome: 'como_trabalha',  tipo: 'explicavel', dono: 'marcos', pendente: false, entregue: false },
+            ]}
+        ]},
+      { slug: 'nexus', nome: 'Chat-RAG', cor: '#06b6d4', temperatura: 0.20, fechada: false,
+        objetos: [
+          { slug: 'chat_rag', rotulo: 'Bob', genero: 'm', dono: 'marcos', tipo_entidade: 'elemento',
+            serve_para: 'responder sobre o currículo', ativo: false, no_rastro: false, calor_rastro: 0, assunto: null,
+            atributos: [
+              { nome: 'definicao',     tipo: 'entregavel',  dono: 'chat_rag', pendente: false, entregue: false },
+              { nome: 'arquitetura',   tipo: 'explicavel',  dono: 'chat_rag', pendente: false, entregue: false },
+              { nome: 'rag_semantico', tipo: 'explicavel',  dono: 'chat_rag', pendente: false, entregue: false },
+            ]}
+        ]}
+    ];
+    this.conexoes_posse = [
+      { de: 'marcos', para: 'linkedin',  relacao: 'posse' },
+      { de: 'marcos', para: 'github',    relacao: 'posse' },
+      { de: 'marcos', para: 'whatsapp',  relacao: 'posse' },
+      { de: 'marcos', para: 'email',     relacao: 'posse' },
+      { de: 'marcos', para: 'projetos',  relacao: 'posse' },
+      { de: 'marcos', para: 'pretensao', relacao: 'posse' },
+      { de: 'marcos', para: 'chat_rag',  relacao: 'posse' },
+    ];
+    this.links = {
+      linkedin: { valor: 'linkedin.com/in/sir-marcos-eduardo', url: 'https://linkedin.com/in/sir-marcos-eduardo', display: '**linkedin.com/in/sir-marcos-eduardo**', icone: '👋' },
+      github:   { valor: 'github.com/MarcozEduardo',            url: 'https://github.com/MarcozEduardo',            display: '**github.com/MarcozEduardo**',            icone: '👉' },
+      email:    { valor: 'marcos.eduardo@myyahoo.com',          url: 'mailto:marcos.eduardo@myyahoo.com',           display: '**marcos.eduardo@myyahoo.com**',          icone: '✉️' },
+      whatsapp: { valor: '(61) 98222-7804',                     url: 'https://wa.me/5561982227804',                  display: '**WhatsApp (61) 98222-7804**',             icone: '📱' },
+    };
+    this.contagens = { orbitas: 5, satelites: 8, atributos: 18, blocos: 277 };
+  }
+
+  passo(objeto, assunto) {
+    this.turnos++;
+    let obj = null, orb = null;
+    for (const o of this.orbitas) {
+      const f = o.objetos.find(x => x.slug === objeto);
+      if (f) { obj = f; orb = o; break; }
+    }
+    if (!obj) return;
+
+    const at = obj.atributos.find(a => a.nome === assunto);
+    if (at) at.entregue = true;
+    if (!this.entregues_sessao.includes(objeto)) this.entregues_sessao.push(objeto);
+
+    this.orbita_ativa = orb.slug;
+    this.objeto_ativo = objeto;
+    this.assunto_ativo = assunto;
+
+    for (const o of this.orbitas) {
+      if (o.slug === orb.slug) o.temperatura = Math.min(1, o.temperatura + 0.22);
+      else o.temperatura = Math.max(0, o.temperatura - 0.08);
+      o.fechada = o.temperatura <= 0.05;
+    }
+
+    this.satelite = this.satelite.filter(s => s.objeto !== objeto);
+    this.satelite.unshift({ objeto, orbita: orb.slug, assunto, calor: 1.0 });
+    for (let i = 1; i < this.satelite.length; i++) {
+      this.satelite[i].calor = Math.max(0.15, this.satelite[i].calor - 0.22);
+    }
+    this.satelite = this.satelite.slice(0, 6);
+
+    for (const o of this.orbitas) for (const ob of o.objetos) ob.ativo = (ob.slug === objeto);
+
+    for (const o of this.orbitas) for (const ob of o.objetos) {
+      const noRastro = this.satelite.find(s => s.objeto === ob.slug);
+      ob.no_rastro = !!noRastro;
+      ob.calor_rastro = noRastro ? noRastro.calor : 0;
+      ob.assunto = noRastro ? noRastro.assunto : null;
+    }
+  }
+
+  snapshot() {
+    return {
+      links: this.links,
+      orbita_ativa: this.orbita_ativa, objeto_ativo: this.objeto_ativo, assunto_ativo: this.assunto_ativo,
+      entregues_sessao: [...this.entregues_sessao],
+      satelite: this.satelite.map(s => ({ ...s })),
+      conexoes_posse: this.conexoes_posse.map(c => ({ ...c })),
+      contagens: { ...this.contagens },
+      turnos: this.turnos,
+      orbitas: this.orbitas.map(o => ({
+        slug: o.slug, nome: o.nome, descricao: '', cor: o.cor,
+        temperatura: o.temperatura, fechada: o.fechada,
+        objetos: o.objetos.map(ob => ({ ...ob, atributos: ob.atributos.map(a => ({ ...a })) })),
+      })),
+      telemetria: {
+        total_repeticoes: 0, total_embreagens: 0, camadas_tela: [],
+        so_opcoes: false, sugestoes_ativas: [], pendentes: 0,
+      },
+    };
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   NUCLEO CHIP — porte fiel + estética cósmica + estrelas
+   ═══════════════════════════════════════════════════════════════════ */
+class NucleoChip {
+  constructor(container, opts = {}) {
+    this.container = container;
+    this.opts = opts;
+    this.canvas = container.querySelector('#nexus-canvas');
+    this.ctx = this.canvas.getContext('2d');
+
+    this.orbitasAbertas = { contato: true, marcos: true, projetos: false, recrutador: false, nexus: true };
+    this.userClosed = new Set();
+    this._isolada = null;
+    this._estadoSalvo = null;
+    this.objetosAbertos = {};
+    this.convergido = false;
+    this.teiaCompleta = false;
+    this.selecao = null;
+    this.zoomHud = 1;
+
+    this.sim = {
+      tick: 0, scale: 1, targetScale: 1, ox: 0, oy: 0, targetOx: 0, targetOy: 0,
+      dragging: false, moved: false, dragStartX: 0, dragStartY: 0, pinchDist: 0,
+      chipEnergy: 0.25, shake: 0,
+      nodePos: {}, sparks: [], waves: [], packets: [], hitTargets: [],
+    };
+
+    // ════════════════════════════════════════════════════════════
+    // ESTRELAS — em world-space (acompanham pan/zoom)
+    // ════════════════════════════════════════════════════════════
+    this.stars = [];
+    const STAR_COUNT = (window.innerWidth < 700 || window.devicePixelRatio > 2) ? 60 : 140;
+    for (let i = 0; i < STAR_COUNT; i++) {
+      this.stars.push({
+        x: (Math.random() - 0.5) * 2600,
+        y: (Math.random() - 0.5) * 2600,
+        r: 0.4 + Math.random() * 1.3,
+        a: 0.12 + Math.random() * 0.55,
+        phase: Math.random() * Math.PI * 2,
+        speed: 0.6 + Math.random() * 1.4,
+        tint: Math.random() > 0.75 ? '220, 240, 255' : '200, 220, 255', // algumas estrelas mais azuis
+      });
+    }
+
+    this.snapshot = null;
+    this.prevTurnos = 0;
+
+    this._bindEvents();
+    this._loop();
+  }
+
+  /* ════════════════════════════════════════════════════════════════
+     PONTO ÚNICO DE INTEGRAÇÃO — chamar após cada POST /api/chat
+     ════════════════════════════════════════════════════════════════ */
+  setSnapshot(snap) {
+    if (!snap) return;
+    this.snapshot = snap;
+    if (snap.orbita_ativa && !this.userClosed.has(snap.orbita_ativa) && !this._isolada) this.orbitasAbertas[snap.orbita_ativa] = true;
+    if (snap.objeto_ativo)  this.objetosAbertos[snap.objeto_ativo] = true;
+
+    if (snap.turnos !== this.prevTurnos) {
+      this.prevTurnos = snap.turnos;
+      const cor = temaDe(snap.orbita_ativa || 'contato').neon;
+      const posObj = snap.objeto_ativo ? this.sim.nodePos['obj:' + snap.objeto_ativo] : null;
+      if (posObj) {
+        this.sim.packets.push({
+          fromX: posObj.x, fromY: posObj.y, toX: 0, toY: 0, t: 0, speed: 0.032, color: cor, hitsChip: true,
+        });
+      } else {
+        this.sim.chipEnergy = 1;
+        this.sim.waves.push({ x: 0, y: 0, r: 24, maxR: 220, color: cor, alpha: 0.9 });
+      }
+    }
+    this._updateHUD();
+    this._updateMemoryChip();
+  }
+
+  /* ───────────────────────────── Pixel Chip (36×36) ───────────────────────── */
+  _desenharPixelChip(ctx, tick, energy, corAtiva) {
+    const S = 36, P = 2.5, half = (S * P) / 2;
+    ctx.save();
+    const punch = 1 + energy * 0.14 + Math.sin(tick * 0.06) * 0.025;
+    ctx.scale(punch, punch);
+
+    const haloR = 78 + energy * 55;
+    const grad = ctx.createRadialGradient(0, 0, 12, 0, 0, haloR);
+    grad.addColorStop(0, energy > 0.35 ? 'rgba(255,250,210,0.92)' : 'rgba(255,150,40,0.55)');
+    grad.addColorStop(0.45, energy > 0.35 ? corAtiva + 'aa' : 'rgba(255,122,0,0.22)');
+    grad.addColorStop(1, 'rgba(255,122,0,0)');
+    ctx.fillStyle = grad;
+    ctx.beginPath(); ctx.arc(0, 0, haloR, 0, Math.PI * 2); ctx.fill();
+
+    const px = (gx, gy, gw, gh, fill) => {
+      ctx.fillStyle = fill;
+      ctx.fillRect(Math.round(-half + gx * P), Math.round(-half + gy * P), Math.ceil(gw * P), Math.ceil(gh * P));
+    };
+
+    const pinCoords = [7, 10, 13, 17, 20, 23, 26];
+    const coresPinos = ['#ff7a00', '#fde047', '#10b981', '#22d3ee', '#e879f9', '#ffb703', '#ff7a00'];
+    pinCoords.forEach((c, idx) => {
+      const pulsoPino = ((Math.floor(tick / 6) + idx) % 7 === 0) || energy > 0.45;
+      const metal = pulsoPino ? coresPinos[idx] : '#d97706';
+      const ponta = pulsoPino ? '#ffffff' : '#fde68a';
+      px(c, 1, 2, 4, metal); px(c, 0, 2, 1, ponta);
+      px(c, 31, 2, 4, metal); px(c, 35, 2, 1, ponta);
+      px(1, c, 4, 2, metal); px(0, c, 1, 2, ponta);
+      px(31, c, 4, 2, metal); px(35, c, 1, 2, ponta);
+    });
+
+    px(5, 5, 26, 26, '#170e08');
+    px(5, 5, 26, 1, '#5c3b24'); px(5, 5, 1, 26, '#5c3b24');
+    px(6, 6, 24, 1, '#382315'); px(6, 6, 1, 24, '#382315');
+    px(5, 30, 26, 1, '#080402'); px(30, 5, 1, 26, '#080402');
+    px(5, 5, 2, 2, '#0b0705'); px(29, 5, 2, 2, '#0b0705');
+    px(5, 29, 2, 2, '#0b0705'); px(29, 29, 2, 2, '#0b0705');
+    px(7, 7, 3, 1, '#fde047'); px(7, 8, 2, 1, '#fde047'); px(7, 9, 1, 1, '#fde047');
+
+    const smd = ['#9a5a28', '#fbbf24'];
+    px(13, 7, 2, 1, smd[0]); px(21, 7, 2, 1, smd[1]);
+    px(13, 28, 2, 1, smd[1]); px(21, 28, 2, 1, smd[0]);
+    px(7, 15, 1, 2, smd[0]); px(7, 21, 1, 2, smd[1]);
+    px(28, 15, 1, 2, smd[1]); px(28, 21, 1, 2, smd[0]);
+
+    px(9, 9, 18, 18, '#090503');
+    px(10, 10, 16, 16, '#140c08');
+    px(9, 9, 18, 1, '#78472a');
+    px(9, 26, 18, 1, '#2b180c');
+
+    const brilho = energy > 0.4 ? '#ffffff' : null;
+    px(11, 11, 6, 6, brilho || '#c2410c'); px(12, 12, 4, 4, '#ff7a00'); px(13, 13, 2, 2, '#fed7aa');
+    px(19, 11, 6, 6, brilho || '#0e7490'); px(20, 12, 4, 4, '#06b6d4'); px(21, 13, 2, 2, '#a5f3fc');
+    px(11, 19, 6, 6, brilho || '#047857'); px(12, 20, 4, 4, '#10b981'); px(13, 21, 2, 2, '#a7f3d0');
+    px(19, 19, 6, 6, brilho || '#7e22ce'); px(20, 20, 4, 4, '#a855f7'); px(21, 21, 2, 2, '#f5d0fe');
+
+    px(17, 10, 2, 16, '#fde047');
+    px(10, 17, 16, 2, '#fde047');
+
+    px(15, 15, 6, 6, energy > 0.3 ? '#ffffff' : '#f59e0b');
+    px(16, 16, 4, 4, energy > 0.2 ? '#fef08a' : corAtiva);
+    px(17, 17, 2, 2, '#ffffff');
+
+    ctx.restore();
+
+    ctx.font = "800 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+    ctx.textAlign = 'center';
+    ctx.fillStyle = energy > 0.4 ? '#ffffff' : '#ffd199';
+    ctx.fillText(this.convergido ? '⚡ CHIP EM SÍNTESE TOTAL' : 'NÚCLEO NEXUS · SILICON DIE', 0, half + 17);
+  }
+
+  _impactarChip(cor, forca = 1) {
+    const sim = this.sim;
+    sim.chipEnergy = Math.min(1.35, sim.chipEnergy + 0.65 * forca);
+    sim.shake = Math.min(9, sim.shake + 5 * forca);
+    sim.waves.push({ x: 0, y: 0, r: 22, maxR: 180 + 80 * forca, color: cor, alpha: 0.95 });
+    const qtd = Math.round(24 * forca);
+    for (let i = 0; i < qtd; i++) {
+      const ang = (Math.PI * 2 * i) / qtd + (Math.random() - 0.5) * 0.35;
+      const vel = 2.2 + Math.random() * 4.8 * forca;
+      sim.sparks.push({
+        x: (Math.random() - 0.5) * 18, y: (Math.random() - 0.5) * 18,
+        vx: Math.cos(ang) * vel, vy: Math.sin(ang) * vel,
+        size: Math.random() > 0.4 ? 4 : 3,
+        color: i % 4 === 0 ? '#ffffff' : cor,
+        life: 0, maxLife: 26 + Math.floor(Math.random() * 20),
+      });
+    }
+  }
+
+  /* ───────────────────────────── Loop 60fps ───────────────────────── */
+  _loop() {
+    const cv = this.canvas;
+    const ctx = this.ctx;
+    const self = this;
+
+    const resize = () => {
+      const dpr = window.devicePixelRatio || 1;
+      const w = cv.clientWidth, h = cv.clientHeight;
+      if (cv.width !== Math.floor(w * dpr) || cv.height !== Math.floor(h * dpr)) {
+        cv.width = Math.floor(w * dpr); cv.height = Math.floor(h * dpr);
+      }
+    };
+
+    const stepPos = (key, tx, ty, stiffness = 0.11, damping = 0.76) => {
+      const map = self.sim.nodePos;
+      if (!map[key]) map[key] = { x: tx * 0.2, y: ty * 0.2, vx: 0, vy: 0 };
+      const p = map[key];
+      p.vx = (p.vx + (tx - p.x) * stiffness) * damping;
+      p.vy = (p.vy + (ty - p.y) * stiffness) * damping;
+      p.x += p.vx; p.y += p.vy;
+      return p;
+    };
+
+    let __nxLast = 0;
+    const renderFrame = (__now) => {
+      __now = __now || performance.now();
+      if (__now - __nxLast < 33 && __nxLast > 0) { requestAnimationFrame(renderFrame); return; }
+      __nxLast = __now;
+      resize();
+      const sim = self.sim;
+      sim.tick += 1;
+      const dpr = window.devicePixelRatio || 1;
+      const W = cv.clientWidth, H = cv.clientHeight;
+
+      sim.scale += (sim.targetScale - sim.scale) * 0.16;
+      sim.ox += (sim.targetOx - sim.ox) * 0.16;
+      sim.oy += (sim.targetOy - sim.oy) * 0.16;
+      if (sim.tick % 6 === 0) {
+        self.zoomHud = Number(sim.scale.toFixed(2));
+        const zv = document.getElementById('zoom-val');
+        const lz = document.getElementById('legend-zoom');
+        if (zv) zv.textContent = self.zoomHud.toFixed(2);
+        if (lz) lz.textContent = self.zoomHud.toFixed(2);
+      }
+
+      sim.chipEnergy = Math.max(0.12, sim.chipEnergy * 0.95);
+      sim.shake = sim.shake > 0.2 ? sim.shake * 0.84 : 0;
+      const shakeX = sim.shake ? (Math.random() - 0.5) * sim.shake : 0;
+      const shakeY = sim.shake ? (Math.random() - 0.5) * sim.shake : 0;
+
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.imageSmoothingEnabled = false;
+
+      // ══════════════════════════════════════════════════════════════
+      // FUNDO CÓSMICO (radial azul — não mais marrom/preto)
+      // ══════════════════════════════════════════════════════════════
+      const bg = ctx.createRadialGradient(W / 2, H / 2, 20, W / 2, H / 2, Math.max(W, H) * 0.85);
+      bg.addColorStop(0,    '#0b1525');
+      bg.addColorStop(0.5,  '#050c18');
+      bg.addColorStop(1,    '#02060f');
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, W, H);
+
+      ctx.save();
+      ctx.translate(W / 2 + sim.ox + shakeX, H / 2 + sim.oy + shakeY);
+      ctx.scale(sim.scale, sim.scale);
+
+      // ══════════════════════════════════════════════════════════════
+      // ESTRELAS (world-space, twinkling)
+      // ══════════════════════════════════════════════════════════════
+      for (const st of self.stars) {
+        const tw = 0.35 + 0.65 * Math.abs(Math.sin(sim.tick * 0.018 * st.speed + st.phase));
+        ctx.fillStyle = `rgba(${st.tint}, ${st.a * tw})`;
+        ctx.beginPath();
+        ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // ══════════════════════════════════════════════════════════════
+      // GRADE PCB em CIANO (era laranja)
+      // ══════════════════════════════════════════════════════════════
+      ctx.strokeStyle = 'rgba(34, 211, 238, 0.045)';
+      ctx.lineWidth = 1 / sim.scale;
+      const gridStep = 48;
+      for (let gx = -960; gx <= 960; gx += gridStep) {
+        ctx.beginPath(); ctx.moveTo(gx, -960); ctx.lineTo(gx, 960); ctx.stroke();
+      }
+      for (let gy = -960; gy <= 960; gy += gridStep) {
+        ctx.beginPath(); ctx.moveTo(-960, gy); ctx.lineTo(960, gy); ctx.stroke();
+      }
+
+      const snap = self.snapshot;
+      if (!snap) { ctx.restore(); requestAnimationFrame(renderFrame); return; }
+
+      const orbitas = snap.orbitas || [];
+      const rastroSlugs = (snap.satelite || []).map(s => s.objeto);
+      const hitTargets = [];
+      const raioOrbitaBase = Math.min(Math.max(260, Math.min(W, H) * 0.40), 380);
+
+      const orbCoords = [];
+      const objCoords = {};
+
+      orbitas.forEach((orb, idx) => {
+        const tema = temaDe(orb.slug, orb.cor);
+        const angBase = -Math.PI / 2 + (idx * Math.PI * 2) / Math.max(1, orbitas.length);
+        const drift = Math.sin(sim.tick * 0.008 + idx * 1.4) * 0.035;
+        const ang = angBase + drift;
+        const dist = self.convergido ? 0 : raioOrbitaBase + (orb.slug === snap.orbita_ativa ? 14 : 0);
+        const p = stepPos('orb:' + orb.slug, Math.cos(ang) * dist, Math.sin(ang) * dist, self.convergido ? 0.14 : 0.1);
+        const aberta = !self.convergido && !!self.orbitasAbertas[orb.slug];
+        orbCoords.push({ orb, tema, x: p.x, y: p.y, ang, aberta });
+
+        if (aberta) {
+          const nObjs = orb.objetos.length;
+          const spread = nObjs === 1 ? 0 : Math.min(Math.PI * 1.7, (nObjs - 1) * 0.46);
+          orb.objetos.forEach((ob, j) => {
+            const offsetAng = nObjs === 1 ? 0 : -spread / 2 + (j * spread) / (nObjs - 1);
+            const aSat = ang + offsetAng;
+            const baseSatR = nObjs === 1 ? 92 : (170 + Math.sqrt(nObjs) * 22);
+            const rSat = baseSatR + (j % 4) * 42;
+            const tx = p.x + Math.cos(aSat) * rSat;
+            const ty = p.y + Math.sin(aSat) * rSat;
+            const _jx = Math.sin(sim.tick * 0.03 + ob.slug.length * 0.7) * 3;
+            const _jy = Math.cos(sim.tick * 0.025 + ob.slug.length * 1.3) * 3;
+            const pObj = stepPos('obj:' + ob.slug, tx + _jx, ty + _jy, 0.12);
+            const objAberto = !!self.objetosAbertos[ob.slug];
+            objCoords[ob.slug] = { obj: ob, orb, tema, x: pObj.x, y: pObj.y, aberto: objAberto };
+          });
+        } else {
+          orb.objetos.forEach(ob => {
+            const pos = stepPos('obj:' + ob.slug, p.x, p.y, 0.14, 0.42);
+            const ddx = pos.x - p.x, ddy = pos.y - p.y;
+            const dist = Math.sqrt(ddx * ddx + ddy * ddy);
+            const op = Math.min(1, dist / 60);
+            if (op > 0.06) {
+              objCoords[ob.slug] = { obj: ob, orb, tema, x: pos.x, y: pos.y, aberto: false, closing: true, opacity: op };
+            }
+          });
+        }
+      });
+
+      // COLLISION — separa nós visíveis (2 passadas)
+      (function() {
+        var vis = [];
+        Object.values(objCoords).forEach(function(o){ if (!o.closing) vis.push(o); });
+        for (var it = 0; it < 1; it++) {
+          for (var i = 0; i < vis.length; i++) {
+            for (var j = i + 1; j < vis.length; j++) {
+              var A = vis[i], B = vis[j];
+              var dx = B.x - A.x, dy = B.y - A.y;
+              var d2 = dx*dx + dy*dy;
+              var minD = 46;
+              if (d2 < minD*minD && d2 > 0.01) {
+                var d = Math.sqrt(d2);
+                var push = (minD - d) / d * 0.28;
+                A.x -= dx * push; A.y -= dy * push;
+                B.x += dx * push; B.y += dy * push;
+              }
+            }
+          }
+        }
+        vis.forEach(function(o){
+          var np = sim.nodePos["obj:" + o.obj.slug];
+          if (np) { np.x = o.x; np.y = o.y; }
+        });
+      })();
+
+      // anel + malha entre órbitas
+      if (!self.convergido && orbCoords.length > 1) {
+        ctx.beginPath();
+        ctx.arc(0, 0, raioOrbitaBase, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(34, 211, 238, 0.14)';
+        ctx.setLineDash([4, 8]); ctx.lineWidth = 1; ctx.stroke(); ctx.setLineDash([]);
+
+        for (let i = 0; i < orbCoords.length; i++) {
+          const a = orbCoords[i];
+          const b = orbCoords[(i + 1) % orbCoords.length];
+          const calorMedio = (a.orb.temperatura + b.orb.temperatura) * 0.5;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(34, 211, 238, ${0.06 + calorMedio * 0.2})`;
+          ctx.lineWidth = 0.9 + calorMedio;
+          ctx.stroke();
+        }
+      }
+
+      // cascata de posse
+      const posMarcos = objCoords['marcos'];
+      if (!self.convergido && posMarcos) {
+        (snap.conexoes_posse || []).forEach(rel => {
+          if (rel.de !== 'marcos') return;
+          const dest = objCoords[rel.para];
+          if (!dest) return;
+          const destacada =
+            (self.selecao && self.selecao.tipo === 'objeto' && (self.selecao.slug === 'marcos' || self.selecao.slug === rel.para)) ||
+            dest.obj.ativo;
+          const mx = (posMarcos.x + dest.x) * 0.5 * 0.72;
+          const my = (posMarcos.y + dest.y) * 0.5 * 0.72;
+          ctx.beginPath();
+          ctx.moveTo(posMarcos.x, posMarcos.y);
+          ctx.quadraticCurveTo(mx, my, dest.x, dest.y);
+          ctx.strokeStyle = destacada ? 'rgba(253, 224, 71, 0.62)' : 'rgba(245, 158, 11, 0.14)';
+          ctx.setLineDash([3, 6]);
+          ctx.lineWidth = destacada ? 1.7 : 0.9;
+          ctx.stroke(); ctx.setLineDash([]);
+        });
+      }
+
+      // onda de Fourier
+      if (!self.convergido && rastroSlugs.length >= 2) {
+        for (let i = 0; i < rastroSlugs.length - 1; i++) {
+          const a = objCoords[rastroSlugs[i]];
+          const b = objCoords[rastroSlugs[i + 1]];
+          if (!a || !b) continue;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(34, 211, 238, ${Math.max(0.22, 0.78 - i * 0.2)})`;
+          ctx.lineWidth = 2.2 - i * 0.35;
+          ctx.stroke();
+        }
+      }
+
+      // barramento fluorescente APENAS pra orbita ativa (direto, sem midpoint)
+      orbCoords.forEach(({ orb, tema, x, y }) => {
+        if (orb.slug !== snap.orbita_ativa) return;
+        if (self.convergido) return;
+        const temp = orb.temperatura;
+        const grad = ctx.createLinearGradient(0, 0, x, y);
+        grad.addColorStop(0, rgba(tema.rgb, 0.08));
+        grad.addColorStop(0.35, rgba(tema.rgb, 0.40 + temp * 0.35));
+        grad.addColorStop(1, rgba(tema.rgb, 0.85 + temp * 0.15));
+        ctx.save();
+        ctx.shadowColor = tema.neon;
+        ctx.shadowBlur = 14 + temp * 20;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(x, y);
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 3 + temp * 2.5;
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+        const fase = (sim.tick * (0.012 + temp * 0.018) + orb.slug.length * 0.13) % 1;
+        const px = x * fase;
+        const py = y * fase;
+        ctx.fillStyle = '#ffffff';
+        ctx.shadowColor = tema.neon;
+        ctx.shadowBlur = 18;
+        ctx.fillRect(px - 3.5, py - 3.5, 7, 7);
+        ctx.restore();
+      });
+
+      // satélites + atributos
+      Object.values(objCoords).forEach(({ obj, orb, tema, x, y, aberto, closing, opacity }) => {
+        const _isClosing = closing && opacity < 1;
+        ctx.save();
+        if (_isClosing) ctx.globalAlpha = opacity;
+        const orbPos = sim.nodePos['orb:' + orb.slug] || { x: 0, y: 0 };
+        const isSel = self.selecao && self.selecao.tipo === 'objeto' && self.selecao.slug === obj.slug;
+
+        const _naCadeia = (orb.slug === snap.orbita_ativa) && (obj.ativo || isSel);
+        if (_naCadeia) {
+          const _tempOrb = orb.temperatura || 0.3;
+          const _grad = ctx.createLinearGradient(orbPos.x, orbPos.y, x, y);
+          _grad.addColorStop(0, rgba(tema.rgb, 0.15));
+          _grad.addColorStop(0.5, rgba(tema.rgb, 0.45 + _tempOrb * 0.30));
+          _grad.addColorStop(1, rgba(tema.rgb, 0.85));
+          ctx.save();
+          ctx.shadowColor = tema.neon;
+          ctx.shadowBlur = 12 + _tempOrb * 18;
+          ctx.beginPath();
+          ctx.moveTo(orbPos.x, orbPos.y);
+          ctx.lineTo(x, y);
+          ctx.strokeStyle = _grad;
+          ctx.lineWidth = 2.5 + _tempOrb * 1.5;
+          ctx.stroke();
+          ctx.shadowBlur = 0;
+          const _faseC = (sim.tick * (0.014 + _tempOrb * 0.016) + obj.slug.length * 0.17) % 1;
+          const _pcx = orbPos.x + (x - orbPos.x) * _faseC;
+          const _pcy = orbPos.y + (y - orbPos.y) * _faseC;
+          ctx.fillStyle = '#ffffff';
+          ctx.shadowColor = tema.neon;
+          ctx.shadowBlur = 16;
+          ctx.fillRect(_pcx - 3, _pcy - 3, 6, 6);
+          ctx.restore();
+        } else {
+          ctx.beginPath();
+          ctx.moveTo(orbPos.x, orbPos.y); ctx.lineTo(x, y);
+          ctx.strokeStyle = obj.ativo ? '#ffffff' : rgba(tema.rgb, 0.48);
+          ctx.lineWidth = (obj.ativo || isSel) ? 2.1 : 1.2;
+          ctx.stroke();
+        }
+        ctx.stroke();
+
+        const irmaos = orb.objetos.map(i => objCoords[i.slug]).filter(Boolean);
+        irmaos.forEach(ir => {
+          if (ir.obj.slug <= obj.slug) return;
+          ctx.beginPath();
+          ctx.moveTo(x, y); ctx.lineTo(ir.x, ir.y);
+          ctx.strokeStyle = rgba(tema.rgb, 0.16);
+          ctx.lineWidth = 0.8; ctx.stroke();
+        });
+
+        if (aberto) {
+          obj.atributos.forEach((at, k) => {
+            const angAt = Math.atan2(y, x) - Math.PI * 0.42 + (k * Math.PI * 0.84) / Math.max(1, obj.atributos.length - 1 || 1);
+            const distAt = 48 + (k % 2) * 12;
+            const pAt = stepPos('att:' + obj.slug + '.' + at.nome, x + Math.cos(angAt) * distAt, y + Math.sin(angAt) * distAt, 0.15);
+            const corAt = at.pendente ? '#f59e0b' : '#10b981';
+
+            if (obj.ativo) {
+              const _tempAt = orb.temperatura || 0.3;
+              const _gradAt = ctx.createLinearGradient(x, y, pAt.x, pAt.y);
+              _gradAt.addColorStop(0, rgba(tema.rgb, 0.15));
+              _gradAt.addColorStop(0.5, rgba(tema.rgb, 0.45 + _tempAt * 0.30));
+              _gradAt.addColorStop(1, rgba(tema.rgb, 0.85));
+              ctx.save();
+              ctx.shadowColor = tema.neon;
+              ctx.shadowBlur = 10 + _tempAt * 14;
+              ctx.beginPath();
+              ctx.moveTo(x, y);
+              ctx.lineTo(pAt.x, pAt.y);
+              ctx.strokeStyle = _gradAt;
+              ctx.lineWidth = 2 + _tempAt * 1.2;
+              ctx.stroke();
+              ctx.shadowBlur = 0;
+              const _faseA = (sim.tick * (0.016 + _tempAt * 0.014) + at.nome.length * 0.19) % 1;
+              const _pax = x + (pAt.x - x) * _faseA;
+              const _pay = y + (pAt.y - y) * _faseA;
+              ctx.fillStyle = '#ffffff';
+              ctx.shadowColor = tema.neon;
+              ctx.shadowBlur = 14;
+              ctx.fillRect(_pax - 2.5, _pay - 2.5, 5, 5);
+              ctx.restore();
+            } else {
+              ctx.beginPath();
+              ctx.moveTo(x, y); ctx.lineTo(pAt.x, pAt.y);
+              ctx.strokeStyle = at.pendente ? 'rgba(245,158,11,0.45)' : 'rgba(16,185,129,0.55)';
+              ctx.lineWidth = 1; ctx.stroke();
+            }
+
+            const rAt = at.entregue ? 8.5 : 7;
+            ctx.beginPath(); ctx.arc(pAt.x, pAt.y, rAt, 0, Math.PI * 2);
+            ctx.fillStyle = at.pendente ? 'rgba(120, 65, 10, 0.72)' : 'rgba(6, 78, 59, 0.78)';
+            ctx.fill();
+            ctx.strokeStyle = at.entregue ? '#ffffff' : corAt;
+            ctx.lineWidth = at.entregue ? 2 : 1.2;
+            ctx.stroke();
+
+            ctx.fillStyle = at.entregue ? '#ffffff' : corAt;
+            ctx.fillRect(pAt.x - 2.2, pAt.y - 2.2, 4.4, 4.4);
+
+            ctx.font = "700 8.5px ui-monospace, Menlo, Consolas, monospace";
+            ctx.textAlign = 'center';
+            ctx.fillStyle = at.pendente ? '#fde68a' : '#a7f3d0';
+            ctx.fillText('.' + at.nome, pAt.x, pAt.y - rAt - 4);
+
+            hitTargets.push({
+              kind: 'atributo', key: obj.slug + '.' + at.nome,
+              objSlug: obj.slug, orbSlug: orb.slug,
+              x: pAt.x, y: pAt.y, r: rAt + 5, atributo: at, cor: corAt,
+            });
+          });
+        }
+
+        const rObj = obj.ativo ? 18 : obj.no_rastro ? 15.5 : 13.5;
+        const glowObj = ctx.createRadialGradient(x, y, 2, x, y, rObj * 2.1);
+        glowObj.addColorStop(0, rgba(tema.rgb, obj.ativo ? 0.55 : 0.26));
+        glowObj.addColorStop(1, rgba(tema.rgb, 0));
+        ctx.fillStyle = glowObj;
+        ctx.beginPath(); ctx.arc(x, y, rObj * 2.1, 0, Math.PI * 2); ctx.fill();
+
+        ctx.beginPath(); ctx.arc(x, y, rObj, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(18, 12, 9, 0.88)'; ctx.fill();
+        ctx.strokeStyle = (obj.ativo || isSel) ? '#ffffff' : tema.neon;
+        ctx.lineWidth = (obj.ativo || isSel) ? 2.4 : 1.4;
+        ctx.stroke();
+
+        ctx.beginPath(); ctx.arc(x, y, rObj * 0.44, 0, Math.PI * 2);
+        ctx.fillStyle = obj.ativo ? '#ffffff' : tema.base; ctx.fill();
+        ctx.fillStyle = tema.nucleo;
+        ctx.fillRect(x - 2, y - 2, 4, 4);
+
+        ctx.font = `${obj.ativo ? 800 : 700} 10px 'Segoe UI', system-ui, sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.fillStyle = obj.ativo ? '#ffffff' : '#f5e6d8';
+        ctx.fillText(String(obj.rotulo || obj.slug || "?"), x, y - rObj - 6);
+
+        if (!aberto && obj.atributos.length > 0) {
+          ctx.font = "700 8px ui-monospace, monospace";
+          ctx.fillStyle = tema.neon;
+          ctx.fillText('+' + obj.atributos.length, x, y + rObj + 10);
+        }
+
+        hitTargets.push({
+          kind: 'objeto', slug: obj.slug, orbSlug: orb.slug,
+          x, y, r: rObj + 5, objeto: obj, cor: tema.neon,
+        });
+        ctx.restore();
+      });
+
+      // bolhas de órbita
+      if (!self.convergido) {
+        orbCoords.forEach(({ orb, tema, x, y, aberta }) => {
+          const temp = orb.temperatura;
+          const ativa = orb.slug === snap.orbita_ativa;
+        // item11: cascata de memória visual
+        const _vis = !!orb.visitada;
+        const _opBase = ativa ? 1 : (_vis ? 0.78 : 0.55);
+        ctx.save();
+        ctx.globalAlpha = _opBase;
+          const isSel = self.selecao && self.selecao.tipo === 'orbita' && self.selecao.slug === orb.slug;
+          const rOrb = (aberta ? 26 : 30) + temp * 8;
+
+          const hg = ctx.createRadialGradient(x, y, 4, x, y, rOrb * 2.3);
+          hg.addColorStop(0, rgba(tema.rgb, 0.14 + temp * 0.42));
+          hg.addColorStop(1, rgba(tema.rgb, 0));
+          ctx.fillStyle = hg;
+          ctx.beginPath(); ctx.arc(x, y, rOrb * 2.3, 0, Math.PI * 2); ctx.fill();
+
+          ctx.beginPath(); ctx.arc(x, y, rOrb, 0, Math.PI * 2);
+          ctx.fillStyle = orb.fechada ? 'rgba(20, 25, 40, 0.78)' : 'rgba(14, 18, 30, 0.86)';
+          ctx.fill();
+          ctx.strokeStyle = (ativa || isSel) ? '#ffffff' : rgba(tema.rgb, 0.55 + temp * 0.45);
+          ctx.lineWidth = (ativa || isSel) ? 2.6 : 1.5;
+          ctx.stroke();
+
+          if (temp > 0.04) {
+            const start = sim.tick * 0.02;
+            ctx.beginPath();
+            ctx.arc(x, y, rOrb + 4.5, start, start + Math.PI * 2 * Math.min(0.95, temp));
+            ctx.strokeStyle = tema.neon; ctx.lineWidth = 2.2; ctx.stroke();
+          }
+
+          const rCore = rOrb * (0.36 + temp * 0.14);
+          const cg = ctx.createRadialGradient(x, y, 1, x, y, rCore);
+          cg.addColorStop(0, '#ffffff'); cg.addColorStop(0.55, tema.neon); cg.addColorStop(1, tema.base);
+          ctx.fillStyle = cg;
+        ctx.restore();
+          ctx.beginPath(); ctx.arc(x, y, rCore, 0, Math.PI * 2); ctx.fill();
+
+          ctx.font = "800 11px 'Segoe UI', system-ui, sans-serif";
+          ctx.textAlign = 'center';
+          ctx.fillStyle = orb.fechada ? '#7a8a9b' : '#ffffff';
+          ctx.fillText(String(orb.nome || orb.slug || "?").toUpperCase(), x, y - rOrb - 9);
+
+          ctx.font = "700 9.5px ui-monospace, monospace";
+          ctx.fillStyle = tema.neon;
+          ctx.fillText(`${Math.round(temp * 100)}° · ${aberta ? 'ABERTA' : orb.objetos.length + ' NÓS'}`, x, y + rOrb + 13);
+
+          hitTargets.push({ kind: 'orbita', slug: orb.slug, x, y, r: rOrb + 6, orbita: orb });
+        });
+      }
+
+      // pacotes de energia
+      // item5: linhas pulsando entre orbitas visitadas (memory heartbeat)
+      const quentes = orbCoords.filter(o => o.orb.temperatura > 0.3);
+      if (!self.convergido && quentes.length >= 2) {
+        const tkc = sim.tick;
+        for (let i = 0; i < quentes.length; i++) {
+          for (let j = i + 1; j < quentes.length; j++) {
+            const A = quentes[i], B = quentes[j];
+            const tMin = Math.min(A.orb.temperatura, B.orb.temperatura);
+            const pulse = 0.55 + 0.45 * Math.sin(tkc * 0.045 + i * 1.7 + j * 0.9);
+            const alpha = (0.10 + tMin * 0.12) * pulse;
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(A.x, A.y);
+            ctx.lineTo(B.x, B.y);
+            ctx.strokeStyle = 'rgba(' + A.tema.rgb[0] + ',' + A.tema.rgb[1] + ',' + A.tema.rgb[2] + ',' + alpha + ')';
+            ctx.lineWidth = 0.7 + tMin * 1.1;
+            ctx.setLineDash([4, 7]);
+            ctx.lineDashOffset = -tkc * 0.4;
+            ctx.stroke();
+            ctx.setLineDash([]);
+            const faseP = ((tkc * 0.007 + i * 0.31 + j * 0.47) % 1);
+            const ppx = A.x + (B.x - A.x) * faseP;
+            const ppy = A.y + (B.y - A.y) * faseP;
+            ctx.fillStyle = 'rgba(255,255,255,' + (0.28 * pulse) + ')';
+            ctx.fillRect(ppx - 1.5, ppy - 1.5, 3, 3);
+            ctx.restore();
+          }
+        }
+      }
+
+      for (let i = sim.packets.length - 1; i >= 0; i--) {
+        const pk = sim.packets[i];
+        pk.t += pk.speed;
+        const px = pk.fromX + (pk.toX - pk.fromX) * pk.t;
+        const py = pk.fromY + (pk.toY - pk.fromY) * pk.t;
+        if (pk.big) {
+          ctx.save();
+          ctx.shadowColor = pk.color;
+          ctx.shadowBlur = 22;
+          ctx.fillStyle = pk.color;
+          ctx.fillRect(px - 6, py - 6, 12, 12);
+          ctx.shadowBlur = 0;
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(px - 3, py - 3, 6, 6);
+          ctx.restore();
+        } else {
+          ctx.fillStyle = pk.color;
+          ctx.fillRect(px - 4, py - 4, 8, 8);
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(px - 2, py - 2, 4, 4);
+        }
+        if (pk.t >= 1) {
+          if (pk.hitsChip) self._impactarChip(pk.color, 0.85);
+          sim.packets.splice(i, 1);
+        }
+      }
+
+      // chip central
+      const corChip = temaDe(snap.orbita_ativa || 'contato').neon;
+      self._desenharPixelChip(ctx, sim.tick, self.convergido ? Math.max(0.75, sim.chipEnergy) : sim.chipEnergy, corChip);
+      hitTargets.push({ kind: 'chip', x: 0, y: 0, r: 52 });
+
+      // ondas + faíscas
+      for (let i = sim.waves.length - 1; i >= 0; i--) {
+        const w = sim.waves[i];
+        w.r += (w.maxR - w.r) * 0.12 + 2.4;
+        w.alpha *= 0.92;
+        ctx.beginPath(); ctx.arc(w.x, w.y, w.r, 0, Math.PI * 2);
+        ctx.strokeStyle = w.color; ctx.globalAlpha = w.alpha;
+        ctx.lineWidth = 2.5; ctx.stroke(); ctx.globalAlpha = 1;
+        if (w.alpha < 0.03) sim.waves.splice(i, 1);
+      }
+      for (let i = sim.sparks.length - 1; i >= 0; i--) {
+        const sp = sim.sparks[i];
+        sp.x += sp.vx; sp.y += sp.vy;
+        sp.vx *= 0.94; sp.vy *= 0.94;
+        sp.life += 1;
+        const alpha = 1 - sp.life / sp.maxLife;
+        ctx.fillStyle = sp.color;
+        ctx.globalAlpha = Math.max(0, alpha);
+        ctx.fillRect(Math.round(sp.x), Math.round(sp.y), sp.size, sp.size);
+        ctx.globalAlpha = 1;
+        if (sp.life >= sp.maxLife) sim.sparks.splice(i, 1);
+      }
+
+      ctx.restore();
+      sim.hitTargets = hitTargets;
+      requestAnimationFrame(renderFrame);
+    };
+
+    requestAnimationFrame(renderFrame);
+  }
+
+  /* ───────────────────────────── Eventos ───────────────────────── */
+  _encontrarAlvo(clientX, clientY) {
+    const cv = this.canvas;
+    const rect = cv.getBoundingClientRect();
+    const sim = this.sim;
+    const wx = (clientX - rect.left - rect.width / 2 - sim.ox) / sim.scale;
+    const wy = (clientY - rect.top - rect.height / 2 - sim.oy) / sim.scale;
+    const ordem = { atributo: 4, objeto: 3, orbita: 2, chip: 1 };
+    const ordenados = [...sim.hitTargets].sort((a, b) => ordem[b.kind] - ordem[a.kind]);
+    for (const t of ordenados) {
+      const dx = wx - t.x, dy = wy - t.y;
+      if (dx * dx + dy * dy <= t.r * t.r) return t;
+    }
+    return null;
+  }
+
+  _tratarClique(alvo) {
+    if (!alvo) { this.selecao = null; this._updateInspector(); return; }
+    const sim = this.sim;
+    if (alvo.kind === 'chip') { this._acionarChipCentral(); return; }
+    if (alvo.kind === 'orbita') {
+      const cor = temaDe(alvo.slug, alvo.orbita.cor).neon;
+      this.convergido = false;
+      const wasOpen = !!this.orbitasAbertas[alvo.slug];
+      this.orbitasAbertas[alvo.slug] = !wasOpen;
+      if (wasOpen) this.userClosed.add(alvo.slug); else this.userClosed.delete(alvo.slug);
+      this.selecao = { tipo: 'orbita', slug: alvo.slug };
+      sim.waves.push({ x: alvo.x, y: alvo.y, r: 15, maxR: wasOpen ? 60 : 130, color: cor, alpha: wasOpen ? 0.5 : 0.95 });
+      const qtdS = wasOpen ? 10 : 20;
+      for (let i = 0; i < qtdS; i++) {
+        const angS = (Math.PI * 2 * i) / qtdS + (Math.random() - 0.5) * 0.4;
+        if (wasOpen) {
+          const r0 = 50 + Math.random() * 50;
+          sim.sparks.push({ x: alvo.x + Math.cos(angS) * r0, y: alvo.y + Math.sin(angS) * r0, vx: -Math.cos(angS) * 3.5, vy: -Math.sin(angS) * 3.5, size: 3, color: i % 3 === 0 ? '#ffffff' : cor, life: 0, maxLife: 24 });
+        } else {
+          const velS = 2 + Math.random() * 2;
+          sim.sparks.push({ x: alvo.x, y: alvo.y, vx: Math.cos(angS) * velS, vy: Math.sin(angS) * velS, size: 3, color: i % 3 === 0 ? '#ffffff' : cor, life: 0, maxLife: 30 });
+        }
+      }
+      sim.packets.push({ fromX: alvo.x, fromY: alvo.y, toX: 0, toY: 0, t: 0, speed: 0.04, color: cor, hitsChip: true });
+      this._updateInspector();
+      return;
+    }
+    if (alvo.kind === 'objeto') {
+      this.objetosAbertos[alvo.slug] = !this.objetosAbertos[alvo.slug];
+      this.selecao = { tipo: 'objeto', slug: alvo.slug, orbSlug: alvo.orbSlug };
+      sim.packets.push({ fromX: alvo.x, fromY: alvo.y, toX: 0, toY: 0, t: 0, speed: 0.038, color: alvo.cor, hitsChip: true });
+      this._updateInspector();
+      return;
+    }
+    if (alvo.kind === 'atributo') {
+      this.selecao = { tipo: 'atributo', nome: alvo.atributo.nome, objSlug: alvo.objSlug, orbSlug: alvo.orbSlug };
+      sim.packets.push({ fromX: alvo.x, fromY: alvo.y, toX: 0, toY: 0, t: 0, speed: 0.045, color: alvo.cor, hitsChip: true });
+      this._updateInspector();
+    }
+  }
+
+  _testarNoChat(frase, rotulo, orbDona) {
+    this._orbDona = orbDona || null;
+    console.log('[Nucleo] _testarNoChat entrou. testRunning=', this._testarRunning, 'cascadeRunning=', this._cascadeRunning);
+    // reset de seguranca: se ficou travado > 6s, libera
+    if (this._testarRunning) {
+      if (Date.now() - (this._testarStartAt || 0) > 6000) {
+        this._testarRunning = false;
+        this._cascadeRunning = false;
+      } else {
+        return;
+      }
+    }
+    this._testarRunning = true;
+    this._testarStartAt = Date.now();
+    this._cascadeRunning = false;
+    try { this._cascadeDemo(frase); } catch (e) { console.error("[Nucleo] cascade err:", e); }
+    const selfT = this;
+    setTimeout(function () {
+      try {
+        selfT.sim.waves.push({ x: 0, y: 0, r: 20, maxR: 160, color: "#22d3ee", alpha: 0.9 });
+        selfT._impactarChip("#22d3ee", 1.3);
+      } catch (e) {}
+      setTimeout(function () {
+        selfT._testarRunning = false;
+        selfT._testarStartAt = 0;
+        const _rot = String(rotulo || frase || '').replace(/"/g, '\"');
+        const _frase = 'Cliquei no neurônio "' + String(_rot || '').trim() + '"' + (selfT._orbDona ? ' da órbita ' + selfT._orbDona : '') + ', me fale sobre.';
+        try { window.parent.postMessage({ type: 'nucleo:testar-no-chat', question: _frase }, '*'); } catch (e) { console.error('[Nucleo] postMessage err:', e); }
+      }, 700);
+    }, 3400);
+  }
+
+  _autoExpandir() {
+    if (this._autoExpanded) return;
+    this._autoExpanded = true;
+    const selfA = this;
+    const sim = this.sim;
+    this._impactarChip('#22d3ee', 1.5);
+    let pc = 0;
+    const pi = setInterval(function () {
+      selfA.sim.chipEnergy = Math.min(1.3, selfA.sim.chipEnergy + 0.4);
+      if (++pc >= 6) clearInterval(pi);
+    }, 480);
+    setTimeout(function () {
+      const snap = selfA.snapshot;
+      if (!snap || !snap.orbitas) return;
+      snap.orbitas.forEach(function (o) { selfA.orbitasAbertas[o.slug] = true; });
+      selfA._impactarChip('#fde047', 2.4);
+      sim.waves.push({ x: 0, y: 0, r: 20, maxR: 900, color: '#22d3ee', alpha: 0.95 });
+      sim.shake = 12;
+      setTimeout(function () { selfA._fitToScreen(); }, 2000);
+    }, 3000);
+  }
+
+  _fitToScreen() {
+    const sim = this.sim;
+    const cv = this.canvas;
+    if (!cv) return;
+    const W = cv.clientWidth, H = cv.clientHeight;
+    const ps = [];
+    Object.keys(sim.nodePos).forEach(function (k) {
+      const p = sim.nodePos[k];
+      if (p && isFinite(p.x) && isFinite(p.y)) ps.push(p);
+    });
+    if (!ps.length) return;
+    let mnX = Infinity, mxX = -Infinity, mnY = Infinity, mxY = -Infinity;
+    ps.forEach(function (p) {
+      if (p.x < mnX) mnX = p.x;
+      if (p.x > mxX) mxX = p.x;
+      if (p.y < mnY) mnY = p.y;
+      if (p.y > mxY) mxY = p.y;
+    });
+    const pad = Math.min(Math.min(W, H) * 0.05, 40);
+    const scX = W / ((mxX - mnX) + pad * 2);
+    const scY = H / ((mxY - mnY) + pad * 2);
+    const ns = Math.max(0.15, Math.min(scX, scY, 1.3));
+    sim.targetScale = ns;
+    sim.targetOx = -((mnX + mxX) / 2) * ns;
+    sim.targetOy = -((mnY + mxY) / 2) * ns;
+  }
+
+  _cascadeDemo(alvo) {
+    if (this._cascadeRunning) return;
+    this._cascadeRunning = true;
+    const sim = this.sim;
+    const snap = this.snapshot;
+    const selfC = this;
+    if (!snap || !snap.orbitas || !snap.orbitas.length) { this._cascadeRunning = false; return; }
+    const mapa = {
+      'linkedin': 'contato', 'github-hist': 'contato',
+      'projetos': 'projetos', 'pretensao': 'recrutamento', 'nexus': 'sobre_curriculo'
+    };
+    const targetSlug = mapa[alvo] || snap.orbita_ativa || snap.orbitas[0].slug;
+    const orb = snap.orbitas.find(o => o.slug === targetSlug) || snap.orbitas[0];
+    if (!orb) { this._cascadeRunning = false; return; }
+    const cor = temaDe(orb.slug, orb.cor).neon;
+    const posOrb0 = sim.nodePos["orb:" + orb.slug] || { x: 0, y: 0 };
+    this._impactarChip(cor, 1.2);
+    sim.waves.push({ x: 0, y: 0, r: 15, maxR: 80, color: cor, alpha: 0.85 });
+    setTimeout(function () {
+      const pO = sim.nodePos["orb:" + orb.slug] || posOrb0;
+      sim.packets.push({ fromX: 0, fromY: 0, toX: pO.x, toY: pO.y, t: 0, speed: 0.035, color: cor, hitsChip: false, big: true });
+    }, 150);
+    setTimeout(function () {
+      const pO = sim.nodePos["orb:" + orb.slug] || posOrb0;
+      sim.waves.push({ x: pO.x, y: pO.y, r: 15, maxR: 110, color: cor, alpha: 0.95 });
+      selfC.orbitasAbertas[orb.slug] = true;
+      selfC.selecao = { tipo: "orbita", slug: orb.slug };
+    }, 700);
+    setTimeout(function () {
+      const pO = sim.nodePos["orb:" + orb.slug] || posOrb0;
+      const facet = orb.objetos && orb.objetos[0];
+      if (!facet) return;
+      const pF = sim.nodePos["obj:" + facet.slug] || pO;
+      sim.packets.push({ fromX: pO.x, fromY: pO.y, toX: pF.x, toY: pF.y, t: 0, speed: 0.04, color: cor, hitsChip: false, big: true });
+    }, 1100);
+    setTimeout(function () {
+      const facet = orb.objetos && orb.objetos[0];
+      if (!facet) return;
+      const pF = sim.nodePos["obj:" + facet.slug] || posOrb0;
+      sim.waves.push({ x: pF.x, y: pF.y, r: 12, maxR: 90, color: "#ffffff", alpha: 0.9 });
+      for (let i = 0; i < 12; i++) {
+        const angS = (Math.PI * 2 * i) / 12;
+        sim.sparks.push({ x: pF.x, y: pF.y, vx: Math.cos(angS) * 2.5, vy: Math.sin(angS) * 2.5, size: 3, color: i % 2 === 0 ? "#ffffff" : cor, life: 0, maxLife: 24 });
+      }
+    }, 1700);
+    setTimeout(function () {
+      const facet = orb.objetos && orb.objetos[0];
+      const pF = facet ? (sim.nodePos["obj:" + facet.slug] || posOrb0) : posOrb0;
+      sim.packets.push({ fromX: pF.x, fromY: pF.y, toX: 0, toY: 0, t: 0, speed: 0.045, color: cor, hitsChip: true, big: true });
+    }, 2100);
+    setTimeout(function () { selfC._cascadeRunning = false; }, 3400);
+  }
+
+  _acionarChipCentral() {
+    this.convergido = !this.convergido;
+    const sim = this.sim;
+    (this.snapshot?.orbitas || []).forEach(o => {
+      const cor = temaDe(o.slug, o.cor).neon;
+      const pos = sim.nodePos['orb:' + o.slug];
+      if (pos && this.convergido) {
+        sim.packets.push({ fromX: pos.x, fromY: pos.y, toX: 0, toY: 0, t: 0, speed: 0.045, color: cor, hitsChip: true });
+      }
+    });
+    this._impactarChip('#fde047', this.convergido ? 1.35 : 1.6);
+    this.selecao = { tipo: 'chip' };
+    this._updateInspector();
+  }
+
+  _isolarOrbita(slug) {
+    if (this._isolada === slug) {
+      if (this._estadoSalvo) {
+        this.orbitasAbertas = Object.assign({}, this._estadoSalvo.orbitas);
+        this.objetosAbertos = Object.assign({}, this._estadoSalvo.objetos);
+      }
+      this._isolada = null;
+      this._estadoSalvo = null;
+    } else {
+      this._estadoSalvo = { orbitas: Object.assign({}, this.orbitasAbertas), objetos: Object.assign({}, this.objetosAbertos) };
+      this._isolada = slug;
+      var selfI = this;
+      Object.keys(this.orbitasAbertas).forEach(function(k){ selfI.orbitasAbertas[k] = (k === slug); });
+    }
+    this._impactarChip('#22d3ee', 0.8);
+    this._updateInspector();
+  }
+
+  _alternarTeiaCompleta() {
+    this.teiaCompleta = !this.teiaCompleta;
+    this.convergido = false;
+    const novo = this.teiaCompleta;
+    (this.snapshot?.orbitas || []).forEach(o => {
+      this.orbitasAbertas[o.slug] = novo;
+      o.objetos.forEach(ob => { this.objetosAbertos[ob.slug] = novo; });
+    });
+    this._impactarChip('#22d3ee', 1.1);
+  }
+
+  _bindEvents() {
+    const cv = this.canvas;
+    const self = this;
+
+    cv.addEventListener('mousedown', e => {
+      self.sim.dragging = true; self.sim.moved = false;
+      self.sim.dragStartX = e.clientX - self.sim.targetOx;
+      self.sim.dragStartY = e.clientY - self.sim.targetOy;
+    });
+    cv.addEventListener('mousemove', e => {
+      const s = self.sim;
+      if (s.dragging) {
+        const nx = e.clientX - s.dragStartX;
+        const ny = e.clientY - s.dragStartY;
+        if (Math.hypot(nx - s.targetOx, ny - s.targetOy) > 4) s.moved = true;
+        s.targetOx = nx; s.targetOy = ny;
+      }
+    });
+    cv.addEventListener('mouseup', e => {
+      const foiArrasto = self.sim.moved;
+      self.sim.dragging = false;
+      if (!foiArrasto) self._tratarClique(self._encontrarAlvo(e.clientX, e.clientY));
+    });
+    cv.addEventListener('wheel', e => {
+      e.preventDefault();
+      const rect = cv.getBoundingClientRect();
+      const s = self.sim;
+      const fator = e.deltaY < 0 ? 1.14 : 0.88;
+      const novoScale = Math.max(0.42, Math.min(3.5, s.targetScale * fator));
+      const mx = e.clientX - rect.left - rect.width / 2;
+      const my = e.clientY - rect.top - rect.height / 2;
+      const razao = novoScale / s.targetScale;
+      s.targetOx = mx - (mx - s.targetOx) * razao;
+      s.targetOy = my - (my - s.targetOy) * razao;
+      s.targetScale = novoScale;
+    }, { passive: false });
+
+    cv.addEventListener('dblclick', e => {
+      const alvo = self._encontrarAlvo(e.clientX, e.clientY);
+      if (alvo && alvo.kind === 'orbita') self._isolarOrbita(alvo.slug);
+    });
+    cv.addEventListener('touchstart', e => {
+      const s = self.sim;
+      if (e.touches.length === 1) {
+        s.dragging = true; s.moved = false;
+        s.dragStartX = e.touches[0].clientX - s.targetOx;
+        s.dragStartY = e.touches[0].clientY - s.targetOy;
+      } else if (e.touches.length === 2) {
+        s.dragging = false;
+        s.pinchDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+      }
+    }, { passive: true });
+    cv.addEventListener('touchmove', e => {
+      const s = self.sim;
+      if (e.touches.length === 1 && s.dragging) {
+        const nx = e.touches[0].clientX - s.dragStartX;
+        const ny = e.touches[0].clientY - s.dragStartY;
+        if (Math.hypot(nx - s.targetOx, ny - s.targetOy) > 5) s.moved = true;
+        s.targetOx = nx; s.targetOy = ny;
+      } else if (e.touches.length === 2 && s.pinchDist > 0) {
+        const d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+        s.targetScale = Math.max(0.42, Math.min(3.5, s.targetScale * (d / s.pinchDist)));
+        s.pinchDist = d;
+      }
+    }, { passive: true });
+    cv.addEventListener('touchend', e => {
+      const s = self.sim;
+      if (!s.moved && e.changedTouches.length === 1) {
+        e.preventDefault(); // bloqueia ghost click sintetizado
+        self._tratarClique(self._encontrarAlvo(e.changedTouches[0].clientX, e.changedTouches[0].clientY));
+      }
+      s.dragging = false;
+      s.pinchDist = 0;
+    }, { passive: false });
+  }
+
+  _updateInspector() {
+    const el = document.getElementById('inspector');
+    if (!el) return;
+    const snap = this.snapshot;
+    const sel = this.selecao;
+    if (!snap) { el.innerHTML = ''; return; }
+    if (!sel) {
+      el.innerHTML = `
+        <div class="badge" style="color:#fbbf24">${snap.orbita_ativa
+          ? 'ÓRBITA ATIVA: ' + String(snap.orbita_ativa).toUpperCase() + ' · ' + (snap.objeto_ativo || '—')
+          : 'NÚCLEO NEXUS EM ESCUTA'}</div>
+        <div class="linhas" style="margin-top:4px;font-size:10.5px;color:#c0b3a8;line-height:1.45">
+          Toque em qualquer <b>bolha</b> para espalhar os nós internos
+          ou bata no <b>Chip Pixel Art</b> para convergir toda a energia.
+        </div>`;
+    var _tglOff = document.getElementById("nxInspToggle");
+    if (_tglOff) _tglOff.classList.remove("nx-pulse");
+      return;
+    }
+
+    let badge = '', cor = '#fbbf24', titulo = '', sub = '', linhas = [], rotuloLimpo = null, pergunta = null;
+
+    if (sel.tipo === 'chip') {
+      badge = 'MICROPROCESSADOR CENTRAL'; cor = '#fde047';
+      titulo = 'Núcleo Nexus Lexical';
+        rotuloLimpo = 'Núcleo Nexus';
+      sub = `${snap.contagens.orbitas} órbitas · ${snap.contagens.satelites} satélites · ${snap.contagens.blocos} blocos`;
+      linhas = [
+        `Turnos na sessão: ${snap.turnos}`,
+        `Rastro Fourier: ${snap.satelite.map(s => s.objeto).join(' → ') || 'aguardando 1ª onda'}`,
+        `Entregues: ${snap.entregues_sessao.join(', ') || 'nenhum'}`,
+      ];
+      pergunta = 'como funciona o chat rag?';
+    } else if (sel.tipo === 'orbita') {
+      const orb = snap.orbitas.find(o => o.slug === sel.slug);
+      if (!orb) return;
+      const tm = temaDe(orb.slug, orb.cor);
+      badge = tm.rotulo; cor = tm.neon;
+      titulo = `Órbita ${orb.nome || orb.slug || "?"} (${Math.round(orb.temperatura * 100)}°)`;
+        rotuloLimpo = orb.nome || orb.slug || '?';
+      sub = orb.descricao || `${orb.objetos.length} satélites acoplados`;
+      linhas = [
+        `Satélites: ${orb.objetos.map(x => x.rotulo).join(', ')}`,
+        `Estado térmico: ${orb.fechada ? 'Fria / Em espera' : 'Aquecida em operação'}`,
+      ];
+      pergunta = `me fala sobre ${orb.nome}`;
+    } else if (sel.tipo === 'objeto') {
+      const orb = snap.orbitas.find(o => o.slug === sel.orbSlug);
+      const obj = orb && orb.objetos.find(x => x.slug === sel.slug);
+      if (!orb || !obj) return;
+      const tm = temaDe(orb.slug, orb.cor);
+      const prontos = obj.atributos.filter(a => !a.pendente).map(a => '.' + a.nome);
+      const pends   = obj.atributos.filter(a => a.pendente).map(a => '.' + a.nome);
+      badge = `SATÉLITE · ${String(obj.tipo_entidade || 'elemento').toUpperCase()}`; cor = tm.neon;
+      titulo = obj.rotulo;
+        rotuloLimpo = obj.rotulo || obj.slug || '?';
+      sub = `Dono na cascata: ${obj.dono || 'raiz (Marcos)'} · Gênero: ${obj.genero}`;
+      linhas = [
+        obj.serve_para ? `Função: ${obj.serve_para}` : '',
+        prontos.length ? `🟢 Prontos: ${prontos.join(', ')}` : '',
+        pends.length   ? `🟡 Pendentes: ${pends.join(', ')}` : '',
+      ].filter(Boolean);
+      pergunta = obj.atributos.some(a => a.nome === 'link') ? `solta o ${obj.rotulo || obj.slug}` : `me fala sobre ${obj.rotulo || obj.slug}`;
+    } else if (sel.tipo === 'atributo') {
+      const orb = snap.orbitas.find(o => o.slug === sel.orbSlug);
+      const obj = orb && orb.objetos.find(x => x.slug === sel.objSlug);
+      const att = obj && obj.atributos.find(a => a.nome === sel.nome);
+      if (!orb || !obj || !att) return;
+      badge = att.pendente ? 'ATRIBUTO PENDENTE' : 'ATRIBUTO PRONTO';
+      cor = att.pendente ? '#fbbf24' : '#34d399';
+      titulo = `${obj.rotulo || obj.slug || "?"} → .${att.nome || "?"}`;
+        rotuloLimpo = (obj.rotulo || obj.slug || '?') + ' → ' + (att.nome || '?');
+      sub = `Tipo: ${att.tipo} · Dono: ${att.dono}`;
+      linhas = [
+        `Status: ${att.pendente ? 'Declarado no JSON (aguardando texto)' : 'Ativo e respondendo'}`,
+        `Sessão: ${att.entregue ? '⚡ Já entregue nesta conversa' : 'Ainda inédito na conversa'}`,
+      ];
+          pergunta = att.nome === 'link' ? `solta o ${obj.rotulo || obj.slug}`
+              : att.nome === 'historia' ? `me conta do ${obj.slug}`
+              : `o ${att.nome.replace(/_/g, ' ')} do ${obj.slug}`;
+    }
+
+    el.innerHTML = `
+      <div class="badge" style="color:${cor}">
+        <span>${badge}</span>
+        <button id="insp-fechar" title="Fechar">✕</button>
+      </div>
+      <h3>${titulo}</h3>
+      <div class="sub">${sub}</div>
+      <div class="linhas">${linhas.map(l => `<div>${l}</div>`).join('')}</div>
+      
+    `;
+    const btnF = document.getElementById('insp-fechar');
+    if (btnF) btnF.onclick = () => { this.selecao = null; this._updateInspector(); };
+    var _tglPulse = document.getElementById("nxInspToggle");
+    if (_tglPulse) { if (this.selecao) _tglPulse.classList.add("nx-pulse"); else _tglPulse.classList.remove("nx-pulse"); }
+
+  }
+  /* ============ MEMORY CHIP — INICIO ============ */
+  _updateMemoryChip() {
+    const el = document.getElementById("nx-mem-rows");
+    if (!el) return;
+    const snap = this.snapshot;
+    if (!snap || !snap.orbitas) { el.innerHTML = ""; return; }
+    const visitadas = snap.orbitas.filter(o => o.visitada && o.turnosVisitados > 0).sort((a,b) => b.turnosVisitados - a.turnosVisitados);
+    if (!visitadas.length) { el.innerHTML = "<div style=font-size:8.5px;color:rgba(148,225,240,0.55)>vazia · sessão limpa</div>"; return; }
+    const maxTurnos = Math.max.apply(null, visitadas.map(o => o.turnosVisitados)) || 1;
+    let html = "";
+    for (let i = 0; i < Math.min(visitadas.length, 5); i++) {
+      const o = visitadas[i];
+      const pct = Math.round((o.turnosVisitados / maxTurnos) * 100);
+      const nome = (o.nome || o.slug || "?").slice(0, 14);
+      html += "<div class=row><span class=nome>" + nome + "</span><span class=barra><span class=fill style=width:" + pct + "%></span></span><span class=num>" + o.turnosVisitados + "</span></div>";
+    }
+    el.innerHTML = html;
+  }
+  /* ============ MEMORY CHIP — FIM ============ */
+
+  _updateHUD() {
+    const hIcon = document.getElementById('chip-header-icon');
+    const hSub  = document.getElementById('chip-header-sub');
+    if (hIcon) { hIcon.innerHTML = ''; hIcon.appendChild(criarPixelChipIcon(this.snapshot, 38)); }
+    if (hSub && this.snapshot) {
+      hSub.textContent = this.snapshot.objeto_ativo
+        ? `órbita: ${this.snapshot.orbita_ativa} / ${this.snapshot.objeto_ativo}`
+        : 'núcleo em espera';
+    }
+    const tIcon = document.getElementById('nexus-top-icon');
+    if (tIcon) { tIcon.innerHTML = ''; tIcon.appendChild(criarPixelChipIcon(this.snapshot, 28)); }
+    this._updateInspector();
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   WIRING
+   ═══════════════════════════════════════════════════════════════════ */
+const demo = new Demo();
+function testarNoChat(frase, rotulo, orbDona) {
+  console.log('[Nucleo] testarNoChat wrapper disparou, frase=', frase, 'nucleo=', typeof nucleo);
+  if (typeof nucleo !== 'undefined' && nucleo && typeof nucleo._testarNoChat === 'function') {
+    console.log('[Nucleo] chamando _testarNoChat');
+    nucleo._testarNoChat(frase, rotulo, orbDona);
+  } else {
+    console.log('[Nucleo] ERRO: nucleo._testarNoChat nao disponivel, nucleo=', nucleo);
+  }
+}
+
+const nucleo = new NucleoChip(document.getElementById('nucleo-overlay'), {
+    onTestarNoChat: (frase, rotulo, orbDona) => { if (typeof testarNoChat === 'function') testarNoChat(frase, rotulo, orbDona); },
+});
+
+nucleo.setSnapshot(demo.snapshot());
+
+window.addEventListener("message", function (e) {
+  if (!e.data || e.data.type !== "nucleo:snapshot") return;
+  if (e.data.snapshot) nucleo.setSnapshot(e.data.snapshot);
+});
+// mobile: toggle inspector como modal circular
+(function(){
+  var t = document.getElementById("nxInspToggle");
+  var p = document.getElementById("inspector");
+  if (!t || !p) return;
+  t.addEventListener("click", function(e){ e.stopPropagation(); p.classList.toggle("nx-mobile-open"); }); t.classList.remove("nx-pulse");
+  document.addEventListener("click", function(e){
+    if (window.innerWidth > 700) return;
+    if (!p.classList.contains("nx-mobile-open")) return;
+    if (p.contains(e.target) || t.contains(e.target)) return;
+    p.classList.remove("nx-mobile-open");
+  });
+})();
+
+setTimeout(function(){ try { window.parent.postMessage({ type: "nucleo:ready" }, "*"); } catch(e){} }, 100);
+window.addEventListener("message", function (e) {
+  if (!e.data) return;
+  if (e.data.type === "nucleo:first-open") {
+    setTimeout(function () { if (nucleo && typeof nucleo._autoExpandir === "function") nucleo._autoExpandir(); }, 100);
+  }
+});
+
+
+document.getElementById('chip-header').onclick = () => {
+  document.getElementById('nucleo-overlay').hidden = false;
+  nucleo.setSnapshot(demo.snapshot());
+};
+document.getElementById('fechar-nucleo').onclick = () => {
+  document.getElementById('nucleo-overlay').hidden = true;
+};
+
+document.getElementById('btn-zoom-mais').onclick  = () => { nucleo.sim.targetScale = Math.min(3.5, nucleo.sim.targetScale * 1.25); };
+document.getElementById('btn-zoom-menos').onclick = () => { nucleo.sim.targetScale = Math.max(0.42, nucleo.sim.targetScale / 1.25); };
+document.getElementById('btn-centralizar').onclick = () => {
+  nucleo.sim.targetScale = 1; nucleo.sim.targetOx = 0; nucleo.sim.targetOy = 0;
+};
+document.getElementById('btn-espalhar').onclick  = () => nucleo._alternarTeiaCompleta();
+document.getElementById('btn-convergir').onclick = () => nucleo._acionarChipCentral();
+
+const legendDiv = document.getElementById('legend-temas');
+Object.entries(TEMA_ORBITA).forEach(([slug, tm]) => {
+  const row = document.createElement('div');
+  row.className = 'linha';
+  row.innerHTML = `<span class="swatch" style="background:${tm.neon};color:${tm.neon}"></span><span>${slug === 'nexus' ? 'Chat-RAG' : slug}</span>`;
+  legendDiv.appendChild(row);
+});
+
+function simularTurnoAuto(frase) {
+  if (typeof nucleo !== "undefined" && nucleo && typeof nucleo._cascadeDemo === "function") {
+    nucleo._cascadeDemo(frase);
+  }
+}
+
+document.querySelectorAll('[data-demo]').forEach(btn => {
+  btn.onclick = () => simularTurnoAuto(btn.dataset.demo);
+});
+</script>
+</body>
+</html>
