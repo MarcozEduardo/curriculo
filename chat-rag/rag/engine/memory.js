@@ -142,6 +142,12 @@ class SessionMemory {
     if (this.recentTexts.length > 8) this.recentTexts.shift();
 
     const key = intentId || `${orbit}:${entity || "-"}:${facet || "-"}`;
+    // Fila do pastel: decai outras orbitas antes de incrementar a atual
+    for (const _tk in this.topicCount) {
+      if (_tk === key) continue;
+      this.topicCount[_tk] = this.topicCount[_tk] * 0.85;
+      if (this.topicCount[_tk] < 0.1) delete this.topicCount[_tk];
+    }
     this.topicCount[key] = (this.topicCount[key] || 0) + 1;
     this.setContext({ orbit, entity, facet });
     if (clearEntity) this.clearActiveEntity();
@@ -203,6 +209,22 @@ class SessionMemory {
   recordAbuse() {
     this.abuseCount += 1;
     return this.abuseCount;
+  }
+
+  /** Fila do pastel: peso do contexto por orbita (frequencia x recencia) */
+  getContextWeight(orbitSlug) {
+    if (!orbitSlug) return 0;
+    const count = this.topicCount[orbitSlug] || 0;
+    if (count === 0) return 0;
+    // Posicao do ultimo aparecimento no historico (0 = recente, N = antigo)
+    let lastIdx = -1;
+    for (let i = this.history.length - 1; i >= 0; i--) {
+      if (this.history[i].orbit === orbitSlug) { lastIdx = i; break; }
+    }
+    if (lastIdx < 0) return 0;
+    const turnsAgo = this.history.length - 1 - lastIdx;
+    const decay = 1 / (1 + turnsAgo * 0.3);
+    return count * decay;
   }
 
   stats() {

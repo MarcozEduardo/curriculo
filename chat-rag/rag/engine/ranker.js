@@ -318,21 +318,60 @@ class RagRanker {
 
     /* 1.9 Pre-check: escolha do bot ("me surpreende", "conta uma boa") --- */
     // FIX B: pre-check escolha_do_bot
-    if (/^(me\s+surpreend|conta\s+uma\s+boa|manda\s+uma\s+boa|escolhe\s+(pra|por)\s+mim|decide\s+(pra|por)\s+mim|faz\s+uma\s+escolha|surpreende\s+ai|manda\s+ver)/i.test(norm)) {
-      const orbit = this.router.getOrbit('escolha_do_bot');
-      const lista = orbit?.facets?.default || ['Escolho sim. Me diz se prefere projeto, stack, contratação ou bastidores.'];
-      const body = this.pick(lista, 'escolha_default') // FIX ROT-V2;
-      const offer = this.dialog.mainMenuOffer();
-      this.dialog.setPending(offer);
-      this.memory.record(raw, { orbit: 'escolha_do_bot', facet: 'default', intentId: 'escolha_pre', summary: 'Escolha do bot' });
-      const prefixoNeutro = /^(Boa|Vou|Escolho|Fecho|Posso|Claro|Deixa)/i.test(body);
-        return this.result((prefixoNeutro ? body : this.humanizer.compose(body, { confidence: 5, withTransition: false })) + "\n\n" + offer.text, { // FIX ROT-V2
-        source: 'Assistente Bobby',
-        orbit: 'escolha_do_bot',
-        facet: 'default',
-        confidence: 5,
-      });
+    if (/^(me\s+surpreend|conta\s+uma\s+boa|manda\s+uma\s+boa|escolhe\s+(pra|por)\s+mim|decide\s+(pra|por)\s+mim|faz\s+uma\s+escolha|surpreende\s+ai|manda\s+ver|escolhe\s+a[ií]|decide\s+a[ií]|escolhe\s+voce|decide\s+voce|voce\s+escolhe|voce\s+decide|voce\s+sugere|bora\s+escolher|escolhe\s+um|escolhe\s+qualquer|qualquer\s+um|tanto\s+faz|me\s+indica|me\s+recomenda)/i.test(norm)) {
+      // FIX ESCOLHA-PENDING: se ha opcoes pendentes, escolhe UMA e entrega de verdade
+      const _pendingSurprise = this.memory.pendingOffer;
+      if (_pendingSurprise && _pendingSurprise.options && _pendingSurprise.options.length) {
+        const _escolhaIdx = Math.floor(Math.random() * _pendingSurprise.options.length);
+        const _escolha = _pendingSurprise.options[_escolhaIdx];
+        const _respSurprise = this.handlePendingPick({ type: "option", option: _escolha }, raw);
+        if (_respSurprise && _respSurprise.text) {
+          const _prefixo = "Beleza, bora escolher **" + _escolha.label + "**.\n\n";
+          this.memory.record(raw, { orbit: "escolha_do_bot", facet: "default", intentId: "escolha_pending", summary: "Escolha do bot (pending)" });
+          return this.result(_prefixo + _respSurprise.text, {
+            source: _respSurprise.source || "Assistente Bobby",
+            orbit: _respSurprise.orbit || "escolha_do_bot",
+            facet: _respSurprise.facet || "default",
+            confidence: 5,
+          });
+        }
+      }
+    // fallback: sem pending, entrega historia real (nao mais frase solta)
+    const _historiasEscolha = [
+      { id: 'ex18', label: 'a historia do banco corrompido na Fabricart' },
+      { id: 'cu01', label: 'a historia do SOCRAM, o vilao da saga Bobby' },
+      { id: 'pr51', label: 'a historia de como nasceu o jogo A Fuga de Bobby' }
+    ];
+    const _escolhaHist = _historiasEscolha[Math.floor(Math.random() * _historiasEscolha.length)];
+    const _nodeHist = this.dialog.get(_escolhaHist.id);
+    if (_nodeHist) {
+      const _respHist = this.answerNode(_nodeHist, raw);
+      if (_respHist && _respHist.text) {
+        const _prefixo = 'Beleza, bora escolher **' + _escolhaHist.label + '**.\n\n';
+        this.memory.record(raw, { orbit: 'escolha_do_bot', facet: 'default', intentId: 'escolha_hist', summary: 'Escolha do bot (historia)' });
+        return this.result(_prefixo + _respHist.text, {
+          source: _respHist.source || 'Assistente Bobby',
+          orbit: _respHist.orbit || 'escolha_do_bot',
+          facet: _respHist.facet || 'default',
+          confidence: 5,
+        });
+      }
     }
+    // fallback final (nao deveria chegar aqui): frase aleatoria do orbits.json
+    const orbit = this.router.getOrbit('escolha_do_bot');
+    const lista = orbit?.facets?.default || ['Escolho sim. Me diz se prefere projeto, stack, contratacao ou bastidores.'];
+    const body = this.pick(lista, 'escolha_default');
+    const offer = this.dialog.mainMenuOffer();
+    this.dialog.setPending(offer);
+    this.memory.record(raw, { orbit: 'escolha_do_bot', facet: 'default', intentId: 'escolha_pre', summary: 'Escolha do bot' });
+    const prefixoNeutro = /^(Boa|Vou|Escolho|Fecho|Posso|Claro|Deixa)/i.test(body);
+    return this.result((prefixoNeutro ? body : this.humanizer.compose(body, { confidence: 5, withTransition: false })) + '\n\n' + offer.text, {
+      source: 'Assistente Bobby',
+      orbit: 'escolha_do_bot',
+      facet: 'default',
+      confidence: 5,
+    });
+  }
 
     /* 1.10 Rotação / expansão da escolha do bot (FIX ESCOLHA-ROT) ----------- */
     // Rotação: "outro caminho", "outra opção", "escolhe outro"
@@ -575,6 +614,19 @@ if (node && !exactNode && !entity && !topicChoice) {
   if (quickBest && quickBest.orbit !== node.orbit && quickBest.score >= 1.4) orbitConflict = true; // FIX ANCORA-CONTEXTO v5
 }
 if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet && !orbitConflict))) return this.answerNode(node, raw);
+    }
+
+    // FIX RETRY-PENDING: antes de cair em duvida_de_que, tentar resolvePending
+    // com rawTokens PUROS (resolve pendencia pendente com label exato)
+    if (!skipPending && this.memory.pendingOffer && rawTokens.length <= 6) {
+      const _pickRetry = this.dialog.resolvePending(norm, rawTokens);
+      if (_pickRetry && _pickRetry.type === "option") {
+        const _respRetry = this.handlePendingPick(_pickRetry, raw);
+        if (_respRetry && _respRetry.text) return _respRetry;
+      }
+      if (_pickRetry && (_pickRetry.type === "reask" || _pickRetry.type === "decline")) {
+        return this.handlePendingPick(_pickRetry, raw);
+      }
     }
 
     /* 8.9 Guarda: pergunta curta sem sujeito ("Quanto tempo?") --------- */
@@ -918,7 +970,10 @@ if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet &
       const pOrbit = p.kind === "node" ? p.node.orbit : p.kind === "entity" ? p.entity.orbit : p.orbit.id;
       const orbitBoost = prefOrbit && pOrbit === prefOrbit ? 1.3 : 1;
       const score = hit * p.weight * (0.5 + 0.5 * coverage) * density * orbitBoost;
-      if (coverage >= 0.6 && hit >= 2.5 && (!best || score > best.score)) best = { p, score };
+      // Fila do pastel: peso de contexto pela orbita (frequencia x recencia)
+      const _ctxW = this.memory.getContextWeight ? this.memory.getContextWeight(pOrbit) : 0;
+      const _scoreFinal = score * (1 + _ctxW * 0.3);
+      if (coverage >= 0.6 && hit >= 2.5 && (!best || _scoreFinal > best.score)) best = { p, score: _scoreFinal };
     }
     if (!best) return null;
 
@@ -952,7 +1007,9 @@ if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet &
     if (pending && pending.options && pending.options.length) {
       // FIX C: só usa pendente se for da órbita ativa (evita contaminação).
       const pendingOrbit = pending.options[0] && pending.options[0].orbit;
-      if (!pendingOrbit || pendingOrbit === this.memory.activeOrbit) {
+      // Fila do pastel: pending so vale ate 2 turnos
+      const _idadePending = this.memory.turn - (this.memory.pendingTurn || 0);
+      if (_idadePending <= 2 && (!pendingOrbit || pendingOrbit === this.memory.activeOrbit)) {
         return { options: pending.options, text: this.dialog.render(pending.options) };
       }
     }

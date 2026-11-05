@@ -35,9 +35,13 @@
       "question": "Quais ferramentas ele construiu além dos jogos?",
       "variants": [
         "quais web apps ele fez",
-        "ferramentas e aplicativos"
+        "ferramentas e aplicativos",
+        "status das ferramentas",
+        "todas as ferramentas estao ativas",
+        "quais ferramentas funcionam",
+        "ferramentas publicadas"
       ],
-      "answer": "Três ferramentas: **DirectSend** (transferência de arquivos ponto a ponto por QR Code), **Marketbobby** (lista de mercado com IA e OCR) e **DevOrador** (auditoria de interface pelo DOM para ajudar a IA a localizar código)."
+      "answer": "As principais ferramentas que o Marcos construiu:\n\n**DirectSend**: transferencia ponto a ponto por QR Code, sem servidor. Em fase de ser substituido por versao mais robusta.\n\n**Marketbobby**: lista de mercado com IA e OCR. Foto de prateleira vira lista automatica.\n\n**DevOrador**: auditor de interface pelo DOM para IA localizar codigo.\n\n**bobbuild**: motor pessoal de orquestracao, o ambiente principal de desenvolvimento dele.\n\n**Mescladores de Pastas**: ferramentas internas de consolidacao de arquivos.\n\nTem tambem o **App Franzinha** (sistema de loja com IA embarcada) e o **LAR** (runtime de orquestracao com 150+ ferramentas nativas)."
     },
     {
       "id": "pr04",
@@ -123,7 +127,14 @@
       "question": "Onde posso ver o código ou testar os projetos?",
       "variants": [
         "tem link dos projetos",
-        "onde estão os repositórios"
+        "onde estão os repositórios",
+        "onde testar",
+        "onde posso testar",
+        "onde acessar os projetos",
+        "onde ver os jogos",
+        "onde testar os jogos",
+        "onde ver funcionando",
+        "onde achar os links"
       ],
       "answer": "Os jogos ficam na Vercel: game-a-fuga-de-bobby-final.vercel.app, game-a-viagem-de-bobby.vercel.app e dama-orbital.vercel.app. DirectSend e Marketbobby estão no GitHub (github.com/MarcozEduardo). O gerador ABNT está em programa-de-extens-o-institucional.vercel.app."
     },
@@ -225,9 +236,14 @@
       "question": "Como funciona o DirectSend?",
       "variants": [
         "o que o directsend faz",
-        "transferência por qr code"
+        "transferência por qr code",
+        "status do directsend",
+        "directsend esta ativo",
+        "o directsend funciona",
+        "directsend foi abandonado",
+        "directsend ainda existe"
       ],
-      "answer": "Dois dispositivos se emparelham por QR Code e o arquivo vai direto de um para o outro, sem servidor intermediário. Nasceu como teste de integração entre WebRTC e Firebase e virou projeto próprio, ainda em testes.",
+      "answer": "O DirectSend emparelha dois dispositivos por QR Code e transfere o arquivo direto de um para o outro, sem servidor intermediario.\n\nNasceu como teste de integracao entre WebRTC e Firebase. Funcionou, virou projeto proprio, mas esta em fase de ser substituido por uma versao bem mais robusta que ele ainda nao publicou.",
       "entity": "proj_directsend"
     },
     {
@@ -791,6 +807,136 @@
       ],
       "answer": "Hoje o canal está **parado**. A vida mudou de rumo e o foco virou TI.\n\nAs músicas foram distribuídas via **DistroKid** pras plataformas. Tudo organizado. O domínio próprio .com e .br foi encerrado.\n\nSobrou o **@lelecriando** no YouTube e algumas imagens no Pinterest. O projeto existe, é público, e o Marcos fala dele com carinho: foi onde ele aprendeu a cabeça dele funcionando com IA.",
       "facet": "lelecriando"
+    },
+    {
+      "id": "pr61",
+      "layer": 2,
+      "parent": "pr03",
+      "label": "o bobbuild",
+      "question": "O que é o bobbuild?",
+      "variants": [
+        "o que e o bobbuild",
+        "fala do bobbuild",
+        "teu motor pessoal",
+        "motor do bobbuild",
+        "motor pessoal",
+        "status do bobbuild",
+        "bobbuild esta ativo",
+        "o bobbuild funciona",
+        "bobbuild esta pronto"
+      ],
+      "answer": "O **bobbuild** e o motor pessoal de orquestracao do Marcos. E o ambiente principal onde ele desenvolve tudo.\n\nRoda localmente, tem comandos proprios de filesystem, execucao, integracao com Git e Vercel, e serve como camada unica pra orquestrar as IAs que ele usa.\n\nFoi construido tool por tool durante os projetos. Cada nova necessidade virou uma ferramenta nova dentro dele. Hoje ele considera o bobbuild a base do workflow dele, e nele ficam skills proprias que ele adiciona com frequencia.",
+      "facet": "bobbuild"
+    },
+    {
+      "id": "pr62",
+      "layer": 2,
+      "parent": "pr03",
+      "label": "os mescladores de pastas",
+      "question": "O que são os mescladores de pastas?",
+      "variants": [
+        "mescladores de pastas",
+        "ferramenta de mesclar pastas",
+        "o que mescla pastas"
+      ],
+      "answer": "Os **mescladores de pastas** sao ferramentas internas que o Marcos construiu para consolidar arquivos espalhados em um unico lugar.\n\nNasceram da necessidade real de juntar projetos fragmentados sem perder estrutura nem sobrescrever arquivos. Sao ferramentas de bastidor, usadas no dia a dia de desenvolvimento.",
+      "facet": "ferramentas"
+    },
+    {
+      "id": "pr63",
+      "layer": 3,
+      "parent": "pr61",
+      "label": "as skills do bobbuild",
+      "question": "Que skills o bobbuild tem?",
+      "variants": [
+        "skills do bobbuild",
+        "habilidades do bobbuild",
+        "o que o bobbuild sabe fazer"
+      ],
+      "answer": "O bobbuild recebe **skills proprias** com frequencia. Cada skill e uma capacidade nova que o Marcos anexa ao motor conforme a necessidade aparece.\n\nNao e um conjunto fixo: o motor cresce conforme o trabalho exige. Isso mantem ele sempre alinhado ao que o Marcos esta produzindo de fato, nao a um menu pre-configurado.",
+      "facet": "bobbuild"
+    },
+    {
+      "id": "pr64",
+      "layer": 2,
+      "parent": "pr03",
+      "label": "o Marketbobby",
+      "question": "O que é o Marketbobby?",
+      "variants": [
+        "o marketbobby",
+        "fala do marketbobby",
+        "lista de mercado com ia",
+        "market bobby",
+        "status do marketbobby",
+        "marketbobby esta ativo",
+        "o marketbobby funciona",
+        "marketbobby esta pronto"
+      ],
+      "answer": "O **Marketbobby** e uma ferramenta que transforma foto de prateleira ou placa de preco em lista de mercado automatica usando IA e OCR.\n\nTem filtros, organizacao e categorizacao de compras. Esta em refino, no GitHub do Marcos.\n\nE uma das ferramentas publicas dele, junto com o DirectSend e o DevOrador.",
+      "facet": "ferramentas"
+    },
+    {
+      "id": "pr65",
+      "layer": 3,
+      "parent": "pr18",
+      "label": "status do DirectSend",
+      "question": "Qual o status atual do DirectSend?",
+      "variants": [
+        "status do directsend",
+        "directsend esta ativo",
+        "directsend foi abandonado",
+        "o directsend ainda existe",
+        "directsend funciona hoje"
+      ],
+      "answer": "O DirectSend **esta em fase de substituicao**. Ele funciona, mas o Marcos esta construindo uma versao bem mais robusta que ainda nao foi publicada.\n\nO conceito continua: transferencia ponto a ponto por QR Code, sem servidor intermediario. A nova versao resolve limitacoes da primeira, principalmente em arquivos grandes e reconexao.\n\nO repositorio antigo segue no GitHub, mas o foco dele esta na nova versao.",
+      "facet": "status"
+    },
+    {
+      "id": "pr66",
+      "layer": 3,
+      "parent": "pr64",
+      "label": "status do Marketbobby",
+      "question": "Qual o status atual do Marketbobby?",
+      "variants": [
+        "status do marketbobby",
+        "marketbobby esta ativo",
+        "o marketbobby esta pronto",
+        "marketbobby funciona hoje"
+      ],
+      "answer": "O Marketbobby esta **em refino**, no GitHub do Marcos.\n\nA logica principal funciona: foto de prateleira ou placa de preco vira lista automatica com IA e OCR. Filtros e categorizacao tambem estao implementados.\n\nO que esta em ajuste e o refinamento da interface e a estabilidade em fotos muito escuras ou com muita informacao. E um dos projetos que ele pretende retomar.",
+      "facet": "status"
+    },
+    {
+      "id": "pr67",
+      "layer": 3,
+      "parent": "pr61",
+      "label": "status do bobbuild",
+      "question": "Qual o status atual do bobbuild?",
+      "variants": [
+        "status do bobbuild",
+        "bobbuild esta ativo",
+        "o bobbuild funciona",
+        "bobbuild esta pronto",
+        "bobbuild em uso"
+      ],
+      "answer": "O bobbuild esta **em uso diario**. Nao e projeto em refino, e ferramenta ativa.\n\nO Marcos usa ele como ambiente principal de desenvolvimento. Cada nova necessidade vira uma skill nova que ele anexa ao motor. Por isso nao tem \"versao final\": cresce conforme o trabalho exige.",
+      "facet": "status"
+    },
+    {
+      "id": "pr68",
+      "layer": 3,
+      "parent": "pr03",
+      "label": "status das ferramentas",
+      "question": "Quais ferramentas estao ativas hoje?",
+      "variants": [
+        "status das ferramentas",
+        "todas as ferramentas estao ativas",
+        "quais ferramentas funcionam",
+        "ferramentas publicadas",
+        "status geral das ferramentas"
+      ],
+      "answer": "Resumo do status hoje:\n\n**DevOrador**: funcional, em uso diario.\n\n**bobbuild**: ativo, motor principal de desenvolvimento.\n\n**Marketbobby**: em refino, no GitHub.\n\n**DirectSend**: em fase de substituicao por versao mais robusta.\n\n**Mescladores de pastas**: em uso interno.\n\nE o **App Franzinha** (sistema de loja) e o **LAR** (runtime de orquestracao) seguem reservados, demonstraveis em entrevista.",
+      "facet": "status"
     }
   ]
 }
