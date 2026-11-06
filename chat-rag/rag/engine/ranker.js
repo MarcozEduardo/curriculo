@@ -1126,7 +1126,7 @@ if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet &
     const revisit = this.dialog.wasAsked(node.id);
     this.dialog.markAsked(node.id);
 
-    let body = node.answer;
+ let body = (node.variants_answer && node.variants_answer.length) ? this.pick(node.variants_answer, "va:" + node.id) : node.answer;
     if (revisit) {
       const prefixes = this.responses.dialog_followups?.revisit || this.dialog.templates.revisit || [""];
       body = this.pick(prefixes, "revisit") + body;

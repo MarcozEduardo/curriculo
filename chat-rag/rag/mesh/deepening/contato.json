@@ -11,9 +11,51 @@
       "question": "Quais são os canais de contato dele?",
       "variants": [
         "como falo com ele",
-        "contatos"
+        "contatos",
+        "me manda o contato",
+        "passa o contato",
+        "envia o contato",
+        "quero o contato",
+        "canais de contato",
+        "formas de contato",
+        "meios de contato",
+        "como contatar",
+        "como entrar em contato",
+        "me passa os contatos",
+        "me manda os contatos",
+        "dados de contato",
+        "informacoes de contato",
+        "meios de comunicacao",
+        "meios de comunicação",
+        "preciso dos meios de comunicacao",
+        "preciso dos meios de comunicação",
+        "quais seriam os contatos",
+        "quais seriam os contatos disponiveis",
+        "quais seriam os contatos disponíveis",
+        "me permita solicitar o contato",
+        "solicitar o contato",
+        "quais os meios pra falar",
+        "quais os meios pra falar com ele",
+        "como faco pra falar com ele",
+        "como faço pra falar com ele",
+        "manda ai",
+        "manda aí",
+        "canal de comunicacao",
+        "canais de comunicacao",
+        "canais de comunicação",
+        "canal de comunicação",
+        "seria possivel me enviar o contato",
+        "seria possível me enviar o contato",
+        "me enviar o contato",
+        "me envie o contato",
+        "me enviar os contatos",
+        "me envie os contatos"
       ],
-      "answer": "WhatsApp e telefone (61) 98222-7804, e-mail marcos.eduardo@myyahoo.com, LinkedIn linkedin.com/in/sir-marcos-eduardo e GitHub github.com/MarcozEduardo. Ele está em Brazlândia, Distrito Federal."
+      "answer": "Contatos diretos do Marcão:\n\n📱 WhatsApp: (61) 98222-7804\n✉️ E-mail: marcos.eduardo@myyahoo.com\n👔 LinkedIn: linkedin.com/in/sir-marcos-eduardo\n💻 GitHub: github.com/MarcozEduardo\n📍 Localização: Brazlândia, DF",
+      "variants_answer": [
+        "Olha os canais do Marcão:\n\n📱 WhatsApp: (61) 98222-7804\n✉️ E-mail: marcos.eduardo@myyahoo.com\n👔 LinkedIn: linkedin.com/in/sir-marcos-eduardo\n💻 GitHub: github.com/MarcozEduardo",
+        "Pacote completo de contato:\n\n• WhatsApp: (61) 98222-7804\n• E-mail: marcos.eduardo@myyahoo.com\n• LinkedIn: linkedin.com/in/sir-marcos-eduardo\n• GitHub: github.com/MarcozEduardo\n• Localização: Brazlândia, DF"
+      ]
     },
     {
       "id": "ct02",
@@ -23,9 +65,65 @@
       "question": "Qual é o WhatsApp dele?",
       "variants": [
         "número de telefone",
-        "celular"
+        "celular",
+        "me manda o zap",
+        "passa o zap",
+        "envia o zap",
+        "quero o zap",
+        "zapzap",
+        "zap zap",
+        "wpp",
+        "whats",
+        "whats dele",
+        "whatsapp dele",
+        "contatinho",
+        "telefone dele",
+        "celular dele",
+        "me passa o whats",
+        "me manda o whats",
+        "passa o whatsapp",
+        "me passa o whatsapp",
+        "qual o zap",
+        "qual o whats",
+        "qual o whatsapp",
+        "numero dele",
+        "me passa o numero",
+        "me manda o numero",
+        "fone dele",
+        "telefone celular",
+        "o zappro dele",
+        "zappro",
+        "zap apro",
+        "gentileza me informar o whatsapp",
+        "gentileza me informar o zap",
+        "seria possivel obter o whatsapp",
+        "seria possível obter o whatsapp",
+        "seria possivel obter o whatsapp dele",
+        "seria possível obter o whatsapp dele",
+        "gentileza compartilhar o whatsapp",
+        "gentileza compartilhar o zap",
+        "poderia compartilhar o whatsapp",
+        "o celular dele",
+        "numero de celular",
+        "onde acho o zap",
+        "onde acho o zap dele",
+        "onde encontro o zap",
+        "onde encontro o zap dele",
+        "onde esta o zap",
+        "onde está o zap",
+        "onde está o zap dele",
+        "solicito o numero",
+        "solicito o numero de contato",
+        "solicito o número",
+        "solicito o número de contato",
+        "qual o numero de contato",
+        "qual o número de contato"
       ],
-      "answer": "(61) 98222-7804. É o canal mais rápido para falar com ele."
+      "answer": "📱 WhatsApp do Marcão: **(61) 98222-7804**\n\nÉ o canal mais rápido pra falar com ele.",
+      "variants_answer": [
+        "O zap do Marcão é: **(61) 98222-7804**\n\nResponde rapidinho por lá.",
+        "Toma o WhatsApp dele: **(61) 98222-7804**\n\nÉ o canal onde ele responde mais rápido."
+      ]
     },
     {
       "id": "ct03",
@@ -35,9 +133,39 @@
       "question": "Qual é o e-mail dele?",
       "variants": [
         "endereço de email",
-        "mandar email"
+        "mandar email",
+        "me manda o email",
+        "passa o email",
+        "envia o email",
+        "quero o email",
+        "e-mail",
+        "email dele",
+        "e-mail dele",
+        "correio eletronico",
+        "endereco de email",
+        "endereco eletronico",
+        "me passa o e-mail",
+        "qual o email",
+        "qual o e-mail",
+        "cadê o email",
+        "cadê o e-mail",
+        "por gentileza o email",
+        "por gentileza, o email",
+        "por gentileza, o e-mail",
+        "por obsequio o email",
+        "por obsequio, o email",
+        "por obséquio, o e-mail",
+        "por obséquio, o email",
+        "gentileza o email",
+        "gentileza o e-mail",
+        "poderia informar o email",
+        "poderia informar o e-mail"
       ],
-      "answer": "marcos.eduardo@myyahoo.com."
+      "answer": "✉️ E-mail do Marcão: **marcos.eduardo@myyahoo.com**\n\nServe bem pra proposta formal e agendamento.",
+      "variants_answer": [
+        "O e-mail é esse aqui: **marcos.eduardo@myyahoo.com**\n\nBom pra formalidade e proposta.",
+        "Anota o e-mail: **marcos.eduardo@myyahoo.com**\n\nChato de acompanhar, mas é o canal certo pra coisa formal."
+      ]
     },
     {
       "id": "ct04",
@@ -47,9 +175,38 @@
       "question": "Ele tem LinkedIn?",
       "variants": [
         "perfil no linkedin",
-        "link do linkedin"
+        "link do linkedin",
+        "me manda o linkedin",
+        "passa o linkedin",
+        "envia o linkedin",
+        "quero o linkedin",
+        "linkedin dele",
+        "linked in",
+        "linkedinho",
+        "qual o linkedin",
+        "cadê o linkedin",
+        "me passa o linkedin",
+        "me envia o linkedin",
+        "me fornecer o linkedin",
+        "poderia me passar o linkedin",
+        "gostaria do linkedin",
+        "o linkedin",
+        "seu linkedin",
+        "onde acho o linkedin",
+        "onde acho o linkedin dele",
+        "queria o linkedin",
+        "queria o linkedin dele",
+        "poderia compartilhar o perfil profissional",
+        "poderia compartilhar o linkedin",
+        "compartilhar o linkedin",
+        "me informar o linkedin",
+        "informar o linkedin"
       ],
-      "answer": "Sim: linkedin.com/in/sir-marcos-eduardo."
+      "answer": "👔 LinkedIn do Marcão:\n\n**linkedin.com/in/sir-marcos-eduardo**\n\nO LinkedIn é resumido. Aqui no currículo tem o contexto inteiro.",
+      "variants_answer": [
+        "O LinkedIn dele:\n\n**linkedin.com/in/sir-marcos-eduardo**\n\nSe quiser o panorama completo, o currículo interativo mostra bem mais.",
+        "LinkedIn: **linkedin.com/in/sir-marcos-eduardo**\n\nMas atenção: o currículo aqui é mais completo que o LinkedIn."
+      ]
     },
     {
       "id": "ct05",
@@ -59,9 +216,53 @@
       "question": "Qual é o GitHub dele?",
       "variants": [
         "repositórios",
-        "perfil no github"
+        "perfil no github",
+        "me manda o github",
+        "passa o github",
+        "envia o github",
+        "quero o github",
+        "github dele",
+        "git dele",
+        "repo",
+        "repositorio",
+        "repositorio dele",
+        "me manda o repo",
+        "me passa o repo",
+        "repositorio publico",
+        "repositorios",
+        "qual o github",
+        "cadê o github",
+        "me passa o github",
+        "me envia o github",
+        "o git",
+        "o github",
+        "seus repositorios",
+        "onde encontro o github",
+        "onde encontro o github dele",
+        "o git dele",
+        "o repositorio",
+        "o repositório",
+        "o repositorio dele",
+        "o repositório dele",
+        "gostaria de obter o github",
+        "gostaria de solicitar o github",
+        "obter o github",
+        "solicitar o github",
+        "me da o github dele",
+        "me dá o github dele",
+        "o github dele qual e",
+        "o github dele qual é",
+        "qual e o github",
+        "qual é o github",
+        "onde esta o github",
+        "onde esta o github dele",
+        "onde está o github dele"
       ],
-      "answer": "github.com/MarcozEduardo, onde ficam DirectSend e Marketbobby, entre outros repositórios."
+      "answer": "💻 GitHub do Marcão:\n\n**github.com/MarcozEduardo**\n\nLá tem DirectSend e Marketbobby, entre outros repositórios.",
+      "variants_answer": [
+        "O GitHub dele: **github.com/MarcozEduardo**\n\nRepositórios públicos do Marcão ficam todos lá.",
+        "GitHub: **github.com/MarcozEduardo**\n\nDireto ao ponto. DirectSend, Marketbobby e mais."
+      ]
     },
     {
       "id": "ct06",
@@ -73,7 +274,11 @@
         "cidade",
         "onde mora"
       ],
-      "answer": "Brazlândia, região administrativa do Distrito Federal. Atua remoto, híbrido ou presencial no DF."
+      "answer": "📍 O Marcão mora em **Brazlândia**, região administrativa do Distrito Federal.\n\nAtua remoto, híbrido ou presencial no DF.",
+      "variants_answer": [
+        "Brazlândia, DF. Região administrativa do Distrito Federal.\n\nRemoto, híbrido ou presencial no DF, ele topa.",
+        "Ele mora em **Brazlândia, DF**.\n\nPrefere remoto, mas topa híbrido e presencial no Distrito Federal."
+      ]
     },
     {
       "id": "ct07",
@@ -85,7 +290,11 @@
         "quando posso ligar",
         "horário de atendimento"
       ],
-      "answer": "A base não define um horário. Como a disponibilidade dele é imediata e a agenda é flexível, uma mensagem no WhatsApp a qualquer hora comercial costuma resolver."
+      "answer": "A base não define horário fixo.\n\nComo a disponibilidade dele é imediata e a agenda é flexível, manda mensagem no WhatsApp em qualquer horário comercial. Costuma resolver.",
+      "variants_answer": [
+        "Não tem horário fixo na base.\n\nMas a agenda é flexível e a disponibilidade é imediata. Manda no WhatsApp em horário comercial que resolve.",
+        "A base não informa horário específico.\n\nO caminho é mandar mensagem no WhatsApp em horário comercial. Ele responde rápido."
+      ]
     },
     {
       "id": "ct08",
@@ -105,8 +314,12 @@
         "marcar videochamada",
         "posso marcar uma conversa"
       ],
-      "answer": "Pelo WhatsApp (61) 98222-7804 ou pelo e-mail marcos.eduardo@myyahoo.com, informando vaga, empresa e formato. A disponibilidade é imediata.",
-      "facet": "entrevista"
+      "answer": "Pra agendar entrevista:\n\n📱 WhatsApp: **(61) 98222-7804**\n✉️ E-mail: **marcos.eduardo@myyahoo.com**\n\nManda vaga, empresa e formato. A disponibilidade é imediata.",
+      "facet": "entrevista",
+      "variants_answer": [
+        "Agendar é fácil:\n\n📱 WhatsApp: (61) 98222-7804\n✉️ E-mail: marcos.eduardo@myyahoo.com\n\nInforme vaga, empresa e formato.",
+        "Pra marcar entrevista:\n\nWhatsApp (61) 98222-7804\nE-mail marcos.eduardo@myyahoo.com\n\nDisponibilidade imediata."
+      ]
     },
     {
       "id": "ct09",
@@ -116,10 +329,30 @@
       "question": "Tem currículo em PDF?",
       "variants": [
         "versão em pdf",
-        "baixar currículo"
+        "baixar currículo",
+        "cv",
+        "cv dele",
+        "o cv",
+        "o cv dele",
+        "onde ta o cv",
+        "onde ta o cv dele",
+        "onde tá o cv dele",
+        "curriculo em pdf",
+        "curriculo pdf",
+        "curriculo em anexo",
+        "quero o cv",
+        "quero o cv dele",
+        "manda o cv",
+        "manda o cv dele",
+        "me manda o cv",
+        "me manda o cv dele"
       ],
-      "answer": "Sim. Este currículo interativo tem exportação em PDF A4, e o arquivo também pode ser solicitado por e-mail.",
-      "facet": "curriculo_arquivo"
+      "answer": "Tem sim.\n\n📄 O currículo interativo tem exportação em **PDF A4**, direto pela própria página.\n\nSe preferir o arquivo pronto, dá pra pedir por e-mail.",
+      "facet": "curriculo_arquivo",
+      "variants_answer": [
+        "O PDF tá disponível.\n\nO botão de exportação em PDF A4 fica na própria página. Ou peça o arquivo por e-mail.",
+        "Existe versão em PDF.\n\nExportação A4 direta do currículo interativo. Se quiser o arquivo pronto, pede por e-mail."
+      ]
     },
     {
       "id": "ct10",
@@ -131,7 +364,11 @@
         "links dos projetos",
         "deploys"
       ],
-      "answer": "game-a-fuga-de-bobby-final.vercel.app, game-a-viagem-de-bobby.vercel.app, dama-orbital.vercel.app, programa-de-extens-o-institucional.vercel.app e github.com/MarcozEduardo."
+      "answer": "Links do portfólio do Marcão:\n\n🎮 game-a-fuga-de-bobby-final.vercel.app\n🚀 game-a-viagem-de-bobby.vercel.app\n♟️ dama-orbital.vercel.app\n📊 programa-de-extens-o-institucional.vercel.app\n💻 github.com/MarcozEduardo",
+      "variants_answer": [
+        "Deploys do portfólio:\n\n• Fuga de Bobby: game-a-fuga-de-bobby-final.vercel.app\n• Viagem de Bobby: game-a-viagem-de-bobby.vercel.app\n• Dama Orbital: dama-orbital.vercel.app\n• Gerador ABNT: programa-de-extens-o-institucional.vercel.app\n• GitHub: github.com/MarcozEduardo",
+        "Todos os links:\n\nJogos: game-a-fuga-de-bobby-final.vercel.app / game-a-viagem-de-bobby.vercel.app / dama-orbital.vercel.app\nProjeto acadêmico: programa-de-extens-o-institucional.vercel.app\nRepositórios: github.com/MarcozEduardo"
+      ]
     },
     {
       "id": "ct11",
@@ -141,9 +378,23 @@
       "question": "Posso ligar para ele?",
       "variants": [
         "aceita ligação",
-        "telefone funciona para ligar"
+        "telefone funciona para ligar",
+        "me passa o numero",
+        "telefone dele",
+        "celular",
+        "celular dele",
+        "fone",
+        "me manda o numero",
+        "numero de telefone",
+        "numero de contato",
+        "me passa o telefone",
+        "me manda o telefone"
       ],
-      "answer": "Sim, o número (61) 98222-7804 é telefone e WhatsApp."
+      "answer": "Pode ligar sim.\n\n📱 **(61) 98222-7804** é telefone e WhatsApp ao mesmo tempo.",
+      "variants_answer": [
+        "Sim, dá pra ligar.\n\nO (61) 98222-7804 funciona como telefone e WhatsApp.",
+        "Pode ligar no (61) 98222-7804.\n\nÉ o mesmo número do WhatsApp."
+      ]
     },
     {
       "id": "ct12",
@@ -155,7 +406,11 @@
         "prazo de resposta",
         "demora para responder"
       ],
-      "answer": "A base não informa prazo de resposta. O WhatsApp é indicado como o canal mais rápido."
+      "answer": "A base não informa prazo exato.\n\nMas o **WhatsApp** é apontado como o canal mais rápido.\n\n📱 (61) 98222-7804",
+      "variants_answer": [
+        "Não tem prazo fixo na base.\n\nO WhatsApp é indicado como canal de resposta mais rápida.",
+        "Sem prazo definido.\n\nMas quem quer resposta rápida, manda no WhatsApp: (61) 98222-7804."
+      ]
     },
     {
       "id": "ct13",
@@ -167,7 +422,11 @@
         "instagram",
         "redes profissionais"
       ],
-      "answer": "Os canais informados são WhatsApp, e-mail, LinkedIn e GitHub. Outras redes não constam na base."
+      "answer": "Os canais cadastrados são:\n\n📱 WhatsApp\n✉️ E-mail\n👔 LinkedIn\n💻 GitHub\n\nOutras redes não estão na base.",
+      "variants_answer": [
+        "Só esses quatro: WhatsApp, e-mail, LinkedIn e GitHub.\n\nInstagram, Twitter, Facebook e outros não constam na base.",
+        "Cadastrados: WhatsApp, e-mail, LinkedIn e GitHub.\n\nFora esses, não tem outra rede na base."
+      ]
     },
     {
       "id": "ct14",
@@ -179,7 +438,11 @@
         "mandar oferta",
         "enviar vaga"
       ],
-      "answer": "Por e-mail (marcos.eduardo@myyahoo.com) ou WhatsApp (61) 98222-7804. Remuneração e condições ele alinha diretamente nessa conversa."
+      "answer": "Pra enviar proposta:\n\n✉️ E-mail: **marcos.eduardo@myyahoo.com**\n📱 WhatsApp: **(61) 98222-7804**\n\nRemuneração e condições ele alinha direto nessa conversa.",
+      "variants_answer": [
+        "Proposta formal vai por e-mail: marcos.eduardo@myyahoo.com\n\nSe quiser agilidade, o WhatsApp é (61) 98222-7804.",
+        "Manda proposta no e-mail **marcos.eduardo@myyahoo.com** ou no WhatsApp **(61) 98222-7804**.\n\nEle responde com detalhes de condições direto."
+      ]
     },
     {
       "id": "ct15",
@@ -201,7 +464,10 @@
       "question": "Qual é o canal mais rápido?",
       "variants": [
         "melhor forma de contato",
-        "canal preferido"
+        "canal preferido",
+        "canal mais rapido",
+        "melhor contato",
+        "forma mais rapida"
       ],
       "answer": "O WhatsApp: (61) 98222-7804."
     },
