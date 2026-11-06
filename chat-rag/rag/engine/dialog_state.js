@@ -187,7 +187,49 @@ class DialogState {
     return best && best.score >= 0.82 ? best.node : null;
   }
 
-  /* ------------------------------ Ofertas ------------------------------ */
+  /**
+ * Coleta todos os nós com score >= threshold no mesmo layer. Usado pra desambiguação.
+ * Mesma lógica de matchQuestion, mas sem escolher o best.
+ */
+ matchQuestionAll(rawTokens, expandedTokens, { orbit = null, entity = null, text = "", threshold = 0.82 } = {}) {
+ const content = this.contentTokens(rawTokens);
+ if (content.length < 2) return [];
+ const expanded = new Set(expandedTokens);
+ const candidates = [];
+
+ for (const node of this.nodes.values()) {
+ if (node.entity && entity && node.entity !== entity) continue;
+ let nodeBestScore = 0;
+ for (const variant of node._raw) {
+ const nodeTokens = this.contentTokens(variant);
+ if (nodeTokens.length < 2) continue;
+ let hitNode = 0;
+ const matched = new Set();
+ for (const t of nodeTokens) {
+ const viaSynonym = expanded.has(t) && !DialogState.SIGNAL.has(t);
+ if (viaSynonym || rawTokens.includes(t) || rawTokens.some((u) => window.FuzzyMatcher.isTypo(u, t))) { hitNode += 1; matched.add(t); }
+ }
+ let hitUser = 0;
+ for (const u of content) {
+ if (node._exp.has(u) || nodeTokens.some((t) => window.FuzzyMatcher.isTypo(u, t))) hitUser += 1;
+ }
+ const coverNode = hitNode / nodeTokens.length;
+ const coverUser = hitUser / content.length;
+ const strong = (coverNode >= 0.7 && coverUser >= 0.65) || (coverNode >= 1 && coverUser >= 0.5);
+ if (!strong) continue;
+ if (![...matched].some((t) => (this.tokenDf.get(t) || 0) <= 8)) continue;
+ const rawHits = nodeTokens.filter((t) => rawTokens.includes(t)).length;
+ let score = coverNode * 0.55 + coverUser * 0.45 + 0.15 * (rawHits / nodeTokens.length);
+ if (orbit && node.orbit === orbit) score += 0.05;
+ if (entity && node.entity === entity) score += 0.1;
+ if (score > nodeBestScore) nodeBestScore = score;
+ }
+ if (nodeBestScore >= threshold) candidates.push({ node, score: nodeBestScore });
+ }
+ return candidates.sort((a, b) => b.score - a.score);
+ }
+
+ /* ------------------------------ Ofertas ------------------------------ */
 
   facetLabel(facet) {
     const labels = this.templates.facet_labels || {};

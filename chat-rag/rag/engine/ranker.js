@@ -589,11 +589,48 @@ class RagRanker {
     if (!topicChoice && !correction.isCorrection) {
       const earlySuperlative = this.facets.detectSuperlative(workingNorm, { activeOrbit: this.memory.activeOrbit });
       const earlyFacet = this.facets.detect(workingNorm, rawTokens);
-      const node = this.dialog.matchQuestion(rawTokens, tokens, {
-        orbit: this.memory.activeOrbit,
-        entity: entity?.id || null,
-        text: working,
-      });
+ let node = null;
+ let disambigList = [];
+ try {
+ const _allMatches = this.dialog.matchQuestionAll(rawTokens, tokens, {
+ orbit: this.memory.activeOrbit,
+ entity: entity && entity.id || null,
+ text: working,
+ threshold: 0.82
+ });
+ const _porLayer = {};
+ for (const _m of _allMatches) {
+ const _layer = _m.node.layer || 1;
+ if (!_porLayer[_layer]) _porLayer[_layer] = [];
+ _porLayer[_layer].push(_m);
+ }
+ let _escolhido = null;
+ for (const _layerKey of Object.keys(_porLayer)) {
+ const _grupo = _porLayer[_layerKey];
+ if (_grupo.length >= 2 && (_grupo[0].score - _grupo[1].score) < 0.08) {
+ _escolhido = _grupo;
+ break;
+ }
+ }
+ if (_escolhido) {
+ disambigList = _escolhido.slice(0, 5).map(function(_m){ return _m.node; });
+ } else {
+ node = this.dialog.matchQuestion(rawTokens, tokens, {
+ orbit: this.memory.activeOrbit,
+ entity: entity && entity.id || null,
+ text: working
+ });
+ }
+ } catch (_e) {
+ node = this.dialog.matchQuestion(rawTokens, tokens, {
+ orbit: this.memory.activeOrbit,
+ entity: entity && entity.id || null,
+ text: working
+ });
+ }
+ if (disambigList.length > 0) {
+ return this.disambiguate(disambigList, raw, working);
+ }
       const exactNode = this.dialog.lastExact;
       // Superlativo ("mais demorado") e facetas de método geral ("copiloto")
       // têm tratamento próprio; o nó só responde se cobrir a mesma faceta.
@@ -998,6 +1035,23 @@ if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet &
     this.memory.record(raw, { orbit: null, facet: null, intentId: "sem_termo", summary: "Termo fora da base" });
     return this.respondWithOptions(raw, text, ["sk04", "sk07", "tr01"], { facet: "sem_dado_termo", orbit: "desconhecido", source: "Fora da Base de Conhecimento" });
   }
+
+ /* ------------------ Desambiguacao de multiplos pertences ------------------ */
+ disambiguate(nodes, raw, working) {
+ const labels = nodes.map(function(n){ return n.label || n.question; });
+ const orbitId = nodes[0].orbit;
+ const orbitObj = this.router.getOrbit(orbitId);
+ const orbitLabel = (orbitObj && orbitObj.label) || orbitId;
+ const lista = labels.map(function(l, i){ return (i + 1) + ". **" + l + "**"; }).join(String.fromCharCode(10));
+ const NL2 = String.fromCharCode(10) + String.fromCharCode(10);
+ const pergunta = "No caso tem **" + nodes.length + "** itens mencionados em **" + orbitLabel + "**:" + NL2 + lista + NL2 + "**Qual voce deseja?** (Pode dizer o **numero**, o **nome**, **primeiro**, **segundo**, ou **deixa**)";
+ const options = nodes.map(function(n){
+ return { kind: "node", id: n.id, label: n.label || n.question, orbit: n.orbit, aliases: n._raw && n._raw[0] || [] };
+ });
+ this.dialog.setPending({ options: options, text: "Qual voce quer?" });
+ this.memory.record(raw, { orbit: orbitId, facet: "disambig", intentId: "disambig:" + labels.join("|"), summary: "Desambiguacao" });
+ return this.result(pergunta, { source: "Desambiguacao", orbit: orbitId, facet: "disambig", confidence: 4 });
+ }
 
   /* ----------------------- Caminho garantido e reações ----------------------- */
 
