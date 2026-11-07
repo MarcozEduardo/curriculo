@@ -68,3 +68,29 @@ Nenhum item deste backlog pode ser resolvido por regex simples. Se a solução f
 **Caminho:** aplicar boost 1.3x no score de nos da mesma orbita que `memory.activeOrbit`, similar ao `orbitBoost` em `retrieveFallback` (linha 1008).
 
 **Status:** aguardando analise.
+
+---
+
+## FIX SEMANTICO 06 — Zap/whatsapp em contexto de outra orbita
+
+**Sintoma (2026-11-07):** depois de entrar em `skills` com "Ele sabe Python?", perguntar "qual e o zap dele?" ou "me passa o whatsapp?" cai em `skills/default` em vez de `contato`.
+
+**Causa:** CTX-PRE intercepta antes do match global achar contato; se remover CTX-PRE, o zap quebra por contentTokens<2. Trade-off nao resolvido.
+
+**Status:** backlog. Precisa de desenho: contexto sticky multi-orbita ou pre-check de intent de contato antes de qualquer fallback.
+
+## FIX SEMANTICO 07 — Testes automatizados sem sujeito
+
+**Sintoma:** "Ele faz testes automatizados?" cai em `duvida_de_que` porque `testes`+`automatizados` sem sujeito claro aciona a guarda de pergunta curta (linha 669).
+
+**Caminho:** detectar "testa/teste/qa/audita/debuga" como sujeito implicito do Marcos antes da guarda.
+
+**Status:** backlog. sk21 tem 37 variants prontas aguardando.
+
+## FIX SEMANTICO 08 — Go como linguagem
+
+**Sintoma:** "Ele sabe Go?" cai em fallback contextual porque "go" e stopword/ambiguo no tokenizer.
+
+**Caminho:** detectar go como linguagem so em padrao "sabe|conhece|programa em" + go.
+
+**Status:** backlog.

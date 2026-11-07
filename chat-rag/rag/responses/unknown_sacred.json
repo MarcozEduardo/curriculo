@@ -34,24 +34,199 @@
   "contextual": {
     "descricao": "Fallback contextual: quando o matcher falha dentro de uma orbita ativa, responde com o assunto e o zap do Marcao, em vez do generico.",
     "por_orbita": {
-      "experiencia": "Sobre **experiencia profissional** nesse ponto especifico, o que eu tenho ta limitado. Pode tentar reformular a pergunta, ou falar direto com o Marcos: **(61) 98222-7804**.",
-      "sobre_marcos": "Sobre **o perfil do Marcos** nesse detalhe, minha base nao cobre. Tenta reformular por outro angulo, ou fala direto com ele: **(61) 98222-7804**.",
-      "projetos": "Sobre **esse projeto** especificamente, nao tenho o detalhe aqui. Posso tentar por outro angulo se voce reformular, ou o Marcos responde direto: **(61) 98222-7804**.",
-      "skills": "Sobre **essa habilidade** especifica, o que tenho ta limitado. Reformula pra eu tentar de outro jeito, ou fala com o Marcos: **(61) 98222-7804**.",
-      "formacao": "Sobre **formacao** nesse ponto, minha base nao cobre. Tenta reformular, ou o Marcos responde: **(61) 98222-7804**.",
-      "contato": "Sobre **contato** nesse detalhe, nao tenho registrado. Mas o caminho direto e o proprio Marcos: **(61) 98222-7804** ou **marcos.eduardo@myyahoo.com**.",
-      "recrutamento": "Sobre **recrutamento** nesse ponto, nao tenho o dado. Vale falar direto com o Marcos: **(61) 98222-7804**.",
-      "historia_pessoal": "Sobre **essa historia pessoal**, o que tenho ta limitado. Reformula por outro angulo, ou fala com o Marcos: **(61) 98222-7804**.",
-      "neurodivergencia": "Sobre **esse ponto da neurodivergencia**, o que tenho cobre o essencial, mas esse detalhe especifico nao. O Marcos responde direto: **(61) 98222-7804**.",
-      "transparencia": "Sobre **transparencia** nesse ponto, a base nao cobre. O caminho direto e o Marcos: **(61) 98222-7804**.",
-      "meta_ia": "Sobre **o Bobby / a IA** nesse detalhe, nao tenho o dado. Tenta reformular, ou o Marcos responde: **(61) 98222-7804**.",
-      "smalltalk": "Sobre **isso** nao tenho o dado. Se quiser, posso falar de projetos, experiencia, skills ou contato. Ou fala direto com o Marcos: **(61) 98222-7804**.",
-      "curiosidades": "Sobre **essa curiosidade**, o que tenho ta limitado. O Marcos responde direto: **(61) 98222-7804**.",
-      "sobre_curriculo": "Sobre **o curriculo** nesse ponto, nao tenho o detalhe. Reformula por outro angulo, ou fala com o Marcos: **(61) 98222-7804**.",
-      "identidade_visitante": "Sobre **isso** nao tenho o dado. O Marcos responde direto: **(61) 98222-7804**.",
-      "pcd": "Sobre **PCD** nesse ponto, o que tenho ta limitado. O Marcos responde direto: **(61) 98222-7804**.",
-      "glossario": "Sobre **esse termo** nao tenho registro. Posso tentar por outro angulo se voce reformular, ou fala com o Marcos: **(61) 98222-7804**."
+      "experiencia": "Sobre **experiência profissional** nesse ponto específico, o que eu tenho tá limitado. Pode tentar reformular a pergunta, ou falar direto com o Marcos: **(61) 98222-7804**.",
+      "sobre_marcos": "Sobre **o perfil do Marcos** nesse detalhe, minha base não cobre. Tenta reformular por outro ângulo, ou fala direto com ele: **(61) 98222-7804**.",
+      "projetos": "Sobre **esse projeto** especificamente, não tenho o detalhe aqui. Posso tentar por outro ângulo se você reformular, ou o Marcos responde direto: **(61) 98222-7804**.",
+      "skills": "Sobre **essa habilidade** específica, o que eu tenho tá limitado. Reformula pra eu tentar de outro jeito, ou fala com o Marcos: **(61) 98222-7804**.",
+      "formacao": "Sobre **formação** nesse ponto, minha base não cobre. Tenta reformular, ou o Marcos responde: **(61) 98222-7804**.",
+      "contato": "Sobre **contato** nesse detalhe, não tenho registrado. Mas o caminho direto é o próprio Marcos: **(61) 98222-7804** ou **marcos.eduardo@myyahoo.com**.",
+      "recrutamento": "Sobre **recrutamento** nesse ponto, não tenho o dado. Vale falar direto com o Marcos: **(61) 98222-7804**.",
+      "historia_pessoal": "Sobre **essa história pessoal**, o que eu tenho tá limitado. Reformula por outro ângulo, ou fala com o Marcos: **(61) 98222-7804**.",
+      "neurodivergencia": "Sobre **esse ponto da neurodivergência**, o que eu tenho cobre o essencial, mas esse detalhe específico não. O Marcos responde direto: **(61) 98222-7804**.",
+      "transparencia": "Sobre **transparência** nesse ponto, a base não cobre. O caminho direto é o Marcos: **(61) 98222-7804**.",
+      "meta_ia": "Sobre **o Bobby / a IA** nesse detalhe, não tenho o dado. Tenta reformular, ou o Marcos responde: **(61) 98222-7804**.",
+      "smalltalk": "Sobre **isso** não tenho o dado. Se quiser, posso falar de projetos, experiência, skills ou contato. Ou fala direto com o Marcos: **(61) 98222-7804**.",
+      "curiosidades": "Sobre **essa curiosidade**, o que eu tenho tá limitado. O Marcos responde direto: **(61) 98222-7804**.",
+      "sobre_curriculo": "Sobre **o currículo** nesse ponto, não tenho o detalhe. Reformula por outro ângulo, ou fala com o Marcos: **(61) 98222-7804**.",
+      "identidade_visitante": "Sobre **isso** não tenho o dado. O Marcos responde direto: **(61) 98222-7804**.",
+      "pcd": "Sobre **PCD** nesse ponto, o que eu tenho tá limitado. O Marcos responde direto: **(61) 98222-7804**.",
+      "glossario": "Sobre **esse termo** não tenho registro. Posso tentar por outro ângulo se você reformular, ou fala com o Marcos: **(61) 98222-7804**."
     },
-    "generico": "O que eu tenho sobre **{assunto}** nesse ponto ta limitado. Pode tentar reformular a pergunta, ou falar direto com o Marcos: **(61) 98222-7804**."
+    "generico": "O que eu tenho sobre **{assunto}** nesse ponto tá limitado. Pode tentar reformular a pergunta, ou falar direto com o Marcos: **(61) 98222-7804**."
+  },
+  "fallback_linguagem": {
+    "descricao": "Fallback progressivo por linguagem ou habilidade especifica. Texto humanizado, sem travessao. Anti-repeticao via pick.",
+    "linguagens_detectaveis": {
+      "javascript": [
+        "javascript",
+        "js",
+        "ecmascript"
+      ],
+      "typescript": [
+        "typescript",
+        "ts"
+      ],
+      "python": [
+        "python"
+      ],
+      "sql": [
+        "sql",
+        "mysql",
+        "postgres",
+        "postgresql",
+        "sqlite"
+      ],
+      "java": [
+        "java"
+      ],
+      "rust": [
+        "rust"
+      ],
+      "golang": [
+        "golang",
+        "linguagem go",
+        "em go",
+        "sabe go",
+        "conhece go",
+        "programa em go"
+      ],
+      "php": [
+        "php"
+      ],
+      "ruby": [
+        "ruby"
+      ],
+      "csharp": [
+        "csharp",
+        "c#"
+      ],
+      "cpp": [
+        "cpp",
+        "c++"
+      ],
+      "kotlin": [
+        "kotlin"
+      ],
+      "swift": [
+        "swift"
+      ],
+      "react": [
+        "react",
+        "reactjs"
+      ],
+      "vue": [
+        "vue",
+        "vuejs"
+      ],
+      "angular": [
+        "angular"
+      ],
+      "node": [
+        "nodejs",
+        "node js",
+        "node.js"
+      ],
+      "html": [
+        "html",
+        "html5"
+      ],
+      "css": [
+        "css",
+        "css3"
+      ],
+      "bash": [
+        "bash",
+        "shell script"
+      ],
+      "powershell": [
+        "powershell"
+      ],
+      "docker": [
+        "docker"
+      ],
+      "kubernetes": [
+        "kubernetes",
+        "k8s"
+      ],
+      "redes": [
+        "redes",
+        "rede",
+        "tcp ip",
+        "cabeamento"
+      ],
+      "testes": [
+        "testes automatizados",
+        "teste automatizado",
+        "cypress",
+        "playwright",
+        "selenium",
+        "teste e2e",
+        "teste unitario"
+      ],
+      "qa": [
+        "qa",
+        "quality assurance",
+        "qualidade de software"
+      ],
+      "cloud": [
+        "cloud",
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "git": [
+        "git",
+        "github",
+        "gitlab"
+      ],
+      "linux": [
+        "linux",
+        "ubuntu",
+        "debian"
+      ],
+      "devops": [
+        "devops",
+        "ci cd",
+        "pipeline"
+      ],
+      "banco": [
+        "banco de dados",
+        "database",
+        "mysql",
+        "postgres",
+        "sqlite",
+        "mongo"
+      ],
+      "frontend": [
+        "frontend",
+        "front end"
+      ],
+      "backend": [
+        "backend",
+        "back end"
+      ],
+      "fullstack": [
+        "fullstack",
+        "full stack"
+      ]
+    },
+    "nivel_1": [
+      "Pois e. Sobre {lingua}: o Marcos ja estudou na raiz. Como ele e neurodivergente, o cerebro arquiva memorias que nao estao em uso, entao ele precisa emergir pra colocar em pratica. Ele e pratico, entende os fundamentos e a logica de programacao, mas nao tem sintaxe de tudo decorada. Se voce desafiar ele agora com um piloto em qualquer linguagem, ele entrega auditado, depurado, com commits pra voce acompanhar. E isso.",
+      "Olha, sobre {lingua}: ele ja estudou na raiz. Como e neurodivergente, o cerebro dele arquiva memorias que nao estao em uso, precisa emergir pra fixar. Na pratica: fundamentos e logica ele tem, sintaxe de cor ele nao tem. Desafia ele agora num piloto de qualquer linguagem e ele entrega auditado, depurado, com commit pra voce ver. Pode pedir.",
+      "Sobre {lingua}: ele estudou no modo raiz, mas como e neurodivergente o cerebro arquiva memorias que nao estao em uso. Pra fixar, precisa emergir. Ele e pratico: entende fundamentos, logica de programacao, mas nao tem sintaxe de tudo decorada. Manda um desafio agora e ele entrega um piloto auditado, depurado, com commits pra acompanhar. E isso.",
+      "Vou ser direto sobre {lingua}: ele estudou na raiz. Como e neurodivergente, o cerebro arquiva memorias que nao estao em uso, e pra fixar ele precisa emergir. Ele e pratico: fundamentos e logica ele tem, sintaxe de cor ele nao. Desafia ele agora num piloto em qualquer linguagem e ele entrega auditado, depurado, com commits pra voce ver. E isso."
+    ],
+    "nivel_2": [
+      "A situacao de qualquer outra linguagem que ele mencionou no curriculo se encaixa no que ja te expliquei. Como disse: pode pedir qualquer uma, ele vai atras do conceito, estuda, se aprofunda no hiperfoco e entrega. Sobre linguagem nao tem mais o que eu possa te falar.",
+      "Qualquer outra linguagem segue a mesma logica do que ja expliquei. Pode pedir qualquer uma, ele busca o conceito, estuda no hiperfoco e entrega. Sobre linguagem, e isso que tenho.",
+      "Toda linguagem que ele mencionou cai no mesmo padrao. Pode pedir qualquer uma, ele vai atras do conceito, estuda e entrega. Sobre linguagem nao tem mais nada a acrescentar.",
+      "Como ja disse: qualquer linguagem segue o mesmo principio. Pode pedir qualquer uma, ele busca o conceito, estuda no hiperfoco e entrega. Sobre linguagem nao tenho mais detalhe."
+    ],
+    "nivel_3": [
+      "Voce se interessou mesmo hein. Sobre {lingua}, eu ja fiquei limitado. A intencao aqui e explanar um pouco de cada coisa do curriculo, mas sou apenas um RAG vetorial, o Marcao prefere um semantico e esta fabricando um pra me substituir. Entao minha missao e quebrar galho, nao responder tudo. kk Tenta falar sobre outra coisa, ou fala direto com o Marcao pelo zap.",
+      "Voce gostou do assunto hein. Sobre {lingua} eu ja fiquei no limite. Sou um RAG vetorial e o Marcao esta construindo um semantico pra me substituir, porque a ideia e explanar cada coisa do curriculo. Minha missao e quebrar galho, nao responder tudo. kk Fala de outra coisa, ou vai direto no zap do Marcao.",
+      "Voce voltou no mesmo tema hein. Sobre {lingua} eu ja fiquei no limite mesmo. Sou um RAG vetorial e o Marcao prefere um semantico, esta fabricando um. Minha missao aqui e quebrar galho, nao responder tudo. kk Tenta outro assunto, ou fala com o Marcao direto pelo zap."
+    ],
+    "fallback_zap": "(61) 98222-7804"
   }
 }

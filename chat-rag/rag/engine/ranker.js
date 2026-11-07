@@ -429,7 +429,52 @@ class RagRanker {
     const earlyTokens = this.tokenizer.tokenize(raw, { expand: false });
 
     /* 2.e Dominio especifico (ANTES do exactMatch) */
-    if (this.dominios && this.dominios.length) {
+    // FIX CTX-PRE-LINGUAGEM: linguagem detectada + sem match em skills -> fallback progressivo
+if (/\b(programa|programam|programar|programando|codifica)\b/.test(norm) && /\b(qual|quais|que)\s+linguagem/.test(norm)) {
+  const _node = this.dialog.get("sk04");
+  if (_node) return this.answerNode(_node, raw);
+}
+    // FIX PRIO-SKILLS-LINGUA: se linguagem detectada e existe skill node casando, prioriza ele
+const _linguas = this.detectLinguagens(raw);
+if (_linguas.length > 0 && !this.memory.linguaFbCount) {
+  try {
+    const _mPrio = this.dialog.matchQuestionAll(earlyTokens, tokens, { orbit: "skills", entity: null, text: raw, threshold: 0.3 });
+    if (_mPrio && _mPrio.length && _mPrio[0].score >= 0.85) {
+      return this.answerNode(_mPrio[0].node, raw);
+    }
+  } catch (_e) {}
+}
+    if (_linguas.length > 0) {
+      let _temSkillMatch = false;
+      try {
+        const _mSk = this.dialog.matchQuestionAll(earlyTokens, tokens, { orbit: "skills", entity: null, text: raw, threshold: 0.5 });
+        if (_mSk && _mSk.length) {
+      _temSkillMatch = true;
+      // FIX ATALHO-SKILLS: match forte em skills com linguagem detectada -> usa direto
+      if (_mSk[0].score >= 0.9 && (_mSk[0].node.layer || 1) <= 4) {
+        return this.answerNode(_mSk[0].node, raw);
+      }
+    }
+      } catch (_e) {}
+      if (!_temSkillMatch) {
+        const _fb = this.responses.unknown_sacred && this.responses.unknown_sacred.fallback_linguagem;
+        if (_fb) {
+          const _cnt = (this.memory.linguaFbCount || 0) + 1;
+          this.memory.linguaFbCount = _cnt;
+          const _nivel = _cnt >= 3 ? 3 : _cnt >= 2 ? 2 : 1;
+          const _tplList = _fb["nivel_" + _nivel] || [];
+          const _tpl = this.pick(_tplList, "lingua_fb_" + _nivel + "_" + _linguas.join("_"));
+          if (_tpl) {
+            const _body = _tpl.split("{lingua}").join(_linguas.join(", "));
+            const _offer = this.dialog.mainMenuOffer();
+            this.dialog.setPending(_offer);
+            this.memory.record(raw, { orbit: "skills", facet: "fallback_linguagem_" + _nivel, intentId: "lang_fb:" + _nivel, summary: "Fallback lingua " + _linguas.join(",") });
+            return this.result(_body + (_offer ? String.fromCharCode(10,10) + _offer.text : ""), { source: "Fallback de linguagem", orbit: "skills", facet: "fallback_linguagem_" + _nivel, confidence: 3 });
+          }
+        }
+      }
+    }
+        if (this.dominios && this.dominios.length) {
       // FIX CTX-PRE-DOMINIO: orbita ativa + nada especifico + query com >=2 tokens -> fallback contextual honesto (em vez de dominio generico)
       const _ctxAtiva = this.memory.activeOrbit && this.memory.activeOrbit !== "smalltalk" && this.memory.activeOrbit !== "desconhecido" && this.memory.activeOrbit !== "escolha_do_bot";
       if (_ctxAtiva) {
@@ -628,7 +673,23 @@ class RagRanker {
  text: working,
  threshold: 0.82
  });
- const _porLayer = {};
+ // FIX DISAMBIG-ORBIT V2: prioriza orbita ativa OU top unico da sua orbita
+      let _pularDisambig = false;
+      if (_allMatches && _allMatches.length) {
+        const _self = this;
+        let _cand = null;
+        if (this.memory.activeOrbit) {
+          const _ativa = _allMatches.filter(function(_m){ return _m.node.orbit === _self.memory.activeOrbit; });
+          if (_ativa.length >= 1) _cand = _ativa[0];
+        }
+        if (!_cand && _allMatches[0].score >= 0.9) {
+          const _oTop = _allMatches[0].node.orbit;
+          const _mesma = _allMatches.filter(function(_m){ return _m.node.orbit === _oTop; });
+          if (_mesma.length === 1) _cand = _allMatches[0];
+        }
+        if (_cand) { node = _cand.node; _pularDisambig = true; }
+      }
+const _porLayer = {};
  for (const _m of _allMatches) {
  const _layer = _m.node.layer || 1;
  if (!_porLayer[_layer]) _porLayer[_layer] = [];
@@ -642,7 +703,7 @@ class RagRanker {
  break;
  }
  }
- if (_escolhido) {
+ if (_escolhido && !_pularDisambig) {
  disambigList = _escolhido.slice(0, 5).map(function(_m){ return _m.node; });
  } else {
  node = this.dialog.matchQuestion(rawTokens, tokens, {
@@ -1734,6 +1795,23 @@ if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet &
       confidence: Math.min(5, bestFragScore + 1),
     });
   }
+  detectLinguagens(raw) {
+    const data = this.responses && this.responses.unknown_sacred && this.responses.unknown_sacred.fallback_linguagem;
+    if (!data || !data.linguagens_detectaveis) return [];
+    const light = String(raw || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const tokens = light.replace(/[^a-z0-9+#. ]/g, " ").split(/\s+/).filter(Boolean);
+    const out = [];
+    for (const nome of Object.keys(data.linguagens_detectaveis)) {
+      const aliases = data.linguagens_detectaveis[nome] || [];
+      const achou = aliases.some(function(a){
+        if (a.length <= 2) return tokens.includes(a);
+        return tokens.includes(a) || light.indexOf(" " + a + " ") >= 0 || light.indexOf(a + " ") === 0 || light.endsWith(" " + a);
+      });
+      if (achou) out.push(nome);
+    }
+    return out;
+  }
+
   sacredUnknown(raw) {
     const level = this.memory.registerUnknown();
     // FIX CONTEXTUAL-FALLBACK: orbita ativa -> resposta contextual em vez de generica

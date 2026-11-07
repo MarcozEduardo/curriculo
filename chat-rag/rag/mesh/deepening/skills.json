@@ -13,7 +13,7 @@
         "como as habilidades estão organizadas",
         "quais categorias de skill"
       ],
-      "answer": "Seis áreas: **IA & Orquestração**, **Desenvolvimento & Web**, **Suporte & Infra**, **QA & Qualidade**, **Ferramentas & Deploy** e **Design & Documentação**, além das **altas habilidades** do perfil neurodivergente. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+      "answer": "Seis áreas: **IA & Orquestração**, **Desenvolvimento & Web**, **Suporte & Infra**, **QA & Qualidade**, **Ferramentas & Deploy** e **Design & Documentação**, além das **altas habilidades** do perfil neurodivergente."
     },
     {
       "id": "sk02",
@@ -37,7 +37,7 @@
         "habilidades em inteligência artificial",
         "ele entende de ia"
       ],
-      "answer": "Prompt engineering, orquestração de agentes, arquitetura RAG, fuzzy matching, benchmarking de modelos e extensão via MCP. É a área em que ele mais se aprofundou nos últimos dois anos e que trata como diferencial real. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "answer": "Prompt engineering, orquestração de agentes, arquitetura RAG, fuzzy matching, benchmarking de modelos e extensão via MCP. É a área em que ele mais se aprofundou nos últimos dois anos e que trata como diferencial real.",
       "facet": "ia"
     },
     {
@@ -48,9 +48,23 @@
       "question": "Quais linguagens e tecnologias web ele usa?",
       "variants": [
         "stack de desenvolvimento",
-        "quais linguagens ele programa"
+        "quais linguagens ele programa",
+        "ele programa em qual linguagem",
+        "qual linguagem ele programa",
+        "ele programa o que",
+        "em que linguagem ele programa",
+        "quais linguagens ele usa",
+        "qual stack",
+        "stack dele",
+        "ele sabe qual linguagem",
+        "ele programa com o que"
       ],
-      "answer": "TypeScript, React, JavaScript (ES6+), Python, SQL, HTML5 e CSS3, REST/JSON, Canvas 2D, WebRTC e Firebase. Ele produz com IA como copiloto, mantendo a leitura crítica e a validação do código. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "answer": "TypeScript, React, JavaScript (ES6+), Python, SQL, HTML5 e CSS3, REST/JSON, Canvas 2D, WebRTC e Firebase. Ele produz com IA como copiloto, com leitura crítica e validação do código antes de entregar.",
+      "variants_answer": [
+        "TypeScript, React, JavaScript (ES6+), Python, SQL, HTML5 e CSS3, REST/JSON, Canvas 2D, WebRTC e Firebase. Ele produz com IA como copiloto, com leitura crítica e validação do código antes de entregar.",
+        "A stack web dele: TypeScript, React, JavaScript (ES6+), Python, SQL, HTML5, CSS3, REST/JSON, Canvas 2D, WebRTC e Firebase. Ele usa IA como copiloto, mas mantém leitura crítica e validação. Tudo com **IA gratuita**, em workflow estratégico, sem uma única API paga.",
+        "Ele trabalha com TypeScript, React, JavaScript (ES6+), Python, SQL, HTML5, CSS3, REST/JSON, Canvas 2D, WebRTC e Firebase. A IA entra como copiloto, mas a leitura crítica e a validação são dele. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, sem uma única API paga."
+      ],
       "facet": "dev"
     },
     {
@@ -115,7 +129,7 @@
         "ele conhece n8n",
         "ferramentas de agentes que ele usou"
       ],
-      "answer": "Já experimentou N8N, OpenClaw, OpenCode, ZCode e Claude Code. Está sondando Google Cloud e Azure. Conhece de nome e se dispõe a aprender LangChain, CrewAI, AutoGen, Cursor, GitHub Copilot, Make e Zapier.",
+      "answer": "Já testou N8N, OpenClaw, OpenCode, ZCode e Claude Code. Está sondando Google Cloud e Azure. Conhece de nome e se dispõe a aprender LangChain, CrewAI, AutoGen, Cursor, GitHub Copilot, Make e Zapier.",
       "facet": "orquestracao_ferramentas"
     },
     {
@@ -128,7 +142,7 @@
         "ele depende de ia",
         "ia como copiloto"
       ],
-      "answer": "Como copiloto. O Marcos define o objetivo, orienta a ferramenta, lê e interpreta o código, decide os ajustes, depura e valida. A IA acelera a implementação; o entendimento e a validação continuam com ele. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "answer": "A IA entra como copiloto. O Marcos define o objetivo, orienta a ferramenta, lê e interpreta o código, decide os ajustes, depura e valida. A IA acelera a implementação; o entendimento e a validação continuam com ele.",
       "facet": "ia_copiloto"
     },
     {
@@ -139,9 +153,31 @@
       "question": "Ele conhece Python e SQL?",
       "variants": [
         "ele sabe sql",
-        "ele programa em python"
+        "ele programa em python",
+        "ele sabe python",
+        "python",
+        "ele conhece python",
+        "sabe python",
+        "estuda python",
+        "aprendeu python",
+        "ele usa python",
+        "python no curriculo",
+        "sql",
+        "ele conhece sql",
+        "sabe sql",
+        "ele usa sql",
+        "aprendeu sql",
+        "ele sabe python e sql",
+        "conhece python e sql",
+        "domina python",
+        "domina sql"
       ],
-      "answer": "Ambos estão na lista de habilidades. Python ele estudou em 2015 e no CS50; SQL desde 2009 (Access e SQL) e na prática com sistemas de empresa. Ele é honesto: entende o princípio e a arquitetura, mas pode precisar de referência para sintaxe de memória."
+      "answer": "Python ele estudou em 2015, na Friends, e voltou a estudar no CS50. SQL ele conheceu em 2009 (Access e SQL) e aplicou de forma intermitente em sistemas de empresa, sem carreira contínua na linguagem. Sobre o nível: entende princípio e arquitetura, mas não alega sintaxe de memória. Para consulta e raciocínio de banco, ele resolve; para escrever de cabeça sem referência, precisa consultar.",
+      "variants_answer": [
+        "Python ele estudou em 2015, na Friends, e voltou a estudar no CS50. SQL ele conheceu em 2009 (Access e SQL) e aplicou de forma intermitente em sistemas de empresa, sem carreira contínua na linguagem. Sobre o nível: entende princípio e arquitetura, mas não alega sintaxe de memória. Para consulta e raciocínio de banco, ele resolve; para escrever de cabeça sem referência, precisa consultar.",
+        "Sim, os dois estao na lista. Python veio em 2015 e no CS50; SQL desde 2009, com Access e SQL, mais a pratica em sistemas de empresa. Ele deixa claro: entende principio e arquitetura, mas para sintaxe de cor pode precisar de referencia.",
+        "Python: estudado em 2015 e no CS50. SQL: desde 2009, com Access e SQL, e na pratica com sistemas de empresa. Ele e honesto sobre o nivel: entende principio e arquitetura, mas pode precisar de referencia para sintaxe de memoria."
+      ]
     },
     {
       "id": "sk12",
@@ -171,7 +207,7 @@
         "ele é fluente em inglês",
         "ele tem inglês intermediário"
       ],
-      "answer": "Ele não fala inglês, mas sabe se virar. Estuda algumas coisas em inglês para ampliar vocabulário e gosta de morfologia e etimologia das palavras. Um dos motivos de querer entrar logo na área é conviver mais com o idioma: ele absorve entendimento com facilidade, mas o que não usa o cérebro acaba arquivando. Com imersão (séries com áudio em inglês, leitura) o conteúdo volta a fazer sentido em pouco tempo, por triangulação. Ele não se considera intermediário.",
+      "answer": "Ele não fala inglês fluente, mas se vira bem: lê documentação, acompanha trechos técnicos e estuda vocabulário. Ele gosta de morfologia e etimologia, o que ajuda a absorver o idioma por triangulação. Não se considera intermediário ainda, e diz que imersão (séries com áudio em inglês, leitura frequente) acelera o retorno rápido do que já estudou.",
       "facet": "idiomas"
     },
     {
@@ -184,7 +220,7 @@
         "certificados de mercado",
         "ele é certificado"
       ],
-      "answer": "Não informou certificações formais de mercado (ITIL, Microsoft, Cisco, AWS). A comprovação é a graduação em TI em andamento, o CS50 em estudo, os cursos técnicos desde 2007 e o portfólio público.",
+      "answer": "Ele não tem certificação formal de mercado (ITIL, Microsoft, Cisco, AWS). O que comprova formação: graduação em TI em andamento, CS50 em estudo, cursos técnicos desde 2007 e o portfólio público de projetos.",
       "facet": "certificacoes"
     },
     {
@@ -210,7 +246,7 @@
         "onde ele se destaca mais",
         "diferencial técnico"
       ],
-      "answer": "IA & Orquestração. Não é saber usar IA: é entender como ela funciona por dentro, quando erra e como fazê-la trabalhar em problema real, montando pipeline de resposta que não depende de API paga. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+      "answer": "IA & Orquestração. Não é saber usar IA: é entender como ela funciona por dentro, quando erra, e como fazê-la trabalhar em problema real, montando pipeline de resposta que não depende de API paga."
     },
     {
       "id": "sk17",
@@ -246,7 +282,12 @@
         "qual projeto usa react",
         "experiência com react"
       ],
-      "answer": "React está na lista de habilidades e o currículo cita React entre as tecnologias dos projetos independentes. A base não detalha qual projeto o usa especificamente; os jogos são em TypeScript e Canvas 2D."
+      "answer": "React está na lista de habilidades e o currículo cita React entre as tecnologias dos projetos independentes. A base não detalha qual projeto o usa especificamente; os jogos são em TypeScript e Canvas 2D.",
+      "variants_answer": [
+        "React está na lista de habilidades e o currículo cita React entre as tecnologias dos projetos independentes. A base não detalha qual projeto o usa especificamente; os jogos são em TypeScript e Canvas 2D.",
+        "Ele cita React na lista de habilidades e entre as tecnologias dos projetos. A base nao detalha qual projeto usa React especificamente. Os jogos, por exemplo, sao em TypeScript e Canvas 2D.",
+        "React aparece na lista de habilidades e entre as tecnologias dos projetos independentes. Nao ha detalhe de qual projeto especifico usa React; os jogos sao em TypeScript e Canvas 2D."
+      ]
     },
     {
       "id": "sk20",
@@ -256,9 +297,24 @@
       "question": "Ele tem experiência com redes?",
       "variants": [
         "ele entende de rede",
-        "redes tcp ip"
+        "redes tcp ip",
+        "redes",
+        "rede",
+        "tcp ip",
+        "ele monta rede",
+        "montou rede",
+        "experiencia com rede",
+        "infra de rede",
+        "cabeamento",
+        "switch",
+        "roteador"
       ],
-      "answer": "Sim: manutenção de rede, redes TCP/IP e controle de rede em ambiente industrial. Já montou rede do zero e ensinava manutenção de redes como instrutor."
+      "answer": "Sim: manutenção de rede, redes TCP/IP e controle de rede em ambiente industrial. Já montou rede do zero e ensinava manutenção de redes como instrutor.",
+      "variants_answer": [
+        "Sim: manutenção de rede, redes TCP/IP e controle de rede em ambiente industrial. Já montou rede do zero e ensinava manutenção de redes como instrutor.",
+        "Tem sim. Manutencao de rede, TCP/IP e controle de rede em ambiente industrial. Ja montou rede do zero e foi instrutor de manutencao de redes.",
+        "Ele tem experiencia pratica: manutencao de rede, TCP/IP e controle em ambiente industrial, incluindo montar rede do zero. Tambem ensinou manutencao de redes como instrutor."
+      ]
     },
     {
       "id": "sk21",
@@ -268,9 +324,49 @@
       "question": "Ele usa ferramentas de teste automatizado?",
       "variants": [
         "ele conhece cypress",
-        "qa automatizado"
+        "qa automatizado",
+        "como ele testa",
+        "como ele audita",
+        "o que ele faz com os erros",
+        "como ele debuga",
+        "como ele resolve issue",
+        "resolve issue como",
+        "como sao os testes",
+        "ele testa de que forma",
+        "testa como",
+        "qual a forma de testar",
+        "auditoria do codigo",
+        "como ele valida",
+        "debuga como",
+        "trata erro como",
+        "qa dele",
+        "ele faz qa",
+        "qualidade do codigo",
+        "como ele garante qualidade",
+        "testa o que",
+        "o que ele testa",
+        "ele faz teste automatizado",
+        "usa cypress",
+        "usa playwright",
+        "usa selenium",
+        "teste e2e",
+        "teste unitario",
+        "teste manual",
+        "teste automatizado",
+        "faz testes",
+        "ele testa o que faz",
+        "como audita o codigo",
+        "ele revisa o codigo",
+        "revisao de codigo",
+        "ele depura como",
+        "depuracao como"
       ],
-      "answer": "Ainda não domina Cypress, Playwright ou Selenium do jeito que o mercado padrão exige. Entende o princípio e aprende rápido. O lado QA dele vive hoje na depuração manual e no raciocínio de fluxo."
+      "answer": "Ele não domina Cypress, Playwright ou Selenium no nível que o mercado pede. O que ele faz: QA manual em fluxo, depuração passo a passo, teste em navegadores diferentes e validação de comportamento antes de subir. Em ferramenta nova, ele aprende rápido.",
+      "variants_answer": [
+        "Ele não domina Cypress, Playwright ou Selenium no nível que o mercado pede. O que ele faz: QA manual em fluxo, depuração passo a passo, teste em navegadores diferentes e validação de comportamento antes de subir. Em ferramenta nova, ele aprende rápido.",
+        "Ele e honesto: nao domina Cypress, Playwright ou Selenium no nivel de mercado. Entende o principio e aprende rapido. O lado QA dele esta na depuracao manual e no raciocinio de fluxo.",
+        "Ferramentas como Cypress, Playwright ou Selenium ele ainda nao domina no nivel que o mercado pede. Entende o principio e tem curva de aprendizado boa. QA dele e manual, com raciocinio de fluxo."
+      ]
     },
     {
       "id": "sk22",
@@ -282,7 +378,12 @@
         "nível de git",
         "ele sabe git avançado"
       ],
-      "answer": "No fluxo simples e seguro: commit, push, branch e PR. Não é especialista em recursos avançados como rebase interativo, cherry-pick ou resolução de conflito complexo em equipe grande."
+      "answer": "No fluxo simples e seguro: commit, push, branch e PR. Não é especialista em recursos avançados como rebase interativo, cherry-pick ou resolução de conflito complexo em equipe grande.",
+      "variants_answer": [
+        "No fluxo simples e seguro: commit, push, branch e PR. Não é especialista em recursos avançados como rebase interativo, cherry-pick ou resolução de conflito complexo em equipe grande.",
+        "Ele usa Git no fluxo do dia a dia: commit, push, branch e PR. Nao se diz especialista em recursos avancados como rebase interativo, cherry-pick ou resolucao de conflito complexo em equipe grande.",
+        "Git no dia a dia: commit, push, branch e PR. Ele e honesto que nao domina recursos avancados como rebase interativo, cherry-pick ou conflito complexo em equipe grande."
+      ]
     },
     {
       "id": "sk23",
@@ -342,7 +443,12 @@
         "o caso do banco corrompido",
         "banco de dados da fabricart"
       ],
-      "answer": "O caso foi na Fabricart, logo depois de uma atualização do sistema G5 para G6, do mesmo fornecedor. Eles esqueceram de fazer a retrocompatibilidade com o banco de dados e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu a responsabilidade. Foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco, mesmo pedindo ajuda da empresa e contratando técnicos autorizados. No fim, quem resolveu o que os técnicos do próprio fornecedor não souberam resolver foi ele. Sem IA, só na raça."
+      "answer": "Foi na Fabricart, logo depois de uma atualização do sistema G5 para G6 do mesmo fornecedor. Eles esqueceram de fazer retrocompatibilidade com o banco e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu: foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco. Os técnicos autorizados do fornecedor não deram conta. No fim, quem resolveu foi ele. Sem IA, só na raça.",
+      "variants_answer": [
+        "Foi na Fabricart, logo depois de uma atualização do sistema G5 para G6 do mesmo fornecedor. Eles esqueceram de fazer retrocompatibilidade com o banco e corromperam o arquivo, mesmo com backup. Como estourou na mão do Marcos, ele assumiu: foram 4 dias seguidos, mais de 18 horas por dia em hiperfoco. Os técnicos autorizados do fornecedor não deram conta. No fim, quem resolveu foi ele. Sem IA, só na raça.",
+        "O caso foi na Fabricart, apos atualizacao G5 para G6 do mesmo fornecedor. Sem retrocompatibilidade, o banco corrompeu, mesmo com backup. Ele assumiu: 4 dias seguidos, mais de 18 horas por dia em hiperfoco. Pediu ajuda da empresa, contratou tecnicos autorizados, mas no fim foi ele quem resolveu o que os tecnicos do fornecedor nao conseguiram. Sem IA, so na raca.",
+        "Foi na Fabricart. Atualizacao do G5 para G6, sem retrocompatibilidade, banco corrompido mesmo com backup. Ele assumiu a responsabilidade: 4 dias seguidos, 18h+ por dia em hiperfoco. A empresa chamou tecnicos autorizados do fornecedor, mas no fim quem resolveu foi ele. Sem IA, so na raca."
+      ]
     },
     {
       "id": "sk28",
@@ -366,7 +472,12 @@
         "nível de typescript",
         "ele escreve typescript"
       ],
-      "answer": "A trilogia de jogos e o gerador ABNT são em TypeScript. Ele produz com IA como copiloto, lê o código com profundidade e depura. Prefere mostrar isso em projeto do que atribuir um nível a si mesmo. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+      "answer": "A trilogia de jogos e o gerador ABNT são em TypeScript. Ele produz com IA como copiloto, lê o código com profundidade e depura. Prefere mostrar em projeto do que atribuir um nível a si mesmo.",
+      "variants_answer": [
+        "A trilogia de jogos e o gerador ABNT são em TypeScript. Ele produz com IA como copiloto, lê o código com profundidade e depura. Prefere mostrar em projeto do que atribuir um nível a si mesmo.",
+        "TypeScript aparece na trilogia de jogos e no gerador ABNT. Ele trabalha com IA como copiloto, le com profundidade e depura. Nao gosta de rotular nivel, prefere mostrar em projeto. Tudo com **IA gratuita**, em workflow estrategico, sem uma unica API paga.",
+        "Ele nao se da um nivel de TypeScript, prefere mostrar em projeto: a trilogia de jogos e o gerador ABNT sao em TypeScript. Produz com IA como copiloto, le com profundidade e depura. Tudo com **IA gratuita**, sem uma unica API paga."
+      ]
     },
     {
       "id": "sk30",
@@ -402,7 +513,12 @@
         "ele conhece node js",
         "usa linha de comando"
       ],
-      "answer": "Sim. Terminal/Bash e Node.js estão nas ferramentas do dia a dia, e o LAR, ambiente principal dele, conversa com um backend Node."
+      "answer": "Sim. Terminal/Bash e Node.js estão nas ferramentas do dia a dia, e o LAR, ambiente principal dele, conversa com um backend Node.",
+      "variants_answer": [
+        "Sim. Terminal/Bash e Node.js estão nas ferramentas do dia a dia, e o LAR, ambiente principal dele, conversa com um backend Node.",
+        "Usa sim. Terminal/Bash e Node.js no dia a dia. O LAR, ambiente principal dele, conversa com um backend Node.",
+        "Terminal/Bash e Node.js fazem parte do fluxo de trabalho. O LAR, ambiente principal dele, conversa com backend Node."
+      ]
     },
     {
       "id": "sk33",
@@ -486,7 +602,7 @@
         "ele passa em teste de sintaxe",
         "sabe sintaxe de cor"
       ],
-      "answer": "Ele mesmo dá o exemplo do SQL: numa prova seca de sintaxe, chutaria. Mas entende o princípio, como consulta em tempo real com vários usuários. Sintaxe se recupera com apoio; raciocínio de arquitetura, não."
+      "answer": "Ele mesmo dá o exemplo do SQL: numa prova seca de sintaxe, ele chutaria. O que ele domina é o princípio: como a consulta funciona em tempo real com vários usuários, e por que a arquitetura importa. Sintaxe se recupera com apoio; raciocínio de arquitetura, não."
     },
     {
       "id": "sk40",
@@ -510,7 +626,7 @@
         "compatibilidade cross browser",
         "testa no chrome e firefox"
       ],
-      "answer": "Sim, e desde 2014: na época dos primeiros sites, com plugin Flash, testar em cada navegador era o maior pesadelo. Foi onde aprendeu a garantir que funciona em todo lugar."
+      "answer": "Sim. Ele testa em navegadores diferentes desde os primeiros sites, na época do Flash, quando cada navegador exigia teste próprio. Foi onde nasceu a preocupação com compatibilidade que ele carrega até hoje."
     },
     {
       "id": "sk42",
@@ -520,9 +636,23 @@
       "question": "Ele conhece Docker e Kubernetes?",
       "variants": [
         "ele usa docker",
-        "containers"
+        "containers",
+        "docker",
+        "ele sabe docker",
+        "ele conhece docker",
+        "usa docker",
+        "kubernetes",
+        "k8s",
+        "docker e kubernetes",
+        "devops",
+        "ele faz devops"
       ],
-      "answer": "Entende o conceito, mas não domina a operação. Se a vaga exigir DevOps sênior, ele diz que ainda não é o terreno dele."
+      "answer": "Ele entende o conceito de Docker e Kubernetes, mas não domina a operação. Não se apresenta como DevOps sênior, e deixa isso claro.",
+      "variants_answer": [
+        "Ele entende o conceito de Docker e Kubernetes, mas não domina a operação. Não se apresenta como DevOps sênior, e deixa isso claro.",
+        "Ele entende o conceito de Docker e Kubernetes, mas e honesto: nao domina a operacao. Para vaga de DevOps senior, ele deixa claro que ainda nao e o terreno dele.",
+        "Docker e Kubernetes: entende o conceito, nao domina operacao. Se for vaga de DevOps senior, ele diz abertamente que ainda nao e o terreno dele."
+      ]
     },
     {
       "id": "sk43",
