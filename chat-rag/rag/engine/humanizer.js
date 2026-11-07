@@ -113,9 +113,24 @@ class Humanizer {
   }
 
   compose(body, { confidence = 4, withTransition = false } = {}) {
-    const opening = this.opening(confidence);
+      // PATCH FORMATTER: RAGFormatter quebra abertura/corpo
+    const _F = (typeof window !== "undefined" && window.RAGFormatter) ? window.RAGFormatter : null;
+    const NL = String.fromCharCode(10);
+    const NL2 = NL + NL;
+    let _corpo = String(body || "").trim();
+    if (_F) {
+      const _sem = _F.removerAberturaCurta(_corpo);
+      if (_sem !== _corpo) _corpo = _sem;
+      const _segs = _corpo.split(NL2).map(function(seg){
+        const _r = _F.separarAberturaA(seg);
+        return _r.abertura ? _r.abertura + NL + _r.corpo : seg;
+      });
+      _corpo = _segs.join(NL2);
+    }
+    const opening = this.opening(confidence).trim();
     const transition = withTransition ? this.transition() : "";
-    let final = (opening + body + transition).trim();
+    const _openingPref = opening ? opening + NL2 : "";
+    let final = (_openingPref + _corpo + transition).trim();
     // FIX LOWERCASE: depois de virgula/dois pontos, lowercase se nao for nome proprio
     final = final.replace(/([:,]\s+)([A-ZÀ-Ý])(?![a-zà-ÿ])/g, (m, sep, letra) => {
       const depois = final.slice(final.indexOf(m) + m.length, final.indexOf(m) + m.length + 12);

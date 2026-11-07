@@ -227,7 +227,13 @@
         "significado de dev assistido",
         "como ele programa com ia"
       ],
-      "answer": "Ele conduz o raciocínio e usa IA como copiloto: define o que construir, orienta a ferramenta, lê e interpreta o código, depura e valida. A IA acelera; a responsabilidade técnica é dele. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga."
+      "answer": "Ele conduz o raciocínio e usa IA como copiloto: define o que construir, orienta a ferramenta, lê e interpreta o código, depura e valida. A IA acelera; a responsabilidade técnica é dele. Todo o desenvolvimento foi feito com **IA gratuita**, em workflow estratégico, horas de código, auditoria de função e lógica de arquitetura. Sem uma única API paga.",
+      "variants_answer": [
+        "Vou ser direto com você: o Marcos usa IA como copiloto, orienta a ferramenta e assina a lógica, a memória dele funciona mais por reconhecimento do que por invocação, por isso ele não mente: o que ele afirma é que entende, depura e valida.",
+        "Vou ser direto com você: ele trata a IA como um escrivão de sintaxe, pede, lê, corrige e valida, a memória dele funciona mais por reconhecimento do que por invocação, e ele deixa isso claro: sem referência ao lado, escrever de cabeça custa mais.",
+        "Vou ser direto com você: a IA é o apoio de escrita, a direção técnica é dele, a memória dele funciona mais por reconhecimento do que por invocação, olha, até dev sênior usa IA assim hoje, a diferença é quem entende o que está fazendo.",
+        "Então, é o seguinte: o Marcos usa IA como copiloto, orienta a ferramenta e assina a lógica, ele ficou fora da imersão por um tempo e a sintaxe pesa quando volta, olha, até dev sênior usa IA assim hoje, a diferença é quem entende o que está fazendo."
+      ]
     },
     {
       "id": "sm19",
@@ -353,7 +359,12 @@
         "ele digita o código",
         "programa sem ia"
       ],
-      "answer": "Ele é honesto: a memória dele funciona mais por reconhecimento do que por invocação, então escrever do zero sem referência custa mais. Ler, entender, corrigir e validar é onde ele é forte."
+      "answer": "Ele é honesto: a memória dele funciona mais por reconhecimento do que por invocação, então escrever do zero sem referência custa mais. Ler, entender, corrigir e validar é onde ele é forte.",
+      "variants_answer": [
+        "Então, é o seguinte: o Marcos usa IA como copiloto, orienta a ferramenta e assina a lógica, ele ficou fora da imersão por um tempo e a sintaxe pesa quando volta, e ele deixa isso claro: sem referência ao lado, escrever de cabeça custa mais.",
+        "Então, é o seguinte: ele trata a IA como um escrivão de sintaxe, pede, lê, corrige e valida, ele ficou fora da imersão por um tempo e a sintaxe pesa quando volta, olha, até dev sênior usa IA assim hoje, a diferença é quem entende o que está fazendo.",
+        "Sem enrolação: a IA é o apoio de escrita, a direção técnica é dele, ele não decora sintaxe, ele lê e reconhece o fluxo, e ele deixa isso claro: sem referência ao lado, escrever de cabeça custa mais."
+      ]
     },
     {
       "id": "sm29",
@@ -479,7 +490,12 @@
         "leitura crítica",
         "entende código alheio"
       ],
-      "answer": "Sim, é um dos pontos mais fortes: entende o fluxo, identifica erro e sabe o que precisa ser mudado. Ele descreve a si mesmo como alguém que entende lendo."
+      "answer": "Sim, é um dos pontos mais fortes: entende o fluxo, identifica erro e sabe o que precisa ser mudado. Ele descreve a si mesmo como alguém que entende lendo.",
+      "variants_answer": [
+        "Sem enrolação: o Marcos usa IA como copiloto, orienta a ferramenta e assina a lógica, ele não decora sintaxe, ele lê e reconhece o fluxo, olha, até dev sênior usa IA assim hoje, a diferença é quem entende o que está fazendo.",
+        "Sem enrolação: ele trata a IA como um escrivão de sintaxe, pede, lê, corrige e valida, ele não decora sintaxe, ele lê e reconhece o fluxo, por isso ele não mente: o que ele afirma é que entende, depura e valida.",
+        "Então, é o seguinte: a IA é o apoio de escrita, a direção técnica é dele, ele ficou fora da imersão por um tempo e a sintaxe pesa quando volta, por isso ele não mente: o que ele afirma é que entende, depura e valida."
+      ]
     },
     {
       "id": "sm39",

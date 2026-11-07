@@ -188,7 +188,7 @@ class RagRanker {
       if (!jaSaudou) {
         const h = new Date().getHours();
         const saud = h < 12 ? "Opa, bom dia! " : h < 18 ? "Opa, boa tarde! " : "Opa, boa noite! ";
-        res.text = saud + res.text;
+        res.text = saud.trim() + String.fromCharCode(10,10) + res.text;
       }
     }
     if (!this.isReady) return res;
@@ -1183,7 +1183,7 @@ if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet &
  let body = (node.variants_answer && node.variants_answer.length) ? this.pick(node.variants_answer, "va:" + node.id) : node.answer;
     if (revisit) {
       const prefixes = this.responses.dialog_followups?.revisit || this.dialog.templates.revisit || [""];
-      body = this.pick(prefixes, "revisit") + body;
+      body = this.pick(prefixes, "revisit").trim() + String.fromCharCode(10,10) + body;
     }
 
     return this.deliver({
