@@ -648,7 +648,8 @@ let orbitConflict = false;
 if (node && !exactNode && !entity && !topicChoice) {
   const quickRoute = this.router.route(tokens, { activeOrbit: this.memory.activeOrbit, entityOrbit: null });
   const quickBest = quickRoute.ranked[0];
-  if (quickBest && quickBest.orbit !== node.orbit && quickBest.score >= 1.4) orbitConflict = true; // FIX ANCORA-CONTEXTO v5
+  const _fixB_metaIa = quickBest && quickBest.orbit === "meta_ia" && node.orbit === "sobre_marcos";
+ if (quickBest && quickBest.orbit !== node.orbit && quickBest.score >= 1.4 && !_fixB_metaIa) orbitConflict = true; // FIX ANCORA-CONTEXTO v5 + FIXB: meta_ia nao bloqueia sobre_marcos
 }
 if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet && !orbitConflict))) return this.answerNode(node, raw);
     }
