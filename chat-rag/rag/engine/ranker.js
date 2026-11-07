@@ -430,6 +430,25 @@ class RagRanker {
 
     /* 2.e Dominio especifico (ANTES do exactMatch) */
     if (this.dominios && this.dominios.length) {
+      // FIX CTX-PRE-DOMINIO: orbita ativa + nada especifico + query com >=2 tokens -> fallback contextual honesto (em vez de dominio generico)
+      const _ctxAtiva = this.memory.activeOrbit && this.memory.activeOrbit !== "smalltalk" && this.memory.activeOrbit !== "desconhecido" && this.memory.activeOrbit !== "escolha_do_bot";
+      if (_ctxAtiva) {
+        let _temNoEspecifico = false;
+        try {
+          const _mProbe = this.dialog.matchQuestionAll(earlyTokens, tokens, { orbit: this.memory.activeOrbit, entity: null, text: raw, threshold: 0.3 });
+          if (_mProbe && _mProbe.length) _temNoEspecifico = true;
+        } catch (_e) {}
+        if (!_temNoEspecifico) {
+          const _ctxData = this.responses.unknown_sacred && this.responses.unknown_sacred.contextual;
+          if (_ctxData && _ctxData.por_orbita && _ctxData.por_orbita[this.memory.activeOrbit]) {
+            const _body = _ctxData.por_orbita[this.memory.activeOrbit];
+            this.memory.record(raw, { orbit: this.memory.activeOrbit, facet: "sem_dado_ctx", intentId: "ctx_pre:" + this.memory.activeOrbit, summary: "Fallback contextual pre-dominio" });
+            const _offer = this.dialog.mainMenuOffer();
+            this.dialog.setPending(_offer);
+            return this.result(_body + (_offer ? String.fromCharCode(10,10) + _offer.text : ""), { source: "Fallback contextual", orbit: this.memory.activeOrbit, facet: "sem_dado_ctx", confidence: 3 });
+          }
+        }
+      }
       let dom = this.detectDominio(raw, norm, earlyTokens);
  // FIX UNIVERSAL-VA: no de aprofundamento forte da mesma orbita vence dominio
  if (dom) {
@@ -1717,6 +1736,22 @@ if (node && (exactNode || (!comparative && !facetConflict && !nodeIgnoresFacet &
   }
   sacredUnknown(raw) {
     const level = this.memory.registerUnknown();
+    // FIX CONTEXTUAL-FALLBACK: orbita ativa -> resposta contextual em vez de generica
+    if (level === 1 && this.memory.activeOrbit && this.memory.activeOrbit !== "smalltalk" && this.memory.activeOrbit !== "desconhecido") {
+      const _ctxData = this.responses.unknown_sacred && this.responses.unknown_sacred.contextual;
+      if (_ctxData) {
+        const _orbit = this.router.getOrbit(this.memory.activeOrbit);
+        const _label = _orbit?.label || this.memory.activeOrbit;
+        let _body = _ctxData.por_orbita && _ctxData.por_orbita[this.memory.activeOrbit];
+        if (!_body && _ctxData.generico) _body = _ctxData.generico.replace(/\{assunto\}/g, _label);
+        if (_body) {
+          this.memory.record(raw, { orbit: this.memory.activeOrbit, facet: "sem_dado_ctx", intentId: "ctx_fallback:" + this.memory.activeOrbit, summary: "Fallback contextual" });
+          const _offer = this.dialog.mainMenuOffer();
+          this.dialog.setPending(_offer);
+          return this.result(_body + (_offer ? String.fromCharCode(10,10) + _offer.text : ""), { source: "Fallback contextual", orbit: this.memory.activeOrbit, facet: "sem_dado_ctx", confidence: 3 });
+        }
+      }
+    }
     const data = this.responses.unknown_sacred || {};
     const list = (data.niveis || {})[String(level)] || (data.niveis || {})["1"] || [];
     let body = this.pick(list, "sagrada:" + level);

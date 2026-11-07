@@ -30,5 +30,28 @@
     "Sobre **{termo}** eu não tenho registro na base do Marcos, e prefiro não afirmar o que ele não contou. O que está confirmado em linguagens e ferramentas eu posso mostrar.",
     "Não encontrei **{termo}** nos dados do Marcos. Em vez de chutar, posso mostrar o que está comprovado em tecnologias e ferramentas.",
     "**{termo}** não aparece em nada do que o Marcos registrou. Prefiro dizer isso a inventar; posso mostrar onde ele de fato tem prática."
-  ]
+  ],
+  "contextual": {
+    "descricao": "Fallback contextual: quando o matcher falha dentro de uma orbita ativa, responde com o assunto e o zap do Marcao, em vez do generico.",
+    "por_orbita": {
+      "experiencia": "Sobre **experiencia profissional** nesse ponto especifico, o que eu tenho ta limitado. Pode tentar reformular a pergunta, ou falar direto com o Marcos: **(61) 98222-7804**.",
+      "sobre_marcos": "Sobre **o perfil do Marcos** nesse detalhe, minha base nao cobre. Tenta reformular por outro angulo, ou fala direto com ele: **(61) 98222-7804**.",
+      "projetos": "Sobre **esse projeto** especificamente, nao tenho o detalhe aqui. Posso tentar por outro angulo se voce reformular, ou o Marcos responde direto: **(61) 98222-7804**.",
+      "skills": "Sobre **essa habilidade** especifica, o que tenho ta limitado. Reformula pra eu tentar de outro jeito, ou fala com o Marcos: **(61) 98222-7804**.",
+      "formacao": "Sobre **formacao** nesse ponto, minha base nao cobre. Tenta reformular, ou o Marcos responde: **(61) 98222-7804**.",
+      "contato": "Sobre **contato** nesse detalhe, nao tenho registrado. Mas o caminho direto e o proprio Marcos: **(61) 98222-7804** ou **marcos.eduardo@myyahoo.com**.",
+      "recrutamento": "Sobre **recrutamento** nesse ponto, nao tenho o dado. Vale falar direto com o Marcos: **(61) 98222-7804**.",
+      "historia_pessoal": "Sobre **essa historia pessoal**, o que tenho ta limitado. Reformula por outro angulo, ou fala com o Marcos: **(61) 98222-7804**.",
+      "neurodivergencia": "Sobre **esse ponto da neurodivergencia**, o que tenho cobre o essencial, mas esse detalhe especifico nao. O Marcos responde direto: **(61) 98222-7804**.",
+      "transparencia": "Sobre **transparencia** nesse ponto, a base nao cobre. O caminho direto e o Marcos: **(61) 98222-7804**.",
+      "meta_ia": "Sobre **o Bobby / a IA** nesse detalhe, nao tenho o dado. Tenta reformular, ou o Marcos responde: **(61) 98222-7804**.",
+      "smalltalk": "Sobre **isso** nao tenho o dado. Se quiser, posso falar de projetos, experiencia, skills ou contato. Ou fala direto com o Marcos: **(61) 98222-7804**.",
+      "curiosidades": "Sobre **essa curiosidade**, o que tenho ta limitado. O Marcos responde direto: **(61) 98222-7804**.",
+      "sobre_curriculo": "Sobre **o curriculo** nesse ponto, nao tenho o detalhe. Reformula por outro angulo, ou fala com o Marcos: **(61) 98222-7804**.",
+      "identidade_visitante": "Sobre **isso** nao tenho o dado. O Marcos responde direto: **(61) 98222-7804**.",
+      "pcd": "Sobre **PCD** nesse ponto, o que tenho ta limitado. O Marcos responde direto: **(61) 98222-7804**.",
+      "glossario": "Sobre **esse termo** nao tenho registro. Posso tentar por outro angulo se voce reformular, ou fala com o Marcos: **(61) 98222-7804**."
+    },
+    "generico": "O que eu tenho sobre **{assunto}** nesse ponto ta limitado. Pode tentar reformular a pergunta, ou falar direto com o Marcos: **(61) 98222-7804**."
+  }
 }
