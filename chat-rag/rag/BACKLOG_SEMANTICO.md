@@ -45,3 +45,26 @@ Documenta bugs de roteamento que exigem resolução por **semântica de órbita*
 ## Regra de ouro
 
 Nenhum item deste backlog pode ser resolvido por regex simples. Se a solução for "remover palavra X", é sinal de que a intenção não foi entendida — volta pra mesa.
+
+
+---
+
+## FIX SEMANTICO 04 — matcher nao acha variantes de nos com verbos especificos
+
+**Sintoma (2026-11-07):** "Ele consertava as maquinas?" / "Ele inventou algo la?" / "Por que saiu?" / "Ele usava PowerShell?" / "Banco da Fabricart foi ele que resolveu?" retornam VAZIO do `matchQuestionAll`, mesmo com variantes do no contendo sinonimos (`consertava`, `scripts`, `motivo de saida`, etc).
+
+**Impacto:** 5/12 queries da orbita experiencia caem em `retrieveFallback` ou `dominio_o_que_e` em vez do no correto.
+
+**Caminho:** sinonimizacao ampla no tokenizer OU fuzzy match em `matchQuestion` com threshold menor para queries curtas (<=4 tokens).
+
+**Status:** aguardando analise.
+
+---
+
+## FIX SEMANTICO 05 — boost de orbita ativa no matchQuestionAll
+
+**Sintoma (2026-11-07):** "Quanto tempo ficou la?" acha `fq01=0.98` (em `formacao`) mas pergunta era sobre `ex16` (em `experiencia`). O matcher nao pondera orbita ativa.
+
+**Caminho:** aplicar boost 1.3x no score de nos da mesma orbita que `memory.activeOrbit`, similar ao `orbitBoost` em `retrieveFallback` (linha 1008).
+
+**Status:** aguardando analise.

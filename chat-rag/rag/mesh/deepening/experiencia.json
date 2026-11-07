@@ -26,6 +26,11 @@
         "projetista cnc"
       ],
       "answer": "Foi projetista industrial CNC e responsável técnico de operação em Vicente Pires/DF, de novembro de 2018 a fevereiro de 2024: modelagem vetorial para corte a laser CNC (CO2), manutenção de hardware e software das máquinas e planejamento logístico de insumos.",
+      "variants_answer": [
+        "Projetista industrial CNC e responsável técnico de operação em Vicente Pires/DF, de novembro de 2018 a fevereiro de 2024. Modelagem vetorial para corte a laser CNC de CO2, manutenção de hardware e software das máquinas e planejamento logístico de insumos.",
+        "Na Bella Arte ele atuou como projetista industrial CNC e responsável técnico de operação, em Vicente Pires/DF, entre novembro de 2018 e fevereiro de 2024. Na prática, isso envolvia modelagem vetorial para corte a laser CNC de CO2, manutenção de hardware e software das máquinas e planejamento logístico de insumos.",
+        "De novembro de 2018 a fevereiro de 2024, em Vicente Pires/DF. Projetista industrial CNC e responsável técnico de operação: modelagem vetorial para corte a laser CNC de CO2, manutenção de hardware e software das máquinas e planejamento logístico de insumos."
+      ],
       "entity": "exp_bella_arte"
     },
     {
@@ -169,6 +174,11 @@
         "por que deixou a indústria"
       ],
       "answer": "Para migrar de vez para tecnologia, área em que já atuava informalmente dentro da própria empresa, cuidando de máquina, software, rede e automações próprias.",
+      "variants_answer": [
+        "Saiu para migrar de vez para tecnologia. Já atuava informalmente com isso dentro da própria empresa: cuidava de máquina, software, rede e automações próprias.",
+        "O motivo foi migrar de vez para tecnologia. Dentro da própria Bella Arte ele já atuava informalmente na área, cuidando de máquina, software, rede e automações próprias.",
+        "Ele saiu para migrar de vez para tecnologia, área em que já atuava informalmente dentro da própria empresa, cuidando de máquina, software, rede e automações próprias."
+      ],
       "facet": "motivo_saida"
     },
     {
@@ -210,6 +220,11 @@
         "em qual empresa ele ficou mais"
       ],
       "answer": "A Bella Arte Indústria: 5 anos e 4 meses, de novembro de 2018 a fevereiro de 2024. Foi também a que mais o formou tecnicamente.",
+      "variants_answer": [
+        "A Bella Arte Indústria, com 5 anos e 4 meses, de novembro de 2018 a fevereiro de 2024. Foi a empresa que mais o formou tecnicamente.",
+        "Foi a Bella Arte Indústria: 5 anos e 4 meses, entre novembro de 2018 e fevereiro de 2024. Além de mais longa, foi a que mais o formou tecnicamente.",
+        "A experiência mais longa foi na Bella Arte Indústria, de novembro de 2018 a fevereiro de 2024, num total de 5 anos e 4 meses. Também foi onde mais se formou tecnicamente."
+      ],
       "entity": "exp_bella_arte"
     },
     {
@@ -340,6 +355,11 @@
         "importância da bella arte"
       ],
       "answer": "Porque lá ele tinha liberdade para testar as próprias teorias. Chegou a enxergar o plano de corte na chapa antes de desenhar e a prever o comportamento da operação pelo som da máquina.",
+      "variants_answer": [
+        "Porque lá ele tinha liberdade para testar as próprias teorias. Chegou a enxergar o plano de corte na chapa antes de desenhar e a prever o comportamento da operação pelo som da máquina.",
+        "A Bella Arte marcou porque lá ele podia testar as próprias teorias com liberdade. Ele chegou a enxergar o plano de corte na chapa antes de desenhar e a prever o comportamento da operação pelo som da máquina.",
+        "Foi o lugar onde ele teve liberdade para testar as próprias teorias. Chegou a enxergar o plano de corte na chapa antes de desenhar e a prever o comportamento da operação pelo som da máquina."
+      ],
       "entity": "exp_bella_arte"
     },
     {
@@ -353,6 +373,11 @@
         "manutenção industrial"
       ],
       "answer": "Sim: diagnóstico físico, manutenção preventiva e corretiva de hardware e calibração de software das máquinas CNC.",
+      "variants_answer": [
+        "Sim, fazia. Diagnóstico físico, manutenção preventiva e corretiva de hardware, além de calibração de software das máquinas CNC.",
+        "Sim. Ele cuidava da manutenção das CNC em três frentes: diagnóstico físico, manutenção preventiva e corretiva de hardware e calibração de software.",
+        "Fazia sim. O trabalho incluía diagnóstico físico, manutenção preventiva e corretiva de hardware e calibração de software das máquinas CNC."
+      ],
       "entity": "exp_bella_arte"
     },
     {
@@ -470,6 +495,11 @@
         "ele criou sistema lá"
       ],
       "answer": "Sim. Como a empresa não queria sistema pronto, ele usou script do próprio Windows para indexar arquivos em pesquisa, montou janelas em PowerShell para visualizar DXF e cruzou arquivo de projeto com pedido de cliente. Tinha bug, mas funcionava e era dele.",
+      "variants_answer": [
+        "Sim. A empresa não queria sistema pronto, então ele fez do jeito dele: usou script do próprio Windows para indexar arquivos em pesquisa, montou janelas em PowerShell para visualizar DXF e cruzou arquivo de projeto com pedido de cliente. Tinha bug, mas funcionava e era dele.",
+        "Sim, automatizou. Como a empresa não queria sistema pronto, ele usou script do próprio Windows para indexar arquivos em pesquisa, montou janelas em PowerShell para visualizar DXF e cruzou arquivo de projeto com pedido de cliente. Tinha bug, mas funcionava e era dele.",
+        "Automatizou sim. Sem sistema pronto na empresa, ele montou as próprias ferramentas: script do Windows para indexar arquivos em pesquisa, janelas em PowerShell para visualizar DXF e cruzamento de arquivo de projeto com pedido de cliente. Tinha bug, mas funcionava e era dele."
+      ],
       "entity": "exp_bella_arte"
     },
     {
@@ -483,6 +513,11 @@
         "laser co2"
       ],
       "answer": "Máquinas de corte a laser CNC de CO2, usadas em MDF e material similar.",
+      "variants_answer": [
+        "Máquinas de corte a laser CNC de CO2, usadas em MDF e material similar.",
+        "Eram máquinas de corte a laser CNC de CO2, que trabalhavam com MDF e material similar.",
+        "Corte a laser CNC de CO2. Máquinas usadas em MDF e material similar."
+      ],
       "entity": "exp_bella_arte"
     },
     {
@@ -600,6 +635,11 @@
         "automação em windows"
       ],
       "answer": "Sim. Montou janelas em PS1 para visualizar arquivos DXF e usou scripts do Windows para indexação e cruzamento de dados, tudo juntando fórum, vídeo e ideia própria.",
+      "variants_answer": [
+        "Sim. Ele montou janelas em PS1 para visualizar arquivos DXF e usou scripts do Windows para indexação e cruzamento de dados. Tudo isso juntando fórum, vídeo e ideia própria.",
+        "Usava sim. Montou janelas em PS1 para visualizar arquivos DXF e usou scripts do Windows para indexação e cruzamento de dados, juntando fórum, vídeo e ideia própria.",
+        "Sim, usava PowerShell. Montou janelas em PS1 para visualizar DXF e usou scripts do Windows para indexação e cruzamento de dados. O aprendizado veio de fórum, vídeo e ideia própria."
+      ],
       "entity": "exp_bella_arte"
     },
     {

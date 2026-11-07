@@ -430,7 +430,18 @@ class RagRanker {
 
     /* 2.e Dominio especifico (ANTES do exactMatch) */
     if (this.dominios && this.dominios.length) {
-      const dom = this.detectDominio(raw, norm, earlyTokens);
+      let dom = this.detectDominio(raw, norm, earlyTokens);
+ // FIX UNIVERSAL-VA: no de aprofundamento forte da mesma orbita vence dominio
+ if (dom) {
+   try {
+     const _va = this.dialog.matchQuestionAll(
+       this.tokenizer.tokenize(raw, { expand: false }),
+       this.tokenizer.tokenize(raw),
+       { orbit: this.memory.activeOrbit, entity: null, text: raw, threshold: 0.9 }
+     );
+     if (_va && _va.length && _va[0].score >= 0.9 && (_va[0].node.layer || 1) <= 4 && _va[0].node.orbit === dom.orbit) dom = null;
+   } catch (_e) {}
+ }
       if (dom) return dom;
 
 
