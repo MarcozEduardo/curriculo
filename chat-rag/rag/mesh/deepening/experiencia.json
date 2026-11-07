@@ -370,7 +370,12 @@
       "question": "Ele fazia a manutenção das máquinas?",
       "variants": [
         "ele consertava a cnc",
-        "manutenção industrial"
+        "manutenção industrial",
+        "ele consertava mesmo as maquinas",
+        "quem consertava a cnc quando dava problema",
+        "ele mexia mesmo ou so apertava botao",
+        "ele fazia manutencao ou chamava o tecnico",
+        "ele arrumava as maquinas"
       ],
       "answer": "Sim: diagnóstico físico, manutenção preventiva e corretiva de hardware e calibração de software das máquinas CNC.",
       "variants_answer": [
@@ -492,7 +497,13 @@
       "question": "Ele automatizou algo na Bella Arte?",
       "variants": [
         "scripts na indústria",
-        "ele criou sistema lá"
+        "ele criou sistema lá",
+        "ele inventou isso ou pegou pronto",
+        "esse script foi ele que fez sozinho",
+        "ele criou alguma automacao la",
+        "isso foi dele ou copiou de alguem",
+        "ele fez do zero",
+        "so com ia"
       ],
       "answer": "Sim. Como a empresa não queria sistema pronto, ele usou script do próprio Windows para indexar arquivos em pesquisa, montou janelas em PowerShell para visualizar DXF e cruzou arquivo de projeto com pedido de cliente. Tinha bug, mas funcionava e era dele.",
       "variants_answer": [
@@ -632,7 +643,12 @@
       "question": "Ele usava PowerShell?",
       "variants": [
         "scripts ps1",
-        "automação em windows"
+        "automação em windows",
+        "ele usava powershell mesmo",
+        "ele programava em script do windows",
+        "ele fez essas janelas em ps1 sozinho",
+        "automatizou no windows",
+        "ele mexia com script"
       ],
       "answer": "Sim. Montou janelas em PS1 para visualizar arquivos DXF e usou scripts do Windows para indexação e cruzamento de dados, tudo juntando fórum, vídeo e ideia própria.",
       "variants_answer": [
